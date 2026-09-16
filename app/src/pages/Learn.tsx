@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ChevronDown, ChevronRight } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { ClusterBadge } from '@/components/ClusterBadge'
 import { MotionGate } from '@/components/effects/MotionGate'
 import { TutorChat } from '@/components/chat/TutorChat'
 import { CLUSTER_LABELS, TOPICS } from '@/data/topics'
@@ -55,9 +55,7 @@ export default function Learn() {
     <div className="flex flex-col gap-6">
       <MotionGate full={{ initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.3 } }}>
         <div>
-          <Badge variant="secondary" className="mb-2 w-fit">
-            {CLUSTER_LABELS[topic.cluster]}
-          </Badge>
+          <ClusterBadge cluster={topic.cluster} className="mb-2 w-fit" />
           <h1 className="text-2xl font-semibold tracking-tight">{topic.title}</h1>
           <p className="mt-1 text-sm text-muted-foreground">{topic.orient}</p>
         </div>

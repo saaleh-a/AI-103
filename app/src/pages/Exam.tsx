@@ -3,9 +3,10 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { ClusterBadge } from '@/components/ClusterBadge'
 import { Progress as ProgressBar } from '@/components/ui/progress'
 import { MCQ_ITEMS } from '@/data/content'
-import { CLUSTER_LABELS, TOPICS } from '@/data/topics'
+import { CLUSTER_ACCENT, CLUSTER_LABELS, TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
 
 function shuffledItems() {
@@ -70,7 +71,14 @@ export default function Exam() {
           <div className="flex flex-col gap-2">
             {[...byCluster.entries()].map(([cluster, s]) => (
               <div key={cluster} className="flex items-center gap-3 text-sm">
-                <span className="w-56 shrink-0">{CLUSTER_LABELS[cluster as keyof typeof CLUSTER_LABELS]}</span>
+                <span className="flex w-56 shrink-0 items-center gap-1.5">
+                  <span
+                    className="size-2 shrink-0 rounded-full"
+                    style={{ backgroundColor: CLUSTER_ACCENT[cluster as keyof typeof CLUSTER_ACCENT].fg }}
+                    aria-hidden
+                  />
+                  {CLUSTER_LABELS[cluster as keyof typeof CLUSTER_LABELS]}
+                </span>
                 <ProgressBar value={(s.correct / s.total) * 100} className="h-1.5 flex-1" />
                 <span className="w-12 shrink-0 text-right text-muted-foreground">
                   {s.correct}/{s.total}
@@ -130,13 +138,13 @@ export default function Exam() {
                 onClick={() => answer(opt.id)}
                 className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm transition-colors ${
                   showResult && isCorrect
-                    ? 'border-primary bg-primary/10'
+                    ? 'border-success bg-success/10'
                     : showResult && isSelected
                       ? 'border-destructive bg-destructive/10'
                       : 'border-border hover:bg-muted'
                 }`}
               >
-                {showResult && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-primary" aria-hidden />}
+                {showResult && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-success" aria-hidden />}
                 {showResult && isSelected && !isCorrect && <XCircle className="size-4 shrink-0 text-destructive" aria-hidden />}
                 <span>{opt.text}</span>
               </button>
@@ -156,7 +164,7 @@ export default function Exam() {
         </CardContent>
       </Card>
 
-      {topic && <p className="text-xs text-muted-foreground">Domain: {CLUSTER_LABELS[topic.cluster]}</p>}
+      {topic && <ClusterBadge cluster={topic.cluster} className="w-fit" />}
     </div>
   )
 }
