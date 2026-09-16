@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { ChevronDown, ChevronRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -7,8 +8,8 @@ import { MotionGate } from '@/components/effects/MotionGate'
 import { TutorChat } from '@/components/chat/TutorChat'
 import { CLUSTER_LABELS, TOPICS } from '@/data/topics'
 import { FLASHCARDS } from '@/data/content'
-import { getManifestEntry } from '@/lib/search'
-import { fetchCorpusFile } from '@/lib/search'
+import { LESSONS } from '@/data/lessons'
+import { getManifestEntry, fetchCorpusFile } from '@/lib/search'
 import { useLearnerState } from '@/lib/learner-state'
 
 export default function Learn() {
@@ -18,15 +19,16 @@ export default function Learn() {
 
   const activeId = topicId ?? nextTopicId ?? TOPICS[0].id
   const topic = TOPICS.find((t) => t.id === activeId) ?? TOPICS[0]
+  const lesson = LESSONS[topic.id]
   const mastery = state.topics[topic.id]?.state ?? 'not-encountered'
 
   const [excerpt, setExcerpt] = useState<string | null>(null)
-  const [expanded, setExpanded] = useState(false)
+  const [sourceOpen, setSourceOpen] = useState(false)
   const [checkRevealed, setCheckRevealed] = useState(false)
 
   useEffect(() => {
     setExcerpt(null)
-    setExpanded(false)
+    setSourceOpen(false)
     setCheckRevealed(false)
     const primarySource = topic.corpusIds[0]
     const entry = getManifestEntry(primarySource)
@@ -61,29 +63,69 @@ export default function Learn() {
         </div>
       </MotionGate>
 
+      {lesson ? (
+        <div className="flex flex-col gap-4">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground">The problem</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm leading-relaxed">{lesson.problem}</CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground">The mental model</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm leading-relaxed">{lesson.mentalModel}</CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground">In Azure</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm leading-relaxed">{lesson.azureMapping}</CardContent>
+          </Card>
+          {lesson.watchFor && (
+            <Card className="border-primary/30 bg-primary/5">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium text-primary">Watch for</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm leading-relaxed">{lesson.watchFor}</CardContent>
+            </Card>
+          )}
+        </div>
+      ) : (
+        <Card className="border-dashed">
+          <CardContent className="pt-6 text-sm text-muted-foreground">
+            No authored lesson for this topic yet — read the source material below, or ask the tutor chat.
+          </CardContent>
+        </Card>
+      )}
+
       <Card>
-        <CardHeader>
-          <CardTitle className="text-base">Source material</CardTitle>
-          <CardDescription>
-            {getManifestEntry(topic.corpusIds[0])?.title}
-            {topic.corpusIds.length > 1 && ` (+ ${topic.corpusIds.length - 1} more source${topic.corpusIds.length > 2 ? 's' : ''})`}
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {excerpt === null ? (
-            <p className="text-sm text-muted-foreground">Loading…</p>
-          ) : (
-            <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-line text-sm leading-relaxed">
-              {expanded ? excerpt : excerpt.slice(0, 900)}
-              {!expanded && excerpt.length > 900 && '…'}
-            </div>
-          )}
-          {excerpt && excerpt.length > 900 && (
-            <Button variant="link" className="mt-1 px-0" onClick={() => setExpanded((e) => !e)}>
-              {expanded ? 'Show less' : 'Read the rest'}
-            </Button>
-          )}
-        </CardContent>
+        <button
+          type="button"
+          onClick={() => setSourceOpen((o) => !o)}
+          className="flex w-full items-center justify-between px-6 py-4 text-left"
+        >
+          <div>
+            <CardTitle className="text-sm font-medium text-muted-foreground">
+              {sourceOpen ? 'Original source' : 'Read the original source'}
+            </CardTitle>
+            <CardDescription className="mt-0.5">
+              {getManifestEntry(topic.corpusIds[0])?.title}
+              {topic.corpusIds.length > 1 && ` (+ ${topic.corpusIds.length - 1} more)`}
+            </CardDescription>
+          </div>
+          {sourceOpen ? <ChevronDown className="size-4 shrink-0 text-muted-foreground" aria-hidden /> : <ChevronRight className="size-4 shrink-0 text-muted-foreground" aria-hidden />}
+        </button>
+        {sourceOpen && (
+          <CardContent className="border-t border-border/60 pt-4">
+            {excerpt === null ? (
+              <p className="text-sm text-muted-foreground">Loading…</p>
+            ) : (
+              <div className="max-h-96 overflow-y-auto whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{excerpt}</div>
+            )}
+          </CardContent>
+        )}
       </Card>
 
       {check && (
