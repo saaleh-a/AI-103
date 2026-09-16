@@ -46,12 +46,31 @@ mkdirSync(cleanDir, { recursive: true })
 
 const UNIT_CHECKLIST_LINE = /:\s*Completed$/i
 const UNIT_OF_LINE = /^Unit\s+\d+\s+of\s+\d+$/i
+// Page-chrome lines that carry no content of their own: the browser-tab
+// title ("<page> - Training | Microsoft Learn"), the reading-time badge,
+// a table the scrape collapsed and never captured, and the unit-to-unit
+// nav links. Always safe to drop wherever they appear.
+const TITLE_CHROME_LINE = /\s-\s*Training\s*\|\s*Microsoft Learn$/i
+const READING_TIME_LINE = /^\d+\s+minutes?$/i
+const EXPAND_TABLE_LINE = /^Expand table$/i
+const UNIT_NAV_LINE = /^(Next|Previous)\s+unit:\s/i
+// How many lines into a cleaned file still count as "the header" — long
+// enough to catch the page's own title repeated as a heading, short enough
+// to never touch a legitimate reuse of the same phrase deep in the body.
+const HEADER_ZONE_LINES = 10
 
 const manifest = []
 for (const { filename, lines } of files) {
   const sourceMatch = lines[0]?.match(/^>\s*Source:\s*(\S+)/)
   const source = sourceMatch ? sourceMatch[1] : ''
   const bodyLines = lines.slice(sourceMatch ? 1 : 0)
+
+  const title = filename
+    .replace(/\.md$/, '')
+    .replace(/^\d+-/, '')
+    .replace(/\s*-\s*Training\s*-\s*Microsoft Learn\s*$/i, '')
+    .trim()
+  const titleLower = title.toLowerCase()
 
   // Per-file breadcrumb noise: the module/page title repeated 3+ times
   // (nav trail, unit list header, etc.) isn't frequent enough globally to
@@ -71,6 +90,12 @@ for (const { filename, lines } of files) {
     const trimmed = line.trim()
     if (trimmed && boilerplate.has(trimmed)) continue
     if (UNIT_CHECKLIST_LINE.test(trimmed) || UNIT_OF_LINE.test(trimmed)) continue
+    if (TITLE_CHROME_LINE.test(trimmed) || READING_TIME_LINE.test(trimmed)) continue
+    if (EXPAND_TABLE_LINE.test(trimmed) || UNIT_NAV_LINE.test(trimmed)) continue
+    // The page's own title, repeated as a heading right in the body — the
+    // app already shows this title in the UI around the source excerpt, so
+    // a near-top repeat is a duplicate, not new information.
+    if (cleaned.length < HEADER_ZONE_LINES && trimmed.toLowerCase() === titleLower) continue
     if (trimmed === lastKept) continue // consecutive duplicate
     if (trimmed.length >= 20 && (inFileFreq.get(trimmed) ?? 0) >= 3) {
       if (seenOnceAlready.has(trimmed)) continue
@@ -84,12 +109,6 @@ for (const { filename, lines } of files) {
   }
   const cleanedText = cleaned.join('\n').trim()
   writeFileSync(resolve(cleanDir, filename), cleanedText, 'utf-8')
-
-  const title = filename
-    .replace(/\.md$/, '')
-    .replace(/^\d+-/, '')
-    .replace(/\s*-\s*Training\s*-\s*Microsoft Learn\s*$/i, '')
-    .trim()
 
   const excerpt = cleanedText.slice(0, 500).replace(/\s+/g, ' ').trim()
 
