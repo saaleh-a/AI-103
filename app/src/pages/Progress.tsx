@@ -10,7 +10,7 @@ import { Ring } from '@/components/charts/ring'
 import { RingCenter } from '@/components/charts/ring-center'
 import { RingChart } from '@/components/charts/ring-chart'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { CLUSTER_LABELS, CLUSTER_ORDER, TOPICS } from '@/data/topics'
+import { CLUSTER_ACCENT, CLUSTER_LABELS, CLUSTER_ORDER, TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
 import { useUIPrefs } from '@/lib/ui-prefs'
 
@@ -40,6 +40,15 @@ export default function Progress() {
         <p className="mt-1 text-sm text-muted-foreground">
           {coverage.mastered} of {coverage.total} v1 topics mastered, {coverage.started} started.
         </p>
+      </div>
+
+      <div className="flex flex-wrap gap-x-4 gap-y-1.5">
+        {CLUSTER_ORDER.map((cluster) => (
+          <span key={cluster} className="flex items-center gap-1.5 text-xs text-muted-foreground">
+            <span className="size-2 shrink-0 rounded-full" style={{ backgroundColor: CLUSTER_ACCENT[cluster].fg }} aria-hidden />
+            {CLUSTER_LABELS[cluster]}
+          </span>
+        ))}
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">

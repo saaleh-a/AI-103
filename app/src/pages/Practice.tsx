@@ -1,9 +1,9 @@
 import { CheckCircle2, XCircle } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { ClusterBadge } from '@/components/ClusterBadge'
 import { Progress as ProgressBar } from '@/components/ui/progress'
 import { MotionGate } from '@/components/effects/MotionGate'
 import { FLASHCARDS, MCQ_ITEMS } from '@/data/content'
@@ -72,7 +72,7 @@ export default function Practice() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
-              <CheckCircle2 className="size-5 text-primary" aria-hidden /> Session complete
+              <CheckCircle2 className="size-5 text-success" aria-hidden /> Session complete
             </CardTitle>
             <CardDescription>
               {correctCount} of {queue.length} remembered cleanly. That's a real session — stopping here is fine.
@@ -101,9 +101,9 @@ export default function Practice() {
       </div>
 
       {topic && (
-        <Badge variant="secondary" className="w-fit">
+        <ClusterBadge cluster={topic.cluster} className="w-fit">
           {topic.title}
-        </Badge>
+        </ClusterBadge>
       )}
 
       {flashcard && (
@@ -163,13 +163,13 @@ export default function Practice() {
                   onClick={() => setSelectedOption(opt.id)}
                   className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm transition-colors ${
                     showResult && isCorrect
-                      ? 'border-primary bg-primary/10'
+                      ? 'border-success bg-success/10'
                       : showResult && isSelected
                         ? 'border-destructive bg-destructive/10'
                         : 'border-border hover:bg-muted'
                   }`}
                 >
-                  {showResult && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-primary" aria-hidden />}
+                  {showResult && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-success" aria-hidden />}
                   {showResult && isSelected && !isCorrect && <XCircle className="size-4 shrink-0 text-destructive" aria-hidden />}
                   <span>{opt.text}</span>
                 </button>

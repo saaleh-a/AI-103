@@ -3,7 +3,10 @@ import type { ReactNode } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { CLUSTER_ACCENT, CLUSTER_ORDER } from '@/data/topics'
 import { useUIPrefs } from '@/lib/ui-prefs'
+
+const CURRICULUM_GRADIENT = `linear-gradient(90deg, ${CLUSTER_ORDER.map((c) => CLUSTER_ACCENT[c].fg).join(', ')})`
 
 const NAV = [
   { to: '/', label: 'Continue', end: true },
@@ -28,7 +31,9 @@ export function AppShell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center gap-3 px-4 py-3">
           <div className="flex items-center gap-2 font-medium">
-            <GraduationCap className="size-5 text-primary" aria-hidden />
+            <span className="flex size-7 items-center justify-center rounded-lg bg-primary/10">
+              <GraduationCap className="size-4 text-primary" aria-hidden />
+            </span>
             <span>AI-103 Tutor</span>
           </div>
 
@@ -41,8 +46,8 @@ export function AppShell({ children }: { children: ReactNode }) {
                   end={item.end}
                   className={({ isActive }) =>
                     cn(
-                      'whitespace-nowrap rounded-md px-3 py-1.5 text-sm transition-colors',
-                      isActive ? 'bg-secondary text-secondary-foreground' : 'text-muted-foreground hover:text-foreground',
+                      'whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
+                      isActive ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:text-foreground',
                     )
                   }
                 >
@@ -82,8 +87,8 @@ export function AppShell({ children }: { children: ReactNode }) {
                 end={item.end}
                 className={({ isActive }) =>
                   cn(
-                    'whitespace-nowrap rounded-md px-2.5 py-1 text-xs transition-colors',
-                    isActive ? 'bg-secondary text-secondary-foreground' : 'text-muted-foreground',
+                    'whitespace-nowrap rounded-md px-2.5 py-1 text-xs font-medium transition-colors',
+                    isActive ? 'bg-primary/10 text-primary' : 'text-muted-foreground',
                   )
                 }
               >
@@ -92,6 +97,8 @@ export function AppShell({ children }: { children: ReactNode }) {
             ))}
           </nav>
         )}
+
+        <div className="h-[3px] w-full opacity-80" style={{ background: CURRICULUM_GRADIENT }} aria-hidden />
       </header>
 
       <main id="main" className="mx-auto max-w-4xl px-4 py-6 sm:py-10">

@@ -32,13 +32,18 @@ export function UIPrefsProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const root = document.documentElement
-    if (prefs.theme === 'system') {
-      root.removeAttribute('data-theme')
-      root.classList.remove('dark')
-    } else {
+    if (prefs.theme !== 'system') {
       root.setAttribute('data-theme', prefs.theme)
       root.classList.toggle('dark', prefs.theme === 'dark')
+      return
     }
+
+    root.removeAttribute('data-theme')
+    const media = window.matchMedia('(prefers-color-scheme: dark)')
+    const applySystemTheme = () => root.classList.toggle('dark', media.matches)
+    applySystemTheme()
+    media.addEventListener('change', applySystemTheme)
+    return () => media.removeEventListener('change', applySystemTheme)
   }, [prefs.theme])
 
   const value: UIPrefsApi = {

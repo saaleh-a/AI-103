@@ -292,3 +292,16 @@ export const CLUSTER_ORDER: Topic['cluster'][] = [
   'speech',
   'search-rag',
 ]
+
+// Each domain cluster gets a consistent colour identity, reused across
+// badges, the header's curriculum bar, and the Progress legend — so colour
+// carries real meaning (which domain something belongs to) rather than
+// decorating the page. Values reference the --cluster-* tokens in index.css.
+export const CLUSTER_ACCENT: Record<Topic['cluster'], { fg: string; bg: string }> = {
+  'agents-orchestration': { fg: 'var(--cluster-agents-orchestration)', bg: 'var(--cluster-agents-orchestration-soft)' },
+  'content-document': { fg: 'var(--cluster-content-document)', bg: 'var(--cluster-content-document-soft)' },
+  language: { fg: 'var(--cluster-language)', bg: 'var(--cluster-language-soft)' },
+  speech: { fg: 'var(--cluster-speech)', bg: 'var(--cluster-speech-soft)' },
+  'search-rag': { fg: 'var(--cluster-search-rag)', bg: 'var(--cluster-search-rag-soft)' },
+  'models-deploy-eval': { fg: 'var(--cluster-models-deploy-eval)', bg: 'var(--cluster-models-deploy-eval-soft)' },
+}
