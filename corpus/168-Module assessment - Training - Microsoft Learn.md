@@ -1,0 +1,254 @@
+> Source: https://learn.microsoft.com/en-gb/training/modules/analyze-text-ai-language/9-knowledge-check
+
+Module assessment - Training | Microsoft Learn
+Skip to main content
+This browser is no longer supported.
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+Download Microsoft Edge More info about Internet Explorer and Microsoft Edge
+Learn 
+Suggestions will filter as you type Training
+Sign in  
+Profile
+Analytics
+Settings
+Sign out 
+Learn
+Documentation
+All product documentation
+Azure documentation
+Dynamics 365 documentation
+Microsoft Copilot documentation
+Microsoft 365 documentation
+Power Platform documentation
+Code samples
+Troubleshooting documentation Register now Microsoft Ignite | November 17-20, 2026 Interactive learning, certifications, and direct access to experts all in one place.
+Training & Labs
+All training
+Azure training
+Dynamics 365 training
+Microsoft Copilot training
+Microsoft 365 training
+Microsoft Power Platform training
+Labs
+Credentials
+Career paths Register now Microsoft Ignite | November 17-20, 2026 Interactive learning, certifications, and direct access to experts all in one place.
+Q&A
+Ask a question
+Azure questions
+Windows questions
+Microsoft 365 questions
+Microsoft Outlook questions
+Microsoft Teams questions
+Popular tags
+All questions Register now Microsoft Ignite | November 17-20, 2026 Interactive learning, certifications, and direct access to experts all in one place.
+Topics
+Agents Key concepts and resources for agentic computing
+Artificial intelligence Curated resources for AI fluency with apps and services
+DevOps DevOps practices, Git version control and Agile methods
+Learn for Organizations Curated offerings from Microsoft to boost your team's technical skills
+Security Guidance to help you tackle security challenges
+Startups hub Technical guidance to move toward enterprise readiness
+Assessments Interactive guidance with custom recommendations
+Student hub Self-paced and interactive training for students
+Educator center Resources for educators to bring technical innovation in their classroom Register now Microsoft Ignite | November 17-20, 2026 Interactive learning, certifications, and direct access to experts all in one place.
+Suggestions will filter as you type Training
+Sign in  
+Profile
+Analytics
+Settings
+Sign out
+Training
+Products
+Azure
+Microsoft Foundry
+Dynamics 365
+Defender
+.NET
+GitHub
+Microsoft 365
+Microsoft Entra
+Microsoft Fabric
+Power Platform
+Purview
+Teams
+Browse all training
+Career Paths
+Administrator
+AI Engineer
+App Maker
+Auditor
+Business User
+Data Analyst
+Data Engineer
+Data Scientist
+Developer
+DevOps Engineer
+Functional Consultant
+Identity and Access Administrator
+Information Security Administrator
+Security Operations Analyst
+Security Engineer
+Solutions Architect
+Browse all training
+Learn for Organizations
+Microsoft Learn for Organizations
+Structured learning (Plans)
+Watch training (Course videos)
+Classroom training (TSP)
+Gamified training (Challenges)
+Resources
+Event training (VTDs)
+Educator Center
+Overview
+Professional development
+Accessibility and inclusivity
+AI for education
+Cybersecurity
+STEM, coding, and esports
+Browse all
+Product guides
+AI solutions for education
+Microsoft 365 for education
+Learning Accelerators
+Minecraft Education
+Windows for education
+Browse all
+Instructor materials
+Educator programs
+Student Hub
+Overview
+Student Credentials
+Become a Student Ambassador
+FAQ & Help
+More
+Products
+Azure
+Microsoft Foundry
+Dynamics 365
+Defender
+.NET
+GitHub
+Microsoft 365
+Microsoft Entra
+Microsoft Fabric
+Power Platform
+Purview
+Teams
+Browse all training
+Career Paths
+Administrator
+AI Engineer
+App Maker
+Auditor
+Business User
+Data Analyst
+Data Engineer
+Data Scientist
+Developer
+DevOps Engineer
+Functional Consultant
+Identity and Access Administrator
+Information Security Administrator
+Security Operations Analyst
+Security Engineer
+Solutions Architect
+Browse all training
+Learn for Organizations
+Microsoft Learn for Organizations
+Structured learning (Plans)
+Watch training (Course videos)
+Classroom training (TSP)
+Gamified training (Challenges)
+Resources
+Event training (VTDs)
+Educator Center
+Overview
+Professional development
+Accessibility and inclusivity
+AI for education
+Cybersecurity
+STEM, coding, and esports
+Browse all
+Product guides
+AI solutions for education
+Microsoft 365 for education
+Learning Accelerators
+Minecraft Education
+Windows for education
+Browse all
+Instructor materials
+Educator programs
+Student Hub
+Overview
+Student Credentials
+Become a Student Ambassador
+FAQ & Help
+1%
+Learn
+Training
+Browse
+Develop natural language solutions in Azure
+Analyze text with Azure Language in Foundry Tools
+Learn
+Training
+Browse
+Develop natural language solutions in Azure
+Analyze text with Azure Language in Foundry Tools
+Read in English Add to Collections Add to Plans
+Unit 7 of 8
+Analyze text with Azure Language in Foundry Tools
+Introduction 1 min: Completed
+Azure Language in Microsoft Foundry Tools 3 min: Completed
+Detect language 3 min: Completed
+Extract entities 3 min: Completed
+Extract personally identifiable information (PII) 3 min: Completed
+Exercise - Analyze text 30 min: Completed
+Module assessment 2 min: Completed
+Summary 1 min: Completed
+Achievements
+Ask Learn Ask Learn
+Module assessment
+Completed 200 XP
+2 minutes
+How should you create an application that analyzes news articles and extracts key people, places, and dates that are mentioned for indexing? [-] 0
+Use a generative AI model with a custom function tool that matches strings using a regular expression. [-] 1
+Use Azure Language in Foundry Tools to extract PII entities. [-] 2
+Use Azure Language in Foundry Tools to extract named entities.
+2.
+You want to publish extracts from customer testimonials on a web site. You need to remove personal details from the text before publishing it. What should you do? [-] 0
+Use Azure Language in Foundry Tools to find and redact PII entities. [-] 1
+Use Azure Language in Foundry Tools to detect the language and publish only the testimonials in English. [-] 2
+Use a gpt-4.1 model to create new AI-generated customer reviews.
+Submit answers
+You must answer all questions before checking your work.
+You must answer all questions before checking your work.
+Next unit: Summary
+Previous Next
+Need help? See our troubleshooting guide or provide specific feedback by reporting an issue.
+Feedback
+Was this page helpful?
+Yes No No
+Need help with this topic?
+Want to try using Ask Learn to clarify or guide you through this topic?
+Ask Learn Ask Learn
+Suggest a fix?
+Ask Learn
+Preview
+Ask Learn is an AI assistant that can answer questions, clarify concepts, and define terms using trusted Microsoft documentation.
+Please sign in to use Ask Learn.
+Sign in
+English (United Kingdom)
+Your Privacy Choices
+Theme
+Light
+Dark
+High contrast
+AI Disclaimer
+Previous Versions
+Blog
+Contribute
+Privacy
+Consumer Health Privacy
+Terms of Use
+Trademarks
+© Microsoft 2026

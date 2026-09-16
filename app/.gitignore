@@ -1,0 +1,31 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Generated from ../corpus by scripts/sync-corpus.mjs + build-manifest.mjs
+# (predev/prebuild) — not source of truth, don't commit duplicates.
+public/corpus
+public/corpus-clean
+public/constitution.md
+src/data/corpus-manifest.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
