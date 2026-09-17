@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ClusterBadge } from '@/components/ClusterBadge'
 import { CountUp } from '@/components/effects/CountUp'
 import { MotionGate } from '@/components/effects/MotionGate'
-import { CLUSTER_ACCENT, TOPICS } from '@/data/topics'
+import { TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
 import { useUIPrefs } from '@/lib/ui-prefs'
 
@@ -40,10 +40,7 @@ export default function Home() {
             </CardHeader>
           </Card>
         ) : (
-          <Card
-            className="border-l-4"
-            style={nextTopic ? { borderLeftColor: CLUSTER_ACCENT[nextTopic.cluster].fg } : undefined}
-          >
+          <Card>
             <CardHeader>
               <div className="mb-1 flex flex-wrap items-center gap-1.5">
                 <Badge variant="secondary" className="w-fit">
