@@ -1,0 +1,6 @@
+# Impeccable's platform binary and bundled data are downloadable build
+# artifacts, not source — re-fetch with `npx impeccable install` rather
+# than committing ~16-17MB of binary/data into repo history.
+.claude/skills/impeccable/scripts/bin/
+.claude/skills/impeccable/scripts/data/
+.claude/skills/impeccable/scripts/*.js

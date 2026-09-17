@@ -1,4 +1,4 @@
-import { GraduationCap, Settings as SettingsIcon, Sparkles } from 'lucide-react'
+import { Settings as SettingsIcon, Sparkles } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
@@ -31,9 +31,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center gap-3 px-4 py-3">
           <div className="flex items-center gap-2 font-medium">
-            <span className="flex size-7 items-center justify-center rounded-lg bg-primary/10">
-              <GraduationCap className="size-4 text-primary" aria-hidden />
-            </span>
+            <img src="/logo.png" alt="" className="size-7" aria-hidden />
             <span>AI-103 Tutor</span>
           </div>
 
