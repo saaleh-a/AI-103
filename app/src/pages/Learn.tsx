@@ -147,6 +147,20 @@ function LearnTopic({ topicId }: { topicId: string }) {
             </CardHeader>
             <CardContent className="text-sm leading-relaxed">{lesson.azureMapping}</CardContent>
           </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground">Where this fits</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm leading-relaxed">{lesson.architecture}</CardContent>
+          </Card>
+          {lesson.implementation && (
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium text-muted-foreground">Implementation</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm leading-relaxed">{lesson.implementation}</CardContent>
+            </Card>
+          )}
           {lesson.watchFor && (
             <Card className="border-primary/30 bg-primary/5">
               <CardHeader className="pb-2">
