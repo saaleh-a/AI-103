@@ -1,5 +1,5 @@
-import { CheckCircle2, XCircle } from 'lucide-react'
-import { useState } from 'react'
+import { CheckCircle2, Clock, XCircle } from 'lucide-react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -8,6 +8,7 @@ import { Progress as ProgressBar } from '@/components/ui/progress'
 import { MCQ_ITEMS } from '@/data/content'
 import { CLUSTER_ACCENT, CLUSTER_LABELS, TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
+import { estimateSessionMinutes } from '@/lib/time-estimate'
 
 function shuffledItems() {
   return [...MCQ_ITEMS].sort(() => Math.random() - 0.5)
@@ -23,6 +24,7 @@ export default function Exam() {
   const current = items[index]
   const topic = current ? TOPICS.find((t) => t.id === current.topicId) : undefined
   const done = index >= items.length
+  const remainingMinutes = useMemo(() => estimateSessionMinutes({ mcqs: Math.max(0, items.length - index) }), [items.length, index])
 
   function answer(optionId: string) {
     if (!current) return
@@ -119,6 +121,9 @@ export default function Exam() {
         <ProgressBar value={(index / items.length) * 100} className="h-1.5 flex-1" />
         <span className="text-xs text-muted-foreground">
           {index + 1} / {items.length}
+        </span>
+        <span className="flex items-center gap-1 text-xs text-muted-foreground">
+          <Clock className="size-3.5" aria-hidden />~{remainingMinutes} min left
         </span>
       </div>
 
