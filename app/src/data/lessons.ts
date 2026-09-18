@@ -24,7 +24,7 @@ export interface Lesson {
 export const LESSONS: Record<string, Lesson> = {
   'agents-what-is-an-agent': {
     problem:
-      "A chat model answers one prompt and stops. It can't check something, take an action, or decide what to do next on its own — a human has to read the output and do the next step by hand.",
+      "Say a customer messages asking for a refund, and a chat model drafts a perfectly reasonable reply back — but it can't actually check the order, issue the refund, or confirm it went through. It just answers once and stops; a human still has to read what it wrote and go do all of that by hand.",
     mentalModel:
       "An agent is that same model wired into a loop: it can look at context, decide what action to take (not just what to say), call a tool to actually do it, look at the result, and decide again. The intelligence isn't new — GPT-class models could already reason. What's new is giving them a way to act and re-evaluate, not just talk.",
     architecture:
@@ -38,7 +38,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-types': {
     problem:
-      "Once you accept an agent needs a model, instructions and tools, you still have to decide how to define it: as configuration something else runs, or as code you write and deploy yourself.",
+      "Say you need an agent that just answers questions using a model, some instructions, and a couple of tools — you can build that by filling in fields in the Foundry portal, no code at all. But say the next one needs a custom execution path or runtime behavior the portal's fields don't cover: now you're writing and containerizing that logic yourself, and the platform just gives you somewhere to run it.",
     mentalModel:
       "Declarative agents are described, not coded — you fill in model/instructions/tools and the platform runs it. Hosted agents are the opposite: you write and containerize the logic yourself, and the platform just gives you somewhere to run it. Within declarative, there's a second split: a single configured agent (prompt-based) vs. several agents wired together in YAML (workflow agents).",
     architecture:
@@ -52,7 +52,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-framework': {
     problem:
-      "The Foundry portal is great for building one agent by clicking through a UI. It doesn't give you a single interface across different model providers, fine control over conversation state, or a code-first way to wire several agents together with version control.",
+      "Say you've built one agent by clicking through the Foundry portal, and now you need to run that same agent against a different model provider, track exactly what conversation state got sent on a given turn, and wire it together with two more agents under version control. None of that is a portal click — it's code, and the portal doesn't hand you the interface for it.",
     mentalModel:
       "The Microsoft Agent Framework is an open-source SDK that's the next generation of both Semantic Kernel and AutoGen, built by the same engineering teams — it combines AutoGen's intuitive agent abstractions with Semantic Kernel's enterprise-grade features (session-based state management, type safety, execution filters, telemetry), and adds graph-based workflows that give you explicit control over multi-agent execution paths. Every agent is derived from one unified Agent base class, so regardless of which model provider sits underneath, you get the same interface. Chat clients give you one abstraction (BaseChatClient) over multiple providers — Azure OpenAI, OpenAI, Anthropic, and others — so switching providers doesn't mean rewriting your code. AgentSession tracks conversation history across turns using a structured message system with explicit roles (USER, ASSISTANT, SYSTEM, TOOL). Tools — both custom functions and built-ins like Code Interpreter, File Search, and Web Search — let agents act, not just answer. And orchestration patterns share one unified interface, so you can swap concurrent for sequential for handoff without rewriting your agents.",
     architecture:
@@ -66,7 +66,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-workflows': {
     problem:
-      "A single agent with a long instruction list gets brittle fast — one model trying to do intake, routing, and three different specialist tasks in one prompt.",
+      "Picture one agent whose instructions try to handle intake, routing, and three different specialist tasks all in a single prompt — that one is already brittle before anyone's touched a single edge case.",
     mentalModel:
       "A workflow breaks that into executors — an agent or a piece of custom logic that does one job and passes its output on. Edges decide how work moves between executors: direct (A then B), conditional (only if a check passes), switch-case (route by category), fan-out (send to several at once), or fan-in (combine several results into one). The workflow is the wiring diagram; executors are the components. Microsoft Foundry's portal-level workflows describe the same idea with different vocabulary: connected nodes instead of executors, where some nodes invoke agents and others evaluate conditions, manage data, or communicate with users — and critically, a workflow can pause mid-execution to request human input or escalate a decision when confidence is low, instead of running to completion unsupervised. The corpus is specific about what multi-agent orchestration actually buys you over one broad agent: it lets you combine outputs from multiple agents to improve decision-making and accuracy, coordinate steps so each agent's work builds on the last, and dynamically route control between agents based on context or rules — not just \"split up the prompt.\"",
     architecture:
@@ -80,7 +80,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-orchestration-patterns': {
     problem:
-      "Different multi-agent problems need fundamentally different coordination shapes — running things in parallel isn't the same problem as escalating between specialists, and using the wrong shape either wastes work or breaks the collaboration.",
+      "Say three agents need to check flights, hotels, and weather for one trip — running them all at once is fine, they don't need each other's answers. But an agent that has to escalate a refund request to a specialist can't run in parallel with that specialist; it has to wait, hand off, and get out of the way. Pick the wrong shape and you either waste the parallel run waiting on nothing, or you block work that never actually depended on anything.",
     mentalModel:
       "Five named patterns, each solving a different coordination problem: concurrent (same task to every agent at once, collect results independently — for parallel analysis), sequential (output of one feeds the next, fixed order — for pipelines), handoff (control passes between agents based on context, one agent working at a time — for escalation/routing), group chat (a shared conversation with a manager deciding who speaks next — for collaborative problem-solving), and Magentic (a manager plans and delegates adaptively — for open-ended problems where you don't know the steps up front). A common special case inside group chat is the maker-checker loop: one agent proposes content, another reviews and critiques it, and the cycle repeats under the chat manager's control until the result is good enough. Magentic is distinct from the other four in that its manager builds and continuously refines a task ledger — recorded goals, subgoals and execution plan — as it works, so the approach itself is documented and reviewable, not just the final output.",
     architecture:
@@ -94,7 +94,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-tools-overview': {
     problem:
-      "Without tools, a model can only generate text from what it already knows — it can't look anything up, run anything, or change anything in the outside world.",
+      "Ask a model to look up today's exchange rate or update a row in your database, and all it can actually do is generate text — it has no way to check the rate or make the change itself. It can tell you what it would do, but it can't do it.",
     mentalModel:
       "Tools are how a model reaches outside itself. You declare which tools are available in the tools array of a call to responses.create(), and by default the model itself decides when to use which one — purely from reading the prompt, with no explicit trigger from you. You steer that decision two ways: tool-selection rules that constrain which tools are eligible, and the Instructions (system prompt) parameter, which is often the more direct lever when the model is choosing badly.",
     architecture:
@@ -108,7 +108,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-builtin-tools': {
     problem:
-      "Every agent capability beyond pure text generation needs some concrete tool behind it, and picking the wrong one is one of the most common scenario-question traps.",
+      "Say you need an agent that answers only from your company's internal policy documents, so you reach for web_search — it'll cheerfully pull an answer from the open internet instead, using content that was never in those documents at all. Four tools, four different jobs, and grabbing the wrong one produces a plausible wrong answer, not an obvious error.",
     mentalModel:
       "Four built-in tools, four different jobs and four different mechanisms. code_interpreter gives the model a sandboxed Python environment with common libraries (pandas, numpy, matplotlib) pre-installed and no external network access — the model writes code, the code runs, and the model sees the actual output (and any errors, which it will typically try to fix itself) rather than just reasoning about what code would probably do. web_search lets the model issue its own search queries at runtime, review results, and ground its answer in current content the model was never trained on. file_search is different in kind: it only works against documents you've already uploaded and indexed into a vector store, and it retrieves by semantic meaning rather than exact keyword match, returning matched passages the model then answers from. function is the one where the model never actually executes anything — it emits a structured function-call request (name plus arguments), your application code is what runs, and you hand the result back to the model as a function_call_output before it produces its final answer.",
     architecture:
@@ -122,7 +122,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-mcp': {
     problem:
-      "As agents gain access to more tools and services, registering, updating, and integrating each one by hand gets complex fast — and every time an API changes, you have to go back and update the hardcoded integration.",
+      "Say your agent has ten tools hardcoded, one per internal API it calls. One of those teams renames a field in their API, and now you're back in the agent's own code fixing that one hardcoded integration — and you'll be doing it again every time any of the other nine changes.",
     mentalModel:
       "MCP (Model Context Protocol) solves this with dynamic tool discovery: instead of the agent having hardcoded knowledge of every tool, it queries a centralized MCP server at runtime, which acts as a live catalog. An MCP server hosts functions exposed as tools (via an @mcp.tool decorator); an MCP client connects, fetches the current tool list, and wraps them as tool definitions the agent can call. Tools can be added, updated, or removed on the server without touching the agent's code at all.",
     architecture:
@@ -136,7 +136,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-a2a': {
     problem:
-      "Sometimes the thing you need to delegate to isn't a tool you control — it's a whole agent someone else built, possibly on a completely different platform, and it needs to explain what it can do before anything can use it.",
+      "Say your routing agent needs an outline written, but the agent that knows how to do that was built by a different team, on a different platform, with no shared codebase or runtime you can call into. You can't import its code — the only way in is if that agent can first tell you, on its own, what it does and how to reach it.",
     mentalModel:
       "A2A standardizes two artifacts. An Agent Skill is one capability the agent offers — with an ID, a human-readable name, a description, tags for discovery, example prompts, and its supported input/output formats. An Agent Card is the whole package: identity, the endpoint URL where the A2A service lives, supported capabilities (like streaming), default input/output modes, the list of skills, and whether authentication is required — effectively a digital business card a routing agent or client retrieves to discover what this agent does and how to call it. The corpus's own example is a technical writer workflow: one agent defines a skill for generating article titles, another defines a skill for creating outlines, and a routing agent retrieves both Agent Cards to discover those skills and orchestrates a flow where the title agent's output feeds into the outline agent's input — two independently built agents, coordinated purely through Agent Cards.",
     architecture:
@@ -150,7 +150,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'agents-publishing': {
     problem:
-      "An agent that only answers calls from your dev environment isn't reaching the people who'd actually use it — and publishing isn't just \"flip a switch,\" it changes what identity and permissions the agent runs under.",
+      "Say your agent already works fine in your dev project, calling Azure AI Search without issue. Publish it to Teams and users start hitting permission errors on that exact same search call — the published agent runs under a brand-new Microsoft Entra identity, and nobody's granted that identity access to anything yet.",
     mentalModel:
       "Publishing promotes the agent from a development asset into a managed Azure resource: an Agent Application with a stable invocation URL (consistent across version updates — the Application acts as a routing layer so publishing a new version doesn't change the public endpoint), its own distinct Microsoft Entra identity separate from your dev project, and isolation so one user's data isn't visible to another. \"Publishing to Microsoft 365\" is a single bundled destination, not two separate ones — it's what makes the agent appear both inside Teams and inside Microsoft 365 Copilot, and discoverable in the Teams agent store, in one publish action. Publishing directly to Microsoft 365 from the Foundry portal creates an Azure Bot Service resource, registers a Microsoft Entra ID application, and generates a distribution package — fast, and keeps agent logic inside Foundry. The Microsoft 365 Agents Toolkit is the alternative for complex cases: custom single sign-on, advanced middleware, multi-environment pipelines.",
     architecture:
@@ -179,7 +179,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'document-intelligence-overview': {
     problem:
-      "Building an accurate document-extraction model from scratch (OCR plus structure understanding) takes deep learning expertise and a lot of training data most teams don't have.",
+      "Say you need to pull the vendor name, date, and total off thousands of invoices arriving from dozens of different suppliers, each formatted differently. Building a model that can read all of them accurately — OCR plus real structure understanding — from scratch takes deep learning expertise and thousands of labeled training examples most teams don't have sitting around.",
     mentalModel:
       "Document Intelligence gives you that as a pretrained capability, structured in layers. At the bottom sit two document analysis models: the read model extracts printed and handwritten text, detects the language of each line, and classifies whether text is handwritten or printed — OCR does this by drawing bounding boxes around detected text and recording their coordinates relative to the page, with everything returned as structured JSON that preserves the original document's layout relationships. The layout model builds on read, adding table detection, selection marks (checkboxes/radio buttons, each returned with bounding box, confidence, and selected state), and an optional key-value-pairs feature. Prebuilt models sit above that layer, trained on thousands of examples of one specific document type so you get named fields (like CustomerName and InvoiceTotal on an invoice) without training anything. Custom models are the top layer, for document types nothing prebuilt covers. Building any of this yourself would take deep learning expertise, heavy compute, and long training runs — Document Intelligence exists so you don't have to.",
     architecture:
@@ -193,7 +193,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'document-intelligence-models': {
     problem:
-      "Not every document need is the same: sometimes you just need raw text, sometimes structure and tables too, sometimes specific fields from a known document type, and sometimes your documents are unique to your business and nothing prebuilt recognises their layout.",
+      "You've got a stack of scanned receipts to reimburse, a batch of government IDs to verify for onboarding, and an internal expense form your company invented that no off-the-shelf model has ever seen. Grab the wrong Document Intelligence model for any one of them, and you either miss fields it already knows how to pull out, or burn weeks training a custom model you didn't actually need.",
     mentalModel:
       "Two document analysis models are the foundation everything else builds on: the read model extracts printed/handwritten text (detecting language per line, classifying handwritten vs. printed) and is the text-extraction base for every other model; the layout model adds table detection, selection marks, and optional key-value pairs on top. Prebuilt models sit above that, trained on specific document types, grouped into a few categories: financial and legal documents (which includes named models such as invoice and receipt), US tax documents, US mortgage documents, and personal identification documents (the ID document model specifically, which the corpus flags for handling data protected by privacy law — get the individual's permission and comply with applicable legal requirements before storing it). Every prebuilt model shares the same base features — text extraction, key-value pairs, selection marks, tables — on top of a fixed field schema for that document type (the invoice model, for example, returns named fields like CustomerName and InvoiceTotal). Custom models are for document types nothing prebuilt covers: template models need a consistent visual layout but train in minutes and are cheap to run; neural models use deep learning to handle varying or semi-structured layouts, support overlapping fields and signature detection, but cost more and train slower. A custom classifier routes an incoming document to the right extraction model when you handle several document types, and a composed model chains multiple custom models together, classifying first and then extracting with the matched model.",
     architecture:
@@ -207,7 +207,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'content-understanding-analyzer': {
     problem:
-      "Content Understanding needs to know exactly what fields you want pulled out of a piece of content — it can't guess your business's specific data needs.",
+      "You feed a stack of invoices into Content Understanding expecting the vendor name and total back — but nothing comes out until you've told it, in advance, that those are the two fields you actually want.",
     mentalModel:
       "An analyzer is a JSON schema of the fields you want extracted or generated from a piece of content. Each field is typed (for example, string) and marked either as something to extract — the value already exists in the document, so it's \"read\" verbatim — or something to generate, where the model infers it rather than reading it directly. A models object in the schema specifies which generative models the analyzer uses to do that work. For most scenarios you build and test this visually in Content Understanding Studio; you only drop down to submitting raw JSON when analyzer creation needs to be scriptable or automated.",
     architecture:
@@ -221,7 +221,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'knowledge-mining': {
     problem:
-      "Once you've extracted structured data from documents, images, audio, and video, you still need a way to actually search and analyze it at scale, not just hold it as isolated extraction results.",
+      "You've run every contract through Content Understanding and every scanned form through Document Intelligence, and now you've got thousands of separate JSON extraction results sitting in blob storage. Asking a question like \"which contracts mention a termination clause\" across all of them means writing custom code to open and scan every file one by one.",
     mentalModel:
       "An index holds your searchable content; an indexer creates and updates it. The indexer pulls from a data source (a blob container, database, or similar), applies \"document cracking\" to extract the source content, and iteratively builds each document as a hierarchical JSON structure — starting from raw fields like content and metadata_storage_name. A skillset of AI skills then runs in order, and each skill adds a field to that structure: a language-detection skill might add a language field; an OCR skill run per-image (over a normalized_images collection) adds extracted text under each image; a merge skill can combine the original text with image-extracted text into one merged_content field. Built-in skills draw on Foundry Tools like Vision and Language — language detection, entity/key-phrase extraction, translation, PII identification and redaction, image text extraction, caption/tag generation — and need a Foundry Tools resource attached (a free, restricted one is available but capped at 20 documents). Custom skills wrap your own logic, often as an Azure Function, for anything the built-ins don't cover — such as routing a field's content through a Document Intelligence model. The line between the two is what the built-in skills actually are: general-purpose Vision/Language enrichments (detect a language, pull out entities, translate, redact PII, OCR an image, caption it) rather than extraction against a specific document schema. The moment you need named, structured fields out of a known form or document type — an invoice's line items, a specific form's labeled fields — that's a job for a purpose-built extraction service like Document Intelligence, which is why the corpus's own custom-skill example calls one out from inside the pipeline instead of relying on a built-in skill for it. At the end, fields map to the index either implicitly (same name) or with an explicit mapping (rename or transform).",
     architecture:
@@ -236,7 +236,7 @@ export const LESSONS: Record<string, Lesson> = {
 
   'language-overview': {
     problem:
-      "Text data is everywhere in an app — support tickets, chat transcripts, form fields — but raw text isn't structured or actionable on its own.",
+      "A support ticket lands in your queue as a wall of plain text. Before your app can act on it, you have to pick a job: figure out what language it's in, pull out who and where it's about, or check it for anything sensitive that shouldn't be logged — there's no single \"understand this text\" call that does all three.",
     mentalModel:
       "Azure Language in Foundry Tools gives you three current, actively-supported capabilities for turning text into structured signal: language detection, named entity recognition, and PII extraction. Each one is a distinct API operation you call against text you submit — there's no single \"understand this text\" call, you pick the operation that matches the question you're actually asking. (Sentiment analysis, summarization, and key-phrase extraction still exist but are marked deprecated — kept only for apps already built on them, not for new exam-relevant design.) All three current capabilities run through the same provisioning and calling pattern: one Foundry resource, one endpoint, JSON documents in, structured results out — the difference between them is just which capability you invoke.",
     architecture:
@@ -250,7 +250,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'language-detect-entities': {
     problem:
-      "Two very different problems: you don't know what language a piece of text is in, or you know the language but need to know what's actually being talked about (who, where, when, which organisation).",
+      "A multilingual support inbox gets a new ticket, and you don't know if it's written in French or Dutch until you've parsed it — which decides which auto-reply template goes out. A different ticket you can already read just fine, but before a human sees it you need to know who's affected, which store, and when it happened.",
     mentalModel:
       "Language detection reads each submitted document and returns a language identifier plus a confidence score between 0 and 1. It handles single phrases or whole documents (up to 5,120 characters, up to 1,000 items per request), and it's useful for content stores collecting arbitrary text, or determining which language a chat session should respond in. Named entity recognition finds references inside text and categorises them — Person, Location, DateTime, Organization, Address, Email, URL, and more — returning the category for each entity found.",
     architecture:
@@ -264,7 +264,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'language-pii': {
     problem:
-      "Text often contains personal data you're not supposed to store, log, or show to everyone who can see the rest of the document — a customer-feedback form or medical record with names, addresses, or card numbers embedded in the body.",
+      "A batch of customer-feedback forms comes in for storage, and buried in the free-text field is a name, a home address, and a card number a customer probably shouldn't have typed there at all — now sitting in the same document as everything else that's fine to log.",
     mentalModel:
       "PII detection identifies sensitive spans in text — names, addresses, phone numbers, email addresses, social security numbers, credit card numbers — and tags each one with a category and confidence score, the same document-in, categorized-entities-out shape as general entity recognition, just scoped to sensitive categories. You can also ask the service to redact what it finds: instead of returning categorized entities, it returns the full text back with those spans replaced by asterisks or a character you specify, so you get a ready-to-store, ready-to-display version without having to do the masking yourself. Extraction and redaction are presented as separate operations in the API rather than one call doing both — decide which one you actually need (a list to log and review, or a safe string to persist) before you call it.",
     architecture:
@@ -278,7 +278,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'language-translation': {
     problem:
-      "Written content in one language is often needed in another — documentation, support replies, product descriptions — and that's a different problem from understanding text in a single language.",
+      "Your product docs need to ship in six languages by Friday, with the numbered steps landing in the same order after translation as before. A different message arrives already in a language your reader knows well — except it's set in a script they can't parse, so nothing needs translating, only sounding out.",
     mentalModel:
       "Azure Translator supports 90+ languages and two related but distinct operations: translation, converting text from a source language to one or more target languages (you can specify the source or let the service auto-detect it), and transliteration, rendering text in a different script without changing the language — for example, converting Japanese written in Hiragana into Latin characters so it reads phonetically to an English speaker. You can translate with the default model or route through an LLM, translate whole documents synchronously or asynchronously while preserving structure, and train custom models for domain-specific terminology.",
     architecture:
@@ -292,7 +292,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'language-mcp': {
     problem:
-      "If an agent needs Language capabilities, hard-coding calls to the Language SDK into the agent's code works, but it means every agent that needs language analysis re-implements that integration — and MCP itself is a general pattern worth understanding before looking at any specific MCP server.",
+      "You've already got code that calls the Language SDK directly — detect the ticket's language, then pull out its entities. Now wire up a second agent that needs those same two calls, then a third, and each one carries its own copy of that SDK integration with no shared catalog of what's available.",
     mentalModel:
       "MCP uses a client-server architecture: a host (the app running the agent, e.g. Foundry or a custom app), a client (the piece inside the host that manages MCP server connections), and a server (exposes tools, resources, and prompts the agent can discover). The Azure Language MCP server exposes Language capabilities as tools through that architecture. When connected, the agent's own model reads the prompt and decides which tool — or combination of tools — to call, in the same turn if needed (e.g. \"what language is this, and who's mentioned?\" can trigger both language detection and entity recognition together). You write no routing logic; the agent handles tool selection autonomously from the tool descriptions it received.",
     architecture:
@@ -307,7 +307,7 @@ export const LESSONS: Record<string, Lesson> = {
 
   'speech-overview': {
     problem:
-      "Speech is a genuinely different modality from text — audio in or audio out — and needs its own connection and configuration model, not just a different endpoint on the same client.",
+      "You want an app that transcribes a recorded meeting, or an assistant that reads a message aloud — but every Language API call you've written so far expects text going in and text coming out. Audio doesn't fit through that same client, and it needs its own connection object before anything else works.",
     mentalModel:
       "Every Azure Speech SDK call starts from a SpeechConfig object, which holds the connection details — endpoint or region, and key — for your Foundry resource. Whatever you build next — a SpeechRecognizer for transcription, a SpeechSynthesizer for output, a TranslationRecognizer for translation — is created by passing that same SpeechConfig (or its translation-specific subclass) in, so getting this one connection object right is what every other speech capability depends on. You're not limited to the SDK either: the same operations are reachable by submitting JSON requests straight to the REST interface, though the SDK is the path nearly every real scenario and every example in this corpus takes.",
     architecture:
@@ -321,7 +321,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'speech-to-text': {
     problem:
-      "Recorded or live audio (a call, a meeting, a voice memo) isn't searchable, can't be fed into text-based analysis, and can't be read by someone who needs it in writing.",
+      "A support call just ended and the recording is sitting in a folder. Nobody can search it, run it through a Language API, or hand a written copy to the compliance team — right now it's just audio, and none of those next steps work until it's text.",
     mentalModel:
       "A consistent pattern regardless of language SDK: a SpeechConfig holds the connection (endpoint/region + key); an optional AudioConfig sets the input source (defaults to the system microphone, or point it at a file); a SpeechRecognizer, built from those two, is your proxy client to the API; calling a method like RecognizeOnceAsync() runs one asynchronous transcription. The result is a SpeechRecognitionResult whose Reason tells you what happened — RecognizedSpeech (success, check the Text property), NoMatch (audio was parsed but no speech was found), or Canceled (an error — check the Properties collection's CancellationReason for why).",
     architecture:
@@ -335,7 +335,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'text-to-speech': {
     problem:
-      "Some scenarios need spoken output — reading a message aloud, giving an app a voice — and plain text can't do that on its own, and sometimes you need real control over exactly how it sounds.",
+      "Your assistant drafts a reply as text, but the person it's for is driving and needs it read aloud — and just speaking the words back isn't enough once you also need it to sound calm rather than robotic, or pronounce \"SQL\" as \"sequel\" instead of spelling it out.",
     mentalModel:
       "The synthesis pattern mirrors recognition: a SpeechConfig for the connection; an optional AudioConfig for the output (default speaker, a file, or explicitly null to get the raw audio stream back for your own processing); a SpeechSynthesizer built from those; calling SpeakTextAsync() runs the synthesis. The result is a SpeechSynthesisResult — when Reason is SynthesizingAudioCompleted, the AudioData property holds the generated audio. For control beyond plain text, SSML (Speech Synthesis Markup Language) is an XML syntax you submit instead: it can set a speaking style (e.g. \"cheerful\" on a neural voice), insert pauses, specify phonemes for correct pronunciation (rendering \"SQL\" as \"sequel\"), adjust prosody (pitch, timbre, rate), apply say-as rules (read a string as a date, time, or phone number), or even insert prerecorded audio.",
     architecture:
@@ -349,7 +349,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'speech-translation': {
     problem:
-      "Translating written text doesn't help when the input is spoken — you could transcribe first and translate second as two separate steps, but that's not the same as a service built for the combined case, and going from translated text back to translated speech has more than one valid approach.",
+      "A customer on a support call is speaking French; the agent on the line only speaks English. Transcribing her words and translating the transcript afterward would eventually get there, but chaining two separate calls together isn't the same as a service built for spoken input directly — and if the agent needs to hear her back in English, there's more than one way to turn that translated text into speech.",
     mentalModel:
       "Speech translation connects via a SpeechTranslationConfig (not the plain SpeechConfig) and uses a TranslationRecognizer, configured with a source language and one or more target languages via add_target_language(). For speech-to-speech, there are two approaches: manual synthesis runs translation and synthesis as two separate, decoupled steps — get the text translations first, then loop through each target language and synthesize each one individually with a regular SpeechSynthesizer, which works for any number of target languages; event-based synthesis instead attaches a handler to the TranslationRecognizer's own Synthesizing event to capture translated audio as it's produced, but only works for a single target language (1:1 translation).",
     architecture:
@@ -363,7 +363,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'voice-live': {
     problem:
-      "A phone-call-style conversation needs the agent to listen, think, and speak in the same continuous exchange, including being interrupted mid-sentence — batch \"record, transcribe, respond, synthesize\" is too slow and too turn-based for that.",
+      "You wire together speech-to-text, an LLM call, and text-to-speech to build a voice agent, and it works — right up until the caller interrupts mid-sentence to correct themselves. That batch record-transcribe-respond-synthesize pipeline can only finish what it already started; it can't listen, think, and speak in the same breath the way a real phone call needs.",
     mentalModel:
       "The Voice Live API runs over a WebSocket for real-time, bidirectional communication, exchanging JSON-formatted client events (like session.update to change configuration, input_audio_buffer.append to stream in audio, response.create to trigger a reply) and server events (session.updated, response.done, conversation.item.created) rather than discrete request/response calls. It supports two connection shapes — a project connection through a Foundry agent, or a direct model connection — and two auth methods: the recommended keyless Microsoft Entra ID (a Bearer token, needing the Cognitive Services User role) or an API key (via a pre-handshake header, unavailable in browsers, or a query-string parameter). Built-in noise reduction, echo cancellation, and WebRTC-based avatar streaming round out the real-time feature set.",
     architecture:
@@ -377,7 +377,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'speech-mcp': {
     problem:
-      "Same problem as the Language MCP server, for Speech: hard-coding Speech SDK calls into every agent that needs speech capabilities duplicates integration work — and speech tools have a requirement text-based tools don't.",
+      "You wire a Speech SDK call into one agent so it can transcribe a voice memo, then copy and adjust that same integration into the next agent that needs to read a reply aloud. And unlike the Language MCP server's text-only tools, these ones produce an audio file that has to land somewhere real.",
     mentalModel:
       "The Azure Speech MCP server exposes exactly two tools: speech-to-text (\"Recognize\" — transcribes audio in formats like WAV, MP3, OGG, FLAC, MP4, M4A, AAC, with options for language selection, phrase hints, and profanity filtering) and text-to-speech (\"Synthesize\" — generates natural-sounding audio in multiple neural voices and output formats). The agent picks the right tool autonomously from the user's prompt, same as the Language MCP server. The real difference: because this server works with audio files rather than just text, it needs an Azure Storage account and a blob container. Text-to-speech writes generated audio to that container and returns a link; speech-to-text can read from a public URL or from the container via a SAS URL you provide when connecting the server.",
     architecture:
@@ -392,7 +392,7 @@ export const LESSONS: Record<string, Lesson> = {
 
   'ai-search-overview': {
     problem:
-      "Once you have structured, semi-structured, or unstructured data from many sources, you need infrastructure that can index it and answer queries against it at scale — building that indexing/query engine from scratch is a large undertaking on its own.",
+      "Your organization has thousands of documents sitting in Blob Storage — product manuals, scanned contracts, PDFs — and someone just asked you to find every one that mentions a specific clause. Some of that text only exists as pixels in a scanned image, not a searchable string, and a folder full of files isn't a search engine. Building infrastructure that can index all of it, including pulling text out of the scans, and answer queries against it at scale is a project of its own.",
     mentalModel:
       "Azure AI Search provides that infrastructure: it indexes documents and data from a range of sources — structured, semi-structured, and unstructured — and the index itself is more than a copy of your text. Because indexing runs through AI skills, what actually lands in the index includes derived insights: text read out of images via OCR, entities and key phrases pulled out by text analytics, and other AI-generated fields layered on top of the raw content. That's what makes the index queryable in ways plain full-text search can't match — you're searching over the extracted meaning of a document, not just its words. It's the engine underneath two different jobs described in this corpus: knowledge mining (turning documents into structured, analyzable data) and RAG grounding (supplying a generative AI agent with the actual current content it needs to answer accurately).",
     architecture:
@@ -404,7 +404,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'rag-fundamentals': {
     problem:
-      "A model's training data goes stale the moment training ends, and it has no way to cite where an answer came from or guarantee it's grounded in your organisation's actual current content — that's a real barrier in settings where accuracy and traceability matter.",
+      "A customer asks your support agent about the return policy for damaged items shipped last month. Answering from training data alone, the model gives a fluent, confident answer built from whatever policy language it happened to see during training — possibly out of date, with no citation, and no way to check it against what your company's policy actually says today.",
     mentalModel:
       "RAG runs three coordinated steps every time it answers: retrieve (search a knowledge base for content relevant to the query), augment (combine that retrieved content with the user's question as context), generate (the agent answers using both its training and the retrieved material). This gets you real-time-current knowledge without retraining, source citations a user can verify, and grounding that reduces fabricated answers. This unit doesn't spell out how \"search for relevant content\" actually works, but it's named elsewhere in this cluster: content gets chunked and embedded into vector representations, and the index RAG retrieves from is explicitly described (see ai-search-overview) as a vector-based index — so retrieval mostly means comparing the query's meaning against those vectors, not matching exact keywords.",
     architecture:
@@ -416,7 +416,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'foundry-iq': {
     problem:
-      "Building RAG properly means configuring vector databases, embedding pipelines, retrieval tuning, and search infrastructure — and if three different agents in your organisation each need RAG, doing that from scratch three times is a lot of duplicated, hard-to-maintain plumbing.",
+      "Your organisation wants three agents live: a support bot answering product questions, an HR assistant answering policy questions, and a developer agent explaining API usage. Built as three separate RAG systems, that's three vector databases, three embedding pipelines, three retrieval-tuning efforts to configure and maintain — even though the support bot and developer agent need to search the exact same product documentation.",
     mentalModel:
       "Foundry IQ is Azure AI Search's retrieval capability, offered as a managed, shared service instead of infrastructure you build per agent. You create knowledge bases once — organised by business domain (\"Product Documentation,\" \"HR Policies\"), not by which storage system the data happens to live in — and any number of agents connect to the same knowledge base. It also runs the retrieval intelligence for you: it reads the query, picks a retrieval strategy (keyword for simple factual questions, semantic search plus query expansion for complex ones), ranks results, and returns citations.",
     architecture:
@@ -430,7 +430,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'foundry-iq-data-sources': {
     problem:
-      "Real organisational knowledge lives scattered across SharePoint, Blob Storage, OneLake, existing search indexes, and the open web — and even once it's connected, an agent doesn't automatically know when to search it, how to cite it, or what to do when nothing relevant is found.",
+      "You're building one knowledge base for a support agent, and the content it needs is scattered: technical specs live in SharePoint, API docs sit as files in Blob Storage, usage analytics live in OneLake, and support tickets are already indexed in Azure AI Search. Four different places with four different access patterns — and even after picking the right source for each, the agent still doesn't automatically know when to search, how to cite what it finds, or what to do when nothing relevant turns up.",
     mentalModel:
       "Foundry IQ supports six data source types, each suited to a different situation. Azure AI Search Index reuses an index you've already built, when you need semantic ranking, custom scoring, or facets. Azure Blob Storage reads documents (PDF, docx, txt, md, HTML) directly from containers, no index to build or maintain. Web grounds answers in real-time content via Bing — good for current events or pricing, at the cost of less control over exact sources. SharePoint Remote queries SharePoint live, automatically respecting existing SharePoint permissions with no index to maintain, but with limited search sophistication. SharePoint Indexed preprocesses SharePoint content into Azure AI Search instead, trading index-maintenance overhead for faster responses and full Search capabilities — and permissions get configured at indexing time rather than enforced live. OneLake connects to unstructured data already sitting in a Microsoft Fabric lakehouse. You can combine several sources in one knowledge base — SharePoint as the primary source, with web grounding as a fallback for anything current the internal data doesn't cover. Beyond wiring up sources, retrieval behaviour itself has to be configured: vague agent instructions like \"use the knowledge base\" produce inconsistent results, so effective instructions specify exactly when to retrieve, how to cite sources, and what to do when nothing relevant is found — then get tested against groundedness, citation, relevance, and completeness.",
     architecture:
@@ -445,7 +445,7 @@ export const LESSONS: Record<string, Lesson> = {
 
   'model-catalog': {
     problem:
-      "With over 1,900 models from many providers, picking the right one by browsing isn't practical without a structured way to filter by what actually matters for your scenario.",
+      "You need a model for a support chatbot that just answers FAQs, quickly and cheaply — and Foundry's catalog hands you over 1,900 options with no obvious sorting: GPT-5-class LLMs sit next to Phi-4-class SLMs, embedding models, image generators, and reasoning models like Claude Opus 4.6, and nothing about the list itself says which one actually fits your chatbot.",
     mentalModel:
       "The catalog splits models along a few axes that matter for real decisions. Source: Azure OpenAI direct-billed models vs. partner/community models with their own licensing (and usually an Azure Marketplace subscription requirement). Size class: LLMs like GPT-5-class models for deep reasoning, complex content generation, and extensive context understanding vs. SLMs like Phi-4-class, which trade some of that capability for speed and cost on common NLP tasks — SLMs can run on lower-end hardware or edge devices. Within language models there's a split worth not collapsing: most catalog models are chat completion models, built to generate coherent, contextually appropriate responses for conversational interfaces, while a smaller set are reasoning models (the corpus names Claude Opus 4.6) built for higher performance on complex tasks like maths, coding, science, strategy, and logistics — they break a problem into steps and show that reasoning process, which chat completion models don't do. Task specialisation is the other axis: embedding models (Ada, Cohere) convert text into numerical vectors, enabling semantic search, recommendations, and RAG — but the embedding model's own job stops at producing that vector; it doesn't search anything itself. Finding relevant content by meaning is a separate index/search engine (Azure AI Search, in this curriculum) acting on the vectors the embedding model produced, the same division of labour this corpus draws elsewhere between an index and what populates it; then there are dedicated image-generation, video-generation, image-analysis, text-to-speech, and speech-to-text models. A last, easy-to-forget category is regional and domain-specific models — trained on medical literature, legal documents, or a particular language corpus — which often beat general-purpose models inside their specific domain despite being narrower.",
     architecture:
@@ -457,7 +457,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'model-deployment': {
     problem:
-      "A model sitting in the catalog isn't callable by anything — your application needs a live endpoint, and before that, decisions about which SDK/endpoint and which deployment shape fit the workload.",
+      "You've picked GPT-4o-mini from the catalog and written client.chat.completions.create(model=\"gpt-4o-mini\") — and the call fails, because a model sitting in the catalog isn't a live endpoint yet. Before it can answer anything, you have to deploy it under a name and decide whether that traffic needs pay-per-token flexibility, reserved throughput, or a specific compliance region.",
     mentalModel:
       "Every Foundry project exposes two endpoints: a Project endpoint, used with the Foundry SDK for Foundry-native operations (connections, project config, tracing, datasets/indexes) beyond what OpenAI's API covers, and an Azure OpenAI endpoint, used with the OpenAI SDK directly in an OpenAI-compatible way across OpenAI-hosted, Azure OpenAI, and Foundry models alike — that choice is made before development starts, not fixed later. Deployment itself turns a catalog model into a callable endpoint with a name (used in the model parameter at inference time) and a deployment type that's really a data-residency/throughput decision: Global Standard (any region, pay-per-token, highest quota, the default for general workloads), Global Provisioned (reserved throughput units for predictable high-throughput), Global Batch (50% discount for large async jobs within 24 hours), Data Zone variants of each (same three shapes, constrained to a compliance data zone), single-region Standard/Provisioned variants for regional residency, and a Developer type reserved for fine-tuned model evaluation. Partner/community models may require accepting Azure Marketplace terms; Azure-direct models like GPT-4o-mini don't. After deploying, you land in the Foundry Playground to test immediately.",
     architecture:
@@ -471,7 +471,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'model-evaluation': {
     problem:
-      "A model that looked good in a demo can still drift, regress, or simply not meet quality requirements once it's handling real traffic — deploying it isn't the same as knowing it's good, and \"evaluate it\" isn't one single activity.",
+      "You tried a dozen prompts in the Playground, they all looked good, so you shipped the model — then in production, on a slightly different question, it states an ungrounded guess as fact, and you only find out because a user complains. A handful of manual spot-checks in a chat window is not the same activity as scoring a model against a graded test dataset.",
     mentalModel:
       "Manual evaluation captures what automated metrics can't: interactive playground testing (including side-by-side comparison of models on the same prompts), structured review where human raters score responses on relevance, informativeness, engagement, accuracy, and safety, and user studies that surface real-world issues like confusing phrasing. Automated metrics split into two families with a real dividing line between them. Generation-quality metrics — groundedness (is the answer based on the given context, not speculation; a binary \"Pro\" variant exists for strict factual checks), relevance, coherence, fluency — and risk/safety metrics (self-harm, hateful/unfair content, violence, sexual content, protected material, jailbreak vulnerability, reported as a defect rate) are judged by an AI evaluator model, with no reference answer needed. NLP metrics — F1-score, BLEU, METEOR, ROUGE, GLEU — instead need ground-truth reference answers to compare against, and work best for tasks with a genuinely correct answer (translation, summarisation, classification), not open-ended generation where many valid responses exist.",
     architecture:
@@ -485,9 +485,9 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'model-fine-tuning': {
     problem:
-      "Some scenarios need a model to behave the same way every time — a specific output format, a consistent tone — regardless of what's asked, and neither prompting alone nor giving it more knowledge reliably guarantees that.",
+      "The travel agency's system message tells the model to always answer in a warm, encouraging tone with short paragraphs — and it mostly does, until a slightly different phrasing or a longer conversation lets the tone slip back to something flat and generic. A system message is an instruction the model can drift away from, not a constraint wired into how it generates text every time.",
     mentalModel:
-      "Fine-tuning is one of several optimisation levers (alongside prompt engineering and RAG), and the one that actually changes the model's behaviour by adjusting its weights, rather than changing what context it has access to at answer time. Mechanically, Foundry fine-tuning uses LoRA (Low-Rank Adaptation): rather than retraining every parameter in the base model, LoRA approximates the needed weight changes with a lower-rank representation and updates only a smaller subset of parameters — that's why it's faster and cheaper than full retraining while keeping quality close to the base model. Three distinct techniques sit under \"fine-tuning\": supervised fine-tuning (SFT) trains on a labelled dataset of prompt-and-response pairs and works best when there's a clear, well-defined way to do the task; reinforcement fine-tuning (RFT) uses a grader to reward better responses iteratively, suited to complex or dynamic tasks with many valid solutions where you're optimising reasoning quality rather than matching one fixed answer; and Direct Preference Optimization (DPO) aligns the model using pairs of preferred vs. non-preferred responses, and is computationally lighter than traditional reinforcement learning while being equally effective at alignment. These techniques can be chained — SFT to build a customised model, then DPO to further align it — and fine-tuning itself is complementary to, not a replacement for, prompt engineering and RAG.",
+      "That drift is fine-tuning's whole reason for existing: instead of feeding the model more context or repeating the instruction harder, it changes the model's actual weights so the desired pattern stops being optional — one of three optimisation levers alongside prompt engineering and RAG, but the only one that acts on the weights rather than on what context the model has access to at answer time. Mechanically, Foundry fine-tuning uses LoRA (Low-Rank Adaptation): rather than retraining every parameter in the base model, LoRA approximates the needed weight changes with a lower-rank representation and updates only a smaller subset of parameters — that's why it's faster and cheaper than full retraining while keeping quality close to the base model. Three distinct techniques sit under \"fine-tuning\": supervised fine-tuning (SFT) trains on a labelled dataset of prompt-and-response pairs and works best when there's a clear, well-defined way to do the task; reinforcement fine-tuning (RFT) uses a grader to reward better responses iteratively, suited to complex or dynamic tasks with many valid solutions where you're optimising reasoning quality rather than matching one fixed answer; and Direct Preference Optimization (DPO) aligns the model using pairs of preferred vs. non-preferred responses, and is computationally lighter than traditional reinforcement learning while being equally effective at alignment. These techniques can be chained — SFT to build a customised model, then DPO to further align it — and fine-tuning itself is complementary to, not a replacement for, prompt engineering and RAG.",
     architecture:
       "Fine-tuning comes after model-evaluation, not before it: the corpus is explicit that you evaluate a standard model's baseline performance first, because without that baseline you can't tell whether fine-tuning improved or degraded it. It specialises a model that's already in the catalog and already deployable, and it feeds back into model-deployment — Foundry's Developer deployment type exists specifically for fine-tuned model evaluation, so a fine-tuned model needs a new deployment before you can test it again. Inside the optimisation trio it's the lever for \"optimise the model\" (behavioural consistency), sitting alongside RAG's \"optimise for context\", both built on top of prompt engineering, which the corpus calls the foundation supporting both directions.",
     azureMapping:
@@ -499,7 +499,7 @@ export const LESSONS: Record<string, Lesson> = {
   },
   'image-video-generation': {
     problem:
-      "Generating visual content from a text description and analysing existing visual content are opposite directions of the same modality, and the catalog treats them as genuinely separate model categories, not one \"vision\" bucket.",
+      "Type \"a robot eating spaghetti\" into an image model and it hands back a picture that's never existed before — nothing you typed was ever indexed anywhere to be fetched, because the model generated it fresh from what it was trained on. Point a different kind of model at an existing photo and ask what's in it, and you need a model built to run in the opposite direction entirely.",
     mentalModel:
       "Image-generation models are generative, not a search system — the corpus is explicit that they don't retrieve images from a curated catalog, they create original graphical output from a natural-language description, trained to produce new images rather than find existing ones. The mechanism behind that \"create, don't retrieve\" claim: a model like gpt-image-1 or FLUX is trained on data, and it generates a new image conditioned on whatever you feed it as input — that's why the same underlying approach can accept more than one kind of input. Sora 2 makes this explicit for video: it generates from a text prompt, a reference image, or an existing video to remix, because all three are just different conditioning inputs to the same trained generative model, not three different tools. Named examples in the catalog: OpenAI's gpt-image-1 series and Black Forest Labs' FLUX series, filterable by the \"text to image\" inference task. Video generation works the same way for a different medium: Sora 2 (from OpenAI, deployed like any catalog model — find it under Build > Models, then Deploy) generates video from text prompts, reference images, or by remixing existing video, across multiple resolutions and durations, described in Foundry as an all-in-one creative platform. Both are distinct from image-analysis/vision models, which go the other direction: accept images as input and produce text output describing them.",
     architecture:
