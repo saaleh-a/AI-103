@@ -1,6 +1,19 @@
 import { useEffect, useMemo, useState } from 'react'
+import type { ComponentType } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { CheckCircle2, ChevronDown, ChevronLeft, ChevronRight, LayoutGrid } from 'lucide-react'
+import {
+  AlertTriangle,
+  CheckCircle2,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Clock,
+  Cloud,
+  Code2,
+  LayoutGrid,
+  Lightbulb,
+  Waypoints,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { ClusterBadge } from '@/components/ClusterBadge'
@@ -11,6 +24,8 @@ import { FLASHCARDS } from '@/data/content'
 import { LESSONS } from '@/data/lessons'
 import { getManifestEntry, fetchCorpusFile } from '@/lib/search'
 import { useLearnerState } from '@/lib/learner-state'
+import { cn } from '@/lib/utils'
+import { estimateReadMinutes } from '@/lib/time-estimate'
 
 export default function Learn() {
   const { topicId } = useParams()
@@ -64,6 +79,35 @@ function LearnIndex() {
   )
 }
 
+// A labeled section within a lesson — icon + label reads as a scannable
+// kicker (what kind of thing this paragraph is) rather than every field
+// looking identical, without resorting to a decorative colored border.
+function LessonSection({
+  icon: Icon,
+  label,
+  content,
+  mono,
+}: {
+  icon: ComponentType<{ className?: string; 'aria-hidden'?: boolean }>
+  label: string
+  content: string
+  mono?: boolean
+}) {
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground">
+          <Icon className="size-4 shrink-0 text-primary/70" aria-hidden />
+          {label}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className={cn('text-sm leading-relaxed', mono && 'font-mono text-[13px] leading-relaxed')}>
+        {content}
+      </CardContent>
+    </Card>
+  )
+}
+
 function LearnTopic({ topicId }: { topicId: string }) {
   const navigate = useNavigate()
   const { state, setTopicState, addToRetrievalQueue } = useLearnerState()
@@ -89,6 +133,10 @@ function LearnTopic({ topicId }: { topicId: string }) {
   }, [topic.id, topic.corpusIds])
 
   const check = useMemo(() => FLASHCARDS.find((f) => f.topicId === topic.id), [topic.id])
+  const readMinutes = useMemo(
+    () => (lesson ? estimateReadMinutes(lesson.problem, lesson.mentalModel, lesson.azureMapping, lesson.architecture, lesson.implementation, lesson.watchFor) : 0),
+    [lesson],
+  )
 
   const otherTopicsInCluster = TOPICS.filter((t) => t.cluster === topic.cluster && t.id !== topic.id)
 
@@ -121,50 +169,42 @@ function LearnTopic({ topicId }: { topicId: string }) {
           >
             <LayoutGrid className="size-3.5" aria-hidden /> All modules
           </button>
-          <ClusterBadge cluster={topic.cluster} className="mb-2 w-fit" />
+          <div className="mb-2 flex flex-wrap items-center gap-2">
+            <ClusterBadge cluster={topic.cluster} className="w-fit" />
+            {lesson && (
+              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                <Clock className="size-3.5" aria-hidden />~{readMinutes} min
+              </span>
+            )}
+          </div>
           <h1 className="text-2xl font-semibold tracking-tight">{topic.title}</h1>
           <p className="mt-1 text-sm text-muted-foreground">{topic.orient}</p>
         </div>
       </MotionGate>
 
       {lesson ? (
-        <div className="flex flex-col gap-4">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">The problem</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm leading-relaxed">{lesson.problem}</CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">The mental model</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm leading-relaxed">{lesson.mentalModel}</CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">In Azure</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm leading-relaxed">{lesson.azureMapping}</CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">Where this fits</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm leading-relaxed">{lesson.architecture}</CardContent>
-          </Card>
+        <div className="flex flex-col gap-5">
+          {/* The hook — deliberately not boxed like the rest. This is the question the
+              lesson exists to answer, so it reads as an opening line, not a filed fact. */}
+          <p className="text-lg leading-relaxed font-medium text-foreground sm:text-xl">{lesson.problem}</p>
+
+          <div className="flex flex-col gap-3">
+            <LessonSection icon={Lightbulb} label="The mental model" content={lesson.mentalModel} />
+            <LessonSection icon={Cloud} label="In Azure" content={lesson.azureMapping} />
+            <LessonSection icon={Waypoints} label="Where this fits" content={lesson.architecture} />
+          </div>
+
           {lesson.implementation && (
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Implementation</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm leading-relaxed">{lesson.implementation}</CardContent>
-            </Card>
+            <LessonSection icon={Code2} label="Implementation" content={lesson.implementation} mono />
           )}
+
           {lesson.watchFor && (
             <Card className="border-primary/30 bg-primary/5">
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-primary">Watch for</CardTitle>
+                <CardTitle className="flex items-center gap-1.5 text-sm font-medium text-primary">
+                  <AlertTriangle className="size-4 shrink-0" aria-hidden />
+                  Watch for
+                </CardTitle>
               </CardHeader>
               <CardContent className="text-sm leading-relaxed">{lesson.watchFor}</CardContent>
             </Card>

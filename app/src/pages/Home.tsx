@@ -1,5 +1,5 @@
-import { ArrowRight, CheckCircle2, RotateCcw } from 'lucide-react'
-import { useEffect } from 'react'
+import { ArrowRight, CheckCircle2, Clock, RotateCcw } from 'lucide-react'
+import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -7,8 +7,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ClusterBadge } from '@/components/ClusterBadge'
 import { CountUp } from '@/components/effects/CountUp'
 import { MotionGate } from '@/components/effects/MotionGate'
+import { LESSONS } from '@/data/lessons'
 import { TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
+import { estimateReadMinutes, estimateSessionMinutes } from '@/lib/time-estimate'
 import { useUIPrefs } from '@/lib/ui-prefs'
 
 export default function Home() {
@@ -23,6 +25,12 @@ export default function Home() {
   const nextTopic = TOPICS.find((t) => t.id === nextTopicId)
   const isRetrieval = nextTopicId ? state.retrievalQueue.includes(nextTopicId) : false
   const allMastered = !nextTopicId
+
+  const minutes = useMemo(() => {
+    if (isRetrieval) return estimateSessionMinutes({ flashcards: 4, mcqs: 4 }) // SESSION_SIZE=8, mixed
+    const lesson = nextTopic && LESSONS[nextTopic.id]
+    return lesson ? estimateReadMinutes(lesson.problem, lesson.mentalModel, lesson.azureMapping, lesson.architecture, lesson.implementation, lesson.watchFor) : 0
+  }, [isRetrieval, nextTopic])
 
   return (
     <div className="flex flex-col gap-6">
@@ -47,6 +55,11 @@ export default function Home() {
                   {isRetrieval ? 'Due for retrieval' : 'Next up'}
                 </Badge>
                 {nextTopic && <ClusterBadge cluster={nextTopic.cluster} />}
+                {minutes > 0 && (
+                  <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                    <Clock className="size-3.5" aria-hidden />~{minutes} min
+                  </span>
+                )}
               </div>
               <CardTitle className="text-2xl">{nextTopic?.title}</CardTitle>
               <CardDescription>{nextTopic?.orient}</CardDescription>

@@ -1,5 +1,5 @@
-import { CheckCircle2, XCircle } from 'lucide-react'
-import { useState } from 'react'
+import { CheckCircle2, Clock, XCircle } from 'lucide-react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -9,9 +9,10 @@ import { MotionGate } from '@/components/effects/MotionGate'
 import { FLASHCARDS, MCQ_ITEMS } from '@/data/content'
 import { TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
+import { estimateSessionMinutes } from '@/lib/time-estimate'
 import type { MasteryState } from '@/lib/types'
 
-const SESSION_SIZE = 8
+export const SESSION_SIZE = 8
 
 type QueueItem = { kind: 'flashcard'; id: string } | { kind: 'mcq'; id: string }
 
@@ -39,6 +40,14 @@ export default function Practice() {
   const flashcard = current?.kind === 'flashcard' ? FLASHCARDS.find((f) => f.id === current.id) : undefined
   const mcq = current?.kind === 'mcq' ? MCQ_ITEMS.find((m) => m.id === current.id) : undefined
   const topic = TOPICS.find((t) => t.id === (flashcard?.topicId ?? mcq?.topicId))
+
+  const remainingMinutes = useMemo(() => {
+    const remaining = queue.slice(index)
+    return estimateSessionMinutes({
+      flashcards: remaining.filter((i) => i.kind === 'flashcard').length,
+      mcqs: remaining.filter((i) => i.kind === 'mcq').length,
+    })
+  }, [queue, index])
 
   function progressTopic(topicId: string, remembered: boolean) {
     const current = state.topics[topicId]?.state ?? 'not-encountered'
@@ -97,6 +106,9 @@ export default function Practice() {
         <ProgressBar value={(index / queue.length) * 100} className="h-1.5 flex-1" />
         <span className="text-xs text-muted-foreground">
           {index + 1} / {queue.length}
+        </span>
+        <span className="flex items-center gap-1 text-xs text-muted-foreground">
+          <Clock className="size-3.5" aria-hidden />~{remainingMinutes} min left
         </span>
       </div>
 
