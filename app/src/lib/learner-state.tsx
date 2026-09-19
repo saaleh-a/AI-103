@@ -1,25 +1,11 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { TOPICS } from '@/data/topics'
+import { emptyState, normalizeLearnerState } from '@/lib/learner-state-data'
+import { appendLogEntry } from '@/lib/session-log'
 import { readJSON, writeJSON } from '@/lib/storage'
-import type { LearnerState, MasteryState, TopicMastery } from '@/lib/types'
+import type { LearnerState, MasteryState, SessionLogEntry } from '@/lib/types'
 
 const STORAGE_KEY = 'ai103-learner-state'
-
-function emptyState(): LearnerState {
-  const topics: Record<string, TopicMastery> = {}
-  for (const t of TOPICS) {
-    topics[t.id] = { state: 'not-encountered', evidence: [] }
-  }
-  return {
-    topics,
-    strengths: [],
-    weaknesses: [],
-    confusions: [],
-    retrievalQueue: [],
-    sessionsCompleted: 0,
-    itemsMasteredToday: 0,
-  }
-}
 
 function todayKey(): string {
   return new Date().toISOString().slice(0, 10)
@@ -34,6 +20,7 @@ interface LearnerStateApi {
   addStrength: (s: string) => void
   addWeakness: (s: string) => void
   addConfusion: (s: string) => void
+  appendSessionLog: (entry: SessionLogEntry) => void
   addToRetrievalQueue: (topicId: string) => void
   removeFromRetrievalQueue: (topicId: string) => void
   recordSessionTouch: () => void
@@ -47,16 +34,13 @@ const LearnerStateContext = createContext<LearnerStateApi | null>(null)
 
 export function LearnerStateProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<LearnerState>(() => {
-    const loaded = readJSON<LearnerState>(STORAGE_KEY, emptyState())
-    // reset the daily "mastered today" counter across day boundaries
-    if (loaded.lastSessionDate !== todayKey()) {
-      loaded.itemsMasteredToday = 0
+    try {
+      return normalizeLearnerState(readJSON<unknown>(STORAGE_KEY, emptyState(TOPICS)), TOPICS)
+    } catch (error) {
+      if (!(error instanceof TypeError)) throw error
+      console.warn('[learner-state] Saved progress could not be loaded.', error)
+      return emptyState(TOPICS)
     }
-    // heal state if new topics were added to TOPICS since this was saved
-    for (const t of TOPICS) {
-      if (!loaded.topics[t.id]) loaded.topics[t.id] = { state: 'not-encountered', evidence: [] }
-    }
-    return loaded
   })
 
   useEffect(() => {
@@ -91,6 +75,10 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
   const addWeakness = useCallback(addUnique('weaknesses'), [])
   const addConfusion = useCallback(addUnique('confusions'), [])
 
+  const appendSessionLog = useCallback((entry: SessionLogEntry) => {
+    setState((prev) => ({ ...prev, sessionLog: appendLogEntry(prev.sessionLog, entry) }))
+  }, [])
+
   const addToRetrievalQueue = useCallback((topicId: string) => {
     setState((prev) => (prev.retrievalQueue.includes(topicId) ? prev : { ...prev, retrievalQueue: [...prev.retrievalQueue, topicId] }))
   }, [])
@@ -110,16 +98,16 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
 
   const importState = useCallback((json: string) => {
     try {
-      const parsed = JSON.parse(json) as LearnerState
-      if (!parsed || typeof parsed !== 'object' || !parsed.topics) return false
-      setState(parsed)
+      const parsed: unknown = JSON.parse(json)
+      setState(normalizeLearnerState(parsed, TOPICS))
       return true
-    } catch {
+    } catch (error) {
+      if (!(error instanceof SyntaxError) && !(error instanceof TypeError)) throw error
       return false
     }
   }, [])
 
-  const resetState = useCallback(() => setState(emptyState()), [])
+  const resetState = useCallback(() => setState(emptyState(TOPICS)), [])
 
   const coverage = useMemo(() => {
     const values = Object.values(state.topics)
@@ -150,6 +138,7 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     addStrength,
     addWeakness,
     addConfusion,
+    appendSessionLog,
     addToRetrievalQueue,
     removeFromRetrievalQueue,
     recordSessionTouch,

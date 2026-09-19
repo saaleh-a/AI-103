@@ -9,6 +9,7 @@
     "dev": "vite",
     "prebuild": "npm run content",
     "build": "tsc -b && vite build",
+    "test": "node --experimental-strip-types --test",
     "lint": "oxlint",
     "preview": "vite preview"
   },

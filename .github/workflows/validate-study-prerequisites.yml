@@ -1,0 +1,39 @@
+name: Validate study prerequisites
+
+on:
+  push:
+    branches: [saaleh-a-study-validation-prerequisites]
+    paths: [".github/workflows/validate-study-prerequisites.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Restore locked dependencies
+        id: dependencies
+        run: npm ci --cache "${{ runner.temp }}\ai103-npm-cache" --no-audit --no-fund
+      - name: Generate corpus manifest
+        run: npm run content
+      - name: Run regression tests
+        run: npm test
+      - name: Check types
+        run: npx tsc -b
+      - name: Build
+        run: npm run build
+      - name: Preserve exact public-package cache for local verification
+        if: always() && steps.dependencies.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai103-locked-npm-cache
+          path: ${{ runner.temp }}\ai103-npm-cache\_cacache
+          retention-days: 1

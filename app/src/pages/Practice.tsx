@@ -10,6 +10,7 @@ import { FLASHCARDS, MCQ_ITEMS } from '@/data/content'
 import { TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
 import { estimateSessionMinutes } from '@/lib/time-estimate'
+import { useAnswerTimer } from '@/lib/use-answer-timer'
 import type { MasteryState } from '@/lib/types'
 
 export const SESSION_SIZE = 8
@@ -29,12 +30,13 @@ function buildQueue(retrievalQueue: string[]): QueueItem[] {
 }
 
 export default function Practice() {
-  const { state, setTopicState, removeFromRetrievalQueue, addToRetrievalQueue } = useLearnerState()
+  const { state, setTopicState, removeFromRetrievalQueue, addToRetrievalQueue, appendSessionLog } = useLearnerState()
   const [queue] = useState<QueueItem[]>(() => buildQueue(state.retrievalQueue))
   const [index, setIndex] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
+  const finishAnswer = useAnswerTimer(index)
 
   const current = queue[index]
   const flashcard = current?.kind === 'flashcard' ? FLASHCARDS.find((f) => f.id === current.id) : undefined
@@ -50,15 +52,28 @@ export default function Practice() {
   }, [queue, index])
 
   function progressTopic(topicId: string, remembered: boolean) {
-    const current = state.topics[topicId]?.state ?? 'not-encountered'
+    if (!current) return
+    const msToAnswer = finishAnswer()
+    if (msToAnswer === null) return
+    appendSessionLog({
+      topicId,
+      itemType: current.kind,
+      itemId: current.id,
+      correct: remembered,
+      timestamp: new Date().toISOString(),
+      msToAnswer,
+    })
+    const mastery = state.topics[topicId]?.state ?? 'not-encountered'
     if (remembered) {
-      const next: MasteryState = current === 'understood' || current === 'not-encountered' || current === 'introduced' ? 'retrievable' : current === 'retrievable' ? 'discriminable' : 'mastered'
+      const next: MasteryState = mastery === 'understood' || mastery === 'not-encountered' || mastery === 'introduced' ? 'retrievable' : mastery === 'retrievable' ? 'discriminable' : 'mastered'
       setTopicState(topicId, next, 'Correct in a practice session.')
       if (next === 'mastered') removeFromRetrievalQueue(topicId)
+      setCorrectCount((c) => c + 1)
     } else {
       setTopicState(topicId, 'needs-repair', 'Missed in a practice session.')
       addToRetrievalQueue(topicId)
     }
+    next()
   }
 
   function next() {
@@ -136,19 +151,12 @@ export default function Practice() {
               <div className="flex flex-wrap gap-2">
                 <Button
                   variant="outline"
-                  onClick={() => {
-                    progressTopic(flashcard.topicId, false)
-                    next()
-                  }}
+                  onClick={() => progressTopic(flashcard.topicId, false)}
                 >
                   Still shaky
                 </Button>
                 <Button
-                  onClick={() => {
-                    progressTopic(flashcard.topicId, true)
-                    setCorrectCount((c) => c + 1)
-                    next()
-                  }}
+                  onClick={() => progressTopic(flashcard.topicId, true)}
                 >
                   Remembered it
                 </Button>
@@ -195,12 +203,7 @@ export default function Practice() {
                 )}
                 <Button
                   className="w-fit"
-                  onClick={() => {
-                    const remembered = selectedOption === mcq.correctOptionId
-                    if (remembered) setCorrectCount((c) => c + 1)
-                    progressTopic(mcq.topicId, remembered)
-                    next()
-                  }}
+                  onClick={() => progressTopic(mcq.topicId, selectedOption === mcq.correctOptionId)}
                 >
                   Continue
                 </Button>
