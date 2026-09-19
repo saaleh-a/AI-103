@@ -104,6 +104,14 @@ test('invalid queue imports throw without mutating the input state', () => {
   assert.equal(JSON.stringify(state), before)
 })
 
+test('healing treats imported topic IDs as own data keys, not prototype setters', () => {
+  const imported = normalizeLearnerState(JSON.parse('{"topics":{"__proto__":{"state":"understood","evidence":[]}}}'), topics, now)
+  assert.equal(Object.getPrototypeOf(imported.topics), Object.prototype)
+  assert.equal(Object.hasOwn(imported.topics, '__proto__'), true)
+  assert.equal(imported.topics.__proto__.state, 'understood')
+  assert.equal(imported.topics.a.state, 'not-encountered')
+})
+
 test('item timer measures committed answers once and resets for the next item', () => {
   let time = 100
   const timer = createAnswerTimer(() => time)

@@ -52,16 +52,15 @@ export function normalizeLearnerState(value: unknown, topics: readonly Pick<Topi
   if (!isRecord(value) || !isRecord(value.topics)) {
     throw new TypeError('Invalid learner state: a topics record is required.')
   }
-  const healedTopics = emptyState(topics).topics
-  for (const [id, mastery] of Object.entries(value.topics)) {
+  const savedTopics = Object.entries(value.topics).map(([id, mastery]): [string, TopicMastery] => {
     if (!isTopicMastery(mastery)) throw new TypeError('Invalid learner state: a topic has invalid mastery evidence.')
-    healedTopics[id] = { ...mastery, evidence: [...mastery.evidence] }
-  }
+    return [id, { ...mastery, evidence: [...mastery.evidence] }]
+  })
   const lastSessionDate = optionalString(value.lastSessionDate, 'lastSessionDate')
   const itemsMasteredToday = counter(value.itemsMasteredToday, 'itemsMasteredToday')
   return {
     ...value,
-    topics: healedTopics,
+    topics: { ...emptyState(topics).topics, ...Object.fromEntries(savedTopics) },
     strengths: stringArray(value.strengths, 'strengths'),
     weaknesses: stringArray(value.weaknesses, 'weaknesses'),
     confusions: stringArray(value.confusions, 'confusions'),
