@@ -21,6 +21,26 @@ npm run dev
 
 The static core (flashcards, quizzes, discrimination drills, progress dashboard) works with no setup. For live AI tutoring — open-ended Q&A, diagnosis of wrong answers, novel exam scenarios — add your own Anthropic API key in the app's Settings page; it's stored only in your browser and calls go straight to Anthropic.
 
+## Checking curriculum coverage
+
+With supported **Node.js 22.12+**, run from `app/`:
+
+```powershell
+npm run check:coverage
+```
+
+The command runs `npm run content` to refresh the generated corpus manifest, then prints a console-only report. It fetches the [official AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) live and prints its URL, retrieval timestamp, and the newest outline effective on or before the run date (UTC). Unavailable or malformed outlines fail explicitly; there is no cached fallback.
+
+Each topic has one primary official domain. **UNCOVERED** means zero topics; **THIN** means its unrounded topic share is below the official minimum weight; **NOT FLAGGED** means neither. This is a topic-count maintenance heuristic, not proof of complete objective coverage or learner mastery. Contributing app clusters and topic IDs make the counts auditable; raw corpus size is a separate measure.
+
+When topics or the official outline change, review `app/scripts/coverage-map.mjs` against the live domain headings and the actual topic content. Update explicit primary assignments so every topic appears exactly once; do not store weights in the mapping. New/unmapped topics, unknown domains, duplicate assignments, and broken manifest references stop the report rather than silently changing its denominator.
+
+Dependency-free regression tests, also from `app/`:
+
+```powershell
+node --experimental-strip-types --test .\scripts\coverage.test.mjs
+```
+
 ## Deploying
 
 Pushing to `main` builds and deploys `app/` to GitHub Pages via `.github/workflows/deploy.yml`. GitHub Pages itself needs to be enabled once, in the repo's Settings → Pages, with the source set to "GitHub Actions".

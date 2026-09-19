@@ -10,6 +10,7 @@
     "prebuild": "npm run content",
     "build": "tsc -b && vite build",
     "test": "node --experimental-strip-types --test",
+    "check:coverage": "npm run content && node --experimental-strip-types scripts/check-coverage.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
