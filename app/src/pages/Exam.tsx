@@ -9,17 +9,19 @@ import { MCQ_ITEMS } from '@/data/content'
 import { CLUSTER_ACCENT, CLUSTER_LABELS, TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
 import { estimateSessionMinutes } from '@/lib/time-estimate'
+import { useAnswerTimer } from '@/lib/use-answer-timer'
 
 function shuffledItems() {
   return [...MCQ_ITEMS].sort(() => Math.random() - 0.5)
 }
 
 export default function Exam() {
-  const { setTopicState, addToRetrievalQueue } = useLearnerState()
+  const { setTopicState, addToRetrievalQueue, removeFromRetrievalQueue, appendSessionLog } = useLearnerState()
   const [items] = useState(shuffledItems)
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [results, setResults] = useState<{ topicId: string; correct: boolean }[]>([])
+  const finishAnswer = useAnswerTimer(index)
 
   const current = items[index]
   const topic = current ? TOPICS.find((t) => t.id === current.topicId) : undefined
@@ -27,14 +29,25 @@ export default function Exam() {
   const remainingMinutes = useMemo(() => estimateSessionMinutes({ mcqs: Math.max(0, items.length - index) }), [items.length, index])
 
   function answer(optionId: string) {
-    if (!current) return
+    if (!current || selected !== null) return
+    const msToAnswer = finishAnswer()
+    if (msToAnswer === null) return
     setSelected(optionId)
     const correct = optionId === current.correctOptionId
+    appendSessionLog({
+      topicId: current.topicId,
+      itemType: 'mcq',
+      itemId: current.id,
+      correct,
+      timestamp: new Date().toISOString(),
+      msToAnswer,
+    })
     if (correct) {
       setTopicState(current.topicId, 'applicable', 'Correctly applied in exam mode.')
+      removeFromRetrievalQueue(current.topicId)
     } else {
       setTopicState(current.topicId, 'needs-repair', 'Missed in exam mode.')
-      addToRetrievalQueue(current.topicId)
+      addToRetrievalQueue(current.topicId, 'miss')
     }
     setResults((r) => [...r, { topicId: current.topicId, correct }])
   }

@@ -75,12 +75,28 @@ export interface TopicMastery {
   evidence: string[]
 }
 
+export interface SessionLogEntry {
+  topicId: string
+  itemType: 'flashcard' | 'mcq'
+  itemId: string
+  correct: boolean
+  timestamp: string
+  msToAnswer: number
+}
+
+export interface RetrievalQueueItem {
+  topicId: string
+  dueAt: string
+  missStreak: number
+}
+
 export interface LearnerState {
   topics: Record<string, TopicMastery>
   strengths: string[]
   weaknesses: string[]
   confusions: string[]
-  retrievalQueue: string[]
+  retrievalQueue: RetrievalQueueItem[]
+  sessionLog: SessionLogEntry[]
   sessionsCompleted: number
   itemsMasteredToday: number
   lastActiveAt?: string

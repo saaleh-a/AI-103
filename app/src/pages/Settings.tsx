@@ -118,6 +118,9 @@ export default function Settings() {
           <CardDescription>
             Progress lives only in this browser. Export it to back it up or move it to another device/browser.
           </CardDescription>
+          <p className="text-sm text-muted-foreground">
+            {learner.state.sessionLog.length} answer{learner.state.sessionLog.length === 1 ? '' : 's'} logged. The most recent 500 are kept.
+          </p>
         </CardHeader>
         <CardContent className="flex flex-wrap items-center gap-2">
           <Button variant="outline" onClick={downloadState}>

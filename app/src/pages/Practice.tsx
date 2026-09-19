@@ -9,32 +9,30 @@ import { MotionGate } from '@/components/effects/MotionGate'
 import { FLASHCARDS, MCQ_ITEMS } from '@/data/content'
 import { TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
+import { prioritizeDueItems } from '@/lib/retrieval'
 import { estimateSessionMinutes } from '@/lib/time-estimate'
-import type { MasteryState } from '@/lib/types'
+import { useAnswerTimer } from '@/lib/use-answer-timer'
+import type { MasteryState, RetrievalQueueItem } from '@/lib/types'
 
 export const SESSION_SIZE = 8
 
 type QueueItem = { kind: 'flashcard'; id: string } | { kind: 'mcq'; id: string }
 
-function buildQueue(retrievalQueue: string[]): QueueItem[] {
-  const priority = new Set(retrievalQueue)
+function buildQueue(retrievalQueue: RetrievalQueueItem[]): QueueItem[] {
   const flashcards = FLASHCARDS.map((f) => ({ kind: 'flashcard' as const, id: f.id, topicId: f.topicId }))
   const mcqs = MCQ_ITEMS.map((m) => ({ kind: 'mcq' as const, id: m.id, topicId: m.topicId }))
   const all = [...flashcards, ...mcqs]
-  const prioritized = all.filter((i) => priority.has(i.topicId))
-  const rest = all.filter((i) => !priority.has(i.topicId))
-  // simple shuffle so repeat sessions don't feel identical
-  const shuffledRest = [...rest].sort(() => Math.random() - 0.5)
-  return [...prioritized, ...shuffledRest].slice(0, SESSION_SIZE).map(({ kind, id }) => ({ kind, id }))
+  return prioritizeDueItems(all, retrievalQueue).slice(0, SESSION_SIZE).map(({ kind, id }) => ({ kind, id }))
 }
 
 export default function Practice() {
-  const { state, setTopicState, removeFromRetrievalQueue, addToRetrievalQueue } = useLearnerState()
+  const { state, setTopicState, removeFromRetrievalQueue, addToRetrievalQueue, appendSessionLog } = useLearnerState()
   const [queue] = useState<QueueItem[]>(() => buildQueue(state.retrievalQueue))
   const [index, setIndex] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
+  const finishAnswer = useAnswerTimer(index)
 
   const current = queue[index]
   const flashcard = current?.kind === 'flashcard' ? FLASHCARDS.find((f) => f.id === current.id) : undefined
@@ -50,15 +48,28 @@ export default function Practice() {
   }, [queue, index])
 
   function progressTopic(topicId: string, remembered: boolean) {
-    const current = state.topics[topicId]?.state ?? 'not-encountered'
+    if (!current) return
+    const msToAnswer = finishAnswer()
+    if (msToAnswer === null) return
+    appendSessionLog({
+      topicId,
+      itemType: current.kind,
+      itemId: current.id,
+      correct: remembered,
+      timestamp: new Date().toISOString(),
+      msToAnswer,
+    })
+    const mastery = state.topics[topicId]?.state ?? 'not-encountered'
     if (remembered) {
-      const next: MasteryState = current === 'understood' || current === 'not-encountered' || current === 'introduced' ? 'retrievable' : current === 'retrievable' ? 'discriminable' : 'mastered'
+      const next: MasteryState = mastery === 'understood' || mastery === 'not-encountered' || mastery === 'introduced' ? 'retrievable' : mastery === 'retrievable' ? 'discriminable' : 'mastered'
       setTopicState(topicId, next, 'Correct in a practice session.')
-      if (next === 'mastered') removeFromRetrievalQueue(topicId)
+      removeFromRetrievalQueue(topicId)
+      setCorrectCount((c) => c + 1)
     } else {
       setTopicState(topicId, 'needs-repair', 'Missed in a practice session.')
-      addToRetrievalQueue(topicId)
+      addToRetrievalQueue(topicId, 'miss')
     }
+    next()
   }
 
   function next() {
@@ -136,19 +147,12 @@ export default function Practice() {
               <div className="flex flex-wrap gap-2">
                 <Button
                   variant="outline"
-                  onClick={() => {
-                    progressTopic(flashcard.topicId, false)
-                    next()
-                  }}
+                  onClick={() => progressTopic(flashcard.topicId, false)}
                 >
                   Still shaky
                 </Button>
                 <Button
-                  onClick={() => {
-                    progressTopic(flashcard.topicId, true)
-                    setCorrectCount((c) => c + 1)
-                    next()
-                  }}
+                  onClick={() => progressTopic(flashcard.topicId, true)}
                 >
                   Remembered it
                 </Button>
@@ -195,12 +199,7 @@ export default function Practice() {
                 )}
                 <Button
                   className="w-fit"
-                  onClick={() => {
-                    const remembered = selectedOption === mcq.correctOptionId
-                    if (remembered) setCorrectCount((c) => c + 1)
-                    progressTopic(mcq.topicId, remembered)
-                    next()
-                  }}
+                  onClick={() => progressTopic(mcq.topicId, selectedOption === mcq.correctOptionId)}
                 >
                   Continue
                 </Button>

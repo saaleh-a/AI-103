@@ -14,7 +14,7 @@ import { estimateReadMinutes, estimateSessionMinutes } from '@/lib/time-estimate
 import { useUIPrefs } from '@/lib/ui-prefs'
 
 export default function Home() {
-  const { state, nextTopicId, coverage, recordSessionTouch } = useLearnerState()
+  const { state, nextTopicId, dueRetrievalQueue, coverage, recordSessionTouch } = useLearnerState()
   const { prefs } = useUIPrefs()
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Home() {
   }, [])
 
   const nextTopic = TOPICS.find((t) => t.id === nextTopicId)
-  const isRetrieval = nextTopicId ? state.retrievalQueue.includes(nextTopicId) : false
+  const isRetrieval = nextTopicId ? dueRetrievalQueue.some((item) => item.topicId === nextTopicId) : false
   const allMastered = !nextTopicId
 
   const minutes = useMemo(() => {

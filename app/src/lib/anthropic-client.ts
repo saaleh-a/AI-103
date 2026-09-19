@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { CLUSTER_LABELS, TOPICS } from '@/data/topics'
 import { fetchCorpusFile, searchCorpus } from '@/lib/search'
+import { formatRetrievalQueue } from '@/lib/retrieval'
 import type { LearnerState } from '@/lib/types'
 
 export const TUTOR_MODEL = 'claude-sonnet-5'
@@ -87,7 +88,7 @@ function summarizeLearnerState(state: LearnerState): string {
     `Strengths: ${state.strengths.join('; ') || '(none yet)'}`,
     `Weaknesses: ${state.weaknesses.join('; ') || '(none yet)'}`,
     `Confusions: ${state.confusions.join('; ') || '(none yet)'}`,
-    `Retrieval queue: ${state.retrievalQueue.join(', ') || '(empty)'}`,
+    `Retrieval queue: ${formatRetrievalQueue(state.retrievalQueue)}`,
     `Sessions completed: ${state.sessionsCompleted}. Items mastered today: ${state.itemsMasteredToday}.`,
   ]
   return lines.join('\n')
