@@ -21,6 +21,14 @@ npm run dev
 
 The static core (flashcards, quizzes, discrimination drills, progress dashboard) works with no setup. For live AI tutoring — open-ended Q&A, diagnosis of wrong answers, novel exam scenarios — add your own Anthropic API key in the app's Settings page; it's stored only in your browser and calls go straight to Anthropic.
 
+## Progress logging and scheduled review
+
+Practice self-ratings, Practice MCQ **Continue**, and Exam answers log the item, topic, correctness, timestamp, and milliseconds from item display to the committed answer. Practice MCQ timing includes time spent reading feedback before Continue. Settings shows the retained answer count; only the latest 500 entries are kept in localStorage and progress exports.
+
+A wrong Practice or Exam answer schedules retrieval one day later, then three days after a second miss, then seven days after each subsequent miss. A correct retrieval removes the topic from the queue. Lesson completion and tutor-requested reviews start one day later with no miss counted; repeated review requests leave an existing schedule unchanged. Only due topics receive priority, but future queued topics can still appear in normal Practice rotation.
+
+Older local progress and imported exports migrate automatically: missing answer logs start empty, and legacy topic-ID queues become immediately due with a miss streak of one. The existing Settings export, import, and reset controls cover both fields. These changes do not redesign the existing mastery ladder.
+
 ## Checking curriculum coverage
 
 With supported **Node.js 22.12+**, run from `app/`:
@@ -33,12 +41,18 @@ The command runs `npm run content` to refresh the generated corpus manifest, the
 
 Each topic has one primary official domain. **UNCOVERED** means zero topics; **THIN** means its unrounded topic share is below the official minimum weight; **NOT FLAGGED** means neither. This is a topic-count maintenance heuristic, not proof of complete objective coverage or learner mastery. Contributing app clusters and topic IDs make the counts auditable; raw corpus size is a separate measure.
 
-When topics or the official outline change, review `app/scripts/coverage-map.mjs` against the live domain headings and the actual topic content. Update explicit primary assignments so every topic appears exactly once; do not store weights in the mapping. New/unmapped topics, unknown domains, duplicate assignments, and broken manifest references stop the report rather than silently changing its denominator.
-
-Dependency-free regression tests, also from `app/`:
+Flagged domains include a link to an existing lesson's tutor and to Settings for API-key setup. The tutor can search the full corpus, but the corpus may still lack a requested objective. Links default to `http://localhost:5173/`. For another dev-server port or a deployed app, pass its base URL without a query or fragment:
 
 ```powershell
-node --experimental-strip-types --test .\scripts\coverage.test.mjs
+npm run check:coverage -- --app-url http://127.0.0.1:5183/
+```
+
+When topics or the official outline change, review `app/scripts/coverage-map.mjs` against the live domain headings and the actual topic content. Update explicit primary assignments so every topic appears exactly once; do not store weights in the mapping. New/unmapped topics, unknown domains, duplicate assignments, and broken manifest references stop the report rather than silently changing its denominator.
+
+Native Node regression tests for progress, scheduling, and coverage, also from `app/`:
+
+```powershell
+npm test
 ```
 
 ## Deploying

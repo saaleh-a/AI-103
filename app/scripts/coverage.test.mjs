@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict'
+import { spawnSync } from 'node:child_process'
 import test from 'node:test'
+import { fileURLToPath } from 'node:url'
 import { TOPICS } from '../src/data/topics.ts'
 import { PRIMARY_DOMAIN_MAP } from './coverage-map.mjs'
 import {
@@ -285,4 +287,64 @@ test('main prints one complete report only after validation succeeds and returns
     write: (text) => failedOutput.push(text),
   }), /HTTP 503/)
   assert.deepEqual(failedOutput, [])
+})
+
+test('only flagged domains receive a small tutor and Settings nudge', () => {
+  const nudges = formatCoverageReport(report()).split('\n').filter((line) => line.startsWith('  Gap:'))
+  assert.equal(nudges.length, 2)
+  assert.ok(nudges[0].includes('http://localhost:5173/#/learn/model-deployment'))
+  assert.ok(nudges[1].includes('http://localhost:5173/#/learn/image-video-generation'))
+  for (const line of nudges) {
+    assert.ok(line.includes('http://localhost:5173/#/settings'))
+    assert.ok(line.includes('search the full corpus'))
+    assert.ok(line.includes('Sources may still be incomplete.'))
+  }
+})
+
+test('nudge links preserve a custom app base path and use existing hash routes', async () => {
+  const output = []
+  await main({
+    manifest: MANIFEST,
+    fetchImpl: async () => response(),
+    now: () => RUN_AT,
+    appUrl: 'https://study.example/AI-103',
+    write: (text) => output.push(text),
+  })
+  assert.ok(output[0].includes('https://study.example/AI-103/#/learn/model-deployment'))
+  assert.ok(output[0].includes('https://study.example/AI-103/#/settings'))
+  assert.ok(!output[0].includes('localhost'))
+})
+
+test('an uncovered domain links to an existing lesson instead of inventing a route', () => {
+  const mapping = structuredClone(PRIMARY_DOMAIN_MAP)
+  mapping[2].topicIds = []
+  const topics = TOPICS.filter(({ id }) => id !== 'image-video-generation')
+  const nudges = formatCoverageReport(report({ topics, mapping })).split('\n').filter((line) => line.startsWith('  Gap:'))
+  const linkedTopic = /#\/learn\/(\S+)/.exec(nudges[1])[1]
+  assert.ok(topics.some(({ id }) => id === decodeURIComponent(linkedTopic)))
+  assert.ok(!nudges[1].includes('image-video-generation'))
+})
+
+test('invalid app URLs fail explicitly before fetching or printing a report', async () => {
+  for (const appUrl of ['not a URL', 'javascript:alert(1)', 'file:///C:/app', 'https://user:secret@study.example/', 'https://study.example/?token=example', 'https://study.example/#/settings']) {
+    assert.throws(() => formatCoverageReport(report(), { appUrl }), /HTTP\(S\) app URL/)
+  }
+  const output = []
+  await assert.rejects(main({
+    appUrl: 'file:///C:/app',
+    manifest: MANIFEST,
+    fetchImpl: async () => { assert.fail('Invalid app URL must fail before fetching.') },
+    write: (text) => output.push(text),
+  }), /HTTP\(S\) app URL/)
+  assert.deepEqual(output, [])
+})
+
+test('CLI rejects unknown arguments and invalid app URLs without success-shaped output', () => {
+  const script = fileURLToPath(new URL('./check-coverage.mjs', import.meta.url))
+  for (const args of [['--unknown-option'], ['--app-url', 'file:///C:/app']]) {
+    const child = spawnSync(process.execPath, ['--experimental-strip-types', script, ...args], { encoding: 'utf8', timeout: 5000 })
+    assert.equal(child.status, 1, child.stderr)
+    assert.match(child.stderr, /\[check-coverage\]/)
+    assert.equal(child.stdout, '')
+  }
 })

@@ -1,10 +1,12 @@
 import { readFile } from 'node:fs/promises'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import { parseArgs } from 'node:util'
 import { CLUSTER_LABELS, TOPICS } from '../src/data/topics.ts'
 import { PRIMARY_DOMAIN_MAP } from './coverage-map.mjs'
 
 export const OFFICIAL_GUIDE_URL = 'https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103'
 export const MAX_OUTLINE_BYTES = 1_000_000
+const DEFAULT_APP_URL = 'http://localhost:5173/'
 const MANIFEST_URL = new URL('../src/data/corpus-manifest.json', import.meta.url)
 const KNOWN_DOMAINS = PRIMARY_DOMAIN_MAP.map(({ domain }) => domain)
 const WEIGHTED_HEADING = /^(.+?)\s+\((\d+(?:\.\d+)?)\s*%?\s*[-–]\s*(\d+(?:\.\d+)?)\s*%\)$/
@@ -222,7 +224,25 @@ export function reconcileCoverage({ topics = TOPICS, manifest, outline, mapping 
   }
 }
 
-export function formatCoverageReport(report) {
+function appBaseUrl(value) {
+  let url
+  try {
+    url = new URL(value)
+  } catch (error) {
+    throw new Error('Use an absolute HTTP(S) app URL.', { cause: error })
+  }
+  if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password || url.search || url.hash) {
+    throw new Error('Use an absolute HTTP(S) app URL without credentials, a query, or a fragment.')
+  }
+  if (!url.pathname.endsWith('/')) url.pathname += '/'
+  return url
+}
+
+export function formatCoverageReport(report, { appUrl = DEFAULT_APP_URL } = {}) {
+  const base = appBaseUrl(appUrl)
+  const settings = new URL(base)
+  settings.hash = '/settings'
+  const availableTopicIds = report.domains.flatMap(({ topicIds }) => topicIds)
   const lines = [
     'AI-103 coverage reconciliation',
     `Official source: ${report.sourceUrl}`,
@@ -241,6 +261,13 @@ export function formatCoverageReport(report) {
       lines.push(`  ${cluster.label} [${cluster.id}] (${cluster.topicIds.length}): ${cluster.topicIds.join(', ')}`)
     }
     if (!domain.clusters.length) lines.push('  App clusters/topics: none.')
+    if (domain.status === 'THIN' || domain.status === 'UNCOVERED') {
+      const topicId = domain.topicIds.includes('model-deployment') ? 'model-deployment' : domain.topicIds[0] ?? availableTopicIds[0]
+      if (!topicId) throw new Error('Cannot link to the tutor: the report has no existing lesson topics.')
+      const lesson = new URL(base)
+      lesson.hash = `/learn/${encodeURIComponent(topicId)}`
+      lines.push(`  Gap: Ask the tutor at the bottom of this lesson to search the full corpus: ${lesson.href} (API key in Settings: ${settings.href}). Sources may still be incomplete.`)
+    }
   }
   return lines.join('\n')
 }
@@ -253,17 +280,21 @@ export async function readCorpusManifest(url = MANIFEST_URL) {
   }
 }
 
-export async function main({ manifest, fetchImpl, now, timeoutMs, write = console.log } = {}) {
+export async function main({ manifest, fetchImpl, now, timeoutMs, appUrl = DEFAULT_APP_URL, write = console.log } = {}) {
+  const base = appBaseUrl(appUrl)
   const corpusManifest = manifest === undefined ? await readCorpusManifest() : manifest
   const outline = await fetchOfficialOutline({ fetchImpl, now, timeoutMs })
   const report = reconcileCoverage({ manifest: corpusManifest, outline })
-  write(formatCoverageReport(report))
+  write(formatCoverageReport(report, { appUrl: base.href }))
   return report
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  main().catch((error) => {
+  try {
+    const { values } = parseArgs({ options: { 'app-url': { type: 'string', default: DEFAULT_APP_URL } } })
+    await main({ appUrl: values['app-url'] })
+  } catch (error) {
     console.error(`[check-coverage] ${error.message}`)
     process.exitCode = 1
-  })
+  }
 }
