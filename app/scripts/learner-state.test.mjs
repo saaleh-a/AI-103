@@ -35,7 +35,7 @@ test('startup and JSON-import normalization heal legacy logs and new topics with
     assert.deepEqual(normalized.sessionLog, [])
     assert.deepEqual(normalized.topics.a, legacy.topics.a)
     assert.deepEqual(normalized.topics.b, { state: 'not-encountered', evidence: [] })
-    assert.deepEqual(normalized.retrievalQueue, ['a'])
+    assert.deepEqual(normalized.retrievalQueue, [{ topicId: 'a', dueAt: now.toISOString(), missStreak: 1 }])
     assert.deepEqual(normalized.strengths, ['Explanation'])
     assert.equal(normalized.sessionsCompleted, 2)
     assert.equal(normalized.itemsMasteredToday, 1)
@@ -84,6 +84,24 @@ test('invalid answer logs are rejected rather than accepted as progress', () => 
   ]) assert.throws(() => normalizeSessionLog(value), TypeError)
   assert.throws(() => normalizeLearnerState({ topics: {}, sessionLog: null }, topics, now), TypeError)
   assert.throws(() => normalizeLearnerState({ topics: { a: { state: 'unknown' } } }, topics, now), TypeError)
+})
+
+test('new retrieval entries survive normalization and export/import without rescheduling', () => {
+  const state = {
+    ...emptyState(topics),
+    retrievalQueue: [{ topicId: 'a', dueAt: '2026-09-22T02:00:00.000Z', missStreak: 2 }],
+    sessionLog: [entry],
+  }
+  const imported = normalizeLearnerState(JSON.parse(JSON.stringify(state)), topics, now)
+  assert.deepEqual(imported.retrievalQueue, state.retrievalQueue)
+  assert.deepEqual(normalizeLearnerState(imported, topics, new Date('2026-09-20')), imported)
+})
+
+test('invalid queue imports throw without mutating the input state', () => {
+  const state = { ...emptyState(topics), retrievalQueue: [{ topicId: 'a', dueAt: 'invalid', missStreak: 1 }] }
+  const before = JSON.stringify(state)
+  assert.throws(() => normalizeLearnerState(state, topics, now), TypeError)
+  assert.equal(JSON.stringify(state), before)
 })
 
 test('item timer measures committed answers once and resets for the next item', () => {

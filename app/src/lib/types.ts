@@ -84,12 +84,18 @@ export interface SessionLogEntry {
   msToAnswer: number
 }
 
+export interface RetrievalQueueItem {
+  topicId: string
+  dueAt: string
+  missStreak: number
+}
+
 export interface LearnerState {
   topics: Record<string, TopicMastery>
   strengths: string[]
   weaknesses: string[]
   confusions: string[]
-  retrievalQueue: string[]
+  retrievalQueue: RetrievalQueueItem[]
   sessionLog: SessionLogEntry[]
   sessionsCompleted: number
   itemsMasteredToday: number

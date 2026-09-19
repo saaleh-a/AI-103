@@ -1,9 +1,10 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { TOPICS } from '@/data/topics'
 import { emptyState, normalizeLearnerState } from '@/lib/learner-state-data'
+import { isRetrievalDue, nextRetrievalDeadline, scheduleRetrieval, selectNextTopicId, type RetrievalReason } from '@/lib/retrieval'
 import { appendLogEntry } from '@/lib/session-log'
 import { readJSON, writeJSON } from '@/lib/storage'
-import type { LearnerState, MasteryState, SessionLogEntry } from '@/lib/types'
+import type { LearnerState, MasteryState, RetrievalQueueItem, SessionLogEntry } from '@/lib/types'
 
 const STORAGE_KEY = 'ai103-learner-state'
 
@@ -15,13 +16,14 @@ interface LearnerStateApi {
   state: LearnerState
   /** The single next resumable action (Section 25/45): one topic to work on. */
   nextTopicId: string | null
+  dueRetrievalQueue: RetrievalQueueItem[]
   coverage: { total: number; started: number; mastered: number }
   setTopicState: (topicId: string, next: MasteryState, evidence?: string) => void
   addStrength: (s: string) => void
   addWeakness: (s: string) => void
   addConfusion: (s: string) => void
   appendSessionLog: (entry: SessionLogEntry) => void
-  addToRetrievalQueue: (topicId: string) => void
+  addToRetrievalQueue: (topicId: string, reason?: RetrievalReason) => void
   removeFromRetrievalQueue: (topicId: string) => void
   recordSessionTouch: () => void
   endSession: () => void
@@ -46,6 +48,20 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     writeJSON(STORAGE_KEY, state)
   }, [state])
+
+  const [now, setNow] = useState(() => Date.now())
+  useEffect(() => {
+    const refresh = () => setNow(Date.now())
+    const deadline = nextRetrievalDeadline(state.retrievalQueue, now)
+    const timer = deadline === null ? undefined : window.setTimeout(refresh, Math.min(Math.max(0, deadline - Date.now()), 2_147_483_647))
+    window.addEventListener('focus', refresh)
+    document.addEventListener('visibilitychange', refresh)
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('focus', refresh)
+      document.removeEventListener('visibilitychange', refresh)
+    }
+  }, [state.retrievalQueue, now])
 
   const setTopicState = useCallback((topicId: string, next: MasteryState, evidence?: string) => {
     setState((prev) => {
@@ -79,14 +95,21 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, sessionLog: appendLogEntry(prev.sessionLog, entry) }))
   }, [])
 
-  const addToRetrievalQueue = useCallback((topicId: string) => {
-    setState((prev) => (prev.retrievalQueue.includes(topicId) ? prev : { ...prev, retrievalQueue: [...prev.retrievalQueue, topicId] }))
+  const addToRetrievalQueue = useCallback((topicId: string, reason: RetrievalReason = 'review') => {
+    const scheduledAt = Date.now()
+    setNow(scheduledAt)
+    setState((prev) => {
+      const retrievalQueue = scheduleRetrieval(prev.retrievalQueue, topicId, reason, scheduledAt)
+      return retrievalQueue === prev.retrievalQueue ? prev : { ...prev, retrievalQueue }
+    })
   }, [])
   const removeFromRetrievalQueue = useCallback((topicId: string) => {
-    setState((prev) => ({ ...prev, retrievalQueue: prev.retrievalQueue.filter((t) => t !== topicId) }))
+    setNow(Date.now())
+    setState((prev) => ({ ...prev, retrievalQueue: prev.retrievalQueue.filter((item) => item.topicId !== topicId) }))
   }, [])
 
   const recordSessionTouch = useCallback(() => {
+    setNow(Date.now())
     setState((prev) => ({ ...prev, lastActiveAt: new Date().toISOString(), lastSessionDate: todayKey() }))
   }, [])
 
@@ -99,7 +122,10 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
   const importState = useCallback((json: string) => {
     try {
       const parsed: unknown = JSON.parse(json)
-      setState(normalizeLearnerState(parsed, TOPICS))
+      const importedAt = new Date()
+      const imported = normalizeLearnerState(parsed, TOPICS, importedAt)
+      setNow(importedAt.getTime())
+      setState(imported)
       return true
     } catch (error) {
       if (!(error instanceof SyntaxError) && !(error instanceof TypeError)) throw error
@@ -118,21 +144,13 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     }
   }, [state.topics])
 
-  // The single next resumable action: prefer retrieval-queue items due for
-  // review, then the first not-yet-introduced topic, in curriculum order.
-  const nextTopicId = useMemo(() => {
-    if (state.retrievalQueue.length > 0) return state.retrievalQueue[0]
-    const nextNew = TOPICS.find((t) => state.topics[t.id]?.state === 'not-encountered')
-    if (nextNew) return nextNew.id
-    const needsRepair = TOPICS.find((t) => state.topics[t.id]?.state === 'needs-repair')
-    if (needsRepair) return needsRepair.id
-    const notMastered = TOPICS.find((t) => state.topics[t.id]?.state !== 'mastered')
-    return notMastered?.id ?? null
-  }, [state.retrievalQueue, state.topics])
+  const dueRetrievalQueue = state.retrievalQueue.filter((item) => isRetrievalDue(item, now))
+  const nextTopicId = selectNextTopicId(state, TOPICS, now)
 
   const value: LearnerStateApi = {
     state,
     nextTopicId,
+    dueRetrievalQueue,
     coverage,
     setTopicState,
     addStrength,

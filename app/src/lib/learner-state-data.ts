@@ -1,4 +1,5 @@
 import { normalizeSessionLog } from './session-log.ts'
+import { normalizeRetrievalQueue } from './retrieval.ts'
 import { MASTERY_ORDER } from './types.ts'
 import type { LearnerState, Topic, TopicMastery } from './types'
 
@@ -64,7 +65,7 @@ export function normalizeLearnerState(value: unknown, topics: readonly Pick<Topi
     strengths: stringArray(value.strengths, 'strengths'),
     weaknesses: stringArray(value.weaknesses, 'weaknesses'),
     confusions: stringArray(value.confusions, 'confusions'),
-    retrievalQueue: stringArray(value.retrievalQueue, 'retrievalQueue'),
+    retrievalQueue: normalizeRetrievalQueue(value.retrievalQueue, now.getTime()),
     sessionLog: normalizeSessionLog(value.sessionLog),
     sessionsCompleted: counter(value.sessionsCompleted, 'sessionsCompleted'),
     itemsMasteredToday: lastSessionDate === now.toISOString().slice(0, 10) ? itemsMasteredToday : 0,

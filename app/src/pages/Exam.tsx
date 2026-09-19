@@ -16,7 +16,7 @@ function shuffledItems() {
 }
 
 export default function Exam() {
-  const { setTopicState, addToRetrievalQueue, appendSessionLog } = useLearnerState()
+  const { setTopicState, addToRetrievalQueue, removeFromRetrievalQueue, appendSessionLog } = useLearnerState()
   const [items] = useState(shuffledItems)
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
@@ -44,9 +44,10 @@ export default function Exam() {
     })
     if (correct) {
       setTopicState(current.topicId, 'applicable', 'Correctly applied in exam mode.')
+      removeFromRetrievalQueue(current.topicId)
     } else {
       setTopicState(current.topicId, 'needs-repair', 'Missed in exam mode.')
-      addToRetrievalQueue(current.topicId)
+      addToRetrievalQueue(current.topicId, 'miss')
     }
     setResults((r) => [...r, { topicId: current.topicId, correct }])
   }

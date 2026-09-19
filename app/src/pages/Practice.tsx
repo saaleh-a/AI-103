@@ -9,24 +9,20 @@ import { MotionGate } from '@/components/effects/MotionGate'
 import { FLASHCARDS, MCQ_ITEMS } from '@/data/content'
 import { TOPICS } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
+import { prioritizeDueItems } from '@/lib/retrieval'
 import { estimateSessionMinutes } from '@/lib/time-estimate'
 import { useAnswerTimer } from '@/lib/use-answer-timer'
-import type { MasteryState } from '@/lib/types'
+import type { MasteryState, RetrievalQueueItem } from '@/lib/types'
 
 export const SESSION_SIZE = 8
 
 type QueueItem = { kind: 'flashcard'; id: string } | { kind: 'mcq'; id: string }
 
-function buildQueue(retrievalQueue: string[]): QueueItem[] {
-  const priority = new Set(retrievalQueue)
+function buildQueue(retrievalQueue: RetrievalQueueItem[]): QueueItem[] {
   const flashcards = FLASHCARDS.map((f) => ({ kind: 'flashcard' as const, id: f.id, topicId: f.topicId }))
   const mcqs = MCQ_ITEMS.map((m) => ({ kind: 'mcq' as const, id: m.id, topicId: m.topicId }))
   const all = [...flashcards, ...mcqs]
-  const prioritized = all.filter((i) => priority.has(i.topicId))
-  const rest = all.filter((i) => !priority.has(i.topicId))
-  // simple shuffle so repeat sessions don't feel identical
-  const shuffledRest = [...rest].sort(() => Math.random() - 0.5)
-  return [...prioritized, ...shuffledRest].slice(0, SESSION_SIZE).map(({ kind, id }) => ({ kind, id }))
+  return prioritizeDueItems(all, retrievalQueue).slice(0, SESSION_SIZE).map(({ kind, id }) => ({ kind, id }))
 }
 
 export default function Practice() {
@@ -67,11 +63,11 @@ export default function Practice() {
     if (remembered) {
       const next: MasteryState = mastery === 'understood' || mastery === 'not-encountered' || mastery === 'introduced' ? 'retrievable' : mastery === 'retrievable' ? 'discriminable' : 'mastered'
       setTopicState(topicId, next, 'Correct in a practice session.')
-      if (next === 'mastered') removeFromRetrievalQueue(topicId)
+      removeFromRetrievalQueue(topicId)
       setCorrectCount((c) => c + 1)
     } else {
       setTopicState(topicId, 'needs-repair', 'Missed in a practice session.')
-      addToRetrievalQueue(topicId)
+      addToRetrievalQueue(topicId, 'miss')
     }
     next()
   }
