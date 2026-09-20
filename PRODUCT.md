@@ -1,4 +1,4 @@
-# AI-103 Mastery Tutor
+# AI-103 learning replacement
 
 <!-- impeccable:product-schema 1 -->
 
@@ -8,63 +8,77 @@ web
 
 ## Users
 
-A learner preparing for AI-103 and applying the same knowledge in Cloud & AI
-Applications Solution Engineering. The learner has AuDHD and executive-function
-and fatigue constraints. These affect pacing and interaction, not intellectual
-complexity.
+The primary learner is preparing for AI-103 and wants to apply the knowledge in
+Cloud & AI Applications Solution Engineering work. They have explicitly identified
+AuDHD and executive-function/fatigue constraints. These change presentation, pacing
+and control, not intellectual depth. Preferences must remain adjustable; no single
+interface is right for every neurodivergent person.
 
 ## Product Purpose
 
-Teach the complete supplied AI-103 corpus through understanding, discrimination,
-retrieval, implementation, application, and spaced retention. A source index or
-a completed reading checklist is not evidence of mastery.
+Replace the learner's need to use Microsoft Learn as their AI-103 study interface.
+Teach the full exam scope, important implementation patterns, architecture judgement
+and professional transfer within this product. Official exam booking, credentials
+and live Azure infrastructure are outside that replacement boundary.
+
+## Positioning
+
+A project-led learning studio, not an AI chat wrapper or a shorter documentation
+reader. Six continuing Azure builds supply a reason to learn each concept.
+A deterministic learning engine selects the next build task, supplies the needed
+teaching, evaluates structured responses, routes misconception-specific repair,
+and schedules retrieval from observable evidence.
 
 ## Operating Context
 
-The existing Vite, React, and TypeScript app runs as a static website. Progress
-is stored in the learner's browser and can be exported and imported. The bundled
-corpus is available without an AI API key. Optional AI tutoring is a separate,
-user-configured capability.
+The existing site is Vite, React and TypeScript. The source corpus is local.
+Existing learner progress belongs to the learner and must survive redesign.
+The replacement's teaching and assessment require no runtime AI, API key or
+account. Hands-on guidance is portal-first: the learner may deliberately use their
+own Azure services, with permissions, costs and cleanup explained beforehand.
+An account-free rehearsal preserves access to the learning but is never presented
+as equivalent evidence of operating Azure.
 
-The main experience follows a continuing Azure build, not a lesson catalogue.
-The corpus supplies the concepts and evidence behind each build task. The
-learner can reuse recorded resource names, collect field observations, change a
-requirement after a baseline exercise, and return to the specific decision
-boundary implicated by an earlier answer. These are locally recorded signals;
-the app does not claim to observe the learner's Azure account.
+AI-assisted authoring during development is not runtime AI. It does not replace
+source review, answer-key verification or release acceptance.
 
 ## Capabilities and Constraints
 
-- Preserve the 265 original files in `corpus/` verbatim.
-- Retain compatibility with existing learner-state exports and topic IDs.
-- Teach before checking new knowledge. Make uncertainty a low-effort response.
-- Distinguish local configuration practice, expected output, and actual Azure
-  execution. Never represent a simulation as a deployed service.
-- Real Azure exercises require the learner's own account, permissions, and
-  resources. Explain costs and cleanup before sending the learner to a lab.
-- The supplied corpus governs terminology. Source disagreements and missing
-  material must be visible, not silently invented away.
+The current app is not yet the complete replacement. The design package is in
+`design/`; its standalone prototype proves one learning loop, not full curriculum
+coverage. The canonical product contract is `PRODUCT_CONSTITUTION.md`.
+
+Microsoft Learn remains an attributed source, not a required destination for core
+learning. Source files remain unchanged. Missing or conflicting source coverage
+must be reported, not filled with unlabelled model memory.
 
 ## Evidence on Hand
 
-`corpus/` contains Microsoft Learn units, exercises, assessments, episode
-transcripts, the study guide, and the Study Cram. The supplied September 19
-backup contains the same 265 documents; file-name zero-padding differs.
-`CLAUDE.md` contains the durable teaching constitution.
+- `corpus/`: the bundled source collection, including an exam study guide.
+- `app/src/data/`: existing authored lessons, questions and topic metadata.
+- `app/src/lib/`: current local progress and retrieval implementation.
+- `design/DESIGN_PROMPT.md`: reusable design-execution prompt.
+- `design/REPLACEMENT_DESIGN.md`: product/system design and rollout gates.
+- `design/prototype/`: isolated interactive design evidence.
+- `design/LEARNING_STUDIO_LEARNINGS.md`: recovered decisions, implementation
+  lessons and verification limits from `saaleh-a-ai-103-learning-studio`.
+
+No measured learning-outcome advantage over Microsoft Learn has been established.
+"Massive improvement" is the target, not an already-proven marketing claim.
 
 ## Product Principles
 
-- Recommend one prerequisite-ready next action.
-- Teach one coherent, resumable chunk at a time.
-- Let the learner build or change something and inspect meaningful feedback.
-- Separate source coverage, lesson completion, and demonstrated mastery.
-- Make stopping and resuming ordinary, visible parts of learning.
-- Let the current build and observed learning gaps choose the next task, rather
-  than treating the next numbered document as the next best learning action.
+1. Teach before testing; preserve an explicit route for established prior knowledge.
+2. Make the next useful action obvious without hiding learner choice.
+3. Separate exposure, coached success, independent evidence and retention.
+4. Make stopping and resuming ordinary, reliable actions.
+5. Replace navigational and interpretive work with authored instructional support,
+   not lower standards.
 
 ## Accessibility & Inclusion
 
-Keyboard-operable controls, readable line lengths, meaningful focus states,
-mobile layouts, and reduced motion are required. No timer pressure, streak
-penalties, autoplay, or distracting perpetual effects. Motion must clarify a
-state change and respect both the app preference and the operating system.
+Keyboard-complete interactions, visible focus, semantic controls, adequate contrast,
+reflow and adjustable reading size are baseline requirements. Motion is off by
+default. No streak pressure, countdowns, leaderboards, punitive overdue queues or
+forced celebration. Quiet presentation never removes essential navigation,
+feedback, references or the ability to stop.
