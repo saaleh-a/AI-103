@@ -1,213 +1,108 @@
-import { CheckCircle2, Clock, XCircle } from 'lucide-react'
-import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ClusterBadge } from '@/components/ClusterBadge'
-import { Progress as ProgressBar } from '@/components/ui/progress'
-import { MotionGate } from '@/components/effects/MotionGate'
-import { FLASHCARDS, MCQ_ITEMS } from '@/data/content'
-import { TOPICS } from '@/data/topics'
+import { ArrowLeft, ArrowRight, Check, Pause } from '@phosphor-icons/react'
+import { useState } from 'react'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { ApplicationCheck } from '@/components/study/ApplicationCheck'
+import { COURSE_UNITS, UNIT_BY_ID } from '@/data/curriculum'
 import { useLearnerState } from '@/lib/learner-state'
-import { prioritizeDueItems } from '@/lib/retrieval'
-import { estimateSessionMinutes } from '@/lib/time-estimate'
+import { buildReviewQueue } from '@/lib/study-practice'
+import { practiceEvidenceState } from '@/lib/study-state'
 import { useAnswerTimer } from '@/lib/use-answer-timer'
-import type { MasteryState, RetrievalQueueItem } from '@/lib/types'
 
 export const SESSION_SIZE = 8
 
-type QueueItem = { kind: 'flashcard'; id: string } | { kind: 'mcq'; id: string }
-
-function buildQueue(retrievalQueue: RetrievalQueueItem[]): QueueItem[] {
-  const flashcards = FLASHCARDS.map((f) => ({ kind: 'flashcard' as const, id: f.id, topicId: f.topicId }))
-  const mcqs = MCQ_ITEMS.map((m) => ({ kind: 'mcq' as const, id: m.id, topicId: m.topicId }))
-  const all = [...flashcards, ...mcqs]
-  return prioritizeDueItems(all, retrievalQueue).slice(0, SESSION_SIZE).map(({ kind, id }) => ({ kind, id }))
+export default function Practice() {
+  const [round, setRound] = useState(0)
+  const [params] = useSearchParams()
+  const topic = params.get('topic')
+  return <ReviewSession key={`${round}-${topic ?? 'mixed'}`} topicId={topic} onRestart={() => setRound((value) => value + 1)} />
 }
 
-export default function Practice() {
-  const { state, setTopicState, removeFromRetrievalQueue, addToRetrievalQueue, appendSessionLog } = useLearnerState()
-  const [queue] = useState<QueueItem[]>(() => buildQueue(state.retrievalQueue))
+function ReviewSession({ topicId, onRestart }: { topicId: string | null; onRestart: () => void }) {
+  const learner = useLearnerState()
+  const navigate = useNavigate()
+  const { state, appendSessionLog, setTopicState, addToRetrievalQueue, removeFromRetrievalQueue, endSession, pauseStudy } = learner
+  const [queue] = useState(() => buildReviewQueue(COURSE_UNITS.map((unit) => unit.id), state, state.study.sessionMinutes === 5 ? 3 : state.study.sessionMinutes === 15 ? 6 : SESSION_SIZE, topicId))
   const [index, setIndex] = useState(0)
-  const [correctCount, setCorrectCount] = useState(0)
+  const [remembered, setRemembered] = useState(0)
   const [revealed, setRevealed] = useState(false)
-  const [selectedOption, setSelectedOption] = useState<string | null>(null)
+  const [uncertain, setUncertain] = useState(false)
+  const [reflection, setReflection] = useState('')
+  const [selected, setSelected] = useState<string | null>(null)
   const finishAnswer = useAnswerTimer(index)
+  const item = queue[index]
+  const unit = item ? UNIT_BY_ID.get(item.topicId) : undefined
+  const done = index >= queue.length
 
-  const current = queue[index]
-  const flashcard = current?.kind === 'flashcard' ? FLASHCARDS.find((f) => f.id === current.id) : undefined
-  const mcq = current?.kind === 'mcq' ? MCQ_ITEMS.find((m) => m.id === current.id) : undefined
-  const topic = TOPICS.find((t) => t.id === (flashcard?.topicId ?? mcq?.topicId))
+  function advance() {
+    if (index === queue.length - 1) endSession()
+    setIndex((value) => value + 1)
+    setRevealed(false)
+    setUncertain(false)
+    setReflection('')
+    setSelected(null)
+  }
 
-  const remainingMinutes = useMemo(() => {
-    const remaining = queue.slice(index)
-    return estimateSessionMinutes({
-      flashcards: remaining.filter((i) => i.kind === 'flashcard').length,
-      mcqs: remaining.filter((i) => i.kind === 'mcq').length,
-    })
-  }, [queue, index])
-
-  function progressTopic(topicId: string, remembered: boolean) {
-    if (!current) return
+  function record(correct: boolean, isUnsure = false, selectedOptionId?: string) {
+    if (!item || !unit) return
     const msToAnswer = finishAnswer()
     if (msToAnswer === null) return
-    appendSessionLog({
-      topicId,
-      itemType: current.kind,
-      itemId: current.id,
-      correct: remembered,
-      timestamp: new Date().toISOString(),
-      msToAnswer,
-    })
-    const mastery = state.topics[topicId]?.state ?? 'not-encountered'
-    if (remembered) {
-      const next: MasteryState = mastery === 'understood' || mastery === 'not-encountered' || mastery === 'introduced' ? 'retrievable' : mastery === 'retrievable' ? 'discriminable' : 'mastered'
-      setTopicState(topicId, next, 'Correct in a practice session.')
-      removeFromRetrievalQueue(topicId)
-      setCorrectCount((c) => c + 1)
-    } else {
-      setTopicState(topicId, 'needs-repair', 'Missed in a practice session.')
-      addToRetrievalQueue(topicId, 'miss')
+    appendSessionLog({ topicId: unit.id, itemId: item.id, itemType: item.kind, correct, timestamp: new Date().toISOString(), msToAnswer, selectedOptionId })
+    if (!isUnsure) {
+      setTopicState(unit.id, practiceEvidenceState(state.topics[unit.id]?.state ?? 'introduced', item.kind, correct), item.kind === 'flashcard' ? 'Self-rated free recall in practice; not proof of complete mastery.' : 'Applied a scenario in practice; explanation, transfer, and retention remain separate evidence.')
     }
-    next()
+    if (correct) {
+      setRemembered((value) => value + 1)
+      removeFromRetrievalQueue(unit.id)
+    } else addToRetrievalQueue(unit.id, isUnsure ? 'review' : 'miss')
   }
 
-  function next() {
-    setRevealed(false)
-    setSelectedOption(null)
-    setIndex((i) => i + 1)
+  function answer(id: string) {
+    if (!unit || selected) return
+    setSelected(id)
+    record(id === unit.check.correctOptionId, id === 'unsure', id)
   }
 
-  function done() {
-    return index >= queue.length
-  }
-
-  if (queue.length === 0) {
-    return <p className="text-muted-foreground">No practice content yet — try Learn first.</p>
-  }
-
-  if (done()) {
-    return (
-      <MotionGate full={{ initial: { opacity: 0, scale: 0.98 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.3 } }}>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-xl">
-              <CheckCircle2 className="size-5 text-success" aria-hidden /> Session complete
-            </CardTitle>
-            <CardDescription>
-              {correctCount} of {queue.length} remembered cleanly. That's a real session — stopping here is fine.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex gap-2">
-            <Button render={<Link to="/" />} nativeButton={false}>
-              Back to Continue
-            </Button>
-            <Button variant="outline" onClick={() => window.location.reload()}>
-              Another round
-            </Button>
-          </CardContent>
-        </Card>
-      </MotionGate>
-    )
-  }
+  if (!queue.length) return (
+    <div className="empty-state">
+      <h1 className="page-heading">Learn it before you retrieve it.</h1>
+      <p className="page-description">{topicId ? 'This topic has not been taught yet, or the link names an unavailable topic.' : 'Your recall queue will fill with ideas you have actually been taught. New material is not a surprise test.'}</p>
+      <Link className="primary-button" to={topicId && UNIT_BY_ID.has(topicId) ? `/learn/${topicId}` : '/'}>Start with the explanation <ArrowRight size={16} aria-hidden /></Link>
+    </div>
+  )
+  if (done) return (
+    <div className="lesson-sheet max-w-3xl">
+      <div className="completion">
+        <div className="complete-symbol"><Check size={24} aria-hidden /></div>
+        <h1 className="page-heading">That is enough for a real session.</h1>
+        <p className="page-description">{remembered} of {queue.length} prompts remembered or answered correctly. Uncertain ideas are queued for another pass; nothing is marked mastered from a few answers.</p>
+        <div className="portal-actions"><Link className="primary-button" to="/" onClick={pauseStudy}>Done for now <Pause size={16} aria-hidden /></Link><button className="quiet-button" type="button" onClick={onRestart}>Another short round</button></div>
+      </div>
+    </div>
+  )
+  if (!unit) throw new Error('A review item points to an unavailable course unit.')
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-3">
-        <ProgressBar value={(index / queue.length) * 100} className="h-1.5 flex-1" />
-        <span className="text-xs text-muted-foreground">
-          {index + 1} / {queue.length}
-        </span>
-        <span className="flex items-center gap-1 text-xs text-muted-foreground">
-          <Clock className="size-3.5" aria-hidden />~{remainingMinutes} min left
-        </span>
+    <div>
+      <div className="lesson-toolbar"><Link className="text-link" to="/"><ArrowLeft size={16} aria-hidden />Back to Today</Link><button className="quiet-button" type="button" onClick={() => { pauseStudy(); navigate('/') }}><Pause size={16} aria-hidden />Done for now</button></div>
+      <div className="mb-7"><h1 className="page-heading">Make it yours again.</h1><p className="page-description">Only previously taught ideas. Retrieve first, then check the connection.</p></div>
+      <div className="lesson-sheet max-w-3xl">
+        <div className="teaching-content">
+          <div className="lesson-metadata mb-5"><span>{index + 1} of {queue.length}</span><span>{item.kind === 'flashcard' ? 'Free recall' : 'Apply the distinction'}</span></div>
+          <h2>{item.kind === 'flashcard' ? unit.recall.prompt : 'Change the situation.'}</h2>
+          {item.kind === 'flashcard' ? (
+            <>
+              <label className="field-label mt-5 block" htmlFor="practice-reflection">Your explanation (optional)</label>
+              <textarea className="study-textarea" id="practice-reflection" maxLength={4000} value={reflection} onChange={(event) => setReflection(event.target.value)} placeholder="Try reconstructing the mechanism before revealing it." />
+              {!revealed ? <div className="portal-actions"><button className="primary-button" type="button" onClick={() => setRevealed(true)}>Compare with the explanation</button><button className="quiet-button" type="button" onClick={() => { setUncertain(true); setRevealed(true) }}>I don't know yet</button></div>
+                : <><div className="lesson-example"><span>Check your mental model</span>{unit.recall.answer}</div><p className="field-note mt-3">This is your self-rating, not an automated assessment of your words.</p><div className="portal-actions">
+                  {!uncertain && <button className="primary-button" type="button" onClick={() => { record(true); advance() }}>I retrieved that before looking <Check size={16} aria-hidden /></button>}
+                  <button className={uncertain ? 'primary-button' : 'quiet-button'} type="button" onClick={() => { record(false, uncertain); advance() }}>Keep it in my review queue <ArrowRight size={16} aria-hidden /></button>
+                </div></>}
+            </>
+          ) : <><ApplicationCheck check={unit.check} selectedId={selected} onAnswer={answer} />{selected && <button className="primary-button mt-6" type="button" onClick={advance}>{index === queue.length - 1 ? 'Finish this round' : 'Next idea'}<ArrowRight size={16} aria-hidden /></button>}</>}
+          <div className="mt-6 border-t border-border pt-3"><Link className="text-link" to={`/learn/${unit.id}`}>Revisit {unit.title} <ArrowRight size={14} aria-hidden /></Link></div>
+        </div>
       </div>
-
-      {topic && (
-        <ClusterBadge cluster={topic.cluster} className="w-fit">
-          {topic.title}
-        </ClusterBadge>
-      )}
-
-      {flashcard && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">{flashcard.front}</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-3">
-            {revealed && <p className="rounded-md bg-muted p-3 text-sm">{flashcard.back}</p>}
-            {!revealed ? (
-              <div className="flex flex-wrap gap-2">
-                <Button variant="outline" onClick={() => setRevealed(true)}>
-                  I don't know
-                </Button>
-                <Button onClick={() => setRevealed(true)}>Show answer</Button>
-              </div>
-            ) : (
-              <div className="flex flex-wrap gap-2">
-                <Button
-                  variant="outline"
-                  onClick={() => progressTopic(flashcard.topicId, false)}
-                >
-                  Still shaky
-                </Button>
-                <Button
-                  onClick={() => progressTopic(flashcard.topicId, true)}
-                >
-                  Remembered it
-                </Button>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      )}
-
-      {mcq && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">{mcq.scenario}</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-2">
-            {mcq.options.map((opt) => {
-              const isSelected = selectedOption === opt.id
-              const isCorrect = opt.id === mcq.correctOptionId
-              const showResult = selectedOption !== null
-              return (
-                <button
-                  key={opt.id}
-                  disabled={showResult}
-                  onClick={() => setSelectedOption(opt.id)}
-                  className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm transition-colors ${
-                    showResult && isCorrect
-                      ? 'border-success bg-success/10'
-                      : showResult && isSelected
-                        ? 'border-destructive bg-destructive/10'
-                        : 'border-border hover:bg-muted'
-                  }`}
-                >
-                  {showResult && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-success" aria-hidden />}
-                  {showResult && isSelected && !isCorrect && <XCircle className="size-4 shrink-0 text-destructive" aria-hidden />}
-                  <span>{opt.text}</span>
-                </button>
-              )
-            })}
-            {selectedOption && (
-              <div className="mt-2 flex flex-col gap-2 rounded-md bg-muted p-3 text-sm">
-                <p>{mcq.explanation}</p>
-                {selectedOption !== mcq.correctOptionId && mcq.distractorNotes[selectedOption] && (
-                  <p className="text-muted-foreground">Why that one's tempting: {mcq.distractorNotes[selectedOption]}</p>
-                )}
-                <Button
-                  className="w-fit"
-                  onClick={() => progressTopic(mcq.topicId, selectedOption === mcq.correctOptionId)}
-                >
-                  Continue
-                </Button>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      )}
     </div>
   )
 }

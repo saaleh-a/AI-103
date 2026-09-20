@@ -1,60 +1,159 @@
-# AI-103 Mastery Tutor
+# AI-103 Learning Studio
 
-A website that teaches AI-103 (Developing AI Apps and Agents on Azure), built from a 265-file study corpus and a 45-section teaching constitution — see [`CLAUDE.md`](./CLAUDE.md) for the full operating rules.
+A corpus-grounded tutor for AI-103: Developing AI Apps and Agents on Azure.
+The course connects all **265 supplied source documents** to authored teaching,
+guided Azure fieldwork, recall, and application checks. The operating rules
+remain in [`CLAUDE.md`](./CLAUDE.md).
 
-## Structure
+## Build first, use the corpus as a reference
 
-- **`corpus/`** — 265 raw source files (Microsoft Learn training pages, "AI-103 Episode" transcripts, a Study Cram transcript), verbatim. The primary source of truth.
-- **`content/`** — hand-authored v1 study material (flashcards, MCQ/scenario items, discrimination tables) derived from `corpus/`. See `app/src/data/content.ts` and `app/src/data/topics.ts`.
-- **`app/`** — the site itself: Vite + React + TypeScript, Tailwind + shadcn/ui, [Bklit](https://bklit.com) charts, [Motion](https://motion.dev), and [React Bits](https://reactbits.dev)-style effects.
-- **`CLAUDE.md`** — the full AI-103 Mastery Tutor constitution, plus pointers for anyone (human or Claude Code session) continuing work on this repo.
+The front door is a continuing Azure project, not a Microsoft Learn-style
+chapter index. Six outcome-led builds connect all 65 concepts: a grounded support
+assistant, multi-agent case routing, document intake, voice interaction, a visual
+content workflow, and reliability review.
 
-## Running it
+Each build includes an explicit outcome, connected milestones, original
+synthetic practice material to download, a change-the-requirement challenge, and
+a field notebook containing the learner's own observations. Saved resource names
+are reusable breadcrumbs, not a live Azure inventory.
 
-```bash
-cd app
-npm install
+The next-action coach is transparent, rule-based routing: unfinished work comes
+first, then a relevant recorded confusion, then due retrieval, then a
+prerequisite-ready concept for the selected build. A longer session can pick up
+unrecorded portal work. A wrong recorded alternative opens a focused contrast
+and repair note instead of blindly advancing the syllabus. Reading that repair
+does not erase the mastery repair flag or award mastery.
+
+## The learning loop
+
+**Understand → try in Azure → recall → return later.**
+
+- Today recommends one resumable, prerequisite-ready lesson rather than a menu
+  of competing study tasks.
+- Lessons reveal one short teaching step at a time. A five-minute session can
+  save and stop after a single step; longer sessions still have no countdown.
+- Azure fieldwork guides the learner through the portal or Microsoft Foundry:
+  setup and costs, where to go, what to change, what to observe, and cleanup.
+  SDK-only work explicitly transitions from portal setup to an editor.
+- Checkpoints and field notes are self-recorded. This site does **not** connect
+  to an Azure subscription, create resources, run SDK code, or independently
+  verify a deployment.
+- An optional local configuration rehearsal checks structured choices. Its
+  rendered plans and expected outputs are labelled as learning models, not
+  live service responses.
+- Recall practice uses only previously taught topics. Exam practice is an
+  explicit, eight-scenario mode; untaught material is diagnostic, not a mastery
+  failure.
+- Reading, immediate correctness, and repeated self-ratings never automatically
+  create a mastered state. Source mapping, lesson completion, Azure observations,
+  and mastery evidence are separate measures.
+
+## Where things live
+
+- **`corpus/`**: the 265 original files, unmodified. The supplied September 19
+  backup matches these documents; its filenames use different zero-padding.
+- **`app/src/data/curriculum/`**: the authored learning path. Four content slices
+  share a schema for teaching, prerequisites, source IDs, portal walkthroughs,
+  optional rehearsal, retrieval, and application checks.
+- **`app/src/data/projects.ts` / `app/src/lib/coach.ts`**: outcome-led builds,
+  synthetic practice material, and evidence-aware next-action routing.
+- **`app/src/data/topics.ts`**: the current topic adapter plus historical IDs
+  retained for progress compatibility.
+- **`app/src/data/content.ts`**: legacy practice material and comparison tables.
+  Current per-topic practice is defined with each curriculum unit and exposed by
+  `practice-content.ts`.
+- **`app/src/lib/study-state.ts`**: resumable lesson and fieldwork state,
+  prerequisite selection, import validation, and conservative practice promotion.
+- **`app/src/pages/`**: Today, course map, paced lessons, Azure fieldwork, source
+  library, review, comparisons, exam practice, progress, and settings.
+- **`PRODUCT.md` / `DESIGN.md`**: product constraints and the shipped visual system.
+
+The six learning tracks organize the experience; they are **not** the five
+official exam domains or their weights. Each unit separately declares one
+primary exam domain.
+
+## Run locally
+
+Use **Node.js 22.12 or newer**.
+
+```powershell
+Set-Location app
+npm ci
 npm run dev
 ```
 
-`npm run dev` / `npm run build` first sync `corpus/` and `CLAUDE.md` into `app/public/` and build a search manifest (`npm run content`) — see `app/scripts/`.
+The content step copies the corpus and constitution into public assets and
+generates a lightweight source manifest. Full source documents are fetched on
+demand, not embedded in the JavaScript bundle. Hash routes and a relative Vite
+base support static hosting under a subdirectory.
 
-The static core (flashcards, quizzes, discrimination drills, progress dashboard) works with no setup. For live AI tutoring — open-ended Q&A, diagnosis of wrong answers, novel exam scenarios — add your own Anthropic API key in the app's Settings page; it's stored only in your browser and calls go straight to Anthropic.
+The lockfile uses compatible published dependency versions. Some versions in the
+previous lockfile were unavailable from the configured package feed, so the lock
+was regenerated instead of bypassing TLS or depending on unavailable tarballs.
 
-## Progress logging and scheduled review
+## Progress and privacy
 
-Practice self-ratings, Practice MCQ **Continue**, and Exam answers log the item, topic, correctness, timestamp, and milliseconds from item display to the committed answer. Practice MCQ timing includes time spent reading feedback before Continue. Settings shows the retained answer count; only the latest 500 entries are kept in localStorage and progress exports.
+Progress is stored under `ai103-learner-state` in browser localStorage. It includes
+topic evidence, review scheduling, up to 500 answer records, lesson positions,
+session size, configuration drafts, portal checkpoints, field notes, selected
+scenario alternatives, repair notes, the current build, and resource-name breadcrumbs.
 
-A wrong Practice or Exam answer schedules retrieval one day later, then three days after a second miss, then seven days after each subsequent miss. A correct retrieval removes the topic from the queue. Lesson completion and tutor-requested reviews start one day later with no miss counted; repeated review requests leave an existing schedule unchanged. Only due topics receive priority, but future queued topics can still appear in normal Practice rotation.
+Settings exports and imports all of this as JSON. Existing exports gain an empty
+study notebook without losing their topic evidence or review schedule. Invalid
+imports do not replace current progress. An unreadable saved notebook is not
+automatically overwritten; blocked storage produces a visible warning.
 
-Older local progress and imported exports migrate automatically: missing answer logs start empty, and legacy topic-ID queues become immediately due with a miss streak of one. The existing Settings export, import, and reset controls cover both fields. These changes do not redesign the existing mastery ladder.
+Do not put keys, tokens, personal data, or confidential content in field notes.
+The optional Anthropic tutor requires a separate browser-stored API key. Only
+explicit chat requests send messages, selected source excerpts, and a compact
+topic-progress summary to Anthropic. Field notes and Azure credentials are not
+sent. No key is needed for the authored teaching or fieldwork guides.
 
-## Checking curriculum coverage
+## Coverage and regression checks
 
-With supported **Node.js 22.12+**, run from `app/`:
+From `app/`:
+
+```powershell
+npm run content
+npm run check:curriculum
+npm test
+npm run lint
+npm run build
+```
+
+The local curriculum guard verifies that every source is mapped, historical topic
+IDs survive, prerequisites are valid, and every unit has teaching, a real cited
+exercise, observable portal checkpoints, costs, cleanup, rehearsal feedback,
+recall, and an application check. It also runs before production builds.
+
+This is a structural guard, not a claim that counting links proves instructional
+depth or that a learner has mastered the material.
+
+The separate maintenance command still compares primary topic assignments with
+the live [official AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103):
 
 ```powershell
 npm run check:coverage
+npm run check:coverage -- --app-url http://127.0.0.1:5173/
 ```
 
-The command runs `npm run content` to refresh the generated corpus manifest, then prints a console-only report. It fetches the [official AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) live and prints its URL, retrieval timestamp, and the newest outline effective on or before the run date (UTC). Unavailable or malformed outlines fail explicitly; there is no cached fallback.
+It reports live weights and topic-count heuristics, not objective-level mastery.
+The source corpus remains a captured snapshot. Guides flag naming/version
+conflicts and link the original exercise when current portal screens differ.
 
-Each topic has one primary official domain. **UNCOVERED** means zero topics; **THIN** means its unrounded topic share is below the official minimum weight; **NOT FLAGGED** means neither. This is a topic-count maintenance heuristic, not proof of complete objective coverage or learner mastery. Contributing app clusters and topic IDs make the counts auditable; raw corpus size is a separate measure.
+## Interface
 
-Flagged domains include a link to an existing lesson's tutor and to Settings for API-key setup. The tutor can search the full corpus, but the corpus may still lack a requested objective. Links default to `http://localhost:5173/`. For another dev-server port or a deployed app, pass its base URL without a query or fragment:
+Geist typography, a graphite navigation rail, and a restrained green action
+palette replace the old card-dashboard treatment. Focus mode removes secondary
+content. Motion is off by default and always respects system reduced motion.
 
-```powershell
-npm run check:coverage -- --app-url http://127.0.0.1:5183/
-```
+[Motion](https://motion.dev/) handles optional state transitions.
+[Bklit](https://bklit.com/) charts show actual lesson progress with an equivalent
+readable table. The lesson rail adapts [React Bits' Stepper](https://reactbits.dev/components/stepper);
+its license is retained at `app/public/licenses/react-bits.txt`.
 
-When topics or the official outline change, review `app/scripts/coverage-map.mjs` against the live domain headings and the actual topic content. Update explicit primary assignments so every topic appears exactly once; do not store weights in the mapping. New/unmapped topics, unknown domains, duplicate assignments, and broken manifest references stop the report rather than silently changing its denominator.
+## Deploy
 
-Native Node regression tests for progress, scheduling, and coverage, also from `app/`:
-
-```powershell
-npm test
-```
-
-## Deploying
-
-Pushing to `main` builds and deploys `app/` to GitHub Pages via `.github/workflows/deploy.yml`. GitHub Pages itself needs to be enabled once, in the repo's Settings → Pages, with the source set to "GitHub Actions".
+The existing `.github/workflows/deploy.yml` builds and publishes `app/` to
+GitHub Pages on a push to `main`. Enable Pages with **GitHub Actions** as its
+source in repository settings.

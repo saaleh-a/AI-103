@@ -35,6 +35,7 @@ export interface Topic {
   orient: string
   /** corpus-manifest ids this topic is grounded in */
   corpusIds: string[]
+  prerequisites?: string[]
 }
 
 export interface Flashcard {
@@ -82,6 +83,7 @@ export interface SessionLogEntry {
   correct: boolean
   timestamp: string
   msToAnswer: number
+  selectedOptionId?: string
 }
 
 export interface RetrievalQueueItem {
@@ -101,6 +103,44 @@ export interface LearnerState {
   itemsMasteredToday: number
   lastActiveAt?: string
   lastSessionDate?: string
+  study: StudyState
+}
+
+export type StudyStage = 'learn' | 'lab' | 'recall' | 'complete'
+
+export interface StudyUnitProgress {
+  stage: StudyStage
+  lessonStep: number
+  lessonComplete: boolean
+  labStep: number
+  portalChecks: boolean[]
+  portalNotes: string[]
+  labSkipped: boolean
+  reflection: string
+  recallRevealed: boolean
+  draft: Record<string, string>
+  checkAnswerId?: string
+  checkAssisted: boolean
+  completedAt?: string
+  portalCompletedAt?: string
+  repairReviewedAt?: string
+  repairNote: string
+}
+
+export interface ProjectWorkspace {
+  resourceGroup: string
+  foundryProject: string
+  deployment: string
+}
+
+export interface StudyState {
+  version: 1
+  units: Record<string, StudyUnitProgress>
+  activeUnitId?: string
+  pausedAt?: string
+  sessionMinutes: 5 | 15 | 25
+  activeProjectId?: string
+  workspace: ProjectWorkspace
 }
 
 export interface UIPrefs {

@@ -1,10 +1,12 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { LearnerStateContext } from '@/lib/learner-state-context'
 import { TOPICS } from '@/data/topics'
 import { emptyState, normalizeLearnerState } from '@/lib/learner-state-data'
 import { isRetrievalDue, nextRetrievalDeadline, scheduleRetrieval, selectNextTopicId, type RetrievalReason } from '@/lib/retrieval'
 import { appendLogEntry } from '@/lib/session-log'
-import { readJSON, writeJSON } from '@/lib/storage'
-import type { LearnerState, MasteryState, RetrievalQueueItem, SessionLogEntry } from '@/lib/types'
+import { writeJSON } from '@/lib/storage'
+import { updateStudyUnit } from '@/lib/study-state'
+import type { LearnerState, MasteryState, RetrievalQueueItem, SessionLogEntry, StudyUnitProgress, StudyState, ProjectWorkspace } from '@/lib/types'
 
 const STORAGE_KEY = 'ai103-learner-state'
 
@@ -12,7 +14,7 @@ function todayKey(): string {
   return new Date().toISOString().slice(0, 10)
 }
 
-interface LearnerStateApi {
+export interface LearnerStateApi {
   state: LearnerState
   /** The single next resumable action (Section 25/45): one topic to work on. */
   nextTopicId: string | null
@@ -30,24 +32,57 @@ interface LearnerStateApi {
   exportState: () => string
   importState: (json: string) => boolean
   resetState: () => void
+  saveStudyProgress: (topicId: string, patch: Partial<StudyUnitProgress>) => void
+  pauseStudy: () => void
+  setSessionMinutes: (minutes: StudyState['sessionMinutes']) => void
+  storageStatus: 'saved' | 'unavailable' | 'invalid'
+  setActiveProject: (id: string) => void
+  saveWorkspace: (patch: Partial<ProjectWorkspace>) => void
 }
 
-const LearnerStateContext = createContext<LearnerStateApi | null>(null)
-
 export function LearnerStateProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<LearnerState>(() => {
+  const [initial] = useState((): { state: LearnerState; status: 'saved' | 'unavailable' | 'invalid' } => {
     try {
-      return normalizeLearnerState(readJSON<unknown>(STORAGE_KEY, emptyState(TOPICS)), TOPICS)
+      const raw = localStorage.getItem(STORAGE_KEY)
+      return { state: raw ? normalizeLearnerState(JSON.parse(raw), TOPICS) : emptyState(TOPICS), status: 'saved' }
     } catch (error) {
-      if (!(error instanceof TypeError)) throw error
+      if (!(error instanceof TypeError) && !(error instanceof SyntaxError) && !(error instanceof DOMException)) throw error
       console.warn('[learner-state] Saved progress could not be loaded.', error)
-      return emptyState(TOPICS)
+      return { state: emptyState(TOPICS), status: error instanceof DOMException ? 'unavailable' : 'invalid' }
     }
   })
+  const [state, setState] = useState<LearnerState>(initial.state)
+  const [storageStatus, setStorageStatus] = useState(initial.status)
+  const [preserveInvalidSave, setPreserveInvalidSave] = useState(initial.status === 'invalid')
 
   useEffect(() => {
-    writeJSON(STORAGE_KEY, state)
-  }, [state])
+    if (preserveInvalidSave) return
+    setStorageStatus(writeJSON(STORAGE_KEY, state) ? 'saved' : 'unavailable')
+  }, [state, preserveInvalidSave])
+
+  const saveStudyProgress = useCallback((topicId: string, patch: Partial<StudyUnitProgress>) => {
+    setState((prev) => ({
+      ...prev,
+      lastActiveAt: new Date().toISOString(),
+      study: updateStudyUnit(prev.study, topicId, patch),
+    }))
+  }, [])
+
+  const pauseStudy = useCallback(() => {
+    setState((prev) => ({ ...prev, study: { ...prev.study, pausedAt: new Date().toISOString() } }))
+  }, [])
+
+  const setSessionMinutes = useCallback((minutes: StudyState['sessionMinutes']) => {
+    setState((prev) => ({ ...prev, study: { ...prev.study, sessionMinutes: minutes } }))
+  }, [])
+
+  const setActiveProject = useCallback((id: string) => {
+    setState((prev) => ({ ...prev, study: { ...prev.study, activeProjectId: id, activeUnitId: undefined, pausedAt: undefined } }))
+  }, [])
+
+  const saveWorkspace = useCallback((patch: Partial<ProjectWorkspace>) => {
+    setState((prev) => ({ ...prev, study: { ...prev.study, workspace: { ...prev.study.workspace, ...patch } } }))
+  }, [])
 
   const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
@@ -125,6 +160,7 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
       const importedAt = new Date()
       const imported = normalizeLearnerState(parsed, TOPICS, importedAt)
       setNow(importedAt.getTime())
+      setPreserveInvalidSave(false)
       setState(imported)
       return true
     } catch (error) {
@@ -133,10 +169,13 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const resetState = useCallback(() => setState(emptyState(TOPICS)), [])
+  const resetState = useCallback(() => {
+    setPreserveInvalidSave(false)
+    setState(emptyState(TOPICS))
+  }, [])
 
   const coverage = useMemo(() => {
-    const values = Object.values(state.topics)
+    const values = TOPICS.map((topic) => state.topics[topic.id]).filter(Boolean)
     return {
       total: TOPICS.length,
       started: values.filter((t) => t.state !== 'not-encountered').length,
@@ -164,6 +203,12 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     exportState,
     importState,
     resetState,
+    saveStudyProgress,
+    pauseStudy,
+    setSessionMinutes,
+    storageStatus,
+    setActiveProject,
+    saveWorkspace,
   }
 
   return <LearnerStateContext.Provider value={value}>{children}</LearnerStateContext.Provider>

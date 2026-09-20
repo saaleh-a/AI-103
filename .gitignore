@@ -4,3 +4,7 @@
 .claude/skills/impeccable/scripts/bin/
 .claude/skills/impeccable/scripts/data/
 .claude/skills/impeccable/scripts/*.js
+
+# Local browser review captures are evidence, not deployed assets.
+.impeccable/review/
+.impeccable/hook.cache.json

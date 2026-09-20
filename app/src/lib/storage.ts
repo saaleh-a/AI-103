@@ -6,15 +6,20 @@ export function readJSON<T>(key: string, fallback: T): T {
     const raw = localStorage.getItem(key)
     if (!raw) return fallback
     return { ...fallback, ...JSON.parse(raw) } as T
-  } catch {
+  } catch (error) {
+    if (!(error instanceof DOMException) && !(error instanceof SyntaxError)) throw error
+    console.warn(`[storage] Could not read ${key}.`, error)
     return fallback
   }
 }
 
-export function writeJSON(key: string, value: unknown): void {
+export function writeJSON(key: string, value: unknown): boolean {
   try {
     localStorage.setItem(key, JSON.stringify(value))
-  } catch {
-    // storage full or blocked — the app still works, it just won't persist
+    return true
+  } catch (error) {
+    if (!(error instanceof DOMException)) throw error
+    console.warn(`[storage] Could not save ${key}. Export your progress before closing.`, error)
+    return false
   }
 }

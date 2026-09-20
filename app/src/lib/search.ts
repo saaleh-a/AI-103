@@ -52,7 +52,12 @@ export function fetchCorpusFile(filename: string): Promise<string> {
   const cached = fileCache.get(filename)
   if (cached) return cached
   const url = `${import.meta.env.BASE_URL}corpus-clean/${encodeURIComponent(filename)}`
-  const promise = fetch(url).then((r) => (r.ok ? r.text() : Promise.reject(new Error(`${r.status} fetching ${filename}`))))
+  const promise = fetch(url)
+    .then((r) => (r.ok ? r.text() : Promise.reject(new Error(`${r.status} fetching ${filename}`))))
+    .catch((error: unknown) => {
+      fileCache.delete(filename)
+      throw error
+    })
   fileCache.set(filename, promise)
   return promise
 }
