@@ -75,12 +75,15 @@ test('review queues contain only taught topics and respect a targeted topic', ()
   assert.deepEqual(buildReviewQueue(units.map((unit) => unit.id), current, 8, 'missing'), [])
 })
 
-test('three immediate recalls cannot create false mastery', () => {
+test('self-ratings and single scenarios cannot establish retrieval, application, or mastery', () => {
   let level = 'understood'
   for (let i = 0; i < 20; i += 1) level = practiceEvidenceState(level, 'flashcard', true)
-  assert.equal(level, 'retrievable')
+  assert.equal(level, 'understood')
   for (let i = 0; i < 20; i += 1) level = practiceEvidenceState(level, 'mcq', true)
-  assert.equal(level, 'applicable')
+  assert.equal(level, 'understood')
+  assert.equal(practiceEvidenceState('introduced', 'mcq', true), 'understood')
+  assert.equal(practiceEvidenceState('needs-repair', 'mcq', true), 'needs-repair')
+  assert.equal(practiceEvidenceState('applicable', 'mcq', true), 'applicable')
   assert.equal(practiceEvidenceState('mastered', 'flashcard', true), 'mastered')
   assert.equal(practiceEvidenceState('not-encountered', 'mcq', false), 'introduced')
 })

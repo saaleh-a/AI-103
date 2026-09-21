@@ -2,7 +2,7 @@ import type { LearnerState, RetrievalQueueItem, Topic } from './types'
 
 const DAY_MS = 24 * 60 * 60 * 1000
 
-export type RetrievalReason = 'review' | 'miss'
+export type RetrievalReason = 'review' | 'miss' | 'support'
 
 function isRetrievalQueueItem(value: unknown): value is RetrievalQueueItem {
   return value !== null && typeof value === 'object'
@@ -31,6 +31,10 @@ export function scheduleRetrieval(queue: RetrievalQueueItem[], topicId: string, 
   if (!topicId.trim()) throw new TypeError('A retrieval topic ID is required.')
   const existing = queue.find((item) => item.topicId === topicId)
   if (reason === 'review' && existing) return queue
+  if (reason === 'support' && existing) {
+    if (!isRetrievalDue(existing, now)) return queue
+    return queue.map((item) => item === existing ? { ...item, dueAt: new Date(now + DAY_MS).toISOString() } : item)
+  }
   const missStreak = reason === 'miss' ? Math.min((existing?.missStreak ?? 0) + 1, Number.MAX_SAFE_INTEGER) : 0
   const days = missStreak <= 1 ? 1 : missStreak === 2 ? 3 : 7
   const scheduled = { topicId, dueAt: new Date(now + days * DAY_MS).toISOString(), missStreak }

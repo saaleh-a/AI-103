@@ -1,7 +1,7 @@
-import type { LearnerState, MasteryState, StudyState, StudyUnitProgress } from './types'
+import type { LearnerState, MasteryState, ReviewItem, ReviewResponse, ReviewSessionProgress, StudyActivity, StudyState, StudyUnitProgress } from './types'
 
 export function emptyStudyState(): StudyState {
-  return { version: 1, units: {}, sessionMinutes: 15, activeUnitId: undefined, activeProjectId: undefined, pausedAt: undefined, workspace: { resourceGroup: '', foundryProject: '', deployment: '' } }
+  return { version: 1, units: {}, sessionMinutes: 15, activeUnitId: undefined, activeActivity: undefined, practice: undefined, exam: undefined, activeProjectId: undefined, pausedAt: undefined, workspace: { resourceGroup: '', foundryProject: '', deployment: '' } }
 }
 
 export function emptyStudyUnit(): StudyUnitProgress {
@@ -49,6 +49,56 @@ function index(value: unknown, field: string): number {
   return value
 }
 
+function activity(value: unknown): StudyActivity | undefined {
+  if (value === undefined || value === 'lesson' || value === 'fieldwork' || value === 'repair' || value === 'practice' || value === 'exam') return value
+  return invalid('active activity')
+}
+
+function normalizeReview(value: unknown, mode: 'practice' | 'exam'): ReviewSessionProgress | undefined {
+  if (value === undefined) return undefined
+  if (!record(value) || !Array.isArray(value.items) || !Array.isArray(value.responses)) invalid(`${mode} session`)
+  const id = text(value.id, 'review session ID')
+  if (!id.trim() || value.items.length < 1 || value.items.length > 8 || value.items.length !== value.responses.length) invalid('review queue')
+  const requestedTopicId = value.requestedTopicId === undefined ? undefined : text(value.requestedTopicId, 'review topic')
+  const items = value.items.map((item): ReviewItem => {
+    if (!record(item) || (item.kind !== 'flashcard' && item.kind !== 'mcq') || (mode === 'exam' && item.kind !== 'mcq')) invalid('review item')
+    const topicId = text(item.topicId, 'review topic')
+    const itemId = text(item.id, 'review item ID')
+    if (!topicId.trim() || itemId !== `${item.kind === 'mcq' ? 'scenario' : 'recall'}-${topicId}`) invalid('review item ID')
+    if (requestedTopicId !== undefined && requestedTopicId !== topicId) invalid('targeted review queue')
+    return { kind: item.kind, topicId, id: itemId }
+  })
+  if (new Set(items.map((item) => item.id)).size !== items.length) invalid('duplicate review item')
+  const current = index(value.index, 'review position')
+  if (current > items.length) invalid('review position')
+  const responses = value.responses.map((response, position): ReviewResponse => {
+    if (!record(response) || typeof response.revealed !== 'boolean' || typeof response.uncertain !== 'boolean') invalid('review response')
+    const outcome = response.outcome
+    if (outcome !== undefined && outcome !== 'correct' && outcome !== 'incorrect' && outcome !== 'unsure') invalid('review outcome')
+    const presentedAt = date(response.presentedAt, 'question presentation')
+    const committedAt = date(response.committedAt, 'review answer time')
+    const selectedOptionId = response.selectedOptionId === undefined ? undefined : text(response.selectedOptionId, 'review choice')
+    if (position <= current && !presentedAt) invalid('question presentation')
+    if (Boolean(committedAt) !== Boolean(outcome) || (position < current && !outcome) || (position > current && outcome)) invalid('review answer order')
+    if (committedAt && (!presentedAt || Date.parse(committedAt) < Date.parse(presentedAt))) invalid('review answer time')
+    if (outcome && items[position].kind === 'mcq' && !selectedOptionId) invalid('review choice')
+    if (outcome && items[position].kind === 'flashcard' && !response.revealed) invalid('recall reveal')
+    if (response.uncertain && outcome && outcome !== 'unsure') invalid('uncertain answer')
+    return {
+      reflection: text(response.reflection, 'review reflection'),
+      revealed: response.revealed,
+      uncertain: response.uncertain,
+      presentedAt,
+      selectedOptionId,
+      outcome,
+      committedAt,
+    }
+  })
+  const completedAt = date(value.completedAt, 'review completion')
+  if ((current === items.length) !== Boolean(completedAt)) invalid('review completion')
+  return { id, requestedTopicId, items, responses, index: current, completedAt }
+}
+
 export function normalizeStudyState(value: unknown): StudyState {
   if (value === undefined) return emptyStudyState()
   if (!record(value) || value.version !== 1 || !record(value.units)) invalid('study')
@@ -87,6 +137,9 @@ export function normalizeStudyState(value: unknown): StudyState {
     version: 1,
     units: Object.fromEntries(units),
     activeUnitId: value.activeUnitId === undefined ? undefined : text(value.activeUnitId, 'active unit'),
+    activeActivity: activity(value.activeActivity),
+    practice: normalizeReview(value.practice, 'practice'),
+    exam: normalizeReview(value.exam, 'exam'),
     pausedAt: date(value.pausedAt, 'pause time'),
     sessionMinutes: value.sessionMinutes,
     activeProjectId: value.activeProjectId === undefined ? undefined : text(value.activeProjectId, 'active project'),
@@ -125,6 +178,7 @@ export function updateStudyUnit(state: StudyState, id: string, patch: Partial<St
   return {
     ...state,
     activeUnitId: id,
+    activeActivity: state.activeUnitId === id && (state.activeActivity === 'fieldwork' || state.activeActivity === 'repair') ? state.activeActivity : 'lesson',
     pausedAt: undefined,
     units: { ...state.units, [id]: { ...emptyStudyUnit(), ...state.units[id], ...patch } },
   }
@@ -132,9 +186,6 @@ export function updateStudyUnit(state: StudyState, id: string, patch: Partial<St
 
 export function practiceEvidenceState(current: MasteryState, kind: 'flashcard' | 'mcq', correct: boolean): MasteryState {
   if (!correct) return current === 'not-encountered' ? 'introduced' : 'needs-repair'
-  if (current === 'mastered') return current
-  if (kind === 'flashcard') {
-    return ['discriminable', 'applicable'].includes(current) ? current : 'retrievable'
-  }
-  return 'applicable'
+  if (kind === 'flashcard' || current === 'needs-repair') return current
+  return current === 'introduced' ? 'understood' : current
 }

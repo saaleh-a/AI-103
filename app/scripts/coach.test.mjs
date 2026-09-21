@@ -101,3 +101,48 @@ test('project breadcrumbs, repair notes, and selected answers survive progress e
   assert.throws(() => normalizeLearnerState({ ...state, study: { ...state.study, workspace: { resourceGroup: [], foundryProject: '', deployment: '' } } }, COURSE_UNITS), TypeError)
   assert.throws(() => normalizeLearnerState({ ...state, sessionLog: [{ ...state.sessionLog[0], selectedOptionId: 42 }] }, COURSE_UNITS), TypeError)
 })
+
+test('a prerequisite keeps the selected build on resume rather than switching to its owning build', () => {
+  const state = fresh()
+  state.study.activeProjectId = 'visual-workflow'
+  state.study.activeUnitId = 'ai-foundations'
+  state.study.activeActivity = 'lesson'
+  state.study.units['ai-foundations'] = { ...emptyStudyUnit(), lessonStep: 1 }
+  const action = choose(state)
+  assert.equal(action.kind, 'resume')
+  assert.equal(action.projectId, 'visual-workflow')
+  assert.equal(coachingHref(action), '/learn/ai-foundations')
+})
+
+test('fieldwork and unfinished repair resume on their actual surfaces', () => {
+  const state = fresh()
+  state.study.activeProjectId = 'visual-workflow'
+  state.study.activeUnitId = 'ai-foundations'
+  state.study.activeActivity = 'fieldwork'
+  state.study.units['ai-foundations'] = learned({ stage: 'lab', labStep: 3 })
+  assert.equal(coachingHref(choose(state)), '/labs/ai-foundations')
+  state.study.activeActivity = 'repair'
+  state.study.units['ai-foundations'].stage = 'complete'
+  state.study.units['ai-foundations'].repairNote = 'Generated words are not evidence of an action.'
+  assert.equal(coachingHref(choose(state)), '/repair/ai-foundations')
+  state.study.units['ai-foundations'].repairReviewedAt = '2026-09-20T11:00:00Z'
+  assert.notEqual(choose(state).kind, 'resume')
+})
+
+test('successful practice does not repeatedly reopen an already reviewed repair, but a new miss does', () => {
+  const state = fresh()
+  const unitId = 'ai-foundations'
+  state.study.units[unitId] = learned({ repairReviewedAt: '2026-09-20T11:00:00Z' })
+  state.topics[unitId] = { state: 'needs-repair', evidence: ['Conservative repair flag retained.'], lastEvidenceAt: '2026-09-20T11:30:00Z' }
+  const entry = { topicId: unitId, itemId: `scenario-${unitId}`, itemType: 'mcq', msToAnswer: 1000, evidenceKind: 'scenario' }
+  state.sessionLog = [
+    { ...entry, correct: false, timestamp: '2026-09-20T10:00:00Z' },
+    { ...entry, correct: true, timestamp: '2026-09-20T11:30:00Z' },
+  ]
+  assert.equal(choose(state).kind, 'learn')
+  assert.equal(state.topics[unitId].state, 'needs-repair')
+  state.sessionLog.push({ ...entry, correct: false, timestamp: '2026-09-20T11:35:00Z' })
+  state.sessionLog.push({ ...entry, correct: true, assisted: true, timestamp: '2026-09-20T11:40:00Z' })
+  state.topics[unitId].lastEvidenceAt = '2026-09-20T11:40:00Z'
+  assert.equal(choose(state).kind, 'repair')
+})

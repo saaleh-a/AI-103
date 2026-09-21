@@ -1,4 +1,5 @@
-import { ArrowRight, BookOpen } from '@phosphor-icons/react'
+import { ArrowRight, BookOpen, Pause } from '@phosphor-icons/react'
+import { useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { BuildContext } from '@/components/study/BuildContext'
 import { UNIT_BY_ID } from '@/data/curriculum'
@@ -10,6 +11,11 @@ export default function Repair() {
   const unit = UNIT_BY_ID.get(topicId ?? '')
   const learner = useLearnerState()
   const navigate = useNavigate()
+  const { activateStudy } = learner
+  const taught = Boolean(unit && hasLearnedTopic(learner.state, unit.id))
+  useEffect(() => {
+    if (topicId && taught) activateStudy(topicId, 'repair')
+  }, [topicId, taught, activateStudy])
   if (!unit) return <div className="empty-state"><h1 className="page-heading">That repair topic is unavailable.</h1><Link className="text-link" to="/">Return to your build <ArrowRight size={16} aria-hidden /></Link></div>
   if (!hasLearnedTopic(learner.state, unit.id)) return <div className="empty-state"><h1 className="page-heading">This is new, not a failure.</h1><p className="page-description">Meet the mechanism before trying to repair it.</p><Link className="primary-button" to={`/learn/${unit.id}`}>Start the explanation <ArrowRight size={16} aria-hidden /></Link></div>
   const progress = learner.state.study.units[unit.id] ?? emptyStudyUnit()
@@ -21,13 +27,13 @@ export default function Repair() {
 
   function save() {
     learner.saveStudyProgress(unitId, { repairReviewedAt: new Date().toISOString() })
-    learner.addToRetrievalQueue(unitId)
+    learner.addToRetrievalQueue(unitId, 'support')
     navigate('/')
   }
 
   return (
     <div className="studio-page max-w-4xl">
-      <div><h1 className="page-heading">Untangle one decision.</h1><p className="page-description">{unit.title}. The goal is to locate the distinction, not make you reread the entire module.</p></div>
+      <div><div className="section-heading"><h1 className="page-heading">Untangle one decision.</h1><Link className="text-link" to="/" onClick={learner.pauseStudy}>Done for now <Pause size={16} aria-hidden /></Link></div><p className="page-description">{unit.title}. The goal is to locate the distinction, not make you reread the entire module.</p></div>
       <BuildContext unitId={unit.id} />
       <section className="repair-question"><h2>The requirement you were solving</h2><p>{unit.check.question}</p></section>
       <div className="repair-contrast">

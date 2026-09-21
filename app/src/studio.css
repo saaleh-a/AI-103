@@ -384,7 +384,8 @@
   .lesson-margin { grid-template-columns: minmax(0, 1fr); }
   .portal-observation { padding: 15px 0; }
   .portal-meta .text-link { font-size: 11px; }
-  .portal-actions > .primary-button { flex: 1; }
+  .portal-actions > .primary-button { flex: 1 1 100%; }
+  .study-textarea { font-size: 16px; }
   .portal-instruction > p { font-size: 14px; }
   .completion { padding: 28px 0; }
   .completion h2 { font-size: 25px; }

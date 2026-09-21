@@ -1,48 +1,96 @@
 # AI-103 Mastery Tutor
 
-A website that teaches AI-103 (Developing AI Apps and Agents on Azure), built from a 265-file study corpus and a 45-section teaching constitution — see [`CLAUDE.md`](./CLAUDE.md) for the full operating rules.
+A project-led website for AI-103 (Developing AI Apps and Agents on Azure), built from a 265-file study corpus and the teaching constitution in [`CLAUDE.md`](./CLAUDE.md).
 
-## AI-free replacement design
+## Learning Studio
 
-The [replacement design package](design/README.md) contains a reusable execution
-prompt, a project-led/AuDHD-focused product design, the recovered Learning Studio
-findings, and a standalone interactive prototype. Open
-`design\prototype\index.html` directly to try it without setup or runtime AI.
+The app carries forward the previous sessions' six continuing builds, 65 authored
+concepts, guided Azure fieldwork, local configuration rehearsals, targeted repair,
+and source library. Teaching, checking, repair, and review work without an API key
+or runtime AI. Azure fieldwork is optional and may require an approved subscription
+and incur charges; local rehearsal is not evidence of a real Azure run.
 
-This is a design and proving slice, not a completed replacement course. It keeps
-the existing app and learner progress unchanged. The sections below describe the
-current app, including its optional AI chat.
+The [replacement design package](design/README.md) records the accepted
+project-led/AuDHD-focused direction and its standalone prototype. The production
+app now includes the Learning Studio, but it is **not a verified complete
+replacement course**: mapping 265 sources to lessons is not an objective-level
+content audit, live-lab validation, or evidence of learner mastery. Remaining
+release gates are explicit in [the product constitution](PRODUCT_CONSTITUTION.md).
 
 ## Structure
 
 - **`corpus/`** — 265 raw source files (Microsoft Learn training pages, "AI-103 Episode" transcripts, a Study Cram transcript), verbatim. The primary source of truth.
-- **`content/`** — hand-authored v1 study material (flashcards, MCQ/scenario items, discrimination tables) derived from `corpus/`. See `app/src/data/content.ts` and `app/src/data/topics.ts`.
+- **`app/src/data/curriculum/`** — authored teaching, recall, scenario checks, configuration rehearsals, source mappings, and portal guides. `app/src/data/projects.ts` groups them into continuing builds.
 - **`app/`** — the site itself: Vite + React + TypeScript, Tailwind + shadcn/ui, [Bklit](https://bklit.com) charts, [Motion](https://motion.dev), and [React Bits](https://reactbits.dev)-style effects.
 - **`CLAUDE.md`** — the full AI-103 Mastery Tutor constitution, plus pointers for anyone (human or Claude Code session) continuing work on this repo.
 
 ## Running it
 
-```bash
-cd app
-npm install
+Use **Node.js 22.12 or newer**. Install dependencies with that supported runtime
+as well as running the app with it; older Node versions can omit required native
+build packages.
+
+```powershell
+Set-Location app
+npm ci
 npm run dev
 ```
 
 `npm run dev` / `npm run build` first sync `corpus/` and `CLAUDE.md` into `app/public/` and build a search manifest (`npm run content`) — see `app/scripts/`.
 
-The static core (flashcards, quizzes, discrimination drills, progress dashboard) works with no setup. For live AI tutoring — open-ended Q&A, diagnosis of wrong answers, novel exam scenarios — add your own Anthropic API key in the app's Settings page; it's stored only in your browser and calls go straight to Anthropic.
+No account or API key is needed for the learning flow. The optional, separately
+opened AI chat remains available in Settings; it is not used to grade the core
+activities or substitute for missing course content.
 
-## Progress logging and scheduled review
+## Stop, resume, and keep your evidence
 
-Practice self-ratings, Practice MCQ **Continue**, and Exam answers log the item, topic, correctness, timestamp, and milliseconds from item display to the committed answer. Practice MCQ timing includes time spent reading feedback before Continue. Settings shows the retained answer count; only the latest 500 entries are kept in localStorage and progress exports.
+Lesson steps, fieldwork checkpoints, notes, repair drafts, and the selected build
+are saved locally. Prerequisite work does not silently switch the selected build.
+**Done for now** returns to Today, whose next action opens the actual saved
+surface: lesson, fieldwork, repair, recall practice, or exam rehearsal.
 
-A wrong Practice or Exam answer schedules retrieval one day later, then three days after a second miss, then seven days after each subsequent miss. A correct retrieval removes the topic from the queue. Lesson completion and tutor-requested reviews start one day later with no miss counted; repeated review requests leave an existing schedule unchanged. Only due topics receive priority, but future queued topics can still appear in normal Practice rotation.
+Recall and exam rounds retain their question order, position, unfinished
+explanation, revealed feedback, selected answers, and completion receipt across
+navigation, reload, and export/import. Answer evidence and completion counts are
+idempotent. Starting a different targeted recall round asks you to resume or
+deliberately replace the unfinished round; it does not discard it silently.
 
-Older local progress and imported exports migrate automatically: missing answer logs start empty, and legacy topic-ID queues become immediately due with a miss streak of one. The existing Settings export, import, and reset controls cover both fields. These changes do not redesign the existing mastery ladder.
+**I don't know** is an unscored response, not a wrong-answer log or a mastery
+penalty. Definite answers retain provenance: self-rated recall, scenario
+selection, or an untaught diagnostic. Related feedback in the same round is
+marked as assistance. Self-ratings do not establish retrieval, and one scenario
+does not establish application or mastery. Existing higher-level evidence is
+preserved; a same-question success does not clear an unresolved repair flag.
+
+Settings retains the latest 500 definite answer records. Review timing measures
+elapsed time from first presentation to commitment, including any interruption;
+it is not a speed grade. Study lesson-check timing measures the current visit.
+
+A wrong taught answer schedules review after one, three, then seven days for
+successive misses. An independent correct scenario can remove a **due** review.
+Self-rating, uncertainty, and coached success cannot erase a needed review.
+After support or repair, an already-due review moves to the next day without
+adding a miss; a later deadline stays unchanged. Practice only selects taught
+topics; exam rehearsal explicitly allows prior-knowledge diagnosis without
+mastery penalties for untaught material.
+
+Older progress imports gain the new notebook/session fields without losing topic
+evidence. Malformed saves are retained rather than overwritten, with a visible
+warning. When storage is blocked or full, work remains in the current tab and
+Settings can export a backup. Export/import/reset cover both rounds and the
+notebook.
 
 ## Checking curriculum coverage
 
-With supported **Node.js 22.12+**, run from `app/`:
+From `app/`, the local structural check validates sources, prerequisites,
+questions, and configuration slots without contacting an external service:
+
+```powershell
+npm run content
+npm run check:curriculum
+```
+
+For the separate live, topic-count comparison with the official outline:
 
 ```powershell
 npm run check:coverage
@@ -52,7 +100,11 @@ The command runs `npm run content` to refresh the generated corpus manifest, the
 
 Each topic has one primary official domain. **UNCOVERED** means zero topics; **THIN** means its unrounded topic share is below the official minimum weight; **NOT FLAGGED** means neither. This is a topic-count maintenance heuristic, not proof of complete objective coverage or learner mastery. Contributing app clusters and topic IDs make the counts auditable; raw corpus size is a separate measure.
 
-Flagged domains include a link to an existing lesson's tutor and to Settings for API-key setup. The tutor can search the full corpus, but the corpus may still lack a requested objective. Links default to `http://localhost:5173/`. For another dev-server port or a deployed app, pass its base URL without a query or fragment:
+The legacy coverage report includes optional tutor/Settings links for flagged
+domains. These are not a remedy for missing authored content: review and fill
+the objective-level teaching gaps separately. Links default to
+`http://localhost:5173/`. For another dev-server port or a deployed app, pass its
+base URL without a query or fragment:
 
 ```powershell
 npm run check:coverage -- --app-url http://127.0.0.1:5183/
@@ -60,10 +112,13 @@ npm run check:coverage -- --app-url http://127.0.0.1:5183/
 
 When topics or the official outline change, review `app/scripts/coverage-map.mjs` against the live domain headings and the actual topic content. Update explicit primary assignments so every topic appears exactly once; do not store weights in the mapping. New/unmapped topics, unknown domains, duplicate assignments, and broken manifest references stop the report rather than silently changing its denominator.
 
-Native Node regression tests for progress, scheduling, and coverage, also from `app/`:
+Native Node regressions cover progress migration, saved rounds, exact resume,
+evidence, review scheduling, and structural coverage. Also from `app/`:
 
 ```powershell
 npm test
+npm run lint
+npm run build
 ```
 
 ## Deploying

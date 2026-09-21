@@ -31,7 +31,7 @@ export default function Study({ portalOnly = false }: { portalOnly?: boolean }) 
 
 function StudySession({ unit, portalOnly }: { unit: CourseUnit; portalOnly: boolean }) {
   const learner = useLearnerState()
-  const { state, saveStudyProgress, setTopicState, pauseStudy, addToRetrievalQueue, endSession } = learner
+  const { state, saveStudyProgress, setTopicState, pauseStudy, addToRetrievalQueue, endSession, activateStudy } = learner
   const { prefs } = useUIPrefs()
   const navigate = useNavigate()
   const progress = state.study.units[unit.id] ?? emptyStudyUnit()
@@ -46,12 +46,13 @@ function StudySession({ unit, portalOnly }: { unit: CourseUnit; portalOnly: bool
 
   useEffect(() => {
     saveStudyProgress(unit.id, portalOnly ? { stage: 'lab' } : {})
+    activateStudy(unit.id, portalOnly ? 'fieldwork' : 'lesson')
     if (!portalOnly && mastery === 'not-encountered') {
       setTopicState(unit.id, 'introduced', 'Opened a corpus-grounded teaching unit; no mastery inferred.')
     }
     // Opening a route records its location once, not on every note edit.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [unit.id, portalOnly, saveStudyProgress, setTopicState])
+  }, [unit.id, portalOnly, saveStudyProgress, setTopicState, activateStudy])
 
   useEffect(() => {
     document.getElementById('lesson-step-title')?.focus({ preventScroll: true })
@@ -101,7 +102,7 @@ function StudySession({ unit, portalOnly }: { unit: CourseUnit; portalOnly: bool
     } else if (progress.checkAnswerId !== 'unsure' && !correct) {
       setTopicState(unit.id, 'needs-repair', 'A taught decision boundary needs another pass; the lesson included corrective feedback.')
     }
-    addToRetrievalQueue(unit.id, !correct && progress.checkAnswerId !== 'unsure' ? 'miss' : 'review')
+    addToRetrievalQueue(unit.id, !correct && progress.checkAnswerId !== 'unsure' ? 'miss' : 'support')
     endSession()
   }
 
@@ -165,7 +166,7 @@ function StudySession({ unit, portalOnly }: { unit: CourseUnit; portalOnly: bool
                 <p>{unit.transfer}</p>
                 <div className="portal-actions">
                   <button type="button" className="primary-button" onClick={stop}>Done for now <Pause size={16} aria-hidden /></button>
-                  {nextAction && <Link className="text-link" to={coachingHref(nextAction)} onClick={() => learner.setActiveProject(nextAction.projectId)}>{nextAction.kind === 'repair' ? 'Untangle the decision first' : 'Continue the build'}<ArrowRight size={15} aria-hidden /></Link>}
+                  {nextAction && <Link className="text-link" to={coachingHref(nextAction)} onClick={() => { if (nextAction.kind === 'learn' || nextAction.kind === 'fieldwork') learner.setActiveProject(nextAction.projectId) }}>{nextAction.kind === 'repair' ? 'Untangle the decision first' : 'Continue the build'}<ArrowRight size={15} aria-hidden /></Link>}
                 </div>
               </section>
             )}
@@ -226,6 +227,8 @@ function RecallStep({ unit, progress, onChange, onFinish }: {
       timestamp: new Date().toISOString(),
       msToAnswer,
       selectedOptionId: id,
+      evidenceKind: 'scenario',
+      assisted: progress.checkAssisted,
     })
   }
 

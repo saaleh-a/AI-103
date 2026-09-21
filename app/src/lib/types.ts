@@ -84,6 +84,8 @@ export interface SessionLogEntry {
   timestamp: string
   msToAnswer: number
   selectedOptionId?: string
+  evidenceKind?: 'self-report' | 'scenario' | 'diagnostic'
+  assisted?: boolean
 }
 
 export interface RetrievalQueueItem {
@@ -107,6 +109,34 @@ export interface LearnerState {
 }
 
 export type StudyStage = 'learn' | 'lab' | 'recall' | 'complete'
+
+export type ReviewMode = 'practice' | 'exam'
+export type StudyActivity = 'lesson' | 'fieldwork' | 'repair' | ReviewMode
+
+export interface ReviewItem {
+  kind: 'flashcard' | 'mcq'
+  topicId: string
+  id: string
+}
+
+export interface ReviewResponse {
+  reflection: string
+  revealed: boolean
+  uncertain: boolean
+  presentedAt?: string
+  selectedOptionId?: string
+  outcome?: 'correct' | 'incorrect' | 'unsure'
+  committedAt?: string
+}
+
+export interface ReviewSessionProgress {
+  id: string
+  requestedTopicId?: string
+  items: ReviewItem[]
+  responses: ReviewResponse[]
+  index: number
+  completedAt?: string
+}
 
 export interface StudyUnitProgress {
   stage: StudyStage
@@ -137,6 +167,9 @@ export interface StudyState {
   version: 1
   units: Record<string, StudyUnitProgress>
   activeUnitId?: string
+  activeActivity?: StudyActivity
+  practice?: ReviewSessionProgress
+  exam?: ReviewSessionProgress
   pausedAt?: string
   sessionMinutes: 5 | 15 | 25
   activeProjectId?: string

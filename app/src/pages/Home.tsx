@@ -41,9 +41,9 @@ export default function Home() {
           {unit && action ? <div className="coach-next">
             <h2>{unit.title}</h2>
             <p>{action.reason}</p>
-            <div className="lesson-metadata mt-4"><span><Clock size={15} aria-hidden />{action.kind === 'fieldwork' ? `About ${unit.lab.azure.minutes} min in Azure` : minutes === 5 ? 'One small teaching step' : `About ${unit.minutes} min for the concept`}</span></div>
+            <div className="lesson-metadata mt-4"><span><Clock size={15} aria-hidden />{action.activity === 'practice' || action.activity === 'exam' ? 'Continue your saved round' : action.kind === 'fieldwork' || action.activity === 'fieldwork' ? `About ${unit.lab.azure.minutes} min in Azure` : action.kind === 'retrieve' ? 'One short retrieval round' : minutes === 5 ? 'One small teaching step' : `About ${unit.minutes} min for the concept`}</span></div>
             <div className="home-start mt-4">
-              <Link className="primary-button" to={coachingHref(action)} onClick={() => setActiveProject(action.projectId)}><Play size={15} weight="fill" aria-hidden />{ACTION_LABELS[action.kind]}<ArrowRight size={16} aria-hidden /></Link>
+              <Link className="primary-button" to={coachingHref(action)} onClick={() => { if (action.kind === 'learn' || action.kind === 'fieldwork') setActiveProject(action.projectId) }}><Play size={15} weight="fill" aria-hidden />{ACTION_LABELS[action.kind]}<ArrowRight size={16} aria-hidden /></Link>
               <Link className="text-link" to={`/build/${project.id}`}>See the build</Link>
             </div>
             {action.kind === 'fieldwork' && <button className="text-link mt-2" type="button" onClick={() => setSessionMinutes(15)}>Not using Azure today - choose a short learning task</button>}

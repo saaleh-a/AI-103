@@ -6,7 +6,8 @@ import { isRetrievalDue, nextRetrievalDeadline, scheduleRetrieval, selectNextTop
 import { appendLogEntry } from '@/lib/session-log'
 import { writeJSON } from '@/lib/storage'
 import { updateStudyUnit } from '@/lib/study-state'
-import type { LearnerState, MasteryState, RetrievalQueueItem, SessionLogEntry, StudyUnitProgress, StudyState, ProjectWorkspace } from '@/lib/types'
+import { advanceReview, answerReview, saveReviewDraft, startReview, type ReviewAnswer, type ReviewDraft, type ReviewPosition } from '@/lib/review-session'
+import type { LearnerState, MasteryState, RetrievalQueueItem, ReviewItem, ReviewMode, SessionLogEntry, StudyActivity, StudyUnitProgress, StudyState, ProjectWorkspace } from '@/lib/types'
 
 const STORAGE_KEY = 'ai103-learner-state'
 
@@ -38,6 +39,12 @@ export interface LearnerStateApi {
   storageStatus: 'saved' | 'unavailable' | 'invalid'
   setActiveProject: (id: string) => void
   saveWorkspace: (patch: Partial<ProjectWorkspace>) => void
+  activateStudy: (unitId: string, activity: StudyActivity) => void
+  startReviewSession: (mode: ReviewMode, items: readonly ReviewItem[], topicId?: string, replaceExisting?: boolean) => void
+  resumeReviewSession: (mode: ReviewMode) => void
+  saveReviewResponse: (mode: ReviewMode, position: ReviewPosition, patch: Partial<ReviewDraft>) => void
+  commitReviewAnswer: (mode: ReviewMode, position: ReviewPosition, answer: ReviewAnswer) => void
+  advanceReviewSession: (mode: ReviewMode, position: ReviewPosition) => void
 }
 
 export function LearnerStateProvider({ children }: { children: ReactNode }) {
@@ -54,6 +61,7 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<LearnerState>(initial.state)
   const [storageStatus, setStorageStatus] = useState(initial.status)
   const [preserveInvalidSave, setPreserveInvalidSave] = useState(initial.status === 'invalid')
+  const [now, setNow] = useState(() => Date.now())
 
   useEffect(() => {
     if (preserveInvalidSave) return
@@ -77,14 +85,51 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const setActiveProject = useCallback((id: string) => {
-    setState((prev) => ({ ...prev, study: { ...prev.study, activeProjectId: id, activeUnitId: undefined, pausedAt: undefined } }))
+    setState((prev) => prev.study.activeProjectId === id ? prev : ({
+      ...prev, study: { ...prev.study, activeProjectId: id, activeUnitId: undefined, activeActivity: undefined, pausedAt: undefined },
+    }))
+  }, [])
+
+  const activateStudy = useCallback((unitId: string, activity: StudyActivity) => {
+    setState((prev) => ({
+      ...prev,
+      study: { ...prev.study, activeUnitId: unitId, activeActivity: activity, pausedAt: undefined },
+    }))
+  }, [])
+
+  const startReviewSession = useCallback((mode: ReviewMode, items: readonly ReviewItem[], topicId?: string, replaceExisting = false) => {
+    const id = crypto.randomUUID()
+    const startedAt = Date.now()
+    setState((prev) => prev.study[mode] && !replaceExisting ? prev : startReview(prev, mode, items, id, topicId, startedAt))
+  }, [])
+
+  const resumeReviewSession = useCallback((mode: ReviewMode) => {
+    setState((prev) => {
+      const session = prev.study[mode]
+      if (!session) return prev
+      return { ...prev, study: { ...prev.study, activeActivity: mode, activeUnitId: session.items[session.index]?.topicId, pausedAt: undefined } }
+    })
+  }, [])
+
+  const saveReviewResponse = useCallback((mode: ReviewMode, position: ReviewPosition, patch: Partial<ReviewDraft>) => {
+    setState((prev) => saveReviewDraft(prev, mode, position, patch))
+  }, [])
+
+  const commitReviewAnswer = useCallback((mode: ReviewMode, position: ReviewPosition, answer: ReviewAnswer) => {
+    const answeredAt = Date.now()
+    setNow(answeredAt)
+    setState((prev) => answerReview(prev, mode, position, answer, answeredAt))
+  }, [])
+
+  const advanceReviewSession = useCallback((mode: ReviewMode, position: ReviewPosition) => {
+    const advancedAt = Date.now()
+    setState((prev) => advanceReview(prev, mode, position, advancedAt))
   }, [])
 
   const saveWorkspace = useCallback((patch: Partial<ProjectWorkspace>) => {
     setState((prev) => ({ ...prev, study: { ...prev.study, workspace: { ...prev.study.workspace, ...patch } } }))
   }, [])
 
-  const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
     const refresh = () => setNow(Date.now())
     const deadline = nextRetrievalDeadline(state.retrievalQueue, now)
@@ -209,6 +254,12 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     storageStatus,
     setActiveProject,
     saveWorkspace,
+    activateStudy,
+    startReviewSession,
+    resumeReviewSession,
+    saveReviewResponse,
+    commitReviewAnswer,
+    advanceReviewSession,
   }
 
   return <LearnerStateContext.Provider value={value}>{children}</LearnerStateContext.Provider>

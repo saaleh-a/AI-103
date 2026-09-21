@@ -7,13 +7,13 @@ import { useLearnerState } from '@/lib/learner-state'
 export function BuildContext({ unitId }: { unitId: string }) {
   const { state } = useLearnerState()
   const preferred = BUILD_PROJECTS.find((item) => item.id === state.study.activeProjectId)
-  const project = preferred?.milestones.some((item) => item.unitIds.includes(unitId)) ? preferred : projectForUnit(unitId)
+  const project = preferred ?? projectForUnit(unitId)
   if (!project) return null
   const milestone = project.milestones.find((item) => item.unitIds.includes(unitId))
   return (
     <div className="build-context">
-      <Link to={`/build/${project.id}`}>{preferred && preferred.id !== project.id ? 'Connected build' : 'Your build'}: {project.title}<ArrowUpRight size={14} aria-hidden /></Link>
-      <p>{milestone?.purpose}</p>
+      <Link to={`/build/${project.id}`}>Your build: {project.title}<ArrowUpRight size={14} aria-hidden /></Link>
+      <p>{milestone?.purpose ?? 'Your selected build stays in place while you work through this concept. Return to it when you are ready.'}</p>
     </div>
   )
 }

@@ -27,8 +27,10 @@ export default function Build() {
   if (!project) return <div className="empty-state"><h1 className="page-heading">That build is not in this workspace.</h1><Link className="text-link" to="/build">Open your current build <ArrowRight size={16} aria-hidden /></Link></div>
   const ids = projectUnitIds(project)
   const notes = ids.flatMap((id) => (state.study.units[id]?.portalNotes ?? []).map((note, index) => ({ id, index, note })).filter((item) => item.note.trim()))
-  const action = chooseCoachingAction(COURSE_UNITS, BUILD_PROJECTS, { ...state, study: { ...state.study, activeProjectId: project.id, activeUnitId: undefined } })
   const selected = (state.study.activeProjectId ?? BUILD_PROJECTS[0].id) === project.id
+  const action = chooseCoachingAction(COURSE_UNITS, BUILD_PROJECTS, {
+    ...state, study: { ...state.study, activeProjectId: project.id, ...(!selected ? { activeUnitId: undefined, activeActivity: undefined } : {}) },
+  })
 
   return (
     <div className="studio-page">
@@ -43,7 +45,7 @@ export default function Build() {
           <div className="build-outcome"><h2>The thing you are aiming to make</h2><p>{project.outcome}</p></div>
           <div className="portal-actions">
             {!selected ? <button className="primary-button" type="button" onClick={() => { setActiveProject(project.id); navigate('/') }}>Make this my current build <ArrowRight size={16} aria-hidden /></button>
-              : action && <Link className="primary-button" to={coachingHref(action)}>Take the next useful step <ArrowRight size={16} aria-hidden /></Link>}
+              : action && <Link className="primary-button" to={coachingHref(action)} onClick={() => { if (action.kind === 'learn' || action.kind === 'fieldwork') setActiveProject(action.projectId) }}>Take the next useful step <ArrowRight size={16} aria-hidden /></Link>}
           </div>
           <p className="field-note mt-4">Prerequisites are taught before dependent work. A build can be explored without claiming its Azure resources have been deployed.</p>
         </section>

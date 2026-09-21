@@ -29,7 +29,7 @@ export default function Settings() {
     try {
       const valid = learner.importState(await file.text())
       setImportError(!valid)
-      setImportMessage(valid ? 'Progress imported, including saved lesson positions and Azure field notes.' : 'This is not a valid progress export. Nothing was replaced. Choose a learner-state JSON file, not the corpus ZIP.')
+      setImportMessage(valid ? 'Progress imported, including saved study rounds, lesson positions, and Azure field notes.' : 'This is not a valid progress export. Nothing was replaced. Choose a learner-state JSON file, not the corpus ZIP.')
     } catch (error) {
       console.warn('[settings] The selected progress file could not be read.', error)
       setImportError(true)
@@ -59,8 +59,8 @@ export default function Settings() {
       </section>
       <section className="settings-section" aria-labelledby="backup-title">
         <h2 id="backup-title">Keep your place, anywhere</h2>
-        <p className="page-description">Your export includes topic evidence, the review schedule, lesson positions, configuration drafts, portal checkpoints, and your field notes. It does not include API keys.</p>
-        <p className="field-note mt-2">{learner.state.sessionLog.length} answers retained (latest 500). Older progress exports migrate without discarding their topic evidence.</p>
+        <p className="page-description">Your export includes topic evidence, the review schedule, unfinished recall and exam rounds, lesson positions, configuration drafts, portal checkpoints, and your field notes. It does not include API keys.</p>
+        <p className="field-note mt-2">{learner.state.sessionLog.length} definite answers retained (latest 500), with self-rating and diagnostic evidence labelled separately. Uncertainty is not recorded as a wrong answer. Older exports keep their existing evidence.</p>
         <div className="portal-actions">
           <button className="secondary-button" type="button" onClick={download}><DownloadSimple size={17} aria-hidden />Export progress</button>
           <button className="secondary-button" type="button" disabled={importing} onClick={() => fileInput.current?.click()}><UploadSimple size={17} aria-hidden />{importing ? 'Reading backup...' : 'Import progress'}</button>
@@ -68,7 +68,7 @@ export default function Settings() {
         </div>
         {importMessage && <p className={`mt-4 text-sm leading-7 ${importError ? 'text-destructive' : 'text-primary'}`} role={importError ? 'alert' : 'status'}>{importMessage}</p>}
         <button className="quiet-button mt-5 text-destructive" type="button" onClick={() => {
-          if (window.confirm('Reset all topic progress, lesson positions, portal checkpoints, and notes on this device? Export a backup first if you want to keep them.')) learner.resetState()
+          if (window.confirm('Reset all topic progress, saved study rounds, lesson positions, portal checkpoints, and notes on this device? Export a backup first if you want to keep them.')) learner.resetState()
         }}>Reset this device's progress</button>
       </section>
       <section className="settings-section" aria-labelledby="tutor-title">
