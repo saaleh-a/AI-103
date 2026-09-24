@@ -91,6 +91,7 @@ Not covered by this source. (SRC-186 L218–239)
 - [[guardrails-and-content-filters]] — the episode connects responsible AI thinking to guardrails later in the course. (SRC-183 L832–838)
 - [[model-and-app-evaluation]] — reliability and fairness both require evaluation or testing activities. (SRC-186 L223; SRC-186 L226)
 - [[solution-engineering-transfer]] — the principles become customer-facing risk and governance discussion points. (SRC-186 L218–237)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-260-what-is-ai|2 What is AI-]] · [[src-96-foundry-tools|3 Foundry Tools]] · [[src-155-microsoft-foundry|4 Microsoft Foundry]] · [[src-51-developer-tools-sdks|5 Developer Tools and SDKs]] · [[src-78-exercise-prepare-ai-development-project|7 Exercise - Prepare for an AI development project]] · [[src-162-module-assessment-plan-prepare-develop-ai-solutions-azure|8 Module assessment]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]] · [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1|episode 1]]
 
 ## Open questions
 - The source does not identify specific Azure services for implementing guardrails, safety evaluation, content filtering, or traceability. (SRC-186 L220–239)

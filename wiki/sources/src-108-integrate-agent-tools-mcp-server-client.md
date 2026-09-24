@@ -111,6 +111,7 @@ Not covered by this source.
 - [[function-calling]] — local MCP tools become function-like wrappers for the agent.
 - [[custom-tool-options]] — MCP appears as a custom tool approach.
 - [[agent-tools]] — the final result is an agent toolset.
+- *Module units:* [[src-119-introduction-integrate-mcp-tools-azure-ai-agents|1 Introduction]] · [[src-233-understand-mcp-tool-discovery|2 Understand MCP Tool Discovery]] · [[src-240-azure-ai-agents-mcp-servers|4 Use Azure AI agents with MCP servers]] · [[src-60-exercise-connect-mcp-tools-azure-ai-agents|5 Exercise - Connect MCP Tools to Azure AI Agents]] · [[src-158-module-assessment-integrate-mcp-tools-azure-ai-agents|6 Module Assessment]] · [[src-193-summary-integrate-mcp-tools-azure-ai-agents|7 Summary]] · [[src-109-integrate-mcp-tools-azure-ai-agents-episode-9|episode 9]]
 
 ## Open questions
 

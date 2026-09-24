@@ -97,6 +97,7 @@ Not covered by this source.
 - [[speech-capable-models]] — the unit directly names speech-capable model use cases. (SRC-17 L218–221)
 - [[speech-to-text]] — transcription is one branch of the decision. (SRC-17 L218–219)
 - [[text-to-speech]] — synthesis is the other branch of the decision. (SRC-17 L218–220)
+- *Module units:* [[src-121-introduction-develop-speech-capable-generative-ai-application|1 Introduction]] · [[src-221-synthesize-speech|3 Synthesize speech]] · [[src-225-transcribe-speech|3 Transcribe speech]] · [[src-83-exercise-speech-capable-generative-ai-models|4 Exercise - Use speech-capable generative AI models]] · [[src-175-module-assessment-develop-speech-capable-generative-ai-application|5 Module assessment]] · [[src-207-summary-develop-speech-capable-generative-ai-application|6 Summary]] · [[src-44-develop-speech-capable-generative-ai-application-episode-17|episode 17]]
 
 ## Open questions
 

@@ -129,6 +129,7 @@ The episode reviews the assessment prompts at the end rather than displaying a f
 - [[embeddings-and-vector-search]] — retrieval mechanism described for vector stores.
 - [[keyless-authentication]] — episode uses DefaultAzureCredential in the client setup.
 - [[retrieval-options-compared]] — synthesis target for web versus file grounding.
+- *Module units:* [[src-123-introduction-develop-generative-ai-apps-that-tools|1 Introduction]] · [[src-259-what-are-tools|2 What are tools-]] · [[src-254-code-interpreter-tool|3 Use the code_interpreter tool]] · [[src-257-web-search-tool|4 Use the web_search tool]] · [[src-255-file-search-tool|5 Use the file_search tool]] · [[src-256-function-tool|6 Use the function tool]] · [[src-63-exercise-create-generative-ai-chat-app-that-uses-tools|7 Exercise - Create a generative AI chat app that uses tools]] · [[src-163-module-assessment-develop-generative-ai-apps-that-tools|8 Module assessment]] · [[src-198-summary-develop-generative-ai-apps-that-tools|9 Summary]]
 
 ## Open questions
 

@@ -102,6 +102,7 @@ The episode asks which node invokes an AI agent and answers that it is an agent 
 - [[responses-api]] — the episode uses `responses.create` for workflow invocation (SRC-15 L900–916).
 - [[human-in-the-loop-approval]] — the demo escalates billing and low-confidence cases to humans or more detail (SRC-15 L640–655; SRC-15 L690–699).
 - [[power-fx]] — the demo uses workflow conditions and variables, though the transcript does not name Power Fx in the cited demo lines (SRC-15 L615–685).
+- *Module units:* [[src-118-introduction-build-agent-driven-workflows-microsoft-foundry|1 Introduction]] · [[src-238-understand-workflows|2 Understand workflows]] · [[src-105-identify-workflow-patterns|3 Identify workflow patterns]] · [[src-36-create-workflows-microsoft-foundry|4 Create workflows in Microsoft Foundry]] · [[src-3-add-agents-workflow|5 Add agents to a workflow]] · [[src-11-apply-power-fx-workflows|6 Apply Power Fx in workflows]] · [[src-151-maintain-workflows-microsoft-foundry|7 Maintain workflows in Microsoft Foundry]] · [[src-247-workflows-code|8 Use Workflows in Code]] · [[src-66-exercise-create-agent-driven-workflow|9 Exercise - Create an agent-driven workflow]] · [[src-171-module-assessment-build-agent-driven-workflows-microsoft-foundry|10 Module assessment]] · [[src-219-summary-build-agent-driven-workflows-microsoft-foundry|11 Summary]]
 
 ## Open questions
 - The episode does not provide the full source files or complete formatted code listing (SRC-15 L840–977).

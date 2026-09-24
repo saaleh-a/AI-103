@@ -95,6 +95,7 @@ Not covered by this source.
 - [[azure-content-understanding]] — the service introduced by this unit. (SRC-137 L10)
 - [[content-understanding-analyzers]] — the module goal includes prebuilt and custom analyzers. (SRC-137 L12)
 - [[extraction-options-compared]] — Content Understanding is presented as structured extraction from unstructured content. (SRC-137 L10–11)
+- *Module units:* [[src-264-what-is-content-understanding|2 What is Content Understanding-]] · [[src-8-analyze-images-content-understanding|3 Analyze images with Content Understanding]] · [[src-55-exercise-analyze-images-content-understanding|4 Exercise - Analyze images with Content Understanding]] · [[src-169-module-assessment-analyze-images-content-understanding|5 Module assessment]] · [[src-216-summary-analyze-images-content-understanding|6 Summary]] · [[src-9-analyze-images-content-understanding-episode-24|episode 24]] · [[src-7-analyze-documents-content-understanding-episode-25|episode 25]]
 
 ## Open questions
 

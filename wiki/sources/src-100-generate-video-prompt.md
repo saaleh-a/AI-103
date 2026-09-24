@@ -99,6 +99,7 @@ Not covered by this source.
 - [[model-playgrounds]] — the Video playground is used to test generation. (SRC-100 L216–228)
 - [[prompt-engineering]] — the source teaches video prompt anatomy and iteration. (SRC-100 L230–270)
 - [[guardrails-and-content-filters]] — video prompts are subject to moderation. (SRC-100 L224–226)
+- *Module units:* [[src-128-introduction-generate-videos-microsoft-foundry|1 Introduction]] · [[src-38-deploy-video-generating-model|2 Deploy a video generating model]] · [[src-101-generate-video-python|4 Generate video in Python]] · [[src-75-exercise-generate-video-sora-2-microsoft-foundry|5 Exercise - Generate video with Sora 2 in Microsoft Foundry]]
 
 ## Open questions
 

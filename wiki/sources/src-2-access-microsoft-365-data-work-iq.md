@@ -115,6 +115,7 @@ Not covered by this source.
 - [[microsoft-365-agent-integration]] — Work IQ provides Microsoft 365 data context for agents. (SRC-2 L216–227)
 - [[mcp-tool-integration]] — AI assistants discover and call Work IQ MCP tools. (SRC-2 L232–239; SRC-2 L290–294)
 - [[microsoft-entra-id]] — tenant administrator consent is required for the Work IQ application. (SRC-2 L266–271)
+- *Module units:* [[src-125-introduction-integrate-agent-microsoft-365|1 Introduction]] · [[src-232-understand-foundry-agent-publishing-options|2 Understand Foundry agent publishing options]] · [[src-185-publish-agent-foundry-portal-teams|3 Publish an agent from Foundry portal to Teams]] · [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios|4 Advanced - Use Microsoft 365 Agents Toolkit for complex integration scenarios - Training - Microsoft]] · [[src-222-test-iterate-integrated-agent|6 Test and iterate your integrated agent]] · [[src-79-exercise-publish-foundry-agent-teams|7 Exercise - Publish a Foundry agent to Teams]] · [[src-149-knowledge-check-integrate-agent-microsoft-365|8 Knowledge check]] · [[src-209-summary-integrate-agent-microsoft-365|9 Summary]] · [[src-111-integrate-agent-microsoft-365-episode-11|episode 11]]
 
 ## Open questions
 

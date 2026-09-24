@@ -126,6 +126,7 @@ The transcription demo uses a local WAV file, a token provider with default Azur
 - [[openai-sdk]] — the episode uses Azure OpenAI client patterns and audio APIs. (SRC-44 L236–253; SRC-44 L316–337)
 - [[azure-openai]] — the code demo is described as using Azure OpenAI with default credential. (SRC-44 L233–246; SRC-44 L316–328)
 - [[speech-and-language-options-compared]] — this source supplies a compact transcription-vs-synthesis decision boundary. (SRC-44 L363–389)
+- *Module units:* [[src-121-introduction-develop-speech-capable-generative-ai-application|1 Introduction]] · [[src-17-choose-speech-capable-model|2 Choose a speech-capable model]] · [[src-221-synthesize-speech|3 Synthesize speech]] · [[src-225-transcribe-speech|3 Transcribe speech]] · [[src-83-exercise-speech-capable-generative-ai-models|4 Exercise - Use speech-capable generative AI models]] · [[src-175-module-assessment-develop-speech-capable-generative-ai-application|5 Module assessment]] · [[src-207-summary-develop-speech-capable-generative-ai-application|6 Summary]]
 
 ## Open questions
 

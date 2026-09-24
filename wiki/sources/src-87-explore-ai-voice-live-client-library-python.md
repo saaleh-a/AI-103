@@ -102,6 +102,7 @@ Not covered by this source.
 - [[microsoft-entra-id]] — Microsoft Entra ID token authentication is supported. (SRC-87 L220–224)
 - [[conversation-state]] — server events support responsive conversational behavior. (SRC-87 L216)
 - [[voices-and-audio-formats]] — the client streams microphone audio as part of the speech-to-speech path. (SRC-87 L216)
+- *Module units:* [[src-132-introduction-develop-azure-speech-voice-live-agent-microsoft-foundry|1 Introduction]] · [[src-88-explore-azure-voice-live-api|2 Explore the Azure Voice Live API]] · [[src-31-create-voice-live-agent|3 Create a Voice Live agent]] · [[src-68-exercise-develop-voice-live-agent|4 Exercise - Develop a Voice Live Agent]] · [[src-159-module-assessment-develop-azure-speech-voice-live-agent-microsoft|5 Module Assessment]] · [[src-208-summary-develop-azure-speech-voice-live-agent-microsoft-foundry|6 Summary]] · [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode|episode 20]]
 
 ## Open questions
 

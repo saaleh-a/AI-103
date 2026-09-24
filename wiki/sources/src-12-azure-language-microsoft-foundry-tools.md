@@ -121,6 +121,7 @@ Not covered by this source.
 - [[named-entity-recognition]] — one of the three named core tasks. (SRC-12 L217–219)
 - [[pii-detection-and-redaction]] — one of the three named core tasks. (SRC-12 L217–220)
 - [[keyless-authentication]] — the source contrasts key authentication with Microsoft Entra ID authentication. (SRC-12 L225; SRC-12 L235)
+- *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-40-detect-language|3 Detect language]] · [[src-93-extract-entities|6 Extract entities]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions
 

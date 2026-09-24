@@ -117,6 +117,7 @@ Not covered by this source.
 - [[text-to-speech]] — assessed as a core capability. (SRC-144 L211–214)
 - [[voices-and-audio-formats]] — voice selection is tested as prompt content. (SRC-144 L226–229)
 - [[speech-and-language-options-compared]] — distractors contrast speech tasks with language-analysis tasks. (SRC-144 L211–214)
+- *Module units:* [[src-140-introduction-develop-speech-agent-azure-speech-mcp-server|1 Introduction]] · [[src-236-understand-azure-speech-mcp-server|2 Understand the Azure Speech MCP server]] · [[src-25-connect-speech-mcp-server-agent|3 Connect and use the Speech MCP server with an agent]] · [[src-82-exercise-azure-speech-agent|4 Exercise - Use Azure Speech in an agent]] · [[src-204-summary-develop-speech-agent-azure-speech-mcp-server|6 Summary]] · [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19|episode 19]]
 
 ## Open questions
 

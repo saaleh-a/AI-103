@@ -112,6 +112,7 @@ Not covered by this source.
 - [[responses-api]] — adjacent implementation content uses Responses API for image prompts. (SRC-46 L215–217)
 - [[chat-completions-api]] — adjacent implementation content gives Chat Completions for unsupported Responses API cases. (SRC-46 L220–223)
 - [[decision-boundaries]] — the assessment uses close distractors around model type and image-input format. (SRC-173 L209–222)
+- *Module units:* [[src-131-introduction-develop-vision-enabled-generative-ai-application|1 Introduction]] · [[src-248-vision-capable-model-microsoft-foundry-portal|2 Use a vision-capable model in the Microsoft Foundry portal]] · [[src-46-develop-vision-based-chat-app|3 Develop a vision-based chat app]] · [[src-71-exercise-develop-vision-enabled-chat-app|4 Exercise - Develop a vision-enabled chat app]] · [[src-210-summary-develop-vision-enabled-generative-ai-application|6 Summary]] · [[src-47-develop-vision-enabled-generative-ai-application-episode-22|episode 22]]
 
 ## Open questions
 

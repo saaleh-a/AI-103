@@ -98,6 +98,7 @@ Not covered by this source.
 - [[retrieval-augmented-generation]] — related grounding pattern, though this source focuses on web retrieval.
 - [[file-search-tool]] — closest module neighbour for private document grounding.
 - [[retrieval-options-compared]] — synthesis for choosing retrieval and grounding approaches.
+- *Module units:* [[src-123-introduction-develop-generative-ai-apps-that-tools|1 Introduction]] · [[src-259-what-are-tools|2 What are tools-]] · [[src-254-code-interpreter-tool|3 Use the code_interpreter tool]] · [[src-255-file-search-tool|5 Use the file_search tool]] · [[src-256-function-tool|6 Use the function tool]] · [[src-63-exercise-create-generative-ai-chat-app-that-uses-tools|7 Exercise - Create a generative AI chat app that uses tools]] · [[src-163-module-assessment-develop-generative-ai-apps-that-tools|8 Module assessment]] · [[src-198-summary-develop-generative-ai-apps-that-tools|9 Summary]] · [[src-50-develop-generative-ai-apps-that-tools-episode-4|episode 4]]
 
 ## Open questions
 

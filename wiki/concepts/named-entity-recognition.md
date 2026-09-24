@@ -11,7 +11,7 @@ source_ids: [SRC-10, SRC-12, SRC-40, SRC-93, SRC-94, SRC-168]
 objectives: [T01]
 objective_gaps: []
 tags: []
-aliases: ["NER", "entity recognition", "extract entities", "recognize_entities"]
+aliases: ["NER", "entity recognition", "recognize_entities"]
 ---
 
 # Named entity recognition

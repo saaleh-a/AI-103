@@ -1,5 +1,5 @@
 ---
-title: "Foundry Tools"
+title: "Foundry Tools — Plan and prepare to develop AI solutions on Azure"
 type: source
 status: active
 confidence: high
@@ -19,7 +19,7 @@ raw_file: "96-Foundry Tools - Training - Microsoft Learn.md"
 url: "https://learn.microsoft.com/en-gb/training/modules/prepare-azure-ai-development/3-azure-ai-services"
 ingest_depth: full
 ---
-# Foundry Tools
+# Foundry Tools — Plan and prepare to develop AI solutions on Azure
 *learn-unit · Plan and prepare to develop AI solutions on Azure · unit 3 of 9 · SRC-96*
 
 ## Source metadata
@@ -85,6 +85,7 @@ Not covered by this source. (SRC-96 L218–236)
 - [[azure-document-intelligence]] — Document Intelligence is one Foundry Tool. (SRC-96 L229–230)
 - [[azure-content-understanding]] — Content Understanding is one Foundry Tool. (SRC-96 L231–232)
 - [[naming-and-currency]] — the source preserves the Azure AI Services and Cognitive Services naming drift. (SRC-96 L235–236)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-260-what-is-ai|2 What is AI-]] · [[src-155-microsoft-foundry|4 Microsoft Foundry]] · [[src-51-developer-tools-sdks|5 Developer Tools and SDKs]] · [[src-186-responsible-ai|6 Responsible AI]] · [[src-78-exercise-prepare-ai-development-project|7 Exercise - Prepare for an AI development project]] · [[src-162-module-assessment-plan-prepare-develop-ai-solutions-azure|8 Module assessment]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]] · [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1|episode 1]]
 
 ## Open questions
 - The unit does not list pricing, regional availability, or detailed API shapes for each tool. (SRC-96 L223–236)

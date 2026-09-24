@@ -93,6 +93,7 @@ Not covered by this source.
 - [[microsoft-foundry]] — this source names Foundry as the platform used with language models. (SRC-136 L212)
 - [[azure-openai]] — this source names an OpenAI image model used for graphical generation. (SRC-136 L213)
 - [[model-selection]] — this source implies that the model must support graphical output. (SRC-136 L212–213)
+- *Module units:* [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions
 

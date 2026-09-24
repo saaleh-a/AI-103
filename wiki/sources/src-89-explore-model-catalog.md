@@ -102,6 +102,7 @@ Not covered by this source.
 - [[retrieval-augmented-generation]] — embedding models are presented as useful for RAG scenarios. (SRC-89 L233)
 - [[image-generation]] — image generation is a specialized model category. (SRC-89 L234)
 - [[speech-capable-models]] — speech-to-text and text-to-speech models are catalog categories. (SRC-89 L237–238)
+- *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 

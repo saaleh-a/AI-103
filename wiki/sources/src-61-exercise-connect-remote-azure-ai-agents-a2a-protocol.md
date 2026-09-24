@@ -87,6 +87,7 @@ Not covered by this source.
 
 - [[a2a-agent-implementation]] — the exercise is the hands-on application of connecting to remote A2A agents. (SRC-61 L213)
 - [[agent2agent-protocol]] — the exercise uses the A2A protocol. (SRC-61 L213)
+- *Module units:* [[src-134-introduction-discover-azure-ai-agents-a2a|1 Introduction]] · [[src-37-define-a2a-agent|2 Define an A2A Agent]] · [[src-107-implement-agent-executor|3 Implement an Agent Executor]] · [[src-103-host-a2a-server|4 Host an A2A Server]] · [[src-26-connect-a2a-agent|5 Connect to your A2A Agent]] · [[src-157-module-assessment-discover-azure-ai-agents-a2a|7 Module Assessment]] · [[src-205-summary-discover-azure-ai-agents-a2a|8 Summary]]
 
 ## Open questions
 

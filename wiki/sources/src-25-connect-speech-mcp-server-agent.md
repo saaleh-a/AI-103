@@ -122,6 +122,7 @@ Not covered by this source.
 - [[azure-speech-mcp-server]] — the tool connection exposes speech recognition and synthesis. (SRC-25 L230–239)
 - [[human-in-the-loop-approval]] — first tool use prompts for approval, with an option to always approve the server's tools. (SRC-25 L247)
 - [[voices-and-audio-formats]] — prompt options include neural voice names and language settings. (SRC-25 L254–258)
+- *Module units:* [[src-140-introduction-develop-speech-agent-azure-speech-mcp-server|1 Introduction]] · [[src-236-understand-azure-speech-mcp-server|2 Understand the Azure Speech MCP server]] · [[src-82-exercise-azure-speech-agent|4 Exercise - Use Azure Speech in an agent]] · [[src-144-knowledge-check-develop-speech-agent-azure-speech-mcp-server|5 Knowledge check]] · [[src-204-summary-develop-speech-agent-azure-speech-mcp-server|6 Summary]] · [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19|episode 19]]
 
 ## Open questions
 

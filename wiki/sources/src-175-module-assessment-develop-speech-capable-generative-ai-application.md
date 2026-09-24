@@ -96,6 +96,7 @@ Not covered by this source.
 - [[speech-to-text]] — the first question tests the transcription direction. (SRC-175 L212–215)
 - [[text-to-speech]] — the second question tests the synthesis direction. (SRC-175 L217–220)
 - [[model-selection]] — the question format asks learners to choose the correct model. (SRC-175 L212–220)
+- *Module units:* [[src-121-introduction-develop-speech-capable-generative-ai-application|1 Introduction]] · [[src-17-choose-speech-capable-model|2 Choose a speech-capable model]] · [[src-221-synthesize-speech|3 Synthesize speech]] · [[src-225-transcribe-speech|3 Transcribe speech]] · [[src-83-exercise-speech-capable-generative-ai-models|4 Exercise - Use speech-capable generative AI models]] · [[src-207-summary-develop-speech-capable-generative-ai-application|6 Summary]] · [[src-44-develop-speech-capable-generative-ai-application-episode-17|episode 17]]
 
 ## Open questions
 

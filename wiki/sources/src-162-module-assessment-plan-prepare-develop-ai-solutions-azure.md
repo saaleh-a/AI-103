@@ -82,6 +82,7 @@ Not covered by this source's teaching content. (SRC-162 L214–230)
 - [[foundry-tools]] — the assessment tests prebuilt services for common AI tasks. (SRC-162 L219–222)
 - [[foundry-toolkit-for-vs-code]] — the assessment tests the VS Code extension. (SRC-162 L223–227)
 - [[naming-and-currency]] — the extension wording differs from the episode's spoken Microsoft AI Toolkit answer. (SRC-162 L223–227; SRC-183 L928–934)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-260-what-is-ai|2 What is AI-]] · [[src-96-foundry-tools|3 Foundry Tools]] · [[src-155-microsoft-foundry|4 Microsoft Foundry]] · [[src-51-developer-tools-sdks|5 Developer Tools and SDKs]] · [[src-186-responsible-ai|6 Responsible AI]] · [[src-78-exercise-prepare-ai-development-project|7 Exercise - Prepare for an AI development project]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]] · [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1|episode 1]]
 
 ## Open questions
 - The checked answers and explanations are not visible in the captured assessment. (SRC-162 L214–230)

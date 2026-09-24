@@ -96,6 +96,7 @@ Not covered by this source.
 - [[mcp-tool-integration]] — the integration pattern this module teaches.
 - [[ai-agents]] — target runtime that uses the exposed tools.
 - [[speech-and-language-options-compared]] — useful later for distinguishing language tools from other language and speech options.
+- *Module units:* [[src-235-understand-azure-language-mcp-server|2 Understand the Azure Language MCP server]] · [[src-24-connect-language-mcp-server-agent|3 Connect and use the Language MCP server with an agent]] · [[src-70-exercise-develop-text-analysis-agent|4 Exercise - Develop a text analysis agent]] · [[src-150-knowledge-check-develop-text-analysis-agent-azure-language-mcp|5 Knowledge check]] · [[src-200-summary-develop-text-analysis-agent-azure-language-mcp-server|6 Summary]] · [[src-45-develop-text-analysis-agent-azure-language-mcp-server-episode|episode 16]]
 
 ## Open questions
 

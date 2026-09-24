@@ -1,5 +1,5 @@
 ---
-title: "Create a Content Understanding analyzer"
+title: "Create a Content Understanding analyzer — Create an Azure Content Understanding client application"
 type: source
 status: active
 confidence: high
@@ -21,7 +21,7 @@ url: "https://learn.microsoft.com/en-gb/training/modules/analyze-content-ai-api/
 ingest_depth: full
 ---
 
-# Create a Content Understanding analyzer
+# Create a Content Understanding analyzer — Create an Azure Content Understanding client application
 
 *learn-unit · Create an Azure Content Understanding client application · unit 3 of 7 · SRC-29*
 
@@ -110,6 +110,7 @@ Not covered by this source.
 - [[content-understanding-client-apps]] — analyzer creation is an API/SDK operation in the client-application module. (SRC-29 L224–230)
 - [[azure-content-understanding]] — the analyzer belongs to the Content Understanding service area. (SRC-29 L216)
 - [[extraction-options-compared]] — the extract-vs-generate field distinction is important for comparing extraction approaches. (SRC-29 L218–221)
+- *Module units:* [[src-138-introduction-create-azure-content-understanding-client-application|1 Introduction]] · [[src-184-prepare-ai-content-understanding-api|2 Prepare to use the AI Content Understanding API]] · [[src-6-analyze-content|4 Analyze content]] · [[src-67-exercise-develop-content-understanding-client-application|5 Exercise - Develop a Content Understanding client application]] · [[src-160-module-assessment-create-azure-content-understanding-client-application|6 Module assessment]] · [[src-201-summary-create-azure-content-understanding-client-application|7 Summary]]
 
 ## Open questions
 

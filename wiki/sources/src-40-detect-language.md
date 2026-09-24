@@ -115,6 +115,7 @@ Not covered by this source.
 - [[azure-language]] — the API capability belongs to Azure Language. (SRC-40 L217)
 - [[speech-and-language-options-compared]] — this source helps distinguish text-language detection from speech and translation capabilities. (SRC-40 L217–218)
 - [[decision-boundaries]] — mixed-language and unknown outputs are exam-relevant boundaries. (SRC-40 L228–229)
+- *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-93-extract-entities|6 Extract entities]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions
 

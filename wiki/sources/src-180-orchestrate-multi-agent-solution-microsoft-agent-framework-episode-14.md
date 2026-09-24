@@ -129,6 +129,7 @@ The demo uses a Foundry project endpoint and model deployment name, imports Agen
 - [[group-chat-orchestration]] — reviewed as a managed shared conversation. (SRC-180 L187–240)
 - [[magentic-orchestration]] — reviewed as sophisticated orchestrator-led problem solving. (SRC-180 L241–323)
 - [[orchestration-patterns-compared]] — the episode compares available patterns. (SRC-180 L64–323)
+- *Module units:* [[src-133-introduction-orchestrate-multi-agent-solution-microsoft-agent-framework|1 Introduction]] · [[src-237-understand-microsoft-agent-framework|2 Understand the Microsoft Agent Framework]] · [[src-231-understand-agent-orchestration|3 Understand Agent Orchestration]] · [[src-241-concurrent-orchestration|4 Use Concurrent Orchestration]] · [[src-245-sequential-orchestration|5 Use Sequential Orchestration]] · [[src-242-group-chat-orchestration|6 Use Group Chat Orchestration]] · [[src-243-handoff-orchestration|7 Use Handoff Orchestration]] · [[src-244-magentic-orchestration|8 Use Magentic Orchestration]] · [[src-69-exercise-develop-multi-agent-solution|9 Exercise - Develop a multi-agent solution]] · [[src-143-knowledge-check-orchestrate-multi-agent-solution-microsoft-agent-framework|10 Knowledge check]] · [[src-199-summary-orchestrate-multi-agent-solution-microsoft-agent-framework|11 Summary]]
 
 ## Open questions
 

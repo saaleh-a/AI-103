@@ -79,6 +79,7 @@ Not covered by this source.
 - [[foundry-workflows]] — this source covers maintaining workflow definitions (SRC-151 L220–233).
 - [[observability-and-tracing]] — visual canvas tracing and execution-path understanding are maintenance aids, though the source does not discuss telemetry (SRC-151 L222).
 - [[development-tools-and-approaches]] — YAML and visual canvas are alternative authoring/maintenance surfaces (SRC-151 L222).
+- *Module units:* [[src-118-introduction-build-agent-driven-workflows-microsoft-foundry|1 Introduction]] · [[src-238-understand-workflows|2 Understand workflows]] · [[src-105-identify-workflow-patterns|3 Identify workflow patterns]] · [[src-36-create-workflows-microsoft-foundry|4 Create workflows in Microsoft Foundry]] · [[src-3-add-agents-workflow|5 Add agents to a workflow]] · [[src-11-apply-power-fx-workflows|6 Apply Power Fx in workflows]] · [[src-247-workflows-code|8 Use Workflows in Code]] · [[src-66-exercise-create-agent-driven-workflow|9 Exercise - Create an agent-driven workflow]] · [[src-171-module-assessment-build-agent-driven-workflows-microsoft-foundry|10 Module assessment]] · [[src-219-summary-build-agent-driven-workflows-microsoft-foundry|11 Summary]] · [[src-15-build-agent-driven-workflows-microsoft-foundry-episode-12|episode 12]]
 
 ## Open questions
 - The unit does not specify the YAML schema, diff format, or source-control workflow (SRC-151 L222–224).

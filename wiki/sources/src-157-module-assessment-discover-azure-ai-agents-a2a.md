@@ -105,6 +105,7 @@ Not covered by this source.
 - [[a2a-agent-implementation]] — the assessment checks implementation components: server, executor, and Agent Card. (SRC-157 L213–226)
 - [[agent2agent-protocol]] — all three questions concern components in an A2A solution. (SRC-157 L213–226)
 - [[decision-boundaries]] — the assessment uses distractors that separate routing, execution, metadata, storage, and GUI concerns. (SRC-157 L213–226)
+- *Module units:* [[src-134-introduction-discover-azure-ai-agents-a2a|1 Introduction]] · [[src-37-define-a2a-agent|2 Define an A2A Agent]] · [[src-107-implement-agent-executor|3 Implement an Agent Executor]] · [[src-103-host-a2a-server|4 Host an A2A Server]] · [[src-26-connect-a2a-agent|5 Connect to your A2A Agent]] · [[src-61-exercise-connect-remote-azure-ai-agents-a2a-protocol|6 Exercise - Connect to remote Azure AI Agents with the A2A protocol]] · [[src-205-summary-discover-azure-ai-agents-a2a|8 Summary]]
 
 ## Open questions
 

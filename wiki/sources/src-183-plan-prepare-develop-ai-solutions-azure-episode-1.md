@@ -114,6 +114,7 @@ The episode states that REST APIs can interact with models broadly but can be cl
 - [[endpoints-and-sdk-choice]] — the episode distinguishes REST, OpenAI SDK, Foundry SDK, and tool SDKs. (SRC-183 L455–513)
 - [[responsible-ai-principles]] — the episode lists the six principles and says they will be reinforced across the course. (SRC-183 L514–539)
 - [[naming-and-currency]] — the episode contains portal UI and toolkit naming drift. (SRC-183 L327–334; SRC-183 L397–408; SRC-183 L928–934)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-260-what-is-ai|2 What is AI-]] · [[src-96-foundry-tools|3 Foundry Tools]] · [[src-155-microsoft-foundry|4 Microsoft Foundry]] · [[src-51-developer-tools-sdks|5 Developer Tools and SDKs]] · [[src-186-responsible-ai|6 Responsible AI]] · [[src-78-exercise-prepare-ai-development-project|7 Exercise - Prepare for an AI development project]] · [[src-162-module-assessment-plan-prepare-develop-ai-solutions-azure|8 Module assessment]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]]
 
 ## Open questions
 - The episode previews regional deployments, throughput allocation, fine-tuning, guardrails, evaluations, tools, and knowledge, but leaves detailed treatment to later sessions. (SRC-183 L621–651; SRC-183 L810–838; SRC-183 L866–876)

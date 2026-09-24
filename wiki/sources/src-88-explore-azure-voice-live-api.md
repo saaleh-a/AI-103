@@ -110,6 +110,7 @@ Not covered by this source.
 - [[keyless-authentication]] — Microsoft Entra authentication is recommended and role-scoped. (SRC-88 L230–231)
 - [[voices-and-audio-formats]] — the unit names PCM16, G.711, OpenAI voices, and Azure custom voices. (SRC-88 L222–223)
 - [[conversation-state]] — JSON events manage conversations and conversation items. (SRC-88 L219–220; SRC-88 L248)
+- *Module units:* [[src-132-introduction-develop-azure-speech-voice-live-agent-microsoft-foundry|1 Introduction]] · [[src-31-create-voice-live-agent|3 Create a Voice Live agent]] · [[src-87-explore-ai-voice-live-client-library-python|3 Explore the AI Voice Live Client Library for Python]] · [[src-68-exercise-develop-voice-live-agent|4 Exercise - Develop a Voice Live Agent]] · [[src-159-module-assessment-develop-azure-speech-voice-live-agent-microsoft|5 Module Assessment]] · [[src-208-summary-develop-azure-speech-voice-live-agent-microsoft-foundry|6 Summary]] · [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode|episode 20]]
 
 ## Open questions
 

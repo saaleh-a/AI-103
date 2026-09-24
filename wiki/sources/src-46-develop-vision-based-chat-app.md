@@ -105,6 +105,7 @@ Not covered by this source.
 - [[chat-completions-api]] — the source gives Chat Completions as the fallback for models without Responses API support. (SRC-46 L220–223)
 - [[endpoints-and-sdk-choice]] — the source distinguishes endpoint connection and API choice. (SRC-46 L213; SRC-46 L220–223)
 - [[conversation-state]] — the source says prompts consist of messages, but it does not cover long-running state. (SRC-46 L213)
+- *Module units:* [[src-131-introduction-develop-vision-enabled-generative-ai-application|1 Introduction]] · [[src-248-vision-capable-model-microsoft-foundry-portal|2 Use a vision-capable model in the Microsoft Foundry portal]] · [[src-71-exercise-develop-vision-enabled-chat-app|4 Exercise - Develop a vision-enabled chat app]] · [[src-173-module-assessment-develop-vision-enabled-generative-ai-application|5 Module assessment]] · [[src-210-summary-develop-vision-enabled-generative-ai-application|6 Summary]] · [[src-47-develop-vision-enabled-generative-ai-application-episode-22|episode 22]]
 
 ## Open questions
 

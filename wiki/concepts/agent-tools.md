@@ -11,7 +11,7 @@ source_ids: [SRC-4, SRC-91, SRC-104, SRC-230, SRC-234, SRC-254, SRC-255, SRC-256
 objectives: [P02, P04, P16, G03, G07, G08, G09, I05]
 objective_gaps: []
 tags: []
-aliases: ["tools", "built-in tools", "tool catalog", "tool calling", "service-provided tools", "custom function tools"]
+aliases: ["tools", "built-in tools", "tool catalog", "tool calling", "service-provided tools"]
 ---
 
 # Agent tools

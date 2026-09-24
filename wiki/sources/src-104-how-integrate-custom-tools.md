@@ -86,6 +86,7 @@ Not covered by this source.
 - [[custom-tool-options]] — this source operationalizes the option set.
 - [[agent-tools]] — custom tools are registered in agent definitions.
 - [[tool-options-compared]] — the source adds integration-pattern detail.
+- *Module units:* [[src-122-introduction-integrate-custom-tools-agent|1 Introduction]] · [[src-265-why-custom-tools|2 Why use custom tools]] · [[src-179-options-implementing-custom-tools|3 Options for implementing custom tools]] · [[src-58-exercise-build-agent-custom-tools|5 Exercise - Build an agent with custom tools]] · [[src-167-module-assessment-integrate-custom-tools-agent|6 Module assessment]] · [[src-213-summary-integrate-custom-tools-agent|7 Summary]] · [[src-110-integrate-custom-tools-agent-episode-8|episode 8]]
 
 ## Open questions
 - The code samples are not present in the capture, so exact SDK calls and object names must be learned from another source. (SRC-104 L219–245)

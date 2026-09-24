@@ -103,6 +103,7 @@ Not covered by this source.
 - [[a2a-agent-implementation]] — hosting is the step that makes the card, handler, executor, and task store available to clients. (SRC-103 L18–39)
 - [[agent2agent-protocol]] — the server exposes A2A interaction over HTTP. (SRC-103 L12; SRC-103 L31)
 - [[multi-agent-orchestration]] — the hosted server lets the agent participate in coordinated workflows. (SRC-103 L17; SRC-103 L39)
+- *Module units:* [[src-134-introduction-discover-azure-ai-agents-a2a|1 Introduction]] · [[src-37-define-a2a-agent|2 Define an A2A Agent]] · [[src-107-implement-agent-executor|3 Implement an Agent Executor]] · [[src-26-connect-a2a-agent|5 Connect to your A2A Agent]] · [[src-61-exercise-connect-remote-azure-ai-agents-a2a-protocol|6 Exercise - Connect to remote Azure AI Agents with the A2A protocol]] · [[src-157-module-assessment-discover-azure-ai-agents-a2a|7 Module Assessment]] · [[src-205-summary-discover-azure-ai-agents-a2a|8 Summary]]
 
 ## Open questions
 

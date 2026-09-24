@@ -127,6 +127,7 @@ The event-processing code starts microphone capture after a session update and h
 - [[keyless-authentication]] — authentication includes keyless identity and API key. (SRC-49 L83–93)
 - [[voices-and-audio-formats]] — the episode explains PCM16, G.711, and voice options. (SRC-49 L99–130)
 - [[ai-agents]] — the episode builds a voice-enabled agent. (SRC-49 L18–26)
+- *Module units:* [[src-132-introduction-develop-azure-speech-voice-live-agent-microsoft-foundry|1 Introduction]] · [[src-88-explore-azure-voice-live-api|2 Explore the Azure Voice Live API]] · [[src-31-create-voice-live-agent|3 Create a Voice Live agent]] · [[src-87-explore-ai-voice-live-client-library-python|3 Explore the AI Voice Live Client Library for Python]] · [[src-68-exercise-develop-voice-live-agent|4 Exercise - Develop a Voice Live Agent]] · [[src-159-module-assessment-develop-azure-speech-voice-live-agent-microsoft|5 Module Assessment]] · [[src-208-summary-develop-azure-speech-voice-live-agent-microsoft-foundry|6 Summary]]
 
 ## Open questions
 

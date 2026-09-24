@@ -93,6 +93,7 @@ The capture ends with `Module incomplete`, which appears to be a Learn progress-
 - [[foundry-tools]] — both summarized services are Foundry Tools.
 - [[text-translation]] — text outcome named in the summary.
 - [[speech-translation]] — speech outcome named in the summary.
+- *Module units:* [[src-139-introduction-translate-text-speech-microsoft-foundry-tools|1 Introduction]] · [[src-229-translation-microsoft-foundry|2 Translation in Microsoft Foundry]] · [[src-227-translate-text|3 Translate text]] · [[src-226-translate-speech|4 Translate speech]] · [[src-81-exercise-translate-text-speech|5 Exercise - Translate text and speech]] · [[src-166-module-assessment-translate-text-speech-microsoft-foundry-tools|6 Module assessment]] · [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21|episode 21]]
 
 ## Open questions
 

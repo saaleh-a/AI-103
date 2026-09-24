@@ -94,6 +94,7 @@ The assessment options include `client.chat.completions.create()`, `client.get_r
 - [[endpoints-and-sdk-choice]] — the questions test endpoint and package selection. (SRC-148 L216–225)
 - [[responses-api]] — the third question tests the Responses API method. (SRC-148 L226–230)
 - [[foundry-sdk]] — the second question tests the Foundry SDK package. (SRC-148 L221–225)
+- *Module units:* [[src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry|1 Introduction]] · [[src-90-explore-model-playground|2 Explore with the model playground]] · [[src-18-choose-endpoint-sdk|3 Choose an endpoint and SDK]] · [[src-99-generate-responses-responses-api-foundry-sdk|4 Generate responses with the Responses API in the Foundry SDK]] · [[src-98-generate-responses-chatcompletions-api|5 Generate responses with the ChatCompletions API]] · [[src-62-exercise-create-generative-ai-chat-app|6 Exercise - Create a generative AI chat app]] · [[src-214-summary-develop-generative-ai-chat-app-microsoft-foundry|8 Summary]] · [[src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3|episode 3]]
 
 ## Open questions
 

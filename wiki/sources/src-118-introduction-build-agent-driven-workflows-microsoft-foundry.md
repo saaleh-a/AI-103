@@ -82,6 +82,7 @@ Not covered by this source.
 - [[workflow-patterns]] — later unit objective for routing, loops, and escalation patterns (SRC-118 L221–226).
 - [[power-fx]] — expression language named as part of the module outcome (SRC-118 L226).
 - [[human-in-the-loop-approval]] — escalation and human input are named module outcomes (SRC-118 L220; SRC-118 L225).
+- *Module units:* [[src-238-understand-workflows|2 Understand workflows]] · [[src-105-identify-workflow-patterns|3 Identify workflow patterns]] · [[src-36-create-workflows-microsoft-foundry|4 Create workflows in Microsoft Foundry]] · [[src-3-add-agents-workflow|5 Add agents to a workflow]] · [[src-11-apply-power-fx-workflows|6 Apply Power Fx in workflows]] · [[src-151-maintain-workflows-microsoft-foundry|7 Maintain workflows in Microsoft Foundry]] · [[src-247-workflows-code|8 Use Workflows in Code]] · [[src-66-exercise-create-agent-driven-workflow|9 Exercise - Create an agent-driven workflow]] · [[src-171-module-assessment-build-agent-driven-workflows-microsoft-foundry|10 Module assessment]] · [[src-219-summary-build-agent-driven-workflows-microsoft-foundry|11 Summary]] · [[src-15-build-agent-driven-workflows-microsoft-foundry-episode-12|episode 12]]
 
 ## Open questions
 - The introduction does not define the workflow runtime, permissions model, or deployment model (SRC-118 L218–226).

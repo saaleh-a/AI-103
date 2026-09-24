@@ -97,6 +97,7 @@ Not covered by this source.
 - [[agent-tools]] — broader tool category.
 - [[function-calling]] — nearby custom execution pattern to distinguish from sandboxed Python execution.
 - [[tool-options-compared]] — synthesis page for selecting among tools.
+- *Module units:* [[src-123-introduction-develop-generative-ai-apps-that-tools|1 Introduction]] · [[src-259-what-are-tools|2 What are tools-]] · [[src-257-web-search-tool|4 Use the web_search tool]] · [[src-255-file-search-tool|5 Use the file_search tool]] · [[src-256-function-tool|6 Use the function tool]] · [[src-63-exercise-create-generative-ai-chat-app-that-uses-tools|7 Exercise - Create a generative AI chat app that uses tools]] · [[src-163-module-assessment-develop-generative-ai-apps-that-tools|8 Module assessment]] · [[src-198-summary-develop-generative-ai-apps-that-tools|9 Summary]] · [[src-50-develop-generative-ai-apps-that-tools-episode-4|episode 4]]
 
 ## Open questions
 

@@ -104,6 +104,7 @@ Not covered by this source.
 - [[foundry-sdk]] — the source mentions using the Microsoft Foundry SDK to connect with Microsoft Entra ID and retrieve connection details. (SRC-184 L226)
 - [[microsoft-entra-id]] — named as the authentication mechanism for that SDK-based connection. (SRC-184 L226)
 - [[model-deployment-types]] — deployment setup matters because default model deployments are required before API use. (SRC-184 L233–234)
+- *Module units:* [[src-138-introduction-create-azure-content-understanding-client-application|1 Introduction]] · [[src-29-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-6-analyze-content|4 Analyze content]] · [[src-67-exercise-develop-content-understanding-client-application|5 Exercise - Develop a Content Understanding client application]] · [[src-160-module-assessment-create-azure-content-understanding-client-application|6 Module assessment]] · [[src-201-summary-create-azure-content-understanding-client-application|7 Summary]]
 
 ## Open questions
 

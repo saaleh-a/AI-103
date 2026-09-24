@@ -76,6 +76,7 @@ Not covered by this source.
 - [[knowledge-mining]] — Module outcome summarized here. (SRC-215 L218)
 - [[ai-enrichment-skillsets]] — One of the summarized capabilities. (SRC-215 L218)
 - [[knowledge-store]] — One of the summarized capabilities. (SRC-215 L218)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-261-what-is-azure-ai-search|2 What is Azure AI Search-]] · [[src-92-extract-data-indexer|3 Extract data with an indexer]] · [[src-52-enrich-extracted-data-ai-skills|4 Enrich extracted data with AI skills]] · [[src-187-search-index|5 Search an index]] · [[src-181-persist-extracted-information-knowledge-store|6 Persist extracted information in a knowledge store]] · [[src-64-exercise-create-knowledge-mining-solution|7 Exercise - Create a knowledge mining solution]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26|episode 26]]
 
 ## Open questions
 - The summary does not add new details beyond the module recap. (SRC-215 L218–221)

@@ -11,7 +11,7 @@ source_ids: [SRC-39, SRC-188, SRC-189, SRC-191, SRC-196]
 objectives: [P06, P07, G01]
 objective_gaps: [P09]
 tags: []
-aliases: ["deployment types", "Global Standard", "provisioned throughput", "serverless API", "data zone deployment", "PTU", "batch deployment", "managed compute"]
+aliases: ["deployment types", "Global Standard", "provisioned throughput", "serverless API", "data zone deployment", "batch deployment", "managed compute"]
 ---
 
 # Model deployment types

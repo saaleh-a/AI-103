@@ -106,6 +106,7 @@ Not covered by this source.
 - [[quotas-rate-limits-and-cost]] — cost and throughput benchmarks affect operational fit. (SRC-188 L243–264)
 - [[model-and-app-evaluation]] — benchmark selection precedes deployed evaluation. (SRC-188 L213; SRC-53 L213)
 - [[deployment-options-compared]] — supported endpoints appear in side-by-side comparison. (SRC-188 L269–271)
+- *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 

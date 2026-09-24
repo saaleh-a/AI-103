@@ -11,7 +11,7 @@ source_ids: [SRC-2, SRC-37, SRC-91, SRC-108, SRC-109, SRC-233, SRC-235, SRC-236,
 objectives: [P04, G09]
 objective_gaps: []
 tags: ["protocol"]
-aliases: ["MCP", "Model Context Protocol", "MCP server", "MCP client", "MCP host"]
+aliases: ["MCP", "Model Context Protocol", "MCP host"]
 ---
 
 # Model Context Protocol (MCP)

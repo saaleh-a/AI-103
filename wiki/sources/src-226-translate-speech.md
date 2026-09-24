@@ -125,6 +125,7 @@ The raw code capture includes typos such as `TranslationRecognizr`, `trsnslation
 - [[voices-and-audio-formats]] — language-specific voices are used to optimize pronunciation.
 - [[foundry-tools]] — Azure Speech is presented as a Foundry Tool.
 - [[speech-and-language-options-compared]] — useful for comparing Speech Translation with Translator text APIs.
+- *Module units:* [[src-139-introduction-translate-text-speech-microsoft-foundry-tools|1 Introduction]] · [[src-229-translation-microsoft-foundry|2 Translation in Microsoft Foundry]] · [[src-227-translate-text|3 Translate text]] · [[src-81-exercise-translate-text-speech|5 Exercise - Translate text and speech]] · [[src-166-module-assessment-translate-text-speech-microsoft-foundry-tools|6 Module assessment]] · [[src-218-summary-translate-text-speech-microsoft-foundry-tools|7 Summary]] · [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21|episode 21]]
 
 ## Open questions
 

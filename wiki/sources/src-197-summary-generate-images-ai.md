@@ -91,6 +91,7 @@ Not covered by this source.
 - [[model-playgrounds]] — the Images playground is the portal exploration path. (SRC-197 L213)
 - [[openai-sdk]] — SDKs are named as an application-building route. (SRC-197 L213–214)
 - [[development-tools-and-approaches]] — the summary contrasts portal exploration with API/SDK application development. (SRC-197 L213–214)
+- *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions
 

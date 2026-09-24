@@ -110,6 +110,7 @@ Not covered by this source.
 - [[document-intelligence-custom-models]] — template, neural, composed, and classifier family.
 - [[microsoft-foundry]] — service is described as part of Microsoft Foundry.
 - [[endpoints-and-sdk-choice]] — resource and access-path choice affects endpoint and SDK use.
+- *Module units:* [[src-117-introduction-extract-data-azure-document-intelligence|1 Introduction]] · [[src-251-document-intelligence-studio|3 Use the Document Intelligence Studio]] · [[src-249-prebuilt-models|4 Use prebuilt models]] · [[src-224-train-custom-models|5 Train and use custom models]] · [[src-54-exercise-analyze-documents-document-intelligence|6 Exercise - Analyze documents with Document Intelligence]] · [[src-165-module-assessment-extract-data-azure-document-intelligence|7 Module assessment]] · [[src-220-summary-extract-data-azure-document-intelligence|8 Summary]]
 
 ## Open questions
 

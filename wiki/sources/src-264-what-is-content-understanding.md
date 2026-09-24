@@ -107,6 +107,7 @@ Not covered by this source.
 - [[content-understanding-analyzers]] — analyzer types and configuration are central in this unit. (SRC-264 L23–31)
 - [[azure-ai-content-safety]] — the source says the service integrates Azure AI Content Safety. (SRC-264 L36–37)
 - [[extraction-options-compared]] — the source supplies the extraction-side evidence for multimodal structured output. (SRC-264 L12; SRC-264 L34)
+- *Module units:* [[src-137-introduction-analyze-images-content-understanding|1 Introduction]] · [[src-8-analyze-images-content-understanding|3 Analyze images with Content Understanding]] · [[src-55-exercise-analyze-images-content-understanding|4 Exercise - Analyze images with Content Understanding]] · [[src-169-module-assessment-analyze-images-content-understanding|5 Module assessment]] · [[src-216-summary-analyze-images-content-understanding|6 Summary]] · [[src-9-analyze-images-content-understanding-episode-24|episode 24]] · [[src-7-analyze-documents-content-understanding-episode-25|episode 25]]
 
 ## Open questions
 

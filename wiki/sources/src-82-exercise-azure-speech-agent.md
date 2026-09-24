@@ -96,6 +96,7 @@ Not covered by this source.
 - [[speech-to-text]] — one tested capability. (SRC-82 L212)
 - [[text-to-speech]] — one tested capability. (SRC-82 L212)
 - [[foundry-sdk]] — the lab includes a Python client application that interacts with the agent. (SRC-82 L212)
+- *Module units:* [[src-140-introduction-develop-speech-agent-azure-speech-mcp-server|1 Introduction]] · [[src-236-understand-azure-speech-mcp-server|2 Understand the Azure Speech MCP server]] · [[src-25-connect-speech-mcp-server-agent|3 Connect and use the Speech MCP server with an agent]] · [[src-144-knowledge-check-develop-speech-agent-azure-speech-mcp-server|5 Knowledge check]] · [[src-204-summary-develop-speech-agent-azure-speech-mcp-server|6 Summary]] · [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19|episode 19]]
 
 ## Open questions
 

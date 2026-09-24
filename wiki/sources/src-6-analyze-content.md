@@ -118,6 +118,7 @@ Not covered by this source.
 - [[content-understanding-analyzers]] — the analysis request must specify which analyzer to use. (SRC-6 L216)
 - [[azure-content-understanding]] — the API endpoint being called. (SRC-6 L216)
 - [[extraction-options-compared]] — result shape and OCR layout matter when comparing extraction services. (SRC-6 L238–249)
+- *Module units:* [[src-138-introduction-create-azure-content-understanding-client-application|1 Introduction]] · [[src-184-prepare-ai-content-understanding-api|2 Prepare to use the AI Content Understanding API]] · [[src-29-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-67-exercise-develop-content-understanding-client-application|5 Exercise - Develop a Content Understanding client application]] · [[src-160-module-assessment-create-azure-content-understanding-client-application|6 Module assessment]] · [[src-201-summary-create-azure-content-understanding-client-application|7 Summary]]
 
 ## Open questions
 

@@ -98,6 +98,7 @@ SRC-19 supplies the comparison and combination framework summarized here. (SRC-1
 - [[fine-tuning]] — summarized consistency strategy.
 - [[guardrails-and-content-filters]] — mentioned as safety guardrails in the combined scenario.
 - [[model-and-app-evaluation]] — implicit follow-up for deciding whether optimizations meet needs.
+- *Module units:* [[src-116-introduction-optimize-generative-ai-model-performance-microsoft-foundry|1 Introduction]] · [[src-178-optimize-model-output-prompt-engineering|2 Optimize model output with prompt engineering]] · [[src-102-ground-model-retrieval-augmented-generation|3 Ground your model with Retrieval Augmented Generation]] · [[src-95-fine-tune-model-consistent-behavior|4 Fine-tune a model for consistent behavior]] · [[src-19-compare-combine-optimization-strategies|5 Compare and combine optimization strategies]] · [[src-77-exercise-optimize-generative-ai-model-performance|6 Exercise - Optimize generative AI model performance]] · [[src-161-module-assessment-optimize-generative-ai-model-performance-microsoft-foundry|7 Module assessment]] · [[src-177-optimize-generative-ai-model-performance-microsoft-foundry-episode-5|episode 5]]
 
 ## Open questions
 

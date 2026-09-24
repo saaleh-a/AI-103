@@ -93,6 +93,7 @@ Not covered by this source.
 - [[azure-content-understanding]] — the service introduced by the unit. (SRC-126 L215)
 - [[content-understanding-analyzers]] — custom analyzers are the module's promised hands-on object. (SRC-126 L216)
 - [[extraction-options-compared]] — the problem statement motivates why one extraction service may replace format-specific analysis tools. (SRC-126 L214)
+- *Module units:* [[src-262-what-is-azure-content-understanding|2 What is Azure Content Understanding-]] · [[src-30-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-250-content-understanding-api|4 Use the Content Understanding API]] · [[src-73-exercise-extract-information-multimodal-content|5 Exercise - Extract information from multimodal content]] · [[src-164-module-assessment-create-multimodal-analysis-solution-azure-content-understanding|6 Module assessment]] · [[src-217-summary-create-multimodal-analysis-solution-azure-content-understanding|7 Summary]]
 
 ## Open questions
 

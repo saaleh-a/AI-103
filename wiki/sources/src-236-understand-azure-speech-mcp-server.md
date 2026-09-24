@@ -115,6 +115,7 @@ Not covered by this source.
 - [[text-to-speech]] — one of the two exposed capabilities. (SRC-236 L232–233)
 - [[mcp-tool-integration]] — the source explains runtime tool discovery and autonomous tool selection. (SRC-236 L221; SRC-236 L236–243)
 - [[keyless-authentication]] — useful contrast, because this source says the Speech MCP server connection uses key-based authentication. (SRC-236 L257–258)
+- *Module units:* [[src-140-introduction-develop-speech-agent-azure-speech-mcp-server|1 Introduction]] · [[src-25-connect-speech-mcp-server-agent|3 Connect and use the Speech MCP server with an agent]] · [[src-82-exercise-azure-speech-agent|4 Exercise - Use Azure Speech in an agent]] · [[src-144-knowledge-check-develop-speech-agent-azure-speech-mcp-server|5 Knowledge check]] · [[src-204-summary-develop-speech-agent-azure-speech-mcp-server|6 Summary]] · [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19|episode 19]]
 
 ## Open questions
 

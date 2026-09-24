@@ -11,7 +11,7 @@ source_ids: [SRC-17, SRC-18, SRC-32, SRC-44, SRC-89, SRC-99, SRC-221, SRC-225, S
 objectives: [G01, G06]
 objective_gaps: []
 tags: ["service"]
-aliases: ["Azure OpenAI in Foundry Models", "Azure OpenAI Service", "Azure OpenAI endpoint", "AzureOpenAI client"]
+aliases: ["Azure OpenAI in Foundry Models", "Azure OpenAI Service", "Azure OpenAI endpoint"]
 ---
 
 # Azure OpenAI

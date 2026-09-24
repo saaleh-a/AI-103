@@ -75,6 +75,7 @@ Not covered by this source.
 - [[knowledge-mining]] — Exercise goal is a knowledge-mining solution. (SRC-64 L215)
 - [[azure-ai-search]] — Service used in the exercise. (SRC-64 L215)
 - [[knowledge-store]] — Named output of the exercise. (SRC-64 L215)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-261-what-is-azure-ai-search|2 What is Azure AI Search-]] · [[src-92-extract-data-indexer|3 Extract data with an indexer]] · [[src-52-enrich-extracted-data-ai-skills|4 Enrich extracted data with AI skills]] · [[src-187-search-index|5 Search an index]] · [[src-181-persist-extracted-information-knowledge-store|6 Persist extracted information in a knowledge store]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-215-summary-create-knowledge-mining-solution-azure-ai-search|9 Summary]] · [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26|episode 26]]
 
 ## Open questions
 - The raw source does not include the lab steps after the launch instruction. (SRC-64 L218)

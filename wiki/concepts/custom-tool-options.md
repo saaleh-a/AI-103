@@ -11,7 +11,7 @@ source_ids: [SRC-91, SRC-104, SRC-108, SRC-110, SRC-179, SRC-233, SRC-240, SRC-2
 objectives: [P04, G07, G08, G09]
 objective_gaps: []
 tags: []
-aliases: ["custom tools", "why use custom tools", "OpenAPI tools", "Azure Functions tools", "function tools", "Logic Apps tools", "MCP tools"]
+aliases: ["custom tools", "OpenAPI tools", "Azure Functions tools", "function tools", "Logic Apps tools", "MCP tools"]
 ---
 
 # Custom tool options

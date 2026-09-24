@@ -92,6 +92,7 @@ Not covered by this source.
 - [[image-generation]] — the playground is used to generate images from prompts. (SRC-86 L212–215)
 - [[microsoft-foundry]] — the workflow is inside a Foundry project and portal. (SRC-86 L212–214)
 - [[generation-parameters]] — generated-image resolution is a controllable setting when supported. (SRC-86 L215)
+- *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions
 

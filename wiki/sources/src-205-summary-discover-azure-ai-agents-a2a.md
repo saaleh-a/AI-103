@@ -93,6 +93,7 @@ Not covered by this source.
 - [[agent2agent-protocol]] — the summary identifies A2A as the protocol used to connect Python clients to Azure AI Agents. (SRC-205 L217)
 - [[a2a-agent-implementation]] — the source summarizes the implementation pieces: server, client, Agent Card, executor, and message flow. (SRC-205 L217–218)
 - [[multi-agent-orchestration]] — the summary frames A2A as enabling delegation across distributed agent networks. (SRC-205 L218)
+- *Module units:* [[src-134-introduction-discover-azure-ai-agents-a2a|1 Introduction]] · [[src-37-define-a2a-agent|2 Define an A2A Agent]] · [[src-107-implement-agent-executor|3 Implement an Agent Executor]] · [[src-103-host-a2a-server|4 Host an A2A Server]] · [[src-26-connect-a2a-agent|5 Connect to your A2A Agent]] · [[src-61-exercise-connect-remote-azure-ai-agents-a2a-protocol|6 Exercise - Connect to remote Azure AI Agents with the A2A protocol]] · [[src-157-module-assessment-discover-azure-ai-agents-a2a|7 Module Assessment]]
 
 ## Open questions
 

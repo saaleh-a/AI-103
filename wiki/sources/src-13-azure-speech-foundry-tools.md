@@ -110,6 +110,7 @@ Not covered by this source.
 - [[foundry-tools]] — the speech capabilities are provided by a Foundry resource. (SRC-13 L218)
 - [[foundry-resources-and-projects]] — the source distinguishes project endpoint and resource endpoint. (SRC-13 L228–229)
 - [[endpoints-and-sdk-choice]] — endpoint, key, REST and SDK access are the core setup choices in this unit. (SRC-13 L223–225)
+- *Module units:* [[src-115-introduction-create-speech-enabled-apps-azure-speech-microsoft-foundry|1 Introduction]] · [[src-252-speech-text-api|3 Use the Speech to Text API]] · [[src-253-text-speech-api|4 Use the Text to Speech API]] · [[src-21-configure-audio-format-voices|5 Configure audio format and voices]] · [[src-246-speech-synthesis-markup-language|6 Use Speech Synthesis Markup Language]] · [[src-65-exercise-create-speech-enabled-app|7 Exercise - Create a speech-enabled app]] · [[src-174-module-assessment-create-speech-enabled-apps-azure-speech-microsoft|8 Module assessment]] · [[src-192-summary-create-speech-enabled-apps-azure-speech-microsoft-foundry|9 Summary]] · [[src-35-create-speech-enabled-apps-microsoft-foundry-episode-18|episode 18]]
 
 ## Open questions
 

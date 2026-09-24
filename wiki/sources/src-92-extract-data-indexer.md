@@ -113,6 +113,7 @@ Not covered by this source.
 - [[ai-enrichment-skillsets]] — Skills add and transform fields during indexing. (SRC-92 L237–257)
 - [[azure-ai-search]] — Service context for indexers and indexes. (SRC-92 L218–221)
 - [[knowledge-mining]] — Indexing pipeline is the core ingest step. (SRC-92 L218–271)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-261-what-is-azure-ai-search|2 What is Azure AI Search-]] · [[src-52-enrich-extracted-data-ai-skills|4 Enrich extracted data with AI skills]] · [[src-187-search-index|5 Search an index]] · [[src-181-persist-extracted-information-knowledge-store|6 Persist extracted information in a knowledge store]] · [[src-64-exercise-create-knowledge-mining-solution|7 Exercise - Create a knowledge mining solution]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-215-summary-create-knowledge-mining-solution-azure-ai-search|9 Summary]] · [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26|episode 26]]
 
 ## Open questions
 - The source does not show actual Azure portal or SDK configuration for data sources, indexers, or field mappings. (SRC-92 L218–271)

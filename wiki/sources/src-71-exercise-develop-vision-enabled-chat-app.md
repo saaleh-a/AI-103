@@ -91,6 +91,7 @@ Not covered by this source.
 - [[vision-enabled-chat]] — the exercise target is a vision-enabled chat app. (SRC-71 L209)
 - [[microsoft-foundry]] — the module context is Microsoft Foundry, though this exercise page does not give tool steps. (SRC-131 L212)
 - [[development-tools-and-approaches]] — this source is a lab launch page, not an explanatory implementation unit. (SRC-71 L212)
+- *Module units:* [[src-131-introduction-develop-vision-enabled-generative-ai-application|1 Introduction]] · [[src-248-vision-capable-model-microsoft-foundry-portal|2 Use a vision-capable model in the Microsoft Foundry portal]] · [[src-46-develop-vision-based-chat-app|3 Develop a vision-based chat app]] · [[src-173-module-assessment-develop-vision-enabled-generative-ai-application|5 Module assessment]] · [[src-210-summary-develop-vision-enabled-generative-ai-application|6 Summary]] · [[src-47-develop-vision-enabled-generative-ai-application-episode-22|episode 22]]
 
 ## Open questions
 

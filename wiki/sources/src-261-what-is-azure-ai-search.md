@@ -83,6 +83,7 @@ Not covered by this source.
 - [[embeddings-and-vector-search]] — Vector-based indexes are called out for prompt grounding. (SRC-261 L226)
 - [[knowledge-mining]] — Knowledge mining is the module focus. (SRC-261 L227–228)
 - [[knowledge-store]] — Storage of extracted insights is a core capability. (SRC-261 L222)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-92-extract-data-indexer|3 Extract data with an indexer]] · [[src-52-enrich-extracted-data-ai-skills|4 Enrich extracted data with AI skills]] · [[src-187-search-index|5 Search an index]] · [[src-181-persist-extracted-information-knowledge-store|6 Persist extracted information in a knowledge store]] · [[src-64-exercise-create-knowledge-mining-solution|7 Exercise - Create a knowledge mining solution]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-215-summary-create-knowledge-mining-solution-azure-ai-search|9 Summary]] · [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26|episode 26]]
 
 ## Open questions
 - The source states that vector-based indexes support RAG grounding but does not explain embedding models or vector-query construction. (SRC-261 L226)

@@ -96,6 +96,7 @@ Not covered by this source.
 - [[prompt-injection-and-jailbreaks]] — prompt shields target subversion.
 - [[retrieval-augmented-generation]] — RAG is named as a mitigation.
 - [[responsible-ai-lifecycle]] — mitigation is the third stage.
+- *Module units:* [[src-112-introduction-implement-responsible-generative-ai-solution-microsoft-foundry|1 Introduction]] · [[src-182-plan-responsible-generative-ai-solution|2 Plan a responsible generative AI solution]] · [[src-153-map-potential-harms|3 Map potential harms]] · [[src-154-measure-potential-harms|4 Measure potential harms]] · [[src-152-manage-responsible-generative-ai-solution|6 Manage a responsible generative AI solution]] · [[src-57-exercise-apply-guardrails-prevent-output-harmful-content|7 Exercise - Apply guardrails to prevent the output of harmful content]] · [[src-170-module-assessment-implement-responsible-generative-ai-solution-microsoft-foundry|8 Module assessment]] · [[src-211-summary-implement-responsible-generative-ai-solution-microsoft-foundry|9 Summary]] · [[src-106-implement-responsible-generative-ai-solution-microsoft-foundry-episode-6|episode 6]]
 
 ## Open questions
 

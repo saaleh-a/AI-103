@@ -106,6 +106,7 @@ SRC-177 visually explains the same flow: vectorize input, retrieve similar docum
 - [[responses-api]] — generation API named for grounded answers.
 - [[foundry-sdk]] — project SDK path named by the source.
 - [[foundry-iq]] — related managed knowledge-store option for agents.
+- *Module units:* [[src-116-introduction-optimize-generative-ai-model-performance-microsoft-foundry|1 Introduction]] · [[src-178-optimize-model-output-prompt-engineering|2 Optimize model output with prompt engineering]] · [[src-95-fine-tune-model-consistent-behavior|4 Fine-tune a model for consistent behavior]] · [[src-19-compare-combine-optimization-strategies|5 Compare and combine optimization strategies]] · [[src-77-exercise-optimize-generative-ai-model-performance|6 Exercise - Optimize generative AI model performance]] · [[src-161-module-assessment-optimize-generative-ai-model-performance-microsoft-foundry|7 Module assessment]] · [[src-202-summary-optimize-generative-ai-model-performance-microsoft-foundry|8 Summary]] · [[src-177-optimize-generative-ai-model-performance-microsoft-foundry-episode-5|episode 5]]
 
 ## Open questions
 

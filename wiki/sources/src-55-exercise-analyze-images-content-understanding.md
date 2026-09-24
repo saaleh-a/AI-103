@@ -90,6 +90,7 @@ Not covered by this source.
 - [[azure-content-understanding]] — the service used in the exercise. (SRC-55 L209)
 - [[content-understanding-analyzers]] — the exercise creates a custom image analyzer. (SRC-55 L209)
 - [[content-understanding-client-apps]] — the exercise includes a Python application using the API. (SRC-55 L209)
+- *Module units:* [[src-137-introduction-analyze-images-content-understanding|1 Introduction]] · [[src-264-what-is-content-understanding|2 What is Content Understanding-]] · [[src-8-analyze-images-content-understanding|3 Analyze images with Content Understanding]] · [[src-169-module-assessment-analyze-images-content-understanding|5 Module assessment]] · [[src-216-summary-analyze-images-content-understanding|6 Summary]] · [[src-9-analyze-images-content-understanding-episode-24|episode 24]] · [[src-7-analyze-documents-content-understanding-episode-25|episode 25]]
 
 ## Open questions
 

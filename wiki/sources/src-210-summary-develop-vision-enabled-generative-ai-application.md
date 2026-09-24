@@ -95,6 +95,7 @@ Not covered by this source.
 - [[vision-enabled-chat]] — the summary's main outcome is chat with image-based input. (SRC-210 L213)
 - [[responses-api]] — the source points to OpenAI Responses API guidance for image analysis. (SRC-210 L215–216)
 - [[model-selection]] — image understanding and visual reasoning require an appropriate vision-enabled model. (SRC-210 L214)
+- *Module units:* [[src-131-introduction-develop-vision-enabled-generative-ai-application|1 Introduction]] · [[src-248-vision-capable-model-microsoft-foundry-portal|2 Use a vision-capable model in the Microsoft Foundry portal]] · [[src-46-develop-vision-based-chat-app|3 Develop a vision-based chat app]] · [[src-71-exercise-develop-vision-enabled-chat-app|4 Exercise - Develop a vision-enabled chat app]] · [[src-173-module-assessment-develop-vision-enabled-generative-ai-application|5 Module assessment]] · [[src-47-develop-vision-enabled-generative-ai-application-episode-22|episode 22]]
 
 ## Open questions
 

@@ -88,6 +88,7 @@ Not covered by this source.
 - [[mcp-tool-integration]] — the hands-on outcome is MCP tool integration.
 - [[model-context-protocol]] — the exercise uses MCP.
 - [[agent-tools]] — the exercise concerns registering tools to an agent.
+- *Module units:* [[src-119-introduction-integrate-mcp-tools-azure-ai-agents|1 Introduction]] · [[src-233-understand-mcp-tool-discovery|2 Understand MCP Tool Discovery]] · [[src-108-integrate-agent-tools-mcp-server-client|3 Integrate Agent Tools Using an MCP Server and Client]] · [[src-240-azure-ai-agents-mcp-servers|4 Use Azure AI agents with MCP servers]] · [[src-158-module-assessment-integrate-mcp-tools-azure-ai-agents|6 Module Assessment]] · [[src-193-summary-integrate-mcp-tools-azure-ai-agents|7 Summary]] · [[src-109-integrate-mcp-tools-azure-ai-agents-episode-9|episode 9]]
 
 ## Open questions
 

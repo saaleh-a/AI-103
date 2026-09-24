@@ -93,6 +93,7 @@ Not covered by this source.
 - [[ai-agents]] — framework use for building agents.
 - [[agent-tools]] — custom tools extend agent capabilities.
 - [[function-calling]] — underlying custom-tool interaction pattern.
+- *Module units:* [[src-124-introduction-develop-ai-agent-microsoft-agent-framework|1 Introduction]] · [[src-234-understand-microsoft-agent-framework-ai-agents|2 Understand Microsoft Agent Framework AI agents]] · [[src-34-create-azure-ai-agent-microsoft-agent-framework|3 Create an Azure AI agent with Microsoft Agent Framework]] · [[src-4-add-tools-azure-ai-agent|4 Add tools to Azure AI agent]] · [[src-72-exercise-develop-azure-ai-agent-microsoft-agent-framework-sdk|5 Exercise - Develop an Azure AI agent with the Microsoft Agent Framework SDK - Training - Microsoft L]] · [[src-146-knowledge-check-develop-ai-agent-microsoft-agent-framework|6 Knowledge check]] · [[src-48-develop-ai-agent-microsoft-agent-framework-episode-13|episode 13]]
 
 ## Open questions
 

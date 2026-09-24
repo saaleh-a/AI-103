@@ -111,6 +111,7 @@ Not covered by this source.
 - [[azure-speech]] — Speech to text is an Azure Speech in Foundry Tools capability. (SRC-252 L218)
 - [[voices-and-audio-formats]] — `AudioConfig` is the input-side counterpart to output configuration in synthesis. (SRC-252 L220; SRC-253 L222)
 - [[speech-and-language-options-compared]] — result states and input-source choices support decision boundaries for speech solutions. (SRC-252 L220–230)
+- *Module units:* [[src-115-introduction-create-speech-enabled-apps-azure-speech-microsoft-foundry|1 Introduction]] · [[src-13-azure-speech-foundry-tools|2 Azure Speech in Foundry Tools]] · [[src-253-text-speech-api|4 Use the Text to Speech API]] · [[src-21-configure-audio-format-voices|5 Configure audio format and voices]] · [[src-246-speech-synthesis-markup-language|6 Use Speech Synthesis Markup Language]] · [[src-65-exercise-create-speech-enabled-app|7 Exercise - Create a speech-enabled app]] · [[src-174-module-assessment-create-speech-enabled-apps-azure-speech-microsoft|8 Module assessment]] · [[src-192-summary-create-speech-enabled-apps-azure-speech-microsoft-foundry|9 Summary]] · [[src-35-create-speech-enabled-apps-microsoft-foundry-episode-18|episode 18]]
 
 ## Open questions
 

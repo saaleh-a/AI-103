@@ -98,6 +98,7 @@ Not covered by this source.
 - [[openai-sdk]] — the source uses the OpenAI SDK client path. (SRC-225 L223–224)
 - [[azure-openai]] — the source names the `AzureOpenAI` client. (SRC-225 L223–224)
 - [[speech-and-language-options-compared]] — the source supplies the transcription side of the speech decision boundary. (SRC-225 L216–224)
+- *Module units:* [[src-121-introduction-develop-speech-capable-generative-ai-application|1 Introduction]] · [[src-17-choose-speech-capable-model|2 Choose a speech-capable model]] · [[src-221-synthesize-speech|3 Synthesize speech]] · [[src-83-exercise-speech-capable-generative-ai-models|4 Exercise - Use speech-capable generative AI models]] · [[src-175-module-assessment-develop-speech-capable-generative-ai-application|5 Module assessment]] · [[src-207-summary-develop-speech-capable-generative-ai-application|6 Summary]] · [[src-44-develop-speech-capable-generative-ai-application-episode-17|episode 17]]
 
 ## Open questions
 

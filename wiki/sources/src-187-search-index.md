@@ -90,6 +90,7 @@ Not covered by this source.
 - [[semantic-ranking]] — Related retrieval concept not covered by this source. (SRC-187 L227–241)
 - [[azure-ai-search]] — Service that processes the queries. (SRC-187 L218–228)
 - [[retrieval-options-compared]] — Useful comparison hub for search patterns. (SRC-187 L227–268)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-261-what-is-azure-ai-search|2 What is Azure AI Search-]] · [[src-92-extract-data-indexer|3 Extract data with an indexer]] · [[src-52-enrich-extracted-data-ai-skills|4 Enrich extracted data with AI skills]] · [[src-181-persist-extracted-information-knowledge-store|6 Persist extracted information in a knowledge store]] · [[src-64-exercise-create-knowledge-mining-solution|7 Exercise - Create a knowledge mining solution]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-215-summary-create-knowledge-mining-solution-azure-ai-search|9 Summary]] · [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26|episode 26]]
 
 ## Open questions
 - The source does not capture concrete request examples after the `Copy` markers. (SRC-187 L251–266)

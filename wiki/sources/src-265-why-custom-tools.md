@@ -83,6 +83,7 @@ The source uses broad business examples rather than implementation details; auth
 - [[function-calling]] — callable functions are one way to expose the functionality described here.
 - [[azure-functions]] — several scenarios could be implemented as external event-driven functions.
 - [[tool-options-compared]] — the page supplies use cases for comparing built-in and custom tools.
+- *Module units:* [[src-122-introduction-integrate-custom-tools-agent|1 Introduction]] · [[src-179-options-implementing-custom-tools|3 Options for implementing custom tools]] · [[src-104-how-integrate-custom-tools|4 How to integrate custom tools]] · [[src-58-exercise-build-agent-custom-tools|5 Exercise - Build an agent with custom tools]] · [[src-167-module-assessment-integrate-custom-tools-agent|6 Module assessment]] · [[src-213-summary-integrate-custom-tools-agent|7 Summary]] · [[src-110-integrate-custom-tools-agent-episode-8|episode 8]]
 
 ## Open questions
 - The source does not say how the agent chooses among multiple custom tools with overlapping capabilities. (SRC-265 L222)

@@ -85,6 +85,7 @@ Not covered by this source.
 - [[workflow-patterns]] — predefined patterns can be selected when starting a workflow (SRC-36 L221).
 - [[agent-tools]] — Invoke nodes can call agents that perform AI-driven work (SRC-36 L223).
 - [[power-fx]] — conditions and variables connect to the next unit's expression language (SRC-36 L224–231; SRC-11 L220–233).
+- *Module units:* [[src-118-introduction-build-agent-driven-workflows-microsoft-foundry|1 Introduction]] · [[src-238-understand-workflows|2 Understand workflows]] · [[src-105-identify-workflow-patterns|3 Identify workflow patterns]] · [[src-3-add-agents-workflow|5 Add agents to a workflow]] · [[src-11-apply-power-fx-workflows|6 Apply Power Fx in workflows]] · [[src-151-maintain-workflows-microsoft-foundry|7 Maintain workflows in Microsoft Foundry]] · [[src-247-workflows-code|8 Use Workflows in Code]] · [[src-66-exercise-create-agent-driven-workflow|9 Exercise - Create an agent-driven workflow]] · [[src-171-module-assessment-build-agent-driven-workflows-microsoft-foundry|10 Module assessment]] · [[src-219-summary-build-agent-driven-workflows-microsoft-foundry|11 Summary]] · [[src-15-build-agent-driven-workflows-microsoft-foundry-episode-12|episode 12]]
 
 ## Open questions
 - The unit does not specify how workflow permissions, deployment, or runtime isolation are configured (SRC-36 L220–236).

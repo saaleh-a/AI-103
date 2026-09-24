@@ -113,6 +113,7 @@ The episode does not show application code, but it does show portal/API-facing p
 - [[knowledge-store]] — Persistence of JSON, tables, and images is explained. (SRC-33 L306–344)
 - [[retrieval-augmented-generation]] — Azure AI Search is framed as RAG backbone and demoed for agent grounding. (SRC-33 L11–15; SRC-33 L569–720)
 - [[foundry-agent-service]] — Foundry agent consumes the AI Search-backed knowledge base in the demo. (SRC-33 L693–720)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-261-what-is-azure-ai-search|2 What is Azure AI Search-]] · [[src-92-extract-data-indexer|3 Extract data with an indexer]] · [[src-52-enrich-extracted-data-ai-skills|4 Enrich extracted data with AI skills]] · [[src-187-search-index|5 Search an index]] · [[src-181-persist-extracted-information-knowledge-store|6 Persist extracted information in a knowledge store]] · [[src-64-exercise-create-knowledge-mining-solution|7 Exercise - Create a knowledge mining solution]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-215-summary-create-knowledge-mining-solution-azure-ai-search|9 Summary]]
 
 ## Open questions
 - The episode does not show generated code for creating the indexer, skillset, knowledge store, or agent connection. (SRC-33 L345–720)

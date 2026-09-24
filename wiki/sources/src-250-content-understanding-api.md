@@ -107,6 +107,7 @@ Not covered by this source.
 - [[content-understanding-analyzers]] — the API submits content to existing analyzers. (SRC-250 L219)
 - [[azure-content-understanding]] — the API belongs to the Content Understanding service. (SRC-250 L216)
 - [[microsoft-entra-id]] — Entra ID is named as a programmatic connection option through Microsoft Foundry API. (SRC-250 L218)
+- *Module units:* [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding|1 Introduction]] · [[src-262-what-is-azure-content-understanding|2 What is Azure Content Understanding-]] · [[src-30-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-73-exercise-extract-information-multimodal-content|5 Exercise - Extract information from multimodal content]] · [[src-164-module-assessment-create-multimodal-analysis-solution-azure-content-understanding|6 Module assessment]] · [[src-217-summary-create-multimodal-analysis-solution-azure-content-understanding|7 Summary]]
 
 ## Open questions
 

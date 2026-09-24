@@ -38,6 +38,7 @@ INLINE_CODE = re.compile(r"`[^`\n]*`")
 WIKILINK = re.compile(r"\[\[([^\[\]|#^]+)(?:[#^][^\[\]|]*)?(?:\|[^\[\]]*)?\]\]")
 HEADING = re.compile(r"^(#{1,6})\s+(.*)$")
 FILE_TYPE = {"source": "document", "concept": "concept", "entity": "concept", "synthesis": "document"}
+MODULE_MARK = "- *Module units:*"
 
 
 def node_id(stem: str) -> str:
@@ -96,6 +97,8 @@ def main() -> None:
             if h:
                 section = h.group(2)
                 continue
+            if line.startswith(MODULE_MARK):
+                continue  # generated module navigation (scripts/sync_module_links.py), not an idea link
             for m in WIKILINK.finditer(line):
                 tgt = lookup.get(m.group(1).strip().split("/")[-1].lower())
                 if not tgt or tgt == stem:

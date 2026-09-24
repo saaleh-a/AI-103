@@ -89,6 +89,7 @@ Not covered by this source.
 - [[azure-content-understanding]] — the service used in the exercise. (SRC-73 L213)
 - [[content-understanding-analyzers]] — the exercise follows the module's analyzer-building units. (SRC-73 L212–216)
 - [[content-understanding-client-apps]] — the lab may involve client usage, but this launcher does not provide steps. (SRC-73 L216)
+- *Module units:* [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding|1 Introduction]] · [[src-262-what-is-azure-content-understanding|2 What is Azure Content Understanding-]] · [[src-30-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-250-content-understanding-api|4 Use the Content Understanding API]] · [[src-164-module-assessment-create-multimodal-analysis-solution-azure-content-understanding|6 Module assessment]] · [[src-217-summary-create-multimodal-analysis-solution-azure-content-understanding|7 Summary]]
 
 ## Open questions
 

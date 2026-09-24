@@ -105,6 +105,7 @@ Not covered by this source.
 - [[retrieval-augmented-generation]] — RAG is named as a next step. (SRC-196 L19)
 - [[azure-ai-content-safety]] — content safety is named as a next step. (SRC-196 L20)
 - [[application-insights]] — monitoring production performance is named as a next step. (SRC-196 L22)
+- *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 

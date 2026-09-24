@@ -99,6 +99,7 @@ Not covered by this source.
 - [[document-intelligence-prebuilt-models]] — prebuilt models are one of the module outcomes.
 - [[document-intelligence-custom-models]] — custom models are one of the module outcomes.
 - [[extraction-options-compared]] — useful later for distinguishing Document Intelligence from other extraction options.
+- *Module units:* [[src-263-what-is-azure-document-intelligence|2 What is Azure Document Intelligence-]] · [[src-251-document-intelligence-studio|3 Use the Document Intelligence Studio]] · [[src-249-prebuilt-models|4 Use prebuilt models]] · [[src-224-train-custom-models|5 Train and use custom models]] · [[src-54-exercise-analyze-documents-document-intelligence|6 Exercise - Analyze documents with Document Intelligence]] · [[src-165-module-assessment-extract-data-azure-document-intelligence|7 Module assessment]] · [[src-220-summary-extract-data-azure-document-intelligence|8 Summary]]
 
 ## Open questions
 

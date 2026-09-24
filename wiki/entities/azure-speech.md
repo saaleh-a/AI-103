@@ -11,7 +11,7 @@ source_ids: [SRC-13, SRC-17, SRC-21, SRC-88, SRC-96, SRC-115, SRC-140, SRC-192, 
 objectives: [T05, T06]
 objective_gaps: []
 tags: ["service"]
-aliases: ["Azure Speech in Foundry Tools", "Azure AI Speech", "Speech service", "Speech SDK"]
+aliases: ["Azure AI Speech", "Speech service", "Speech SDK"]
 ---
 
 # Azure Speech

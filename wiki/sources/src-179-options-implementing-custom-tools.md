@@ -85,6 +85,7 @@ The heading says Microsoft Foundry Agent Service while one bullet says Azure AI 
 - [[azure-functions]] — one of the custom-tool implementation options.
 - [[agent-tools]] — these are tool types that extend agent capability.
 - [[tool-options-compared]] — this source provides comparison inputs for custom tool types.
+- *Module units:* [[src-122-introduction-integrate-custom-tools-agent|1 Introduction]] · [[src-265-why-custom-tools|2 Why use custom tools]] · [[src-104-how-integrate-custom-tools|4 How to integrate custom tools]] · [[src-58-exercise-build-agent-custom-tools|5 Exercise - Build an agent with custom tools]] · [[src-167-module-assessment-integrate-custom-tools-agent|6 Module assessment]] · [[src-213-summary-integrate-custom-tools-agent|7 Summary]] · [[src-110-integrate-custom-tools-agent-episode-8|episode 8]]
 
 ## Open questions
 - The source does not describe authentication differences among these tool options. (SRC-179 L219–222)

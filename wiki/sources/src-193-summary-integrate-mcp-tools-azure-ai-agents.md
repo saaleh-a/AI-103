@@ -96,6 +96,7 @@ Not covered by this source.
 - [[foundry-agent-service]] — service named for the integration.
 - [[custom-tool-options]] — MCP is one way to connect external tools.
 - [[decision-boundaries]] — useful for turning this summary into exam choices.
+- *Module units:* [[src-119-introduction-integrate-mcp-tools-azure-ai-agents|1 Introduction]] · [[src-233-understand-mcp-tool-discovery|2 Understand MCP Tool Discovery]] · [[src-108-integrate-agent-tools-mcp-server-client|3 Integrate Agent Tools Using an MCP Server and Client]] · [[src-240-azure-ai-agents-mcp-servers|4 Use Azure AI agents with MCP servers]] · [[src-60-exercise-connect-mcp-tools-azure-ai-agents|5 Exercise - Connect MCP Tools to Azure AI Agents]] · [[src-158-module-assessment-integrate-mcp-tools-azure-ai-agents|6 Module Assessment]] · [[src-109-integrate-mcp-tools-azure-ai-agents-episode-9|episode 9]]
 
 ## Open questions
 

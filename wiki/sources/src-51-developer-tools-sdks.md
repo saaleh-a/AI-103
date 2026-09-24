@@ -87,6 +87,7 @@ Not covered by this source. (SRC-51 L218–238)
 - [[openai-sdk]] — OpenAI SDKs are used through the OpenAI API for compatible chat apps. (SRC-51 L237)
 - [[endpoints-and-sdk-choice]] — the source gives SDK choice by asset type. (SRC-51 L235–238)
 - [[naming-and-currency]] — Foundry Toolkit versus Microsoft AI Toolkit appears as a currency issue across sources. (SRC-51 L221–227; SRC-183 L928–934)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-260-what-is-ai|2 What is AI-]] · [[src-96-foundry-tools|3 Foundry Tools]] · [[src-155-microsoft-foundry|4 Microsoft Foundry]] · [[src-186-responsible-ai|6 Responsible AI]] · [[src-78-exercise-prepare-ai-development-project|7 Exercise - Prepare for an AI development project]] · [[src-162-module-assessment-plan-prepare-develop-ai-solutions-azure|8 Module assessment]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]] · [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1|episode 1]]
 
 ## Open questions
 - The source does not provide package names, code samples, authentication setup, or endpoint formats for these SDKs. (SRC-51 L235–238)

@@ -94,6 +94,7 @@ The capture lists options but does not show validated answers, so the page prese
 - [[code-interpreter-tool]] — appears as a distractor for local custom function calls.
 - [[foundry-toolkit-for-vs-code]] — Visual Studio Code extensions appear as a distractor for custom tools.
 - [[tool-options-compared]] — useful for explaining why the distractors fail.
+- *Module units:* [[src-122-introduction-integrate-custom-tools-agent|1 Introduction]] · [[src-265-why-custom-tools|2 Why use custom tools]] · [[src-179-options-implementing-custom-tools|3 Options for implementing custom tools]] · [[src-104-how-integrate-custom-tools|4 How to integrate custom tools]] · [[src-58-exercise-build-agent-custom-tools|5 Exercise - Build an agent with custom tools]] · [[src-213-summary-integrate-custom-tools-agent|7 Summary]] · [[src-110-integrate-custom-tools-agent-episode-8|episode 8]]
 
 ## Open questions
 - The source does not show the checked answers after submission. (SRC-167 L226–228)

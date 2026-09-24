@@ -102,6 +102,7 @@ Not covered by this source.
 - [[model-context-protocol]] — the source states MCP connects agents to knowledge bases. (SRC-85 L262–263)
 - [[retrieval-augmented-generation]] — Foundry IQ implements RAG-style retrieval capabilities as a managed service. (SRC-85 L219–224)
 - [[agent-tools]] — the source says agents retrieve from the knowledge base like they use any other tool. (SRC-85 L254–255)
+- *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions
 

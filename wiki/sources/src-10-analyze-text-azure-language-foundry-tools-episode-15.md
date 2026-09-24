@@ -170,6 +170,7 @@ The transcript describes code rather than preserving full snippets. (SRC-10 L575
 - [[model-selection]] — the episode gives criteria for choosing focused tools versus LLMs. (SRC-10 L103–176)
 - [[keyless-authentication]] — the demo uses `DefaultAzureCredential` and Azure CLI login. (SRC-10 L579–604; SRC-10 L634–649)
 - [[speech-and-language-options-compared]] — the episode opens the natural language learning path that spans language, speech, and translation. (SRC-10 L15–38)
+- *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-40-detect-language|3 Detect language]] · [[src-93-extract-entities|6 Extract entities]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]]
 
 ## Open questions
 

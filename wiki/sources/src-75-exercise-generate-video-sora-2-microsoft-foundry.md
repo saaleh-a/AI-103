@@ -94,6 +94,7 @@ Not covered by this source.
 - [[sora-2]] — Sora 2 is the model used in the exercise. (SRC-75 L210)
 - [[microsoft-foundry]] — the exercise uses Sora 2 in Foundry. (SRC-75 L210)
 - [[openai-sdk]] — the surrounding module teaches Python/OpenAI SDK application generation. (SRC-75 L210; SRC-101 L212)
+- *Module units:* [[src-128-introduction-generate-videos-microsoft-foundry|1 Introduction]] · [[src-38-deploy-video-generating-model|2 Deploy a video generating model]] · [[src-100-generate-video-prompt|3 Generate video from a prompt]] · [[src-101-generate-video-python|4 Generate video in Python]]
 
 ## Open questions
 

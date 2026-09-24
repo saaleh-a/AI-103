@@ -100,6 +100,7 @@ Not covered by this source.
 - [[content-understanding-analyzers]] — the summary names analyzers and prebuilt analyzers. (SRC-216 L214–216)
 - [[content-understanding-client-apps]] — the summary names the Content Understanding API. (SRC-216 L218)
 - [[extraction-options-compared]] — the summary frames Content Understanding as structured extraction from visual content. (SRC-216 L219)
+- *Module units:* [[src-137-introduction-analyze-images-content-understanding|1 Introduction]] · [[src-264-what-is-content-understanding|2 What is Content Understanding-]] · [[src-8-analyze-images-content-understanding|3 Analyze images with Content Understanding]] · [[src-55-exercise-analyze-images-content-understanding|4 Exercise - Analyze images with Content Understanding]] · [[src-169-module-assessment-analyze-images-content-understanding|5 Module assessment]] · [[src-9-analyze-images-content-understanding-episode-24|episode 24]] · [[src-7-analyze-documents-content-understanding-episode-25|episode 25]]
 
 ## Open questions
 

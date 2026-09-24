@@ -106,6 +106,7 @@ Not covered by this source.
 - [[agent-tools]] — optional custom functions attached to an agent.
 - [[code-interpreter-tool]] — one built-in tool named by the source.
 - [[file-search-tool]] — one built-in tool named by the source.
+- *Module units:* [[src-124-introduction-develop-ai-agent-microsoft-agent-framework|1 Introduction]] · [[src-234-understand-microsoft-agent-framework-ai-agents|2 Understand Microsoft Agent Framework AI agents]] · [[src-4-add-tools-azure-ai-agent|4 Add tools to Azure AI agent]] · [[src-72-exercise-develop-azure-ai-agent-microsoft-agent-framework-sdk|5 Exercise - Develop an Azure AI agent with the Microsoft Agent Framework SDK - Training - Microsoft L]] · [[src-146-knowledge-check-develop-ai-agent-microsoft-agent-framework|6 Knowledge check]] · [[src-195-summary-develop-ai-agent-microsoft-agent-framework|7 Summary]] · [[src-48-develop-ai-agent-microsoft-agent-framework-episode-13|episode 13]]
 
 ## Open questions
 

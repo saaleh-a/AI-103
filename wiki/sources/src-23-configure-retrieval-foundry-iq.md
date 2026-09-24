@@ -100,6 +100,7 @@ Not covered by this source.
 - [[agent-testing-and-evaluation]] — the source requires systematic testing of retrieval behavior. (SRC-23 L234–251)
 - [[observability-and-tracing]] — production monitoring tracks usage and retrieval quality signals. (SRC-23 L264–278)
 - [[retrieval-augmented-generation]] — retrieval instructions determine whether the agent stays grounded in the retrieved context. (SRC-23 L244–251)
+- *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions
 

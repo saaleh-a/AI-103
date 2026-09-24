@@ -11,7 +11,7 @@ source_ids: [SRC-14, SRC-18, SRC-84, SRC-96, SRC-155, SRC-183, SRC-190]
 objectives: [P05, G06]
 objective_gaps: []
 tags: []
-aliases: ["Foundry project", "Foundry resource", "Microsoft Foundry project", "Microsoft Foundry resource", "project endpoint"]
+aliases: ["Foundry project", "Foundry resource", "Microsoft Foundry project", "Microsoft Foundry resource"]
 ---
 
 # Foundry resources and projects

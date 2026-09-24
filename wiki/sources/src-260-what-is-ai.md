@@ -86,6 +86,7 @@ Not covered by this source. (SRC-260 L218–233)
 - [[azure-speech]] — speech recognition and synthesis are a separate capability area. (SRC-260 L227–228)
 - [[vision-enabled-chat]] — computer vision handles visual input and multimodal models can generate visual output. (SRC-260 L229–230)
 - [[extraction-options-compared]] — information extraction combines several modalities and techniques. (SRC-260 L231–232)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-96-foundry-tools|3 Foundry Tools]] · [[src-155-microsoft-foundry|4 Microsoft Foundry]] · [[src-51-developer-tools-sdks|5 Developer Tools and SDKs]] · [[src-186-responsible-ai|6 Responsible AI]] · [[src-78-exercise-prepare-ai-development-project|7 Exercise - Prepare for an AI development project]] · [[src-162-module-assessment-plan-prepare-develop-ai-solutions-azure|8 Module assessment]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]] · [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1|episode 1]]
 
 ## Open questions
 - The source does not map each capability to a specific Azure service; that mapping begins in the Foundry Tools unit. (SRC-260 L219–233; SRC-96 L223–232)

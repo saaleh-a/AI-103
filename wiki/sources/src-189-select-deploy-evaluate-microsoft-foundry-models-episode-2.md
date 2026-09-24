@@ -129,6 +129,7 @@ Not covered by this source; the episode is a portal demonstration rather than a 
 - [[model-and-app-evaluation]] — automatic evaluation is demonstrated. (SRC-189 L761–910)
 - [[quotas-rate-limits-and-cost]] — cost, throughput, quota, and token limits appear throughout selection and deployment. (SRC-189 L140–183; SRC-189 L184–309)
 - [[guardrails-and-content-filters]] — safety and content-security test prompts are part of evaluation. (SRC-189 L119–139; SRC-189 L761–910)
+- *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]]
 
 ## Open questions
 

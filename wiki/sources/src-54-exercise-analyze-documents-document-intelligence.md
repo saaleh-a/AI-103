@@ -90,6 +90,7 @@ Not covered by this source.
 - [[azure-document-intelligence]] — service used by the exercise.
 - [[document-intelligence-prebuilt-models]] — one model type used.
 - [[document-intelligence-custom-models]] — one model type used.
+- *Module units:* [[src-117-introduction-extract-data-azure-document-intelligence|1 Introduction]] · [[src-263-what-is-azure-document-intelligence|2 What is Azure Document Intelligence-]] · [[src-251-document-intelligence-studio|3 Use the Document Intelligence Studio]] · [[src-249-prebuilt-models|4 Use prebuilt models]] · [[src-224-train-custom-models|5 Train and use custom models]] · [[src-165-module-assessment-extract-data-azure-document-intelligence|7 Module assessment]] · [[src-220-summary-extract-data-azure-document-intelligence|8 Summary]]
 
 ## Open questions
 

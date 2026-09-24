@@ -108,6 +108,7 @@ Not covered by this source.
 - [[retrieval-augmented-generation]] — RAG is a remediation path when outputs need grounding. (SRC-53 L291)
 - [[fine-tuning]] — fine-tuning is a later, potentially more complex improvement path. (SRC-53 L292)
 - [[observability-and-tracing]] — repeated evaluation aligns with operational quality. (SRC-53 L295–296)
+- *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 

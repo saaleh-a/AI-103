@@ -104,6 +104,7 @@ Not covered by this source.
 - [[work-iq]] — question 4 assesses Work IQ. (SRC-149 L232–236)
 - [[microsoft-365-agents-toolkit]] — question 5 assesses Toolkit selection. (SRC-149 L237–244)
 - [[decision-boundaries]] — the options expose distractors around resource type, scope, permissions, and Toolkit use. (SRC-149 L216–244)
+- *Module units:* [[src-125-introduction-integrate-agent-microsoft-365|1 Introduction]] · [[src-232-understand-foundry-agent-publishing-options|2 Understand Foundry agent publishing options]] · [[src-185-publish-agent-foundry-portal-teams|3 Publish an agent from Foundry portal to Teams]] · [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios|4 Advanced - Use Microsoft 365 Agents Toolkit for complex integration scenarios - Training - Microsoft]] · [[src-2-access-microsoft-365-data-work-iq|5 Access Microsoft 365 data with Work IQ]] · [[src-222-test-iterate-integrated-agent|6 Test and iterate your integrated agent]] · [[src-79-exercise-publish-foundry-agent-teams|7 Exercise - Publish a Foundry agent to Teams]] · [[src-209-summary-integrate-agent-microsoft-365|9 Summary]] · [[src-111-integrate-agent-microsoft-365-episode-11|episode 11]]
 
 ## Open questions
 

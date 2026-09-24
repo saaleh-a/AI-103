@@ -89,6 +89,7 @@ The source is a launch page only; the actual lab steps are not present in the ra
 - [[text-translation]] — one half of the exercise goal.
 - [[speech-translation]] — the other half of the exercise goal.
 - [[microsoft-foundry]] — the broader environment for the tools used in the exercise.
+- *Module units:* [[src-139-introduction-translate-text-speech-microsoft-foundry-tools|1 Introduction]] · [[src-229-translation-microsoft-foundry|2 Translation in Microsoft Foundry]] · [[src-227-translate-text|3 Translate text]] · [[src-226-translate-speech|4 Translate speech]] · [[src-166-module-assessment-translate-text-speech-microsoft-foundry-tools|6 Module assessment]] · [[src-218-summary-translate-text-speech-microsoft-foundry-tools|7 Summary]] · [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21|episode 21]]
 
 ## Open questions
 

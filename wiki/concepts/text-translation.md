@@ -11,7 +11,7 @@ source_ids: [SRC-40, SRC-139, SRC-166, SRC-218, SRC-227, SRC-228, SRC-229]
 objectives: [T03, P01]
 objective_gaps: []
 tags: []
-aliases: ["translate text", "machine translation", "LLM translation", "transliteration"]
+aliases: ["machine translation", "LLM translation", "transliteration"]
 ---
 
 # Text translation

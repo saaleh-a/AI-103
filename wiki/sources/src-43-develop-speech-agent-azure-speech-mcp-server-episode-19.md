@@ -136,6 +136,7 @@ The episode verbally reviews three assessment-style questions. (SRC-43 L425–44
 - [[microsoft-foundry]] — the portal used to create the project, agent, and tool connection. (SRC-43 L129–135; SRC-43 L229–292)
 - [[foundry-sdk]] — the code path uses `AIProjectClient` and a project endpoint. (SRC-43 L348–366)
 - [[speech-and-language-options-compared]] — the episode explicitly relates the pattern to the earlier text-analytics MCP pattern. (SRC-43 L25–32; SRC-43 L247–250)
+- *Module units:* [[src-140-introduction-develop-speech-agent-azure-speech-mcp-server|1 Introduction]] · [[src-236-understand-azure-speech-mcp-server|2 Understand the Azure Speech MCP server]] · [[src-25-connect-speech-mcp-server-agent|3 Connect and use the Speech MCP server with an agent]] · [[src-82-exercise-azure-speech-agent|4 Exercise - Use Azure Speech in an agent]] · [[src-144-knowledge-check-develop-speech-agent-azure-speech-mcp-server|5 Knowledge check]] · [[src-204-summary-develop-speech-agent-azure-speech-mcp-server|6 Summary]]
 
 ## Open questions
 

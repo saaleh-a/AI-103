@@ -104,6 +104,7 @@ Not covered by this source.
 - [[a2a-agent-implementation]] — client connection is the final implementation step before using a remote A2A agent. (SRC-26 L217–240)
 - [[agent2agent-protocol]] — the client uses A2A to discover and communicate with a remote agent. (SRC-26 L218–225)
 - [[conversation-state]] — task-based responses may require follow-up status or result retrieval. (SRC-26 L232–234)
+- *Module units:* [[src-134-introduction-discover-azure-ai-agents-a2a|1 Introduction]] · [[src-37-define-a2a-agent|2 Define an A2A Agent]] · [[src-107-implement-agent-executor|3 Implement an Agent Executor]] · [[src-103-host-a2a-server|4 Host an A2A Server]] · [[src-61-exercise-connect-remote-azure-ai-agents-a2a-protocol|6 Exercise - Connect to remote Azure AI Agents with the A2A protocol]] · [[src-157-module-assessment-discover-azure-ai-agents-a2a|7 Module Assessment]] · [[src-205-summary-discover-azure-ai-agents-a2a|8 Summary]]
 
 ## Open questions
 

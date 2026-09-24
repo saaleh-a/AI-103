@@ -133,6 +133,7 @@ The video demo creates one blue-green mountain-lake video, remixes it by passing
 - [[model-playgrounds]] — the episode uses both image and video playgrounds before code. (SRC-97 L292–334; SRC-97 L467–484)
 - [[prompt-engineering]] — the presenter stresses detailed image/video prompts and uses generative AI to help create prompts. (SRC-97 L134–178; SRC-97 L780–788)
 - [[keyless-authentication]] — the image and video code use DefaultAzureCredential and token providers. (SRC-97 L338–364; SRC-97 L522–529)
+- *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-197-summary-generate-images-ai|7 Summary]]
 
 ## Open questions
 

@@ -101,6 +101,7 @@ No code snippet is captured in this source. (SRC-159 L227–230)
 - [[microsoft-entra-id]] — named authentication option. (SRC-159 L212–215)
 - [[microsoft-foundry]] — portal agent playground configuration is assessed. (SRC-159 L222–225)
 - [[agent-testing-and-evaluation]] — the assessment tests whether learners retained module behaviours. (SRC-159 L212–230)
+- *Module units:* [[src-132-introduction-develop-azure-speech-voice-live-agent-microsoft-foundry|1 Introduction]] · [[src-88-explore-azure-voice-live-api|2 Explore the Azure Voice Live API]] · [[src-31-create-voice-live-agent|3 Create a Voice Live agent]] · [[src-87-explore-ai-voice-live-client-library-python|3 Explore the AI Voice Live Client Library for Python]] · [[src-68-exercise-develop-voice-live-agent|4 Exercise - Develop a Voice Live Agent]] · [[src-208-summary-develop-azure-speech-voice-live-agent-microsoft-foundry|6 Summary]] · [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode|episode 20]]
 
 ## Open questions
 

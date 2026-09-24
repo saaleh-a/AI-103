@@ -89,6 +89,7 @@ Not covered by this source.
 - [[foundry-sdk]] — the exercise explicitly names the Microsoft Foundry SDK. (SRC-62 L213)
 - [[model-deployment-types]] — the exercise requires deploying a generative model, though it gives no deployment-type details. (SRC-62 L214)
 - [[development-tools-and-approaches]] — the exercise is the hands-on application-building part of the module. (SRC-62 L213–217)
+- *Module units:* [[src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry|1 Introduction]] · [[src-90-explore-model-playground|2 Explore with the model playground]] · [[src-18-choose-endpoint-sdk|3 Choose an endpoint and SDK]] · [[src-99-generate-responses-responses-api-foundry-sdk|4 Generate responses with the Responses API in the Foundry SDK]] · [[src-98-generate-responses-chatcompletions-api|5 Generate responses with the ChatCompletions API]] · [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry|7 Knowledge check]] · [[src-214-summary-develop-generative-ai-chat-app-microsoft-foundry|8 Summary]] · [[src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3|episode 3]]
 
 ## Open questions
 

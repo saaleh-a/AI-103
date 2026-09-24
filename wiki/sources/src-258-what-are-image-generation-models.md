@@ -95,6 +95,7 @@ Not covered by this source.
 - [[model-catalog]] — the source tells learners to use the catalog and filter by inference task. (SRC-258 L215)
 - [[model-selection]] — the source lists image-capable model families. (SRC-258 L212–214)
 - [[microsoft-foundry]] — Foundry is the platform where the models are selected. (SRC-258 L212–215)
+- *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions
 

@@ -109,6 +109,7 @@ Not covered by this source.
 - [[agent-building-options-compared]] — the source is a direct-vs-Toolkit decision boundary. (SRC-5 L216–241)
 - [[microsoft-365-agent-integration]] — the proxy app integrates Microsoft 365 surfaces with a Foundry agent. (SRC-5 L228–234)
 - [[observability-and-tracing]] — detailed tracing is one reason to use the Toolkit. (SRC-5 L225–227)
+- *Module units:* [[src-125-introduction-integrate-agent-microsoft-365|1 Introduction]] · [[src-232-understand-foundry-agent-publishing-options|2 Understand Foundry agent publishing options]] · [[src-185-publish-agent-foundry-portal-teams|3 Publish an agent from Foundry portal to Teams]] · [[src-2-access-microsoft-365-data-work-iq|5 Access Microsoft 365 data with Work IQ]] · [[src-222-test-iterate-integrated-agent|6 Test and iterate your integrated agent]] · [[src-79-exercise-publish-foundry-agent-teams|7 Exercise - Publish a Foundry agent to Teams]] · [[src-149-knowledge-check-integrate-agent-microsoft-365|8 Knowledge check]] · [[src-209-summary-integrate-agent-microsoft-365|9 Summary]] · [[src-111-integrate-agent-microsoft-365-episode-11|episode 11]]
 
 ## Open questions
 

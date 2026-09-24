@@ -82,6 +82,7 @@ Not covered by this source.
 - [[ai-enrichment-skillsets]] — The store is defined in the skillset. (SRC-181 L222)
 - [[knowledge-mining]] — Knowledge mining can persist enriched assets for analysis. (SRC-181 L218–222)
 - [[azure-ai-search]] — The service supports the knowledge-store scenarios. (SRC-181 L222)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-261-what-is-azure-ai-search|2 What is Azure AI Search-]] · [[src-92-extract-data-indexer|3 Extract data with an indexer]] · [[src-52-enrich-extracted-data-ai-skills|4 Enrich extracted data with AI skills]] · [[src-187-search-index|5 Search an index]] · [[src-64-exercise-create-knowledge-mining-solution|7 Exercise - Create a knowledge mining solution]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-215-summary-create-knowledge-mining-solution-azure-ai-search|9 Summary]] · [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26|episode 26]]
 
 ## Open questions
 - The source does not specify configuration syntax, storage-account requirements, or projection schemas. (SRC-181 L222)

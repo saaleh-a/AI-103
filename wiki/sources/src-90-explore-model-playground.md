@@ -98,6 +98,7 @@ Not covered by this source.
 - [[development-tools-and-approaches]] — the source contrasts no-code exploration with later code development. (SRC-90 L217–240)
 - [[responses-api]] — generated samples can target the Responses API. (SRC-90 L228–229)
 - [[chat-completions-api]] — generated samples can target ChatCompletions. (SRC-90 L228–229)
+- *Module units:* [[src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry|1 Introduction]] · [[src-18-choose-endpoint-sdk|3 Choose an endpoint and SDK]] · [[src-99-generate-responses-responses-api-foundry-sdk|4 Generate responses with the Responses API in the Foundry SDK]] · [[src-98-generate-responses-chatcompletions-api|5 Generate responses with the ChatCompletions API]] · [[src-62-exercise-create-generative-ai-chat-app|6 Exercise - Create a generative AI chat app]] · [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry|7 Knowledge check]] · [[src-214-summary-develop-generative-ai-chat-app-microsoft-foundry|8 Summary]] · [[src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3|episode 3]]
 
 ## Open questions
 

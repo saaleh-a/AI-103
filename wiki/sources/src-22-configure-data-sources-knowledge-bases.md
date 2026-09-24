@@ -104,6 +104,7 @@ Not covered by this source.
 - [[azure-ai-search]] — both a direct source option and the indexing layer for SharePoint Indexed. (SRC-22 L15–24; SRC-22 L62–70)
 - [[search-indexes]] — existing Azure AI Search indexes can become knowledge-base sources. (SRC-22 L15–24)
 - [[retrieval-options-compared]] — this page supplies source-choice boundaries for grounding options. (SRC-22 L75–83)
+- *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions
 

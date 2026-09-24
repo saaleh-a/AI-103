@@ -98,6 +98,7 @@ Not covered by this source.
 - [[openai-sdk]] — the source uses the OpenAI SDK client path. (SRC-221 L222–223)
 - [[azure-openai]] — the source names the `AzureOpenAI` client. (SRC-221 L222–223)
 - [[voices-and-audio-formats]] — the source does not teach voices or formats, but the output is an audio stream. (SRC-221 L216)
+- *Module units:* [[src-121-introduction-develop-speech-capable-generative-ai-application|1 Introduction]] · [[src-17-choose-speech-capable-model|2 Choose a speech-capable model]] · [[src-225-transcribe-speech|3 Transcribe speech]] · [[src-83-exercise-speech-capable-generative-ai-models|4 Exercise - Use speech-capable generative AI models]] · [[src-175-module-assessment-develop-speech-capable-generative-ai-application|5 Module assessment]] · [[src-207-summary-develop-speech-capable-generative-ai-application|6 Summary]] · [[src-44-develop-speech-capable-generative-ai-application-episode-17|episode 17]]
 
 ## Open questions
 

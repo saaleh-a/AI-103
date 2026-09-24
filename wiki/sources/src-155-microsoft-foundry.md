@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Foundry"
+title: "Microsoft Foundry — Plan and prepare to develop AI solutions on Azure"
 type: source
 status: active
 confidence: high
@@ -19,7 +19,7 @@ raw_file: "155-Microsoft Foundry - Training - Microsoft Learn.md"
 url: "https://learn.microsoft.com/en-gb/training/modules/prepare-azure-ai-development/4-azure-ai-foundry"
 ingest_depth: full
 ---
-# Microsoft Foundry
+# Microsoft Foundry — Plan and prepare to develop AI solutions on Azure
 *learn-unit · Plan and prepare to develop AI solutions on Azure · unit 4 · SRC-155*
 
 ## Source metadata
@@ -90,6 +90,7 @@ Not covered by this source. (SRC-155 L12–34)
 - [[foundry-tools]] — Foundry Tools are hosted in the project-associated Foundry resource. (SRC-155 L20)
 - [[foundry-iq]] — Foundry IQ creates a central MCP-based knowledge connection. (SRC-155 L21)
 - [[naming-and-currency]] — the unit flags classic versus latest project architecture and portal transition. (SRC-155 L33–34)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-260-what-is-ai|2 What is AI-]] · [[src-96-foundry-tools|3 Foundry Tools]] · [[src-51-developer-tools-sdks|5 Developer Tools and SDKs]] · [[src-186-responsible-ai|6 Responsible AI]] · [[src-78-exercise-prepare-ai-development-project|7 Exercise - Prepare for an AI development project]] · [[src-162-module-assessment-plan-prepare-develop-ai-solutions-azure|8 Module assessment]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]] · [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1|episode 1]]
 
 ## Open questions
 - The source does not define the detailed permissions, network controls, costs, or deployment types of the Foundry resource. (SRC-155 L15–34)

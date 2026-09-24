@@ -10,7 +10,7 @@ area: retrieval
 source_ids: [SRC-22, SRC-52, SRC-85, SRC-91, SRC-92, SRC-102, SRC-130, SRC-181, SRC-187, SRC-215, SRC-261]
 objectives: [P03, G02, G09, I01, I02, I03, I04]
 tags: ["service"]
-aliases: ["AI Search", "Azure Search", "Azure Cognitive Search", "Azure AI Search Index"]
+aliases: ["AI Search", "Azure Search", "Azure Cognitive Search"]
 objective_gaps: []
 ---
 

@@ -94,6 +94,7 @@ Not covered by this source.
 - [[azure-speech]] — the exercise uses Azure Speech in Foundry Tools. (SRC-68 L212)
 - [[microsoft-foundry]] — the exercise tests the agent in the agent playground. (SRC-68 L212)
 - [[voices-and-audio-formats]] — hardware prerequisites include microphone and speaker capabilities. (SRC-68 L217–219)
+- *Module units:* [[src-132-introduction-develop-azure-speech-voice-live-agent-microsoft-foundry|1 Introduction]] · [[src-88-explore-azure-voice-live-api|2 Explore the Azure Voice Live API]] · [[src-31-create-voice-live-agent|3 Create a Voice Live agent]] · [[src-87-explore-ai-voice-live-client-library-python|3 Explore the AI Voice Live Client Library for Python]] · [[src-159-module-assessment-develop-azure-speech-voice-live-agent-microsoft|5 Module Assessment]] · [[src-208-summary-develop-azure-speech-voice-live-agent-microsoft-foundry|6 Summary]] · [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode|episode 20]]
 
 ## Open questions
 

@@ -11,7 +11,7 @@ source_ids: [SRC-10, SRC-12, SRC-40, SRC-206, SRC-227]
 objectives: [T01]
 objective_gaps: []
 tags: []
-aliases: ["detect language", "language identification", "detect_language"]
+aliases: ["language identification", "detect_language"]
 ---
 
 # Language detection

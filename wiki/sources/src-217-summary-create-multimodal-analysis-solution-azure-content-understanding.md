@@ -92,6 +92,7 @@ Not covered by this source.
 - [[azure-content-understanding]] — the service summarized by the source. (SRC-217 L214)
 - [[content-understanding-analyzers]] — building an analyzer is the module outcome. (SRC-217 L215–216)
 - [[content-understanding-client-apps]] — not taught here, but analyzer outputs are later consumed by applications in related sources. (SRC-217 L215–216)
+- *Module units:* [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding|1 Introduction]] · [[src-262-what-is-azure-content-understanding|2 What is Azure Content Understanding-]] · [[src-30-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-250-content-understanding-api|4 Use the Content Understanding API]] · [[src-73-exercise-extract-information-multimodal-content|5 Exercise - Extract information from multimodal content]] · [[src-164-module-assessment-create-multimodal-analysis-solution-azure-content-understanding|6 Module assessment]]
 
 ## Open questions
 

@@ -84,6 +84,7 @@ Not covered by this source.
 - [[azure-functions]] — Example hosting option for a custom skill. (SRC-52 L230)
 - [[azure-document-intelligence]] — Example downstream model used by a custom skill. (SRC-52 L230)
 - [[indexers-and-data-sources]] — The indexer orchestrates skill execution. (SRC-52 L218)
+- *Module units:* [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search|1 Introduction]] · [[src-261-what-is-azure-ai-search|2 What is Azure AI Search-]] · [[src-92-extract-data-indexer|3 Extract data with an indexer]] · [[src-187-search-index|5 Search an index]] · [[src-181-persist-extracted-information-knowledge-store|6 Persist extracted information in a knowledge store]] · [[src-64-exercise-create-knowledge-mining-solution|7 Exercise - Create a knowledge mining solution]] · [[src-176-module-assessment-create-knowledge-mining-solution-azure-ai-search|8 Module assessment]] · [[src-215-summary-create-knowledge-mining-solution-azure-ai-search|9 Summary]] · [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26|episode 26]]
 
 ## Open questions
 - The source does not show the request/response schema for a custom skill endpoint. (SRC-52 L230)

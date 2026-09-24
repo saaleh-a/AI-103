@@ -106,6 +106,7 @@ Not covered by this source.
 - [[agent-tools]] — MCP tools are executable capabilities agents use beyond language generation.
 - [[custom-tool-options]] — MCP appears as one custom tool integration option.
 - [[tool-options-compared]] — compares MCP to other ways of attaching tools.
+- *Module units:* [[src-119-introduction-integrate-mcp-tools-azure-ai-agents|1 Introduction]] · [[src-108-integrate-agent-tools-mcp-server-client|3 Integrate Agent Tools Using an MCP Server and Client]] · [[src-240-azure-ai-agents-mcp-servers|4 Use Azure AI agents with MCP servers]] · [[src-60-exercise-connect-mcp-tools-azure-ai-agents|5 Exercise - Connect MCP Tools to Azure AI Agents]] · [[src-158-module-assessment-integrate-mcp-tools-azure-ai-agents|6 Module Assessment]] · [[src-193-summary-integrate-mcp-tools-azure-ai-agents|7 Summary]] · [[src-109-integrate-mcp-tools-azure-ai-agents-episode-9|episode 9]]
 
 ## Open questions
 

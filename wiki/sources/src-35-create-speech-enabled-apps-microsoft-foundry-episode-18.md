@@ -150,6 +150,7 @@ The transcript describes code but does not preserve full source snippets. (SRC-3
 - [[ssml]] — the episode explains and situates SSML. (SRC-35 L249–333)
 - [[speech-capable-models]] — the episode contrasts Azure Speech tools with large language model speech features. (SRC-35 L29–92)
 - [[speech-and-language-options-compared]] — the source contains decision-boundary evidence for Speech tools versus LLM speech features. (SRC-35 L44–92)
+- *Module units:* [[src-115-introduction-create-speech-enabled-apps-azure-speech-microsoft-foundry|1 Introduction]] · [[src-13-azure-speech-foundry-tools|2 Azure Speech in Foundry Tools]] · [[src-252-speech-text-api|3 Use the Speech to Text API]] · [[src-253-text-speech-api|4 Use the Text to Speech API]] · [[src-21-configure-audio-format-voices|5 Configure audio format and voices]] · [[src-246-speech-synthesis-markup-language|6 Use Speech Synthesis Markup Language]] · [[src-65-exercise-create-speech-enabled-app|7 Exercise - Create a speech-enabled app]] · [[src-174-module-assessment-create-speech-enabled-apps-azure-speech-microsoft|8 Module assessment]] · [[src-192-summary-create-speech-enabled-apps-azure-speech-microsoft-foundry|9 Summary]]
 
 ## Open questions
 

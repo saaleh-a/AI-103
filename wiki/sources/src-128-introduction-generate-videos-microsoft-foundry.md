@@ -94,6 +94,7 @@ Not covered by this source.
 - [[sora-2]] — Sora 2 is the named model for the module. (SRC-128 L212–214)
 - [[openai-sdk]] — the module includes Python application development with the OpenAI SDK. (SRC-128 L214)
 - [[microsoft-foundry]] — Sora 2 is described as being in Microsoft Foundry. (SRC-128 L212–213)
+- *Module units:* [[src-38-deploy-video-generating-model|2 Deploy a video generating model]] · [[src-100-generate-video-prompt|3 Generate video from a prompt]] · [[src-101-generate-video-python|4 Generate video in Python]] · [[src-75-exercise-generate-video-sora-2-microsoft-foundry|5 Exercise - Generate video with Sora 2 in Microsoft Foundry]]
 
 ## Open questions
 

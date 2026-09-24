@@ -11,7 +11,7 @@ source_ids: [SRC-10, SRC-12, SRC-40, SRC-93, SRC-94, SRC-96, SRC-127, SRC-206, S
 objectives: [P01, T01, T02]
 objective_gaps: []
 tags: ["service"]
-aliases: ["Azure Language in Foundry Tools", "Azure Language in Microsoft Foundry Tools", "Azure AI Language", "Azure AI Language service", "Language service", "Text Analytics"]
+aliases: ["Azure Language in Foundry Tools", "Azure AI Language", "Azure AI Language service", "Language service", "Text Analytics"]
 ---
 
 # Azure Language

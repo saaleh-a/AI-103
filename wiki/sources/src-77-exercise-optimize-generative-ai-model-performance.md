@@ -86,6 +86,7 @@ SRC-177 gives a narrated fine-tuning demonstration with a Microsoft Foundry proj
 - [[fine-tuning]] — exercise topic.
 - [[microsoft-foundry]] — environment named by the exercise.
 - [[model-deployment-types]] — related because fine-tuned model access requires deployment in the episode.
+- *Module units:* [[src-116-introduction-optimize-generative-ai-model-performance-microsoft-foundry|1 Introduction]] · [[src-178-optimize-model-output-prompt-engineering|2 Optimize model output with prompt engineering]] · [[src-102-ground-model-retrieval-augmented-generation|3 Ground your model with Retrieval Augmented Generation]] · [[src-95-fine-tune-model-consistent-behavior|4 Fine-tune a model for consistent behavior]] · [[src-19-compare-combine-optimization-strategies|5 Compare and combine optimization strategies]] · [[src-161-module-assessment-optimize-generative-ai-model-performance-microsoft-foundry|7 Module assessment]] · [[src-202-summary-optimize-generative-ai-model-performance-microsoft-foundry|8 Summary]] · [[src-177-optimize-generative-ai-model-performance-microsoft-foundry-episode-5|episode 5]]
 
 ## Open questions
 

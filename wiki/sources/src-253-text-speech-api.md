@@ -111,6 +111,7 @@ Not covered by this source.
 - [[azure-speech]] — Text to speech is an Azure Speech in Foundry Tools capability. (SRC-253 L218)
 - [[voices-and-audio-formats]] — output device, audio file and stream choices are part of synthesis output configuration. (SRC-253 L222)
 - [[ssml]] — the next synthesis source expands from text input to markup-controlled speech. (SRC-253 L224; SRC-246 L218–231)
+- *Module units:* [[src-115-introduction-create-speech-enabled-apps-azure-speech-microsoft-foundry|1 Introduction]] · [[src-13-azure-speech-foundry-tools|2 Azure Speech in Foundry Tools]] · [[src-252-speech-text-api|3 Use the Speech to Text API]] · [[src-21-configure-audio-format-voices|5 Configure audio format and voices]] · [[src-246-speech-synthesis-markup-language|6 Use Speech Synthesis Markup Language]] · [[src-65-exercise-create-speech-enabled-app|7 Exercise - Create a speech-enabled app]] · [[src-174-module-assessment-create-speech-enabled-apps-azure-speech-microsoft|8 Module assessment]] · [[src-192-summary-create-speech-enabled-apps-azure-speech-microsoft-foundry|9 Summary]] · [[src-35-create-speech-enabled-apps-microsoft-foundry-episode-18|episode 18]]
 
 ## Open questions
 

@@ -93,6 +93,7 @@ The source names an API-choice question but does not show code. (SRC-172 L214–
 - [[model-catalog]] — the first item tests selecting models with an inference-task filter. (SRC-172 L210–213)
 - [[openai-sdk]] — the second item tests the OpenAI API surface for image models. (SRC-172 L214–216)
 - [[decision-boundaries]] — the distractors separate text-to-image from image-to-text and embeddings. (SRC-172 L210–213)
+- *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions
 

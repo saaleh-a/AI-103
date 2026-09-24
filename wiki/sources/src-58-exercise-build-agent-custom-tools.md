@@ -78,6 +78,7 @@ The source is a stub capture; the actual lab instructions are outside the captur
 - [[agent-tools]] — the exercise is about giving an agent a custom callable tool.
 - [[custom-tool-options]] — the exercise likely practices one option from the module.
 - [[foundry-agent-service]] — the exercise sits inside the Foundry Agent Service module.
+- *Module units:* [[src-122-introduction-integrate-custom-tools-agent|1 Introduction]] · [[src-265-why-custom-tools|2 Why use custom tools]] · [[src-179-options-implementing-custom-tools|3 Options for implementing custom tools]] · [[src-104-how-integrate-custom-tools|4 How to integrate custom tools]] · [[src-167-module-assessment-integrate-custom-tools-agent|6 Module assessment]] · [[src-213-summary-integrate-custom-tools-agent|7 Summary]] · [[src-110-integrate-custom-tools-agent-episode-8|episode 8]]
 
 ## Open questions
 - The captured source does not include the lab's exact code, prerequisites, repository, commands or success criteria. (SRC-58 L212–215)

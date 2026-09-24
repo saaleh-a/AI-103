@@ -96,6 +96,7 @@ Not covered by this source.
 - [[foundry-tools]] — the introduction locates Voice Live in Foundry Tools. (SRC-132 L214)
 - [[microsoft-foundry]] — the module includes using Voice Live with a Foundry Agent. (SRC-132 L219)
 - [[ai-agents]] — voice agents are the target application pattern. (SRC-132 L214)
+- *Module units:* [[src-88-explore-azure-voice-live-api|2 Explore the Azure Voice Live API]] · [[src-31-create-voice-live-agent|3 Create a Voice Live agent]] · [[src-87-explore-ai-voice-live-client-library-python|3 Explore the AI Voice Live Client Library for Python]] · [[src-68-exercise-develop-voice-live-agent|4 Exercise - Develop a Voice Live Agent]] · [[src-159-module-assessment-develop-azure-speech-voice-live-agent-microsoft|5 Module Assessment]] · [[src-208-summary-develop-azure-speech-voice-live-agent-microsoft-foundry|6 Summary]] · [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode|episode 20]]
 
 ## Open questions
 

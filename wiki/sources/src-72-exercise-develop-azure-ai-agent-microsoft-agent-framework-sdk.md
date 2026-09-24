@@ -92,6 +92,7 @@ Not covered by this source.
 - [[foundry-agent-service]] — module provider context for the exercise.
 - [[agent-tools]] — the exercise scenario involves creating an action-taking agent.
 - [[keyless-authentication]] — setup likely depends on Azure credentials, though this page only names subscription setup.
+- *Module units:* [[src-124-introduction-develop-ai-agent-microsoft-agent-framework|1 Introduction]] · [[src-234-understand-microsoft-agent-framework-ai-agents|2 Understand Microsoft Agent Framework AI agents]] · [[src-34-create-azure-ai-agent-microsoft-agent-framework|3 Create an Azure AI agent with Microsoft Agent Framework]] · [[src-4-add-tools-azure-ai-agent|4 Add tools to Azure AI agent]] · [[src-146-knowledge-check-develop-ai-agent-microsoft-agent-framework|6 Knowledge check]] · [[src-195-summary-develop-ai-agent-microsoft-agent-framework|7 Summary]] · [[src-48-develop-ai-agent-microsoft-agent-framework-episode-13|episode 13]]
 
 ## Open questions
 

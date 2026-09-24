@@ -101,6 +101,7 @@ Not covered by this source.
 - [[foundry-sdk]] — SDK named for Python client invocation.
 - [[responses-api]] — neighbouring client API from the prior unit.
 - [[ai-agents]] — agent-based text analysis is the module outcome.
+- *Module units:* [[src-135-introduction-develop-text-analysis-agent-azure-language-mcp-server|1 Introduction]] · [[src-235-understand-azure-language-mcp-server|2 Understand the Azure Language MCP server]] · [[src-24-connect-language-mcp-server-agent|3 Connect and use the Language MCP server with an agent]] · [[src-70-exercise-develop-text-analysis-agent|4 Exercise - Develop a text analysis agent]] · [[src-150-knowledge-check-develop-text-analysis-agent-azure-language-mcp|5 Knowledge check]] · [[src-45-develop-text-analysis-agent-azure-language-mcp-server-episode|episode 16]]
 
 ## Open questions
 

@@ -94,6 +94,7 @@ Not covered by this source.
 - [[text-to-speech]] — synthesis is one of the module's two directions. (SRC-121 L214–219)
 - [[microsoft-foundry]] — Microsoft Foundry is the platform named for these models. (SRC-121 L219)
 - [[speech-and-language-options-compared]] — the page will need this source for the basic transcription/synthesis split. (SRC-121 L214–219)
+- *Module units:* [[src-17-choose-speech-capable-model|2 Choose a speech-capable model]] · [[src-221-synthesize-speech|3 Synthesize speech]] · [[src-225-transcribe-speech|3 Transcribe speech]] · [[src-83-exercise-speech-capable-generative-ai-models|4 Exercise - Use speech-capable generative AI models]] · [[src-175-module-assessment-develop-speech-capable-generative-ai-application|5 Module assessment]] · [[src-207-summary-develop-speech-capable-generative-ai-application|6 Summary]] · [[src-44-develop-speech-capable-generative-ai-application-episode-17|episode 17]]
 
 ## Open questions
 

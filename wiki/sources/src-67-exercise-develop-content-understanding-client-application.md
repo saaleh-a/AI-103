@@ -89,6 +89,7 @@ Not covered by this source.
 - [[content-understanding-client-apps]] — the exercise goal is to build a client app. (SRC-67 L212–213)
 - [[azure-content-understanding]] — the API named by the lab page. (SRC-67 L213)
 - [[content-understanding-analyzers]] — the lab submits a file to an analyzer. (SRC-67 L213)
+- *Module units:* [[src-138-introduction-create-azure-content-understanding-client-application|1 Introduction]] · [[src-184-prepare-ai-content-understanding-api|2 Prepare to use the AI Content Understanding API]] · [[src-29-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-6-analyze-content|4 Analyze content]] · [[src-160-module-assessment-create-azure-content-understanding-client-application|6 Module assessment]] · [[src-201-summary-create-azure-content-understanding-client-application|7 Summary]]
 
 ## Open questions
 

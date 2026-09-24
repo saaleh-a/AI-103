@@ -95,6 +95,7 @@ SRC-177 gives the matching episode overview and demonstration path. (SRC-177 L3�
 - [[retrieval-augmented-generation]] — strategy for grounding with data.
 - [[fine-tuning]] — strategy for consistent behavior and format.
 - [[model-and-app-evaluation]] — later testing/evaluation is needed before choosing heavier optimization.
+- *Module units:* [[src-178-optimize-model-output-prompt-engineering|2 Optimize model output with prompt engineering]] · [[src-102-ground-model-retrieval-augmented-generation|3 Ground your model with Retrieval Augmented Generation]] · [[src-95-fine-tune-model-consistent-behavior|4 Fine-tune a model for consistent behavior]] · [[src-19-compare-combine-optimization-strategies|5 Compare and combine optimization strategies]] · [[src-77-exercise-optimize-generative-ai-model-performance|6 Exercise - Optimize generative AI model performance]] · [[src-161-module-assessment-optimize-generative-ai-model-performance-microsoft-foundry|7 Module assessment]] · [[src-202-summary-optimize-generative-ai-model-performance-microsoft-foundry|8 Summary]] · [[src-177-optimize-generative-ai-model-performance-microsoft-foundry-episode-5|episode 5]]
 
 ## Open questions
 

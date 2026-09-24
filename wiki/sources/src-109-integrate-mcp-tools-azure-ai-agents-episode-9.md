@@ -131,6 +131,7 @@ The episode includes review questions, but not a formal Learn assessment with op
 - [[function-calling]] — local MCP tools are wrapped into function tools.
 - [[custom-tool-options]] — MCP is presented as another way to add tools.
 - [[tool-options-compared]] — useful for contrasting manual function tools and MCP.
+- *Module units:* [[src-119-introduction-integrate-mcp-tools-azure-ai-agents|1 Introduction]] · [[src-233-understand-mcp-tool-discovery|2 Understand MCP Tool Discovery]] · [[src-108-integrate-agent-tools-mcp-server-client|3 Integrate Agent Tools Using an MCP Server and Client]] · [[src-240-azure-ai-agents-mcp-servers|4 Use Azure AI agents with MCP servers]] · [[src-60-exercise-connect-mcp-tools-azure-ai-agents|5 Exercise - Connect MCP Tools to Azure AI Agents]] · [[src-158-module-assessment-integrate-mcp-tools-azure-ai-agents|6 Module Assessment]] · [[src-193-summary-integrate-mcp-tools-azure-ai-agents|7 Summary]]
 
 ## Open questions
 

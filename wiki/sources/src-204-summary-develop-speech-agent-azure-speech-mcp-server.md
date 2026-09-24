@@ -100,6 +100,7 @@ Not covered by this source.
 - [[speech-to-text]] — one capability exposed to the agent. (SRC-204 L215)
 - [[text-to-speech]] — one capability exposed to the agent. (SRC-204 L215)
 - [[foundry-sdk]] — the SDK named for Python client invocation. (SRC-204 L221)
+- *Module units:* [[src-140-introduction-develop-speech-agent-azure-speech-mcp-server|1 Introduction]] · [[src-236-understand-azure-speech-mcp-server|2 Understand the Azure Speech MCP server]] · [[src-25-connect-speech-mcp-server-agent|3 Connect and use the Speech MCP server with an agent]] · [[src-82-exercise-azure-speech-agent|4 Exercise - Use Azure Speech in an agent]] · [[src-144-knowledge-check-develop-speech-agent-azure-speech-mcp-server|5 Knowledge check]] · [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19|episode 19]]
 
 ## Open questions
 

@@ -94,6 +94,7 @@ Not covered by this source.
 - [[development-tools-and-approaches]] — the source frames development as choosing services and frameworks. (SRC-120 L215–216)
 - [[endpoints-and-sdk-choice]] — endpoint and SDK choice is the unit's stated purpose. (SRC-120 L216)
 - [[openai-sdk]] — later units connect one endpoint choice to OpenAI-compatible clients. (SRC-120 L216; SRC-18 L219)
+- *Module units:* [[src-90-explore-model-playground|2 Explore with the model playground]] · [[src-18-choose-endpoint-sdk|3 Choose an endpoint and SDK]] · [[src-99-generate-responses-responses-api-foundry-sdk|4 Generate responses with the Responses API in the Foundry SDK]] · [[src-98-generate-responses-chatcompletions-api|5 Generate responses with the ChatCompletions API]] · [[src-62-exercise-create-generative-ai-chat-app|6 Exercise - Create a generative AI chat app]] · [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry|7 Knowledge check]] · [[src-214-summary-develop-generative-ai-chat-app-microsoft-foundry|8 Summary]] · [[src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3|episode 3]]
 
 ## Open questions
 

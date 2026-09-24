@@ -94,6 +94,7 @@ Not covered by this source.
 - [[model-catalog]] — the deployment path uses the Models experience to find Sora-2. (SRC-38 L219–226)
 - [[model-deployment-types]] — the source is evidence for deploying a model before consumption. (SRC-38 L212–226)
 - [[microsoft-foundry]] — deployment occurs in the Foundry portal and project. (SRC-38 L215–226)
+- *Module units:* [[src-128-introduction-generate-videos-microsoft-foundry|1 Introduction]] · [[src-100-generate-video-prompt|3 Generate video from a prompt]] · [[src-101-generate-video-python|4 Generate video in Python]] · [[src-75-exercise-generate-video-sora-2-microsoft-foundry|5 Exercise - Generate video with Sora 2 in Microsoft Foundry]]
 
 ## Open questions
 

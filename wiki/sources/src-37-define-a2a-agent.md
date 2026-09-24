@@ -103,6 +103,7 @@ Not covered by this source.
 - [[a2a-agent-implementation]] — skills and cards are the first implementation artifacts in the module flow. (SRC-37 L218)
 - [[model-context-protocol]] — the source explicitly contrasts A2A model choice with some MCP scenarios. (SRC-37 L222)
 - [[multi-agent-orchestration]] — the technical-writer example chains specialized agents through a routing agent. (SRC-37 L249)
+- *Module units:* [[src-134-introduction-discover-azure-ai-agents-a2a|1 Introduction]] · [[src-107-implement-agent-executor|3 Implement an Agent Executor]] · [[src-103-host-a2a-server|4 Host an A2A Server]] · [[src-26-connect-a2a-agent|5 Connect to your A2A Agent]] · [[src-61-exercise-connect-remote-azure-ai-agents-a2a-protocol|6 Exercise - Connect to remote Azure AI Agents with the A2A protocol]] · [[src-157-module-assessment-discover-azure-ai-agents-a2a|7 Module Assessment]] · [[src-205-summary-discover-azure-ai-agents-a2a|8 Summary]]
 
 ## Open questions
 

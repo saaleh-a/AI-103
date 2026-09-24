@@ -125,6 +125,7 @@ The episode includes two spoken review questions. (SRC-16 L728–748)
 - [[foundry-sdk]] — the client-code section uses project endpoint and project client patterns, though no exact code is captured. (SRC-16 L535–629)
 - [[human-in-the-loop-approval]] — the episode explicitly compares auto-approval and manual approval of data access. (SRC-16 L630–719)
 - [[retrieval-options-compared]] — the episode contrasts file search scale limits, indexed sources, direct/open sources, and real-time sources. (SRC-16 L56–64; SRC-16 L128–181)
+- *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]]
 
 ## Open questions
 

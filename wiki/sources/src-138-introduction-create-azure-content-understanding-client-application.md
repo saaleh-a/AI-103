@@ -93,6 +93,7 @@ Not covered by this source.
 - [[content-understanding-client-apps]] — the client-application implementation path named by the unit. (SRC-138 L217–218)
 - [[content-understanding-analyzers]] — analyzers are the target component used by the client application. (SRC-138 L214; SRC-138 L217)
 - [[extraction-options-compared]] — useful later for comparing this multimodal extraction path with other extraction services. (SRC-138 L214)
+- *Module units:* [[src-184-prepare-ai-content-understanding-api|2 Prepare to use the AI Content Understanding API]] · [[src-29-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-6-analyze-content|4 Analyze content]] · [[src-67-exercise-develop-content-understanding-client-application|5 Exercise - Develop a Content Understanding client application]] · [[src-160-module-assessment-create-azure-content-understanding-client-application|6 Module assessment]] · [[src-201-summary-create-azure-content-understanding-client-application|7 Summary]]
 
 ## Open questions
 

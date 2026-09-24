@@ -143,6 +143,7 @@ The episode includes an oral review rather than a Learn assessment form. (SRC-47
 - [[model-playgrounds]] — the demo tests the deployed model by uploading an image in the playground. (SRC-47 L201–219)
 - [[azure-ai-search]] — the episode frames later visual-data sessions as indexing extracted content for search. (SRC-47 L35–39)
 - [[azure-content-understanding]] — the episode frames later visual-data sessions around image analysis and structured extraction with Content Understanding. (SRC-47 L23–39)
+- *Module units:* [[src-131-introduction-develop-vision-enabled-generative-ai-application|1 Introduction]] · [[src-248-vision-capable-model-microsoft-foundry-portal|2 Use a vision-capable model in the Microsoft Foundry portal]] · [[src-46-develop-vision-based-chat-app|3 Develop a vision-based chat app]] · [[src-71-exercise-develop-vision-enabled-chat-app|4 Exercise - Develop a vision-enabled chat app]] · [[src-173-module-assessment-develop-vision-enabled-generative-ai-application|5 Module assessment]] · [[src-210-summary-develop-vision-enabled-generative-ai-application|6 Summary]]
 
 ## Open questions
 

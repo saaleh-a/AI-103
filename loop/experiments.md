@@ -154,3 +154,29 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
 ## Cycle 5 — last two panel failures (2026-09-24)
 - Hypothesis: labelling the two unlabelled judgements (src-236's characterisation, code-interpreter's
   comparative rule) and dropping P02 from code-interpreter will clear the panel (2/20 → 0/20).
+- Change: src-236's characterisation labelled **Inference:**; code-interpreter-tool's "use X instead" rules
+  labelled **Inference:** under a **Synthesis:** lead-in that names their evidence, and P02 dropped.
+- Mechanical: `[0, 0, 0, 45, 6]` → `[0, 0, 0, 45, 6]` (SAME).
+- Judgement (panel, incremental): both changed pages PASS → **2/20 → 0/20 failing**.
+- Decision: kept.
+
+## Cycle 6 — warnings (2026-09-24)
+- Hypothesis: the 45 remaining warnings are two mechanical classes — 26 titles/aliases owned by two pages
+  and 19 orphaned unit pages (15 exercise launchers, 2 summaries, an introduction, an assessment) — so
+  giving each alias one owner and giving every unit page generated module navigation clears them without
+  touching any claim.
+- Change: 19 aliases removed from non-owner pages (e.g. *MCP server* stays on mcp-tool-integration,
+  *previous_response_id* on responses-api); four unit pages retitled with their module (src-155, src-96,
+  src-29, src-30); new `scripts/sync_module_links.py` writes one generated *Module units* line per
+  source page (261 pages, 30 modules), excluded from the wiki link graph.
+- Mechanical: `[0, 0, 0, 45, 6]` → `[0, 0, 0, 0, 6]` (IMPROVED).
+- Judgement: not re-run — no claim, citation or objective changed (program.md step 5); panel stays 0/20.
+- Decision: kept.
+- Lesson: navigation debt is cheapest to pay with generated structure, not hand-placed links.
+
+## Cycle 7 — locator drift (2026-09-24)
+- Hypothesis: citation drift is systematic, not incidental (the SRC-91 shift propagated from a source page
+  into four concept and synthesis pages); confirming each of the 347 drift candidates from
+  `scripts/find_locator_drift.py` against the raw lines, and correcting only the confirmed ones, repairs
+  criterion-2 failures the 20-page panel cannot see — measured by the candidate count and by a rotating
+  sample drawn after the fix.

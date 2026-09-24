@@ -79,6 +79,7 @@ Not covered by this source.
 - [[foundry-workflows]] — assessment topic for the module (SRC-171 L8–23).
 - [[workflow-patterns]] — loop and structured-output questions test workflow mechanics (SRC-171 L14–22).
 - [[power-fx]] — conditions over structured outputs connect to Power Fx formula use (SRC-171 L19–22; SRC-11 L230–231).
+- *Module units:* [[src-118-introduction-build-agent-driven-workflows-microsoft-foundry|1 Introduction]] · [[src-238-understand-workflows|2 Understand workflows]] · [[src-105-identify-workflow-patterns|3 Identify workflow patterns]] · [[src-36-create-workflows-microsoft-foundry|4 Create workflows in Microsoft Foundry]] · [[src-3-add-agents-workflow|5 Add agents to a workflow]] · [[src-11-apply-power-fx-workflows|6 Apply Power Fx in workflows]] · [[src-151-maintain-workflows-microsoft-foundry|7 Maintain workflows in Microsoft Foundry]] · [[src-247-workflows-code|8 Use Workflows in Code]] · [[src-66-exercise-create-agent-driven-workflow|9 Exercise - Create an agent-driven workflow]] · [[src-219-summary-build-agent-driven-workflows-microsoft-foundry|11 Summary]] · [[src-15-build-agent-driven-workflows-microsoft-foundry-episode-12|episode 12]]
 
 ## Open questions
 - The correct answers are not shown in the capture (SRC-171 L23).

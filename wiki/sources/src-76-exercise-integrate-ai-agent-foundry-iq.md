@@ -88,6 +88,7 @@ Not covered by this source.
 - [[foundry-iq]] — the feature learners are asked to explore. (SRC-76 L211–212)
 - [[microsoft-foundry]] — the environment named for exploration. (SRC-76 L211–212)
 - [[agent-testing-and-evaluation]] — the surrounding module expects testing of integrated retrieval behavior, though this stub does not include lab steps. (SRC-23 L234–251; SRC-76 L216)
+- *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions
 

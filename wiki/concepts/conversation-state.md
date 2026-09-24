@@ -11,7 +11,7 @@ source_ids: [SRC-98, SRC-99, SRC-237, SRC-234]
 objectives: [G07, G08]
 objective_gaps: []
 tags: []
-aliases: ["conversation history", "previous_response_id", "multi-turn conversation", "stateful response tracking", "AgentSession", "service-side chat history"]
+aliases: ["conversation history", "multi-turn conversation", "stateful response tracking", "AgentSession", "service-side chat history"]
 ---
 
 # Conversation state

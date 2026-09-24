@@ -134,6 +134,7 @@ The demo sets up a local Python project, virtual environment and requirements, i
 - [[chat-completions-api]] — the episode explains manual history in ChatCompletions. (SRC-42 L221–283)
 - [[conversation-state]] — the episode's main implementation contrast is state management. (SRC-42 L221–321)
 - [[keyless-authentication]] — the demo uses token-based authentication via `DefaultAzureCredential`. (SRC-42 L610–629)
+- *Module units:* [[src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry|1 Introduction]] · [[src-90-explore-model-playground|2 Explore with the model playground]] · [[src-18-choose-endpoint-sdk|3 Choose an endpoint and SDK]] · [[src-99-generate-responses-responses-api-foundry-sdk|4 Generate responses with the Responses API in the Foundry SDK]] · [[src-98-generate-responses-chatcompletions-api|5 Generate responses with the ChatCompletions API]] · [[src-62-exercise-create-generative-ai-chat-app|6 Exercise - Create a generative AI chat app]] · [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry|7 Knowledge check]] · [[src-214-summary-develop-generative-ai-chat-app-microsoft-foundry|8 Summary]]
 
 ## Open questions
 

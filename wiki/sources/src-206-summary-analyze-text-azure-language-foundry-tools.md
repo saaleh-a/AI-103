@@ -95,6 +95,7 @@ Not covered by this source.
 - [[language-detection]] — one of the three summarized outcomes. (SRC-206 L215–216)
 - [[named-entity-recognition]] — one of the three summarized outcomes. (SRC-206 L215–217)
 - [[pii-detection-and-redaction]] — one of the three summarized outcomes. (SRC-206 L215–218)
+- *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-40-detect-language|3 Detect language]] · [[src-93-extract-entities|6 Extract entities]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions
 

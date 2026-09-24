@@ -92,6 +92,7 @@ Not covered by this source.
 - [[language-detection]] — a capability covered in the module and episode lab. (SRC-40 L217–229; SRC-10 L672–682)
 - [[named-entity-recognition]] — a capability covered in the module and episode lab. (SRC-93 L217–230; SRC-10 L688–695)
 - [[pii-detection-and-redaction]] — a capability covered in the module and episode lab. (SRC-94 L217–225; SRC-10 L702–716)
+- *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-40-detect-language|3 Detect language]] · [[src-93-extract-entities|6 Extract entities]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions
 

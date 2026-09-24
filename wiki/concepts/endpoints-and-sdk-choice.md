@@ -11,7 +11,7 @@ source_ids: [SRC-18, SRC-51, SRC-90, SRC-96, SRC-99, SRC-102, SRC-155, SRC-183]
 objectives: [G05, G06]
 objective_gaps: [P12]
 tags: []
-aliases: ["project endpoint", "choose an endpoint and SDK", "Azure OpenAI endpoint", "tool-specific endpoint"]
+aliases: ["project endpoint", "tool-specific endpoint"]
 ---
 
 # Endpoints and SDK choice

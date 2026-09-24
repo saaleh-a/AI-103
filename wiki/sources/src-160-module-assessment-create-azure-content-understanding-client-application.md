@@ -107,6 +107,7 @@ No code is shown, but the assessment names the `analyze` method and asks what mu
 - [[content-understanding-client-apps]] — the assessment tests the client app's configuration and result-handling concepts. (SRC-160 L212–225)
 - [[content-understanding-analyzers]] — analyzer selection is directly tested. (SRC-160 L217–220)
 - [[azure-content-understanding]] — the API named in the assessment. (SRC-160 L212)
+- *Module units:* [[src-138-introduction-create-azure-content-understanding-client-application|1 Introduction]] · [[src-184-prepare-ai-content-understanding-api|2 Prepare to use the AI Content Understanding API]] · [[src-29-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-6-analyze-content|4 Analyze content]] · [[src-67-exercise-develop-content-understanding-client-application|5 Exercise - Develop a Content Understanding client application]] · [[src-201-summary-create-azure-content-understanding-client-application|7 Summary]]
 
 ## Open questions
 

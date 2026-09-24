@@ -99,6 +99,7 @@ Not covered by this source.
 - [[agent-publishing]] — publishing is the module's first stated capability. (SRC-125 L219–224)
 - [[work-iq]] — Work IQ is named as the data-access route for Microsoft 365 content. (SRC-125 L224–225)
 - [[agent-testing-and-evaluation]] — the module includes testing and troubleshooting integrated agents. (SRC-125 L225–226)
+- *Module units:* [[src-232-understand-foundry-agent-publishing-options|2 Understand Foundry agent publishing options]] · [[src-185-publish-agent-foundry-portal-teams|3 Publish an agent from Foundry portal to Teams]] · [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios|4 Advanced - Use Microsoft 365 Agents Toolkit for complex integration scenarios - Training - Microsoft]] · [[src-2-access-microsoft-365-data-work-iq|5 Access Microsoft 365 data with Work IQ]] · [[src-222-test-iterate-integrated-agent|6 Test and iterate your integrated agent]] · [[src-79-exercise-publish-foundry-agent-teams|7 Exercise - Publish a Foundry agent to Teams]] · [[src-149-knowledge-check-integrate-agent-microsoft-365|8 Knowledge check]] · [[src-209-summary-integrate-agent-microsoft-365|9 Summary]] · [[src-111-integrate-agent-microsoft-365-episode-11|episode 11]]
 
 ## Open questions
 

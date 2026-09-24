@@ -96,6 +96,7 @@ Not covered by this source.
 - [[azure-speech]] — Voice Live speech recognition and synthesis sit in the speech area. (SRC-208 L216)
 - [[conversation-state]] — session management and event handlers are part of the summarized implementation. (SRC-208 L216)
 - [[voices-and-audio-formats]] — speech recognition, synthesis, and real-time audio processing are summarized. (SRC-208 L216)
+- *Module units:* [[src-132-introduction-develop-azure-speech-voice-live-agent-microsoft-foundry|1 Introduction]] · [[src-88-explore-azure-voice-live-api|2 Explore the Azure Voice Live API]] · [[src-31-create-voice-live-agent|3 Create a Voice Live agent]] · [[src-87-explore-ai-voice-live-client-library-python|3 Explore the AI Voice Live Client Library for Python]] · [[src-68-exercise-develop-voice-live-agent|4 Exercise - Develop a Voice Live Agent]] · [[src-159-module-assessment-develop-azure-speech-voice-live-agent-microsoft|5 Module Assessment]] · [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode|episode 20]]
 
 ## Open questions
 

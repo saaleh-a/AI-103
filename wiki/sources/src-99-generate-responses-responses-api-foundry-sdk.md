@@ -113,6 +113,7 @@ Not covered by this source.
 - [[foundry-sdk]] — Responses can be used through the Foundry SDK. (SRC-99 L217; SRC-99 L305)
 - [[generation-parameters]] — temperature, max output tokens and top-p are listed. (SRC-99 L245–251)
 - [[chat-completions-api]] — the source explicitly contrasts and replaces ChatCompletions for most scenarios. (SRC-99 L217–225)
+- *Module units:* [[src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry|1 Introduction]] · [[src-90-explore-model-playground|2 Explore with the model playground]] · [[src-18-choose-endpoint-sdk|3 Choose an endpoint and SDK]] · [[src-98-generate-responses-chatcompletions-api|5 Generate responses with the ChatCompletions API]] · [[src-62-exercise-create-generative-ai-chat-app|6 Exercise - Create a generative AI chat app]] · [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry|7 Knowledge check]] · [[src-214-summary-develop-generative-ai-chat-app-microsoft-foundry|8 Summary]] · [[src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3|episode 3]]
 
 ## Open questions
 

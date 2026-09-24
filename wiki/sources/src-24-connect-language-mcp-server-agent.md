@@ -121,6 +121,7 @@ Not covered by this source.
 - [[human-in-the-loop-approval]] — first tool use requires approval.
 - [[observability-and-tracing]] — logs and JSON response inspection show tool calls.
 - [[keyless-authentication]] — relevant contrast because this tool connection itself uses key-based authentication.
+- *Module units:* [[src-135-introduction-develop-text-analysis-agent-azure-language-mcp-server|1 Introduction]] · [[src-235-understand-azure-language-mcp-server|2 Understand the Azure Language MCP server]] · [[src-70-exercise-develop-text-analysis-agent|4 Exercise - Develop a text analysis agent]] · [[src-150-knowledge-check-develop-text-analysis-agent-azure-language-mcp|5 Knowledge check]] · [[src-200-summary-develop-text-analysis-agent-azure-language-mcp-server|6 Summary]] · [[src-45-develop-text-analysis-agent-azure-language-mcp-server-episode|episode 16]]
 
 ## Open questions
 

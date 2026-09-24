@@ -127,6 +127,7 @@ SRC-19 gives the comparison framework that the episode states conversationally. 
 - [[model-deployment-types]] — demo discusses developer deployment for tuned model testing.
 - [[model-and-app-evaluation]] — episode says testing/evaluation is needed when choosing tools.
 - [[microsoft-foundry]] — portal environment for the demo.
+- *Module units:* [[src-116-introduction-optimize-generative-ai-model-performance-microsoft-foundry|1 Introduction]] · [[src-178-optimize-model-output-prompt-engineering|2 Optimize model output with prompt engineering]] · [[src-102-ground-model-retrieval-augmented-generation|3 Ground your model with Retrieval Augmented Generation]] · [[src-95-fine-tune-model-consistent-behavior|4 Fine-tune a model for consistent behavior]] · [[src-19-compare-combine-optimization-strategies|5 Compare and combine optimization strategies]] · [[src-77-exercise-optimize-generative-ai-model-performance|6 Exercise - Optimize generative AI model performance]] · [[src-161-module-assessment-optimize-generative-ai-model-performance-microsoft-foundry|7 Module assessment]] · [[src-202-summary-optimize-generative-ai-model-performance-microsoft-foundry|8 Summary]]
 
 ## Open questions
 

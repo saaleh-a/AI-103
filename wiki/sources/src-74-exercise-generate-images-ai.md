@@ -92,6 +92,7 @@ Not covered by this source.
 - [[microsoft-foundry]] — the exercise provisions a Foundry project and uses the portal. (SRC-74 L210)
 - [[openai-sdk]] — the exercise mentions Python application consumption, which the module's client-app unit ties to the OpenAI Python SDK. (SRC-74 L210–211; SRC-32 L212)
 - [[quotas-rate-limits-and-cost]] — cleanup matters because Azure resources are created in the exercise. (SRC-74 L213)
+- *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions
 

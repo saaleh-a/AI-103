@@ -109,6 +109,7 @@ Not covered by this source.
 - [[azure-content-understanding]] — the assessment checks the service's purpose. (SRC-164 L212–215)
 - [[content-understanding-analyzers]] — analyzers and schemas are central assessment topics. (SRC-164 L214; SRC-164 L221–225)
 - [[extraction-options-compared]] — the distractors clarify what Content Understanding is not in this module. (SRC-164 L212–225)
+- *Module units:* [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding|1 Introduction]] · [[src-262-what-is-azure-content-understanding|2 What is Azure Content Understanding-]] · [[src-30-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-250-content-understanding-api|4 Use the Content Understanding API]] · [[src-73-exercise-extract-information-multimodal-content|5 Exercise - Extract information from multimodal content]] · [[src-217-summary-create-multimodal-analysis-solution-azure-content-understanding|7 Summary]]
 
 ## Open questions
 

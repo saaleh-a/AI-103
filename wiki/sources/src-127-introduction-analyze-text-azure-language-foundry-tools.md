@@ -101,6 +101,7 @@ Not covered by this source.
 - [[foundry-tools]] — Azure Language is presented as a Foundry Tools capability. (SRC-127 L216)
 - [[development-tools-and-approaches]] — the unit names multiple SDK language options. (SRC-127 L217–220)
 - [[speech-and-language-options-compared]] — the learning path context is natural language solutions. (SRC-127 L217)
+- *Module units:* [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-40-detect-language|3 Detect language]] · [[src-93-extract-entities|6 Extract entities]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions
 

@@ -105,6 +105,7 @@ Not covered by this source.
 - [[model-playgrounds]] — deployed models can be tested without code. (SRC-39 L255–264)
 - [[quotas-rate-limits-and-cost]] — deployment type affects quota, billing, and throughput. (SRC-39 L214–225)
 - [[deployment-options-compared]] — this source provides the model-side deployment comparison. (SRC-39 L214–225)
+- *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 

@@ -126,6 +126,7 @@ Text translation starts by choosing Azure Translator in Foundry Tools, noting th
 - [[foundry-tools]] — the service family used for the specialized tools.
 - [[speech-and-language-options-compared]] — the episode repeatedly distinguishes LLM translation, text translation and speech translation.
 - [[naming-and-currency]] — the episode contains service naming drift worth tracking.
+- *Module units:* [[src-139-introduction-translate-text-speech-microsoft-foundry-tools|1 Introduction]] · [[src-229-translation-microsoft-foundry|2 Translation in Microsoft Foundry]] · [[src-227-translate-text|3 Translate text]] · [[src-226-translate-speech|4 Translate speech]] · [[src-81-exercise-translate-text-speech|5 Exercise - Translate text and speech]] · [[src-166-module-assessment-translate-text-speech-microsoft-foundry-tools|6 Module assessment]] · [[src-218-summary-translate-text-speech-microsoft-foundry-tools|7 Summary]]
 
 ## Open questions
 

@@ -100,6 +100,7 @@ Not covered by this source.
 - [[openai-sdk]] — the OpenAI Python SDK is the named client library. (SRC-101 L212)
 - [[quotas-rate-limits-and-cost]] — the source names simultaneous job limits and download expiration. (SRC-101 L232–234)
 - [[guardrails-and-content-filters]] — prompts are subject to content moderation. (SRC-101 L235–237)
+- *Module units:* [[src-128-introduction-generate-videos-microsoft-foundry|1 Introduction]] · [[src-38-deploy-video-generating-model|2 Deploy a video generating model]] · [[src-100-generate-video-prompt|3 Generate video from a prompt]] · [[src-75-exercise-generate-video-sora-2-microsoft-foundry|5 Exercise - Generate video with Sora 2 in Microsoft Foundry]]
 
 ## Open questions
 

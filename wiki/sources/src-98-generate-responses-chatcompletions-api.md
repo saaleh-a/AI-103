@@ -97,6 +97,7 @@ Not covered by this source.
 - [[conversation-state]] — the source explains manual state tracking. (SRC-98 L222–232)
 - [[responses-api]] — the source uses Responses as the recommended contrast. (SRC-98 L217)
 - [[openai-sdk]] — ChatCompletions is one of the OpenAI-compatible API surfaces discussed in the module. (SRC-18 L301–305)
+- *Module units:* [[src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry|1 Introduction]] · [[src-90-explore-model-playground|2 Explore with the model playground]] · [[src-18-choose-endpoint-sdk|3 Choose an endpoint and SDK]] · [[src-99-generate-responses-responses-api-foundry-sdk|4 Generate responses with the Responses API in the Foundry SDK]] · [[src-62-exercise-create-generative-ai-chat-app|6 Exercise - Create a generative AI chat app]] · [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry|7 Knowledge check]] · [[src-214-summary-develop-generative-ai-chat-app-microsoft-foundry|8 Summary]] · [[src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3|episode 3]]
 
 ## Open questions
 

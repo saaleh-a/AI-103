@@ -109,6 +109,7 @@ The source says Azure Translator can translate or transliterate using either the
 - [[microsoft-foundry]] — the portal surface used for playgrounds and sample code.
 - [[endpoints-and-sdk-choice]] — relevant because the source lists endpoint forms and SDK choices.
 - [[speech-and-language-options-compared]] — useful for separating text translation from speech translation.
+- *Module units:* [[src-139-introduction-translate-text-speech-microsoft-foundry-tools|1 Introduction]] · [[src-229-translation-microsoft-foundry|2 Translation in Microsoft Foundry]] · [[src-226-translate-speech|4 Translate speech]] · [[src-81-exercise-translate-text-speech|5 Exercise - Translate text and speech]] · [[src-166-module-assessment-translate-text-speech-microsoft-foundry-tools|6 Module assessment]] · [[src-218-summary-translate-text-speech-microsoft-foundry-tools|7 Summary]] · [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21|episode 21]]
 
 ## Open questions
 

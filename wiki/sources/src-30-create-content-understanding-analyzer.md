@@ -1,5 +1,5 @@
 ---
-title: "Create a Content Understanding analyzer"
+title: "Create a Content Understanding analyzer — Create a multimodal analysis solution with Azure Content Understanding"
 type: source
 status: active
 confidence: high
@@ -21,7 +21,7 @@ url: "https://learn.microsoft.com/en-gb/training/modules/analyze-content-ai/03-c
 ingest_depth: full
 ---
 
-# Create a Content Understanding analyzer
+# Create a Content Understanding analyzer — Create a multimodal analysis solution with Azure Content Understanding
 
 *learn-unit · Create a multimodal analysis solution with Azure Content Understanding · unit 3 of 7 · SRC-30*
 
@@ -107,6 +107,7 @@ Not covered by this source.
 - [[microsoft-foundry]] — projects and analyzer endpoints are associated with Microsoft Foundry resources. (SRC-30 L215; SRC-30 L227; SRC-30 L239–241)
 - [[content-understanding-client-apps]] — built analyzers become callable by client applications. (SRC-30 L239–241)
 - [[extraction-options-compared]] — analyzer schemas are a key differentiator for structured multimodal extraction. (SRC-30 L214–219)
+- *Module units:* [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding|1 Introduction]] · [[src-262-what-is-azure-content-understanding|2 What is Azure Content Understanding-]] · [[src-250-content-understanding-api|4 Use the Content Understanding API]] · [[src-73-exercise-extract-information-multimodal-content|5 Exercise - Extract information from multimodal content]] · [[src-164-module-assessment-create-multimodal-analysis-solution-azure-content-understanding|6 Module assessment]] · [[src-217-summary-create-multimodal-analysis-solution-azure-content-understanding|7 Summary]]
 
 ## Open questions
 

@@ -112,6 +112,7 @@ Not covered by this source.
 - [[text-to-speech]] — SSML is used when synthesizing speech output. (SRC-246 L218–231)
 - [[voices-and-audio-formats]] — SSML complements voice selection and output-format configuration. (SRC-21 L218–229; SRC-246 L219–224)
 - [[azure-speech]] — the Speech service consumes SSML through `SpeechSynthesizer`. (SRC-246 L231–233)
+- *Module units:* [[src-115-introduction-create-speech-enabled-apps-azure-speech-microsoft-foundry|1 Introduction]] · [[src-13-azure-speech-foundry-tools|2 Azure Speech in Foundry Tools]] · [[src-252-speech-text-api|3 Use the Speech to Text API]] · [[src-253-text-speech-api|4 Use the Text to Speech API]] · [[src-21-configure-audio-format-voices|5 Configure audio format and voices]] · [[src-65-exercise-create-speech-enabled-app|7 Exercise - Create a speech-enabled app]] · [[src-174-module-assessment-create-speech-enabled-apps-azure-speech-microsoft|8 Module assessment]] · [[src-192-summary-create-speech-enabled-apps-azure-speech-microsoft-foundry|9 Summary]] · [[src-35-create-speech-enabled-apps-microsoft-foundry-episode-18|episode 18]]
 
 ## Open questions
 

@@ -81,6 +81,7 @@ The summary says the module is incomplete in the capture, so completion status c
 - [[function-calling]] — named in further reading through Foundry Agent Service function calling.
 - [[agent-tools]] — the module summary is about extending agents with tools.
 - [[tool-options-compared]] — the summary helps anchor the custom-tools branch of the comparison.
+- *Module units:* [[src-122-introduction-integrate-custom-tools-agent|1 Introduction]] · [[src-265-why-custom-tools|2 Why use custom tools]] · [[src-179-options-implementing-custom-tools|3 Options for implementing custom tools]] · [[src-104-how-integrate-custom-tools|4 How to integrate custom tools]] · [[src-58-exercise-build-agent-custom-tools|5 Exercise - Build an agent with custom tools]] · [[src-167-module-assessment-integrate-custom-tools-agent|6 Module assessment]] · [[src-110-integrate-custom-tools-agent-episode-8|episode 8]]
 
 ## Open questions
 - The summary's marketing, communications and market-trend examples are not developed elsewhere in this module's captured Learn pages. (SRC-213 L213)

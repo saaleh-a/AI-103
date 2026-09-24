@@ -11,7 +11,7 @@ source_ids: [SRC-49, SRC-88, SRC-115, SRC-139, SRC-166, SRC-218, SRC-226, SRC-22
 objectives: [P02, T05, T08]
 objective_gaps: []
 tags: []
-aliases: ["translate speech", "Speech Translation API", "speech-to-speech translation", "SpeechTranslationConfig", "TranslationRecognizer"]
+aliases: ["Speech Translation API", "speech-to-speech translation", "SpeechTranslationConfig", "TranslationRecognizer"]
 ---
 
 # Speech translation

@@ -96,6 +96,7 @@ The source records assessment prompts before submission only; it does not captur
 - [[speech-translation]] — the third assessment item tests speech translation configuration.
 - [[azure-speech]] — the assessed SDK objects belong to Azure Speech.
 - [[ai-103-exam]] — the page supplies exam-style checks for this module.
+- *Module units:* [[src-139-introduction-translate-text-speech-microsoft-foundry-tools|1 Introduction]] · [[src-229-translation-microsoft-foundry|2 Translation in Microsoft Foundry]] · [[src-227-translate-text|3 Translate text]] · [[src-226-translate-speech|4 Translate speech]] · [[src-81-exercise-translate-text-speech|5 Exercise - Translate text and speech]] · [[src-218-summary-translate-text-speech-microsoft-foundry-tools|7 Summary]] · [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21|episode 21]]
 
 ## Open questions
 

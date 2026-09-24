@@ -81,6 +81,7 @@ The source uses Microsoft Foundry Agent Service and AI Agent Service wording acr
 - [[custom-tool-options]] — later units describe the specific ways to implement the custom tool.
 - [[function-calling]] — own-code custom tools are introduced here and detailed later.
 - [[tool-options-compared]] — this source contributes the built-in versus custom distinction.
+- *Module units:* [[src-265-why-custom-tools|2 Why use custom tools]] · [[src-179-options-implementing-custom-tools|3 Options for implementing custom tools]] · [[src-104-how-integrate-custom-tools|4 How to integrate custom tools]] · [[src-58-exercise-build-agent-custom-tools|5 Exercise - Build an agent with custom tools]] · [[src-167-module-assessment-integrate-custom-tools-agent|6 Module assessment]] · [[src-213-summary-integrate-custom-tools-agent|7 Summary]] · [[src-110-integrate-custom-tools-agent-episode-8|episode 8]]
 
 ## Open questions
 - The unit does not specify how a custom tool is registered, authenticated or approved. (SRC-122 L217)

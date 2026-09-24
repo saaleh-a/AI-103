@@ -108,6 +108,7 @@ Not covered by this source.
 - [[azure-language]] — PII detection and redaction are Azure Language capabilities. (SRC-94 L218)
 - [[guardrails-and-content-filters]] — PII redaction is related to protecting sensitive content, though this source is about Azure Language rather than content filters. (SRC-94 L217–225)
 - [[decision-boundaries]] — PII redaction must be distinguished from NER and language detection. (SRC-94 L217–225; SRC-93 L217–224; SRC-40 L217–220)
+- *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-40-detect-language|3 Detect language]] · [[src-93-extract-entities|6 Extract entities]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions
 

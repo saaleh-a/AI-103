@@ -93,6 +93,7 @@ Not covered by this source.
 - [[content-understanding-client-apps]] — client apps with SDK or REST are the module outcome. (SRC-201 L216)
 - [[content-understanding-analyzers]] — earlier units explain the analyzer machinery behind the summary's field values. (SRC-29 L216–230; SRC-201 L216)
 - [[extraction-options-compared]] — this service belongs in multimodal extraction comparisons. (SRC-201 L216)
+- *Module units:* [[src-138-introduction-create-azure-content-understanding-client-application|1 Introduction]] · [[src-184-prepare-ai-content-understanding-api|2 Prepare to use the AI Content Understanding API]] · [[src-29-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-6-analyze-content|4 Analyze content]] · [[src-67-exercise-develop-content-understanding-client-application|5 Exercise - Develop a Content Understanding client application]] · [[src-160-module-assessment-create-azure-content-understanding-client-application|6 Module assessment]]
 
 ## Open questions
 

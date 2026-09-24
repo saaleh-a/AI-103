@@ -99,6 +99,7 @@ Not covered by this source.
 - [[model-benchmarks]] — comparison method introduced by the unit. (SRC-114 L219)
 - [[model-deployment-types]] — deployment step after selection. (SRC-114 L220)
 - [[model-and-app-evaluation]] — validation step after deployment. (SRC-114 L221–222)
+- *Module units:* [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 

@@ -134,6 +134,7 @@ The episode includes two presenter-led recall checks rather than a Learn module 
 - [[content-understanding-client-apps]] — the episode demonstrates endpoint, credential, client, and `begin_analyze` usage. (SRC-9 L128–166; SRC-9 L389–421)
 - [[microsoft-entra-id]] — the presenter says Entra ID identity can authenticate Content Understanding. (SRC-9 L134–143)
 - [[extraction-options-compared]] — the episode contrasts a purpose-built extraction tool with a general LLM for an inventory-image scenario. (SRC-9 L61–68)
+- *Module units:* [[src-137-introduction-analyze-images-content-understanding|1 Introduction]] · [[src-264-what-is-content-understanding|2 What is Content Understanding-]] · [[src-8-analyze-images-content-understanding|3 Analyze images with Content Understanding]] · [[src-55-exercise-analyze-images-content-understanding|4 Exercise - Analyze images with Content Understanding]] · [[src-169-module-assessment-analyze-images-content-understanding|5 Module assessment]] · [[src-216-summary-analyze-images-content-understanding|6 Summary]] · [[src-7-analyze-documents-content-understanding-episode-25|episode 25]]
 
 ## Open questions
 

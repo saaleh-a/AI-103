@@ -105,6 +105,7 @@ Not covered by this source.
 - [[voice-live-api]] — this source shows Voice Live used through a Foundry Agent. (SRC-31 L216)
 - [[ai-agents]] — agent-side logic and configuration are central advantages. (SRC-31 L217–220)
 - [[keyless-authentication]] — the recommended client pattern uses Microsoft Entra ID authentication. (SRC-31 L242–243)
+- *Module units:* [[src-132-introduction-develop-azure-speech-voice-live-agent-microsoft-foundry|1 Introduction]] · [[src-88-explore-azure-voice-live-api|2 Explore the Azure Voice Live API]] · [[src-87-explore-ai-voice-live-client-library-python|3 Explore the AI Voice Live Client Library for Python]] · [[src-68-exercise-develop-voice-live-agent|4 Exercise - Develop a Voice Live Agent]] · [[src-159-module-assessment-develop-azure-speech-voice-live-agent-microsoft|5 Module Assessment]] · [[src-208-summary-develop-azure-speech-voice-live-agent-microsoft-foundry|6 Summary]] · [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode|episode 20]]
 
 ## Open questions
 

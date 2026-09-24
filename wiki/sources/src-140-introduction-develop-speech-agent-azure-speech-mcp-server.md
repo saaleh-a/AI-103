@@ -101,6 +101,7 @@ Not covered by this source.
 - [[model-context-protocol]] — the protocol named by the server. (SRC-140 L11)
 - [[mcp-tool-integration]] — the pattern of giving an agent external tool access through MCP. (SRC-140 L11–13)
 - [[speech-and-language-options-compared]] — useful for contrasting direct SDK or REST calls with agent tool integration. (SRC-140 L11)
+- *Module units:* [[src-236-understand-azure-speech-mcp-server|2 Understand the Azure Speech MCP server]] · [[src-25-connect-speech-mcp-server-agent|3 Connect and use the Speech MCP server with an agent]] · [[src-82-exercise-azure-speech-agent|4 Exercise - Use Azure Speech in an agent]] · [[src-144-knowledge-check-develop-speech-agent-azure-speech-mcp-server|5 Knowledge check]] · [[src-204-summary-develop-speech-agent-azure-speech-mcp-server|6 Summary]] · [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19|episode 19]]
 
 ## Open questions
 

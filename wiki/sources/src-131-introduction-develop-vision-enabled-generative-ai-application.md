@@ -93,6 +93,7 @@ Not covered by this source.
 - [[vision-enabled-chat]] — the source introduces chat prompts that mix text and image data. (SRC-131 L212)
 - [[model-selection]] — the source makes visual-input support a model capability question. (SRC-131 L211)
 - [[microsoft-foundry]] — the source places the module's solution-building surface in Microsoft Foundry. (SRC-131 L212)
+- *Module units:* [[src-248-vision-capable-model-microsoft-foundry-portal|2 Use a vision-capable model in the Microsoft Foundry portal]] · [[src-46-develop-vision-based-chat-app|3 Develop a vision-based chat app]] · [[src-71-exercise-develop-vision-enabled-chat-app|4 Exercise - Develop a vision-enabled chat app]] · [[src-173-module-assessment-develop-vision-enabled-generative-ai-application|5 Module assessment]] · [[src-210-summary-develop-vision-enabled-generative-ai-application|6 Summary]] · [[src-47-develop-vision-enabled-generative-ai-application-episode-22|episode 22]]
 
 ## Open questions
 

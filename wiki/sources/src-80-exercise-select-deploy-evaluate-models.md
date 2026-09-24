@@ -86,6 +86,7 @@ Not covered by this source.
 - [[model-selection]] — selection is one of the exercise verbs. (SRC-80 L211)
 - [[model-deployment-types]] — deployment is one of the exercise verbs. (SRC-80 L211)
 - [[model-and-app-evaluation]] — evaluation is one of the exercise verbs. (SRC-80 L211)
+- *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 

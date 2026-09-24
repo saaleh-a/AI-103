@@ -95,6 +95,7 @@ Not covered by this source.
 - [[named-entity-recognition]] — one exercise task.
 - [[pii-detection-and-redaction]] — another exercise task.
 - [[mcp-tool-integration]] — pattern practiced by the lab.
+- *Module units:* [[src-135-introduction-develop-text-analysis-agent-azure-language-mcp-server|1 Introduction]] · [[src-235-understand-azure-language-mcp-server|2 Understand the Azure Language MCP server]] · [[src-24-connect-language-mcp-server-agent|3 Connect and use the Language MCP server with an agent]] · [[src-150-knowledge-check-develop-text-analysis-agent-azure-language-mcp|5 Knowledge check]] · [[src-200-summary-develop-text-analysis-agent-azure-language-mcp-server|6 Summary]] · [[src-45-develop-text-analysis-agent-azure-language-mcp-server-episode|episode 16]]
 
 ## Open questions
 

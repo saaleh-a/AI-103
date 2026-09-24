@@ -11,7 +11,7 @@ source_ids: [SRC-180, SRC-231, SRC-241, SRC-243, SRC-245]
 objectives: [G10]
 objective_gaps: []
 tags: [sequential-orchestration, agent-framework, pipelines]
-aliases: ["SequentialBuilder", "sequential workflow", "agent pipeline"]
+aliases: ["SequentialBuilder", "agent pipeline"]
 ---
 
 # Sequential orchestration

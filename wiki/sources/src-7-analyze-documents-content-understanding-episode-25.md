@@ -138,6 +138,7 @@ The code walkthrough identifies these objects and calls rather than showing a co
 - [[microsoft-foundry]] — code and Studio setup require a Foundry project/resource context. (SRC-7 L938–961)
 - [[microsoft-entra-id]] — Entra ID is one authentication path and the preferred direction stated by the presenter. (SRC-7 L966–973)
 - [[extraction-options-compared]] — prebuilt versus custom analyzer choices and multimodal extraction examples support comparison work. (SRC-7 L188–275)
+- *Module units:* [[src-137-introduction-analyze-images-content-understanding|1 Introduction]] · [[src-264-what-is-content-understanding|2 What is Content Understanding-]] · [[src-8-analyze-images-content-understanding|3 Analyze images with Content Understanding]] · [[src-55-exercise-analyze-images-content-understanding|4 Exercise - Analyze images with Content Understanding]] · [[src-169-module-assessment-analyze-images-content-understanding|5 Module assessment]] · [[src-216-summary-analyze-images-content-understanding|6 Summary]] · [[src-9-analyze-images-content-understanding-episode-24|episode 24]]
 
 ## Open questions
 

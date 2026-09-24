@@ -101,6 +101,7 @@ Not covered by this source.
 - [[foundry-tools]] — the source positions Content Understanding as a Foundry-accessible AI capability. (SRC-262 L215–218)
 - [[content-understanding-analyzers]] — later units build analyzers for the modalities introduced here. (SRC-262 L219–230)
 - [[extraction-options-compared]] — modality examples help distinguish Content Understanding from narrower extraction choices. (SRC-262 L221–230)
+- *Module units:* [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding|1 Introduction]] · [[src-30-create-content-understanding-analyzer|3 Create a Content Understanding analyzer]] · [[src-250-content-understanding-api|4 Use the Content Understanding API]] · [[src-73-exercise-extract-information-multimodal-content|5 Exercise - Extract information from multimodal content]] · [[src-164-module-assessment-create-multimodal-analysis-solution-azure-content-understanding|6 Module assessment]] · [[src-217-summary-create-multimodal-analysis-solution-azure-content-understanding|7 Summary]]
 
 ## Open questions
 

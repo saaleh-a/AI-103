@@ -91,6 +91,7 @@ Not covered by this source.
 - [[speech-to-text]] — transcription is part of the exercise scope. (SRC-83 L212)
 - [[text-to-speech]] — synthesis is part of the exercise scope. (SRC-83 L212)
 - [[microsoft-foundry]] — the exercise names Microsoft Foundry as the platform. (SRC-83 L212)
+- *Module units:* [[src-121-introduction-develop-speech-capable-generative-ai-application|1 Introduction]] · [[src-17-choose-speech-capable-model|2 Choose a speech-capable model]] · [[src-221-synthesize-speech|3 Synthesize speech]] · [[src-225-transcribe-speech|3 Transcribe speech]] · [[src-175-module-assessment-develop-speech-capable-generative-ai-application|5 Module assessment]] · [[src-207-summary-develop-speech-capable-generative-ai-application|6 Summary]] · [[src-44-develop-speech-capable-generative-ai-application-episode-17|episode 17]]
 
 ## Open questions
 

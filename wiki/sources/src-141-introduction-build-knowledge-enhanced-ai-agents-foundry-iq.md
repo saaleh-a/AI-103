@@ -96,6 +96,7 @@ Not covered by this source.
 - [[ai-agents]] — the unit frames agents as the consumers of organizational knowledge. (SRC-141 L213–219)
 - [[knowledge-bases-and-sources]] — the source names shared knowledge bases and data-source configuration as central module outcomes. (SRC-141 L218–224)
 - [[retrieval-options-compared]] — useful later for comparing custom RAG pipelines with Foundry IQ knowledge bases. (SRC-141 L217–219)
+- *Module units:* [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions
 

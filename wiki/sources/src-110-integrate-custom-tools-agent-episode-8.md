@@ -106,6 +106,7 @@ The demo uses a Foundry project endpoint for agent-level work rather than model-
 - [[responses-api]] — the demo uses Responses to create a conversation.
 - [[endpoints-and-sdk-choice]] — the episode distinguishes project endpoint use at the agent level from model-level work.
 - [[tool-options-compared]] — this source provides practical comparison evidence.
+- *Module units:* [[src-122-introduction-integrate-custom-tools-agent|1 Introduction]] · [[src-265-why-custom-tools|2 Why use custom tools]] · [[src-179-options-implementing-custom-tools|3 Options for implementing custom tools]] · [[src-104-how-integrate-custom-tools|4 How to integrate custom tools]] · [[src-58-exercise-build-agent-custom-tools|5 Exercise - Build an agent with custom tools]] · [[src-167-module-assessment-integrate-custom-tools-agent|6 Module assessment]] · [[src-213-summary-integrate-custom-tools-agent|7 Summary]]
 
 ## Open questions
 - The transcript describes code visually but does not preserve complete code snippets, so exact SDK syntax must be verified elsewhere. (SRC-110 L424–585)

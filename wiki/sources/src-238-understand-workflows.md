@@ -80,6 +80,7 @@ Not covered by this source.
 - [[foundry-agent-service]] — workflows coordinate agents, though this unit does not define the service boundary (SRC-238 L221–222).
 - [[human-in-the-loop-approval]] — pausing, requesting input, and escalation are explicit workflow behaviours (SRC-238 L223).
 - [[multi-agent-orchestration]] — workflows coordinate agents with different responsibilities (SRC-238 L222).
+- *Module units:* [[src-118-introduction-build-agent-driven-workflows-microsoft-foundry|1 Introduction]] · [[src-105-identify-workflow-patterns|3 Identify workflow patterns]] · [[src-36-create-workflows-microsoft-foundry|4 Create workflows in Microsoft Foundry]] · [[src-3-add-agents-workflow|5 Add agents to a workflow]] · [[src-11-apply-power-fx-workflows|6 Apply Power Fx in workflows]] · [[src-151-maintain-workflows-microsoft-foundry|7 Maintain workflows in Microsoft Foundry]] · [[src-247-workflows-code|8 Use Workflows in Code]] · [[src-66-exercise-create-agent-driven-workflow|9 Exercise - Create an agent-driven workflow]] · [[src-171-module-assessment-build-agent-driven-workflows-microsoft-foundry|10 Module assessment]] · [[src-219-summary-build-agent-driven-workflows-microsoft-foundry|11 Summary]] · [[src-15-build-agent-driven-workflows-microsoft-foundry-episode-12|episode 12]]
 
 ## Open questions
 - The source does not state how workflow state is stored, secured, or versioned (SRC-238 L220–224).

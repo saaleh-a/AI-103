@@ -74,6 +74,7 @@ Not covered by this source. (SRC-78 L10–13)
 - [[microsoft-foundry]] — the exercise is about exploring Microsoft Foundry. (SRC-78 L10)
 - [[foundry-resources-and-projects]] — likely exercise context, but steps are not captured here. (SRC-78 L13; SRC-155 L15–22)
 - [[development-tools-and-approaches]] — the matching episode says the exercise helps with endpoints and VS Code readiness. (SRC-183 L540–560)
+- *Module units:* [[src-113-introduction-plan-prepare-develop-ai-solutions-azure|1 Introduction]] · [[src-260-what-is-ai|2 What is AI-]] · [[src-96-foundry-tools|3 Foundry Tools]] · [[src-155-microsoft-foundry|4 Microsoft Foundry]] · [[src-51-developer-tools-sdks|5 Developer Tools and SDKs]] · [[src-186-responsible-ai|6 Responsible AI]] · [[src-162-module-assessment-plan-prepare-develop-ai-solutions-azure|8 Module assessment]] · [[src-203-summary-plan-prepare-develop-ai-solutions-azure|9 Summary]] · [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1|episode 1]]
 
 ## Open questions
 - What exact lab steps are launched by the exercise are not available in the captured source. (SRC-78 L13)

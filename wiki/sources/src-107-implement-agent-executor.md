@@ -101,6 +101,7 @@ Not covered by this source.
 - [[a2a-agent-implementation]] — this is the implementation component that executes A2A requests. (SRC-107 L12–14)
 - [[agent2agent-protocol]] — the executor bridges protocol requests to business logic. (SRC-107 L12)
 - [[multi-agent-orchestration]] — the executor enables the agent to participate in collaborative A2A workflows. (SRC-107 L36)
+- *Module units:* [[src-134-introduction-discover-azure-ai-agents-a2a|1 Introduction]] · [[src-37-define-a2a-agent|2 Define an A2A Agent]] · [[src-103-host-a2a-server|4 Host an A2A Server]] · [[src-26-connect-a2a-agent|5 Connect to your A2A Agent]] · [[src-61-exercise-connect-remote-azure-ai-agents-a2a-protocol|6 Exercise - Connect to remote Azure AI Agents with the A2A protocol]] · [[src-157-module-assessment-discover-azure-ai-agents-a2a|7 Module Assessment]] · [[src-205-summary-discover-azure-ai-agents-a2a|8 Summary]]
 
 ## Open questions
 

@@ -107,6 +107,7 @@ Not covered by this source.
 - [[microsoft-365-agents-toolkit]] — Toolkit is the advanced alternative for custom integration needs. (SRC-232 L238–242)
 - [[microsoft-entra-id]] — published agents have distinct Entra identities and application registration. (SRC-232 L220; SRC-232 L228)
 - [[foundry-agent-service]] — agents run in the Foundry Agent Service infrastructure before publication. (SRC-232 L216)
+- *Module units:* [[src-125-introduction-integrate-agent-microsoft-365|1 Introduction]] · [[src-185-publish-agent-foundry-portal-teams|3 Publish an agent from Foundry portal to Teams]] · [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios|4 Advanced - Use Microsoft 365 Agents Toolkit for complex integration scenarios - Training - Microsoft]] · [[src-2-access-microsoft-365-data-work-iq|5 Access Microsoft 365 data with Work IQ]] · [[src-222-test-iterate-integrated-agent|6 Test and iterate your integrated agent]] · [[src-79-exercise-publish-foundry-agent-teams|7 Exercise - Publish a Foundry agent to Teams]] · [[src-149-knowledge-check-integrate-agent-microsoft-365|8 Knowledge check]] · [[src-209-summary-integrate-agent-microsoft-365|9 Summary]] · [[src-111-integrate-agent-microsoft-365-episode-11|episode 11]]
 
 ## Open questions
 

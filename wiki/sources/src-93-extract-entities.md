@@ -100,6 +100,7 @@ Not covered by this source.
 - [[azure-language]] — NER is an Azure Language capability. (SRC-93 L217)
 - [[extraction-options-compared]] — entity extraction is a language-based extraction option. (SRC-93 L217–230)
 - [[decision-boundaries]] — NER must be distinguished from PII redaction and language detection. (SRC-93 L217–224; SRC-94 L217–225; SRC-40 L217–220)
+- *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-40-detect-language|3 Detect language]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-168-module-assessment-analyze-text-azure-language-foundry-tools|9 Module assessment]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions
 
