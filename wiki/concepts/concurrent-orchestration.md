@@ -42,7 +42,7 @@ SRC-241 warns against the pattern when agents must build on each other's work, s
 
 In Microsoft Agent Framework, a concurrent workflow runs multiple agent participants in parallel and returns events containing their results. (SRC-241 L240–247)
 
-The source also says agents need to know which other agents are available, and the orchestration can call all registered agents every time or choose agents dynamically based on the task. (SRC-241 L222)
+The source also says agents need to know which other agents are available, and the orchestration can call all registered agents every time or choose agents dynamically based on the task. (SRC-241 L223)
 
 ## Code and configuration
 

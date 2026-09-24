@@ -52,7 +52,7 @@ This exercise page says learners with an Azure subscription can develop a video-
 - The exercise is to develop a video-generation application using Sora 2 in Microsoft Foundry. (SRC-75 L210)
 - The exercise guides learners through deploying Sora 2. (SRC-75 L210)
 - The exercise includes generating videos from text prompts. (SRC-75 L210–211)
-- The exercise includes using reference images for more control over video content. (SRC-75 L211)
+- The exercise includes using reference images for more control over video content. (SRC-75 L210)
 - The page instructs learners to launch the exercise and follow instructions. (SRC-75 L213)
 
 ## How it works
@@ -67,7 +67,7 @@ Not covered by this source. It names a video-generation application but does not
 
 - **Sora 2:** the model used in the exercise. (SRC-75 L210)
 - **Text prompts:** one input path practiced in the exercise. (SRC-75 L210–211)
-- **Reference images:** the control mechanism named for the exercise. (SRC-75 L211)
+- **Reference images:** the control mechanism named for the exercise. (SRC-75 L210)
 
 ## Decision boundaries and exam cues
 
@@ -93,7 +93,7 @@ Not covered by this source.
 - [[video-generation]] — the exercise practices developing a video-generation application. (SRC-75 L210–211)
 - [[sora-2]] — Sora 2 is the model used in the exercise. (SRC-75 L210)
 - [[microsoft-foundry]] — the exercise uses Sora 2 in Foundry. (SRC-75 L210)
-- [[openai-sdk]] — the surrounding module teaches Python/OpenAI SDK application generation. (SRC-75 L210; SRC-101 L212)
+- [[openai-sdk]] — the surrounding module teaches Python/OpenAI SDK application generation. (SRC-75 L210; SRC-101 L214)
 - *Module units:* [[src-128-introduction-generate-videos-microsoft-foundry|1 Introduction]] · [[src-38-deploy-video-generating-model|2 Deploy a video generating model]] · [[src-100-generate-video-prompt|3 Generate video from a prompt]] · [[src-101-generate-video-python|4 Generate video in Python]]
 
 ## Open questions

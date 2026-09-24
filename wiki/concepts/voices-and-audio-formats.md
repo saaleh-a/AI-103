@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Choosing neural voices and output/input audio formats for Azure Speech synthesis, MCP tools, and real-time voice scenarios."
 area: speech
 source_ids: [SRC-21, SRC-35, SRC-49, SRC-88, SRC-144, SRC-174, SRC-236, SRC-246, SRC-253]
-objectives: [T05, T06]
+objectives: [T05]
 objective_gaps: []
 tags: []
 aliases: ["neural voices", "audio output format", "speech output format", "voice names"]
@@ -61,7 +61,7 @@ This map is an illustration of the relationships preserved in the corpus, not a 
 
 For output format, choose based on the required file type, sample rate, and bit depth (SRC-21 L220–224). For voice, set the desired voice name on `SpeechConfig`; assessment material specifically identifies `speech_synthesis_voice_name` as the property for changing the synthesis voice (SRC-174 L223–227).
 
-For agent speech through the MCP server, the prompt can include the desired voice name, and the server-side tool can generate audio files in formats such as WAV or MP3 (SRC-144 L226–228; SRC-236 L232–233).
+For agent speech through the MCP server, the prompt can include the desired voice name, and the server-side tool can generate audio files in formats such as WAV or MP3 (SRC-144 L226–228; SRC-236 L233–234).
 
 For Voice Live, format choices include PCM16, described in the episode as uncompressed and higher payload but full fidelity, and G.711, described as a compressed speech codec that is smaller while conveying human voice well (SRC-49 L99–119). **Stale-risk:** The exact list of supported voices and formats can change; the sources point readers to Azure Speech SDK documentation for full enumeration values rather than listing them (SRC-21 L227; SRC-21 L233).
 

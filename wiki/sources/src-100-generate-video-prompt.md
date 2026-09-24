@@ -44,14 +44,14 @@ ingest_depth: partial
 
 ## TL;DR
 
-After deploying Sora 2, video generation is asynchronous: submit a request with prompt and video settings, then retrieve the completed video when it is ready. (SRC-100 L212–213) The unit covers the Video playground, content moderation, prompt anatomy, reference images, remixing existing videos, and iteration tips. (SRC-100 L216–270)
+After deploying Sora 2, video generation is asynchronous: submit a request with prompt and video settings, then retrieve the completed video when it is ready. (SRC-100 L214) The unit covers the Video playground, content moderation, prompt anatomy, reference images, remixing existing videos, and iteration tips. (SRC-100 L216–270)
 
 ## Key claims
 
-- Video generation uses an asynchronous submit-and-retrieve pattern. (SRC-100 L212–213)
+- Video generation uses an asynchronous submit-and-retrieve pattern. (SRC-100 L214)
 - The Video playground in Microsoft Foundry portal can test a deployed Sora 2 model. (SRC-100 L216–222)
 - Video generation typically takes 1 to 5 minutes, depending on settings. (SRC-100 L223)
-- Content generation APIs include a content moderation filter, and harmful prompts do not return generated video. (SRC-100 L224–226)
+- Content generation APIs include a content moderation filter, and harmful prompts do not return generated video. (SRC-100 L227–229)
 - The playground can show prefilled cURL code samples through `View code`. (SRC-100 L230)
 - Effective prompts can specify framing, subject, action, lighting and palette, and style. (SRC-100 L231–239)
 - Reference images use the `input_reference` parameter as an anchor for the first frame while the prompt defines what happens next. (SRC-100 L249–251)
@@ -75,7 +75,7 @@ The source names `input_reference` for supplying a visual reference to the model
 ## Decision boundaries and exam cues
 
 - **Inference:** Use prompt generation for a new video, use `input_reference` when the first-frame composition or style should be anchored, and use remix when modifying an existing video without regenerating from scratch. (SRC-100 L249–266)
-- **Inference:** If a prompt is harmful, the content moderation filter can prevent generated video from being returned. (SRC-100 L224–226)
+- **Inference:** If a prompt is harmful, the content moderation filter can prevent generated video from being returned. (SRC-100 L227–229)
 
 ## Assessment items
 

@@ -44,11 +44,11 @@ ingest_depth: partial
 
 ## TL;DR
 
-Python applications can use the OpenAI Python SDK with a Sora 2 deployment in Microsoft Foundry. (SRC-101 L212) Video generation is asynchronous, so the application creates a job, polls for status, and downloads the result when ready. (SRC-101 L212–215)
+Python applications can use the OpenAI Python SDK with a Sora 2 deployment in Microsoft Foundry. (SRC-101 L214) Video generation is asynchronous, so the application creates a job, polls for status, and downloads the result when ready. (SRC-101 L212–215)
 
 ## Key claims
 
-- Programmatic video generation can use the OpenAI Python SDK with a Sora 2 deployment in Microsoft Foundry. (SRC-101 L212)
+- Programmatic video generation can use the OpenAI Python SDK with a Sora 2 deployment in Microsoft Foundry. (SRC-101 L214)
 - Video generation is asynchronous: submit a job, poll for status, and download the result when ready. (SRC-101 L212–215)
 - To use an image as a starting frame, pass it to the `input_reference` parameter. (SRC-101 L220)
 - A reference image's resolution must match the target video size. (SRC-101 L220)
@@ -67,7 +67,7 @@ The code blocks are not preserved in the capture, but the source names the impor
 
 ## Key terms
 
-- **OpenAI Python SDK:** the SDK named for programmatic video generation. (SRC-101 L212)
+- **OpenAI Python SDK:** the SDK named for programmatic video generation. (SRC-101 L214)
 - **input_reference:** the parameter for providing a starting image. (SRC-101 L220)
 - **remix:** the method for modifying an existing video while preserving its structure. (SRC-101 L224–226)
 - **video.error:** the property named for failure details. (SRC-101 L230–231)
@@ -89,15 +89,15 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-100-generate-video-prompt]] introduces the asynchronous prompt-and-retrieve pattern and the `input_reference` parameter. (SRC-100 L212–213; SRC-100 L249–251)
+- [[src-100-generate-video-prompt]] introduces the asynchronous prompt-and-retrieve pattern and the `input_reference` parameter. (SRC-100 L214; SRC-100 L249–251)
 - [[src-38-deploy-video-generating-model]] provides the deployment prerequisite for the SDK workflow. (SRC-38 L212–226)
 - [[src-97-generate-images-video-episode-23]] demonstrates `videos.create`, polling, download, remix, and `input_reference`. (SRC-97 L516–748)
 
 ## Connections
 
 - [[video-generation]] — this source gives the asynchronous video job pattern. (SRC-101 L212–237)
-- [[sora-2]] — the SDK workflow uses a Sora 2 deployment in Foundry. (SRC-101 L212)
-- [[openai-sdk]] — the OpenAI Python SDK is the named client library. (SRC-101 L212)
+- [[sora-2]] — the SDK workflow uses a Sora 2 deployment in Foundry. (SRC-101 L214)
+- [[openai-sdk]] — the OpenAI Python SDK is the named client library. (SRC-101 L214)
 - [[quotas-rate-limits-and-cost]] — the source names simultaneous job limits and download expiration. (SRC-101 L232–234)
 - [[guardrails-and-content-filters]] — prompts are subject to content moderation. (SRC-101 L235–237)
 - *Module units:* [[src-128-introduction-generate-videos-microsoft-foundry|1 Introduction]] · [[src-38-deploy-video-generating-model|2 Deploy a video generating model]] · [[src-100-generate-video-prompt|3 Generate video from a prompt]] · [[src-75-exercise-generate-video-sora-2-microsoft-foundry|5 Exercise - Generate video with Sora 2 in Microsoft Foundry]]

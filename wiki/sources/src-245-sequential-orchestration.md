@@ -43,12 +43,12 @@ ingest_depth: full
 
 ## TL;DR
 
-Sequential orchestration arranges agents in a pipeline where each agent runs after the previous one and passes output forward. (SRC-245 L221) It fits ordered step-by-step refinement and should be avoided for independent parallel work or dynamic collaboration. (SRC-245 L220–235)
+Sequential orchestration arranges agents in a pipeline where each agent runs after the previous one and passes output forward. (SRC-245 L220) It fits ordered step-by-step refinement and should be avoided for independent parallel work or dynamic collaboration. (SRC-245 L220–235)
 
 ## Key claims
 
-- The output from one agent becomes the input for the next agent. (SRC-245 L221)
-- Sequential orchestration is ideal for document review, data transformation pipelines, and multi-stage reasoning. (SRC-245 L221)
+- The output from one agent becomes the input for the next agent. (SRC-245 L220)
+- Sequential orchestration is ideal for document review, data transformation pipelines, and multi-stage reasoning. (SRC-245 L220)
 - The order is fixed and decided beforehand, and agents do not decide what happens next. (SRC-245 L221)
 - Use it for ordered dependent steps, stages that add needed data, and gradual improvements such as drafting, reviewing, and polishing. (SRC-245 L223–227)
 - Avoid it when stages can run independently, one agent can do the task, early failures cannot be corrected, or dynamic routing is required. (SRC-245 L230–235)
@@ -60,8 +60,8 @@ The pattern enforces an ordered dependency chain. (SRC-245 L220–221) Each stag
 
 ## Code and API patterns
 
-- `AzureOpenAIChatClient` is named as the example chat client. (SRC-245 L235)
-- `create_agent` creates named agents with pipeline-specific role instructions. (SRC-245 L236)
+- `AzureOpenAIChatClient` is named as the example chat client. (SRC-245 L238)
+- `create_agent` creates named agents with pipeline-specific role instructions. (SRC-245 L239)
 - `SequentialBuilder` creates the ordered workflow, `participants()` adds agents, and `build()` creates the workflow. (SRC-245 L240)
 - `run_stream` streams workflow events, and `WorkflowOutputEvent` contains results. (SRC-245 L241–242)
 

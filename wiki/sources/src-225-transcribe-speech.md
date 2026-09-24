@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Defines speech-to-text transcription with Foundry speech-capable models and names gpt-4o transcribe options."
 area: speech
 source_ids: [SRC-225]
-objectives: [T05, T07]
+objectives: [T05]
 tags: [speech-to-text, transcription, openai-sdk, azureopenai, microsoft-foundry]
 aliases: ["SRC-225"]
 source_kind: learn-unit

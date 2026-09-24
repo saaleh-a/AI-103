@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "How models and agents use built-in or custom tools to retrieve, compute, act, and return grounded results."
 area: agents
 source_ids: [SRC-4, SRC-91, SRC-104, SRC-230, SRC-234, SRC-254, SRC-255, SRC-256, SRC-257, SRC-259]
-objectives: [P02, P04, P16, G03, G07, G08, G09, I05]
+objectives: [P04, G03, G07, G08, G09]
 objective_gaps: []
 tags: []
 aliases: ["tools", "built-in tools", "tool catalog", "tool calling", "service-provided tools"]

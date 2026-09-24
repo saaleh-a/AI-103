@@ -50,8 +50,8 @@ The summary says generative AI requires a responsible approach to prevent or mit
 - Generative AI requires a responsible approach to prevent or mitigate potentially harmful content. (SRC-211 L218)
 - Responsible practice includes identifying harms relevant to the solution. (SRC-211 L218)
 - Responsible practice includes measuring harms when the system is used. (SRC-211 L219)
-- Responsible practice includes mitigating harmful content generation at multiple levels. (SRC-211 L220)
-- Responsible practice includes deployment plans and preparations for responsible operation. (SRC-211 L221)
+- Responsible practice includes mitigating harmful content generation at multiple levels. (SRC-211 L221)
+- Responsible practice includes deployment plans and preparations for responsible operation. (SRC-211 L222)
 
 ## How it works
 

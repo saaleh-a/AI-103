@@ -44,11 +44,11 @@ ingest_depth: full
 
 ## TL;DR
 
-The module summary says learners published Microsoft Foundry agents to Microsoft Teams and Microsoft 365 Copilot so assistants are available where users already work. (SRC-209 L216) It recaps direct Foundry portal publishing, automatic Bot Service provisioning, Microsoft Entra ID registrations, Microsoft 365 Agents Toolkit for complex cases, publish scopes, RBAC identity concerns, Work IQ through MCP, and next steps for tools, enterprise grounding, and multi-agent systems. (SRC-209 L217–232)
+The module summary says learners published Microsoft Foundry agents to Microsoft Teams and Microsoft 365 Copilot so assistants are available where users already work. (SRC-209 L218) It recaps direct Foundry portal publishing, automatic Bot Service provisioning, Microsoft Entra ID registrations, Microsoft 365 Agents Toolkit for complex cases, publish scopes, RBAC identity concerns, Work IQ through MCP, and next steps for tools, enterprise grounding, and multi-agent systems. (SRC-209 L217–232)
 
 ## Key claims
 
-- The module taught publishing Microsoft Foundry agents to Microsoft Teams and Microsoft 365 Copilot. (SRC-209 L216)
+- The module taught publishing Microsoft Foundry agents to Microsoft Teams and Microsoft 365 Copilot. (SRC-209 L218)
 - Direct Foundry portal publishing automatically provisions Azure Bot Service and creates Microsoft Entra ID registrations. (SRC-209 L219)
 - Microsoft 365 Agents Toolkit is an alternative for complex enterprise scenarios. (SRC-209 L218–219)
 - Shared scope is for testing, and organization scope is for broad distribution. (SRC-209 L220–221)

@@ -90,3 +90,4 @@ The corpus does not provide prompt-shield SDK code. It describes configuration a
 ## Open questions
 
 - The corpus does not give detailed detection algorithms or code-level prompt-shield configuration.
+- **Synthesis:** Gap V15 — the study guide asks for detecting and mitigating indirect prompt injection through text embedded in images (SRC-191 L178); the corpus teaches prompt shields that detect abuse (SRC-156 L231), not image-borne injection. Recorded in [[corpus-gaps]].

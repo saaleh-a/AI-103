@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains testing strategies, deployment, publishing Agent Applications, authentication, endpoint verification, updates, integration code, and production concerns."
 area: agents
 source_ids: [SRC-223]
-objectives: [G12, G15, P07, P10, P12]
+objectives: [G12, P07, P12]
 tags: [agent-testing, deployment, publishing, responses-api, entra-id, application-insights]
 aliases: ["SRC-223"]
 source_kind: learn-unit
@@ -71,7 +71,7 @@ The published endpoint uses the Responses API protocol and follows `https://<fou
 - **Agent Application** — an Azure resource with invocation URL, authentication policy, and Entra agent identity. (SRC-223 L244–246)
 - **Deployment** — a running instance of a specific agent version inside an application with lifecycle management. (SRC-223 L247–248)
 - **Azure AI User role** — the role callers need on the Agent Application resource. (SRC-223 L262–264)
-- **Publish Updates** — the portal action for rolling out a new version. (SRC-223 L276–279)
+- **Publish Updates** — the portal action for rolling out a new version. (SRC-223 L273–276)
 
 ## Decision boundaries and exam cues
 

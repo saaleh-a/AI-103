@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains MCP architecture, dynamic tool discovery, Azure Language MCP capabilities, tool selection, and endpoints."
 area: language
 source_ids: [SRC-235]
-objectives: [T01, T02, G09]
+objectives: [G09]
 tags: [azure-language, mcp, dynamic-tool-discovery, agents]
 aliases: ["SRC-235"]
 source_kind: learn-unit

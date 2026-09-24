@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Foundry distinguishes declarative prompt agents, declarative workflow agents, and hosted agents by configuration style, orchestration needs, and code ownership."
 area: agents
 source_ids: [SRC-14, SRC-20, SRC-84, SRC-190, SRC-212, SRC-230]
-objectives: [P02, G10]
+objectives: [G10]
 tags: []
 aliases: ["prompt agents", "workflow agents", "hosted agents", "declarative agents", "prompt-based agents"]
 objective_gaps: []

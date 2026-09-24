@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Episode walkthrough of connecting Azure Language in Foundry Tools to an agent, approving MCP calls, and invoking it from code."
 area: language
 source_ids: [SRC-45]
-objectives: [G08, G09, T01, T02]
+objectives: [G09, T01, T02]
 tags: [episode, azure-language, mcp, foundry-agent, tool-approval, foundry-sdk]
 aliases: ["SRC-45"]
 source_kind: episode

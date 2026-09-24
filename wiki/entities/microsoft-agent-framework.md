@@ -7,8 +7,8 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Open-source SDK for single and multi-agent apps: agents, chat clients, sessions, tools, providers, and graph-based workflows."
 area: orchestration
-source_ids: [SRC-34, SRC-36, SRC-48, SRC-124, SRC-133, SRC-151, SRC-180, SRC-195, SRC-199, SRC-231, SRC-234, SRC-237, SRC-247]
-objectives: [P04, G07, G08, G10, G16]
+source_ids: [SRC-11, SRC-34, SRC-36, SRC-48, SRC-124, SRC-133, SRC-151, SRC-180, SRC-195, SRC-199, SRC-231, SRC-234, SRC-237, SRC-247]
+objectives: [G07, G08, G10, G16]
 objective_gaps: []
 tags: ["sdk"]
 aliases: ["Agent Framework", "MAF", "Microsoft Agent Framework SDK", "Agent Framework SDK"]
@@ -46,9 +46,9 @@ Agent orchestration lets multiple agents collaborate with different patterns und
 
 Chat clients abstract connections to AI services under a common interface, and the corpus names Azure OpenAI, OpenAI, Anthropic, and additional providers through `BaseChatClient` (SRC-237 L228).
 
-Tools let agents call custom functions or built-in capabilities such as Code Interpreter, File Search, and Web Search where provider support exists (SRC-237 L230; SRC-234 L223–229).
+Tools let agents call custom functions or built-in capabilities such as Code Interpreter, File Search, and Web Search where provider support exists (SRC-237 L229; SRC-234 L223–229).
 
-Conversation management uses `AgentSession` and structured messages with roles such as USER, ASSISTANT, SYSTEM, and TOOL; for Foundry, sessions can be backed by service-side storage in Foundry Agent Service (SRC-237 L231; SRC-34 L232–238).
+Conversation management uses `AgentSession` and structured messages with roles such as USER, ASSISTANT, SYSTEM, and TOOL; for Foundry, sessions can be backed by service-side storage in Foundry Agent Service (SRC-237 L230; SRC-34 L232–238).
 
 Provider flexibility is a core benefit: the common interface lets developers switch the underlying inference service by changing client configuration rather than rewriting agent logic (SRC-234 L235–238).
 
@@ -62,9 +62,9 @@ For multi-agent solutions, the workflow starts by defining agents and capabiliti
 
 ## Decision boundaries
 
-Choose Microsoft Agent Framework when the scenario asks for code-first agent development, provider abstraction, reusable agent logic, custom function tools, service-side or local session management, streaming/non-streaming execution, or multi-agent orchestration patterns in an SDK (SRC-34 L218–260; SRC-237 L220–231; SRC-231 L249–264).
+**Inference:** Choose Microsoft Agent Framework when the scenario asks for code-first agent development, provider abstraction, reusable agent logic, custom function tools, service-side or local session management, streaming/non-streaming execution, or multi-agent orchestration patterns in an SDK (SRC-34 L218–260; SRC-237 L220–231; SRC-231 L249–264).
 
-Choose [[foundry-workflows]] when the scenario asks for a visual/YAML workflow designed in Microsoft Foundry, saved as a project asset, configured through nodes/variables/Power Fx, versioned by the portal, and invoked by workflow name from application code (SRC-36 L220–236; SRC-151 L220–226; SRC-247 L12–16).
+**Inference:** Choose [[foundry-workflows]] when the scenario asks for a visual/YAML workflow designed in Microsoft Foundry, saved as a project asset, configured through nodes/variables/Power Fx, versioned by the portal, and invoked by workflow name from application code (SRC-36 L220–236; SRC-151 L220–226; SRC-247 L12–16; SRC-11 L220–236).
 
 Choose the lower-level [[foundry-sdk]] or [[openai-sdk]] when the task is direct project/model/service access rather than an agent-framework abstraction. **Inference:** This follows from the episode's contrast between Foundry/OpenAI SDKs as relatively single-environment targets and Agent Framework as the higher agentic abstraction layer (SRC-48 L35–61).
 
@@ -105,6 +105,7 @@ Episodes 13 and 14 provide narration and demonstrations: episode 13 explains the
 
 ## Sources
 
+- SRC-11 — [[src-11-apply-power-fx-workflows]] — Power Fx as the expression language for Foundry workflow variables, conditions and loops.
 - SRC-34 — [[src-34-create-azure-ai-agent-microsoft-agent-framework]] — Foundry project connection, credentials, chat client, agent, session, and streaming.
 - SRC-36 — [[src-36-create-workflows-microsoft-foundry]] — Foundry visual workflow contrast.
 - SRC-48 — [[src-48-develop-ai-agent-microsoft-agent-framework-episode-13]] — lineage and higher-level agent framework rationale.

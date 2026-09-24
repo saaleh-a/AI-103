@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains why and how Azure AI Search persists enriched data in a knowledge store as object, table, or file projections."
 area: retrieval
 source_ids: [SRC-181]
-objectives: [I01, I03, P03]
+objectives: []
 tags: [knowledge-store, projections, enriched-data, azure-storage]
 aliases: ["SRC-181"]
 source_kind: learn-unit

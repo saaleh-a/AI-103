@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains using Microsoft Foundry Models to find speech-capable models for transcription and synthesis."
 area: speech
 source_ids: [SRC-17]
-objectives: [P01, T05, T07]
+objectives: [P01]
 tags: [speech, model-selection, microsoft-foundry-models, transcription, synthesis]
 aliases: ["SRC-17"]
 source_kind: learn-unit

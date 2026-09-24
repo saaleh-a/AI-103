@@ -54,11 +54,11 @@ Pattern configuration is visual/declarative in Foundry workflows. The corpus doe
 
 ## Decision boundaries
 
-Choose sequential when the work is a known pipeline with clear stages and predictable handoff from one node to the next (SRC-105 L221).
+**Inference:** Choose sequential when the work is a known pipeline with clear stages and predictable handoff from one node to the next (SRC-105 L221).
 
-Choose human-in-the-loop when the process must pause for approval, confirmation, missing context, uncertainty, or low-confidence escalation (SRC-105 L222; SRC-118 L224–225).
+**Inference:** Choose human-in-the-loop when the process must pause for approval, confirmation, missing context, uncertainty, or low-confidence escalation (SRC-105 L222; SRC-118 L224–225).
 
-Choose group chat when multiple specialised agents must collaborate and adapt to changing inputs rather than follow a fixed path (SRC-105 L223).
+**Inference:** Choose group chat when multiple specialised agents must collaborate and adapt to changing inputs rather than follow a fixed path (SRC-105 L223).
 
 **Inference:** If the exam wording says "multiple tickets without duplicating nodes," the pattern mechanics point to For-Each looping rather than creating repeated branches, because the module explicitly tests For-Each for multiple tickets (SRC-171 L14–17; SRC-118 L224).
 

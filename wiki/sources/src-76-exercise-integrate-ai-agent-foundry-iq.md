@@ -48,7 +48,7 @@ This exercise page is only a launcher: learners with an Azure subscription can e
 
 ## Key claims
 
-- Learners with an Azure subscription can explore Foundry IQ in Microsoft Foundry. (SRC-76 L211–212)
+- Learners with an Azure subscription can explore Foundry IQ in Microsoft Foundry. (SRC-76 L213)
 - Learners without an Azure subscription are told they can sign up for an account that includes credits for the first 30 days. (SRC-76 L213–215)
 - The page instructs learners to launch the exercise and follow instructions that are not included in this capture. (SRC-76 L216)
 
@@ -62,8 +62,8 @@ Not covered by this source.
 
 ## Key terms
 
-- **Microsoft Foundry** — the portal environment the exercise asks learners to explore. (SRC-76 L211–212)
-- **Foundry IQ** — the feature being explored in the exercise. (SRC-76 L211–212)
+- **Microsoft Foundry** — the portal environment the exercise asks learners to explore. (SRC-76 L213)
+- **Foundry IQ** — the feature being explored in the exercise. (SRC-76 L213)
 
 ## Decision boundaries and exam cues
 
@@ -85,8 +85,8 @@ Not covered by this source.
 
 ## Connections
 
-- [[foundry-iq]] — the feature learners are asked to explore. (SRC-76 L211–212)
-- [[microsoft-foundry]] — the environment named for exploration. (SRC-76 L211–212)
+- [[foundry-iq]] — the feature learners are asked to explore. (SRC-76 L213)
+- [[microsoft-foundry]] — the environment named for exploration. (SRC-76 L213)
 - [[agent-testing-and-evaluation]] — the surrounding module expects testing of integrated retrieval behavior, though this stub does not include lab steps. (SRC-23 L234–251; SRC-76 L216)
 - *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 

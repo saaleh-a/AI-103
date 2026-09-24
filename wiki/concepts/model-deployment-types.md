@@ -97,5 +97,6 @@ Configuration fields explicitly named by the corpus include deployment name, dep
 ## Open questions
 
 - The corpus names deployment options and trade-offs, but it does not teach a hands-on quota increase or autoscaling procedure for model deployments. (SRC-39 L217–226; SRC-191 L130–131)
+- **Synthesis:** Gap P09 — the study guide asks for managing quotas, scaling, rate limits and cost footprints (SRC-191 L131); the corpus ties deployment types to scaling, billing and quota (SRC-39 L217–219) but does not teach quota management, rate-limit handling or cost dashboards. Recorded in [[corpus-gaps]].
 
 

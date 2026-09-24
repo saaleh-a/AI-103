@@ -50,10 +50,10 @@ The module assessment checks three points: Content Understanding is for analyzer
 
 - The assessment asks what kind of AI solution Azure Content Understanding helps build. (SRC-164 L212)
 - One option identifies analyzers that extract information from documents, images, videos, and audio files. (SRC-164 L214)
-- The assessment asks which graphical tool should be used to create a Content Understanding project. (SRC-164 L216)
-- One option identifies Content Understanding Studio as the graphical tool. (SRC-164 L219)
-- The assessment asks what to define for information to extract from content. (SRC-164 L221)
-- One option identifies a schema. (SRC-164 L222)
+- The assessment asks which graphical tool should be used to create a Content Understanding project. (SRC-164 L217)
+- One option identifies Content Understanding Studio as the graphical tool. (SRC-164 L220)
+- The assessment asks what to define for information to extract from content. (SRC-164 L222)
+- One option identifies a schema. (SRC-164 L223)
 - The capture does not show submitted results or correct-answer feedback. (SRC-164 L226–228)
 
 ## How it works
@@ -67,8 +67,8 @@ Not covered by this source.
 ## Key terms
 
 - **Analyzer** — appears in an assessment option as the solution type that extracts information from documents, images, videos, and audio files. (SRC-164 L214)
-- **Content Understanding Studio** — appears as a graphical tool option for creating a Content Understanding project. (SRC-164 L219)
-- **Schema** — appears as an option for what to define for the information to extract from content. (SRC-164 L222)
+- **Content Understanding Studio** — appears as a graphical tool option for creating a Content Understanding project. (SRC-164 L220)
+- **Schema** — appears as an option for what to define for the information to extract from content. (SRC-164 L223)
 
 ## Decision boundaries and exam cues
 
@@ -83,15 +83,15 @@ Not covered by this source.
    - Analyzers that extract information from documents, images, videos, and audio files. (SRC-164 L214)
    - Image generators that create visualizations based on descriptions. (SRC-164 L215)
    - Answer: answer not shown in capture. (SRC-164 L226–228)
-2. Which graphical tool should you use to create an Azure Content Understanding project? (SRC-164 L216)
-   - Microsoft Visual Studio. (SRC-164 L217)
-   - Azure Machine Learning studio. (SRC-164 L218)
-   - Content Understanding Studio. (SRC-164 L219)
+2. Which graphical tool should you use to create an Azure Content Understanding project? (SRC-164 L217)
+   - Microsoft Visual Studio. (SRC-164 L218)
+   - Azure Machine Learning studio. (SRC-164 L219)
+   - Content Understanding Studio. (SRC-164 L220)
    - Answer: answer not shown in capture. (SRC-164 L226–228)
-3. What should you define for the information you want to extract from content? (SRC-164 L221)
-   - A schema. (SRC-164 L222)
-   - An index. (SRC-164 L223)
-   - A cluster. (SRC-164 L224)
+3. What should you define for the information you want to extract from content? (SRC-164 L222)
+   - A schema. (SRC-164 L223)
+   - An index. (SRC-164 L224)
+   - A cluster. (SRC-164 L225)
    - Answer: answer not shown in capture. (SRC-164 L226–228)
 
 ## Tensions, caveats and currency

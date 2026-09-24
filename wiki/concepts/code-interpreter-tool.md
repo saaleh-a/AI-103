@@ -18,7 +18,7 @@ aliases: ["code_interpreter", "Python tool", "code execution tool", "Code Interp
 
 ## Summary
 
-`code_interpreter` is the built-in tool that gives a model or agent a Python runtime so it can calculate, analyze data, process files, generate charts, and iterate after execution errors. (SRC-254 L218–224; SRC-91 L234–235)
+`code_interpreter` is the built-in tool that gives a model or agent a Python runtime so it can calculate, analyze data, process files, generate charts, and iterate after execution errors. (SRC-254 L218–224; SRC-254 L251; SRC-91 L234–235)
 
 ## The problem it solves
 
@@ -26,7 +26,7 @@ Some user requests need exact computation or file processing rather than natural
 
 ## Mental model
 
-The model becomes a supervised analyst with a temporary Python workspace: it decides code execution is useful, writes Python, runs it in a sandbox, sees the output or error, and folds the result into the response. (SRC-254 L238–244)
+The model becomes a supervised analyst with a temporary Python workspace: it decides code execution is useful, writes Python, runs it in a sandbox, sees the output or error, and folds the result into the response. (SRC-254 L238–244; SRC-254 L251)
 
 ## What the sources say
 
@@ -44,7 +44,7 @@ The runtime is sandboxed and has access to common libraries such as pandas, nump
 
 ## Code and configuration
 
-The corpus's captured code blocks are elided by the Learn capture, but the process is explicit: include `code_interpreter` in the tools array, let the model analyze the task, let it generate Python, run the code, and return results to the model. (SRC-254 L238–244) The source advises prompts to be specific about data format and expected output, and notes many models internally use the name `python tool`, so instructions can use that language. (SRC-254 L245–246)
+The corpus's captured code blocks are elided by the Learn capture (SRC-254 L229–237), but the process is explicit: include `code_interpreter` in the tools array, let the model analyze the task, let it generate Python, run the code, and return results to the model. (SRC-254 L238–244) The source advises prompts to be specific about data format and expected output, and notes many models internally use the name `python tool`, so instructions can use that language. (SRC-254 L245–246)
 
 ## Decision boundaries
 

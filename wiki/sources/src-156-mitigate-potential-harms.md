@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains layered mitigation across model, safety system, prompting and grounding, and user experience."
 area: responsible-ai
 source_ids: [SRC-156]
-objectives: [P13, P14, G13]
+objectives: [P13, G13]
 tags: [responsible-ai, mitigation, guardrails, rag]
 aliases: ["SRC-156"]
 source_kind: learn-unit

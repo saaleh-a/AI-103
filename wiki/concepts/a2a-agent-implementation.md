@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Implementation path for A2A agents: define skills and card, implement executor logic, host HTTP server, then connect clients."
 area: orchestration
 source_ids: [SRC-26, SRC-37, SRC-61, SRC-103, SRC-107, SRC-134, SRC-157, SRC-205, SRC-105, SRC-108, SRC-124, SRC-133, SRC-231]
-objectives: [G10, G16]
+objectives: [G10]
 objective_gaps: []
 tags: []
 aliases: ["agent card", "agent executor", "A2A server", "A2A client", "A2A agent implementation"]

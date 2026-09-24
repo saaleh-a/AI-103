@@ -218,3 +218,141 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   and one shifted window is clearly and uniquely better (≥ 0.45, +0.20 over cited, +0.10 over the
   runner-up) will fix them without touching correct citations. Dry run: 105 re-citations on 47 pages;
   all 4 reviewer-found offsets in the dry run match the reviewers' fixes, and 4 of 4 spot checks are right.
+- Change: the session tool (not part of the verifier) applied the 105 re-citations on 47 pages; no claim
+  text, label or objective changed.
+- Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME — the lint verifies that each cited range
+  exists and is not navigation, not that it is the carrying line).
+- Judgement (panel, incremental): one panel page changed — microsoft-agent-framework, where only SRC-237
+  L230 → L229 changed. Re-judged FAIL on two untouched decision rules (unlabelled) and a Power Fx claim
+  missing its SRC-11 citation → 3/20 → 4/20; the tool's verdict is REGRESSED.
+- Decision: **kept** — every reviewer-prescribed offset in scope was matched, and the new failure is on
+  lines the cycle did not touch (a different reviewer sampled different claims).
+- Lessons: (1) a similarity search is a cheap, checkable way to repair small offsets, but it only fixes
+  what is weak by its own measure — it cannot see a correct-looking citation on the wrong line.
+  (2) Incremental re-judging of a changed page re-samples the *whole* page, so it surfaces old defects;
+  a REGRESSED verdict caused only by untouched claims is measurement variance, and is recorded as such
+  rather than reverted.
+
+## Cycle 10 — decision rules the cited lines do not state (2026-09-24)
+- Hypothesis: the decision-boundary sections still hold "Choose/Use X when…" rules that are the wiki's
+  own comparison, not a source statement; labelling every such rule whose cited lines do not state it
+  as **Inference:** — and keeping the ones whose lines do — plus the 18 precise fixes the reviewers
+  named in cycles 7 and 9, clears the open panel failures.
+- Change: 28 decision-rule lines labelled **Inference:** (8 in step a; 20 comparative or composite
+  rules in step b); 9 rules left sourced after reading their cited lines (e.g. "Use the Foundry SDK
+  with the project endpoint when…" is SRC-18 L292–300 almost verbatim). Reviewer-named fixes, each
+  checked against the raw lines: SRC-254 L251 added for error iteration; SRC-49 L130–139 → L174–177
+  (the preview remark); SRC-39 L247–254 → L243–250; SRC-22 L8–10 → L12; SRC-2 L266–270 → L264–269;
+  SRC-242 L256–261 → L259–263; SRC-84 L233–257 → L232–257; SRC-11 L220–236 added for Power Fx
+  (and SRC-11 joins `source_ids`); objective trims −T02 −V13 (extraction), −T02 (speech), −I02
+  (src-22), −P12 (src-2), −I07 −I08 (src-262), −G11 (agent-building), −P05 (M365 integration);
+  src-181 objectives cleared; the glossary scope statement no longer cites SRC-191; src-167 lists
+  the assessment options without implying answers; model-playgrounds' contrast labelled Inference.
+- Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).
+- Judgement (panel, incremental): 6 changed panel pages re-judged by two fresh reviewers —
+  microsoft-agent-framework PASS; five FAIL, each on a claim neither cycle 9 nor cycle 10 touched
+  (checked with `git diff 2ec0446`): code-interpreter (the "code blocks are elided" clause cites
+  L238–244; the markers are at L229–237), extraction-options (an uncited vision-model contrast; V11
+  claimed with no video-workflow teaching), speech-and-language ("low-latency", "interruptible" not in
+  the cited lines), model-playgrounds (SRC-197 L213 is "See the Text and images tab…"; the claim is
+  L214), foundry-toolkit (SRC-84 L247–252 misses the hosted-agent line L246) → **4/20 → 5/20**;
+  the tool's verdict is REGRESSED.
+- Decision: **kept** — every fix is verified against the raw lines; the five failures are old defects on
+  newly sampled claims.
+- Lesson: one failure (SRC-197 L213) belongs to a mechanical class — a citation whose every line is
+  Learn page chrome cannot carry a claim. A scan found 64 such citations.
+
+### Panel ledger after cycle 10 (FAIL rows; all other panel pages PASS)
+| Panel page | Verdict | Criterion | Problem |
+|---|---|---|---|
+| code-interpreter-tool | FAIL | 2 | elided-code clause cites SRC-254 L238–244; markers at L229–237 |
+| extraction-options-compared | FAIL | 1, 8 | vision-model contrast uncited; V11 claimed |
+| speech-and-language-options-compared | FAIL | 1, 6 | "low-latency", "interruptible" not in SRC-88 lines |
+| model-playgrounds | FAIL | 2 | SRC-197 L213 is chrome; claim at L214 |
+| foundry-toolkit-for-vs-code | FAIL | 2 | SRC-84 L247–252 misses L246 |
+
+## Cycle 11 — chrome-only citations and the five panel failures (2026-09-24)
+- Hypothesis: citations whose every cited line is Learn page chrome (`Tip`, `Note`, `Copy`, a
+  language tab, `Completed 100 XP`, `35 minutes`, "See the Text and images tab…") are a mechanical
+  defect class — the reviewer found one on the panel and a scan finds 64 wiki-wide; re-citing each to
+  the adjacent teaching line that carries the claim (keeping the ones whose claim is *about* the
+  capture), together with exact fixes for the five panel failures, brings the panel back to ≤ 2/20.
+- Change: of the 64 chrome-only citations, 49 re-cited to the carrying line after reading it (e.g.
+  SRC-100 L212–213 → L214 for asynchronous video generation; SRC-76 L211–212 → L213 for "explore
+  Foundry IQ"; SRC-74 L212 → L211 for "launch the exercise and follow the instructions"); one dropped
+  (SRC-30 L215 duplicated two carrying cites); one claim rewritten to what the lines say (foundry-iq's
+  exercise sentence said "Azure AI Foundry"; SRC-76 L210–216 says Microsoft Foundry); 13 kept — 9
+  because the claim is about the capture itself (code-block markers, a completed-status line, the
+  next-unit link) and 4 where the scan misread an `Lx-Ly` range. The retrieval-options safety inference now cites
+  SRC-255 L252 ("Retrieval improves grounding but doesn't replace human review for sensitive
+  decisions") and SRC-257 L225 instead of fine-tuning lines. Panel fixes: code-interpreter cites
+  SRC-254 L229–237 for the elided code; extraction-options labels the vision contrast **Inference:**
+  with SRC-131 L211–212 and SRC-210 L213–214, and drops V11; speech-and-language and voice-live-api
+  cite SRC-49 L8–14 ("A real-time, low-latency, full duplex conversation … interrupted when we need
+  to") and SRC-31 L226 (VAD detects interruptions), and the second SRC-49 L130–139 copy → L174–177;
+  model-playgrounds SRC-197 L213 → L214; foundry-toolkit SRC-84 L238 + L246 for hosted agents,
+  L232 for the product name, L233–248 for the three sections.
+- Generator aid: `scripts/find_locator_drift.py` also lists chrome-only citations (skipping claims
+  about the capture); after the cycle it reports 0.
+- Also: web-search-tool's rule "current, public, indexable web information" → "current, external web
+  information (SRC-257 L218–221)" — the source says neither *public* nor *indexable*.
+- Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).
+- Judgement (panel, incremental): the 5 changed panel pages re-judged by two fresh reviewers —
+  code-interpreter, extraction-options, model-playgrounds and foundry-toolkit PASS; speech-and-language
+  FAIL on two claims the cycle did not touch (the Speech MCP **Disputed:** row did not cite the SRC-43
+  managed-identity line; "model-catalog … deployed" cited only SRC-17 L218–221) → **5/20 → 1/20**
+  (meets the ≤ 2/20 bar). Recorded as `verdict SAME`: the mechanical score did not move and the panel
+  rate fell.
+- Decision: kept.
+- Lesson: a mechanical defect class found once by a reviewer is worth a wiki-wide scan; the scan here
+  found 64 instances of what the panel showed as one.
+
+## Rotating diagnostic sample after cycle 11 (seed 11) — the panel is overfit (2026-09-24)
+- Drawn with `loop_sample.draw(11, set())` — no preference for changed pages — so the 20 pages are an
+  unbiased stratified sample (8 source, 6 concept, 3 entity, 3 synthesis); judged by two fresh
+  reviewers under the v4 protocol on the same tree the panel judged at 1/20.
+- Result: **10/20 fail** (6/10 and 4/10). Criterion 8 on 6 pages — objective over-claims (src-5 P12,
+  G12; src-189 P09, G06; language-detection T01; speech-translation P02, T05) and `objective_gaps`
+  on pages that do not discuss the gap (guardrails V14; endpoints P12). Criterion 2 on 5 pages —
+  assessment options cited to the question line (src-164), one-to-nine-line offsets (src-145),
+  episode segment ranges that miss part of the claim (src-189), a range one clause short
+  (naming-and-currency, a panel page, SRC-228 L279–314 vs L320), a count cited to the wrong segment
+  (key-tensions). Criterion 3 on key-tensions — **Disputed:** used for qualifications.
+- Diagnosis: the panel has been re-judged and repaired every cycle since cycle 3; its failures were
+  fixed one by one, so it now measures the repairs rather than the wiki (a validation set that has
+  been trained on). The ratchet rules stay as they are, but the honest quality estimate is a fresh
+  unbiased sample, and repairs must target classes that exist off the panel.
+- Recorded without `--panel` (diagnosis).
+
+## Cycle 12 — the rotating sample's defect classes, wiki-wide (2026-09-24)
+- Hypothesis: the rotating sample's failures are instances of four classes that exist across the
+  wiki: (1) objective over-claims — the v3 objective audit (cycle 2) covered only concept, entity and
+  synthesis pages, and the 125 source pages with objectives were never audited; (2) `objective_gaps`
+  on pages that never discuss the gap (12 of 16 such pages); (3) **Disputed:** used for tensions that
+  are qualifications, not conflicts (all 8 labels); (4) small locator offsets. Fixing every specific
+  finding, clearing classes 2–3 directly and auditing all 686 objective claims against criterion 8
+  (class 1) lowers the failure rate of a fresh rotating sample.
+- Changes (step a): every rotating-sample finding fixed after reading the raw lines — src-164 option
+  citations (8, including two the reviewer did not list), src-145 (6 locators), src-189 (segment
+  ranges, −P09 −G06), naming-and-currency (SRC-228 L279–320), key-tensions (137 at SRC-228 L389–390,
+  "over 90" at SRC-227 L216), src-5 (−P12 −G12), language-detection (−T01), speech-translation
+  (−P02 −T05); the speech page's remaining failure ("SDK version details" now cites SRC-87 L218,
+  "As of version 1.0.0, this SDK is async-only").
+  Class 2: nine pages now state the gap they list, each with the study-guide line and a link to
+  [[corpus-gaps]] (P08 ×2, P09, P10/G12/G15, P12, T07, V14, V15, G15); three drop IDs they were only
+  adjacent to (model-benchmarks −P10, responsible-ai-lifecycle −P15 −G12 −G15,
+  agent-building-options −P08). Class 3: all eight **Disputed:** labels relabelled — none records two
+  sources that conflict (the Speech MCP auth difference is an episode aside, the Responses/
+  ChatCompletions row says itself it is "not a product conflict", chain-of-thought is a coverage gap);
+  key-tensions becomes `status: active` with a summary that says what it holds.
+- Changes (step b, class 1): ten read-only generator agents audited all 686 objective claims on 231
+  pages against criterion 8, calibrated with the reviewers' verdicts; each returned KEEP/DROP per ID
+  with the named parts and a citation for doubtful keeps. 131 claims dropped on 82 pages; none added.
+  The dominant patterns: G05 (Foundry SDKs and connectors) claimed by Responses-API tool pages
+  (6); G12 (deployed-agent monitoring) by publishing and demo pages (8); I04 (RAG ingestion flow)
+  by OCR and enrichment pages (7); G06 (app connection to a project) by API and overview pages (6);
+  P13/P14/P15 by responsible-AI planning pages that name controls without configuring them (10);
+  T07 (audio reasoning) by transcription pages (3). Claims fell 686 → 555; the objective map is
+  unchanged (40 taught · 13 taught in part · 11 named only · 0 no page), because every dropped claim
+  had another page that teaches the objective — the over-claims were redundant as well as wrong.
+- Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).

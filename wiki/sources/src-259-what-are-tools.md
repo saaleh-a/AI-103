@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Defines model tools in Microsoft Foundry and shows where tools are specified in Responses API calls."
 area: agents
 source_ids: [SRC-259]
-objectives: [G03, G05, G09]
+objectives: [G03, G09]
 tags: [tools, responses-api, microsoft-foundry, tool-calling]
 aliases: ["SRC-259"]
 source_kind: learn-unit

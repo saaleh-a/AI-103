@@ -65,7 +65,7 @@ Not covered by this source.
 ## Key terms
 
 - **Organizational knowledge** — policies, procedures, product documentation, support articles, and domain expertise that agents need for company-specific answers. (SRC-141 L216)
-- **Retrieval Augmented Generation (RAG)** — introduced as the approach that connects agents to real-time information. (SRC-141 L221; SRC-141 L228)
+- **Retrieval Augmented Generation (RAG)** — introduced as the approach that connects agents to real-time information. (SRC-141 L219; SRC-141 L227)
 - **Foundry IQ** — Microsoft's unified knowledge platform for organizational data access by AI agents. (SRC-141 L219)
 - **Knowledge bases** — shared stores that multiple agents can access and that improve all connected agents when updated. (SRC-141 L219)
 
@@ -85,14 +85,14 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-239-understanding-rag-agents]] supplies the RAG mechanism that this introduction says comes next. (SRC-141 L228; SRC-239 L214–231)
+- [[src-239-understanding-rag-agents]] supplies the RAG mechanism that this introduction says comes next. (SRC-141 L227; SRC-239 L214–231)
 - [[src-85-explore-foundry-iq]] expands the shared platform claim by describing knowledge bases, data-source integration, and built-in retrieval intelligence. (SRC-141 L219; SRC-85 L219–251)
 - [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10]] presents the same module arc in video form: RAG fundamentals, Foundry IQ, retrieval configuration, and an end-to-end integration. (SRC-141 L220–226; SRC-16 L14–26)
 
 ## Connections
 
 - [[foundry-iq]] — the product introduced as the shared knowledge platform for agents. (SRC-141 L219)
-- [[retrieval-augmented-generation]] — the grounding pattern the module starts with. (SRC-141 L221; SRC-141 L228)
+- [[retrieval-augmented-generation]] — the grounding pattern the module starts with. (SRC-141 L222; SRC-141 L227)
 - [[ai-agents]] — the unit frames agents as the consumers of organizational knowledge. (SRC-141 L213–219)
 - [[knowledge-bases-and-sources]] — the source names shared knowledge bases and data-source configuration as central module outcomes. (SRC-141 L219–224)
 - [[retrieval-options-compared]] — useful later for comparing custom RAG pipelines with Foundry IQ knowledge bases. (SRC-141 L219)

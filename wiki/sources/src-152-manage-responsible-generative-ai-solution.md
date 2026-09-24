@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Covers prerelease reviews, phased release, incident response, rollback, blocking, feedback, and telemetry."
 area: responsible-ai
 source_ids: [SRC-152]
-objectives: [P10, P13, P15]
+objectives: []
 tags: [responsible-ai, operations, telemetry, incident-response]
 aliases: ["SRC-152"]
 source_kind: learn-unit
@@ -43,7 +43,7 @@ ingest_depth: full
 
 ## TL;DR
 
-Management begins after harms have been mapped, measured, and mitigated and before release. (SRC-152 L216) The source recommends prerelease compliance reviews and operational plans. (SRC-152 L218–227) Responsible operation includes phased delivery, incident response, rollback, harmful-response blocking, misuse blocking, feedback, and privacy-compliant telemetry. (SRC-152 L227–233)
+Management begins after harms have been mapped, measured, and mitigated and before release. (SRC-152 L218) The source recommends prerelease compliance reviews and operational plans. (SRC-152 L218–227) Responsible operation includes phased delivery, incident response, rollback, harmful-response blocking, misuse blocking, feedback, and privacy-compliant telemetry. (SRC-152 L227–233)
 
 ## Key claims
 
@@ -85,7 +85,7 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-182-plan-responsible-generative-ai-solution]] names management as the final stage. (SRC-182 L17)
+- [[src-182-plan-responsible-generative-ai-solution]] names management as the final stage. (SRC-182 L12–16)
 - [[src-170-module-assessment-implement-responsible-generative-ai-solution-microsoft-foundry]] asks why phased delivery is useful. (SRC-170 L226–229)
 - [[src-106-implement-responsible-generative-ai-solution-microsoft-foundry-episode-6]] ties management to accountability, monitoring, and looping back. (SRC-106 L282–305)
 

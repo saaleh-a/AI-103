@@ -22,7 +22,7 @@ Agent publishing is the move from a development agent in a Foundry project to a 
 
 ## The problem it solves
 
-The corpus frames the Microsoft 365 problem as a gap between where the agent was built and where users work: an agent can work in the Foundry playground, while users want to chat with it in Teams or Microsoft 365 Copilot without switching applications. (SRC-125 L216–219) Publishing bridges that gap by making Foundry agents available in those work surfaces. (SRC-125 L219–226)
+The corpus frames the Microsoft 365 problem as a gap between where the agent was built and where users work: an agent can work in the Foundry playground, while users want to chat with it in Teams or Microsoft 365 Copilot without switching applications. (SRC-125 L216–219) Publishing bridges that gap by making Foundry agents available in those work surfaces. (SRC-125 L216–223)
 
 ## Mental model
 

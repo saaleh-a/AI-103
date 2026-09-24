@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "How to choose between the Foundry portal, playgrounds, VS Code, GitHub, SDKs, REST APIs and tool-specific SDKs."
 area: platform
-source_ids: [SRC-14, SRC-18, SRC-51, SRC-84, SRC-90, SRC-96, SRC-155, SRC-183, SRC-190]
+source_ids: [SRC-5, SRC-14, SRC-18, SRC-51, SRC-84, SRC-90, SRC-96, SRC-155, SRC-183, SRC-190, SRC-191]
 objectives: [G05, G06]
 objective_gaps: [P08]
 tags: []
@@ -87,6 +87,7 @@ Do not choose SDKs by language alone. SRC-18 and SRC-51 distinguish SDKs by targ
 
 ## Sources
 
+- SRC-5 — [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios]] — Microsoft 365 Agents Toolkit advanced scenarios, which name CI/CD pipelines in passing.
 - SRC-14 — [[src-14-build-first-agent-microsoft-foundry]] — portal agent-building flow.
 - SRC-18 — [[src-18-choose-endpoint-sdk]] — SDK and endpoint decision rules.
 - SRC-51 — [[src-51-developer-tools-sdks]] — portal, IDE, GitHub and SDK survey.
@@ -96,9 +97,11 @@ Do not choose SDKs by language alone. SRC-18 and SRC-51 distinguish SDKs by targ
 - SRC-155 — [[src-155-microsoft-foundry]] — SDK automation and DevOps pipeline mention.
 - SRC-183 — [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1]] — episode comparison of portal, VS Code, REST and SDKs.
 - SRC-190 — [[src-190-set-up-visual-studio-code-agent-development]] — VS Code setup and project connection.
+- SRC-191 — [[src-191-study-guide-exam-ai-103-developing-ai-apps-agents]] — official study guide: objective wording for the recorded corpus gap.
 
 ## Open questions
 
 - The corpus names GitHub and CI/CD, and SRC-155 says the SDK can automate project operations in DevOps pipelines, but these assigned sources do not provide full CI/CD pipeline implementation steps. (SRC-51 L230–231; SRC-155 L32)
+- **Synthesis:** Gap P08 — the study guide asks for integrating Foundry projects with CI/CD pipelines (SRC-191 L129); the corpus names CI/CD pipelines only in passing, for the Microsoft 365 Agents Toolkit (SRC-5 L224), and does not teach a Foundry CI/CD pipeline. Recorded in [[corpus-gaps]].
 
 

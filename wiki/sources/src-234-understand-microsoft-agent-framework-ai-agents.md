@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains Microsoft Agent Framework features, unified Agent base class, Foundry integration, service-side history, and provider flexibility."
 area: agents
 source_ids: [SRC-234]
-objectives: [G06, G07, G08, G09]
+objectives: [G08, G09]
 tags: [microsoft-agent-framework, foundry-agent-service, agent-base-class, service-side-history]
 aliases: ["SRC-234"]
 source_kind: learn-unit

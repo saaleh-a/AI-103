@@ -100,3 +100,4 @@ Configuration choices that affect cost and throughput include deployment type, V
 ## Open questions
 
 - The corpus does not teach rate-limit errors, retry/backoff, quota request procedures, scaling runbooks or budget alert configuration. (SRC-191 L130–131)
+- **Synthesis:** Gap G15 — the study guide asks for observability with token analytics and latency breakdowns (SRC-191 L158); the corpus does not teach building token-analytics or latency-breakdown views. Recorded in [[corpus-gaps]].

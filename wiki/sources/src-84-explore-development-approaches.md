@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Compares Foundry portal and VS Code development approaches, their workflows, required resources, and optional services for agents."
 area: agents
 source_ids: [SRC-84]
-objectives: [G07, G08, G09, P04]
+objectives: []
 tags: [development-approaches, foundry-portal, visual-studio-code, agent-development]
 aliases: ["SRC-84"]
 source_kind: learn-unit

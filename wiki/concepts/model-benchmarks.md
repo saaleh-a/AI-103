@@ -8,8 +8,8 @@ updated: 2026-09-24
 summary: "Quality, safety, cost and performance metrics used in Foundry leaderboards and model cards to compare model trade-offs before deployment."
 area: models
 source_ids: [SRC-114, SRC-188, SRC-191]
-objectives: [P01, G04]
-objective_gaps: [P10]
+objectives: [P01]
+objective_gaps: []
 tags: []
 aliases: ["benchmarks", "model leaderboards", "Foundry model leaderboard", "model cards benchmarks"]
 ---

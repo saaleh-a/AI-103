@@ -44,7 +44,7 @@ ingest_depth: stub
 
 ## TL;DR
 
-This exercise page says learners will provision a Microsoft Foundry project, deploy an image-generation model, explore image generation in the Foundry portal, and use Python to consume the model from a custom application. (SRC-74 L210–211) The raw capture does not include the lab steps; it only tells learners to launch the exercise and follow instructions. (SRC-74 L212)
+This exercise page says learners will provision a Microsoft Foundry project, deploy an image-generation model, explore image generation in the Foundry portal, and use Python to consume the model from a custom application. (SRC-74 L210–211) The raw capture does not include the lab steps; it only tells learners to launch the exercise and follow instructions. (SRC-74 L211)
 
 ## Key claims
 
@@ -55,7 +55,7 @@ This exercise page says learners will provision a Microsoft Foundry project, dep
 
 ## How it works
 
-Not covered by this source. The page is an exercise launcher rather than the exercise procedure. (SRC-74 L212)
+Not covered by this source. The page is an exercise launcher rather than the exercise procedure. (SRC-74 L210–213)
 
 ## Code and API patterns
 
@@ -77,7 +77,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The lab instructions are outside the captured source. (SRC-74 L212)
+- The lab instructions are outside the captured source. (SRC-74 L211)
 - The cleanup warning implies the exercise creates Azure resources that may remain after the lab. (SRC-74 L213)
 
 ## Relation to other sources
@@ -90,13 +90,13 @@ Not covered by this source.
 
 - [[image-generation]] — the exercise practices image generation with a deployed model. (SRC-74 L210)
 - [[microsoft-foundry]] — the exercise provisions a Foundry project and uses the portal. (SRC-74 L210)
-- [[openai-sdk]] — the exercise mentions Python application consumption, which the module's client-app unit ties to the OpenAI Python SDK. (SRC-74 L210–211; SRC-32 L212)
+- [[openai-sdk]] — the exercise mentions Python application consumption, which the module's client-app unit ties to the OpenAI Python SDK. (SRC-74 L210–211; SRC-32 L214)
 - [[quotas-rate-limits-and-cost]] — cleanup matters because Azure resources are created in the exercise. (SRC-74 L213)
 - *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions
 
-- The source does not include lab files, commands, deployment names, expected images, or validation criteria. (SRC-74 L212)
+- The source does not include lab files, commands, deployment names, expected images, or validation criteria. (SRC-74 L210–213)
 
 ## Sources
 

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Bringing Foundry agents into Teams and Microsoft 365 Copilot, with publishing, Work IQ data access, permissions, testing, and Toolkit extensions."
 area: agents
 source_ids: [SRC-2, SRC-5, SRC-111, SRC-125, SRC-185, SRC-209, SRC-222, SRC-232]
-objectives: [P04, P05, P12, G09]
+objectives: [P04, P12]
 objective_gaps: []
 tags: []
 aliases: ["integrate your agent with Microsoft 365", "Microsoft 365 data access", "Teams agent integration", "Microsoft 365 Copilot agent integration"]
@@ -18,7 +18,7 @@ aliases: ["integrate your agent with Microsoft 365", "Microsoft 365 data access"
 
 ## Summary
 
-Microsoft 365 agent integration means making a Foundry agent available in Microsoft 365 work surfaces and, when needed, giving agent development access to Microsoft 365 context. In this corpus the integration has three homes: [[agent-publishing]] owns distribution to Teams/Copilot, [[work-iq]] owns permission-trimmed Microsoft 365 data access, and [[microsoft-365-agents-toolkit]] owns advanced proxy-app integration. (SRC-125 L216–226; SRC-209 L218–224)
+Microsoft 365 agent integration means making a Foundry agent available in Microsoft 365 work surfaces and, when needed, giving agent development access to Microsoft 365 context. **Synthesis:** In this corpus the integration has three homes: [[agent-publishing]] owns distribution to Teams/Copilot, [[work-iq]] owns permission-trimmed Microsoft 365 data access, and [[microsoft-365-agents-toolkit]] owns advanced proxy-app integration. (SRC-125 L216–226; SRC-209 L218–224)
 
 ## The problem it solves
 

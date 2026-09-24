@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Episode walkthrough defining agents, contrasting portal and code approaches, building an IT support agent, and calling it from Python."
 area: agents
 source_ids: [SRC-41]
-objectives: [G07, G08, G09, G12]
+objectives: [G07, G08, G09]
 tags: [episode, ai-agents, microsoft-foundry, visual-studio-code, foundry-sdk, code-interpreter, file-search]
 aliases: ["SRC-41"]
 source_kind: episode

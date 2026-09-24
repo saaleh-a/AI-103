@@ -49,7 +49,7 @@ The Foundry playground is useful for development testing, but it does not simula
 ## Key claims
 
 - Ongoing testing and monitoring help ensure the published agent performs reliably for users. (SRC-222 L218)
-- After publishing, the source says to test in Teams for UI rendering, authentication flows, production response times, and published identity permissions. (SRC-222 L217–220)
+- After publishing, the source says to test in Teams for UI rendering, authentication flows, production response times, and published identity permissions. (SRC-222 L220–223)
 - Multiple-user testing can reveal phrasing differences, confusing responses, and platform-specific issues across desktop, web, and mobile Teams clients. (SRC-222 L225–226)
 - If an agent does not respond in Teams, possible causes include Bot Service not running, bad Bot Service configuration, or network issues. (SRC-222 L223–231)
 - If tools work in Foundry but fail in Teams, the likely cause is missing permissions on the published agent identity. (SRC-222 L232–238)

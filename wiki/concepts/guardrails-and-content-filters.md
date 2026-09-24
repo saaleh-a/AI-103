@@ -99,3 +99,4 @@ The corpus does not provide SDK code for creating guardrails. It does show and d
 ## Open questions
 
 - The corpus does not include exact API calls or limits for guardrail configuration.
+- **Synthesis:** Gap V14 — the study guide asks for filters that classify unsafe or disallowed visual content (SRC-191 L177); the corpus teaches guardrails with harm categories and severity levels for generative AI in general (SRC-156 L230), not image-specific classification filters. Recorded in [[corpus-gaps]].

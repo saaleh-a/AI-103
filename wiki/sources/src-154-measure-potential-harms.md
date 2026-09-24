@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Shows how to baseline harmful outputs with prompts, generated responses, and strict criteria."
 area: responsible-ai
 source_ids: [SRC-154]
-objectives: [P13, P14]
+objectives: [P14]
 tags: [responsible-ai, evaluation, harm-measurement]
 aliases: ["SRC-154"]
 source_kind: learn-unit
@@ -83,7 +83,7 @@ Not covered by this source.
 ## Relation to other sources
 
 - [[src-153-map-potential-harms]] provides the harm list to measure. (SRC-153 L231–244)
-- [[src-156-mitigate-potential-harms]] uses baseline comparison after mitigation. (SRC-156 L216)
+- [[src-156-mitigate-potential-harms]] uses baseline comparison after mitigation. (SRC-156 L218)
 - [[src-106-implement-responsible-generative-ai-solution-microsoft-foundry-episode-6]] describes measurement as testing current outputs. (SRC-106 L48–75)
 
 ## Connections

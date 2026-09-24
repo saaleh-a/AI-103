@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Agents combine models, instructions, tools, state, and controlled action to perform tasks beyond ordinary chat completion."
 area: agents
 source_ids: [SRC-14, SRC-28, SRC-91, SRC-104, SRC-230, SRC-237, SRC-260]
-objectives: [P04, G07, G09]
+objectives: [G07]
 tags: []
 aliases: ["agent", "what is an agent", "agentic AI", "AI agent", "agentic loop"]
 objective_gaps: []

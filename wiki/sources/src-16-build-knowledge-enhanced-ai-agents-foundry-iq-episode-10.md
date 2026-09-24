@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Episode walkthrough of RAG limits, Foundry IQ data-source categories, retrieval instructions, portal setup, and client-side approval handling."
 area: retrieval
 source_ids: [SRC-16]
-objectives: [G02, G08, G09, G12, P03, P04, I05]
+objectives: [G02, G08, G09, P03, P04, I05]
 tags: [episode, foundry-iq, rag, azure-ai-search, blob-storage, agent-approvals, vs-code]
 aliases: ["SRC-16"]
 source_kind: episode

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains when to use Microsoft 365 Agents Toolkit as a proxy-app approach for custom SSO, middleware, debugging, CI/CD, and multi-environment deployments."
 area: agents
 source_ids: [SRC-5]
-objectives: [P07, P12, G12]
+objectives: [P07]
 tags: [microsoft-365-agents-toolkit, proxy-application, custom-sso, middleware, ci-cd]
 aliases: ["SRC-5"]
 source_kind: learn-unit

@@ -17,7 +17,7 @@ aliases: ["glossary", "terms"]
 
 ## Summary
 
-**Synthesis:** This glossary gives one-line definitions for every compiled concept and entity page in `wiki/concepts` and `wiki/entities`; each entry links to the detailed page and cites raw corpus evidence through that page's source citations (SRC-191 L113–201).
+**Synthesis:** This glossary gives one-line definitions for every compiled concept and entity page in `wiki/concepts` and `wiki/entities`; each entry links to the detailed page and cites raw corpus evidence through that page's source citations.
 
 ## Scope and question
 
@@ -133,7 +133,6 @@ aliases: ["glossary", "terms"]
 
 | **Synthesis:** Claim | Sources |
 |---|---|
-| The glossary covers the wiki's compiled concept and entity layer for AI-103 study and navigation. | SRC-191 L113–201 |
 | **Synthesis:** Individual definitions cite the raw sources shown inline beside each term. | See each glossary entry. |
 
 ## Tensions

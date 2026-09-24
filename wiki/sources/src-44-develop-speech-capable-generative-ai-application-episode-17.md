@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Episode demo: choose, deploy, and call speech-to-text and text-to-speech GPT-4o models from a Foundry project."
 area: speech
 source_ids: [SRC-44]
-objectives: [P01, G01, T05, T07]
+objectives: [P01, G01, T05]
 tags: [episode, speech, transcription, text-to-speech, microsoft-foundry, openai-sdk]
 aliases: ["SRC-44"]
 source_kind: episode

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Search indexes are JSON-document collections with configured fields that apps query, filter, facet and sort in Azure AI Search."
 area: retrieval
 source_ids: [SRC-22, SRC-92, SRC-102, SRC-181, SRC-187, SRC-261]
-objectives: [P03, G02, I01, I02]
+objectives: [P03, I01]
 tags: []
 aliases: ["index schema", "index fields", "field attributes", "Azure AI Search index"]
 objective_gaps: []

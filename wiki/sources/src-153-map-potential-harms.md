@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains identifying, prioritizing, testing, verifying, documenting, and sharing potential harms."
 area: responsible-ai
 source_ids: [SRC-153]
-objectives: [P13, P14]
+objectives: []
 tags: [responsible-ai, harm-mapping, red-team]
 aliases: ["SRC-153"]
 source_kind: learn-unit
@@ -43,7 +43,7 @@ ingest_depth: full
 
 ## TL;DR
 
-Mapping is the first responsible generative AI stage. (SRC-153 L216) The stage identifies harms, prioritizes them, tests and verifies prioritized harms, and documents and shares verified harms. (SRC-153 L217–222) The source emphasizes services, models, fine-tuning, grounding data, documentation, impact assessment, and red-team testing as inputs to harm discovery. (SRC-153 L224–229; SRC-153 L237–242)
+Mapping is the first responsible generative AI stage. (SRC-153 L218) The stage identifies harms, prioritizes them, tests and verifies prioritized harms, and documents and shares verified harms. (SRC-153 L217–222) The source emphasizes services, models, fine-tuning, grounding data, documentation, impact assessment, and red-team testing as inputs to harm discovery. (SRC-153 L224–229; SRC-153 L237–242)
 
 ## Key claims
 

@@ -7,8 +7,8 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Advanced Microsoft 365 tooling for proxy-app integration, custom SSO, middleware, multi-environment deployment, debugging, and CI/CD."
 area: agents
-source_ids: [SRC-5, SRC-149, SRC-209, SRC-232]
-objectives: [G05]
+source_ids: [SRC-5, SRC-149, SRC-191, SRC-209, SRC-232]
+objectives: []
 objective_gaps: [P08]
 tags: ["tool"]
 aliases: ["Agents Toolkit", "Microsoft 365 Agents Playground", "Microsoft 365 Agents SDK", "Custom Engine Agent"]
@@ -68,6 +68,7 @@ The corpus uses Microsoft 365 Agents Toolkit and Agents Toolkit for the same too
 - SRC-5 is the dedicated Toolkit source for when to use it and how the proxy approach works. (SRC-5 L218–241)
 - SRC-149 asks when to choose it over direct publishing. (SRC-149 L237–244)
 - SRC-209 summarizes it as an alternative for complex enterprise scenarios. (SRC-209 L218–220)
+**Synthesis:** Gap P08 — the advanced toolkit unit names CI/CD pipelines among its complex integration scenarios (SRC-5 L224), but the corpus does not teach integrating Foundry projects with CI/CD pipelines, which the study guide asks for (SRC-191 L129). Recorded in [[corpus-gaps]].
 
 ## Connections
 
@@ -83,5 +84,6 @@ The corpus uses Microsoft 365 Agents Toolkit and Agents Toolkit for the same too
 
 - SRC-5 — [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios]] — Toolkit definition, proxy architecture, setup, and decision boundary
 - SRC-149 — [[src-149-knowledge-check-integrate-agent-microsoft-365]] — assessed Toolkit selection cue
+- SRC-191 — [[src-191-study-guide-exam-ai-103-developing-ai-apps-agents]] — official study guide: objective wording for the recorded corpus gap.
 - SRC-209 — [[src-209-summary-integrate-agent-microsoft-365]] — module summary mention
 - SRC-232 — [[src-232-understand-foundry-agent-publishing-options]] — Toolkit introduced as advanced alternative

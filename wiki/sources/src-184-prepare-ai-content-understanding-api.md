@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Lists the Foundry resource, endpoint, key, SDK, Python, and default model-deployment prerequisites for Content Understanding API clients."
 area: extraction
 source_ids: [SRC-184]
-objectives: [I08]
+objectives: []
 tags: [content-understanding, microsoft-foundry, endpoint, api-key, python-sdk]
 aliases: ["SRC-184"]
 source_kind: learn-unit

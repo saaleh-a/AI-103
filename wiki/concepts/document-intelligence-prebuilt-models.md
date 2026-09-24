@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Read, layout, and document-type models for extracting text, structure, and common business fields without custom training."
 area: extraction
 source_ids: [SRC-117, SRC-165, SRC-224, SRC-249, SRC-251, SRC-263]
-objectives: [I04, I06]
+objectives: [I06]
 tags: []
 aliases: ["prebuilt models", "read model", "layout model", "invoice model"]
 ---
@@ -44,10 +44,10 @@ The corpus does not include a full prebuilt-model code listing in this unit. It 
 
 ## Decision boundaries
 
-- Use the read model for words and lines only; it extracts printed/handwritten text, detects language per line, and is ideal when structure is not fixed or predictable (SRC-249 L220–223).
-- Use the layout model for text plus tables, selection marks, structure, or optional key-value pairs; it extends read with structural extraction and handles angled documents and complex tables (SRC-249 L224–229).
-- Use a prebuilt document-type model for fixed fields from a common business document; form-specific models identify a fixed field set, such as `CustomerName` and `InvoiceTotal` for invoices (SRC-249 L242–248).
-- Use a custom model for an industry-specific or unique form; prebuilt models cover common document types, while unique forms may need custom training (SRC-249 L249–250).
+- **Inference:** Use the read model for words and lines only; it extracts printed/handwritten text, detects language per line, and is ideal when structure is not fixed or predictable (SRC-249 L220–223).
+- **Inference:** Use the layout model for text plus tables, selection marks, structure, or optional key-value pairs; it extends read with structural extraction and handles angled documents and complex tables (SRC-249 L224–229).
+- **Inference:** Use a prebuilt document-type model for fixed fields from a common business document; form-specific models identify a fixed field set, such as `CustomerName` and `InvoiceTotal` for invoices (SRC-249 L242–248).
+- **Inference:** Use a custom model for an industry-specific or unique form; prebuilt models cover common document types, while unique forms may need custom training (SRC-249 L249–250).
 
 **Exam cue:** The assessment asks for the layout model when the task is to extract text and table structure from varying-format documents without identifying specific labelled fields (SRC-165 L215–219).
 

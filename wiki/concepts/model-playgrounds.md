@@ -26,14 +26,14 @@ Before writing app code, you need a fast way to discover whether a deployment be
 
 ## Mental model
 
-A playground is an interactive test bench attached to a Foundry project or deployment. It is not the production app and it is not the evaluator service. It is where a developer manually changes input, instructions, model choice, and generation settings, observes output, and learns what configuration should later be captured in code or evaluation datasets (SRC-39 L252–263; SRC-53 L220–225).
+A playground is an interactive test bench attached to a Foundry project or deployment. **Inference:** It is not the production app and it is not the evaluator service (SRC-39 L252; SRC-53 L223–225). It is where a developer manually changes input, instructions, model choice, and generation settings, observes output, and learns what configuration should later be captured in code or evaluation datasets (SRC-39 L252–263; SRC-53 L220–225).
 
 ## What the sources say
 
 - The model playground in Foundry is an interactive environment for testing models before writing code; it can send prompts, adjust temperature and max tokens, add system messages, and experiment with models and configurations (SRC-90 L218–225).
 - A deployment can be tested immediately in a playground. The playground preselects the deployment, displays both input and output, supports simple and complex prompts, system messages, generation parameters, and code samples for calling the deployed model programmatically (SRC-39 L252–263).
 - The agent portal includes an integrated playground where you select the Playground tab, start a conversation, keep session history, test multi-turn interactions, and verify that the agent maintains context appropriately (SRC-14 L236–238).
-- Image generation can be explored in the Foundry portal model playground by submitting prompts and viewing generated images; subject to model support, resolution and reference image options can be specified (SRC-86 L212–215). The image-generation summary names the Images playground as the exploration surface (SRC-197 L213).
+- Image generation can be explored in the Foundry portal model playground by submitting prompts and viewing generated images; subject to model support, resolution and reference image options can be specified (SRC-86 L212–215). The image-generation summary names the Images playground as the exploration surface (SRC-197 L214).
 - Video generation uses a Video playground after Sora 2 deployment: choose the Playground tab, enter a video prompt, configure settings such as resolution and duration, generate the video, and view prefilled cURL samples (SRC-100 L221–230).
 - Vision-capable chat can be tested in the chat playground by uploading a local image and adding text to elicit a multimodal response (SRC-248 L219–221).
 - The episode demo uses side-by-side playground comparison to see how models differ on the same prompt, then moves to automated evaluation when manual comparison is not enough (SRC-189 L661–760).

@@ -56,7 +56,7 @@ The source says simple AI agents face enterprise limitations that prevent accura
 
 ## How it works
 
-The unit presents RAG as a pipeline that changes the source of context. (SRC-239 L223–227) First, the system searches knowledge bases for relevant content. (SRC-239 L227) Second, it combines retrieved content with the user's question so the model has factual context. (SRC-239 L226) Third, the agent generates a response from both its training data and the retrieved information. (SRC-239 L227)
+The unit presents RAG as a pipeline that changes the source of context. (SRC-239 L223–227) First, the system searches knowledge bases for relevant content. (SRC-239 L225) Second, it combines retrieved content with the user's question so the model has factual context. (SRC-239 L226) Third, the agent generates a response from both its training data and the retrieved information. (SRC-239 L227)
 
 ## Code and API patterns
 

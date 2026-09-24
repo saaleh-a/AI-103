@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Decision table for built-in tools, function tools, Azure Functions, OpenAPI, Logic Apps, MCP, and A2A boundaries."
 area: agents
 source_ids: [SRC-4, SRC-25, SRC-26, SRC-37, SRC-91, SRC-103, SRC-104, SRC-107, SRC-108, SRC-110, SRC-134, SRC-179, SRC-205, SRC-233, SRC-236, SRC-240, SRC-254, SRC-255, SRC-256, SRC-257, SRC-259, SRC-265]
-objectives: [P04, P16, G07, G08, G09, G10, G11, T05, T06, I05]
+objectives: [P04, P16, G07, G08, G09, G10, G11, I05]
 objective_gaps: []
 tags: []
 aliases: []

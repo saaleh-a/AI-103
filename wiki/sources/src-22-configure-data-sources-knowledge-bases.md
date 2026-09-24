@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Catalogs Foundry IQ knowledge-base source types and gives decision guidance for Azure AI Search, Blob Storage, web, SharePoint, and OneLake."
 area: retrieval
 source_ids: [SRC-22]
-objectives: [P03, P04, G09, I01, I02, I05]
+objectives: [P03, P04, G09, I01, I05]
 tags: [foundry-iq, data-sources, azure-ai-search, blob-storage, sharepoint, onelake, web-grounding]
 aliases: ["SRC-22"]
 source_kind: learn-unit
@@ -48,7 +48,7 @@ Foundry IQ supports six primary knowledge-base data source types: Azure AI Searc
 
 ## Key claims
 
-- A Foundry IQ knowledge base is only as useful as the data it contains, and data sources are configured when setting up the knowledge base. (SRC-22 L8–10)
+- A Foundry IQ knowledge base is only as useful as the data it contains, and data sources are configured when setting up the knowledge base. (SRC-22 L12)
 - Azure AI Search Index is best when an organization already has processed and indexed data and wants enterprise-scale search capabilities. (SRC-22 L15–24)
 - Azure Blob Storage retrieves documents and files directly from blob containers, including PDFs, Word files, text, Markdown, and HTML. (SRC-22 L25–36)
 - Web access grounds an agent in real-time internet content via Bing, especially for recent or frequently changing information. (SRC-22 L37–48)
@@ -94,13 +94,13 @@ Not covered by this source.
 ## Relation to other sources
 
 - [[src-85-explore-foundry-iq]] introduces the data-source integration idea that this page expands into a source-by-source guide. (SRC-85 L234–241; SRC-22 L11–83)
-- [[src-23-configure-retrieval-foundry-iq]] follows data-source setup by configuring how agents should retrieve, cite, and fall back. (SRC-22 L8–10; SRC-23 L214–278)
+- [[src-23-configure-retrieval-foundry-iq]] follows data-source setup by configuring how agents should retrieve, cite, and fall back. (SRC-22 L12; SRC-23 L214–278)
 - [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq]] tests SharePoint Remote as the real-time SharePoint option and scoring profiles as a relevance feature. (SRC-22 L49–61; SRC-147 L217–225)
 
 ## Connections
 
 - [[knowledge-bases-and-sources]] — the source's main topic is selecting data sources for Foundry IQ knowledge bases. (SRC-22 L8–14)
-- [[foundry-iq]] — the product context for the data-source choices. (SRC-22 L8–10)
+- [[foundry-iq]] — the product context for the data-source choices. (SRC-22 L12)
 - [[azure-ai-search]] — both a direct source option and the indexing layer for SharePoint Indexed. (SRC-22 L15–24; SRC-22 L62–70)
 - [[search-indexes]] — existing Azure AI Search indexes can become knowledge-base sources. (SRC-22 L15–24)
 - [[retrieval-options-compared]] — this page supplies source-choice boundaries for grounding options. (SRC-22 L75–83)

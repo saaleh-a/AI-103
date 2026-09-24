@@ -65,7 +65,7 @@ The source names a Python application and the OpenAI SDK as part of the module o
 
 - **Sora 2:** the video-generation model named for Microsoft Foundry. (SRC-128 L212–214)
 - **Reference images:** one input type named for Sora 2 video generation. (SRC-128 L213)
-- **Remixing existing videos:** one named way to generate or revise video scenes. (SRC-128 L213)
+- **Remixing existing videos:** one named way to generate or revise video scenes. (SRC-128 L212)
 - **OpenAI SDK:** the SDK named for building a Python video-generation application. (SRC-128 L213)
 
 ## Decision boundaries and exam cues

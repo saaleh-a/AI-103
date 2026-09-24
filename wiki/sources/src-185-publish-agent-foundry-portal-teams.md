@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Walks through preparing, publishing, testing, approving, permissioning, and updating a Foundry agent for Teams and Microsoft 365 Copilot."
 area: agents
 source_ids: [SRC-185]
-objectives: [P07, P12, G12]
+objectives: [P07, P12]
 tags: [foundry-portal, teams, agent-publishing, azure-bot-service, rbac]
 aliases: ["SRC-185"]
 source_kind: learn-unit
@@ -105,7 +105,7 @@ Not covered by this source.
 ## Connections
 
 - [[agent-publishing]] — this is the step-by-step portal publishing source. (SRC-185 L216–299)
-- [[microsoft-365-agent-integration]] — Teams and Microsoft 365 Copilot are the target surfaces. (SRC-185 L216; SRC-185 L243–244)
+- [[microsoft-365-agent-integration]] — Teams and Microsoft 365 Copilot are the target surfaces. (SRC-185 L218; SRC-185 L243–244)
 - [[microsoft-entra-id]] — publishing involves Entra application registration and a new agent identity. (SRC-185 L226–227; SRC-185 L281–292)
 - [[keyless-authentication]] — the page emphasizes identity and RBAC role assignment after publishing. (SRC-185 L281–292)
 - [[agent-testing-and-evaluation]] — the package and published agent must be tested in Teams. (SRC-185 L268–277)

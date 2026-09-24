@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains index field attributes, Lucene full-text search, query processing, filters, facets, and sorting in Azure AI Search."
 area: retrieval
 source_ids: [SRC-187]
-objectives: [I02, P03, P11]
+objectives: [P03]
 tags: [search-indexes, query-syntax, lucene, filters, facets, sorting]
 aliases: ["SRC-187"]
 source_kind: learn-unit

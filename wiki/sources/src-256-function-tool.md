@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains function calling: the model requests a named function call, the app executes it, and returns function output."
 area: agents
 source_ids: [SRC-256]
-objectives: [G03, G05, G08, G09]
+objectives: [G03, G08, G09]
 tags: [function-calling, tools, responses-api, custom-functions]
 aliases: ["SRC-256"]
 source_kind: learn-unit

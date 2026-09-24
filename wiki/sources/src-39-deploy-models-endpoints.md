@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains Foundry deployment types, deployment configuration, playground testing, and endpoint details needed by applications."
 area: models
 source_ids: [SRC-39]
-objectives: [P06, P07, P09, G01, G06]
+objectives: [P06, P07, G01, G06]
 tags: [model-deployment, endpoints, playground]
 aliases: ["SRC-39"]
 source_kind: learn-unit
@@ -51,7 +51,7 @@ After selection, a model must be deployed so applications can access it through 
 - Deployment types include Global Standard, Global Provisioned, Global Batch, Data Zone Standard, Data Zone Provisioned, Data Zone Batch, Standard, Regional Provisioned, and Developer. (SRC-39 L216–226)
 - Global Standard is recommended whenever possible for Foundry resources because it provides maximum capabilities. (SRC-39 L227)
 - Deployment configuration includes deployment name and deployment type; managed compute also requires VM SKU and instance count. (SRC-39 L235–240)
-- After deployment, the Build > Models area shows deployment configuration/status, endpoint URL, authentication keys or tokens, monitoring/usage metrics, and settings/delete options. (SRC-39 L247–254)
+- After deployment, the Build > Models area shows deployment configuration/status, endpoint URL, authentication keys or tokens, monitoring/usage metrics, and settings/delete options. (SRC-39 L243–250)
 - The playground lets a learner test a deployed model immediately, adjust system messages and generation parameters, and view code samples. (SRC-39 L255–264)
 - Applications need the endpoint URL, authentication key or Entra ID token, and deployment name. (SRC-39 L265–270)
 
@@ -95,7 +95,7 @@ Not covered by this source.
 - [[src-188-select-models-benchmarks]] precedes deployment by comparing models before making them consumable. (SRC-188 L215–219; SRC-39 L215)
 - [[src-53-evaluate-model-performance]] follows deployment by evaluating whether the deployed model meets requirements. (SRC-39 L215; SRC-53 L213–216)
 - [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks which deployment type is general-use with largest quota. (SRC-39 L218; SRC-145 L218–222)
-- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] demonstrates Global Standard deployment and playground comparison. (SRC-39 L216–240; SRC-189 L184–309; SRC-189 L661–760)
+- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] demonstrates Global Standard deployment and playground comparison. (SRC-39 L216–240; SRC-189 L209–309; SRC-189 L661–760)
 
 ## Connections
 

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Defines Content Understanding as a Foundry generative AI service for extracting insights from documents, images, audio, and video."
 area: extraction
 source_ids: [SRC-262]
-objectives: [P02, I06, I07, I08, V10]
+objectives: [P02, I06, V10]
 tags: [content-understanding, microsoft-foundry, multimodal-analysis]
 aliases: ["SRC-262"]
 source_kind: learn-unit
@@ -44,16 +44,16 @@ ingest_depth: full
 
 ## TL;DR
 
-Azure Content Understanding is described as a generative AI service for extracting insights and data from multiple kinds of content. (SRC-262 L214) It is available through Microsoft Foundry and can be developed in the Foundry portal, Content Understanding Studio, or the Content Understanding API. (SRC-262 L215–218)
+Azure Content Understanding is described as a generative AI service for extracting insights and data from multiple kinds of content. (SRC-262 L216) It is available through Microsoft Foundry and can be developed in the Foundry portal, Content Understanding Studio, or the Content Understanding API. (SRC-262 L215–218)
 
 ## Key claims
 
-- Azure Content Understanding extracts insights and data from multiple kinds of content. (SRC-262 L214)
-- Content Understanding can support applications that analyze complex data and generate outputs for process automation and optimization. (SRC-262 L214)
-- Content Understanding is available through Microsoft Foundry. (SRC-262 L215)
-- Using Content Understanding requires provisioning a Microsoft Foundry resource in an Azure subscription. (SRC-262 L215)
+- Azure Content Understanding extracts insights and data from multiple kinds of content. (SRC-262 L216)
+- Content Understanding can support applications that analyze complex data and generate outputs for process automation and optimization. (SRC-262 L216)
+- Content Understanding is available through Microsoft Foundry. (SRC-262 L217)
+- Using Content Understanding requires provisioning a Microsoft Foundry resource in an Azure subscription. (SRC-262 L217)
 - Content Understanding solutions can be developed and managed in the Microsoft Foundry portal, Content Understanding Studio, or the Content Understanding API. (SRC-262 L216–218)
-- The service provides a single service and straightforward, consistent development process for multimodal content analysis. (SRC-262 L219)
+- The service provides a single service and straightforward, consistent development process for multimodal content analysis. (SRC-262 L222)
 - It can analyze documents and forms to retrieve specific field values, such as invoice data for payment processing. (SRC-262 L224)
 - It can analyze images for charts, product defects, objects or people, and other visual information. (SRC-262 L226)
 - It can analyze audio for conference-call summaries, sentiment in recorded customer conversations, and key data in telephone messages. (SRC-262 L227–228)
@@ -69,8 +69,8 @@ The source names the Content Understanding API as one development and management
 
 ## Key terms
 
-- **Azure Content Understanding** — a generative AI service for extracting insights and data from multiple content kinds. (SRC-262 L214)
-- **Microsoft Foundry resource** — the Azure resource required before using Content Understanding through Foundry. (SRC-262 L215)
+- **Azure Content Understanding** — a generative AI service for extracting insights and data from multiple content kinds. (SRC-262 L216)
+- **Microsoft Foundry resource** — the Azure resource required before using Content Understanding through Foundry. (SRC-262 L217)
 - **Multimodal content analysis** — using one service and development process across documents, images, audio, and video. (SRC-262 L219–230)
 
 ## Decision boundaries and exam cues
@@ -96,8 +96,8 @@ Not covered by this source.
 
 ## Connections
 
-- [[azure-content-understanding]] — the service defined by this source. (SRC-262 L214)
-- [[microsoft-foundry]] — Content Understanding is available through Microsoft Foundry and needs a Foundry resource. (SRC-262 L215)
+- [[azure-content-understanding]] — the service defined by this source. (SRC-262 L216)
+- [[microsoft-foundry]] — Content Understanding is available through Microsoft Foundry and needs a Foundry resource. (SRC-262 L217)
 - [[foundry-tools]] — the source positions Content Understanding as a Foundry-accessible AI capability. (SRC-262 L215–218)
 - [[content-understanding-analyzers]] — later units build analyzers for the modalities introduced here. (SRC-262 L219–230)
 - [[extraction-options-compared]] — modality examples help distinguish Content Understanding from narrower extraction choices. (SRC-262 L221–230)

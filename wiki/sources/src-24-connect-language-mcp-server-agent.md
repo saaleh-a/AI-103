@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Shows how to connect Azure Language MCP tools to a Foundry agent and call the agent through the Foundry SDK and Responses API."
 area: language
 source_ids: [SRC-24]
-objectives: [G06, G08, G09, T01, T02]
+objectives: [G06, G09]
 tags: [azure-language, mcp, foundry-agent, responses-api, foundry-sdk]
 aliases: ["SRC-24"]
 source_kind: learn-unit

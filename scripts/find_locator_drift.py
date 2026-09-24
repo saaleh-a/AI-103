@@ -12,6 +12,11 @@ heuristic finds candidates at scale:
 - Flag the citation when the cited window carries few of the claim's words and a nearby window
   carries clearly more — and suggest that window.
 
+- Separately, flag **chrome-only citations**: every cited line is Learn capture chrome (`Tip`, `Note`,
+  `Copy`, a language tab, `Completed 100 XP`, `35 minutes`, `See the Text and images tab…`), so the
+  claim cannot be carried by the cited lines. Claims that are *about* the capture (code markers,
+  status lines, the next-unit link) legitimately cite chrome and are skipped.
+
 It is a **candidate finder for the generator**, not a verifier: every flagged citation must be
 confirmed by reading the raw lines before it is changed. False positives are expected (paraphrases,
 claims supported by the cited lines in other words). It never edits files.
@@ -41,6 +46,12 @@ just than within without across source sources page pages says said describes de
 teaches teach unit module episode shows show note notes corpus capture captured inference
 synthesis stale risk disputed illustrative""".split())
 WINDOW = 8
+CHROME = re.compile(r"^\s*(?:See the Text and images tab for more details!|Tip|Note|Important|Caution|"
+                    r"Warning|Copy|Python|C#|Bash|JSON|JavaScript|TypeScript|PowerShell|Azure CLI|HTTP|"
+                    r"YAML|Console|Output|Expand table|Completed(?: \d+ XP)?|\d+ minutes?|\d+ min|\d+ XP)?\s*$",
+                    re.I)
+ABOUT_CAPTURE = re.compile(r"captur|marker|\bcopy\b|code bod|footer|status|next unit|follows|language tab",
+                           re.I)
 
 
 def words(text: str) -> set[str]:
@@ -63,7 +74,7 @@ def score(claim: set[str], lines: list[str], a: int, b: int) -> set[str]:
     return claim & words(text)
 
 
-def scan(page: Path, raw: dict, df: Counter, n_docs: int) -> list[dict]:
+def scan(page: Path, raw: dict, df: Counter, n_docs: int, chrome: list | None = None) -> list[dict]:
     out = []
     body = FENCE.sub("", page.read_text(encoding="utf-8"))
     if body.startswith("---"):
@@ -75,6 +86,14 @@ def scan(page: Path, raw: dict, df: Counter, n_docs: int) -> list[dict]:
         for m in PAREN.finditer(line):
             claim_text = line[prev_end:m.start()]
             prev_end = m.end()
+            if chrome is not None and not ABOUT_CAPTURE.search(claim_text):
+                for c in CITE.finditer(m.group(1)):
+                    sid, a = int(c.group(1)), int(c.group(2))
+                    b = int(c.group(3) or a)
+                    lines = raw.get(sid)
+                    if lines and b <= len(lines) and all(CHROME.match(x) for x in lines[a - 1:b]):
+                        chrome.append({"page": page.relative_to(ROOT).as_posix(), "line": ln_no,
+                                       "sid": sid, "cited": (a, b), "claim": claim_text.strip()[-140:]})
             # distinctive words only: rare across the corpus
             claim = {w for w in words(claim_text) if df[w] <= max(3, n_docs // 10)}
             if len(claim) < 3:
@@ -105,17 +124,19 @@ def scan(page: Path, raw: dict, df: Counter, n_docs: int) -> list[dict]:
 def main() -> int:
     targets = [Path(a) for a in sys.argv[1:]] or sorted((ROOT / "wiki").rglob("*.md"))
     raw, df = load_raw()
-    found = []
+    found, chrome = [], []
     for p in targets:
         p = p if p.is_absolute() else ROOT / p
         if p.stem in {"index", "log", "lint-report", "corpus-map", "objective-map"}:
             continue
-        found += scan(p, raw, df, len(raw))
+        found += scan(p, raw, df, len(raw), chrome)
     fmt = lambda r: (f"- `{r['page']}` L{r['line']}: SRC-{r['sid']} L{r['cited'][0]}–{r['cited'][1]} "
                      f"→ L{r['suggest'][0]}–{r['suggest'][1]}? ({r['cited_hits']} vs {r['suggest_hits']} "
                      f"distinctive words) — …{r['claim']}")
+    cfmt = lambda r: (f"- `{r['page']}` L{r['line']}: SRC-{r['sid']} L{r['cited'][0]}–{r['cited'][1]} "
+                      f"cites only capture chrome — …{r['claim']}")
     if sys.argv[1:]:
-        print("\n".join(fmt(r) for r in found) or "no candidates")
+        print("\n".join([fmt(r) for r in found] + [cfmt(r) for r in chrome]) or "no candidates")
         return 0
     by_sid = Counter(r["sid"] for r in found)
     lines = ["# Locator-drift candidates", "",
@@ -123,9 +144,13 @@ def main() -> int:
              "before changing a citation). Candidates per source, most first: "
              + ", ".join(f"SRC-{s} ({n})" for s, n in by_sid.most_common(15)) + ".", ""]
     lines += [fmt(r) for r in sorted(found, key=lambda r: (r["sid"], r["page"], r["line"]))]
+    lines += ["", "## Chrome-only citations", "",
+              "Every cited line is capture chrome, so the lines cannot carry the claim. "
+              f"{len(chrome)} found.", ""]
+    lines += [cfmt(r) for r in sorted(chrome, key=lambda r: (r["sid"], r["page"], r["line"]))]
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"drift candidates: {len(found)} across {len({r['page'] for r in found})} pages -> "
-          f"{OUT.relative_to(ROOT).as_posix()}")
+    print(f"drift candidates: {len(found)} across {len({r['page'] for r in found})} pages; "
+          f"chrome-only citations: {len(chrome)} -> {OUT.relative_to(ROOT).as_posix()}")
     return 0
 
 

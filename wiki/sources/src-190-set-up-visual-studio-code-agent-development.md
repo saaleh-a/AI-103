@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains installing the Microsoft Foundry VS Code extension, connecting it to Azure and a project, deploying a model, and managing agents."
 area: agents
 source_ids: [SRC-190]
-objectives: [G07, G08]
+objectives: []
 tags: [visual-studio-code, foundry-extension, agent-development, model-deployments]
 aliases: ["SRC-190"]
 source_kind: learn-unit
@@ -49,7 +49,7 @@ The Microsoft Foundry extension turns Visual Studio Code into an environment for
 ## Key claims
 
 - The extension provides direct access to Microsoft Foundry Agent Service capabilities inside Visual Studio Code. (SRC-190 L220–221)
-- The extension groups features into Resources, Tools, and Help and Feedback. (SRC-190 L222)
+- The extension groups features into Resources, Tools, and Help and Feedback. (SRC-190 L223)
 - Installation uses the VS Code Extensions pane, a marketplace search for Foundry, and the Microsoft Foundry extension result. (SRC-190 L224–231)
 - Connecting to Azure uses the Azure icon, Azure Resources pane, subscription tree, Foundry section, and Open in Foundry Extension action. (SRC-190 L233–241)
 - The extension displays project resources including agents, model deployments, connections, and vector stores. (SRC-190 L242–243)

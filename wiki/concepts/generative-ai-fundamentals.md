@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "AI apps use models to interpret inputs and generate responses; generative AI uses LLMs, prompts, context and output tokens."
 area: models
 source_ids: [SRC-18, SRC-89, SRC-98, SRC-99, SRC-178, SRC-188, SRC-191, SRC-260]
-objectives: [G01, G13]
+objectives: [G01]
 objective_gaps: []
 tags: []
 aliases: ["What is AI", "generative AI", "LLM fundamentals", "prompts and completions", "tokens"]

@@ -7,8 +7,8 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Compares Speech SDK, Voice Live, speech-capable models, Speech/Language MCP, Translator, Azure Language, and LLM translation."
 area: speech
-source_ids: [SRC-10, SRC-12, SRC-17, SRC-25, SRC-40, SRC-49, SRC-88, SRC-94, SRC-96, SRC-115, SRC-139, SRC-166, SRC-221, SRC-225, SRC-226, SRC-227, SRC-229, SRC-235, SRC-236, SRC-252, SRC-253]
-objectives: [P01, P02, P04, G01, G09, T01, T02, T03, T05, T06, T08]
+source_ids: [SRC-10, SRC-12, SRC-17, SRC-25, SRC-31, SRC-40, SRC-43, SRC-49, SRC-87, SRC-88, SRC-94, SRC-96, SRC-115, SRC-139, SRC-166, SRC-221, SRC-225, SRC-226, SRC-227, SRC-229, SRC-235, SRC-236, SRC-252, SRC-253]
+objectives: [P01, P02, P04, G09, T01, T03, T05, T06, T08]
 objective_gaps: []
 tags: []
 aliases: []
@@ -18,7 +18,7 @@ aliases: []
 
 ## Summary
 
-**Synthesis:** Speech and language choices separate by modality and control surface: Azure Speech SDK/API gives application-controlled STT/TTS/translation, Voice Live gives low-latency bidirectional voice-agent sessions, speech-capable models provide model-endpoint transcription/TTS, Speech and Language MCP servers expose tools to agents, Azure Translator handles text/document translation and transliteration, and Azure Language handles text analysis such as language detection, NER and PII redaction (SRC-252 L218–230; SRC-253 L218–230; SRC-226 L12–45; SRC-88 L216–224; SRC-17 L218–221; SRC-236 L225–248; SRC-235 L225–239; SRC-227 L216–220; SRC-12 L217–220).
+**Synthesis:** Speech and language choices separate by modality and control surface: Azure Speech SDK/API gives application-controlled STT/TTS/translation, Voice Live gives low-latency bidirectional voice-agent sessions, speech-capable models provide model-endpoint transcription/TTS, Speech and Language MCP servers expose tools to agents, Azure Translator handles text/document translation and transliteration, and Azure Language handles text analysis such as language detection, NER and PII redaction (SRC-252 L218–230; SRC-253 L218–230; SRC-226 L12–45; SRC-88 L216–224; SRC-49 L8–14; SRC-17 L218–221; SRC-236 L225–248; SRC-235 L225–239; SRC-227 L216–220; SRC-12 L217–220).
 
 ## Scope and question
 
@@ -31,8 +31,8 @@ aliases: []
 | **Synthesis:** Deciding detail | Azure Speech SDK/API | Voice Live API | Speech-capable generative models | Azure Speech MCP server |
 |---|---|---|---|---|
 | Primary job | App code calls STT, TTS or Speech Translation through SDK objects such as `SpeechConfig`, `SpeechRecognizer`, `SpeechSynthesizer`, `SpeechTranslationConfig` and `TranslationRecognizer` (SRC-252 L218–230; SRC-253 L218–230; SRC-226 L14–28). | Real-time bidirectional voice app/agent over WebSockets with JSON events, session settings, VAD, audio streaming and optional avatars (SRC-88 L216–272; SRC-49 L45–58). | Deployed model endpoint transcribes audio or synthesizes speech through OpenAI-compatible clients (SRC-17 L218–221; SRC-225 L216–224; SRC-221 L216–223). | Agent discovers STT/TTS tools through MCP and exchanges audio file URLs or generated audio links using Blob Storage (SRC-236 L225–250; SRC-25 L230–252). |
-| Best when | The application owns the exact speech operation and result handling (SRC-252 L218–230; SRC-253 L218–230). | Users need interruptible, low-latency spoken conversation, turn detection, or avatar streaming (SRC-88 L252–272). | The model-catalog task is simply speech-to-text or text-to-speech using deployed `gpt-4o` family audio models (SRC-17 L218–221). | A text-first agent should choose speech tools dynamically from user prompts (SRC-236 L234–243). |
-| Not covered / limits | Custom speech models are named in the official objective but not taught by the corpus's speech pages; do not invent them. | Production region/model support and preview status are stale-risk (SRC-49 L130–139; SRC-88 L227–228). | Live streaming, translation, SSML and Speech service voice configuration are not taught through the model path (SRC-17 L218–221; SRC-226 L12–14). | Exact phrase-hint/profanity request shapes and non-key auth implementation are not fully covered (SRC-236 L230–260). |
+| Best when | The application owns the exact speech operation and result handling (SRC-252 L218–230; SRC-253 L218–230). | Users need interruptible, low-latency spoken conversation, turn detection, or avatar streaming (SRC-49 L8–14; SRC-31 L226; SRC-88 L252–272). | The task is simply speech-to-text or text-to-speech with a `gpt-4o` family speech-capable model chosen from the Foundry model catalog and called through the resource endpoint (SRC-17 L216–221; SRC-225 L224). | A text-first agent should choose speech tools dynamically from user prompts (SRC-236 L234–243). |
+| Not covered / limits | Custom speech models are named in the official objective but not taught by the corpus's speech pages; do not invent them. | Production region/model support and preview status are stale-risk (SRC-49 L174–177; SRC-88 L227–228). | Live streaming, translation, SSML and Speech service voice configuration are not taught through the model path (SRC-17 L218–221; SRC-226 L12–14). | Exact phrase-hint/profanity request shapes and non-key auth implementation are not fully covered (SRC-236 L230–260). |
 
 ### Language and translation decision table
 
@@ -66,8 +66,8 @@ aliases: []
 
 ## Tensions
 
-- **Disputed:** Speech MCP authentication wording differs: the Learn page and assessment emphasize key plus SAS URL, while an episode mentions possible managed identity without specifying the full implementation; preserve key-based setup as the documented path (SRC-236 L258–260; SRC-25 L230–239).
-- **Stale-risk:** Voice Live preview status, model names, endpoint formats, supported language counts and SDK version details are time-sensitive (SRC-49 L130–139; SRC-88 L227–228; SRC-227 L216; SRC-227 L230–235).
+- **Synthesis:** Speech MCP authentication (a qualification, not a conflict): the Learn unit says the server uses key-based authentication with a resource key and a blob-container SAS URL (SRC-236 L258), and the portal steps configure exactly those (SRC-25 L234–237); the episode says the connection authenticates "potentially by API key or by something like a managed identity" (SRC-43 L98–103), then demonstrates a key and a SAS URL (SRC-43 L262–273). **Inference:** treat key plus SAS URL as the taught path; the corpus does not specify a managed-identity setup.
+- **Stale-risk:** Voice Live preview status, model names, endpoint formats, supported language counts and SDK version details are time-sensitive (SRC-49 L174–177; SRC-88 L227–228; SRC-227 L216; SRC-227 L230–235; SRC-87 L218).
 - **Inference:** Custom speech models are named in objective T06, but the captured corpus pages used for this comparison do not teach creating or training custom speech models.
 
 ## Implications for the exam and for practice
@@ -86,8 +86,11 @@ aliases: []
 - SRC-12 — [[src-12-azure-language-microsoft-foundry-tools]] — Azure Language capabilities.
 - SRC-17 — [[src-17-choose-speech-capable-model]] — speech-capable model use cases.
 - SRC-25 — [[src-25-connect-speech-mcp-server-agent]] — Speech MCP connection and usage.
+- SRC-31 — [[src-31-create-voice-live-agent]] — Voice Live agent settings, including VAD to detect interruptions and end of speech.
 - SRC-40 — [[src-40-detect-language]] — language detection.
+- SRC-43 — [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19]] — Speech MCP episode: authentication aside (API key or managed identity) and the key + SAS URL demo.
 - SRC-49 — [[src-49-develop-azure-speech-voice-live-agent-microsoft-foundry-episode]] — Voice Live episode framing.
+- SRC-87 — [[src-87-explore-ai-voice-live-client-library-python]] — Voice Live Python client library: as of version 1.0.0 the SDK is async-only.
 - SRC-88 — [[src-88-explore-azure-voice-live-api]] — Voice Live API.
 - SRC-94 — [[src-94-extract-personally-identifiable-information-pii]] — PII detection and redaction.
 - SRC-96 — [[src-96-foundry-tools]] — Foundry Tools overview.

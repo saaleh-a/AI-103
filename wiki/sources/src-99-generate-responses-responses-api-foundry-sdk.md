@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains the Responses API for stateful, multi-turn Foundry chat apps, including response IDs, parameters, streaming and async use."
 area: generative-apps
 source_ids: [SRC-99]
-objectives: [G05, G06, G13]
+objectives: [G05, G13]
 tags: [responses-api, conversation-state, streaming, async]
 aliases: ["SRC-99"]
 source_kind: learn-unit

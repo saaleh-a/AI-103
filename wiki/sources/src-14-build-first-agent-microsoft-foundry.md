@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Walks through creating, configuring, testing, adding tools to, and deploying a first Foundry portal agent."
 area: agents
 source_ids: [SRC-14]
-objectives: [G07, G08, G09]
+objectives: [G07, G09]
 tags: [foundry-portal, ai-agents, agent-instructions, agent-tools, playground]
 aliases: ["SRC-14"]
 source_kind: learn-unit
@@ -44,11 +44,11 @@ ingest_depth: full
 
 ## TL;DR
 
-This unit presents the Foundry portal as the accessible, visual entry point for agent creation. (SRC-14 L218–219) The flow is create an agent, define name/description/model, configure instructions and parameters, test in the playground, add tools, and deploy for SDK or REST API access. (SRC-14 L220–246)
+This unit presents the Foundry portal as the accessible, visual entry point for agent creation. (SRC-14 L220) The flow is create an agent, define name/description/model, configure instructions and parameters, test in the playground, add tools, and deploy for SDK or REST API access. (SRC-14 L220–246)
 
 ## Key claims
 
-- The Foundry portal supports code-free agent creation through a visual interface. (SRC-14 L218–219)
+- The Foundry portal supports code-free agent creation through a visual interface. (SRC-14 L220)
 - Agent creation starts at Microsoft Foundry, a selected project, Build > Agents, and Create. (SRC-14 L220–225)
 - Agent details include name, description, and model selection from a deployed model or new deployment. (SRC-14 L225–229)
 - Instructions define the agent's role, response behavior, and scenario handling. (SRC-14 L230–232)

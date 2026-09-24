@@ -44,12 +44,12 @@ ingest_depth: partial
 
 ## TL;DR
 
-Client applications can use language-specific SDKs such as the OpenAI Python SDK or Azure OpenAI .NET SDK to call image-generation models. (SRC-32 L212–213) The described result is a binary stream containing the requested image. (SRC-32 L218)
+Client applications can use language-specific SDKs such as the OpenAI Python SDK or Azure OpenAI .NET SDK to call image-generation models. (SRC-32 L214) The described result is a binary stream containing the requested image. (SRC-32 L218)
 
 ## Key claims
 
-- A client application can use a language-specific SDK to generate images with a model. (SRC-32 L212–213)
-- The source names the OpenAI Python SDK and Azure OpenAI .NET SDK as example SDKs for image-generation clients. (SRC-32 L212)
+- A client application can use a language-specific SDK to generate images with a model. (SRC-32 L214–215)
+- The source names the OpenAI Python SDK and Azure OpenAI .NET SDK as example SDKs for image-generation clients. (SRC-32 L214)
 - The example submits a request to generate an image of a robot eating a cheeseburger. (SRC-32 L213–216)
 - The result is a binary stream containing the requested image. (SRC-32 L218)
 
@@ -63,14 +63,14 @@ The raw capture names the OpenAI Images API, but the actual Python code block is
 
 ## Key terms
 
-- **Language-specific SDK:** the client-library approach named for application development. (SRC-32 L212)
+- **Language-specific SDK:** the client-library approach named for application development. (SRC-32 L214)
 - **OpenAI Images API:** the API named for submitting an image-generation request. (SRC-32 L213–214)
 - **Binary stream:** the captured form of the requested image result. (SRC-32 L218)
 
 ## Decision boundaries and exam cues
 
 - **Inference:** Use an SDK or image API when the requirement is to build a custom application, not merely try a prompt in the Foundry portal. (SRC-32 L212–218)
-- **Inference:** If the scenario mentions Python and image generation, the OpenAI Python SDK is a named route in this source. (SRC-32 L212)
+- **Inference:** If the scenario mentions Python and image generation, the OpenAI Python SDK is a named route in this source. (SRC-32 L214)
 
 ## Assessment items
 
@@ -89,9 +89,9 @@ Not covered by this source.
 ## Connections
 
 - [[image-generation]] — this source covers application consumption of image-generation models. (SRC-32 L212–218)
-- [[openai-sdk]] — the OpenAI Python SDK is named as a client option. (SRC-32 L212)
-- [[azure-openai]] — the Azure OpenAI .NET SDK is named as a client option. (SRC-32 L212)
-- [[endpoints-and-sdk-choice]] — this source is evidence that SDK choice matters for client applications. (SRC-32 L212–213)
+- [[openai-sdk]] — the OpenAI Python SDK is named as a client option. (SRC-32 L214)
+- [[azure-openai]] — the Azure OpenAI .NET SDK is named as a client option. (SRC-32 L214)
+- [[endpoints-and-sdk-choice]] — this source is evidence that SDK choice matters for client applications. (SRC-32 L214)
 - *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-172-module-assessment-generate-images-ai|6 Module assessment]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 
 ## Open questions

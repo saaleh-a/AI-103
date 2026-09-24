@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains how web_search lets a model retrieve current public web information during response generation."
 area: agents
 source_ids: [SRC-257]
-objectives: [G03, G05, G09]
+objectives: [G03, G09]
 tags: [web-search, grounding, responses-api, tools]
 aliases: ["SRC-257"]
 source_kind: learn-unit

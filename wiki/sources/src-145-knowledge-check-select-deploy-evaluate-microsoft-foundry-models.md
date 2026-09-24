@@ -69,8 +69,8 @@ Not covered by this source.
 ## Decision boundaries and exam cues
 
 - **Inference:** Fast prompt processing and comprehensive responses point to throughput rather than quality index or cost. (SRC-145 L213–217; SRC-188 L251–264)
-- **Inference:** General use plus largest quota points to Global Standard rather than Data Zone Batch or Developer. (SRC-145 L218–222; SRC-39 L215)
-- **Inference:** Linguistic correctness and natural language quality point to fluency rather than groundedness or relevance. (SRC-145 L223–227; SRC-53 L249–252)
+- **Inference:** General use plus largest quota points to Global Standard rather than Data Zone Batch or Developer. (SRC-145 L218–222; SRC-39 L218)
+- **Inference:** Linguistic correctness and natural language quality point to fluency rather than groundedness or relevance. (SRC-145 L223–227; SRC-53 L242)
 
 ## Assessment items
 
@@ -80,14 +80,14 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The capture does not reveal which choices Microsoft marks correct; the matching episode states throughput, Global Standard, and fluency during review. (SRC-145 L213–229; SRC-189 L911–941)
+- The capture does not reveal which choices Microsoft marks correct; the matching episode states throughput, Global Standard, and fluency during review. (SRC-145 L213–229; SRC-189 L929–947)
 
 ## Relation to other sources
 
 - [[src-188-select-models-benchmarks]] teaches throughput and other benchmark metrics tested here. (SRC-145 L213–217; SRC-188 L251–264)
-- [[src-39-deploy-models-endpoints]] teaches Global Standard deployment. (SRC-145 L218–222; SRC-39 L215)
-- [[src-53-evaluate-model-performance]] teaches fluency, groundedness, and relevance. (SRC-145 L223–227; SRC-53 L249–252)
-- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] gives the review answers for the same three questions. (SRC-145 L213–227; SRC-189 L911–941)
+- [[src-39-deploy-models-endpoints]] teaches Global Standard deployment. (SRC-145 L218–222; SRC-39 L218)
+- [[src-53-evaluate-model-performance]] teaches fluency, groundedness, and relevance. (SRC-145 L223–227; SRC-53 L239–242)
+- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] gives the review answers for the same three questions. (SRC-145 L213–227; SRC-189 L929–947)
 
 ## Connections
 

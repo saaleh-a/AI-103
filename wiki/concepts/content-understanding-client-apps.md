@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Client flow for Content Understanding: get endpoint/auth, call an analyzer, poll the async operation, and read fields, markdown, metadata, and JSON."
 area: extraction
 source_ids: [SRC-6, SRC-7, SRC-8, SRC-9, SRC-29, SRC-184, SRC-250, SRC-263]
-objectives: [G09, V10, V11, I07, I08]
+objectives: [I08]
 objective_gaps: []
 tags: []
 aliases: ["Content Understanding API", "AI Content Understanding API", "analyze operation", "analyzeBinary", "analyzerResults", "ContentUnderstandingClient"]

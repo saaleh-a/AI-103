@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "A protocol for discoverable, secure agent-to-agent communication, delegation, routing, and distributed multi-agent workflows."
 area: orchestration
 source_ids: [SRC-26, SRC-37, SRC-61, SRC-103, SRC-107, SRC-134, SRC-157, SRC-205, SRC-105, SRC-108, SRC-124, SRC-133, SRC-231]
-objectives: [G10, G16]
+objectives: [G10]
 objective_gaps: []
 tags: ["protocol"]
 aliases: ["A2A", "A2A protocol", "Agent-to-Agent protocol", "Agent2Agent"]

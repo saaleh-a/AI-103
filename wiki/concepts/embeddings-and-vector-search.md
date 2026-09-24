@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Embeddings turn text into vectors for similarity search; the corpus defines vector search and only briefly names hybrid search for grounding."
 area: retrieval
 source_ids: [SRC-102, SRC-89, SRC-19, SRC-259, SRC-191]
-objectives: [I02, G02, P02, P03]
+objectives: [I02, G02, P03]
 objective_gaps: []
 tags: []
 aliases: ["vector search", "hybrid search", "embeddings", "vector index", "embedding model", "cosine similarity"]

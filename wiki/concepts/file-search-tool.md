@@ -48,10 +48,10 @@ The captured Learn code is elided, but the source gives the configuration sequen
 ## Decision boundaries
 
 - Use [[file-search-tool]] when the grounding source is a specific set of uploaded files or documents. (SRC-255 L218–227)
-- Use [[web-search-tool]] when the grounding source is current public web information rather than your own files. (SRC-257 L218–227)
-- Use [[azure-ai-search]] when the source is an existing enterprise-scale search index rather than files uploaded directly to the agent; the Foundry source explicitly contrasts Azure AI Search with File Search. (SRC-91 L240–241)
-- Use [[foundry-iq]] for enterprise-scale agents that need large quantities of data in multiple data stores, because the File Search source names Foundry IQ as the alternative to consider. (SRC-255 L255)
-- Use [[code-interpreter-tool]] when the main task is computation over data, not retrieval of passages. (SRC-254 L222–226)
+- **Inference:** Use [[web-search-tool]] when the grounding source is current public web information rather than your own files. (SRC-257 L218–227)
+- **Inference:** Use [[azure-ai-search]] when the source is an existing enterprise-scale search index rather than files uploaded directly to the agent; the Foundry source explicitly contrasts Azure AI Search with File Search. (SRC-91 L240–241)
+- **Inference:** Use [[foundry-iq]] for enterprise-scale agents that need large quantities of data in multiple data stores, because the File Search source names Foundry IQ as the alternative to consider. (SRC-255 L255)
+- **Inference:** Use [[code-interpreter-tool]] when the main task is computation over data, not retrieval of passages. (SRC-254 L222–226)
 
 **Inference:** The exam clue for File Search is usually "uploaded documents" or "specific files" plus grounded answers; "existing search indexes" points away from File Search toward Azure AI Search. (SRC-255 L218–227; SRC-91 L240–241)
 

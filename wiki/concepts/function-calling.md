@@ -30,7 +30,7 @@ The model is a planner, not the executor. You describe callable functions and th
 
 ## What the sources say
 
-- The Responses API tool overview names `function` as the tool that enables the model to call custom functions in application code. (SRC-259 L228)
+- The Responses API tool overview names `function` as the tool that enables the model to call custom functions in application code. (SRC-259 L226)
 - The dedicated source says function calling lets a model decide when to call named tools exposed by the application and that the application runs the function before passing output back to the model. (SRC-256 L219–220)
 - It lists structured tool calls, developer-controlled execution, API/internal-service/helper integration, multi-turn orchestration, and grounded responses as key features. (SRC-256 L222–227)
 - The Foundry custom-tools source says function calling allows agents to execute predefined functions dynamically based on user input, including retrieving data, processing queries, calling other APIs, or initiating a program. (SRC-104 L218)
@@ -50,11 +50,11 @@ The corpus capture omits the full code blocks, but the required structure is cle
 
 ## Decision boundaries
 
-- Use [[function-calling]] when the model needs developer-owned logic, internal APIs, databases, workflows, or controlled side effects. (SRC-256 L219–225; SRC-4 L224–225)
-- Use [[code-interpreter-tool]] when the model only needs sandboxed Python computation or file analysis and does not need external system access. (SRC-254 L218–224; SRC-254 L252–253)
-- Use [[file-search-tool]] when the model should retrieve from uploaded indexed documents, not execute business logic. (SRC-255 L218–227)
+- **Inference:** Use [[function-calling]] when the model needs developer-owned logic, internal APIs, databases, workflows, or controlled side effects. (SRC-256 L219–225; SRC-4 L224–225)
+- **Inference:** Use [[code-interpreter-tool]] when the model only needs sandboxed Python computation or file analysis and does not need external system access. (SRC-254 L218–224; SRC-254 L252–253)
+- **Inference:** Use [[file-search-tool]] when the model should retrieve from uploaded indexed documents, not execute business logic. (SRC-255 L218–227)
 - Use [[web-search-tool]] when the missing information is current public web content. (SRC-257 L218–227)
-- Use [[azure-functions]] or OpenAPI tools when a Foundry agent should call deployed serverless code or standardized external APIs rather than an in-process function. (SRC-104 L226–246)
+- **Inference:** Use [[azure-functions]] or OpenAPI tools when a Foundry agent should call deployed serverless code or standardized external APIs rather than an in-process function. (SRC-104 L226–246)
 
 **Inference:** The deciding detail is who executes the action. If application/framework code must own validation, authorization, side effects, and auditing, use function calling or another custom-tool pattern rather than a hosted retrieval or code sandbox tool. (SRC-256 L224–255; SRC-4 L234; SRC-104 L216–248)
 

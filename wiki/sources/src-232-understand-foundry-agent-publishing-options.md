@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains Agent Application resources, Microsoft 365 publishing, direct portal publishing, Agents Toolkit, scopes, channels, identity, and prerequisites."
 area: agents
 source_ids: [SRC-232]
-objectives: [P07, P12, G12]
+objectives: [P07, P12]
 tags: [agent-publishing, agent-application, azure-bot-service, microsoft-365, entra-id]
 aliases: ["SRC-232"]
 source_kind: learn-unit
@@ -48,7 +48,7 @@ Publishing promotes a Foundry agent from a development asset into a managed Azur
 
 ## Key claims
 
-- Foundry agents run inside Foundry Agent Service infrastructure before publishing. (SRC-232 L216)
+- Foundry agents run inside Foundry Agent Service infrastructure before publishing. (SRC-232 L218)
 - Publishing creates an Agent Application resource with a dedicated invocation URL, an agent identity, and user data isolation. (SRC-232 L217–223)
 - The Agent Application acts as a routing layer that keeps the public endpoint stable while traffic routes to updated versions. (SRC-232 L224)
 - Microsoft 365 publishing creates an Azure Bot Service resource, generates a Microsoft 365 package, registers a Microsoft Entra ID application, and makes the agent discoverable in the Teams agent store. (SRC-232 L225–231)
@@ -73,8 +73,8 @@ Not covered by this source.
 
 - **Agent Application** — the published managed Azure resource with endpoint, identity, user isolation, and routing behavior. (SRC-232 L217–224)
 - **Dedicated invocation URL** — the stable endpoint created for the published agent. (SRC-232 L221)
-- **Agent identity** — the distinct Microsoft Entra identity created for the agent, separate from the development project. (SRC-232 L220; SRC-232 L251–256)
-- **Azure Bot Service** — the resource that routes messages between Microsoft 365 and the Foundry agent. (SRC-232 L226)
+- **Agent identity** — the distinct Microsoft Entra identity created for the agent, separate from the development project. (SRC-232 L222; SRC-232 L251–256)
+- **Azure Bot Service** — the resource that routes messages between Microsoft 365 and the Foundry agent. (SRC-232 L227)
 - **Microsoft 365 publishing package** — the generated package used to distribute the agent into Microsoft 365. (SRC-232 L227)
 
 ## Decision boundaries and exam cues
@@ -106,7 +106,7 @@ Not covered by this source.
 - [[microsoft-365-agent-integration]] — Microsoft 365 publication creates Bot Service, package, Entra registration, and Teams discoverability. (SRC-232 L225–231)
 - [[microsoft-365-agents-toolkit]] — Toolkit is the advanced alternative for custom integration needs. (SRC-232 L238–242)
 - [[microsoft-entra-id]] — published agents have distinct Entra identities and application registration. (SRC-232 L220; SRC-232 L228)
-- [[foundry-agent-service]] — agents run in the Foundry Agent Service infrastructure before publication. (SRC-232 L216)
+- [[foundry-agent-service]] — agents run in the Foundry Agent Service infrastructure before publication. (SRC-232 L218)
 - *Module units:* [[src-125-introduction-integrate-agent-microsoft-365|1 Introduction]] · [[src-185-publish-agent-foundry-portal-teams|3 Publish an agent from Foundry portal to Teams]] · [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios|4 Advanced - Use Microsoft 365 Agents Toolkit for complex integration scenarios - Training - Microsoft]] · [[src-2-access-microsoft-365-data-work-iq|5 Access Microsoft 365 data with Work IQ]] · [[src-222-test-iterate-integrated-agent|6 Test and iterate your integrated agent]] · [[src-79-exercise-publish-foundry-agent-teams|7 Exercise - Publish a Foundry agent to Teams]] · [[src-149-knowledge-check-integrate-agent-microsoft-365|8 Knowledge check]] · [[src-209-summary-integrate-agent-microsoft-365|9 Summary]] · [[src-111-integrate-agent-microsoft-365-episode-11|episode 11]]
 
 ## Open questions

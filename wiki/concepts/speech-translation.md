@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Translating spoken input with Azure Speech: configure source and target languages, recognize translations as text, then optionally synthesize translated speech."
 area: speech
 source_ids: [SRC-49, SRC-88, SRC-115, SRC-139, SRC-166, SRC-218, SRC-226, SRC-228, SRC-229]
-objectives: [P02, T05, T08]
+objectives: [T08]
 objective_gaps: []
 tags: []
 aliases: ["Speech Translation API", "speech-to-speech translation", "SpeechTranslationConfig", "TranslationRecognizer"]

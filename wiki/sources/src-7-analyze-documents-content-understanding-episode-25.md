@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Demonstrates Content Understanding analyzers across documents, slides, audio, and video, then shows a Python/API flow."
 area: extraction
 source_ids: [SRC-7]
-objectives: [I06, I07, I08, V10, V12]
+objectives: [I06, I08, V10]
 tags: [content-understanding, episode, analyzers, python, multimodal-analysis]
 aliases: ["SRC-7"]
 source_kind: episode

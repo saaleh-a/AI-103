@@ -48,7 +48,7 @@ The unit says learners can create a Microsoft Foundry project and use the model 
 
 ## Key claims
 
-- To experiment with image generation models, create a Microsoft Foundry project. (SRC-86 L212)
+- To experiment with image generation models, create a Microsoft Foundry project. (SRC-86 L214)
 - The model playground in Microsoft Foundry portal can submit prompts and show generated images. (SRC-86 L212–214)
 - When the model supports it, the playground can specify generated image resolution. (SRC-86 L215)
 - When the model supports it, the playground can include a reference image for the model to base its output on. (SRC-86 L215)
@@ -63,7 +63,7 @@ Not covered by this source. The source covers the portal playground rather than 
 
 ## Key terms
 
-- **Microsoft Foundry project:** the project context needed to experiment with image-generation models. (SRC-86 L212)
+- **Microsoft Foundry project:** the project context needed to experiment with image-generation models. (SRC-86 L214)
 - **Model playground:** the Foundry portal surface used to submit image prompts and view generated images. (SRC-86 L212–214)
 - **Reference image:** an optional image that a supporting model can use as a basis for output. (SRC-86 L215)
 
@@ -82,7 +82,7 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-258-what-are-image-generation-models]] says the model catalog can be filtered by inference task to find text-to-image models. (SRC-258 L215)
+- [[src-258-what-are-image-generation-models]] says the model catalog can be filtered by inference task to find text-to-image models. (SRC-258 L218)
 - [[src-32-create-client-application-that-uses-image-generation-model]] contrasts this portal path with SDK-based client development. (SRC-32 L212–218)
 - [[src-97-generate-images-video-episode-23]] demonstrates a Foundry image playground prompt and prompt revision. (SRC-97 L292–334)
 

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains ChatCompletions as a widely supported, stateless message-list API useful for compatibility and existing code."
 area: generative-apps
 source_ids: [SRC-98]
-objectives: [G05, G06]
+objectives: [G05]
 tags: [chat-completions, conversation-state, openai-sdk]
 aliases: ["SRC-98"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains Azure Language language detection, confidence scores, document and batch limits, mixed-language behavior, and unknown-language output."
 area: language
 source_ids: [SRC-40]
-objectives: [T02]
+objectives: []
 tags: [azure-language, language-detection, confidence-score, text-analysis]
 aliases: ["SRC-40"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Grounding pattern that retrieves trusted content, adds it to the prompt, and generates answers with current, domain-specific context."
 area: generative-apps
 source_ids: [SRC-102, SRC-19, SRC-239, SRC-85, SRC-22, SRC-23, SRC-255, SRC-261, SRC-8, SRC-53, SRC-156]
-objectives: [G02, G09, I02, I04, I07]
+objectives: [G02, G09, I02, I04]
 objective_gaps: []
 tags: []
 aliases: ["RAG", "grounding", "grounded generation", "retrieval augmented generation", "prompt grounding"]

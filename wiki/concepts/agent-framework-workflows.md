@@ -58,9 +58,9 @@ Magentic orchestration uses `MagenticBuilder`, specialized `ChatAgent` instances
 
 ## Decision boundaries
 
-Choose Agent Framework workflows when orchestration needs code-level control: typed models, executor functions, custom logic, direct/conditional/switch/fan-out/fan-in edges, event callbacks, checkpointing, async event processing, or swapping orchestration builders without rewriting agent logic (SRC-231 L229–264; SRC-243 L235–254).
+**Inference:** Choose Agent Framework workflows when orchestration needs code-level control: typed models, executor functions, custom logic, direct/conditional/switch/fan-out/fan-in edges, event callbacks, checkpointing, async event processing, or swapping orchestration builders without rewriting agent logic (SRC-231 L229–264; SRC-243 L235–254).
 
-Choose [[foundry-workflows]] when the scenario is a Foundry portal/YAML workflow saved in a project, designed visually, configured with nodes/variables/Power Fx, versioned by Foundry, and invoked by name from application code (SRC-36 L220–236; SRC-151 L220–226; SRC-247 L12–16).
+**Inference:** Choose [[foundry-workflows]] when the scenario is a Foundry portal/YAML workflow saved in a project, designed visually, configured with nodes/variables/Power Fx, versioned by Foundry, and invoked by name from application code (SRC-36 L220–236; SRC-151 L220–226; SRC-247 L12–16).
 
 Closest confusion: Foundry workflows and Agent Framework workflows both orchestrate agents, but the former is a project asset produced by the Foundry visual designer and YAML; the latter is an SDK graph assembled with executors, edges, builders, runtime, and event handling (SRC-247 L12–16; SRC-231 L229–247).
 

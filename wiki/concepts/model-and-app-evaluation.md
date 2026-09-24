@@ -124,3 +124,4 @@ Responsible AI sources widen the purpose: reliability and safety require rigorou
 
 - The corpus does not define exact scoring thresholds for passing each metric in a production release gate.
 - The corpus does not specify every evaluator's prompt, model, version, or statistical reliability limits.
+- **Synthesis:** Gaps P10, G12 and G15 — the study guide asks for monitoring drift and grounding quality (SRC-191 L132), monitoring deployed agents with error analysis (SRC-191 L154), and observability through tracing, token analytics, safety signals and latency breakdowns (SRC-191 L158); the corpus teaches evaluation over datasets and metrics (SRC-53 L270–287) but does not walk through drift monitoring, Application Insights tracing, alerts or dashboards. Recorded in [[corpus-gaps]].

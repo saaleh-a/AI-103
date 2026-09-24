@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Compares File Search, Azure AI Search, Foundry IQ, Web Search, semantic/vector search, and Content Understanding for grounding."
 area: retrieval
 source_ids: [SRC-4, SRC-8, SRC-19, SRC-22, SRC-23, SRC-85, SRC-91, SRC-102, SRC-147, SRC-194, SRC-239, SRC-255, SRC-257, SRC-259, SRC-261]
-objectives: [P02, P03, P04, G02, G08, G09, I01, I02, I04, I05, I07]
+objectives: [P02, P03, P04, G02, G08, G09, I02, I05, I07]
 objective_gaps: []
 tags: []
 aliases: []
@@ -68,7 +68,7 @@ aliases: []
 
 - **Inference:** Exam wording about *uploaded files* points to `file_search`; *existing index, filters, semantic ranking, custom scoring* points to Azure AI Search; *shared knowledge bases for agents* points to Foundry IQ; *fresh public information* points to Web Search (SRC-255 L218–241; SRC-22 L16–20; SRC-85 L217–246; SRC-257 L218–227).
 - **Inference:** In practice, start discovery with four questions: where the trusted data lives, how current it must be, whether it needs citations, and whether the team wants to operate search infrastructure directly (SRC-22 L79–83; SRC-23 L223–237; SRC-102 L240–256).
-- **Inference:** Retrieval is not a safety guarantee. Grounding can reduce unsupported answers, but sensitive outputs still need evaluation, review and safety controls (SRC-19 L231–235; SRC-255 L254).
+- **Inference:** Retrieval is not a safety guarantee. Grounding can reduce unsupported answers, but sensitive outputs still need evaluation, review and safety controls (SRC-255 L252; SRC-257 L225).
 
 ## Open questions
 

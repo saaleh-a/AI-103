@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Identify a document or phrase's language and return a confidence score for the prediction."
 area: language
 source_ids: [SRC-10, SRC-12, SRC-40, SRC-206, SRC-227]
-objectives: [T01]
+objectives: []
 objective_gaps: []
 tags: []
 aliases: ["language identification", "detect_language"]
@@ -49,7 +49,7 @@ The corpus's direct-code pattern is to provision a Foundry resource, create a `T
 
 | **Inference:** Scenario detail | Choose language detection | Choose translation |
 |---|---|---|
-| Required output | Identify the source language and confidence (SRC-40 L217–224) | Produce equivalent text in target language(s) (SRC-227 L248–252) |
+| Required output | Identify the source language and confidence (SRC-40 L220–227) | Produce equivalent text in target language(s) (SRC-227 L248–252) |
 | Typical input | Unknown-language text, documents, or short phrases (SRC-40 L218–220) | Source text plus target language codes (SRC-227 L249–252) |
 | **Inference:** Exam cue | determine which language, confidence score, `(unknown)` | `translate`, target language, source-to-target output |
 

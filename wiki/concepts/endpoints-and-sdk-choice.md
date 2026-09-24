@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Which endpoint and SDK to use: project endpoint with Foundry SDK, Azure OpenAI endpoint with OpenAI SDK, or tool-specific endpoints."
 area: platform
-source_ids: [SRC-18, SRC-51, SRC-90, SRC-96, SRC-99, SRC-102, SRC-155, SRC-183]
+source_ids: [SRC-18, SRC-51, SRC-90, SRC-96, SRC-99, SRC-102, SRC-155, SRC-183, SRC-191]
 objectives: [G05, G06]
 objective_gaps: [P12]
 tags: []
@@ -56,7 +56,7 @@ For RAG, the corpus states that after an Azure AI Search index is created, it ca
 
 - Use the Foundry SDK with the project endpoint when the app needs Foundry Agent Service, tool approval workflows, cloud evaluations, tracing and observability, Foundry direct models, project metadata, connections, or governance features. (SRC-18 L292–300)
 - Use the OpenAI SDK with the Azure OpenAI endpoint when the app needs OpenAI API compatibility, portability between OpenAI and Azure OpenAI deployments, Chat Completions, Responses, Images APIs, or minimal dependency on Foundry-specific concepts. (SRC-18 L301–307)
-- Use tool-specific endpoints and SDKs/REST APIs when consuming Foundry Tools capabilities directly. (SRC-51 L238; SRC-96 L233)
+- **Inference:** Use tool-specific endpoints and SDKs/REST APIs when consuming Foundry Tools capabilities directly. (SRC-51 L238; SRC-96 L233)
 - Use `AzureOpenAI` specifically when the app needs functionality from a specific version of the Azure OpenAI API. (SRC-18 L286–289)
 - **Inference:** If the scenario mentions generated code samples from the playground, inspect its selected API, language and SDK because those choices determine which endpoint pattern the sample uses. (SRC-90 L226–232)
 
@@ -99,8 +99,10 @@ A third mistake is to treat Foundry Tools as ordinary model deployments. The Fou
 - SRC-102 — [[src-102-ground-model-retrieval-augmented-generation]] — RAG through project SDK and Responses.
 - SRC-155 — [[src-155-microsoft-foundry]] — projects expose project and Azure OpenAI endpoint access paths.
 - SRC-183 — [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1]] — episode-level REST, OpenAI SDK, Foundry SDK and tool SDK distinction.
+- SRC-191 — [[src-191-study-guide-exam-ai-103-developing-ai-apps-agents]] — official study guide: objective wording for the recorded corpus gap.
 
 ## Open questions
 
 - The captures omit concrete endpoint URL formats in code blocks, so this page preserves the conceptual endpoint choice without inventing exact URL shapes. (SRC-18 L238–242; SRC-18 L267–271)
+- **Synthesis:** Gap P12 — the study guide lists private networking among the security configuration it expects (SRC-191 L134); the corpus does not teach private-networking configuration for Foundry endpoints. Recorded in [[corpus-gaps]].
 

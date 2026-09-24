@@ -52,7 +52,7 @@ This unit frames the problem as moving a Microsoft Foundry agent from the Foundr
 - Example use cases include support agents for IT questions, knowledge assistants for employee onboarding, and specialized advisors for business domains. (SRC-125 L218)
 - The module teaches publishing options, portal publishing to Teams and Copilot, Work IQ access to emails, meetings, and documents, and testing or troubleshooting. (SRC-125 L218–224)
 - The stated prerequisites are Azure and Azure portal familiarity, experience building agents in Microsoft Foundry, and a Microsoft 365 subscription with Teams access. (SRC-125 L226–228)
-- The unit says the text format contains greater detail than the video format, so the text can supplement video-based learning. (SRC-125 L229)
+- The unit says the text format contains greater detail than the video format, so the text can supplement video-based learning. (SRC-125 L230)
 
 ## How it works
 

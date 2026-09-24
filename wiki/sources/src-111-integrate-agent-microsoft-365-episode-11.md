@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Video walkthrough of publishing a Foundry agent to Teams and Microsoft 365, including agent identity, user isolation, Bot Service, scopes, and a demo."
 area: agents
 source_ids: [SRC-111]
-objectives: [P07, P12, G12]
+objectives: [P07]
 tags: [episode, agent-publishing, teams, microsoft-365-copilot, bot-service]
 aliases: ["SRC-111"]
 source_kind: episode

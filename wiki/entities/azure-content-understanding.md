@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Foundry Tool for multimodal extraction: analyzers turn documents, images, audio, and video into fields, JSON, and markdown."
 area: extraction
 source_ids: [SRC-6, SRC-7, SRC-8, SRC-9, SRC-29, SRC-30, SRC-96, SRC-126, SRC-184, SRC-250, SRC-263, SRC-264]
-objectives: [P02, G09, V10, V11, V13, T01, I06, I07, I08]
+objectives: [P02, V10, V11, V13, T01, I06, I07, I08]
 objective_gaps: []
 tags: ["service"]
 aliases: ["Content Understanding", "Azure AI Content Understanding", "Content Understanding in Foundry Tools", "Content Understanding Studio"]

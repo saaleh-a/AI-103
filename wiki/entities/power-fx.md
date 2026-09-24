@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Power Fx is the low-code Excel-like formula language used in Foundry workflows for variables, conditions, transformations, and loops."
 area: orchestration
 source_ids: [SRC-11, SRC-36, SRC-118, SRC-219, SRC-231]
-objectives: [G03, G11]
+objectives: [G03]
 objective_gaps: []
 tags: ["tool"]
 aliases: ["Power Fx formulas", "Power Fx expressions", "low-code formula language"]
@@ -52,7 +52,7 @@ Use Power Fx when configuring Foundry workflow nodes that need an expression: se
 
 ## Decision boundaries
 
-Choose Power Fx when the logic is expression-level workflow control: variable references, transformations, conditions, or collection iteration inside Foundry workflows (SRC-11 L220–236).
+**Inference:** Choose Power Fx when the logic is expression-level workflow control: variable references, transformations, conditions, or collection iteration inside Foundry workflows (SRC-11 L220–236).
 
 **Inference:** Do not use Power Fx as a replacement for code-first custom orchestration in Microsoft Agent Framework. Agent Framework workflows use SDK constructs such as executors, edges, builders, callbacks, and events; Power Fx is described only as Foundry workflow expression glue (SRC-11 L220–236; SRC-231 L229–247).
 

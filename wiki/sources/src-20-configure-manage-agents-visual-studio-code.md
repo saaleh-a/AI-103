@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Covers configuring declarative prompt-based agents in VS Code through Agent Designer and synchronized YAML."
 area: agents
 source_ids: [SRC-20]
-objectives: [G07, G08, G13]
+objectives: [G07, G13]
 tags: [agent-configuration, yaml, visual-studio-code, agent-designer, generation-parameters]
 aliases: ["SRC-20"]
 source_kind: learn-unit

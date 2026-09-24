@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains Foundry benchmark dimensions: quality, safety, cost, throughput, latency, leaderboards, trade-off charts, and side-by-side comparison."
 area: models
 source_ids: [SRC-188]
-objectives: [P01, P09, G04]
+objectives: [P01]
 tags: [model-benchmarks, model-selection, throughput]
 aliases: ["SRC-188"]
 source_kind: learn-unit
@@ -69,7 +69,7 @@ Not covered by this source.
 
 ## Key terms
 
-- Quality index — an averaged accuracy overview across benchmark datasets for general language tasks. (SRC-188 L218–219)
+- Quality index — an averaged accuracy overview across benchmark datasets for general language tasks. (SRC-188 L221–222)
 - Attack Success Rate — the HarmBench safety measure where lower values indicate safer, more robust models. (SRC-188 L231–235)
 - Estimated cost — a combined input/output cost estimate using a typical 3:1 input-to-output token ratio. (SRC-188 L246)
 - Time to first token — the time until the first token arrives during streaming. (SRC-188 L256–258)
@@ -104,7 +104,7 @@ Not covered by this source.
 - [[model-selection]] — benchmarks support choosing models. (SRC-188 L215–219)
 - [[model-catalog]] — leaderboards and model cards live in the catalog experience. (SRC-188 L217–219)
 - [[quotas-rate-limits-and-cost]] — cost and throughput benchmarks affect operational fit. (SRC-188 L243–264)
-- [[model-and-app-evaluation]] — benchmark selection precedes deployed evaluation. (SRC-188 L215; SRC-53 L213)
+- [[model-and-app-evaluation]] — benchmark selection precedes deployed evaluation. (SRC-188 L215; SRC-53 L215)
 - [[deployment-options-compared]] — supported endpoints appear in side-by-side comparison. (SRC-188 L269–271)
 - *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 

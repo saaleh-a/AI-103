@@ -51,7 +51,7 @@ A learner configures a knowledge base, connects data sources, configures agent i
 
 The retrieval unit says instructions determine retrieval behavior and should specify when to retrieve, how to cite, and what to do when information is not found. (SRC-23 L223–237)
 
-The exercise capture is thin: it only says learners integrate an AI agent with Foundry IQ in Azure AI Foundry; the lab steps themselves are not in the corpus. (SRC-76 L211–212)
+The exercise capture is thin: it names the exercise (integrate an AI agent with Foundry IQ), invites learners with an Azure subscription to explore Foundry IQ in Microsoft Foundry, and says to launch the exercise and follow the instructions; the lab steps themselves are not in the corpus. (SRC-76 L210–216)
 
 ## Decision boundaries
 

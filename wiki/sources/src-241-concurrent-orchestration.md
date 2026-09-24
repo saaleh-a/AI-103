@@ -55,7 +55,7 @@ Concurrent orchestration lets multiple agents work on the same task simultaneous
 
 ## How it works
 
-The same task is handled independently by multiple agents, and the system gathers outputs afterward. (SRC-241 L220) Agents do not share results with each other during the run, although an agent can call other agents through its own orchestration. (SRC-241 L222) The registered agents can be called every time or selected dynamically for a task. (SRC-241 L222)
+The same task is handled independently by multiple agents, and the system gathers outputs afterward. (SRC-241 L220) Agents do not share results with each other during the run, although an agent can call other agents through its own orchestration. (SRC-241 L223) The registered agents can be called every time or selected dynamically for a task. (SRC-241 L223)
 
 ## Code and API patterns
 

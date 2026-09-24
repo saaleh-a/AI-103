@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "How agents connect to MCP servers, discover tools dynamically, invoke them, restrict access and handle approval."
 area: agents
 source_ids: [SRC-2, SRC-24, SRC-25, SRC-43, SRC-45, SRC-91, SRC-108, SRC-109, SRC-233, SRC-235, SRC-236, SRC-240]
-objectives: [P04, P16, G07, G09, G11, T01, T05]
+objectives: [P04, P16, G07, G09, G11]
 objective_gaps: []
 tags: []
 aliases: ["MCP tool discovery", "MCP server", "MCP client", "remote MCP server", "dynamic tool discovery", "MCPTool"]
@@ -55,7 +55,7 @@ For Azure Language, the portal path is Tools → Connect a tool → Azure Langua
 
 - `server_label`: unique identifier for the MCP server (SRC-240 L223).
 - `server_url`: remote MCP endpoint (SRC-240 L226–228).
-- `allowed_tools`: optional list restricting which tools the agent may access (SRC-240 L228–229).
+- `allowed_tools`: optional list restricting which tools the agent may access (SRC-240 L225–226).
 - `require_approval`: controls approval before tool invocation; the managed source says `always` is the default if no value is provided and `never` disables approval (SRC-240 L226–239).
 - Custom headers: used for API keys, OAuth tokens or other required server headers (SRC-240 L227–229).
 

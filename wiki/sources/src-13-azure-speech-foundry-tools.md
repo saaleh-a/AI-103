@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains Azure Speech in Foundry Tools, Foundry resource provisioning, endpoint/key access and the SpeechConfig setup object."
 area: speech
 source_ids: [SRC-13]
-objectives: [T05]
+objectives: []
 tags: [azure-speech, foundry-tools, speechconfig, endpoint, key]
 aliases: ["SRC-13"]
 source_kind: learn-unit
@@ -77,7 +77,7 @@ The capture omits the actual Python code body, but it identifies the setup patte
 ## Key terms
 
 - **Foundry resource** — the resource that provides the speech-related capabilities in this source. (SRC-13 L218; SRC-13 L222)
-- **Endpoint** — the address used from code to call APIs for the provisioned resource. (SRC-13 L223; SRC-13 L228–229)
+- **Endpoint** — the address used from code to call APIs for the provisioned resource. (SRC-13 L223; SRC-13 L229–230)
 - **Key** — the value associated with the resource that authenticates requests in the source's setup. (SRC-13 L223; SRC-13 L228–229)
 - **`SpeechConfig`** — the initial object that encapsulates connection details for Azure Speech in the Foundry resource. (SRC-13 L226–227)
 

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Defines AI agents, their use cases, security practices, Foundry Agent Service, agent types, and core managed-service capabilities."
 area: agents
 source_ids: [SRC-230]
-objectives: [G07, G08, G09, P04, P16]
+objectives: [G08, G09, P04, P16]
 tags: [ai-agents, foundry-agent-service, agent-types, security, tool-calling]
 aliases: ["SRC-230"]
 source_kind: learn-unit
@@ -66,7 +66,7 @@ The unit says Microsoft Foundry Agent Service can enable agent-like experiences 
 
 ## Key terms
 
-- **AI agent** — a software service that uses generative AI to understand and perform tasks on behalf of users or other programs. (SRC-230 L218)
+- **AI agent** — a software service that uses generative AI to understand and perform tasks on behalf of users or other programs. (SRC-230 L220)
 - **Declarative agents** — agents defined through configuration rather than code, including prompt-based and workflow agents. (SRC-230 L259–262)
 - **Hosted agents** — containerized agents created and deployed in code while the platform manages infrastructure. (SRC-230 L263)
 - **Automatic tool calling** — the service runs the model, invokes tools, and returns results. (SRC-230 L267)

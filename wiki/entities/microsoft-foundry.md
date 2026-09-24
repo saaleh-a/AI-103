@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Azure AI development platform that organizes projects, models, agents, tools, knowledge, endpoints, evaluation and operations."
 area: platform
 source_ids: [SRC-14, SRC-18, SRC-51, SRC-84, SRC-90, SRC-96, SRC-102, SRC-155, SRC-183, SRC-190]
-objectives: [P05, G06]
+objectives: [P05]
 objective_gaps: []
 tags: ["product"]
 aliases: ["Azure AI Foundry", "AI Foundry", "Foundry portal", "Microsoft Foundry portal", "New Foundry"]

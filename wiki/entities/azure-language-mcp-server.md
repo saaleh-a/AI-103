@@ -67,7 +67,7 @@ The portal connection is named **Azure Language in Foundry Tools**, while the ag
 - Understand unit: MCP roles, dynamic tool discovery, server capabilities, endpoint discussion (SRC-235 L215–245).
 - Connect unit: portal connection, approval, logs, Foundry SDK Responses API client, `MCPTool` code configuration (SRC-24 L222–260).
 - Exercise: build a text-analysis agent using entity recognition and PII redaction (SRC-70 L211–212).
-- Knowledge check: primary role and tool-selection decision boundary (SRC-150 L211–219).
+- Knowledge check: primary role and tool-selection decision boundary (SRC-150 L208–216).
 - Episode 16: says the server adds prebuilt Language capabilities such as PII, entity recognition, and language detection to an agent without custom code (SRC-45 L8–13; SRC-45 L57–69).
 
 ## Connections

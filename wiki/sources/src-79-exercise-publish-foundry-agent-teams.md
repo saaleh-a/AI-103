@@ -48,9 +48,9 @@ This exercise page only launches hands-on practice for publishing a Foundry agen
 
 ## Key claims
 
-- Learners with an Azure subscription can explore publishing a Foundry agent to Microsoft Teams themselves. (SRC-79 L213)
+- Learners with an Azure subscription can explore publishing a Foundry agent to Microsoft Teams themselves. (SRC-79 L214)
 - Learners without an Azure subscription can sign up for an account that includes credits for the first 30 days. (SRC-79 L214–215)
-- The page instructs learners to launch the exercise and follow the instructions. (SRC-79 L216)
+- The page instructs learners to launch the exercise and follow the instructions. (SRC-79 L217)
 - An optional Work IQ exercise is available for learners who have Work IQ access and want to build an app that connects and provides work insight. (SRC-79 L217–218)
 
 ## How it works
@@ -87,8 +87,8 @@ Not covered by this source.
 
 ## Connections
 
-- [[agent-publishing]] — the exercise is about publishing a Foundry agent to Teams. (SRC-79 L213)
-- [[microsoft-365-agent-integration]] — Teams is the integration surface. (SRC-79 L213)
+- [[agent-publishing]] — the exercise is about publishing a Foundry agent to Teams. (SRC-79 L214)
+- [[microsoft-365-agent-integration]] — Teams is the integration surface. (SRC-79 L214)
 - [[work-iq]] — the exercise page links optional Work IQ practice. (SRC-79 L217–218)
 - *Module units:* [[src-125-introduction-integrate-agent-microsoft-365|1 Introduction]] · [[src-232-understand-foundry-agent-publishing-options|2 Understand Foundry agent publishing options]] · [[src-185-publish-agent-foundry-portal-teams|3 Publish an agent from Foundry portal to Teams]] · [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios|4 Advanced - Use Microsoft 365 Agents Toolkit for complex integration scenarios - Training - Microsoft]] · [[src-2-access-microsoft-365-data-work-iq|5 Access Microsoft 365 data with Work IQ]] · [[src-222-test-iterate-integrated-agent|6 Test and iterate your integrated agent]] · [[src-149-knowledge-check-integrate-agent-microsoft-365|8 Knowledge check]] · [[src-209-summary-integrate-agent-microsoft-365|9 Summary]] · [[src-111-integrate-agent-microsoft-365-episode-11|episode 11]]
 

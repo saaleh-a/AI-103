@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Shows why to use Voice Live through a Foundry Agent and what portal and client-app configuration is involved."
 area: speech
 source_ids: [SRC-31]
-objectives: [G07, T05, T06]
+objectives: [T05, T06]
 tags: [voice-live, foundry-agent, agent-playground, vad, audio]
 aliases: ["SRC-31"]
 source_kind: learn-unit

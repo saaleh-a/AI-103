@@ -83,7 +83,7 @@ The source names an API-choice question but does not show code. (SRC-172 L214–
 
 ## Relation to other sources
 
-- [[src-258-what-are-image-generation-models]] states that the model catalog can be filtered by inference task to find text-to-image models. (SRC-258 L215)
+- [[src-258-what-are-image-generation-models]] states that the model catalog can be filtered by inference task to find text-to-image models. (SRC-258 L218)
 - [[src-32-create-client-application-that-uses-image-generation-model]] names the OpenAI Images API in the client-app unit. (SRC-32 L213–214)
 - [[src-97-generate-images-video-episode-23]] supplies the spoken answers for similar end-of-episode checks. (SRC-97 L752–766)
 

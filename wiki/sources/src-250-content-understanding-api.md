@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains the API flow for submitting content to an analyzer, polling an operation ID, and retrieving JSON results."
 area: extraction
 source_ids: [SRC-250]
-objectives: [I07, I08]
+objectives: []
 tags: [content-understanding, api, analyzer-results, asynchronous-operations]
 aliases: ["SRC-250"]
 source_kind: learn-unit
@@ -52,7 +52,7 @@ The Content Understanding API is a programmatic interface for creating, managing
 - Client applications submit HTTP calls to the Content Understanding endpoint for a Microsoft Foundry resource. (SRC-250 L217)
 - API calls pass one authorization key in the header. (SRC-250 L217)
 - The endpoint and keys are available in Azure portal or Microsoft Foundry portal. (SRC-250 L217–218)
-- The Microsoft Foundry API can connect to the project programmatically with Entra ID. (SRC-250 L218)
+- The Microsoft Foundry API can connect to the project programmatically with Entra ID. (SRC-250 L217)
 - A common API use is submitting content to an existing analyzer and retrieving analysis results. (SRC-250 L219)
 - An analysis request returns an operation ID for an asynchronous task. (SRC-250 L219)
 - The client sends another request with the operation ID to retrieve operation status, potentially polling until completion. (SRC-250 L219)

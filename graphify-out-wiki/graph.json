@@ -662,7 +662,7 @@
       "area": "agents",
       "status": "active",
       "id": "wiki_human_in_the_loop_approval",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "human-in-the-loop and approvals"
     },
@@ -806,7 +806,7 @@
       "status": "active",
       "id": "wiki_agent_publishing",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "agent publishing"
     },
     {
@@ -819,7 +819,7 @@
       "status": "active",
       "id": "wiki_agent_testing_and_evaluation",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "agent testing and evaluation"
     },
     {
@@ -832,7 +832,7 @@
       "status": "active",
       "id": "wiki_microsoft_365_agent_integration",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "microsoft 365 agent integration"
     },
     {
@@ -845,7 +845,7 @@
       "status": "active",
       "id": "wiki_microsoft_365_agents_toolkit",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "microsoft 365 agents toolkit"
     },
     {
@@ -858,7 +858,7 @@
       "status": "active",
       "id": "wiki_work_iq",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "work iq"
     },
     {
@@ -871,7 +871,7 @@
       "status": "active",
       "id": "wiki_src_111_integrate_agent_microsoft_365_episode_11",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "integrate your agent with microsoft 365 - ai-103 - episode 11"
     },
     {
@@ -884,7 +884,7 @@
       "status": "active",
       "id": "wiki_src_125_introduction_integrate_agent_microsoft_365",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "introduction \u2014 integrate your agent with microsoft 365"
     },
     {
@@ -897,7 +897,7 @@
       "status": "active",
       "id": "wiki_src_149_knowledge_check_integrate_agent_microsoft_365",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "knowledge check \u2014 integrate your agent with microsoft 365"
     },
     {
@@ -910,7 +910,7 @@
       "status": "active",
       "id": "wiki_src_185_publish_agent_foundry_portal_teams",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "publish an agent from foundry portal to teams"
     },
     {
@@ -923,7 +923,7 @@
       "status": "active",
       "id": "wiki_src_209_summary_integrate_agent_microsoft_365",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "summary \u2014 integrate your agent with microsoft 365"
     },
     {
@@ -936,7 +936,7 @@
       "status": "active",
       "id": "wiki_src_222_test_iterate_integrated_agent",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "test and iterate your integrated agent"
     },
     {
@@ -949,7 +949,7 @@
       "status": "active",
       "id": "wiki_src_223_test_deploy_integrate_agents",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "test, deploy, and integrate agents"
     },
     {
@@ -962,7 +962,7 @@
       "status": "active",
       "id": "wiki_src_232_understand_foundry_agent_publishing_options",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "understand foundry agent publishing options"
     },
     {
@@ -975,7 +975,7 @@
       "status": "active",
       "id": "wiki_src_2_access_microsoft_365_data_work_iq",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "access microsoft 365 data with work iq"
     },
     {
@@ -988,7 +988,7 @@
       "status": "active",
       "id": "wiki_src_5_advanced_microsoft_365_agents_toolkit_complex_integration_scenarios",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "advanced - use microsoft 365 agents toolkit for complex integration scenarios - training - microsoft"
     },
     {
@@ -1001,7 +1001,7 @@
       "status": "stub",
       "id": "wiki_src_79_exercise_publish_foundry_agent_teams",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "exercise - publish a foundry agent to teams"
     },
     {
@@ -1013,8 +1013,8 @@
       "area": "corpus",
       "status": "disputed",
       "id": "wiki_key_tensions",
-      "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "key tensions across sources"
     },
     {
@@ -1026,7 +1026,7 @@
       "area": "corpus",
       "status": "active",
       "id": "wiki_naming_and_currency",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "naming and currency"
     },
@@ -1040,73 +1040,99 @@
       "status": "active",
       "id": "wiki_open_questions",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "open questions"
     },
     {
-      "label": "Corpus gaps",
-      "file_type": "document",
-      "source_file": "wiki/synthesis/corpus-gaps.md",
+      "label": "Exam AI-103: Developing AI Apps and Agents on Azure",
+      "file_type": "concept",
+      "source_file": "wiki/entities/ai-103-exam.md",
       "source_location": null,
-      "page_type": "synthesis",
+      "page_type": "entity",
       "area": "exam",
       "status": "active",
-      "id": "wiki_corpus_gaps",
+      "id": "wiki_ai_103_exam",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "corpus gaps"
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "exam ai-103: developing ai apps and agents on azure"
     },
     {
-      "label": "Master synthesis \u2014 whole AI-103 architecture",
-      "file_type": "document",
-      "source_file": "wiki/synthesis/master-synthesis.md",
+      "label": "Course AI-103T00-A",
+      "file_type": "concept",
+      "source_file": "wiki/entities/ai-103t00-course.md",
       "source_location": null,
-      "page_type": "synthesis",
+      "page_type": "entity",
       "area": "exam",
       "status": "active",
-      "id": "wiki_master_synthesis",
+      "id": "wiki_ai_103t00_course",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "master synthesis \u2014 whole ai-103 architecture"
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "course ai-103t00-a"
     },
     {
-      "label": "Solution Engineering transfer",
+      "label": "Knowledge check \u2014 Develop a generative AI chat app with Microsoft Foundry",
       "file_type": "document",
-      "source_file": "wiki/synthesis/solution-engineering-transfer.md",
-      "source_location": null,
-      "page_type": "synthesis",
-      "area": "exam",
-      "status": "active",
-      "id": "wiki_solution_engineering_transfer",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "solution engineering transfer"
-    },
-    {
-      "label": "Module assessment \u2014 Optimize generative AI model performance with Microsoft Foundry",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-161-module-assessment-optimize-generative-ai-model-performance-microsoft-foundry.md",
+      "source_file": "wiki/sources/src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry.md",
       "source_location": null,
       "page_type": "source",
       "area": "exam",
       "status": "active",
-      "id": "wiki_src_161_module_assessment_optimize_generative_ai_model_performance_microsoft_foundry",
+      "id": "wiki_src_148_knowledge_check_develop_generative_ai_chat_app_microsoft_foundry",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "module assessment \u2014 optimize generative ai model performance with microsoft foundry"
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "knowledge check \u2014 develop a generative ai chat app with microsoft foundry"
     },
     {
-      "label": "Study guide for Exam AI-103- Developing AI Apps and Agents on Azure - Microsoft Learn",
+      "label": "Module assessment \u2014 Plan and prepare to develop AI solutions on Azure",
       "file_type": "document",
-      "source_file": "wiki/sources/src-191-study-guide-exam-ai-103-developing-ai-apps-agents.md",
+      "source_file": "wiki/sources/src-162-module-assessment-plan-prepare-develop-ai-solutions-azure.md",
       "source_location": null,
       "page_type": "source",
       "area": "exam",
       "status": "active",
-      "id": "wiki_src_191_study_guide_exam_ai_103_developing_ai_apps_agents",
+      "id": "wiki_src_162_module_assessment_plan_prepare_develop_ai_solutions_azure",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "study guide for exam ai-103- developing ai apps and agents on azure - microsoft learn"
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "module assessment \u2014 plan and prepare to develop ai solutions on azure"
+    },
+    {
+      "label": "AI-103 Develop AI Apps and Agents on Azure Study Cram",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-1-ai-103-develop-ai-apps-agents-azure-study-cram.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "exam",
+      "status": "active",
+      "id": "wiki_src_1_ai_103_develop_ai_apps_agents_azure_study_cram",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "ai-103 develop ai apps and agents on azure study cram"
+    },
+    {
+      "label": "Course AI-103T00-A- Develop AI apps and agents on Azure",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-27-course-ai-103t00-develop-ai-apps-agents-azure.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "exam",
+      "status": "active",
+      "id": "wiki_src_27_course_ai_103t00_develop_ai_apps_agents_azure",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "course ai-103t00-a- develop ai apps and agents on azure"
+    },
+    {
+      "label": "Course Preview - AI-103 - Develop AI apps and agents on Azure",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-28-course-preview-ai-103-develop-ai-apps-agents-azure.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "exam",
+      "status": "active",
+      "id": "wiki_src_28_course_preview_ai_103_develop_ai_apps_agents_azure",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "course preview - ai-103 - develop ai apps and agents on azure"
     },
     {
       "label": "Decision boundaries \u2014 confusable technologies",
@@ -1131,99 +1157,73 @@
       "status": "active",
       "id": "wiki_src_166_module_assessment_translate_text_speech_microsoft_foundry_tools",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "module assessment \u2014 translate text and speech with microsoft foundry tools"
     },
     {
-      "label": "Exam AI-103: Developing AI Apps and Agents on Azure",
-      "file_type": "concept",
-      "source_file": "wiki/entities/ai-103-exam.md",
-      "source_location": null,
-      "page_type": "entity",
-      "area": "exam",
-      "status": "active",
-      "id": "wiki_ai_103_exam",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "exam ai-103: developing ai apps and agents on azure"
-    },
-    {
-      "label": "Course AI-103T00-A",
-      "file_type": "concept",
-      "source_file": "wiki/entities/ai-103t00-course.md",
-      "source_location": null,
-      "page_type": "entity",
-      "area": "exam",
-      "status": "active",
-      "id": "wiki_ai_103t00_course",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "course ai-103t00-a"
-    },
-    {
-      "label": "Knowledge check \u2014 Develop a generative AI chat app with Microsoft Foundry",
+      "label": "Corpus gaps",
       "file_type": "document",
-      "source_file": "wiki/sources/src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry.md",
+      "source_file": "wiki/synthesis/corpus-gaps.md",
+      "source_location": null,
+      "page_type": "synthesis",
+      "area": "exam",
+      "status": "active",
+      "id": "wiki_corpus_gaps",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "corpus gaps"
+    },
+    {
+      "label": "Master synthesis \u2014 whole AI-103 architecture",
+      "file_type": "document",
+      "source_file": "wiki/synthesis/master-synthesis.md",
+      "source_location": null,
+      "page_type": "synthesis",
+      "area": "exam",
+      "status": "active",
+      "id": "wiki_master_synthesis",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "master synthesis \u2014 whole ai-103 architecture"
+    },
+    {
+      "label": "Solution Engineering transfer",
+      "file_type": "document",
+      "source_file": "wiki/synthesis/solution-engineering-transfer.md",
+      "source_location": null,
+      "page_type": "synthesis",
+      "area": "exam",
+      "status": "active",
+      "id": "wiki_solution_engineering_transfer",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "solution engineering transfer"
+    },
+    {
+      "label": "Module assessment \u2014 Optimize generative AI model performance with Microsoft Foundry",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-161-module-assessment-optimize-generative-ai-model-performance-microsoft-foundry.md",
       "source_location": null,
       "page_type": "source",
       "area": "exam",
       "status": "active",
-      "id": "wiki_src_148_knowledge_check_develop_generative_ai_chat_app_microsoft_foundry",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "knowledge check \u2014 develop a generative ai chat app with microsoft foundry"
+      "id": "wiki_src_161_module_assessment_optimize_generative_ai_model_performance_microsoft_foundry",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "module assessment \u2014 optimize generative ai model performance with microsoft foundry"
     },
     {
-      "label": "Module assessment \u2014 Plan and prepare to develop AI solutions on Azure",
+      "label": "Study guide for Exam AI-103- Developing AI Apps and Agents on Azure - Microsoft Learn",
       "file_type": "document",
-      "source_file": "wiki/sources/src-162-module-assessment-plan-prepare-develop-ai-solutions-azure.md",
+      "source_file": "wiki/sources/src-191-study-guide-exam-ai-103-developing-ai-apps-agents.md",
       "source_location": null,
       "page_type": "source",
       "area": "exam",
       "status": "active",
-      "id": "wiki_src_162_module_assessment_plan_prepare_develop_ai_solutions_azure",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "module assessment \u2014 plan and prepare to develop ai solutions on azure"
-    },
-    {
-      "label": "AI-103 Develop AI Apps and Agents on Azure Study Cram",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-1-ai-103-develop-ai-apps-agents-azure-study-cram.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "exam",
-      "status": "active",
-      "id": "wiki_src_1_ai_103_develop_ai_apps_agents_azure_study_cram",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "ai-103 develop ai apps and agents on azure study cram"
-    },
-    {
-      "label": "Course AI-103T00-A- Develop AI apps and agents on Azure",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-27-course-ai-103t00-develop-ai-apps-agents-azure.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "exam",
-      "status": "active",
-      "id": "wiki_src_27_course_ai_103t00_develop_ai_apps_agents_azure",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "course ai-103t00-a- develop ai apps and agents on azure"
-    },
-    {
-      "label": "Course Preview - AI-103 - Develop AI apps and agents on Azure",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-28-course-preview-ai-103-develop-ai-apps-agents-azure.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "exam",
-      "status": "active",
-      "id": "wiki_src_28_course_preview_ai_103_develop_ai_apps_agents_azure",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "course preview - ai-103 - develop ai apps and agents on azure"
+      "id": "wiki_src_191_study_guide_exam_ai_103_developing_ai_apps_agents",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "study guide for exam ai-103- developing ai apps and agents on azure - microsoft learn"
     },
     {
       "label": "Azure Content Understanding",
@@ -1234,7 +1234,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_azure_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "azure content understanding"
     },
@@ -1247,7 +1247,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_azure_document_intelligence",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "azure document intelligence"
     },
@@ -1260,7 +1260,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_content_understanding_analyzers",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "content understanding analyzers"
     },
@@ -1273,7 +1273,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_content_understanding_client_apps",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "content understanding client applications"
     },
@@ -1286,7 +1286,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_document_intelligence_custom_models",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "document intelligence custom models"
     },
@@ -1299,7 +1299,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_document_intelligence_prebuilt_models",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "document intelligence prebuilt models"
     },
@@ -1312,7 +1312,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_extraction_options_compared",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "information extraction options compared"
     },
@@ -1325,7 +1325,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_117_introduction_extract_data_azure_document_intelligence",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "introduction \u2014 extract data with azure document intelligence"
     },
@@ -1338,7 +1338,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_126_introduction_create_multimodal_analysis_solution_azure_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "introduction \u2014 create a multimodal analysis solution with azure content understanding"
     },
@@ -1351,7 +1351,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_137_introduction_analyze_images_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "introduction \u2014 analyze images with content understanding"
     },
@@ -1364,7 +1364,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_138_introduction_create_azure_content_understanding_client_application",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "introduction \u2014 create an azure content understanding client application"
     },
@@ -1377,7 +1377,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_160_module_assessment_create_azure_content_understanding_client_application",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "module assessment \u2014 create an azure content understanding client application"
     },
@@ -1390,7 +1390,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_164_module_assessment_create_multimodal_analysis_solution_azure_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "module assessment \u2014 create a multimodal analysis solution with azure content understanding"
     },
@@ -1403,7 +1403,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_165_module_assessment_extract_data_azure_document_intelligence",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "module assessment \u2014 extract data with azure document intelligence"
     },
@@ -1416,7 +1416,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_169_module_assessment_analyze_images_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "module assessment \u2014 analyze images with content understanding"
     },
@@ -1429,7 +1429,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_184_prepare_ai_content_understanding_api",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "prepare to use the ai content understanding api"
     },
@@ -1442,7 +1442,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_201_summary_create_azure_content_understanding_client_application",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "summary \u2014 create an azure content understanding client application"
     },
@@ -1455,7 +1455,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_216_summary_analyze_images_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "summary \u2014 analyze images with content understanding"
     },
@@ -1468,7 +1468,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_217_summary_create_multimodal_analysis_solution_azure_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "summary \u2014 create a multimodal analysis solution with azure content understanding"
     },
@@ -1481,7 +1481,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_220_summary_extract_data_azure_document_intelligence",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "summary \u2014 extract data with azure document intelligence"
     },
@@ -1494,7 +1494,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_224_train_custom_models",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "train and use custom models"
     },
@@ -1507,7 +1507,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_249_prebuilt_models",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "use prebuilt models"
     },
@@ -1520,7 +1520,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_250_content_understanding_api",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "use the content understanding api"
     },
@@ -1533,7 +1533,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_251_document_intelligence_studio",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "use the document intelligence studio"
     },
@@ -1546,7 +1546,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_262_what_is_azure_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "what is azure content understanding-"
     },
@@ -1559,7 +1559,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_263_what_is_azure_document_intelligence",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "what is azure document intelligence-"
     },
@@ -1572,12 +1572,12 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_264_what_is_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "what is content understanding-"
     },
     {
-      "label": "Create a Content Understanding analyzer",
+      "label": "Create a Content Understanding analyzer \u2014 Create an Azure Content Understanding client application",
       "file_type": "document",
       "source_file": "wiki/sources/src-29-create-content-understanding-analyzer.md",
       "source_location": null,
@@ -1585,12 +1585,12 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_29_create_content_understanding_analyzer",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
-      "norm_label": "create a content understanding analyzer"
+      "norm_label": "create a content understanding analyzer \u2014 create an azure content understanding client application"
     },
     {
-      "label": "Create a Content Understanding analyzer",
+      "label": "Create a Content Understanding analyzer \u2014 Create a multimodal analysis solution with Azure Content Understanding",
       "file_type": "document",
       "source_file": "wiki/sources/src-30-create-content-understanding-analyzer.md",
       "source_location": null,
@@ -1598,9 +1598,9 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_30_create_content_understanding_analyzer",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
-      "norm_label": "create a content understanding analyzer"
+      "norm_label": "create a content understanding analyzer \u2014 create a multimodal analysis solution with azure content understanding"
     },
     {
       "label": "Exercise - Analyze documents with Document Intelligence",
@@ -1611,7 +1611,7 @@
       "area": "extraction",
       "status": "stub",
       "id": "wiki_src_54_exercise_analyze_documents_document_intelligence",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "exercise - analyze documents with document intelligence"
     },
@@ -1624,7 +1624,7 @@
       "area": "extraction",
       "status": "stub",
       "id": "wiki_src_55_exercise_analyze_images_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "exercise - analyze images with content understanding"
     },
@@ -1637,7 +1637,7 @@
       "area": "extraction",
       "status": "stub",
       "id": "wiki_src_67_exercise_develop_content_understanding_client_application",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "exercise - develop a content understanding client application"
     },
@@ -1650,7 +1650,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_6_analyze_content",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "analyze content"
     },
@@ -1663,7 +1663,7 @@
       "area": "extraction",
       "status": "stub",
       "id": "wiki_src_73_exercise_extract_information_multimodal_content",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "exercise - extract information from multimodal content"
     },
@@ -1676,7 +1676,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_7_analyze_documents_content_understanding_episode_25",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "analyze documents with content understanding - ai-103 - episode 25"
     },
@@ -1689,7 +1689,7 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_8_analyze_images_content_understanding",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "analyze images with content understanding"
     },
@@ -1702,9 +1702,113 @@
       "area": "extraction",
       "status": "active",
       "id": "wiki_src_9_analyze_images_content_understanding_episode_24",
-      "community": 4,
+      "community": 5,
       "community_name": "Information Extraction",
       "norm_label": "analyze images with content understanding - ai-103 - episode 24"
+    },
+    {
+      "label": "Chat Completions API",
+      "file_type": "concept",
+      "source_file": "wiki/entities/chat-completions-api.md",
+      "source_location": null,
+      "page_type": "entity",
+      "area": "generative-apps",
+      "status": "active",
+      "id": "wiki_chat_completions_api",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "chat completions api"
+    },
+    {
+      "label": "OpenAI SDK",
+      "file_type": "concept",
+      "source_file": "wiki/entities/openai-sdk.md",
+      "source_location": null,
+      "page_type": "entity",
+      "area": "generative-apps",
+      "status": "active",
+      "id": "wiki_openai_sdk",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "openai sdk"
+    },
+    {
+      "label": "Introduction \u2014 Develop a generative AI chat app with Microsoft Foundry",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "generative-apps",
+      "status": "active",
+      "id": "wiki_src_120_introduction_develop_generative_ai_chat_app_microsoft_foundry",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "introduction \u2014 develop a generative ai chat app with microsoft foundry"
+    },
+    {
+      "label": "Summary \u2014 Develop a generative AI chat app with Microsoft Foundry",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-214-summary-develop-generative-ai-chat-app-microsoft-foundry.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "generative-apps",
+      "status": "active",
+      "id": "wiki_src_214_summary_develop_generative_ai_chat_app_microsoft_foundry",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "summary \u2014 develop a generative ai chat app with microsoft foundry"
+    },
+    {
+      "label": "Develop a generative AI chat app with Microsoft Foundry - AI-103 - Episode 3",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "generative-apps",
+      "status": "active",
+      "id": "wiki_src_42_develop_generative_ai_chat_app_microsoft_foundry_episode_3",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "develop a generative ai chat app with microsoft foundry - ai-103 - episode 3"
+    },
+    {
+      "label": "Exercise - Create a generative AI chat app",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-62-exercise-create-generative-ai-chat-app.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "generative-apps",
+      "status": "stub",
+      "id": "wiki_src_62_exercise_create_generative_ai_chat_app",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "exercise - create a generative ai chat app"
+    },
+    {
+      "label": "Generate responses with the ChatCompletions API",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-98-generate-responses-chatcompletions-api.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "generative-apps",
+      "status": "active",
+      "id": "wiki_src_98_generate_responses_chatcompletions_api",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "generate responses with the chatcompletions api"
+    },
+    {
+      "label": "Generate responses with the Responses API in the Foundry SDK",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-99-generate-responses-responses-api-foundry-sdk.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "generative-apps",
+      "status": "active",
+      "id": "wiki_src_99_generate_responses_responses_api_foundry_sdk",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "generate responses with the responses api in the foundry sdk"
     },
     {
       "label": "Conversation state",
@@ -1731,110 +1835,6 @@
       "community": 1,
       "community_name": "Agents, Tools and APIs",
       "norm_label": "responses api"
-    },
-    {
-      "label": "Chat Completions API",
-      "file_type": "concept",
-      "source_file": "wiki/entities/chat-completions-api.md",
-      "source_location": null,
-      "page_type": "entity",
-      "area": "generative-apps",
-      "status": "active",
-      "id": "wiki_chat_completions_api",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "chat completions api"
-    },
-    {
-      "label": "OpenAI SDK",
-      "file_type": "concept",
-      "source_file": "wiki/entities/openai-sdk.md",
-      "source_location": null,
-      "page_type": "entity",
-      "area": "generative-apps",
-      "status": "active",
-      "id": "wiki_openai_sdk",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "openai sdk"
-    },
-    {
-      "label": "Introduction \u2014 Develop a generative AI chat app with Microsoft Foundry",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-120-introduction-develop-generative-ai-chat-app-microsoft-foundry.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "generative-apps",
-      "status": "active",
-      "id": "wiki_src_120_introduction_develop_generative_ai_chat_app_microsoft_foundry",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "introduction \u2014 develop a generative ai chat app with microsoft foundry"
-    },
-    {
-      "label": "Summary \u2014 Develop a generative AI chat app with Microsoft Foundry",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-214-summary-develop-generative-ai-chat-app-microsoft-foundry.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "generative-apps",
-      "status": "active",
-      "id": "wiki_src_214_summary_develop_generative_ai_chat_app_microsoft_foundry",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "summary \u2014 develop a generative ai chat app with microsoft foundry"
-    },
-    {
-      "label": "Develop a generative AI chat app with Microsoft Foundry - AI-103 - Episode 3",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-42-develop-generative-ai-chat-app-microsoft-foundry-episode-3.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "generative-apps",
-      "status": "active",
-      "id": "wiki_src_42_develop_generative_ai_chat_app_microsoft_foundry_episode_3",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "develop a generative ai chat app with microsoft foundry - ai-103 - episode 3"
-    },
-    {
-      "label": "Exercise - Create a generative AI chat app",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-62-exercise-create-generative-ai-chat-app.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "generative-apps",
-      "status": "stub",
-      "id": "wiki_src_62_exercise_create_generative_ai_chat_app",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "exercise - create a generative ai chat app"
-    },
-    {
-      "label": "Generate responses with the ChatCompletions API",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-98-generate-responses-chatcompletions-api.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "generative-apps",
-      "status": "active",
-      "id": "wiki_src_98_generate_responses_chatcompletions_api",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "generate responses with the chatcompletions api"
-    },
-    {
-      "label": "Generate responses with the Responses API in the Foundry SDK",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-99-generate-responses-responses-api-foundry-sdk.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "generative-apps",
-      "status": "active",
-      "id": "wiki_src_99_generate_responses_responses_api_foundry_sdk",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "generate responses with the responses api in the foundry sdk"
     },
     {
       "label": "Retrieval-augmented generation (RAG)",
@@ -1872,7 +1872,7 @@
       "status": "active",
       "id": "wiki_azure_translator",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "azure translator"
     },
     {
@@ -1885,7 +1885,7 @@
       "status": "active",
       "id": "wiki_text_translation",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "text translation"
     },
     {
@@ -1898,7 +1898,7 @@
       "status": "active",
       "id": "wiki_src_139_introduction_translate_text_speech_microsoft_foundry_tools",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "introduction \u2014 translate text and speech with microsoft foundry tools"
     },
     {
@@ -1911,7 +1911,7 @@
       "status": "active",
       "id": "wiki_src_218_summary_translate_text_speech_microsoft_foundry_tools",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "summary \u2014 translate text and speech with microsoft foundry tools"
     },
     {
@@ -1924,7 +1924,7 @@
       "status": "active",
       "id": "wiki_src_227_translate_text",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "translate text"
     },
     {
@@ -1937,7 +1937,7 @@
       "status": "active",
       "id": "wiki_src_229_translation_microsoft_foundry",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "translation in microsoft foundry"
     },
     {
@@ -1950,7 +1950,7 @@
       "status": "stub",
       "id": "wiki_src_81_exercise_translate_text_speech",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "exercise - translate text and speech"
     },
     {
@@ -2227,97 +2227,6 @@
       "norm_label": "extract personally identifiable information (pii)"
     },
     {
-      "label": "Azure OpenAI",
-      "file_type": "concept",
-      "source_file": "wiki/entities/azure-openai.md",
-      "source_location": null,
-      "page_type": "entity",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_azure_openai",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "azure openai"
-    },
-    {
-      "label": "Fine-tuning",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/fine-tuning.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_fine_tuning",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "fine-tuning"
-    },
-    {
-      "label": "Generation parameters",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/generation-parameters.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_generation_parameters",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "generation parameters"
-    },
-    {
-      "label": "Generative AI fundamentals",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/generative-ai-fundamentals.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_generative_ai_fundamentals",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "generative ai fundamentals"
-    },
-    {
-      "label": "Model and app evaluation",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/model-and-app-evaluation.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_model_and_app_evaluation",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "model and app evaluation"
-    },
-    {
-      "label": "Model benchmarks",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/model-benchmarks.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_model_benchmarks",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "model benchmarks"
-    },
-    {
-      "label": "Foundry model catalog",
-      "file_type": "concept",
-      "source_file": "wiki/entities/model-catalog.md",
-      "source_location": null,
-      "page_type": "entity",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_model_catalog",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "foundry model catalog"
-    },
-    {
       "label": "Playgrounds",
       "file_type": "concept",
       "source_file": "wiki/concepts/model-playgrounds.md",
@@ -2327,255 +2236,8 @@
       "status": "active",
       "id": "wiki_model_playgrounds",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "playgrounds"
-    },
-    {
-      "label": "Model selection",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/model-selection.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_model_selection",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "model selection"
-    },
-    {
-      "label": "Prompt engineering",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/prompt-engineering.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_prompt_engineering",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "prompt engineering"
-    },
-    {
-      "label": "Optimization strategies compared",
-      "file_type": "document",
-      "source_file": "wiki/synthesis/optimization-strategies-compared.md",
-      "source_location": null,
-      "page_type": "synthesis",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_optimization_strategies_compared",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "optimization strategies compared"
-    },
-    {
-      "label": "Introduction \u2014 Select, deploy, and evaluate Microsoft Foundry models",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-114-introduction-select-deploy-evaluate-microsoft-foundry-models.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_114_introduction_select_deploy_evaluate_microsoft_foundry_models",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "introduction \u2014 select, deploy, and evaluate microsoft foundry models"
-    },
-    {
-      "label": "Introduction \u2014 Optimize generative AI model performance with Microsoft Foundry",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-116-introduction-optimize-generative-ai-model-performance-microsoft-foundry.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_116_introduction_optimize_generative_ai_model_performance_microsoft_foundry",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "introduction \u2014 optimize generative ai model performance with microsoft foundry"
-    },
-    {
-      "label": "Knowledge check \u2014 Select, deploy, and evaluate Microsoft Foundry models",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_145_knowledge_check_select_deploy_evaluate_microsoft_foundry_models",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "knowledge check \u2014 select, deploy, and evaluate microsoft foundry models"
-    },
-    {
-      "label": "Optimize generative AI model performance with Microsoft Foundry - AI-103 - Episode 5",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-177-optimize-generative-ai-model-performance-microsoft-foundry-episode-5.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_177_optimize_generative_ai_model_performance_microsoft_foundry_episode_5",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "optimize generative ai model performance with microsoft foundry - ai-103 - episode 5"
-    },
-    {
-      "label": "Optimize model output with prompt engineering",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-178-optimize-model-output-prompt-engineering.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_178_optimize_model_output_prompt_engineering",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "optimize model output with prompt engineering"
-    },
-    {
-      "label": "Select models using benchmarks",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-188-select-models-benchmarks.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_188_select_models_benchmarks",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "select models using benchmarks"
-    },
-    {
-      "label": "Select, deploy, and evaluate Microsoft Foundry models - AI-103 - Episode 2",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_189_select_deploy_evaluate_microsoft_foundry_models_episode_2",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "select, deploy, and evaluate microsoft foundry models - ai-103 - episode 2"
-    },
-    {
-      "label": "Summary \u2014 Select, deploy, and evaluate Microsoft Foundry models",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-196-summary-select-deploy-evaluate-microsoft-foundry-models.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_196_summary_select_deploy_evaluate_microsoft_foundry_models",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "summary \u2014 select, deploy, and evaluate microsoft foundry models"
-    },
-    {
-      "label": "Compare and combine optimization strategies",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-19-compare-combine-optimization-strategies.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_19_compare_combine_optimization_strategies",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "compare and combine optimization strategies"
-    },
-    {
-      "label": "Summary \u2014 Optimize generative AI model performance with Microsoft Foundry",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-202-summary-optimize-generative-ai-model-performance-microsoft-foundry.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_202_summary_optimize_generative_ai_model_performance_microsoft_foundry",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "summary \u2014 optimize generative ai model performance with microsoft foundry"
-    },
-    {
-      "label": "Deploy models to endpoints",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-39-deploy-models-endpoints.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_39_deploy_models_endpoints",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "deploy models to endpoints"
-    },
-    {
-      "label": "Evaluate model performance",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-53-evaluate-model-performance.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_53_evaluate_model_performance",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "evaluate model performance"
-    },
-    {
-      "label": "Exercise - Optimize generative AI model performance",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-77-exercise-optimize-generative-ai-model-performance.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "stub",
-      "id": "wiki_src_77_exercise_optimize_generative_ai_model_performance",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "exercise - optimize generative ai model performance"
-    },
-    {
-      "label": "Exercise - Select, deploy, and evaluate models",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-80-exercise-select-deploy-evaluate-models.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "stub",
-      "id": "wiki_src_80_exercise_select_deploy_evaluate_models",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "exercise - select, deploy, and evaluate models"
-    },
-    {
-      "label": "Explore the model catalog",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-89-explore-model-catalog.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_89_explore_model_catalog",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "explore the model catalog"
-    },
-    {
-      "label": "Fine-tune a model for consistent behavior",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-95-fine-tune-model-consistent-behavior.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "models",
-      "status": "active",
-      "id": "wiki_src_95_fine_tune_model_consistent_behavior",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "fine-tune a model for consistent behavior"
     },
     {
       "label": "What is AI-",
@@ -2586,7 +2248,7 @@
       "area": "models",
       "status": "active",
       "id": "wiki_src_260_what_is_ai",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "what is ai-"
     },
@@ -2599,9 +2261,347 @@
       "area": "models",
       "status": "active",
       "id": "wiki_src_90_explore_model_playground",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "explore with the model playground"
+    },
+    {
+      "label": "Azure OpenAI",
+      "file_type": "concept",
+      "source_file": "wiki/entities/azure-openai.md",
+      "source_location": null,
+      "page_type": "entity",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_azure_openai",
+      "community": 2,
+      "community_name": "Speech, Voice and Keyless Auth",
+      "norm_label": "azure openai"
+    },
+    {
+      "label": "Fine-tuning",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/fine-tuning.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_fine_tuning",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "fine-tuning"
+    },
+    {
+      "label": "Generation parameters",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/generation-parameters.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_generation_parameters",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "generation parameters"
+    },
+    {
+      "label": "Generative AI fundamentals",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/generative-ai-fundamentals.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_generative_ai_fundamentals",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "generative ai fundamentals"
+    },
+    {
+      "label": "Model and app evaluation",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/model-and-app-evaluation.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_model_and_app_evaluation",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "model and app evaluation"
+    },
+    {
+      "label": "Model benchmarks",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/model-benchmarks.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_model_benchmarks",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "model benchmarks"
+    },
+    {
+      "label": "Foundry model catalog",
+      "file_type": "concept",
+      "source_file": "wiki/entities/model-catalog.md",
+      "source_location": null,
+      "page_type": "entity",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_model_catalog",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "foundry model catalog"
+    },
+    {
+      "label": "Model selection",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/model-selection.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_model_selection",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "model selection"
+    },
+    {
+      "label": "Prompt engineering",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/prompt-engineering.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_prompt_engineering",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "prompt engineering"
+    },
+    {
+      "label": "Optimization strategies compared",
+      "file_type": "document",
+      "source_file": "wiki/synthesis/optimization-strategies-compared.md",
+      "source_location": null,
+      "page_type": "synthesis",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_optimization_strategies_compared",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "optimization strategies compared"
+    },
+    {
+      "label": "Introduction \u2014 Select, deploy, and evaluate Microsoft Foundry models",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-114-introduction-select-deploy-evaluate-microsoft-foundry-models.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_114_introduction_select_deploy_evaluate_microsoft_foundry_models",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "introduction \u2014 select, deploy, and evaluate microsoft foundry models"
+    },
+    {
+      "label": "Introduction \u2014 Optimize generative AI model performance with Microsoft Foundry",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-116-introduction-optimize-generative-ai-model-performance-microsoft-foundry.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_116_introduction_optimize_generative_ai_model_performance_microsoft_foundry",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "introduction \u2014 optimize generative ai model performance with microsoft foundry"
+    },
+    {
+      "label": "Knowledge check \u2014 Select, deploy, and evaluate Microsoft Foundry models",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_145_knowledge_check_select_deploy_evaluate_microsoft_foundry_models",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "knowledge check \u2014 select, deploy, and evaluate microsoft foundry models"
+    },
+    {
+      "label": "Optimize generative AI model performance with Microsoft Foundry - AI-103 - Episode 5",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-177-optimize-generative-ai-model-performance-microsoft-foundry-episode-5.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_177_optimize_generative_ai_model_performance_microsoft_foundry_episode_5",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "optimize generative ai model performance with microsoft foundry - ai-103 - episode 5"
+    },
+    {
+      "label": "Optimize model output with prompt engineering",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-178-optimize-model-output-prompt-engineering.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_178_optimize_model_output_prompt_engineering",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "optimize model output with prompt engineering"
+    },
+    {
+      "label": "Select models using benchmarks",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-188-select-models-benchmarks.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_188_select_models_benchmarks",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "select models using benchmarks"
+    },
+    {
+      "label": "Select, deploy, and evaluate Microsoft Foundry models - AI-103 - Episode 2",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_189_select_deploy_evaluate_microsoft_foundry_models_episode_2",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "select, deploy, and evaluate microsoft foundry models - ai-103 - episode 2"
+    },
+    {
+      "label": "Summary \u2014 Select, deploy, and evaluate Microsoft Foundry models",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-196-summary-select-deploy-evaluate-microsoft-foundry-models.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_196_summary_select_deploy_evaluate_microsoft_foundry_models",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "summary \u2014 select, deploy, and evaluate microsoft foundry models"
+    },
+    {
+      "label": "Compare and combine optimization strategies",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-19-compare-combine-optimization-strategies.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_19_compare_combine_optimization_strategies",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "compare and combine optimization strategies"
+    },
+    {
+      "label": "Summary \u2014 Optimize generative AI model performance with Microsoft Foundry",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-202-summary-optimize-generative-ai-model-performance-microsoft-foundry.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_202_summary_optimize_generative_ai_model_performance_microsoft_foundry",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "summary \u2014 optimize generative ai model performance with microsoft foundry"
+    },
+    {
+      "label": "Deploy models to endpoints",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-39-deploy-models-endpoints.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_39_deploy_models_endpoints",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "deploy models to endpoints"
+    },
+    {
+      "label": "Evaluate model performance",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-53-evaluate-model-performance.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_53_evaluate_model_performance",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "evaluate model performance"
+    },
+    {
+      "label": "Exercise - Optimize generative AI model performance",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-77-exercise-optimize-generative-ai-model-performance.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "stub",
+      "id": "wiki_src_77_exercise_optimize_generative_ai_model_performance",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "exercise - optimize generative ai model performance"
+    },
+    {
+      "label": "Exercise - Select, deploy, and evaluate models",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-80-exercise-select-deploy-evaluate-models.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "stub",
+      "id": "wiki_src_80_exercise_select_deploy_evaluate_models",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "exercise - select, deploy, and evaluate models"
+    },
+    {
+      "label": "Explore the model catalog",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-89-explore-model-catalog.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_89_explore_model_catalog",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "explore the model catalog"
+    },
+    {
+      "label": "Fine-tune a model for consistent behavior",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-95-fine-tune-model-consistent-behavior.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "models",
+      "status": "active",
+      "id": "wiki_src_95_fine_tune_model_consistent_behavior",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "fine-tune a model for consistent behavior"
     },
     {
       "label": "Microsoft Agent Framework",
@@ -2638,7 +2638,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_a2a_agent_implementation",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "implementing a2a agents"
     },
@@ -2651,7 +2651,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_agent2agent_protocol",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "agent2agent (a2a) protocol"
     },
@@ -2664,7 +2664,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_agent_framework_workflows",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "agent framework workflows"
     },
@@ -2677,7 +2677,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_concurrent_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "concurrent orchestration"
     },
@@ -2690,7 +2690,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_foundry_workflows",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "foundry workflows"
     },
@@ -2703,7 +2703,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_group_chat_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "group chat orchestration"
     },
@@ -2716,7 +2716,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_handoff_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "handoff orchestration"
     },
@@ -2729,7 +2729,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_magentic_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "magentic orchestration"
     },
@@ -2742,7 +2742,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_multi_agent_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "multi-agent orchestration"
     },
@@ -2755,7 +2755,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_power_fx",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "power fx"
     },
@@ -2768,7 +2768,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_sequential_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "sequential orchestration"
     },
@@ -2781,7 +2781,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_workflow_patterns",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "workflow patterns"
     },
@@ -2794,7 +2794,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_orchestration_patterns_compared",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "orchestration patterns compared"
     },
@@ -2807,7 +2807,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_103_host_a2a_server",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "host an a2a server"
     },
@@ -2820,7 +2820,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_105_identify_workflow_patterns",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "identify workflow patterns"
     },
@@ -2833,7 +2833,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_107_implement_agent_executor",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "implement an agent executor"
     },
@@ -2846,7 +2846,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_118_introduction_build_agent_driven_workflows_microsoft_foundry",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "introduction \u2014 build agent-driven workflows using microsoft foundry"
     },
@@ -2859,7 +2859,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_11_apply_power_fx_workflows",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "apply power fx in workflows"
     },
@@ -2872,7 +2872,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_133_introduction_orchestrate_multi_agent_solution_microsoft_agent_framework",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "introduction \u2014 orchestrate a multi-agent solution using the microsoft agent framework"
     },
@@ -2885,7 +2885,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_134_introduction_discover_azure_ai_agents_a2a",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "introduction \u2014 discover azure ai agents with a2a"
     },
@@ -2898,7 +2898,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_143_knowledge_check_orchestrate_multi_agent_solution_microsoft_agent_framework",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "knowledge check \u2014 orchestrate a multi-agent solution using the microsoft agent framework"
     },
@@ -2911,7 +2911,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_151_maintain_workflows_microsoft_foundry",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "maintain workflows in microsoft foundry"
     },
@@ -2924,7 +2924,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_157_module_assessment_discover_azure_ai_agents_a2a",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "module assessment \u2014 discover azure ai agents with a2a"
     },
@@ -2937,7 +2937,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_15_build_agent_driven_workflows_microsoft_foundry_episode_12",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "build agent-driven workflows using microsoft foundry - ai-103 - episode 12"
     },
@@ -2950,7 +2950,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_171_module_assessment_build_agent_driven_workflows_microsoft_foundry",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "module assessment \u2014 build agent-driven workflows using microsoft foundry"
     },
@@ -2963,7 +2963,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_180_orchestrate_multi_agent_solution_microsoft_agent_framework_episode_14",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "orchestrate a multi-agent solution using the microsoft agent framework - ai-103 - episode 14"
     },
@@ -2976,7 +2976,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_199_summary_orchestrate_multi_agent_solution_microsoft_agent_framework",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "summary \u2014 orchestrate a multi-agent solution using the microsoft agent framework"
     },
@@ -2989,7 +2989,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_205_summary_discover_azure_ai_agents_a2a",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "summary \u2014 discover azure ai agents with a2a"
     },
@@ -3002,7 +3002,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_219_summary_build_agent_driven_workflows_microsoft_foundry",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "summary \u2014 build agent-driven workflows using microsoft foundry"
     },
@@ -3015,7 +3015,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_231_understand_agent_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "understand agent orchestration"
     },
@@ -3028,7 +3028,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_238_understand_workflows",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "understand workflows"
     },
@@ -3041,7 +3041,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_241_concurrent_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "use concurrent orchestration"
     },
@@ -3054,7 +3054,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_242_group_chat_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "use group chat orchestration"
     },
@@ -3067,7 +3067,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_243_handoff_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "use handoff orchestration"
     },
@@ -3080,7 +3080,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_244_magentic_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "use magentic orchestration"
     },
@@ -3093,7 +3093,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_245_sequential_orchestration",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "use sequential orchestration"
     },
@@ -3106,7 +3106,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_247_workflows_code",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "use workflows in code"
     },
@@ -3119,7 +3119,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_26_connect_a2a_agent",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "connect to your a2a agent"
     },
@@ -3132,7 +3132,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_36_create_workflows_microsoft_foundry",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "create workflows in microsoft foundry"
     },
@@ -3145,7 +3145,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_37_define_a2a_agent",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "define an a2a agent"
     },
@@ -3158,7 +3158,7 @@
       "area": "orchestration",
       "status": "active",
       "id": "wiki_src_3_add_agents_workflow",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "add agents to a workflow"
     },
@@ -3171,7 +3171,7 @@
       "area": "orchestration",
       "status": "stub",
       "id": "wiki_src_61_exercise_connect_remote_azure_ai_agents_a2a_protocol",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "exercise - connect to remote azure ai agents with the a2a protocol"
     },
@@ -3184,7 +3184,7 @@
       "area": "orchestration",
       "status": "stub",
       "id": "wiki_src_66_exercise_create_agent_driven_workflow",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "exercise - create an agent-driven workflow"
     },
@@ -3197,74 +3197,9 @@
       "area": "orchestration",
       "status": "stub",
       "id": "wiki_src_69_exercise_develop_multi_agent_solution",
-      "community": 3,
+      "community": 4,
       "community_name": "Workflows, Orchestration and A2A",
       "norm_label": "exercise - develop a multi-agent solution"
-    },
-    {
-      "label": "Model deployment types",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/model-deployment-types.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "platform",
-      "status": "active",
-      "id": "wiki_model_deployment_types",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "model deployment types"
-    },
-    {
-      "label": "Observability and tracing",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/observability-and-tracing.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "platform",
-      "status": "seed",
-      "id": "wiki_observability_and_tracing",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "observability and tracing"
-    },
-    {
-      "label": "Quotas, rate limits and cost",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/quotas-rate-limits-and-cost.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "platform",
-      "status": "seed",
-      "id": "wiki_quotas_rate_limits_and_cost",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "quotas, rate limits and cost"
-    },
-    {
-      "label": "Deployment and access options compared",
-      "file_type": "document",
-      "source_file": "wiki/synthesis/deployment-options-compared.md",
-      "source_location": null,
-      "page_type": "synthesis",
-      "area": "platform",
-      "status": "active",
-      "id": "wiki_deployment_options_compared",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "deployment and access options compared"
-    },
-    {
-      "label": "Keyless authentication and role-based access",
-      "file_type": "concept",
-      "source_file": "wiki/concepts/keyless-authentication.md",
-      "source_location": null,
-      "page_type": "concept",
-      "area": "platform",
-      "status": "active",
-      "id": "wiki_keyless_authentication",
-      "community": 2,
-      "community_name": "Speech, Voice and Identity",
-      "norm_label": "keyless authentication and role-based access"
     },
     {
       "label": "Development tools and approaches",
@@ -3275,7 +3210,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_development_tools_and_approaches",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "development tools and approaches"
     },
@@ -3288,7 +3223,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_endpoints_and_sdk_choice",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "endpoints and sdk choice"
     },
@@ -3301,7 +3236,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_foundry_resources_and_projects",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "foundry resources and projects"
     },
@@ -3314,7 +3249,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_foundry_sdk",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "microsoft foundry sdk"
     },
@@ -3327,7 +3262,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_foundry_tools",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "foundry tools"
     },
@@ -3340,7 +3275,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_microsoft_foundry",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "microsoft foundry"
     },
@@ -3353,12 +3288,12 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_src_113_introduction_plan_prepare_develop_ai_solutions_azure",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "introduction \u2014 plan and prepare to develop ai solutions on azure"
     },
     {
-      "label": "Microsoft Foundry",
+      "label": "Microsoft Foundry \u2014 Plan and prepare to develop AI solutions on Azure",
       "file_type": "document",
       "source_file": "wiki/sources/src-155-microsoft-foundry.md",
       "source_location": null,
@@ -3366,9 +3301,9 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_src_155_microsoft_foundry",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
-      "norm_label": "microsoft foundry"
+      "norm_label": "microsoft foundry \u2014 plan and prepare to develop ai solutions on azure"
     },
     {
       "label": "Plan and prepare to develop AI solutions on Azure - AI-103 - Episode 1",
@@ -3379,7 +3314,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_src_183_plan_prepare_develop_ai_solutions_azure_episode_1",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "plan and prepare to develop ai solutions on azure - ai-103 - episode 1"
     },
@@ -3392,7 +3327,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_src_18_choose_endpoint_sdk",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "choose an endpoint and sdk"
     },
@@ -3405,7 +3340,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_src_203_summary_plan_prepare_develop_ai_solutions_azure",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "summary \u2014 plan and prepare to develop ai solutions on azure"
     },
@@ -3418,7 +3353,7 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_src_51_developer_tools_sdks",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "developer tools and sdks"
     },
@@ -3431,12 +3366,12 @@
       "area": "platform",
       "status": "stub",
       "id": "wiki_src_78_exercise_prepare_ai_development_project",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
       "norm_label": "exercise - prepare for an ai development project"
     },
     {
-      "label": "Foundry Tools",
+      "label": "Foundry Tools \u2014 Plan and prepare to develop AI solutions on Azure",
       "file_type": "document",
       "source_file": "wiki/sources/src-96-foundry-tools.md",
       "source_location": null,
@@ -3444,9 +3379,74 @@
       "area": "platform",
       "status": "active",
       "id": "wiki_src_96_foundry_tools",
-      "community": 5,
+      "community": 0,
       "community_name": "Foundry Platform and SDKs",
-      "norm_label": "foundry tools"
+      "norm_label": "foundry tools \u2014 plan and prepare to develop ai solutions on azure"
+    },
+    {
+      "label": "Keyless authentication and role-based access",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/keyless-authentication.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "platform",
+      "status": "active",
+      "id": "wiki_keyless_authentication",
+      "community": 2,
+      "community_name": "Speech, Voice and Keyless Auth",
+      "norm_label": "keyless authentication and role-based access"
+    },
+    {
+      "label": "Model deployment types",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/model-deployment-types.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "platform",
+      "status": "active",
+      "id": "wiki_model_deployment_types",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "model deployment types"
+    },
+    {
+      "label": "Observability and tracing",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/observability-and-tracing.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "platform",
+      "status": "seed",
+      "id": "wiki_observability_and_tracing",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "observability and tracing"
+    },
+    {
+      "label": "Quotas, rate limits and cost",
+      "file_type": "concept",
+      "source_file": "wiki/concepts/quotas-rate-limits-and-cost.md",
+      "source_location": null,
+      "page_type": "concept",
+      "area": "platform",
+      "status": "seed",
+      "id": "wiki_quotas_rate_limits_and_cost",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "quotas, rate limits and cost"
+    },
+    {
+      "label": "Deployment and access options compared",
+      "file_type": "document",
+      "source_file": "wiki/synthesis/deployment-options-compared.md",
+      "source_location": null,
+      "page_type": "synthesis",
+      "area": "platform",
+      "status": "active",
+      "id": "wiki_deployment_options_compared",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "deployment and access options compared"
     },
     {
       "label": "Application Insights",
@@ -3458,7 +3458,7 @@
       "status": "seed",
       "id": "wiki_application_insights",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "application insights"
     },
     {
@@ -3471,7 +3471,7 @@
       "status": "active",
       "id": "wiki_microsoft_entra_id",
       "community": 8,
-      "community_name": "Publishing, Microsoft 365 and Testing",
+      "community_name": "Publishing, Entra ID and Microsoft 365",
       "norm_label": "microsoft entra id"
     },
     {
@@ -3483,7 +3483,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_azure_ai_content_safety",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "azure ai content safety"
     },
@@ -3496,7 +3496,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_guardrails_and_content_filters",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "guardrails and content filters"
     },
@@ -3509,7 +3509,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_prompt_injection_and_jailbreaks",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "prompt injection and jailbreaks"
     },
@@ -3522,7 +3522,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_responsible_ai_lifecycle",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "responsible generative ai lifecycle"
     },
@@ -3535,7 +3535,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_responsible_ai_principles",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "responsible ai principles"
     },
@@ -3548,7 +3548,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_106_implement_responsible_generative_ai_solution_microsoft_foundry_episode_6",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "implement a responsible generative ai solution in microsoft foundry - ai-103 - episode 6"
     },
@@ -3561,7 +3561,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_112_introduction_implement_responsible_generative_ai_solution_microsoft_foundry",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "introduction \u2014 implement a responsible generative ai solution in microsoft foundry"
     },
@@ -3574,7 +3574,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_152_manage_responsible_generative_ai_solution",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "manage a responsible generative ai solution"
     },
@@ -3587,7 +3587,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_153_map_potential_harms",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "map potential harms"
     },
@@ -3600,7 +3600,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_154_measure_potential_harms",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "measure potential harms"
     },
@@ -3613,7 +3613,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_156_mitigate_potential_harms",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "mitigate potential harms"
     },
@@ -3626,7 +3626,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_170_module_assessment_implement_responsible_generative_ai_solution_microsoft_foundry",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "module assessment \u2014 implement a responsible generative ai solution in microsoft foundry"
     },
@@ -3639,7 +3639,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_182_plan_responsible_generative_ai_solution",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "plan a responsible generative ai solution"
     },
@@ -3652,7 +3652,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_186_responsible_ai",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "responsible ai"
     },
@@ -3665,7 +3665,7 @@
       "area": "responsible-ai",
       "status": "active",
       "id": "wiki_src_211_summary_implement_responsible_generative_ai_solution_microsoft_foundry",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "summary \u2014 implement a responsible generative ai solution in microsoft foundry"
     },
@@ -3678,7 +3678,7 @@
       "area": "responsible-ai",
       "status": "stub",
       "id": "wiki_src_57_exercise_apply_guardrails_prevent_output_harmful_content",
-      "community": 0,
+      "community": 3,
       "community_name": "Models, Evaluation and Safety",
       "norm_label": "exercise - apply guardrails to prevent the output of harmful content"
     },
@@ -4095,7 +4095,7 @@
       "status": "active",
       "id": "wiki_azure_speech",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "azure speech"
     },
     {
@@ -4108,7 +4108,7 @@
       "status": "active",
       "id": "wiki_azure_speech_mcp_server",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "azure speech mcp server"
     },
     {
@@ -4121,7 +4121,7 @@
       "status": "active",
       "id": "wiki_speech_capable_models",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "speech-capable generative models"
     },
     {
@@ -4134,7 +4134,7 @@
       "status": "active",
       "id": "wiki_speech_to_text",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "speech to text"
     },
     {
@@ -4147,7 +4147,7 @@
       "status": "active",
       "id": "wiki_speech_translation",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "speech translation"
     },
     {
@@ -4160,7 +4160,7 @@
       "status": "active",
       "id": "wiki_ssml",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "speech synthesis markup language (ssml)"
     },
     {
@@ -4173,7 +4173,7 @@
       "status": "active",
       "id": "wiki_text_to_speech",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "text to speech"
     },
     {
@@ -4186,7 +4186,7 @@
       "status": "active",
       "id": "wiki_voice_live_api",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "azure voice live api"
     },
     {
@@ -4199,7 +4199,7 @@
       "status": "active",
       "id": "wiki_voices_and_audio_formats",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "voices and audio formats"
     },
     {
@@ -4212,7 +4212,7 @@
       "status": "active",
       "id": "wiki_speech_and_language_options_compared",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "speech and language options compared"
     },
     {
@@ -4225,7 +4225,7 @@
       "status": "active",
       "id": "wiki_src_115_introduction_create_speech_enabled_apps_azure_speech_microsoft_foundry",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "introduction \u2014 create speech-enabled apps with azure speech in microsoft foundry tools"
     },
     {
@@ -4238,7 +4238,7 @@
       "status": "active",
       "id": "wiki_src_121_introduction_develop_speech_capable_generative_ai_application",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "introduction \u2014 develop a speech-capable generative ai application"
     },
     {
@@ -4251,7 +4251,7 @@
       "status": "active",
       "id": "wiki_src_132_introduction_develop_azure_speech_voice_live_agent_microsoft_foundry",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "introduction \u2014 develop an azure speech voice live agent in microsoft foundry"
     },
     {
@@ -4264,7 +4264,7 @@
       "status": "active",
       "id": "wiki_src_13_azure_speech_foundry_tools",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "azure speech in foundry tools"
     },
     {
@@ -4277,7 +4277,7 @@
       "status": "active",
       "id": "wiki_src_140_introduction_develop_speech_agent_azure_speech_mcp_server",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "introduction \u2014 develop a speech agent with the azure speech mcp server"
     },
     {
@@ -4290,7 +4290,7 @@
       "status": "active",
       "id": "wiki_src_144_knowledge_check_develop_speech_agent_azure_speech_mcp_server",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "knowledge check \u2014 develop a speech agent with the azure speech mcp server"
     },
     {
@@ -4303,7 +4303,7 @@
       "status": "active",
       "id": "wiki_src_159_module_assessment_develop_azure_speech_voice_live_agent_microsoft",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "module assessment \u2014 develop an azure speech voice live agent in microsoft foundry"
     },
     {
@@ -4316,7 +4316,7 @@
       "status": "active",
       "id": "wiki_src_174_module_assessment_create_speech_enabled_apps_azure_speech_microsoft",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "module assessment \u2014 create speech-enabled apps with azure speech in microsoft foundry tools"
     },
     {
@@ -4329,7 +4329,7 @@
       "status": "active",
       "id": "wiki_src_175_module_assessment_develop_speech_capable_generative_ai_application",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "module assessment \u2014 develop a speech-capable generative ai application"
     },
     {
@@ -4342,7 +4342,7 @@
       "status": "active",
       "id": "wiki_src_17_choose_speech_capable_model",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "choose a speech-capable model"
     },
     {
@@ -4355,7 +4355,7 @@
       "status": "active",
       "id": "wiki_src_192_summary_create_speech_enabled_apps_azure_speech_microsoft_foundry",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "summary \u2014 create speech-enabled apps with azure speech in microsoft foundry tools"
     },
     {
@@ -4368,7 +4368,7 @@
       "status": "active",
       "id": "wiki_src_204_summary_develop_speech_agent_azure_speech_mcp_server",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "summary \u2014 develop a speech agent with the azure speech mcp server"
     },
     {
@@ -4381,7 +4381,7 @@
       "status": "active",
       "id": "wiki_src_207_summary_develop_speech_capable_generative_ai_application",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "summary \u2014 develop a speech-capable generative ai application"
     },
     {
@@ -4394,7 +4394,7 @@
       "status": "active",
       "id": "wiki_src_208_summary_develop_azure_speech_voice_live_agent_microsoft_foundry",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "summary \u2014 develop an azure speech voice live agent in microsoft foundry"
     },
     {
@@ -4407,7 +4407,7 @@
       "status": "active",
       "id": "wiki_src_21_configure_audio_format_voices",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "configure audio format and voices"
     },
     {
@@ -4420,7 +4420,7 @@
       "status": "active",
       "id": "wiki_src_221_synthesize_speech",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "synthesize speech"
     },
     {
@@ -4433,7 +4433,7 @@
       "status": "active",
       "id": "wiki_src_225_transcribe_speech",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "transcribe speech"
     },
     {
@@ -4446,7 +4446,7 @@
       "status": "active",
       "id": "wiki_src_226_translate_speech",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "translate speech"
     },
     {
@@ -4459,7 +4459,7 @@
       "status": "active",
       "id": "wiki_src_228_translate_text_speech_microsoft_foundry_tools_episode_21",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "translate text and speech with microsoft foundry tools - ai-103 - episode 21"
     },
     {
@@ -4472,7 +4472,7 @@
       "status": "active",
       "id": "wiki_src_236_understand_azure_speech_mcp_server",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "understand the azure speech mcp server"
     },
     {
@@ -4485,7 +4485,7 @@
       "status": "active",
       "id": "wiki_src_246_speech_synthesis_markup_language",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "use speech synthesis markup language"
     },
     {
@@ -4498,7 +4498,7 @@
       "status": "active",
       "id": "wiki_src_252_speech_text_api",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "use the speech to text api"
     },
     {
@@ -4511,7 +4511,7 @@
       "status": "active",
       "id": "wiki_src_253_text_speech_api",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "use the text to speech api"
     },
     {
@@ -4524,7 +4524,7 @@
       "status": "active",
       "id": "wiki_src_25_connect_speech_mcp_server_agent",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "connect and use the speech mcp server with an agent"
     },
     {
@@ -4537,7 +4537,7 @@
       "status": "active",
       "id": "wiki_src_31_create_voice_live_agent",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "create a voice live agent"
     },
     {
@@ -4550,7 +4550,7 @@
       "status": "active",
       "id": "wiki_src_35_create_speech_enabled_apps_microsoft_foundry_episode_18",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "create speech-enabled apps with microsoft foundry - ai-103 - episode 18"
     },
     {
@@ -4563,7 +4563,7 @@
       "status": "active",
       "id": "wiki_src_43_develop_speech_agent_azure_speech_mcp_server_episode_19",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "develop a speech agent with the azure speech mcp server - ai-103 - episode 19"
     },
     {
@@ -4576,7 +4576,7 @@
       "status": "active",
       "id": "wiki_src_44_develop_speech_capable_generative_ai_application_episode_17",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "develop a speech-capable generative ai application - ai-103 - episode 17"
     },
     {
@@ -4589,7 +4589,7 @@
       "status": "active",
       "id": "wiki_src_49_develop_azure_speech_voice_live_agent_microsoft_foundry_episode",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "develop an azure speech voice live agent in microsoft foundry - ai-103 - episode 20"
     },
     {
@@ -4602,7 +4602,7 @@
       "status": "stub",
       "id": "wiki_src_65_exercise_create_speech_enabled_app",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "exercise - create a speech-enabled app"
     },
     {
@@ -4615,7 +4615,7 @@
       "status": "stub",
       "id": "wiki_src_68_exercise_develop_voice_live_agent",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "exercise - develop a voice live agent"
     },
     {
@@ -4628,7 +4628,7 @@
       "status": "stub",
       "id": "wiki_src_82_exercise_azure_speech_agent",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "exercise - use azure speech in an agent"
     },
     {
@@ -4641,7 +4641,7 @@
       "status": "stub",
       "id": "wiki_src_83_exercise_speech_capable_generative_ai_models",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "exercise - use speech-capable generative ai models"
     },
     {
@@ -4654,7 +4654,7 @@
       "status": "active",
       "id": "wiki_src_87_explore_ai_voice_live_client_library_python",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "explore the ai voice live client library for python"
     },
     {
@@ -4667,7 +4667,7 @@
       "status": "active",
       "id": "wiki_src_88_explore_azure_voice_live_api",
       "community": 2,
-      "community_name": "Speech, Voice and Identity",
+      "community_name": "Speech, Voice and Keyless Auth",
       "norm_label": "explore the azure voice live api"
     },
     {
@@ -4680,7 +4680,7 @@
       "status": "active",
       "id": "wiki_image_generation",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "image generation"
     },
     {
@@ -4693,7 +4693,7 @@
       "status": "active",
       "id": "wiki_sora_2",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "sora 2"
     },
     {
@@ -4706,7 +4706,7 @@
       "status": "active",
       "id": "wiki_video_generation",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "video generation"
     },
     {
@@ -4719,7 +4719,7 @@
       "status": "active",
       "id": "wiki_vision_enabled_chat",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "vision-enabled chat"
     },
     {
@@ -4732,7 +4732,7 @@
       "status": "active",
       "id": "wiki_src_100_generate_video_prompt",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "generate video from a prompt"
     },
     {
@@ -4745,7 +4745,7 @@
       "status": "active",
       "id": "wiki_src_101_generate_video_python",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "generate video in python"
     },
     {
@@ -4758,7 +4758,7 @@
       "status": "active",
       "id": "wiki_src_128_introduction_generate_videos_microsoft_foundry",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "introduction \u2014 generate videos with microsoft foundry"
     },
     {
@@ -4771,7 +4771,7 @@
       "status": "active",
       "id": "wiki_src_131_introduction_develop_vision_enabled_generative_ai_application",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "introduction \u2014 develop a vision-enabled generative ai application"
     },
     {
@@ -4784,7 +4784,7 @@
       "status": "active",
       "id": "wiki_src_136_introduction_generate_images_ai",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "introduction \u2014 generate images with ai"
     },
     {
@@ -4797,7 +4797,7 @@
       "status": "active",
       "id": "wiki_src_172_module_assessment_generate_images_ai",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "module assessment \u2014 generate images with ai"
     },
     {
@@ -4810,7 +4810,7 @@
       "status": "active",
       "id": "wiki_src_173_module_assessment_develop_vision_enabled_generative_ai_application",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "module assessment \u2014 develop a vision-enabled generative ai application"
     },
     {
@@ -4823,7 +4823,7 @@
       "status": "active",
       "id": "wiki_src_197_summary_generate_images_ai",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "summary \u2014 generate images with ai"
     },
     {
@@ -4836,21 +4836,8 @@
       "status": "active",
       "id": "wiki_src_210_summary_develop_vision_enabled_generative_ai_application",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "summary \u2014 develop a vision-enabled generative ai application"
-    },
-    {
-      "label": "Use a vision-capable model in the Microsoft Foundry portal",
-      "file_type": "document",
-      "source_file": "wiki/sources/src-248-vision-capable-model-microsoft-foundry-portal.md",
-      "source_location": null,
-      "page_type": "source",
-      "area": "vision",
-      "status": "active",
-      "id": "wiki_src_248_vision_capable_model_microsoft_foundry_portal",
-      "community": 0,
-      "community_name": "Models, Evaluation and Safety",
-      "norm_label": "use a vision-capable model in the microsoft foundry portal"
     },
     {
       "label": "What are image-generation models-",
@@ -4862,7 +4849,7 @@
       "status": "active",
       "id": "wiki_src_258_what_are_image_generation_models",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "what are image-generation models-"
     },
     {
@@ -4875,7 +4862,7 @@
       "status": "active",
       "id": "wiki_src_32_create_client_application_that_uses_image_generation_model",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "create a client application that uses an image generation model"
     },
     {
@@ -4888,7 +4875,7 @@
       "status": "active",
       "id": "wiki_src_38_deploy_video_generating_model",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "deploy a video generating model"
     },
     {
@@ -4901,7 +4888,7 @@
       "status": "active",
       "id": "wiki_src_46_develop_vision_based_chat_app",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "develop a vision-based chat app"
     },
     {
@@ -4914,8 +4901,21 @@
       "status": "active",
       "id": "wiki_src_47_develop_vision_enabled_generative_ai_application_episode_22",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "develop a vision-enabled generative ai application - ai-103 - episode 22"
+    },
+    {
+      "label": "Exercise - Develop a vision-enabled chat app",
+      "file_type": "document",
+      "source_file": "wiki/sources/src-71-exercise-develop-vision-enabled-chat-app.md",
+      "source_location": null,
+      "page_type": "source",
+      "area": "vision",
+      "status": "stub",
+      "id": "wiki_src_71_exercise_develop_vision_enabled_chat_app",
+      "community": 0,
+      "community_name": "Foundry Platform and SDKs",
+      "norm_label": "exercise - develop a vision-enabled chat app"
     },
     {
       "label": "Exercise - Generate images with AI",
@@ -4927,7 +4927,7 @@
       "status": "stub",
       "id": "wiki_src_74_exercise_generate_images_ai",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "exercise - generate images with ai"
     },
     {
@@ -4940,7 +4940,7 @@
       "status": "stub",
       "id": "wiki_src_75_exercise_generate_video_sora_2_microsoft_foundry",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "exercise - generate video with sora 2 in microsoft foundry"
     },
     {
@@ -4953,7 +4953,7 @@
       "status": "active",
       "id": "wiki_src_86_explore_image_generation_models_microsoft_foundry_portal",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "explore image-generation models in microsoft foundry portal"
     },
     {
@@ -4966,21 +4966,21 @@
       "status": "active",
       "id": "wiki_src_97_generate_images_video_episode_23",
       "community": 0,
-      "community_name": "Models, Evaluation and Safety",
+      "community_name": "Foundry Platform and SDKs",
       "norm_label": "generate images and video - ai-103 - episode 23"
     },
     {
-      "label": "Exercise - Develop a vision-enabled chat app",
+      "label": "Use a vision-capable model in the Microsoft Foundry portal",
       "file_type": "document",
-      "source_file": "wiki/sources/src-71-exercise-develop-vision-enabled-chat-app.md",
+      "source_file": "wiki/sources/src-248-vision-capable-model-microsoft-foundry-portal.md",
       "source_location": null,
       "page_type": "source",
       "area": "vision",
-      "status": "stub",
-      "id": "wiki_src_71_exercise_develop_vision_enabled_chat_app",
-      "community": 5,
-      "community_name": "Foundry Platform and SDKs",
-      "norm_label": "exercise - develop a vision-enabled chat app"
+      "status": "active",
+      "id": "wiki_src_248_vision_capable_model_microsoft_foundry_portal",
+      "community": 3,
+      "community_name": "Models, Evaluation and Safety",
+      "norm_label": "use a vision-capable model in the microsoft foundry portal"
     }
   ],
   "links": [
@@ -5252,6 +5252,26 @@
       "source_location": null,
       "weight": 1.0,
       "source": "wiki_agent_building_options_compared",
+      "target": "wiki_src_108_integrate_agent_tools_mcp_server_client"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/agent-building-options-compared.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_agent_building_options_compared",
+      "target": "wiki_src_119_introduction_integrate_mcp_tools_azure_ai_agents"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/agent-building-options-compared.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_agent_building_options_compared",
       "target": "wiki_src_124_introduction_develop_ai_agent_microsoft_agent_framework"
     },
     {
@@ -5373,6 +5393,16 @@
       "weight": 1.0,
       "source": "wiki_agent_building_options_compared",
       "target": "wiki_src_237_understand_microsoft_agent_framework"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/agent-building-options-compared.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_agent_building_options_compared",
+      "target": "wiki_src_240_azure_ai_agents_mcp_servers"
     },
     {
       "relation": "cites",
@@ -8072,6 +8102,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "wiki_decision_boundaries",
+      "target": "wiki_src_43_develop_speech_agent_azure_speech_mcp_server_episode_19"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/decision-boundaries.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_decision_boundaries",
       "target": "wiki_src_46_develop_vision_based_chat_app"
     },
     {
@@ -8692,6 +8732,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "wiki_extraction_options_compared",
+      "target": "wiki_src_131_introduction_develop_vision_enabled_generative_ai_application"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/extraction-options-compared.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_extraction_options_compared",
       "target": "wiki_src_165_module_assessment_extract_data_azure_document_intelligence"
     },
     {
@@ -8703,6 +8753,16 @@
       "weight": 1.0,
       "source": "wiki_extraction_options_compared",
       "target": "wiki_src_168_module_assessment_analyze_text_azure_language_foundry_tools"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/extraction-options-compared.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_extraction_options_compared",
+      "target": "wiki_src_210_summary_develop_vision_enabled_generative_ai_application"
     },
     {
       "relation": "cites",
@@ -11570,6 +11630,16 @@
       "confidence_score": 1.0,
       "source_file": "wiki/entities/microsoft-agent-framework.md",
       "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_microsoft_agent_framework",
+      "target": "wiki_src_11_apply_power_fx_workflows"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/entities/microsoft-agent-framework.md",
+      "source_location": null,
       "weight": 3.0,
       "source": "wiki_microsoft_agent_framework",
       "target": "wiki_src_124_introduction_develop_ai_agent_microsoft_agent_framework"
@@ -12542,7 +12612,37 @@
       "source_location": null,
       "weight": 1.0,
       "source": "wiki_naming_and_currency",
+      "target": "wiki_src_108_integrate_agent_tools_mcp_server_client"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/naming-and-currency.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_naming_and_currency",
       "target": "wiki_src_10_analyze_text_azure_language_foundry_tools_episode_15"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/naming-and-currency.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_naming_and_currency",
+      "target": "wiki_src_119_introduction_integrate_mcp_tools_azure_ai_agents"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/naming-and-currency.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_naming_and_currency",
+      "target": "wiki_src_122_introduction_integrate_custom_tools_agent"
     },
     {
       "relation": "cites",
@@ -12573,6 +12673,16 @@
       "weight": 1.0,
       "source": "wiki_naming_and_currency",
       "target": "wiki_src_177_optimize_generative_ai_model_performance_microsoft_foundry_episode_5"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/naming-and-currency.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_naming_and_currency",
+      "target": "wiki_src_179_options_implementing_custom_tools"
     },
     {
       "relation": "cites",
@@ -12642,7 +12752,27 @@
       "source_location": null,
       "weight": 1.0,
       "source": "wiki_naming_and_currency",
+      "target": "wiki_src_233_understand_mcp_tool_discovery"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/naming-and-currency.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_naming_and_currency",
       "target": "wiki_src_236_understand_azure_speech_mcp_server"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/naming-and-currency.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_naming_and_currency",
+      "target": "wiki_src_240_azure_ai_agents_mcp_servers"
     },
     {
       "relation": "cites",
@@ -12683,6 +12813,16 @@
       "weight": 1.0,
       "source": "wiki_naming_and_currency",
       "target": "wiki_src_42_develop_generative_ai_chat_app_microsoft_foundry_episode_3"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/naming-and-currency.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_naming_and_currency",
+      "target": "wiki_src_48_develop_ai_agent_microsoft_agent_framework_episode_13"
     },
     {
       "relation": "cites",
@@ -13183,6 +13323,16 @@
       "weight": 2.0,
       "source": "wiki_pii_detection_and_redaction",
       "target": "wiki_src_12_azure_language_microsoft_foundry_tools"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/concepts/pii-detection-and-redaction.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_pii_detection_and_redaction",
+      "target": "wiki_src_156_mitigate_potential_harms"
     },
     {
       "relation": "cites",
@@ -14383,6 +14533,16 @@
       "weight": 1.0,
       "source": "wiki_speech_and_language_options_compared",
       "target": "wiki_src_25_connect_speech_mcp_server_agent"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/synthesis/speech-and-language-options-compared.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wiki_speech_and_language_options_compared",
+      "target": "wiki_src_31_create_voice_live_agent"
     },
     {
       "relation": "cites",
@@ -19883,6 +20043,16 @@
       "weight": 2.0,
       "source": "wiki_src_42_develop_generative_ai_chat_app_microsoft_foundry_episode_3",
       "target": "wiki_src_99_generate_responses_responses_api_foundry_sdk"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "wiki/sources/src-43-develop-speech-agent-azure-speech-mcp-server-episode-19.md",
+      "source_location": null,
+      "weight": 2.0,
+      "source": "wiki_src_43_develop_speech_agent_azure_speech_mcp_server_episode_19",
+      "target": "wiki_speech_and_language_options_compared"
     },
     {
       "relation": "cites",
@@ -31348,16 +31518,6 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "wiki/sources/src-43-develop-speech-agent-azure-speech-mcp-server-episode-19.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "wiki_src_43_develop_speech_agent_azure_speech_mcp_server_episode_19",
-      "target": "wiki_speech_and_language_options_compared"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "wiki/sources/src-44-develop-speech-capable-generative-ai-application-episode-17.md",
       "source_location": null,
       "weight": 1.0,
@@ -33366,5 +33526,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c598e82ba5fa2bbb2a379a0fa9a62bd52b776acd"
+  "built_at_commit": "2ec0446baba86d35dc64140783f8a0a3c61613e4"
 }

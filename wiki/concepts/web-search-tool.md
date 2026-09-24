@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Built-in grounding tool that lets a model or agent search current public web content during response generation."
 area: agents
 source_ids: [SRC-4, SRC-91, SRC-255, SRC-256, SRC-257, SRC-259]
-objectives: [P02, P04, G08, G09]
+objectives: [P04, G08, G09]
 objective_gaps: []
 tags: []
 aliases: ["web_search", "web grounding", "Bing grounding", "Bing Web Search"]
@@ -48,10 +48,10 @@ The captured Learn code block is elided, but the implementation pattern is expli
 
 ## Decision boundaries
 
-- Use [[web-search-tool]] for current, public, indexable web information. (SRC-257 L218–227)
+- Use [[web-search-tool]] for current, external web information. (SRC-257 L218–221)
 - Use [[file-search-tool]] for private uploaded files, internal documents, manuals, or contracts. (SRC-255 L218–227)
-- Use [[azure-ai-search]] for enterprise indexes and controlled retrieval over an organization's indexed data sources. (SRC-91 L242)
-- Use [[function-calling]] when the answer needs data or an action from a developer-controlled API rather than public search. (SRC-256 L219–224)
+- **Inference:** Use [[azure-ai-search]] for enterprise indexes and controlled retrieval over an organization's indexed data sources. (SRC-91 L242)
+- **Inference:** Use [[function-calling]] when the answer needs data or an action from a developer-controlled API rather than public search. (SRC-256 L219–224)
 
 **Inference:** If a scenario says "latest pricing" or "current release announcement," Web Search is plausible; if it says "internal HR policy PDF," File Search is the closer tool; if it says "customer order status from our ERP," function calling or a custom tool is the execution boundary. (SRC-257 L220–227; SRC-255 L218–227; SRC-256 L219–224)
 

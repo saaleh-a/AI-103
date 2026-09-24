@@ -18,7 +18,7 @@ aliases: ["renames", "product naming"]
 
 ## Summary
 
-**Synthesis:** The corpus preserves platform naming at capture time: the study guide uses Microsoft Foundry, many Learn captures use Microsoft Foundry, and older captions or endpoint surfaces still expose Azure AI Foundry, Azure AI services, Cognitive Services, Azure AI Agent Service, AI Toolkit, Semantic Kernel, and auto-caption variants (SRC-191 L104; SRC-228 L279–314; SRC-183 L120–190; SRC-124 L210–223; SRC-240 L216).
+**Synthesis:** The corpus preserves platform naming at capture time: the study guide uses Microsoft Foundry, many Learn captures use Microsoft Foundry, and older captions or endpoint surfaces still expose Azure AI Foundry, Azure AI services, Cognitive Services, Azure AI Agent Service, AI Toolkit, Semantic Kernel, and auto-caption variants (SRC-191 L104; SRC-228 L279–320; SRC-183 L120–190; SRC-124 L210–223; SRC-240 L216).
 
 ## Scope and question
 
@@ -32,7 +32,7 @@ aliases: ["renames", "product naming"]
 |---|---|---|---|
 | Azure AI Foundry | The guide audience builds solutions with Microsoft Foundry, but episode material still says Azure AI Foundry in model-selection walkthroughs. | Study guide: Microsoft Foundry (SRC-191 L104). Episode: Azure AI Foundry project and portal wording appears in the model-selection episode (SRC-189 L120–250). | **Stale-risk:** Treat Microsoft Foundry as the exam-guide name, but preserve Azure AI Foundry where a source says it (SRC-191 L101–104; SRC-189 L120–250). |
 | Azure AI Agent Service / Azure AI Agent | The MCP, custom-tool and Agent Framework material still says *Azure AI Agent Service* (SRC-108 L220; SRC-240 L216), *AI Agent Service* (SRC-122 L217) or *Azure AI Agent* (SRC-119 L217; SRC-179 L221; SRC-233 L229), and the episode says *Azure AI Agent Client* (SRC-48 L625), while the agents unit presents the service as Microsoft Foundry Agent Service (SRC-230 L213). | Foundry Agent Service unit teaches Microsoft Foundry Agent Service concepts (SRC-230 L214–276); SRC-119 uses both names in one unit (SRC-119 L217–219). | **Stale-risk:** Agent-service naming is in a moving product family; cite the source term rather than normalising it (SRC-240 L216; SRC-230 L213). |
-| Azure AI services / Cognitive Services | Translation episode demonstrates a Foundry portal path through AI Services, says these used to be called Cognitive Services / Azure AI Services, and notes the endpoint still looks like older cognitive services. | Translation episode (SRC-228 L279–314). Foundry Tools page presents the same capabilities as Foundry Tools (SRC-96 L218–236). | **Synthesis:** Foundry Tools may wrap or expose capabilities learners previously knew as Azure AI services / Cognitive Services (SRC-228 L279–314; SRC-96 L218–236). |
+| Azure AI services / Cognitive Services | Translation episode demonstrates a Foundry portal path through AI Services, says these used to be called Cognitive Services / Azure AI Services, and notes the endpoint still looks like older cognitive services. | Translation episode (SRC-228 L279–320). Foundry Tools page presents the same capabilities as Foundry Tools (SRC-96 L218–236). | **Synthesis:** Foundry Tools may wrap or expose capabilities learners previously knew as Azure AI services / Cognitive Services (SRC-228 L279–320; SRC-96 L218–236). |
 | Azure Language / Azure AI Language / Azure Language in Microsoft Foundry Tools | The Learn unit title is Azure Language in Microsoft Foundry Tools; language MCP pages expose language detection, NER and PII through the Language MCP server. | Azure Language unit (SRC-12 L211–237); Language MCP connection unit (SRC-24 L209–265). | **Inference:** Do not assume every language capability is an LLM task; corpus often treats it as a Foundry Tool or MCP server capability (SRC-12 L211–237; SRC-24 L209–265). |
 | Foundry Toolkit for VS Code / Microsoft AI Toolkit / AI Toolkit | A tools unit names Foundry Toolkit; an episode caption says AI Toolkit, and another episode walks through Visual Studio Code agent work under Microsoft Foundry. | Developer tools unit (SRC-51 L212–238); text-analysis episode says AI Toolkit (SRC-10 L499–500); VS Code episode (SRC-41 L1–30). | **Stale-risk:** Toolkit names and VS Code extensions are susceptible to product rename and UI drift (SRC-51 L212–238; SRC-10 L499–500). |
 | Semantic Kernel / AutoGen lineage | The Microsoft Agent Framework intro says it evolves from Semantic Kernel and AutoGen; the orchestration Learn content teaches Microsoft Agent Framework while older lineage names remain relevant. | Agent Framework introduction (SRC-124 L210–223); orchestration page URL/title evidence (SRC-231 L214–264). | **Synthesis:** Use Microsoft Agent Framework for the current corpus lesson, but preserve lineage terms when explaining why older material or older material mentions Semantic Kernel or AutoGen (SRC-124 L210–223). |
@@ -54,14 +54,14 @@ aliases: ["renames", "product naming"]
 | Synthesis: claim | Sources |
 |---|---|
 | Study-guide naming and GA/Preview policy are official but date-bound. | SRC-191 L101–104 |
-| Foundry, Foundry Tools, Azure AI services and Cognitive Services names coexist in the corpus. | SRC-96 L218–236; SRC-228 L279–314 |
+| Foundry, Foundry Tools, Azure AI services and Cognitive Services names coexist in the corpus. | SRC-96 L218–236; SRC-228 L279–320 |
 | Agent-framework names changed from Semantic Kernel/AutoGen lineage to Microsoft Agent Framework teaching. | SRC-124 L210–223; SRC-231 L214–264 |
 | Toolkit and portal labels are inconsistent across Learn and episodes. | SRC-51 L212–238; SRC-10 L499–500; SRC-183 L120–190 |
 | Work IQ, model names, catalog details and modality support are currency risks. | SRC-2 L295–296; SRC-184 L210–236; SRC-189 L120–250; SRC-236 L225–262 |
 
 ## Tensions
 
-**Synthesis:** Naming drift is not treated as an error when different sources are from different surfaces or capture types; it becomes a study risk only if a learner silently modernises or merges terms that a scenario may distinguish (SRC-191 L101–104; SRC-228 L279–314; SRC-124 L210–223).
+**Synthesis:** Naming drift is not treated as an error when different sources are from different surfaces or capture types; it becomes a study risk only if a learner silently modernises or merges terms that a scenario may distinguish (SRC-191 L101–104; SRC-228 L279–320; SRC-124 L210–223).
 
 ## Implications for the exam and for practice
 

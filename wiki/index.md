@@ -35,7 +35,7 @@ Graphs: raw sources — `graphify-out/graph.html`; this wiki — `graphify-out-w
 - [[master-synthesis|Master synthesis — whole AI-103 architecture]] — How apps, models, agents, tools, data, identity, safety, evaluation, and operations fit together across the corpus.
 - [[learning-path|Learning path]] — Prerequisite-ordered route through the wiki, weighted by exam domains and focused on capabilities after each step.
 - [[decision-boundaries|Decision boundaries — confusable technologies]] — Hub of compact exam decision boundaries across APIs, agents, workflows, tools, retrieval, optimization, media, deployment and auth.
-- [[key-tensions|Key tensions across sources]] `disputed` — Unresolved or exam-relevant tensions where corpus sources conflict, qualify, or narrow one another.
+- [[key-tensions|Key tensions across sources]] — Exam-relevant tensions where corpus sources qualify or narrow one another, or where the study guide outpaces the teaching corpus.
 - [[naming-and-currency|Naming and currency]] — Corpus product-name drift, rename signals, caption risks, and preview/currency risks to preserve while studying.
 - [[corpus-gaps|Corpus gaps]] — Official objectives and thin captures the corpus names without fully teaching, with no invented missing content.
 - [[open-questions|Open questions]] — Questions raised but not answered by the corpus, grouped by capability area and source type needed to close them.

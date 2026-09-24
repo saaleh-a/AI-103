@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Document-extraction service for OCR, layout, prebuilt document models, custom models, classifiers, and composed models."
 area: extraction
 source_ids: [SRC-52, SRC-54, SRC-96, SRC-117, SRC-165, SRC-220, SRC-224, SRC-249, SRC-251, SRC-263]
-objectives: [I04, I06]
+objectives: [I06]
 tags: ["service"]
 aliases: ["Document Intelligence", "Azure AI Document Intelligence", "Form Recognizer", "Document Intelligence Studio"]
 ---
@@ -49,9 +49,9 @@ Supported inputs include JPEG, PNG, BMP, PDF, and TIFF; the read model also acce
 ## Decision boundaries
 
 - Use **read** when you need words and lines from documents with no fixed or predictable structure (SRC-249 L220–223).
-- Use **layout** when you need text plus tables, selection marks, structure, and optional key-value pairs; the assessment tests this exact boundary for varying-format documents with tables (SRC-249 L224–229; SRC-165 L215–219).
+- **Inference:** Use **layout** when you need text plus tables, selection marks, structure, and optional key-value pairs; the assessment tests this exact boundary for varying-format documents with tables (SRC-249 L224–229; SRC-165 L215–219).
 - Use **prebuilt document-type models** when Microsoft already covers the common document type; the corpus explicitly says to check for a prebuilt model before investing in custom model development (SRC-249 L249–250).
-- Use **custom models** when prebuilt models do not cover the document type or the form is specific to the business (SRC-224 L217; SRC-263 L224).
+- **Inference:** Use **custom models** when prebuilt models do not cover the document type or the form is specific to the business (SRC-224 L217; SRC-263 L224).
 - **Inference:** Compare with [[azure-content-understanding]] when the source content is broader than document extraction. This page's corpus evidence is document-centric; Content Understanding has its own analyzer pages for multimodal structured and markdown outputs.
 
 ## Naming and currency

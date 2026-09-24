@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Visual/YAML Foundry workflows orchestrate agents, nodes, variables, conditions, loops, human input, versions, and code invocation."
 area: orchestration
 source_ids: [SRC-3, SRC-11, SRC-36, SRC-105, SRC-118, SRC-151, SRC-171, SRC-231, SRC-238, SRC-243, SRC-245, SRC-247]
-objectives: [P02, G03, G05, G11]
+objectives: [G03, G05, G11]
 objective_gaps: []
 tags: []
 aliases: ["agent-driven workflows", "workflow nodes", "workflow variables", "Foundry workflow designer", "visual workflows"]

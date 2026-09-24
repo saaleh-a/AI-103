@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains A2A client responsibilities: discover the Agent Card, send streaming or non-streaming requests, and handle message or task responses."
 area: orchestration
 source_ids: [SRC-26]
-objectives: [G10]
+objectives: []
 tags: [a2a, client, agent-card, streaming, task-response]
 aliases: ["SRC-26"]
 source_kind: learn-unit

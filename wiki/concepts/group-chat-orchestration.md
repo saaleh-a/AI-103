@@ -44,7 +44,7 @@ The knowledge check maps “brainstorming and collaborative problem solving amon
 
 In Microsoft Agent Framework, a group chat workflow is built with participants and a chat manager. The manager can be customized to filter or summarize results, choose the next agent, request user input, and terminate the conversation. (SRC-242 L245–255)
 
-During each round, the manager checks `should_request_user_input`, checks `should_terminate`, filters results if ending, and selects the next agent if continuing. (SRC-242 L256–261)
+During each round, the manager checks `should_request_user_input`, checks `should_terminate`, filters results if ending, and selects the next agent if continuing. (SRC-242 L259–263)
 
 ## Code and configuration
 

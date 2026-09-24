@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Microsoft Work IQ as a CLI and MCP server for permission-trimmed Microsoft 365 data access during agent development."
 area: agents
 source_ids: [SRC-2]
-objectives: [P12, G09]
+objectives: [G09]
 tags: [work-iq, microsoft-365, mcp, microsoft-graph, permissions]
 aliases: ["SRC-2"]
 source_kind: learn-unit
@@ -54,7 +54,7 @@ Microsoft Work IQ connects AI agents to Microsoft 365 data such as emails, meeti
 - Work IQ is built on Model Context Protocol, which lets AI assistants connect to external data sources and tools. (SRC-2 L229–239)
 - MCP server capabilities can include tools, resources, and prompts. (SRC-2 L232–236)
 - Work IQ runs in CLI mode for terminal queries and MCP server mode for AI assistants such as GitHub Copilot in Visual Studio Code. (SRC-2 L240–249)
-- Work IQ requires Node.js for local CLI use, a Microsoft 365 subscription with a Copilot license, and tenant admin consent for the Work IQ application. (SRC-2 L266–270)
+- Work IQ requires Node.js for local CLI use, a Microsoft 365 subscription with a Copilot license, and tenant admin consent for the Work IQ application. (SRC-2 L264–269)
 - Work IQ inherits the Microsoft 365 Copilot security model, including permission-based access, no data storage, enterprise security policies, and admin visibility. (SRC-2 L272–279)
 - Work IQ accesses data through Microsoft Graph with the authenticated identity, so users cannot access documents they lack permission to view. (SRC-2 L276–279)
 - Work IQ is currently in preview. (SRC-2 L296)
@@ -71,9 +71,9 @@ Security is permission-trimmed to the authenticated user's Microsoft 365 permiss
 
 The capture omits exact commands and JSON bodies, but identifies the surrounding setup patterns. (SRC-2 L250–265)
 
-- CLI installation can use npm. (SRC-2 L250–253)
+- CLI installation can use npm. (SRC-2 L247–250)
 - GitHub Copilot CLI installation uses Copilot CLI, a plugin marketplace, and `workiq@copilot-plugins`. (SRC-2 L254–259)
-- Visual Studio Code configuration adds Work IQ as an MCP server in MCP settings. (SRC-2 L260–263)
+- Visual Studio Code configuration adds Work IQ as an MCP server in MCP settings. (SRC-2 L257–260)
 - Before first use, the user must accept the End User License Agreement. (SRC-2 L260)
 - CLI use runs `workiq ask` from the terminal for ad-hoc queries. (SRC-2 L286–289)
 

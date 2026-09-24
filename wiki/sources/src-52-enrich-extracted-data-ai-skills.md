@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains Azure AI Search skillsets: built-in Foundry Tools skills and custom skills such as Azure Functions wrappers."
 area: retrieval
 source_ids: [SRC-52]
-objectives: [I03, I04, I06, G09]
+objectives: [I03]
 tags: [ai-skills, skillsets, foundry-tools, custom-skills, azure-functions]
 aliases: ["SRC-52"]
 source_kind: learn-unit
@@ -62,7 +62,7 @@ No SDK code is shown, but the source names a custom-skill architecture: an Azure
 - Foundry Tools resource: the resource the indexer must access to use built-in skills beyond the restricted included option. (SRC-52 L228)
 
 ## Decision boundaries and exam cues
-- **Inference:** Choose built-in skills when the enrichment is one of the named standard text or image enrichments. (SRC-52 L221–227)
+- **Inference:** Choose built-in skills when the enrichment is one of the named standard text or image enrichments. (SRC-52 L218–224)
 - **Inference:** Choose a custom skill when the enrichment needs custom logic or a service such as Azure Document Intelligence that must be wrapped. (SRC-52 L230)
 - **Inference:** If built-in skills fail at scale, verify the indexer has access to an appropriate same-region Foundry Tools resource rather than relying on the restricted included resource. (SRC-52 L228)
 

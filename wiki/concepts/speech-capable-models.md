@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Generative audio models in Foundry for speech-to-text and text-to-speech, including gpt-4o transcribe and TTS families."
 area: speech
-source_ids: [SRC-17, SRC-25, SRC-44, SRC-49, SRC-87, SRC-88, SRC-89, SRC-121, SRC-175, SRC-207, SRC-221, SRC-225, SRC-226, SRC-236]
+source_ids: [SRC-17, SRC-25, SRC-44, SRC-49, SRC-87, SRC-88, SRC-89, SRC-121, SRC-175, SRC-191, SRC-207, SRC-221, SRC-225, SRC-226, SRC-236]
 objectives: [P01, G01, T05]
 objective_gaps: [T07]
 tags: []
@@ -104,6 +104,7 @@ The Azure mapping is Foundry model deployment plus the OpenAI-compatible client.
 - SRC-89 — [[src-89-explore-model-catalog]] — model catalog categories for TTS and STT models.
 - SRC-121 — [[src-121-introduction-develop-speech-capable-generative-ai-application]] — module introduction.
 - SRC-175 — [[src-175-module-assessment-develop-speech-capable-generative-ai-application]] — assessment cue distinguishing generic and speech-specific model names.
+- SRC-191 — [[src-191-study-guide-exam-ai-103-developing-ai-apps-agents]] — official study guide: objective wording for the recorded corpus gap.
 - SRC-207 — [[src-207-summary-develop-speech-capable-generative-ai-application]] — module summary.
 - SRC-221 — [[src-221-synthesize-speech]] — text-to-speech model source.
 - SRC-225 — [[src-225-transcribe-speech]] — speech-to-text model source.
@@ -113,3 +114,4 @@ The Azure mapping is Foundry model deployment plus the OpenAI-compatible client.
 ## Open questions
 
 - The corpus does not teach live audio streaming, speech translation, SSML, or Speech service voice configuration through the speech-capable model path.
+- **Synthesis:** Gap T07 — the study guide asks for multimodal reasoning from audio inputs (SRC-191 L189); the corpus teaches speech-capable models that transcribe speech to text or synthesize speech (SRC-17 L218–221), not reasoning over audio input. Recorded in [[corpus-gaps]].

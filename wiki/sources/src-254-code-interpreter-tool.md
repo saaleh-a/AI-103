@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains how code_interpreter gives a model a sandboxed Python runtime for calculations, data analysis, and iterative code execution."
 area: agents
 source_ids: [SRC-254]
-objectives: [G03, G05, G09]
+objectives: [G03, G09]
 tags: [code-interpreter, python, responses-api, tools]
 aliases: ["SRC-254"]
 source_kind: learn-unit

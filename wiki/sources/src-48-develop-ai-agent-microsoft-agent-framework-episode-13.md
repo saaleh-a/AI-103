@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Episode walkthrough of code-first Microsoft Agent Framework: successor framing, provider flexibility, tool dispatch, Foundry setup, credentials, and an expense-claim demo."
 area: agents
 source_ids: [SRC-48]
-objectives: [G06, G07, G08, G09, G11]
+objectives: [G06, G07, G08, G09]
 tags: [episode, microsoft-agent-framework, expense-claim-agent, tool-decorator, azureopenairesponses]
 aliases: ["SRC-48"]
 source_kind: episode

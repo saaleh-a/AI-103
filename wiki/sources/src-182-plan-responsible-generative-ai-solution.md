@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Defines the four responsible generative AI stages: map, measure, mitigate, and manage."
 area: responsible-ai
 source_ids: [SRC-182]
-objectives: [P13, P14, P15]
+objectives: []
 tags: [responsible-ai, lifecycle, risk-management]
 aliases: ["SRC-182"]
 source_kind: learn-unit

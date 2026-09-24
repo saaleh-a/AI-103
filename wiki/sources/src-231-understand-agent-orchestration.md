@@ -49,8 +49,8 @@ This source is the module's map of multi-agent orchestration in Microsoft Agent 
 
 - Agent orchestration lets developers design, manage, and scale multi-agent workflows without manually handling coordination details. (SRC-231 L220)
 - Multi-agent orchestration lets developers assign distinct skills, combine outputs, coordinate stepwise work, and route control dynamically. (SRC-231 L222–226)
-- Workflows are structured sequences of steps that can include AI agents and other components. (SRC-231 L229)
-- Workflows support checkpointing to save and resume state. (SRC-231 L230)
+- Workflows are structured sequences of steps that can include AI agents and other components. (SRC-231 L230)
+- Workflows support checkpointing to save and resume state. (SRC-231 L231)
 - Executors receive input messages, perform actions, and produce outputs. (SRC-231 L232–234)
 - Edges define message flow and include direct, conditional, switch-case, fan-out, and fan-in edges. (SRC-231 L238–243)
 - Events support observability and debugging by tracking progress, errors, and performance. (SRC-231 L245)
@@ -58,7 +58,7 @@ This source is the module's map of multi-agent orchestration in Microsoft Agent 
 
 ## How it works
 
-The source starts with the limitation that a single agent is constrained by one set of instructions or one prompt. (SRC-231 L221) Microsoft Agent Framework addresses this by coordinating specialized agents that collaborate, combine outputs, build on each other's work, or route control based on context. (SRC-231 L222–226) It grounds orchestration in workflow mechanics: executors do work, edges route messages, and events expose execution for monitoring and debugging. (SRC-231 L229–244)
+The source starts with the limitation that a single agent is constrained by one set of instructions or one prompt. (SRC-231 L223) Microsoft Agent Framework addresses this by coordinating specialized agents that collaborate, combine outputs, build on each other's work, or route control based on context. (SRC-231 L222–226) It grounds orchestration in workflow mechanics: executors do work, edges route messages, and events expose execution for monitoring and debugging. (SRC-231 L229–244)
 
 ## Code and API patterns
 
@@ -67,7 +67,7 @@ The source starts with the limitation that a single agent is constrained by one 
 
 ## Key terms
 
-- **Workflow** — a structured sequence of steps used to complete a task. (SRC-231 L229)
+- **Workflow** — a structured sequence of steps used to complete a task. (SRC-231 L230)
 - **Executor** — a worker that receives messages, acts, and produces outputs. (SRC-231 L232–235)
 - **Edge** — logic that determines message flow and order. (SRC-231 L238)
 - **Fan-out edge** — an edge that sends one message to multiple executors simultaneously. (SRC-231 L242)

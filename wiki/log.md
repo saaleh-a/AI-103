@@ -121,3 +121,34 @@ Append-only. Newest entries at the bottom. `grep "^## \[" wiki/log.md` lists the
 - v3 baseline: `[113, 0, 0, 45, 6]` — 107 non-teaching source pages and 6 misused gap lists now fail.
 - Updated: `scripts/lint_wiki.py`, `scripts/loop_score.py`, `scripts/loop_sample.py`,
   `scripts/build_objective_map.py`, `loop/rubric.md`, `loop/panel.txt`, `program.md`, `schema.md` §6.
+
+## [2026-09-24] loop | Cycles 3–6: frontmatter, panel repairs, alias ownership, module navigation
+- Cycle 3: objectives cleared on 107 non-teaching units by rule; P14 and G01 registered in
+  [[corpus-gaps]]; 15 misused gap IDs dropped → mechanical `[113, 0, 0, 45, 6]` → `[0, 0, 0, 45, 6]`;
+  panel 6/20 → 5/20. Incremental panel re-judging (`loop_sample.py --panel --changed-since`) adopted.
+- Cycle 4: the five open panel failures fixed at source level (SAS-URL vs key guidance split on
+  src-236; content-safety cells cited to SRC-156 L230; SRC-91 L233 → L234–235; G06 dropped from the
+  toolkit page; the *Azure AI Agent Service* alias re-cited to lines that contain it) → panel 2/20.
+  New generator aid `scripts/find_locator_drift.py` (347 candidates).
+- Cycle 5: two remaining judgements labelled; P02 dropped → panel 0/20.
+- Cycle 6: one owner per title/alias; `scripts/sync_module_links.py` writes a generated *Module
+  units* line on every source page → `[0, 0, 0, 0, 6]`.
+
+## [2026-09-24] loop | Cycles 7–8 and verifier v4
+- Cycle 7: 322 of 347 drift candidates confirmed against the raw lines and re-cited (21 rejected).
+  A stricter re-judge of the three changed panel pages found pre-existing defects → panel 3/20; a
+  rotating diagnostic sample read 11/20 (mostly ±1–3-line locators and objective over-claims).
+- Cycle 8: the last six unlabelled claim lines labelled → mechanical `[0, 0, 0, 0, 0]`.
+- Verifier v4 (orchestrator decision, recorded for human review): the reviewer protocol moved into
+  the repo as `loop/reviewer.md` and is hash-locked with the rubric; every citation on each sampled
+  claim is checked against the raw lines. Problem solved: the reviewer instructions had lived outside
+  the repo and drifted between cycles. v4 panel baseline at 2ec0446: 3/20.
+
+## [2026-09-24] loop | Cycles 9–10: small offsets and unsourced decision rules
+- Cycle 9: 105 similarity-guided re-citations (±1–3 lines) on 47 pages; they match every
+  reviewer-prescribed offset in scope. Panel 3/20 → 4/20 on an untouched claim of the one changed
+  panel page (kept; measurement variance).
+- Cycle 10: 28 "Choose/Use X when…" rules that their cited lines do not state labelled
+  **Inference:**; 18 reviewer-named fixes applied after checking each against the raw lines (locators,
+  objective trims, a missing SRC-11 citation, the glossary's uncited scope statement, src-167's
+  assessment wording). Panel 4/20 → 5/20, all five failures on claims the two cycles did not touch.

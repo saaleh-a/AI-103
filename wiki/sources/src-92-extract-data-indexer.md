@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains how an Azure AI Search indexer extracts source data, runs enrichment, builds hierarchical JSON documents, and maps fields into an index."
 area: retrieval
 source_ids: [SRC-92]
-objectives: [I01, I03, I04, P03]
+objectives: [I01, P03]
 tags: [indexer, data-sources, document-cracking, field-mapping, azure-ai-search]
 aliases: ["SRC-92"]
 source_kind: learn-unit

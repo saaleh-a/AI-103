@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Defines A2A Agent Skills and Agent Cards as the discoverable capability contract for multi-agent collaboration."
 area: orchestration
 source_ids: [SRC-37]
-objectives: [G07, G10]
+objectives: [G10]
 tags: [a2a, agent-card, agent-skills, discovery]
 aliases: ["SRC-37"]
 source_kind: learn-unit

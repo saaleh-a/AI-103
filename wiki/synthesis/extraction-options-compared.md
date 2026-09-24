@@ -7,8 +7,8 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Compares Content Understanding, Document Intelligence, Azure Language, vision-capable models, and AI Search enrichment for extraction."
 area: extraction
-source_ids: [SRC-8, SRC-10, SRC-12, SRC-29, SRC-30, SRC-40, SRC-52, SRC-93, SRC-94, SRC-96, SRC-117, SRC-126, SRC-165, SRC-168, SRC-224, SRC-249, SRC-251, SRC-263, SRC-264]
-objectives: [P01, P02, V10, V11, V13, T01, T02, I03, I04, I06, I07, I08]
+source_ids: [SRC-8, SRC-10, SRC-12, SRC-29, SRC-30, SRC-40, SRC-52, SRC-93, SRC-94, SRC-96, SRC-117, SRC-126, SRC-131, SRC-165, SRC-168, SRC-210, SRC-224, SRC-249, SRC-251, SRC-263, SRC-264]
+objectives: [P01, P02, V10, T01, I03, I06, I07, I08]
 objective_gaps: []
 tags: []
 aliases: []
@@ -18,7 +18,7 @@ aliases: []
 
 ## Summary
 
-**Synthesis:** The extraction options separate by input and desired output: [[azure-document-intelligence]] is document OCR/layout/prebuilt/custom field extraction, [[azure-content-understanding]] is multimodal analyzer-based extraction to fields/JSON/markdown, [[azure-language]] extracts text-analysis signals such as language, entities and PII, [[ai-enrichment-skillsets]] runs extraction/enrichment during Azure AI Search indexing, and vision-capable generative models are for visual understanding rather than the structured analyzer workflows taught on this page (SRC-263 L217–224; SRC-264 L12–31; SRC-12 L217–220; SRC-52 L218–232).
+**Synthesis:** The extraction options separate by input and desired output: [[azure-document-intelligence]] is document OCR/layout/prebuilt/custom field extraction, [[azure-content-understanding]] is multimodal analyzer-based extraction to fields/JSON/markdown, [[azure-language]] extracts text-analysis signals such as language, entities and PII, [[ai-enrichment-skillsets]] runs extraction/enrichment during Azure AI Search indexing (SRC-263 L217–224; SRC-264 L12–31; SRC-12 L217–220; SRC-52 L218–232). **Inference:** vision-capable generative models, which respond to prompts that mix text and image data (SRC-131 L211–212; SRC-210 L213–214), serve visual question answering rather than the structured analyzer workflows compared here.
 
 ## Scope and question
 
@@ -87,8 +87,10 @@ aliases: []
 - SRC-96 — [[src-96-foundry-tools]] — Foundry Tools family boundary.
 - SRC-117 — [[src-117-introduction-extract-data-azure-document-intelligence]] — Document Intelligence introduction.
 - SRC-126 — [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding]] — multimodal Content Understanding framing.
+- SRC-131 — [[src-131-introduction-develop-vision-enabled-generative-ai-application]] — vision-enabled generative models respond to prompts that mix text and image data.
 - SRC-165 — [[src-165-module-assessment-extract-data-azure-document-intelligence]] — Document Intelligence assessment boundaries.
 - SRC-168 — [[src-168-module-assessment-analyze-text-azure-language-foundry-tools]] — Language assessment boundaries.
+- SRC-210 — [[src-210-summary-develop-vision-enabled-generative-ai-application]] — vision-enabled models understand images and answer related questions.
 - SRC-224 — [[src-224-train-custom-models]] — custom Document Intelligence models.
 - SRC-249 — [[src-249-prebuilt-models]] — prebuilt Document Intelligence models.
 - SRC-251 — [[src-251-document-intelligence-studio]] — Studio workflows.

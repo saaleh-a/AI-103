@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Episode walkthrough of map, measure, mitigate, manage, and a Foundry guardrails demo."
 area: responsible-ai
 source_ids: [SRC-106]
-objectives: [P13, P14, P15]
+objectives: [P13]
 tags: [responsible-ai, episode, guardrails, microsoft-foundry]
 aliases: ["SRC-106"]
 source_kind: episode

@@ -57,7 +57,7 @@ Agent use means enabling voice mode in the Foundry agent playground or configuri
 
 ## Naming and currency
 
-The corpus uses both "Voice live" and "Voice Live" capitalization. It also labels the episode recording as preview-era: the presenter says Voice Live was in preview at recording time and might be out of preview by viewing time (SRC-49 L130–139). **Stale-risk:** model and region support, SDK version, preview status, and endpoint API version should be verified against current Microsoft documentation before production implementation (SRC-88 L227–228; SRC-87 L217–224).
+The corpus uses both "Voice live" and "Voice Live" capitalization. It also labels the episode recording as preview-era: the presenter says Voice Live was in preview at recording time and might be out of preview by viewing time (SRC-49 L174–177). **Stale-risk:** model and region support, SDK version, preview status, and endpoint API version should be verified against current Microsoft documentation before production implementation (SRC-88 L227–228; SRC-87 L217–224).
 
 ## Appearances in the corpus
 

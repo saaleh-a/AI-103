@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains how file_search grounds model answers in uploaded documents indexed through vector stores."
 area: agents
 source_ids: [SRC-255]
-objectives: [G02, G03, G05, G09]
+objectives: [G02, G03, G09]
 tags: [file-search, vector-store, grounding, responses-api]
 aliases: ["SRC-255"]
 source_kind: learn-unit

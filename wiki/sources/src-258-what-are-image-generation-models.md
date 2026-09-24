@@ -49,8 +49,8 @@ Microsoft Foundry supports multiple image-capable model families, including Open
 ## Key claims
 
 - Microsoft Foundry supports multiple image-generating models, including the OpenAI `gpt-image-1` series and the Black Forest Labs FLUX series. (SRC-258 L214–216)
-- The Foundry model catalog can be filtered by inference task to find text-to-image models. (SRC-258 L215)
-- Image-generation models create graphical data from natural-language input. (SRC-258 L216)
+- The Foundry model catalog can be filtered by inference task to find text-to-image models. (SRC-258 L218)
+- Image-generation models create graphical data from natural-language input. (SRC-258 L219)
 - A prompt such as `A robot eating spaghetti` can produce graphical output. (SRC-258 L220–222)
 - Generated images are original and are not retrieved from a curated image catalog. (SRC-258 L221–223)
 
@@ -64,15 +64,15 @@ Not covered by this source. It identifies model families and the model catalog f
 
 ## Key terms
 
-- **Image-generation model:** a generative AI model that creates graphical data from natural-language input. (SRC-258 L216)
-- **Text to image:** the inference-task filter named for finding image-generation models in the Foundry portal. (SRC-258 L215)
-- **gpt-image-1:** an OpenAI model series named as image-capable in Foundry. (SRC-258 L213)
+- **Image-generation model:** a generative AI model that creates graphical data from natural-language input. (SRC-258 L219)
+- **Text to image:** the inference-task filter named for finding image-generation models in the Foundry portal. (SRC-258 L218)
+- **gpt-image-1:** an OpenAI model series named as image-capable in Foundry. (SRC-258 L215)
 - **FLUX:** a Black Forest Labs model series named as image-capable in Foundry. (SRC-258 L216)
 
 ## Decision boundaries and exam cues
 
 - **Inference:** Choose an image-generation model when the user needs a new image produced from a description, not when the task is to retrieve an existing image. (SRC-258 L216–223)
-- **Inference:** In the Foundry model catalog, `text to image` is the key inference-task clue for this capability. (SRC-258 L215)
+- **Inference:** In the Foundry model catalog, `text to image` is the key inference-task clue for this capability. (SRC-258 L218)
 
 ## Assessment items
 

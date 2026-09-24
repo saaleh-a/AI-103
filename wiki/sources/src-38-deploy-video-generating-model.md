@@ -44,11 +44,11 @@ ingest_depth: full
 
 ## TL;DR
 
-To generate videos from text prompts, learners need to deploy a video-generation model. (SRC-38 L212) The unit names Sora 2 as an OpenAI model in Microsoft Foundry that creates realistic and imaginative video scenes from text instructions, input images, or existing videos. (SRC-38 L212–214)
+To generate videos from text prompts, learners need to deploy a video-generation model. (SRC-38 L214) The unit names Sora 2 as an OpenAI model in Microsoft Foundry that creates realistic and imaginative video scenes from text instructions, input images, or existing videos. (SRC-38 L212–214)
 
 ## Key claims
 
-- Text-prompt video generation requires deploying a video-generation model. (SRC-38 L212)
+- Text-prompt video generation requires deploying a video-generation model. (SRC-38 L214)
 - Sora 2 creates video scenes from text instructions, input images, or existing videos. (SRC-38 L212–214)
 - Before deployment, learners need an Azure subscription, access to the Microsoft Foundry portal, and deployment permissions in a Foundry project. (SRC-38 L215–218)
 - The deployment path is to sign in to Foundry portal, create or select a project, select `Build`, select `Models`, find Sora-2, and deploy it with chosen settings. (SRC-38 L219–226)

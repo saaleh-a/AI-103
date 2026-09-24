@@ -79,7 +79,7 @@ The corpus uses both `Responses API` and `OpenAI Responses API`; both refer to t
 ## Appearances in the corpus
 
 - Core chat app unit and state management. (SRC-99 L217–305)
-- Endpoint and API selection guidance. (SRC-18 L221)
+- Endpoint and API selection guidance. (SRC-18 L219)
 - RAG grounded answer implementation. (SRC-102 L251–256)
 - File search request surface. (SRC-255 L232–240)
 
@@ -90,7 +90,7 @@ The corpus uses both `Responses API` and `OpenAI Responses API`; both refer to t
 - [[openai-sdk]] — one access path for the API. (SRC-99 L217)
 - [[foundry-sdk]] — another access path, especially for Foundry project integration. (SRC-99 L217; SRC-102 L251–256)
 - [[retrieval-augmented-generation]] — grounded answers can use Responses after retrieval. (SRC-102 L251–256)
-- [[file-search-tool]] — built-in retrieval tool used through the Responses API. (SRC-255 L232–240)
+- [[file-search-tool]] — built-in retrieval tool used through the Responses API. (SRC-255 L231–239)
 - *Also linked from:* [[agent-publishing]] · [[agent-tools]] · [[azure-openai]] · [[code-interpreter-tool]] · [[decision-boundaries]] · [[endpoints-and-sdk-choice]] · [[foundry-agent-service]] · [[function-calling]] · [[generation-parameters]] · [[generative-ai-fundamentals]] · [[model-playgrounds]] · [[overview]] · [[prompt-engineering]] · [[quotas-rate-limits-and-cost]] · [[vision-enabled-chat]] · [[web-search-tool]]
 
 ## Sources

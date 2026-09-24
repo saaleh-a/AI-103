@@ -58,9 +58,9 @@ Studio is an alternative workflow: it can generate `ocr.json`, `labels.json`, an
 
 ## Decision boundaries
 
-- Use a custom template model for a uniform visual layout; the deciding detail is a static form layout and faster, cheaper training (SRC-224 L220–233).
-- Use a custom neural model for semi-structured or varying layouts; the deciding detail is higher accuracy for varying formats at the cost of longer training and more resources (SRC-224 L223–228).
-- Use a custom classifier or composed model when multiple form types enter one pipeline and the system must route each document to the right extraction model (SRC-224 L234–235; SRC-165 L225–229).
+- **Inference:** Use a custom template model for a uniform visual layout; the deciding detail is a static form layout and faster, cheaper training (SRC-224 L220–233).
+- **Inference:** Use a custom neural model for semi-structured or varying layouts; the deciding detail is higher accuracy for varying formats at the cost of longer training and more resources (SRC-224 L223–228).
+- **Inference:** Use a custom classifier or composed model when multiple form types enter one pipeline and the system must route each document to the right extraction model (SRC-224 L234–235; SRC-165 L225–229).
 - Check prebuilt models first for common invoice, receipt, ID, or tax forms before building a custom model (SRC-249 L249–250).
 
 **Exam cue:** The module assessment asks for a composed model or custom classifier when a company processes both invoices and receipts and wants one endpoint that routes each document to the correct extraction model (SRC-165 L225–229).

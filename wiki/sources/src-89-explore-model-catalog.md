@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Explains the Foundry model catalog, model categories, filters, model cards, and major language and specialized model types."
 area: models
 source_ids: [SRC-89]
-objectives: [P01, G01]
+objectives: [P01]
 tags: [model-catalog, model-selection, model-types]
 aliases: ["SRC-89"]
 source_kind: learn-unit
@@ -83,7 +83,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- **Stale-risk:** The number of models, provider names, model examples, and model versions are time-sensitive catalog details. (SRC-89 L213; SRC-89 L222; SRC-89 L227–238)
+- **Stale-risk:** The number of models, provider names, model examples, and model versions are time-sensitive catalog details. (SRC-89 L215; SRC-89 L222; SRC-89 L227–238)
 - The source uses Microsoft Foundry / Foundry Models naming while some related corpus items use Azure AI Foundry. (SRC-89 L213–216)
 
 ## Relation to other sources
@@ -94,7 +94,7 @@ Not covered by this source.
 
 ## Connections
 
-- [[model-catalog]] — the source's main product surface. (SRC-89 L213)
+- [[model-catalog]] — the source's main product surface. (SRC-89 L215)
 - [[model-selection]] — filters and model families support selection. (SRC-89 L217–238)
 - [[azure-openai]] — Azure OpenAI is one of the catalog sources named in the unit. (SRC-89 L222)
 - [[model-benchmarks]] — model cards expose benchmark metrics. (SRC-89 L217–218)

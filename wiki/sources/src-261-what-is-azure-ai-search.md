@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Defines Azure AI Search as cloud indexing and querying infrastructure for structured, semi-structured, and unstructured sources."
 area: retrieval
 source_ids: [SRC-261]
-objectives: [I01, I02, I03, G02, P03]
+objectives: [I01, I03, G02, P03]
 tags: [azure-ai-search, rag, knowledge-mining, enterprise-search]
 aliases: ["SRC-261"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Reusable Content Understanding artifacts that combine a base type, models, field schema, extraction methods, confidence, and grounding."
 area: extraction
 source_ids: [SRC-7, SRC-8, SRC-29, SRC-30, SRC-126, SRC-164, SRC-169, SRC-184, SRC-250, SRC-263, SRC-264]
-objectives: [V10, V11, V13, T01, I06, I07, I08]
+objectives: [V10, T01, I06, I07, I08]
 objective_gaps: []
 tags: []
 aliases: ["analyzer", "custom analyzer", "prebuilt analyzer", "field schema", "Content Understanding schema", "analyzer template"]

@@ -40,7 +40,7 @@ ingest_depth: full
 | Ingest depth | full |
 
 ## TL;DR
-This assessment tests whether the learner can identify custom tools as callable functions that extend an agent, choose OpenAPI specification tools for OpenAPI 3.0 web services and choose function calling for local application functions. (SRC-167 L212–225) The capture does not show which options were selected or checked, so answers are recorded as not shown. (SRC-167 L226–228)
+This assessment asks what custom tools are, how to integrate an OpenAPI 3.0-based web service into an agent, and which tool type an agent should use to call a local application function; each question lists three options, including callable functions, an OpenAPI specification tool and function calling. (SRC-167 L212–225) The capture does not show which options were selected or checked, so answers are recorded as not shown. (SRC-167 L226–228)
 
 ## Key claims
 - The first assessment item asks what custom tools are and how they help develop effective agents with Microsoft Foundry Agent Service. (SRC-167 L212–215)

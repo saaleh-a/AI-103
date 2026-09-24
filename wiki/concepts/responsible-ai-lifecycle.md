@@ -9,7 +9,7 @@ summary: "The map, measure, mitigate, and manage loop for planning, testing, red
 area: responsible-ai
 source_ids: [SRC-106, SRC-112, SRC-152, SRC-153, SRC-154, SRC-156, SRC-170, SRC-182, SRC-191]
 objectives: [P13, G04]
-objective_gaps: [P15, G12, G15]
+objective_gaps: []
 tags: []
 aliases: ["map measure mitigate manage", "manage responsible AI", "operate responsibly"]
 ---

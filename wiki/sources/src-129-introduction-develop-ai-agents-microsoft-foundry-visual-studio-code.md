@@ -66,7 +66,7 @@ Not covered by this source. (SRC-129 L221–231)
 
 - **Microsoft Foundry Agent Service** — a fully managed platform for building, deploying, and scaling AI agents without managing compute and storage resources. (SRC-129 L219)
 - **Microsoft Foundry extension for Visual Studio Code** — the VS Code setup target in the module objectives. (SRC-129 L220–226)
-- **Tools and functions** — the named way to extend agent capabilities in the module objectives. (SRC-129 L228)
+- **Tools and functions** — the named way to extend agent capabilities in the module objectives. (SRC-129 L227)
 
 ## Decision boundaries and exam cues
 
