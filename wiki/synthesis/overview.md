@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Entry point to the corpus, exam domains, architecture map, starting route, and navigation links."
 area: exam
 source_ids: [SRC-1, SRC-18, SRC-27, SRC-28, SRC-39, SRC-53, SRC-89, SRC-91, SRC-102, SRC-152, SRC-155, SRC-182, SRC-191, SRC-230]
-objectives: [P01, P02, P03, P04, P05, P06, P07, P08, P09, P10, P11, P12, P13, P14, P15, P16, G01, G02, G03, G04, G05, G06, G07, G08, G09, G10, G11, G12, G13, G14, G15, G16, V01, V02, V03, V04, V05, V06, V07, V08, V09, V10, V11, V12, V13, V14, V15, V16, T01, T02, T03, T04, T05, T06, T07, T08, I01, I02, I03, I04, I05, I06, I07, I08]
+objectives: []
 objective_gaps: []
 tags: []
 aliases: ["overview"]

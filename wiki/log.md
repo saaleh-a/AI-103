@@ -93,3 +93,13 @@ Append-only. Newest entries at the bottom. `grep "^## \[" wiki/log.md` lists the
 - Updated: `schema.md` §6, `scripts/lint_wiki.py`, `scripts/build_objective_map.py`.
 - Also added `scripts/loop_sample.py` (seeded, stratified sample for the judgement verifier) and
   hash-listed it with the verifier in `scripts/loop_score.py`.
+
+## [2026-09-24] loop | Cycles 0–1: baseline and objective honesty
+- Summary: `program.md` loop started. Cycle 0 baseline: mechanical `[0, 0, 0, 45, 6]`; judgement
+  17/20 pass (failures: synthesis pages over-claiming objectives). Cycle 1 made hubs claim no
+  objectives, trimmed comparison pages and filled corpus-gaps' `objective_gaps` (22); objective map
+  now 53 taught / 11 named only. Details in `loop/experiments.md`.
+- Verifier change (human decision): rubric criterion 8 *Honest frontmatter* added to
+  `loop/rubric.md`; `scripts/loop_score.py` compares judgement rates only under the same rubric
+  hash; verifier re-locked. Problem solved: the reviewer lens had widened between cycles, which made
+  an unchanged class of pre-existing errors look like a regression.

@@ -24,10 +24,15 @@ the claims against the cited lines — not against memory of Azure.
    knowledge dressed as a citation is the worst failure.
 7. **Useful structure** — concept and entity pages give the mechanism and the decision boundary
    against the closest confusion; links go to the right neighbours.
+8. **Honest frontmatter** — `objectives` lists only official objectives (wording in
+   `scripts/data/exam-objectives.json`) that the page's own cited evidence *other than the study
+   guide* teaches; a page on a narrower topic must not claim a broad objective whose named parts it
+   does not cover. Objectives the corpus only names belong in `objective_gaps`. Hub pages (overview,
+   master synthesis, learning path, glossary, decision boundaries) claim none.
 
 ## Verdict
 
-A page **FAILS** if criterion 1, 2 or 6 fails for any load-bearing claim, or criterion 3 fails for
+A page **FAILS** if criterion 1, 2, 6 or 8 fails for any load-bearing claim, or criterion 3 fails for
 a load-bearing statement. Otherwise it **PASSES** (list minor notes). Be harsh: a mediocre page
 is a pass with notes, a wrong page is a fail.
 

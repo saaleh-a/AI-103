@@ -8,8 +8,8 @@ updated: 2026-09-24
 summary: "Advanced Microsoft 365 tooling for proxy-app integration, custom SSO, middleware, multi-environment deployment, debugging, and CI/CD."
 area: agents
 source_ids: [SRC-5, SRC-149, SRC-209, SRC-232]
-objectives: [P08, G05, G12]
-objective_gaps: []
+objectives: [G05, G12]
+objective_gaps: [P08]
 tags: ["tool"]
 aliases: ["Agents Toolkit", "Microsoft 365 Agents Playground", "Microsoft 365 Agents SDK", "Custom Engine Agent"]
 ---

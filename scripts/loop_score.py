@@ -78,14 +78,20 @@ def main() -> int:
     best = min((h["score"] for h in history), default=None)
     verdict = "BASELINE" if best is None else ("IMPROVED" if score < best else "SAME" if score == best else "REGRESSED")
     judgement = None
+    rubric = digest("loop/rubric.md")
     if "--judgement" in args:
         sampled, failing = (int(x) for x in args[args.index("--judgement") + 1].split(":"))
-        judgement = {"sampled": sampled, "failing": failing}
-        prev = [h["judgement"] for h in history if h.get("judgement")]
+        judgement = {"sampled": sampled, "failing": failing, "rubric_sha256": rubric}
+        # Judgement rates are comparable only under the same rubric: a stricter rubric is a new
+        # measuring instrument, so its first sample starts a new judgement baseline.
+        prev = [h["judgement"] for h in history
+                if h.get("judgement") and h["judgement"].get("rubric_sha256") == rubric]
         if prev:
             last = prev[-1]
             if failing / max(sampled, 1) > last["failing"] / max(last["sampled"], 1):
-                verdict = "REGRESSED" if verdict != "REGRESSED" else verdict
+                verdict = "REGRESSED"
+        else:
+            judgement["baseline"] = True
     print("\n".join(summary))
     print(f"score={score} best={best} verdict={verdict}" + (f" judgement={judgement}" if judgement else ""))
     if "--record" in args:

@@ -8,8 +8,8 @@ updated: 2026-09-24
 summary: "Compares prompt engineering, generation parameters, RAG, fine-tuning and evaluation as progressively heavier optimization levers."
 area: models
 source_ids: [SRC-19, SRC-23, SRC-53, SRC-89, SRC-95, SRC-99, SRC-102, SRC-161, SRC-177, SRC-178, SRC-202]
-objectives: [G02, G04, G13, G14, G15, T04]
-objective_gaps: []
+objectives: [G02, G04, G13, G15, T04]
+objective_gaps: [G14]
 tags: []
 aliases: ["prompt engineering vs RAG vs fine-tuning"]
 ---

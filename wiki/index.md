@@ -662,4 +662,4 @@ numeric prefix (the same numbers the app's lessons use as `sourceIds`).
 ## Other pages
 
 - [[corpus-map|Corpus map]] — The course structure source by source — 265 raw sources in 30 Learn modules plus 26 episodes and 4 exam and course aids.
-- [[objective-map|Exam objective map]] — The 64 official AI-103 objectives mapped to wiki pages — 54 taught by the corpus, 10 named only, 0 with no page.
+- [[objective-map|Exam objective map]] — The 64 official AI-103 objectives mapped to wiki pages — 53 taught by the corpus, 11 named only, 0 with no page.

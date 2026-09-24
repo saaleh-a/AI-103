@@ -9,7 +9,7 @@ summary: "Unresolved or exam-relevant tensions where corpus sources conflict, qu
 area: corpus
 source_ids: [SRC-1, SRC-43, SRC-98, SRC-99, SRC-124, SRC-178, SRC-191, SRC-228, SRC-231, SRC-236]
 objectives: []
-objective_gaps: []
+objective_gaps: [G14]
 tags: []
 aliases: ["contradictions"]
 ---

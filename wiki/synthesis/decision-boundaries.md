@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Hub of compact exam decision boundaries across APIs, agents, workflows, tools, retrieval, optimization, media, deployment and auth."
 area: exam
 source_ids: [SRC-4, SRC-5, SRC-8, SRC-12, SRC-13, SRC-17, SRC-18, SRC-19, SRC-20, SRC-22, SRC-23, SRC-25, SRC-26, SRC-31, SRC-34, SRC-36, SRC-37, SRC-39, SRC-46, SRC-84, SRC-85, SRC-88, SRC-91, SRC-95, SRC-96, SRC-98, SRC-99, SRC-102, SRC-104, SRC-108, SRC-110, SRC-115, SRC-126, SRC-178, SRC-179, SRC-185, SRC-189, SRC-223, SRC-225, SRC-226, SRC-227, SRC-229, SRC-230, SRC-231, SRC-232, SRC-233, SRC-236, SRC-237, SRC-238, SRC-240, SRC-241, SRC-242, SRC-243, SRC-244, SRC-245, SRC-247, SRC-255, SRC-256, SRC-257, SRC-259, SRC-263, SRC-264]
-objectives: [P01, P02, P03, P04, P05, P06, P07, P08, P12, P15, P16, G01, G02, G03, G05, G06, G07, G08, G09, G10, G11, G12, G13, G15, G16, V06, V08, V10, V11, V13, T01, T02, T03, T05, T06, I01, I02, I04, I05, I06, I07, I08]
+objectives: []
 objective_gaps: []
 tags: []
 aliases: ["confusable technologies", "exam decision boundaries"]

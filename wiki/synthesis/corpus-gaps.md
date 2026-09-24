@@ -9,7 +9,7 @@ summary: "Official objectives and thin captures the corpus names without fully t
 area: exam
 source_ids: [SRC-5, SRC-8, SRC-24, SRC-62, SRC-75, SRC-102, SRC-143, SRC-156, SRC-178, SRC-187, SRC-191, SRC-196, SRC-222, SRC-223, SRC-235, SRC-236]
 objectives: []
-objective_gaps: [P11, G14, V03, V07, V09, V12, V14, V15, V16, T07]
+objective_gaps: [P05, P08, P09, P10, P11, P12, P15, G12, G14, G15, V03, V07, V09, V12, V13, V14, V15, V16, T02, T06, T07, I02]
 tags: []
 aliases: ["coverage gaps"]
 ---
@@ -18,7 +18,7 @@ aliases: ["coverage gaps"]
 
 ## Summary
 
-**Synthesis:** The objective map marks ten official objectives as named only; the study guide names them, but the corpus either lacks teaching content or covers only a neighbouring capability (SRC-191 L133; SRC-191 L157; SRC-191 L164–179; SRC-191 L189).
+**Synthesis:** This page records official objectives whose wording outpaces the bundled teaching corpus: some are named only, while others are partly taught but leave a named subrequirement thin or absent (SRC-191 L126–134; SRC-191 L154–158; SRC-191 L164–189; SRC-191 L194).
 
 ## Scope and question
 
@@ -43,6 +43,7 @@ aliases: ["coverage gaps"]
 
 ### Partial and thin areas from app gap leads
 
+- **Synthesis:** P05 is partly covered by project, resource, and deployment boundaries, but the broader infrastructure-design objective still has a gap around production topology and infrastructure design beyond Foundry resource/deployment choices (SRC-191 L126; SRC-196 L8–28).
 - **Synthesis:** P08 is partly named by the guide as CI/CD pipeline integration (SRC-191 L129); Microsoft 365 Agents Toolkit advanced material references complex integration scenarios, but the corpus does not teach a full Foundry CI/CD pipeline (SRC-5 L212–241).
 - **Synthesis:** P09 and G15 are partly covered by token/cost/latency and monitoring summaries, but setup of cost dashboards, rate-limit backoff, token analytics dashboards and latency breakdowns is thin (SRC-191 L131; SRC-191 L158; SRC-196 L8–28; SRC-223 L270–294).
 - **Synthesis:** P10 names drift and grounding quality (SRC-191 L132); evaluation and monitoring are mentioned, but drift-specific monitoring is not taught as a workflow (SRC-196 L8–28; SRC-222 L260–285).
@@ -51,6 +52,7 @@ aliases: ["coverage gaps"]
 - **Synthesis:** T02 sentiment and tone are partially covered: language text analysis and Language MCP material includes sentiment or text-analysis capabilities, while the guide also names tone detection (SRC-191 L183; SRC-24 L209–265; SRC-235 L209–245). The corpus does not teach tone detection setup.
 - **Synthesis:** T06 custom speech models are named by the guide's custom-speech objective, while Speech MCP teaching covers speech recognition/synthesis tools and security requirements, not custom model creation (SRC-191 L188; SRC-236 L225–262).
 - **Synthesis:** I02 names semantic, hybrid and vector search (SRC-191 L194); RAG and search-index units teach vector/semantic-adjacent retrieval and Lucene-style search, but hybrid query configuration is not taught as an end-to-end setup (SRC-102 L234–265; SRC-187 L212–268).
+- **Synthesis:** V13 is partly covered for image regions and object-like visual extraction, but identifying objects, components, or regions within video remains a named gap in the corpus (SRC-191 L175; SRC-8 L232–248).
 
 ### Corpus-format gaps
 
@@ -62,14 +64,14 @@ aliases: ["coverage gaps"]
 
 | Synthesis: claim | Sources |
 |---|---|
-| Ten objectives are named in the official guide but not taught by corpus lessons. | SRC-191 L133; SRC-191 L157; SRC-191 L164–179; SRC-191 L189 |
+| Objective wording outpaces the bundled teaching corpus in monitoring, observability, vision, speech, and search configuration. | SRC-191 L126–134; SRC-191 L154–158; SRC-191 L164–189; SRC-191 L194 |
 | Search, RAG and Content Understanding teach neighbouring capabilities but leave monitoring/configuration gaps. | SRC-187 L212–268; SRC-102 L234–265; SRC-8 L207–254 |
 | Application Insights and tracing are mentioned but not taught as dashboard/alert setup. | SRC-222 L260–285; SRC-223 L270–294; SRC-196 L8–28 |
 | Several captures are thin because code, answers or lab steps are missing. | SRC-8 L219–241; SRC-62 L211–217; SRC-143 L8–23 |
 
 ## Tensions
 
-**Synthesis:** The biggest tension is coverage, not contradiction: the official study guide is broader than the bundled teaching corpus in visual responsibility, audio reasoning, observability setup, and search/relevance monitoring (SRC-191 L133; SRC-191 L157; SRC-191 L164–179; SRC-191 L189).
+**Synthesis:** The biggest tension is coverage, not contradiction: the official study guide is broader than the bundled teaching corpus in infrastructure design, observability setup, visual responsibility, audio reasoning, and search/relevance monitoring (SRC-191 L133; SRC-191 L157; SRC-191 L164–179; SRC-191 L189).
 
 ## Implications for the exam and for practice
 
