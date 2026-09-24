@@ -78,7 +78,7 @@ The corpus does not provide a full skillset JSON definition. It does provide con
 - [[azure-functions]] — custom skills can be implemented as Azure Functions. (SRC-52 L230–232)
 - [[azure-document-intelligence]] — example service wrapped by a custom skill. (SRC-52 L230–232)
 - [[src-52-enrich-extracted-data-ai-skills]] — primary enrichment source.
-- *Also linked from:* [[knowledge-mining]] · [[named-entity-recognition]]
+- *Also linked from:* [[extraction-options-compared]] · [[knowledge-mining]] · [[named-entity-recognition]] · [[overview]]
 
 ## Sources
 

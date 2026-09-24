@@ -76,6 +76,7 @@ The corpus does not show knowledge-store JSON or an Azure Storage account config
 - [[search-indexes]] — closest confusion: the index is the queryable primary output. (SRC-181 L218; SRC-187 L218–231)
 - [[knowledge-mining]] — knowledge store completes the mining pipeline with reusable outputs. (SRC-130 L216–218)
 - [[src-181-persist-extracted-information-knowledge-store]] — primary source.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

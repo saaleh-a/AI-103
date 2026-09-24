@@ -91,7 +91,7 @@ For Azure Language, the portal path is Tools → Connect a tool → Azure Langua
 - [[foundry-tools]] — catalog containing Language and Speech MCP tools.
 - [[src-240-azure-ai-agents-mcp-servers]] — managed MCP integration source.
 - [[src-108-integrate-agent-tools-mcp-server-client]] — local server/client source.
-- *Also linked from:* [[a2a-agent-implementation]] · [[agent-tools]] · [[agent2agent-protocol]] · [[foundry-agent-service]] · [[function-calling]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[agent-tools]] · [[agent2agent-protocol]] · [[foundry-agent-service]] · [[function-calling]] · [[overview]]
 
 ## Sources
 

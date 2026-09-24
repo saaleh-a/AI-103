@@ -99,7 +99,7 @@ For more expressive output, use SSML rather than plain text and submit it throug
 - [[azure-speech-mcp-server]] — concept can be exposed as an agent tool.
 - [[speech-capable-models]] — concept can be implemented by deployed TTS models.
 - [[voice-live-api]] — concept appears inside real-time conversational speech.
-- *Also linked from:* [[azure-openai]] · [[speech-translation]]
+- *Also linked from:* [[azure-openai]] · [[overview]] · [[speech-translation]]
 
 ## Sources
 

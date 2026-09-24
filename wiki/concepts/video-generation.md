@@ -76,7 +76,7 @@ The core SDK pattern is `videos.create` → `videos.retrieve` polling → `video
 - [[corpus-gaps]] — broader V04/V05 editing-control coverage remains thin.
 - [[src-100-generate-video-prompt]] — prompt, playground, reference image and remix guidance.
 - [[src-101-generate-video-python]] — programmatic job pattern.
-- *Also linked from:* [[generation-parameters]] · [[model-playgrounds]] · [[prompt-engineering]]
+- *Also linked from:* [[generation-parameters]] · [[model-playgrounds]] · [[overview]] · [[prompt-engineering]]
 
 ## Sources
 

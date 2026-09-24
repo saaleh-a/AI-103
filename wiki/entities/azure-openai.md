@@ -73,7 +73,7 @@ Azure OpenAI appears in model discovery, endpoint selection, image generation, s
 - [[image-generation]] — image-generation examples can use OpenAI/Azure OpenAI SDKs.
 - [[text-to-speech]] — speech synthesis can use an AzureOpenAI client.
 - [[speech-to-text]] — transcription can use an AzureOpenAI client.
-- *Also linked from:* [[generative-ai-fundamentals]] · [[model-selection]] · [[speech-capable-models]]
+- *Also linked from:* [[generative-ai-fundamentals]] · [[model-selection]] · [[overview]] · [[speech-capable-models]]
 
 ## Sources
 

@@ -127,7 +127,7 @@ The corpus's captured code blocks are mostly placeholders, but it states these i
 - [[semantic-ranking]] — Foundry IQ and Azure AI Search sources name semantic relevance and ranking. (SRC-22 L17–20; SRC-102 L246–250)
 - [[azure-content-understanding]] — can produce markdown representations useful for RAG. (SRC-8 L232–237)
 - [[model-and-app-evaluation]] — low evaluation scores can trigger RAG integration as a remediation. (SRC-53 L286–291)
-- *Also linked from:* [[content-understanding-analyzers]] · [[conversation-state]] · [[fine-tuning]] · [[foundry-sdk]] · [[generative-ai-fundamentals]] · [[knowledge-bases-and-sources]] · [[knowledge-mining]] · [[model-selection]] · [[prompt-engineering]]
+- *Also linked from:* [[content-understanding-analyzers]] · [[conversation-state]] · [[fine-tuning]] · [[foundry-sdk]] · [[generative-ai-fundamentals]] · [[knowledge-bases-and-sources]] · [[knowledge-mining]] · [[model-selection]] · [[overview]] · [[prompt-engineering]]
 
 ## Sources
 

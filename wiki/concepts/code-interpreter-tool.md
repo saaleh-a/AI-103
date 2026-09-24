@@ -75,6 +75,7 @@ The corpus's captured code blocks are elided by the Learn capture, but the proce
 - [[tool-options-compared]] — synthesis decision boundary for tool selection.
 - [[src-254-code-interpreter-tool]] — dedicated source page for this tool.
 - [[src-91-extend-agent-capabilities-tools]] — agent-context description of Code Interpreter.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

@@ -81,7 +81,7 @@ The corpus capture omits the full code blocks, but the required structure is cle
 - [[human-in-the-loop-approval]] — approval is relevant for sensitive function/tool calls.
 - [[src-256-function-tool]] — dedicated Responses API source for the function tool.
 - [[src-104-how-integrate-custom-tools]] — Foundry Agent Service custom-tool source.
-- *Also linked from:* [[model-context-protocol]]
+- *Also linked from:* [[model-context-protocol]] · [[overview]]
 
 ## Sources
 

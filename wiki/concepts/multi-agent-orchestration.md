@@ -84,7 +84,7 @@ Another mistake is assuming all multi-agent work means free collaboration. The c
 - [[magentic-orchestration]] — the adaptive manager-led pattern. (SRC-231 L252)
 - [[orchestration-patterns-compared]] — synthesis page for choosing among the five exam-confusable patterns.
 - [[src-231-understand-agent-orchestration]] — the central source page for this concept.
-- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[workflow-patterns]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[overview]] · [[workflow-patterns]]
 
 ## Sources
 

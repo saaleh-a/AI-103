@@ -77,7 +77,7 @@ Content Understanding appears as a multimodal Learn module, an image-analysis Le
 - [[src-126-introduction-create-multimodal-analysis-solution-azure-content-understanding]] — Learn introduction for multimodal analyzer creation.
 - [[src-7-analyze-documents-content-understanding-episode-25]] — episode walkthrough across documents, audio, and video.
 - [[src-9-analyze-images-content-understanding-episode-24]] — episode walkthrough for image analyzers and API use.
-- *Also linked from:* [[azure-ai-content-safety]]
+- *Also linked from:* [[azure-ai-content-safety]] · [[extraction-options-compared]] · [[overview]] · [[retrieval-options-compared]]
 
 ## Sources
 

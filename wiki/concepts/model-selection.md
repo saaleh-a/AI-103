@@ -92,7 +92,7 @@ In Azure/Foundry terms, selection usually starts in [[model-catalog]], where fil
 - [[vision-enabled-chat]] — selection implications for image input.
 - [[image-generation]] — selection implications for graphical output.
 - [[retrieval-augmented-generation]] — embedding models can support RAG/search retrieval choices.
-- *Also linked from:* [[azure-translator]] · [[fine-tuning]] · [[model-and-app-evaluation]] · [[model-playgrounds]] · [[speech-capable-models]] · [[text-translation]]
+- *Also linked from:* [[azure-translator]] · [[fine-tuning]] · [[model-and-app-evaluation]] · [[model-playgrounds]] · [[overview]] · [[speech-capable-models]] · [[text-translation]]
 
 ## Sources
 

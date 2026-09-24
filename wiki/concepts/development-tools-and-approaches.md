@@ -83,6 +83,7 @@ Do not choose SDKs by language alone. SRC-18 and SRC-51 distinguish SDKs by targ
 - [[agent-building-options-compared]] — synthesis page for portal/SDK/framework/toolkit options.
 - [[src-51-developer-tools-sdks]] — direct source for tools and SDKs.
 - [[src-84-explore-development-approaches]] — direct source for portal versus VS Code.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

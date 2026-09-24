@@ -87,7 +87,7 @@ The corpus uses both "Azure Speech" and "Azure Speech in Foundry Tools" for this
 - [[azure-speech-mcp-server]] — service-family page connects to the agent tool wrapper.
 - [[foundry-tools]] — service-family page sits under prebuilt Foundry APIs and models.
 - [[speech-and-language-options-compared]] — service-family page connects to cross-option selection.
-- *Also linked from:* [[azure-translator]] · [[speech-capable-models]] · [[text-translation]]
+- *Also linked from:* [[azure-translator]] · [[overview]] · [[speech-capable-models]] · [[text-translation]]
 
 ## Sources
 

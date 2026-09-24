@@ -77,7 +77,7 @@ The captured Learn code block is elided, but the implementation pattern is expli
 - [[retrieval-options-compared]] — broader retrieval decision boundary.
 - [[src-257-web-search-tool]] — dedicated source page for this tool.
 - [[src-91-extend-agent-capabilities-tools]] — agent-context Bing Web Search description.
-- *Also linked from:* [[code-interpreter-tool]]
+- *Also linked from:* [[code-interpreter-tool]] · [[decision-boundaries]] · [[overview]]
 
 ## Sources
 

@@ -94,7 +94,7 @@ Prompt engineering appears across several Azure surfaces. In the Foundry model p
 - [[video-generation]] — media prompts use shot, action, style and timing detail.
 - [[src-178-optimize-model-output-prompt-engineering]] — central prompt-engineering unit.
 - [[src-19-compare-combine-optimization-strategies]] — optimization strategy boundary.
-- *Also linked from:* [[generative-ai-fundamentals]] · [[model-and-app-evaluation]]
+- *Also linked from:* [[generative-ai-fundamentals]] · [[model-and-app-evaluation]] · [[overview]]
 
 ## Sources
 

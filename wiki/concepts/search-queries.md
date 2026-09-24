@@ -78,7 +78,7 @@ The corpus does not provide a complete SDK query example for Azure AI Search. It
 - [[embeddings-and-vector-search]] — vector and hybrid retrieval are neighbouring grounding techniques.
 - [[src-187-search-index]] — main Learn unit for querying an index.
 - [[src-33-create-knowledge-mining-solution-azure-ai-search-episode-26]] — episode demo of JSON search and `select`.
-- *Also linked from:* [[knowledge-bases-and-sources]]
+- *Also linked from:* [[knowledge-bases-and-sources]] · [[overview]]
 
 ## Sources
 

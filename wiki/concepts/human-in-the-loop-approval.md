@@ -99,7 +99,7 @@ When publishing to Microsoft 365, there is a personal testing scope and an organ
 - [[responsible-ai-lifecycle]] — oversight as mitigation.
 - [[src-240-azure-ai-agents-mcp-servers]] — MCP approval mechanics.
 - [[src-105-identify-workflow-patterns]] — human-in-the-loop workflow source.
-- *Also linked from:* [[custom-tool-options]] · [[function-calling]] · [[power-fx]]
+- *Also linked from:* [[custom-tool-options]] · [[function-calling]] · [[overview]] · [[power-fx]]
 
 ## Sources
 

@@ -94,7 +94,7 @@ if result.Reason == RecognizedSpeech: use result.Text
 - [[voice-live-api]] — concept appears inside real-time speech conversation.
 - [[voices-and-audio-formats]] — concept uses input `AudioConfig`, the counterpart to synthesis output configuration.
 - [[speech-and-language-options-compared]] — concept participates in broader speech-option selection.
-- *Also linked from:* [[azure-openai]] · [[speech-translation]]
+- *Also linked from:* [[azure-openai]] · [[overview]] · [[speech-translation]]
 
 ## Sources
 

@@ -92,6 +92,7 @@ The episode source demonstrates the portal path at a high level by moving from p
 - [[optimization-strategies-compared]] — canonical comparison of prompt engineering, RAG and fine-tuning.
 - [[src-95-fine-tune-model-consistent-behavior]] — main fine-tuning unit.
 - [[src-19-compare-combine-optimization-strategies]] — optimization strategy boundary.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

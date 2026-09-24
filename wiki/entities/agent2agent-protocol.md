@@ -97,6 +97,7 @@ The Learn module title uses both Agent-to-Agent and A2A. The wiki uses Agent2Age
 - [[src-103-host-a2a-server]] — server components.
 - [[src-26-connect-a2a-agent]] — client behaviour.
 - [[src-205-summary-discover-azure-ai-agents-a2a]] — module summary.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

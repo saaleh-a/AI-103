@@ -82,7 +82,7 @@ Do not treat metadata as private configuration. SRC-185 warns not to include sec
 - [[responses-api]] — Agent Application endpoints use the Responses API protocol. (SRC-223 L253–258)
 - [[src-185-publish-agent-foundry-portal-teams]] — step-by-step portal publishing source.
 - [[src-232-understand-foundry-agent-publishing-options]] — publishing options and identity source.
-- *Also linked from:* [[human-in-the-loop-approval]] · [[microsoft-entra-id]] · [[work-iq]]
+- *Also linked from:* [[human-in-the-loop-approval]] · [[microsoft-entra-id]] · [[overview]] · [[work-iq]]
 
 ## Sources
 

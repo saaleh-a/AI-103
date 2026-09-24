@@ -82,7 +82,7 @@ The corpus writes both `ChatCompletions` and `Chat Completions`; this page uses 
 - [[conversation-state]] — manual history tracking is the main state lesson. (SRC-98 L223–232)
 - [[openai-sdk]] — the OpenAI client API surface that includes Chat Completions. (SRC-18 L221; SRC-18 L282–285)
 - [[vision-enabled-chat]] — one source uses Chat Completions as an alternative when Responses is unsupported. (SRC-46 L215–223)
-- *Also linked from:* [[azure-openai]] · [[endpoints-and-sdk-choice]] · [[generative-ai-fundamentals]] · [[model-playgrounds]] · [[prompt-engineering]]
+- *Also linked from:* [[azure-openai]] · [[decision-boundaries]] · [[endpoints-and-sdk-choice]] · [[generative-ai-fundamentals]] · [[model-playgrounds]] · [[overview]] · [[prompt-engineering]]
 
 ## Sources
 

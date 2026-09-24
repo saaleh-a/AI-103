@@ -85,6 +85,7 @@ Do not ignore structured outputs: the module assessment says structured outputs 
 - [[multi-agent-orchestration]] — broader multi-agent coordination concept.
 - [[orchestration-patterns-compared]] — synthesis page for comparing pattern families.
 - [[src-105-identify-workflow-patterns]] — main source for Foundry pattern definitions.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

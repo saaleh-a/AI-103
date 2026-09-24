@@ -72,7 +72,7 @@ The corpus's method cue is `recognize_pii_entities` on the Azure Language client
 - [[guardrails-and-content-filters]] — adjacent safety concept, but not the same as PII redaction.
 - [[responsible-ai-principles]] — privacy and security context.
 - [[extraction-options-compared]] — broader extraction decision boundary.
-- *Also linked from:* [[azure-language-mcp-server]]
+- *Also linked from:* [[azure-language-mcp-server]] · [[overview]]
 
 ## Sources
 

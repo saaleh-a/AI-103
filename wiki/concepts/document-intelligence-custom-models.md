@@ -83,6 +83,7 @@ Studio is an alternative workflow: it can generate `ocr.json`, `labels.json`, an
 - [[azure-functions]] — custom skills can wrap Document Intelligence from AI Search pipelines.
 - [[extraction-options-compared]] — compare custom Document Intelligence with other extraction approaches.
 - [[src-224-train-custom-models]] — primary source page for this concept.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

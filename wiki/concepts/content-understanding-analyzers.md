@@ -84,7 +84,7 @@ The Python SDK exposes `ContentUnderstandingClient` and `begin_create_analyzer` 
 - [[retrieval-augmented-generation]] — analyzer markdown can feed search/RAG scenarios. (SRC-8 L236–239; SRC-264 L20–22)
 - [[src-30-create-content-understanding-analyzer]] — main Studio analyzer lifecycle source.
 - [[src-29-create-content-understanding-analyzer]] — API/SDK analyzer creation source.
-- *Also linked from:* [[document-intelligence-prebuilt-models]]
+- *Also linked from:* [[document-intelligence-prebuilt-models]] · [[overview]]
 
 ## Sources
 

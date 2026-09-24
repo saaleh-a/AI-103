@@ -72,7 +72,7 @@ The corpus uses both "Azure AI Content Safety services" and "Azure AI Content Sa
 - [[src-53-evaluate-model-performance]] — mitigation options after safety concerns.
 - [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models]] — service as additional protection.
 - [[src-264-what-is-content-understanding]] — service integration.
-- *Also linked from:* [[responsible-ai-principles]]
+- *Also linked from:* [[overview]] · [[responsible-ai-principles]]
 
 ## Sources
 

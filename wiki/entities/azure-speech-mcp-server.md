@@ -80,7 +80,7 @@ The Learn unit calls the tool connection **Azure Speech in Foundry Tools** and t
 - [[src-236-understand-azure-speech-mcp-server]] — main capability source.
 - [[src-25-connect-speech-mcp-server-agent]] — portal and code connection source.
 - [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19]] — episode source with auth tension.
-- *Also linked from:* [[speech-capable-models]] · [[voices-and-audio-formats]]
+- *Also linked from:* [[overview]] · [[speech-capable-models]] · [[voices-and-audio-formats]]
 
 ## Sources
 

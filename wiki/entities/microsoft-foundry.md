@@ -78,7 +78,7 @@ Foundry appears as the planning platform for AI apps, the project home for model
 - [[naming-and-currency]] — product names and portal architecture are moving targets.
 - [[src-155-microsoft-foundry]] — core Learn source for the platform.
 - [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1]] — broad portal and platform walkthrough.
-- *Also linked from:* [[foundry-workflows]] · [[model-playgrounds]]
+- *Also linked from:* [[foundry-workflows]] · [[model-playgrounds]] · [[overview]]
 
 ## Sources
 

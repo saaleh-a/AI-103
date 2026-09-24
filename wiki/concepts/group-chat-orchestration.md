@@ -81,7 +81,7 @@ Group chat can add discussion overhead; the source warns against it for real-tim
 - [[human-in-the-loop-approval]] — human input may be requested by the chat manager. (SRC-242 L218–226, L256)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-242-group-chat-orchestration]] — source page for this pattern.
-- *Also linked from:* [[a2a-agent-implementation]] · [[agent-framework-workflows]] · [[concurrent-orchestration]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[agent-framework-workflows]] · [[concurrent-orchestration]] · [[overview]]
 
 ## Sources
 

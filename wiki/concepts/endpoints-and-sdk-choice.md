@@ -87,7 +87,7 @@ A third mistake is to treat Foundry Tools as ordinary model deployments. The Fou
 - [[foundry-resources-and-projects]] — endpoints belong to projects and resources.
 - [[deployment-options-compared]] — related synthesis for endpoint/deployment/access choices.
 - [[src-18-choose-endpoint-sdk]] — core source for this concept.
-- *Also linked from:* [[azure-openai]] · [[development-tools-and-approaches]] · [[microsoft-entra-id]] · [[microsoft-foundry]]
+- *Also linked from:* [[azure-openai]] · [[development-tools-and-approaches]] · [[microsoft-entra-id]] · [[microsoft-foundry]] · [[overview]]
 
 ## Sources
 

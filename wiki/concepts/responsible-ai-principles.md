@@ -77,7 +77,7 @@ The corpus does not give SDK code for these principles. It gives design and gove
 - [[observability-and-tracing]] — accountability and operations require evidence about what happened.
 - [[src-186-responsible-ai]] — primary written source for the six principles.
 - [[src-183-plan-prepare-develop-ai-solutions-azure-episode-1]] — course framing for how principles recur across platform choices.
-- *Also linked from:* [[pii-detection-and-redaction]]
+- *Also linked from:* [[overview]] · [[pii-detection-and-redaction]]
 
 ## Sources
 

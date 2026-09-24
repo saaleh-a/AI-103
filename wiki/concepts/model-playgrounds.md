@@ -87,7 +87,7 @@ The playground itself is a portal surface, but it can hand off to code. The depl
 - [[src-90-explore-model-playground]] — model playground source.
 - [[src-39-deploy-models-endpoints]] — deployment playground and code samples.
 - [[src-53-evaluate-model-performance]] — manual versus automated evaluation boundary.
-- *Also linked from:* [[development-tools-and-approaches]]
+- *Also linked from:* [[development-tools-and-approaches]] · [[overview]]
 
 ## Sources
 

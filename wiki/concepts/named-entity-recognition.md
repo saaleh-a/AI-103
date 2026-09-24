@@ -71,7 +71,7 @@ Use a Foundry resource and Azure Language client as described by the Azure Langu
 - [[language-detection]] — sibling Azure Language capability.
 - [[ai-enrichment-skillsets]] — entity output can support enrichment and indexing.
 - [[extraction-options-compared]] — broader extraction decision boundary.
-- *Also linked from:* [[azure-language-mcp-server]]
+- *Also linked from:* [[azure-language-mcp-server]] · [[overview]]
 
 ## Sources
 

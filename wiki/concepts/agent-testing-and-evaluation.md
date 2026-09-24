@@ -84,7 +84,7 @@ A common evaluation mistake is relying only on automated metrics. SRC-53 says ma
 - [[application-insights]] — conversation traces and latency analysis for configured deployments. (SRC-222 L271–276)
 - [[src-222-test-iterate-integrated-agent]] — main post-publication testing and troubleshooting source.
 - [[src-53-evaluate-model-performance]] — main formal evaluation source.
-- *Also linked from:* [[microsoft-365-agents-toolkit]]
+- *Also linked from:* [[microsoft-365-agents-toolkit]] · [[overview]]
 
 ## Sources
 

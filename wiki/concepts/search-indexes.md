@@ -74,7 +74,7 @@ The corpus does not show an index schema JSON or SDK call for creating an index.
 - Semantic ranking — existing Azure AI Search indexes may use semantic ranking in Foundry IQ. (SRC-22 L16–20)
 - [[src-187-search-index]] — field attributes and query behavior.
 - [[src-92-extract-data-indexer]] — document construction and field mapping.
-- *Also linked from:* [[ai-enrichment-skillsets]] · [[knowledge-mining]] · [[knowledge-store]]
+- *Also linked from:* [[ai-enrichment-skillsets]] · [[knowledge-mining]] · [[knowledge-store]] · [[overview]]
 
 ## Sources
 

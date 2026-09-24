@@ -76,7 +76,7 @@ The corpus does not provide prompt-shield SDK code. It describes configuration a
 - [[src-156-mitigate-potential-harms]] — prompt shields source.
 - [[src-153-map-potential-harms]] — red-team testing source.
 - [[src-53-evaluate-model-performance]] — indirect attack/jailbreak metric.
-- *Also linked from:* [[responsible-ai-principles]]
+- *Also linked from:* [[overview]] · [[responsible-ai-principles]]
 
 ## Sources
 

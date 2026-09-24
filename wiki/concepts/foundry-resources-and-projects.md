@@ -82,6 +82,7 @@ A third misconception is that all endpoints are interchangeable. The corpus dist
 - [[model-deployment-types]] — model deployments are required project assets for model and agent work.
 - [[src-155-microsoft-foundry]] — formal Learn source for the hierarchy.
 - [[src-18-choose-endpoint-sdk]] — project endpoint and `AIProjectClient` source.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

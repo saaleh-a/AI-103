@@ -81,7 +81,7 @@ The corpus does not provide the full Azure AI Search vector-index schema or SDK 
 - [[model-catalog]] — embedding models are selected from the model catalog.
 - [[src-102-ground-model-retrieval-augmented-generation]] — primary source for embeddings, vector search, and hybrid search.
 - [[src-89-explore-model-catalog]] — embedding models in the catalog.
-- *Also linked from:* [[foundry-iq]] · [[search-indexes]]
+- *Also linked from:* [[foundry-iq]] · [[overview]] · [[search-indexes]]
 
 ## Sources
 

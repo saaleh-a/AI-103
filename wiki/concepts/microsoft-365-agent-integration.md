@@ -84,7 +84,7 @@ Do not assume organization scope is immediate. Organization scope requires a Mic
 - [[model-context-protocol]] — Work IQ is built as an MCP server for Microsoft 365 data. (SRC-2 L228–234)
 - [[microsoft-entra-id]] — Entra app registration and agent identities are part of publication. (SRC-232 L225–237; SRC-232 L249–254)
 - [[src-125-introduction-integrate-agent-microsoft-365]] — module overview and learning objectives.
-- *Also linked from:* [[keyless-authentication]]
+- *Also linked from:* [[keyless-authentication]] · [[overview]]
 
 ## Sources
 

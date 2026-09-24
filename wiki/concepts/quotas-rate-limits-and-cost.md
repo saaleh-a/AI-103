@@ -85,7 +85,7 @@ Configuration choices that affect cost and throughput include deployment type, V
 - [[corpus-gaps]] — the broader synthesis page should retain the P09 gap.
 - [[src-188-select-models-benchmarks]] — strongest cost and throughput benchmark source.
 - [[src-99-generate-responses-responses-api-foundry-sdk]] — strongest token-context source.
-- *Also linked from:* [[application-insights]]
+- *Also linked from:* [[application-insights]] · [[overview]]
 
 ## Sources
 

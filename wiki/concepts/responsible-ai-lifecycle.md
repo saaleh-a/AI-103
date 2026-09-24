@@ -94,7 +94,7 @@ The corpus does not provide SDK code for the lifecycle itself. It gives operatio
 - [[src-154-measure-potential-harms]] — measurement stage.
 - [[src-156-mitigate-potential-harms]] — layered mitigation.
 - [[src-152-manage-responsible-generative-ai-solution]] — release and operations.
-- *Also linked from:* [[azure-ai-content-safety]]
+- *Also linked from:* [[azure-ai-content-safety]] · [[overview]]
 
 ## Sources
 

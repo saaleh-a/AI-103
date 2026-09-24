@@ -72,7 +72,7 @@ The catalog appears in the main select/deploy/evaluate module, speech-capable mo
 - [[model-playgrounds]] — testing surface after deployment or model exploration.
 - [[image-generation]] — uses catalog filters for text-to-image models.
 - [[video-generation]] — uses catalog deployment flow for Sora 2 examples.
-- *Also linked from:* [[embeddings-and-vector-search]] · [[fine-tuning]] · [[foundry-toolkit-for-vs-code]] · [[generative-ai-fundamentals]] · [[sora-2]] · [[speech-capable-models]]
+- *Also linked from:* [[embeddings-and-vector-search]] · [[fine-tuning]] · [[foundry-toolkit-for-vs-code]] · [[generative-ai-fundamentals]] · [[overview]] · [[sora-2]] · [[speech-capable-models]]
 
 ## Sources
 

@@ -89,7 +89,7 @@ The corpus captures show several examples as collapsed `Python Copy` blocks, so 
 - [[tool-options-compared]] — synthesis page for option choice.
 - [[src-179-options-implementing-custom-tools]] — option catalogue.
 - [[src-104-how-integrate-custom-tools]] — implementation unit.
-- *Also linked from:* [[agent2agent-protocol]] · [[azure-speech-mcp-server]]
+- *Also linked from:* [[agent2agent-protocol]] · [[azure-speech-mcp-server]] · [[overview]]
 
 ## Sources
 

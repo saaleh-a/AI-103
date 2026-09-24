@@ -92,6 +92,7 @@ The load-bearing configuration is:
 - [[speech-and-language-options-compared]] — synthesis page for choosing among speech and language options.
 - [[src-226-translate-speech]] — main SDK/object source.
 - [[src-229-translation-microsoft-foundry]] — translation overview.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

@@ -77,7 +77,7 @@ A brittle sequential design can propagate a poor early output downstream if ther
 - [[agent-framework-workflows]] — implementation uses Agent Framework workflows and events. (SRC-245 L237–242)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-245-sequential-orchestration]] — source page for this pattern.
-- *Also linked from:* [[magentic-orchestration]]
+- *Also linked from:* [[magentic-orchestration]] · [[overview]]
 
 ## Sources
 

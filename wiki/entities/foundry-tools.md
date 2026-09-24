@@ -72,7 +72,7 @@ Foundry Tools appear first as a platform-planning concept in SRC-96, as assets h
 - [[speech-and-language-options-compared]] — the closest decision hub for speech/language choices.
 - [[naming-and-currency]] — legacy Azure AI Services and Cognitive Services names.
 - [[src-96-foundry-tools]] — direct Learn definition.
-- *Also linked from:* [[foundry-resources-and-projects]] · [[mcp-tool-integration]] · [[model-selection]]
+- *Also linked from:* [[decision-boundaries]] · [[foundry-resources-and-projects]] · [[mcp-tool-integration]] · [[model-selection]] · [[overview]]
 
 ## Sources
 

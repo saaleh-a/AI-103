@@ -80,7 +80,7 @@ The corpus uses "Azure Translator in Foundry Tools", "Azure Translator", "Azure 
 - [[speech-translation]] — spoken-language translation boundary.
 - [[model-selection]] — Translator versus LLM choice.
 - [[speech-and-language-options-compared]] — cross-option selection for language and speech.
-- *Also linked from:* [[azure-language]] · [[language-detection]]
+- *Also linked from:* [[azure-language]] · [[decision-boundaries]] · [[language-detection]] · [[overview]]
 
 ## Sources
 

@@ -81,6 +81,7 @@ A generative app is a loop: collect user intent, package it as a prompt plus opt
 - [[prompt-engineering]] — prompt structure and response-shaping techniques.
 - [[generation-parameters]] — temperature, token limits and other output controls.
 - [[ai-agents]] — agents add task instructions and tools on top of an LLM foundation.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

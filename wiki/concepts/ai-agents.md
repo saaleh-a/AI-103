@@ -71,7 +71,7 @@ Agents are usually configured by naming the agent, choosing a deployed model, wr
 - [[microsoft-agent-framework]] — code-first SDK for building agents and orchestrations.
 - [[agent-building-options-compared]] — compares agent-building surfaces.
 - [[src-230-understand-ai-agents-microsoft-foundry-agent-service]] — primary Learn definition and service overview.
-- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[generative-ai-fundamentals]] · [[model-playgrounds]] · [[prompt-engineering]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[generative-ai-fundamentals]] · [[model-playgrounds]] · [[overview]] · [[prompt-engineering]]
 
 ## Sources
 

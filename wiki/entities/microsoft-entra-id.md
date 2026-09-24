@@ -72,7 +72,7 @@ Entra ID appears in generative app endpoint selection, Foundry Tools authenticat
 - [[agent-publishing]] — publishing creates a distinct agent identity and role reassignment task.
 - [[microsoft-365-agent-integration]] — Teams publishing requires Entra application registration.
 - [[src-223-test-deploy-integrate-agents]] — strongest source for published Agent Application identity.
-- *Also linked from:* [[azure-content-understanding]] · [[content-understanding-client-apps]] · [[microsoft-365-agents-toolkit]] · [[work-iq]]
+- *Also linked from:* [[azure-content-understanding]] · [[content-understanding-client-apps]] · [[decision-boundaries]] · [[microsoft-365-agents-toolkit]] · [[overview]] · [[work-iq]]
 
 ## Sources
 

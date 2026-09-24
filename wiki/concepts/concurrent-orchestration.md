@@ -77,6 +77,7 @@ Do not confuse the low-level fan-out edge with the full pattern. A fan-out edge 
 - [[agent-framework-workflows]] — fan-out/fan-in workflow mechanics are related. (SRC-231 L241–242)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-241-concurrent-orchestration]] — source page for this pattern.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

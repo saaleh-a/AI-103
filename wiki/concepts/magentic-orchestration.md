@@ -77,7 +77,7 @@ Loops and stalls are first-class risks: the source mentions stall limits in impl
 - [[agent-framework-workflows]] — implementation streams workflow events and final output. (SRC-244 L239–244)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-244-magentic-orchestration]] — source page for this pattern.
-- *Also linked from:* [[a2a-agent-implementation]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[overview]]
 
 ## Sources
 

@@ -73,7 +73,7 @@ The corpus does not show the Azure AI Search semantic ranking configuration fiel
 - [[src-102-ground-model-retrieval-augmented-generation]] — names semantic search beside keyword, vector, and hybrid search.
 - [[src-22-configure-data-sources-knowledge-bases]] — names semantic ranking as an Azure AI Search Index capability.
 - [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq]] — summarizes semantic ranking as a retrieval-quality technique.
-- *Also linked from:* [[retrieval-augmented-generation]]
+- *Also linked from:* [[overview]] · [[retrieval-augmented-generation]]
 
 ## Sources
 

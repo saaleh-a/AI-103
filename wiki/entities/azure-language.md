@@ -80,6 +80,7 @@ The corpus uses current names such as "Azure Language in Foundry Tools" and olde
 - [[azure-translator]] — nearby language service for translation rather than analysis.
 - [[text-translation]] — decision boundary with Translator and LLM translation.
 - [[speech-and-language-options-compared]] — cross-service selection for language and speech tasks.
+- *Also linked from:* [[extraction-options-compared]] · [[overview]]
 
 ## Sources
 

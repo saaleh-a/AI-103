@@ -78,6 +78,7 @@ The corpus does not show a complete portal or SDK definition for a data source o
 - [[knowledge-store]] — the same pipeline can also persist projections. (SRC-181 L218–222)
 - [[knowledge-mining]] — ingestion and indexing are the first operational steps. (SRC-130 L216–218)
 - [[src-92-extract-data-indexer]] — primary source for indexer mechanics.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

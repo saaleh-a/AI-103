@@ -101,7 +101,7 @@ Episodes 13 and 14 provide narration and demonstrations: episode 13 explains the
 - [[src-237-understand-microsoft-agent-framework]] — central Learn definition.
 - [[src-124-introduction-develop-ai-agent-microsoft-agent-framework]] — lineage and module scope.
 - [[src-234-understand-microsoft-agent-framework-ai-agents]] — agent capabilities and Foundry provider guidance.
-- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[ai-agents]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[ai-agents]] · [[overview]]
 
 ## Sources
 

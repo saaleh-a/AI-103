@@ -84,7 +84,7 @@ For Responses API apps, tools are specified in the request to the deployed model
 - [[tool-options-compared]] — synthesis page for choosing among tool families.
 - [[src-259-what-are-tools]] — Responses API overview of tool types.
 - [[src-91-extend-agent-capabilities-tools]] — Foundry agent catalog and built-in/custom tools overview.
-- *Also linked from:* [[a2a-agent-implementation]] · [[azure-functions]] · [[azure-language-mcp-server]] · [[azure-speech-mcp-server]] · [[foundry-agent-types]] · [[foundry-toolkit-for-vs-code]] · [[work-iq]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[azure-functions]] · [[azure-language-mcp-server]] · [[azure-speech-mcp-server]] · [[decision-boundaries]] · [[foundry-agent-types]] · [[foundry-toolkit-for-vs-code]] · [[overview]] · [[work-iq]]
 
 ## Sources
 

@@ -94,7 +94,7 @@ For Voice Live, format choices include PCM16, described in the episode as uncomp
 - [[azure-speech]] — service family that provides the synthesis controls.
 - [[azure-speech-mcp-server]] — agent route where voice names can be requested in prompts.
 - [[voice-live-api]] — real-time voice route with PCM16, G.711, and voice options.
-- *Also linked from:* [[speech-to-text]]
+- *Also linked from:* [[overview]] · [[speech-to-text]]
 
 ## Sources
 

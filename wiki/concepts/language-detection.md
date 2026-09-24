@@ -72,7 +72,7 @@ The corpus's direct-code pattern is to provision a Foundry resource, create a `T
 - [[text-translation]] — often follows detection but solves a different problem.
 - [[azure-translator]] — service used when conversion to another language is required.
 - [[azure-language-mcp-server]] — agents can call Language tools dynamically.
-- *Also linked from:* [[named-entity-recognition]]
+- *Also linked from:* [[named-entity-recognition]] · [[overview]]
 
 ## Sources
 

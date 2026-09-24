@@ -78,6 +78,7 @@ The assessment boundary is explicit: use `translate` to convert Chinese text to 
 - [[speech-translation]] — speech-specific translation concept.
 - [[model-selection]] — choose specialized service versus LLM.
 - [[speech-and-language-options-compared]] — broader comparison hub.
+- *Also linked from:* [[decision-boundaries]] · [[overview]]
 
 ## Sources
 

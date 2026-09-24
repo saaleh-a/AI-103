@@ -76,7 +76,7 @@ The corpus does not print full code in the raw Learn text capture, but it states
 - [[corpus-gaps]] — V07, V09, V15 and V16 are thin in the corpus.
 - [[src-46-develop-vision-based-chat-app]] — Learn unit for the client app pattern.
 - [[src-47-develop-vision-enabled-generative-ai-application-episode-22]] — episode walkthrough.
-- *Also linked from:* [[model-playgrounds]] · [[prompt-injection-and-jailbreaks]]
+- *Also linked from:* [[decision-boundaries]] · [[model-playgrounds]] · [[overview]] · [[prompt-injection-and-jailbreaks]]
 
 ## Sources
 

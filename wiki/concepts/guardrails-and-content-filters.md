@@ -80,7 +80,7 @@ The corpus does not provide SDK code for creating guardrails. It does show and d
 - [[src-156-mitigate-potential-harms]] — primary layered mitigation source.
 - [[src-57-exercise-apply-guardrails-prevent-output-harmful-content]] — exercise focused on guardrails.
 - [[src-106-implement-responsible-generative-ai-solution-microsoft-foundry-episode-6]] — guardrails demo.
-- *Also linked from:* [[model-benchmarks]] · [[pii-detection-and-redaction]] · [[responsible-ai-principles]] · [[sora-2]] · [[vision-enabled-chat]]
+- *Also linked from:* [[model-benchmarks]] · [[overview]] · [[pii-detection-and-redaction]] · [[responsible-ai-principles]] · [[sora-2]] · [[vision-enabled-chat]]
 
 ## Sources
 

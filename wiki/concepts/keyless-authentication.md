@@ -85,7 +85,7 @@ Configuration work in the corpus is role assignment rather than secret handling:
 - [[microsoft-365-agent-integration]] — Teams publishing introduces app registration and agent identity concerns.
 - [[src-18-choose-endpoint-sdk]] — primary source for endpoint, SDK and authentication choices.
 - [[src-223-test-deploy-integrate-agents]] — primary source for Agent Application authentication.
-- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[azure-speech-mcp-server]] · [[content-understanding-client-apps]] · [[openai-sdk]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[azure-speech-mcp-server]] · [[content-understanding-client-apps]] · [[decision-boundaries]] · [[openai-sdk]] · [[overview]]
 
 ## Sources
 

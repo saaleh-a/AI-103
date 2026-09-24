@@ -81,7 +81,7 @@ The exercise capture is thin: it only says learners integrate an AI agent with F
 - [[src-85-explore-foundry-iq]] — primary product overview.
 - [[src-22-configure-data-sources-knowledge-bases]] — source-type configuration.
 - [[src-23-configure-retrieval-foundry-iq]] — retrieval behavior configuration.
-- *Also linked from:* [[agent-tools]] · [[file-search-tool]] · [[foundry-resources-and-projects]] · [[observability-and-tracing]]
+- *Also linked from:* [[agent-tools]] · [[decision-boundaries]] · [[file-search-tool]] · [[foundry-resources-and-projects]] · [[observability-and-tracing]] · [[overview]] · [[retrieval-options-compared]]
 
 ## Sources
 

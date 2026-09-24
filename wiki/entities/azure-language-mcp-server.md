@@ -79,6 +79,7 @@ The portal connection is named **Azure Language in Foundry Tools**, while the ag
 - [[language-detection]] — one Language capability the agent can call.
 - [[named-entity-recognition]] — one Language capability the agent can call.
 - [[pii-detection-and-redaction]] — one Language capability used in the exercise.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

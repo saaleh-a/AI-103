@@ -87,7 +87,7 @@ The corpus does not teach code for setting up Application Insights, OpenTelemetr
 - [[quotas-rate-limits-and-cost]] — token consumption and latency connect operations to cost and capacity.
 - [[foundry-iq]] — retrieval quality monitoring belongs with Foundry IQ knowledge grounding.
 - [[corpus-gaps]] — G15 and P10 setup gaps should remain visible.
-- *Also linked from:* [[agent-testing-and-evaluation]] · [[foundry-sdk]] · [[human-in-the-loop-approval]] · [[microsoft-agent-framework]] · [[model-and-app-evaluation]] · [[model-benchmarks]] · [[responsible-ai-lifecycle]] · [[responsible-ai-principles]]
+- *Also linked from:* [[agent-testing-and-evaluation]] · [[foundry-sdk]] · [[human-in-the-loop-approval]] · [[microsoft-agent-framework]] · [[model-and-app-evaluation]] · [[model-benchmarks]] · [[overview]] · [[responsible-ai-lifecycle]] · [[responsible-ai-principles]]
 
 ## Sources
 

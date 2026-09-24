@@ -94,7 +94,7 @@ Do not forget persistence/versioning: workflows are not saved automatically whil
 - [[src-238-understand-workflows]] — foundational source definition.
 - [[src-36-create-workflows-microsoft-foundry]] — node taxonomy and designer behaviour.
 - [[src-247-workflows-code]] — invoking saved workflows from application code.
-- *Also linked from:* [[foundry-agent-types]]
+- *Also linked from:* [[foundry-agent-types]] · [[overview]]
 
 ## Sources
 

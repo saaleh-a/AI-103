@@ -77,7 +77,7 @@ The corpus uses Microsoft 365 Agents Toolkit and Agents Toolkit for the same too
 - [[foundry-toolkit-for-vs-code]] — related VS Code-oriented agent tooling, but a different page in this wiki.
 - [[microsoft-entra-id]] — custom SSO and agent credentials are part of the Toolkit boundary. (SRC-5 L223–232)
 - [[src-5-advanced-microsoft-365-agents-toolkit-complex-integration-scenarios]] — dedicated Toolkit source.
-- *Also linked from:* [[work-iq]]
+- *Also linked from:* [[overview]] · [[work-iq]]
 
 ## Sources
 

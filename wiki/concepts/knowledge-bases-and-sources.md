@@ -87,7 +87,7 @@ The knowledge check states that scoring profiles boost specific fields or attrib
 - [[model-context-protocol]] — Foundry IQ uses MCP to connect agents to knowledge bases.
 - [[src-22-configure-data-sources-knowledge-bases]] — main source-type decision guide.
 - [[src-23-configure-retrieval-foundry-iq]] — retrieval behavior and instruction guidance.
-- *Also linked from:* [[prompt-engineering]]
+- *Also linked from:* [[overview]] · [[prompt-engineering]]
 
 ## Sources
 

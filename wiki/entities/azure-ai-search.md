@@ -82,7 +82,7 @@ Azure AI Search appears in the knowledge-mining module, in the RAG module, in Fo
 - [[file-search-tool]] — closest agent-tool confusion. (SRC-91 L237–242)
 - [[src-261-what-is-azure-ai-search]] — service overview.
 - [[src-102-ground-model-retrieval-augmented-generation]] — Azure AI Search as RAG retrieval.
-- *Also linked from:* [[azure-document-intelligence]] · [[azure-functions]] · [[embeddings-and-vector-search]] · [[knowledge-bases-and-sources]] · [[search-queries]] · [[semantic-ranking]] · [[web-search-tool]]
+- *Also linked from:* [[azure-document-intelligence]] · [[azure-functions]] · [[decision-boundaries]] · [[embeddings-and-vector-search]] · [[knowledge-bases-and-sources]] · [[overview]] · [[retrieval-options-compared]] · [[search-queries]] · [[semantic-ranking]] · [[web-search-tool]]
 
 ## Sources
 

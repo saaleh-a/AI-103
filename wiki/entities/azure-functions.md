@@ -75,7 +75,7 @@ The corpus uses both singular "Azure Function" for an individual deployed functi
 - [[azure-document-intelligence]] — the example downstream extraction service.
 - [[src-104-how-integrate-custom-tools]] — agent tool source.
 - [[src-52-enrich-extracted-data-ai-skills]] — search custom skill source.
-- *Also linked from:* [[document-intelligence-custom-models]]
+- *Also linked from:* [[document-intelligence-custom-models]] · [[overview]]
 
 ## Sources
 

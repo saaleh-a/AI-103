@@ -76,7 +76,7 @@ The corpus consistently uses Model Context Protocol and MCP. **Stale-risk:** SRC
 - [[foundry-toolkit-for-vs-code]] — catalog surface for MCP servers.
 - [[src-233-understand-mcp-tool-discovery]] — dynamic discovery source.
 - [[src-108-integrate-agent-tools-mcp-server-client]] — server/client source.
-- *Also linked from:* [[a2a-agent-implementation]] · [[foundry-iq]] · [[knowledge-bases-and-sources]] · [[microsoft-365-agent-integration]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[foundry-iq]] · [[knowledge-bases-and-sources]] · [[microsoft-365-agent-integration]] · [[overview]]
 
 ## Sources
 

@@ -76,7 +76,7 @@ The captured Learn code is elided, but the source gives the configuration sequen
 - [[retrieval-options-compared]] — broader retrieval decision boundary.
 - [[src-255-file-search-tool]] — dedicated source page for this tool.
 - [[src-91-extend-agent-capabilities-tools]] — agent-context description and Azure AI Search contrast.
-- *Also linked from:* [[embeddings-and-vector-search]] · [[function-calling]] · [[responses-api]]
+- *Also linked from:* [[decision-boundaries]] · [[embeddings-and-vector-search]] · [[function-calling]] · [[overview]] · [[responses-api]]
 
 ## Sources
 

@@ -64,7 +64,7 @@ The extension appears in the general developer-tools unit as part of the Foundry
 - [[model-catalog]] — the extension exposes model catalog and deployment features.
 - [[src-190-set-up-visual-studio-code-agent-development]] — installation and connection steps.
 - [[src-20-configure-manage-agents-visual-studio-code]] — Agent Designer and YAML configuration.
-- *Also linked from:* [[generation-parameters]] · [[microsoft-365-agents-toolkit]] · [[model-context-protocol]]
+- *Also linked from:* [[generation-parameters]] · [[microsoft-365-agents-toolkit]] · [[model-context-protocol]] · [[overview]]
 
 ## Sources
 

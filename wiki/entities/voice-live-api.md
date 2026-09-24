@@ -81,7 +81,7 @@ The corpus uses both "Voice live" and "Voice Live" capitalization. It also label
 - [[src-88-explore-azure-voice-live-api]] — main API source.
 - [[src-87-explore-ai-voice-live-client-library-python]] — client-library source.
 - [[src-31-create-voice-live-agent]] — agent-integration source.
-- *Also linked from:* [[speech-translation]]
+- *Also linked from:* [[overview]] · [[speech-translation]]
 
 ## Sources
 

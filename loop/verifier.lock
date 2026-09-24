@@ -1,0 +1,9 @@
+{
+  "scripts/lint_wiki.py": "be47611816ce8b9d4bcae367a3cd6903fcbca40fd95c918a157479037c2d66bc",
+  "scripts/check_citations.py": "d1a234de082989abc8c89b70283266d8cb3ddd837500a48746b950e0cd36ac1a",
+  "scripts/loop_score.py": "ca80bf091621f808a88001fd913fcbf12425c5135fb05f7c9e6e62e1ce94bba6",
+  "scripts/loop_sample.py": "aef8af4dced21136ac39fe926391b0b6b6f1b33e37783c031fd8fef4ce72885a",
+  "scripts/data/corpus-registry.json": "f63895daa281eb5764c6008b5177c21a34630e02eac96dd2bcc10466ccba48f3",
+  "scripts/data/exam-objectives.json": "ce2f1917e2595cbea680e3f8a673b84231a200ad4e0c7194c770271a4c8a18f9",
+  "loop/rubric.md": "7788ddf57262c63bba130a9087d3041c37450c429344d355b120c32c7a66c88b"
+}

@@ -91,6 +91,7 @@ The Azure mapping is Foundry model deployment plus the OpenAI-compatible client.
 - [[src-17-choose-speech-capable-model]] — main model-choice source.
 - [[src-225-transcribe-speech]] — speech-to-text model source.
 - [[src-221-synthesize-speech]] — text-to-speech model source.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

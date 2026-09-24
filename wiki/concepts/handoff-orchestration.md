@@ -79,7 +79,7 @@ Handoff loops are an explicit risk: if preventing excessive bouncing is difficul
 - [[agent-framework-workflows]] — implementation uses control workflows and switch-case edges. (SRC-243 L235–254)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-243-handoff-orchestration]] — source page for this pattern.
-- *Also linked from:* [[a2a-agent-implementation]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[overview]]
 
 ## Sources
 

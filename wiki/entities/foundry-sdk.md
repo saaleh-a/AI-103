@@ -71,7 +71,7 @@ The SDK appears in planning as a way to automate Foundry project operations and 
 - [[retrieval-augmented-generation]] — RAG source names `azure-ai-projects` for grounded responses.
 - [[observability-and-tracing]] — tracing is one Foundry-native operation.
 - [[src-18-choose-endpoint-sdk]] — core SDK source.
-- *Also linked from:* [[development-tools-and-approaches]] · [[microsoft-agent-framework]] · [[model-playgrounds]]
+- *Also linked from:* [[development-tools-and-approaches]] · [[microsoft-agent-framework]] · [[model-playgrounds]] · [[overview]]
 
 ## Sources
 

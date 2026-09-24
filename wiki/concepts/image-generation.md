@@ -72,7 +72,7 @@ The important API shape in the corpus is `client.images.generate`: supply the de
 - [[corpus-gaps]] — V03 inpainting and mask-based edits are named but not taught.
 - [[src-258-what-are-image-generation-models]] — definition and model examples.
 - [[src-97-generate-images-video-episode-23]] — episode with portal and code walkthrough.
-- *Also linked from:* [[azure-openai]] · [[generation-parameters]] · [[sora-2]]
+- *Also linked from:* [[azure-openai]] · [[generation-parameters]] · [[overview]] · [[sora-2]]
 
 ## Sources
 

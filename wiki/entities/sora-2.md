@@ -72,6 +72,7 @@ The corpus uses both `Sora 2` and `Sora-2` in deployment instructions (SRC-38 L2
 - [[guardrails-and-content-filters]] — harmful video prompts are moderated.
 - [[src-38-deploy-video-generating-model]] — deployment source.
 - [[src-101-generate-video-python]] — SDK source.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

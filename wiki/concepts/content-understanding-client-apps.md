@@ -90,6 +90,7 @@ The REST path submits HTTP calls to the Content Understanding endpoint with an A
 - [[src-184-prepare-ai-content-understanding-api]] — endpoint/authentication setup source.
 - [[src-250-content-understanding-api]] — REST API flow source.
 - [[src-6-analyze-content]] — analysis request and result-processing source.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

@@ -84,7 +84,7 @@ The corpus is concept-heavy and portal/demo-oriented rather than SDK-heavy for k
 - [[extraction-options-compared]] — compare AI Search enrichment with other extraction services.
 - [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search]] — module framing.
 - [[src-215-summary-create-knowledge-mining-solution-azure-ai-search]] — module summary.
-- *Also linked from:* [[search-queries]]
+- *Also linked from:* [[overview]] · [[search-queries]]
 
 ## Sources
 

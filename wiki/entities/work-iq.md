@@ -74,6 +74,7 @@ Prerequisites are Node.js for local CLI use, a Microsoft 365 subscription with a
 - [[microsoft-entra-id]] — administrative consent and authenticated identity are required. (SRC-2 L263–279)
 - [[agent-tools]] — Work IQ exposes external data capabilities that assistants can call.
 - [[src-2-access-microsoft-365-data-work-iq]] — dedicated Work IQ source page.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

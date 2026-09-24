@@ -91,7 +91,7 @@ The corpus uses both `Responses API` and `OpenAI Responses API`; both refer to t
 - [[foundry-sdk]] — another access path, especially for Foundry project integration. (SRC-99 L217; SRC-102 L251–256)
 - [[retrieval-augmented-generation]] — grounded answers can use Responses after retrieval. (SRC-102 L251–256)
 - [[file-search-tool]] — built-in retrieval tool used through the Responses API. (SRC-255 L232–240)
-- *Also linked from:* [[agent-publishing]] · [[agent-tools]] · [[azure-openai]] · [[code-interpreter-tool]] · [[endpoints-and-sdk-choice]] · [[foundry-agent-service]] · [[function-calling]] · [[generation-parameters]] · [[generative-ai-fundamentals]] · [[model-playgrounds]] · [[prompt-engineering]] · [[quotas-rate-limits-and-cost]] · [[vision-enabled-chat]] · [[web-search-tool]]
+- *Also linked from:* [[agent-publishing]] · [[agent-tools]] · [[azure-openai]] · [[code-interpreter-tool]] · [[decision-boundaries]] · [[endpoints-and-sdk-choice]] · [[foundry-agent-service]] · [[function-calling]] · [[generation-parameters]] · [[generative-ai-fundamentals]] · [[model-playgrounds]] · [[overview]] · [[prompt-engineering]] · [[quotas-rate-limits-and-cost]] · [[vision-enabled-chat]] · [[web-search-tool]]
 
 ## Sources
 

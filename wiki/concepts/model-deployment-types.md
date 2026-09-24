@@ -84,7 +84,7 @@ Configuration fields explicitly named by the corpus include deployment name, dep
 - [[deployment-options-compared]] — synthesis home for deployment, endpoint and authentication comparisons.
 - [[src-39-deploy-models-endpoints]] — primary deployment-type source.
 - [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] — episode explanation of deployment trade-offs.
-- *Also linked from:* [[application-insights]] · [[foundry-resources-and-projects]] · [[model-catalog]] · [[model-playgrounds]]
+- *Also linked from:* [[application-insights]] · [[decision-boundaries]] · [[foundry-resources-and-projects]] · [[model-catalog]] · [[model-playgrounds]] · [[overview]]
 
 ## Sources
 

@@ -73,7 +73,7 @@ The assigned corpus calls the service Azure Document Intelligence and also place
 - [[azure-ai-search]] — downstream knowledge-mining integration through custom skills.
 - [[extraction-options-compared]] — compare extraction choices across Document Intelligence, Content Understanding, Language, and AI Search enrichment.
 - [[src-263-what-is-azure-document-intelligence]] — primary source page for the service overview.
-- *Also linked from:* [[ai-enrichment-skillsets]] · [[azure-functions]] · [[content-understanding-analyzers]] · [[content-understanding-client-apps]]
+- *Also linked from:* [[ai-enrichment-skillsets]] · [[azure-functions]] · [[content-understanding-analyzers]] · [[content-understanding-client-apps]] · [[overview]]
 
 ## Sources
 

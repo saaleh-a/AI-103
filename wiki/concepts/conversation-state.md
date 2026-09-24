@@ -82,7 +82,7 @@ For Microsoft Agent Framework and Foundry Agent Service, the corpus names `Agent
 - [[microsoft-agent-framework]] — `AgentSession` stores conversation state in framework code. (SRC-237 L230)
 - [[foundry-agent-service]] — service-side chat history persists sessions across turns. (SRC-234 L233)
 - [[retrieval-augmented-generation]] — retrieved memory or documents can be part of the active context window. (SRC-99 L281–288)
-- *Also linked from:* [[ai-agents]]
+- *Also linked from:* [[ai-agents]] · [[overview]]
 
 ## Sources
 

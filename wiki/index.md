@@ -31,24 +31,24 @@ Graphs: raw sources — `graphify-out/graph.html`; this wiki — `graphify-out-w
 
 ## Start here — synthesis
 
-- [[overview|Overview — AI-103 in one page]] `stub` — Entry point: what the corpus teaches, how the domains fit, where to start.
-- [[master-synthesis|Master synthesis — how an Azure AI solution fits together]] `stub` — The layered architecture across all domains: app, model, agent, tools, knowledge, identity, safety, evaluation, operations.
-- [[learning-path|Learning path]] `stub` — A prerequisite-ordered route through the wiki aligned with exam domains and weights.
-- [[decision-boundaries|Decision boundaries — confusable technologies]] `stub` — Hub of the pairs and groups the exam can confuse, with the deciding details and links to comparisons.
-- [[key-tensions|Key tensions across sources]] `stub` — Where sources disagree or qualify each other.
-- [[naming-and-currency|Naming and currency]] `stub` — Product renames and preview/currency risks found across the corpus.
-- [[corpus-gaps|Corpus gaps]] `stub` — Official objectives and topics the corpus names but does not teach, and thin areas.
-- [[open-questions|Open questions]] `stub` — Questions the corpus raises but does not answer; sources to seek.
-- [[glossary|Glossary]] `stub` — Short definitions of the corpus's terms, each linked to its page.
-- [[agent-building-options-compared|Agent-building options compared]] `stub` — Foundry Agent Service (portal/SDK), VS Code toolkit, Agent Framework, Microsoft 365 Agents Toolkit.
-- [[deployment-options-compared|Deployment and access options compared]] `stub` — Deployment types, endpoints, authentication and cost/throughput trade-offs side by side.
-- [[extraction-options-compared|Information extraction options compared]] `stub` — Content Understanding vs Document Intelligence vs Azure Language vs vision-capable models vs AI Search enrichment.
-- [[optimization-strategies-compared|Optimization strategies compared]] `stub` — Prompt engineering, RAG and fine-tuning — what each fixes and how they combine.
-- [[orchestration-patterns-compared|Orchestration patterns compared]] `stub` — Sequential, concurrent, handoff, group chat, Magentic; Foundry workflows vs Agent Framework workflows.
-- [[retrieval-options-compared|Retrieval and grounding options compared]] `stub` — File search vs Azure AI Search vs Foundry IQ vs web search; keyword vs vector vs hybrid vs semantic.
-- [[solution-engineering-transfer|Solution Engineering transfer]] `stub` — Customer signals, discovery questions and trade-offs that map to AI-103 capabilities.
-- [[speech-and-language-options-compared|Speech and language options compared]] `stub` — Speech SDK vs Voice Live vs speech-capable models vs MCP servers; Translator vs LLM translation.
-- [[tool-options-compared|Tool integration options compared]] `stub` — Built-in tools vs function tools vs OpenAPI vs Azure Functions vs MCP vs A2A.
+- [[overview|Overview — AI-103 in one page]] — Entry point to the corpus, exam domains, architecture map, starting route, and navigation links.
+- [[master-synthesis|Master synthesis — whole AI-103 architecture]] — How apps, models, agents, tools, data, identity, safety, evaluation, and operations fit together across the corpus.
+- [[learning-path|Learning path]] — Prerequisite-ordered route through the wiki, weighted by exam domains and focused on capabilities after each step.
+- [[decision-boundaries|Decision boundaries — confusable technologies]] — Hub of compact exam decision boundaries across APIs, agents, workflows, tools, retrieval, optimization, media, deployment and auth.
+- [[key-tensions|Key tensions across sources]] `disputed` — Unresolved or exam-relevant tensions where corpus sources conflict, qualify, or narrow one another.
+- [[naming-and-currency|Naming and currency]] — Corpus product-name drift, rename signals, caption risks, and preview/currency risks to preserve while studying.
+- [[corpus-gaps|Corpus gaps]] — Official objectives and thin captures the corpus names without fully teaching, with no invented missing content.
+- [[open-questions|Open questions]] — Questions raised but not answered by the corpus, grouped by capability area and source type needed to close them.
+- [[glossary|Glossary]] — Alphabetical one-line definitions linking every compiled concept and entity page to raw-source evidence.
+- [[agent-building-options-compared|Agent-building options compared]] — Comparison of Foundry Agent Service, portal/VS Code, Microsoft Agent Framework, Foundry workflows, and Microsoft 365 Agents Toolkit.
+- [[deployment-options-compared|Deployment and access options compared]] — Compares Foundry deployment types, endpoint/SDK paths, authentication, quota/cost trade-offs, and project/resource boundaries.
+- [[extraction-options-compared|Information extraction options compared]] — Compares Content Understanding, Document Intelligence, Azure Language, vision-capable models, and AI Search enrichment for extraction.
+- [[optimization-strategies-compared|Optimization strategies compared]] — Compares prompt engineering, generation parameters, RAG, fine-tuning and evaluation as progressively heavier optimization levers.
+- [[orchestration-patterns-compared|Orchestration patterns compared]] — Decision table for sequential, concurrent, handoff, group chat, Magentic, and Foundry vs Agent Framework workflow surfaces.
+- [[retrieval-options-compared|Retrieval and grounding options compared]] — Compares File Search, Azure AI Search, Foundry IQ, Web Search, semantic/vector search, and Content Understanding for grounding.
+- [[solution-engineering-transfer|Solution Engineering transfer]] — Customer-signal, discovery and trade-off prompts that transfer AI-103 capability areas into solution conversations.
+- [[speech-and-language-options-compared|Speech and language options compared]] — Compares Speech SDK, Voice Live, speech-capable models, Speech/Language MCP, Translator, Azure Language, and LLM translation.
+- [[tool-options-compared|Tool integration options compared]] — Decision table for built-in tools, function tools, Azure Functions, OpenAPI, Logic Apps, MCP, and A2A boundaries.
 
 ## Concepts
 

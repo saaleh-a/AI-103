@@ -70,7 +70,7 @@ Declarative prompt agents have YAML configuration with metadata, model configura
 - [[agent-tools]] — prompt and workflow agents gain capability by adding tools.
 - [[agent-building-options-compared]] — places these types among broader agent-building choices.
 - [[src-230-understand-ai-agents-microsoft-foundry-agent-service]] — primary agent-type source.
-- *Also linked from:* [[ai-agents]]
+- *Also linked from:* [[ai-agents]] · [[overview]]
 
 ## Sources
 

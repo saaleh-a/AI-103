@@ -69,6 +69,7 @@ The corpus does not include a full prebuilt-model code listing in this unit. It 
 - [[content-understanding-analyzers]] — adjacent extraction option for structured/markdown outputs.
 - [[extraction-options-compared]] — broader decision boundary for extraction services.
 - [[src-249-prebuilt-models]] — primary source page for this concept.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

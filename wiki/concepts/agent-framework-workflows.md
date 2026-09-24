@@ -89,7 +89,7 @@ Do not use Magentic for simple deterministic tasks where the solution path is fi
 - [[magentic-orchestration]] — manager-led open-ended planning pattern.
 - [[foundry-workflows]] — closest portal/YAML boundary.
 - [[src-231-understand-agent-orchestration]] — core workflow components and pattern overview.
-- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[observability-and-tracing]] · [[power-fx]] · [[workflow-patterns]]
+- *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[observability-and-tracing]] · [[overview]] · [[power-fx]] · [[workflow-patterns]]
 
 ## Sources
 

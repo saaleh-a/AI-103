@@ -81,7 +81,7 @@ The source uses OpenAI SDK, OpenAI client, OpenAI-compatible client and `AzureOp
 - [[responses-api]] — recommended new Foundry response-generation API reachable through an OpenAI-compatible client. (SRC-99 L217; SRC-99 L225)
 - [[chat-completions-api]] — compatible message-list API supported by the OpenAI client. (SRC-18 L221; SRC-98 L217)
 - [[keyless-authentication]] — Microsoft Entra ID is recommended for production authentication. (SRC-18 L219; SRC-18 L269–277)
-- *Also linked from:* [[azure-openai]] · [[development-tools-and-approaches]] · [[microsoft-agent-framework]] · [[model-playgrounds]] · [[sora-2]] · [[speech-capable-models]] · [[video-generation]]
+- *Also linked from:* [[azure-openai]] · [[development-tools-and-approaches]] · [[microsoft-agent-framework]] · [[model-playgrounds]] · [[overview]] · [[sora-2]] · [[speech-capable-models]] · [[video-generation]]
 
 ## Sources
 

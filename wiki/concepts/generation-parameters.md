@@ -94,7 +94,7 @@ For media generation, the corpus uses a broader sense of generation controls. Im
 - [[optimization-strategies-compared]] — larger comparison of lightweight versus heavier optimization strategies.
 - [[src-178-optimize-model-output-prompt-engineering]] — text-generation parameter definitions.
 - [[src-99-generate-responses-responses-api-foundry-sdk]] — Responses API parameter names.
-- *Also linked from:* [[generative-ai-fundamentals]]
+- *Also linked from:* [[generative-ai-fundamentals]] · [[overview]]
 
 ## Sources
 

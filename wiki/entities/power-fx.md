@@ -73,6 +73,7 @@ Power Fx appears in the Foundry workflow module introduction as a learning outco
 - [[human-in-the-loop-approval]] — confidence conditions can route to human escalation.
 - [[agent-framework-workflows]] — code-first contrast where orchestration is in SDK code, not Power Fx.
 - [[src-11-apply-power-fx-workflows]] — dedicated Power Fx workflow source.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

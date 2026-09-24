@@ -74,7 +74,7 @@ Model benchmarks are a portal/comparison concept in this corpus, not a direct SD
 - [[quotas-rate-limits-and-cost]] — operational cost and throughput concerns after selection.
 - [[observability-and-tracing]] — ongoing monitoring beyond static benchmark data.
 - [[guardrails-and-content-filters]] — safety controls that complement model safety benchmarks.
-- *Also linked from:* [[generative-ai-fundamentals]] · [[model-deployment-types]]
+- *Also linked from:* [[generative-ai-fundamentals]] · [[model-deployment-types]] · [[overview]]
 
 ## Sources
 

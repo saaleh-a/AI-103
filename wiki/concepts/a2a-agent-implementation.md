@@ -119,6 +119,7 @@ Configure the server base URL, retrieve the Agent Card from the well-known endpo
 - [[src-107-implement-agent-executor]] — executor implementation.
 - [[src-103-host-a2a-server]] — server hosting.
 - [[src-26-connect-a2a-agent]] — client connection.
+- *Also linked from:* [[overview]]
 
 ## Sources
 

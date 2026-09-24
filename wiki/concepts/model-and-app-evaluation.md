@@ -105,7 +105,7 @@ Responsible AI sources widen the purpose: reliability and safety require rigorou
 - [[agent-testing-and-evaluation]] — agent-specific evaluation and multi-turn behavior.
 - [[src-53-evaluate-model-performance]] — central evaluation unit.
 - [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] — evaluation walkthrough.
-- *Also linked from:* [[azure-ai-content-safety]] · [[generative-ai-fundamentals]] · [[prompt-injection-and-jailbreaks]] · [[responsible-ai-principles]]
+- *Also linked from:* [[azure-ai-content-safety]] · [[generative-ai-fundamentals]] · [[overview]] · [[prompt-injection-and-jailbreaks]] · [[responsible-ai-principles]]
 
 ## Sources
 
