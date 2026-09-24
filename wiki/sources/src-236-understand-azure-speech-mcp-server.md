@@ -96,7 +96,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source's key-based authentication guidance creates a security burden, and it scopes its rules separately: SAS URLs are to be treated as secrets with the shortest practical expiry, scoped to a single container, and kept out of source code, agent prompts and chat transcripts (SRC-236 L250); keys and SAS URLs are to be stored in a secure secret store, rotated regularly and kept out of source code, scripts and documentation, with keys rotated immediately if exposed (SRC-236 L257–262).
+- **Inference:** Key-based authentication puts secret handling on the implementer. The source scopes its rules separately: SAS URLs are to be treated as secrets with the shortest practical expiry, scoped to a single container, and kept out of source code, agent prompts and chat transcripts (SRC-236 L250); keys and SAS URLs are to be stored in a secure secret store, rotated regularly and kept out of source code, scripts and documentation, with keys rotated immediately if exposed (SRC-236 L257–262).
 - The source names Microsoft Foundry as a possible host and Azure Speech in Foundry Tools as the service layer, so product naming should not be flattened into only Azure Speech. (SRC-236 L215; SRC-236 L218)
 
 ## Relation to other sources

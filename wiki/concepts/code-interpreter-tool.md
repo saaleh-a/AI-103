@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Built-in tool that lets a model or agent generate and run Python in a sandbox for computation and file analysis."
 area: agents
 source_ids: [SRC-4, SRC-91, SRC-254, SRC-255, SRC-256, SRC-257, SRC-259]
-objectives: [P02, P04, G03, G09]
+objectives: [P04, G03, G09]
 objective_gaps: []
 tags: []
 aliases: ["code_interpreter", "Python tool", "code execution tool", "Code Interpreter"]
@@ -48,10 +48,12 @@ The corpus's captured code blocks are elided by the Learn capture, but the proce
 
 ## Decision boundaries
 
+**Synthesis:** each rule below pairs the code-interpreter evidence (SRC-254 L222–226; SRC-91 L234–235) with the cited tool's own description; the "instead" choices are this page's decision rules, not statements of any one source.
+
 - Use [[code-interpreter-tool]] when the answer depends on executable computation, data transformation, charting, or iterative code/debug output. (SRC-254 L222–226; SRC-91 L234–235)
-- Use [[file-search-tool]] instead when the need is to retrieve relevant passages from uploaded documents, not calculate over them. (SRC-255 L218–227)
-- Use [[function-calling]] instead when execution must happen in developer-owned business logic, APIs, databases, or workflows rather than the tool's Python sandbox. (SRC-256 L219–224)
-- Use [[web-search-tool]] instead when the missing input is current public web information. (SRC-257 L218–227)
+- **Inference:** Use [[file-search-tool]] instead when the need is to retrieve relevant passages from uploaded documents, not calculate over them. (SRC-255 L218–227; SRC-254 L222–226)
+- **Inference:** Use [[function-calling]] instead when execution must happen in developer-owned business logic, APIs, databases, or workflows rather than the tool's Python sandbox. (SRC-256 L219–224; SRC-254 L252–253)
+- **Inference:** Use [[web-search-tool]] instead when the missing input is current public web information. (SRC-257 L218–227; SRC-254 L252–253)
 
 **Inference:** If a scenario asks for exact math over a CSV and a chart, Code Interpreter is the built-in match; if it asks for an approved internal payroll system action, use function calling or a custom tool because the source says Code Interpreter has no external network access. (SRC-254 L252–257; SRC-256 L219–224)
 
