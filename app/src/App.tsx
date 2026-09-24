@@ -2,7 +2,7 @@ import { lazy, Suspense, type ReactNode } from 'react'
 import { HashRouter, Link, Route, Routes, useLocation } from 'react-router-dom'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { AppShell } from '@/components/layout/AppShell'
-import { LearnerStateProvider } from '@/lib/learner-state'
+import { LearnerStateProvider, useLearnerState } from '@/lib/learner-state'
 import { UIPrefsProvider } from '@/lib/ui-prefs'
 import Home from '@/pages/Home'
 
@@ -24,12 +24,19 @@ function RouteLoading() {
 
 function RouteBoundary({ children }: { children: ReactNode }) {
   const { pathname, search } = useLocation()
+  const { storageStatus } = useLearnerState()
   return (
-    <ErrorBoundary resetKey={pathname + search} fallback={(retry) => (
+    <ErrorBoundary resetKey={pathname + search} fallback={(retry) => storageStatus === 'saved' ? (
       <div className="empty-state" role="alert">
         <h1 className="page-heading">This page hit a problem.</h1>
         <p className="page-description">Your progress is saved on this device. Try again, or reload if the studio was updated while this tab was open. You can also go back to Today or export a backup from Settings.</p>
         <div className="portal-actions"><button className="primary-button" type="button" onClick={retry}>Try again</button><button className="quiet-button" type="button" onClick={() => window.location.reload()}>Reload the studio</button><Link className="text-link" to="/">Back to Today</Link><Link className="text-link" to="/settings">Settings & backup</Link></div>
+      </div>
+    ) : (
+      <div className="empty-state" role="alert">
+        <h1 className="page-heading">This page hit a problem.</h1>
+        <p className="page-description">Your work in this tab is not saved on this device, so export a backup from Settings before reloading or closing the tab.</p>
+        <div className="portal-actions"><Link className="primary-button" to="/settings">Export a backup</Link><button className="quiet-button" type="button" onClick={retry}>Try again</button><Link className="text-link" to="/">Back to Today</Link></div>
       </div>
     )}>
       {children}
@@ -38,10 +45,13 @@ function RouteBoundary({ children }: { children: ReactNode }) {
 }
 
 function StudioUnavailable() {
+  const saved = document.documentElement.dataset.progress === 'saved'
   return (
     <div className="empty-state" role="alert">
       <h1 className="page-heading">The studio stopped unexpectedly.</h1>
-      <p className="page-description">Progress already saved in this browser is kept. Reload to continue; if this keeps happening, export a backup from Settings after reloading.</p>
+      <p className="page-description">{saved
+        ? 'Progress already saved in this browser is kept. Reload to continue; if this keeps happening, export a backup from Settings after reloading.'
+        : 'Browser storage was not saving your progress, so work from this tab may not be recoverable. Reload to continue.'}</p>
       <button className="primary-button" type="button" onClick={() => window.location.reload()}>Reload the studio</button>
     </div>
   )

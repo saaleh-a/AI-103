@@ -71,6 +71,11 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     setStorageStatus(writeJSON(STORAGE_KEY, state) ? 'saved' : 'unavailable')
   }, [state, preserveInvalidSave])
 
+  // Code outside React (the stale-deploy reload, the top-level crash screen) must know whether a reload is safe.
+  useEffect(() => {
+    document.documentElement.dataset.progress = storageStatus
+  }, [storageStatus])
+
   const saveStudyProgress = useCallback((topicId: string, patch: Partial<StudyUnitProgress>) => {
     setState((prev) => ({
       ...prev,

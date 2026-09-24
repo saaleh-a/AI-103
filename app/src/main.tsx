@@ -4,8 +4,10 @@ import App from './App.tsx'
 import './index.css'
 
 // A deploy can replace this tab's code chunks. Reload once to fetch the current version instead of
-// failing the route; a repeat within a minute falls through to the page's error screen.
+// failing the route, but only when progress is saved; a repeat within a minute falls through to the
+// page's error screen.
 window.addEventListener('vite:preloadError', (event) => {
+  if (document.documentElement.dataset.progress !== 'saved') return
   try {
     const key = 'ai103-update-reload'
     if (Date.now() - Number(sessionStorage.getItem(key) ?? 0) < 60_000) return
