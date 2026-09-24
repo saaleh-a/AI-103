@@ -171,3 +171,19 @@ Append-only. Newest entries at the bottom. `grep "^## \[" wiki/log.md` lists the
   unit that gives it; 15 ranges that started on page chrome and stopped short of the carrying line
   re-cited.
 - Wiki link graph rebuilt at the end of the loop (see the graph entry below).
+
+## [2026-09-24] loop | Cycle 14: range tails, identifier locators, framings, naming claims
+- About 130 cited ranges that ended on page navigation or on the next question's number trimmed by
+  rule; 16 citations whose backticked identifier sat a few lines away re-cited; 72 mental-model and
+  definition framings on 64 pages labelled **Synthesis:** or **Inference:**; naming claims now cite
+  the lines that contain the names ("Azure AI Foundry" at SRC-102 L251 and SRC-234 L230; "Open API"
+  at SRC-42 L451 and L572–573); two asides naming products the corpus never mentions removed.
+- A check of every backticked identifier against the corpus found no invented identifier.
+
+## [2026-09-24] graph | Wiki link graph rebuilt after the loop
+- `graphify-out-wiki/` rebuilt from wikilinks: 383 nodes, 2,872 edges (was 2,838), 9 communities,
+  relabelled: Models, Evaluation, Safety and Exam Scope · Agents, Tools and APIs · Speech, Voice and
+  Keyless Auth · Workflows, Orchestration and A2A · Information Extraction · Foundry Platform, SDKs and
+  Naming · Retrieval, Search and RAG · MCP and Azure Language · Publishing, Entra ID and Microsoft 365.
+- Most-connected pages: [[decision-boundaries]] (96 edges), [[microsoft-foundry]] (73),
+  [[agent-tools]] (64), [[responses-api]] (53), [[master-synthesis]] (48).

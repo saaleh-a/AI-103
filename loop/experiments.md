@@ -398,3 +398,39 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   image-generation, foundry-agent-service, naming-and-currency); src-173 unchanged in substance — it
   now says why the `2.` lines are not answers.
 - Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).
+- Judgement (panel, incremental): the 2 panel pages changed since 45a3cb1 re-judged —
+  pii-detection-and-redaction PASS; naming-and-currency FAIL on two further naming claims the cycle
+  did not touch ("Azure AI Foundry" cited to a model-selection episode that never says it; the "Open
+  API" caption variant cited to SRC-42 L180–240 — it is at L451 and L572–573) → **1/20 → 1/20**
+  (SAME).
+- Judgement (rotating, seed 13, unbiased): **7/20 fail** (4/10 and 3/10) — src-172 (a question cited
+  to its question-number line), src-21 (a range ending on "Next unit:"), workflow-patterns and
+  custom-tool-options and azure-speech-mcp-server (unlabelled framings: a conveyor-belt analogy, a
+  "contract" metaphor, a negative comparison), model-selection (subclaims not carried by the cited
+  lines), overview (a claim about the wiki itself — "265 corpus sources" — cited to corpus lines).
+- Decision: kept.
+- Lesson: three consecutive fresh samples (10/20, 5/20, 7/20) put the strict-protocol page-failure
+  rate at roughly a quarter to a third after cycle 12; each sample now finds mostly single-instance
+  defects, and the classes behind them are what the next cycle can still fix mechanically.
+
+## Cycle 14 — range tails, identifier locators, framings, naming claims (2026-09-24)
+- Hypothesis: the seed-13 failures are instances of five checkable classes: (1) ranges that end on
+  navigation (`Next unit:`, `Previous Next`, `Feedback`) or on the next question's number; (2)
+  citations whose backticked identifier (`server_url`, `video.error`, `select_next_agent`) sits a few
+  lines outside the cited range; (3) unlabelled framings in *Mental model* sections — 91 of 103
+  concept and entity pages open that section with an unlabelled analogy or characterisation; (4)
+  naming claims whose cited lines do not contain the name; (5) statements about the wiki cited to the
+  corpus. Fixing all five wiki-wide lowers a fresh sample's failure rate.
+- Changes: (1) about 130 range tails trimmed on 43 pages by rule (only full-line navigation and
+  question-number lines, never lines a claim is about); the trim exposed one citation that had been
+  navigation-only (prompt-engineering, SRC-178 L288–291 → L286). (2) A check of every backticked
+  identifier against its cited lines found 128 misses: 20 were a few lines away (16 re-cited after
+  reading the lines), 96 are spoken or prose renderings the lines carry word by word, and the 4
+  identifiers found nowhere in the corpus are all in negative statements ("not a named
+  `HandoffBuilder`") — no invented identifier. (3) 72 framing paragraphs on 64 pages labelled
+  **Synthesis:** (two or more sources) or **Inference:** (one). (4) "Azure AI Foundry" now cites the
+  two Learn lines that contain it (SRC-102 L251, SRC-234 L230) on five pages; "Open API" cites SRC-42
+  L451 and L572–573; "Azure AI Services" cites SRC-96 L236; two asides that named products the corpus
+  never mentions (Form Recognizer, Azure Cognitive Search) removed. (5) overview's first claim now
+  cites the corpus only for what the corpus says. Plus the seed-13 findings.
+- Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).
