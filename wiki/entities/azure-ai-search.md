@@ -1,0 +1,100 @@
+---
+title: "Azure AI Search"
+type: entity
+status: active
+confidence: high
+created: 2026-09-24
+updated: 2026-09-24
+summary: "Azure search service for indexing, enriching, querying and grounding data; supports knowledge mining, RAG and agent retrieval."
+area: retrieval
+source_ids: [SRC-16, SRC-22, SRC-52, SRC-85, SRC-91, SRC-92, SRC-102, SRC-130, SRC-181, SRC-187, SRC-215, SRC-261]
+objectives: [P03, G02, G09, I01, I02, I03]
+tags: ["service"]
+aliases: ["AI Search", "Azure Search", "Azure Cognitive Search"]
+objective_gaps: []
+---
+
+# Azure AI Search
+
+## Summary
+
+Azure AI Search is the corpus's main search service for turning enterprise content into searchable and reusable grounding data. It indexes data from multiple sources, can enrich that data with AI skills, can persist extracted insights in a knowledge store, and supports enterprise search, RAG grounding, and knowledge mining. (SRC-261 L218–228; SRC-102 L240–252)
+
+## What it is
+
+The service provides cloud infrastructure and tools for indexing and querying structured, semi-structured, and unstructured data sources. (SRC-261 L218) In the AI-103 knowledge-mining module, it is framed as the service that can extract, enrich, and explore information from a wide variety of data sources. (SRC-130 L216–218)
+
+**Synthesis:** In this page set, Azure AI Search is the container service; [[search-indexes]] are its searchable output, [[indexers-and-data-sources]] describe ingestion, [[ai-enrichment-skillsets]] describes enrichment during indexing, [[knowledge-store]] covers persisted enriched projections, and [[knowledge-mining]] covers the end-to-end pattern. (SRC-261 L219–223; SRC-92 L218–221; SRC-52 L218–232; SRC-181 L218–222)
+
+## What the sources say
+
+- The introductory unit says the module will connect to data sources, create indexes, explain indexing, use AI skills for enrichment, query and filter results, and use a knowledge store for analysis and integration. (SRC-130 L216–218)
+- The service overview says Azure AI Search can index documents and data from a range of sources, enrich index data with AI skills, and store extracted insights in a knowledge store. (SRC-261 L219–222)
+- The same overview names three major applications: enterprise search, RAG in generative AI applications using vector-based indexes, and knowledge mining for extracting granular assets from documents for analytics. (SRC-261 L224–228)
+- The RAG unit says Azure AI Search provides the retrieval component for RAG in Microsoft Foundry, letting you bring your own data, create a searchable index, and query it for relevant information. (SRC-102 L240–252)
+- Foundry IQ sources can connect to an existing Azure AI Search index when an organization has already processed and indexed data and needs features such as semantic ranking, filters, or custom scoring profiles. (SRC-22 L16–20)
+- Foundry IQ itself is described as a managed knowledge platform for AI agents built on Azure AI Search, shifting focus from search infrastructure to agent experience design. (SRC-85 L217–223)
+- The tools unit distinguishes Azure AI Search from File Search: File Search works with documents uploaded directly to an agent, while Azure AI Search connects to enterprise-scale indexed data sources for structured and unstructured search scenarios. (SRC-91 L237–242)
+- The module summary restates the full pattern: indexing and enriching data from various sources, using AI skills, and persisting enriched data in a knowledge store. (SRC-215 L218–219)
+
+## Capabilities and components
+
+- **Indexes:** searchable collections of JSON documents with fields containing values extracted during indexing. Client applications query the index to retrieve, filter, and sort information. (SRC-187 L218–231)
+- **Indexers and data sources:** an indexer starts with a data source, extracts and indexes fields through an enrichment pipeline, applies document cracking, and produces a populated index. (SRC-92 L218–221)
+- **AI enrichment:** a skillset of AI skills creates AI-enriched fields, with each skill applied in order as the indexer refines the index document. (SRC-52 L218–220)
+- **Knowledge store:** a skillset can define projections of enriched data as JSON objects, tables, or image files; an indexer persists those projections when it runs. (SRC-181 L218–222)
+- **Querying:** the corpus covers full-text Lucene syntax, search parameters such as `search`, `queryType`, `searchFields`, and `select`, filters, facets, sorting, and relevance scoring. (SRC-187 L228–268)
+- **RAG retrieval techniques:** Azure AI Search supports keyword, semantic, vector, and hybrid search; the RAG unit recommends hybrid search for generative AI applications. (SRC-102 L246–250)
+
+## How to use it
+
+For knowledge mining, build the flow around source data, an indexer, an index, an optional skillset, and an optional knowledge store. (SRC-92 L218–271; SRC-181 L218–222) For RAG, add data in Foundry, create an index with vector representations generated by an embedding model, query the index when a user asks a question, and pass retrieved context into generation. (SRC-102 L242–256)
+
+For Foundry IQ, an existing Azure AI Search index is one source type when data is already indexed and sophisticated search features are needed. (SRC-22 L16–20)
+
+## Decision boundaries
+
+| **Inference:** Choice | Use it when | Do not confuse it with |
+|---|---|---|
+| Azure AI Search | You need a managed search service, custom indexing, enrichment pipelines, existing enterprise indexes, semantic/vector/hybrid retrieval, filters, facets, or scoring. (SRC-261 L218–228; SRC-22 L16–20; SRC-102 L246–250) | [[file-search-tool]], which indexes documents uploaded directly to an agent rather than connecting to enterprise-scale indexed sources. (SRC-91 L237–242) |
+| Foundry IQ | You want managed agent knowledge bases and do not want to build and maintain vector databases, embedding pipelines, retrieval algorithms, and search infrastructure yourself. (SRC-85 L217–244) | Raw Azure AI Search infrastructure, which you operate more directly. (SRC-85 L217–223) |
+| Azure Blob Storage as a Foundry IQ source | You want a more direct path from files to a knowledge base. (SRC-22 L31–35) | Azure AI Search Index, which requires building and maintaining an index. (SRC-22 L31–35) |
+
+**Inference:** In exam scenarios, choose Azure AI Search over simpler file upload when the clues mention existing indexes, custom pipelines, semantic ranking, filters, facets, custom scoring, or indexing multiple enterprise sources. (SRC-22 L16–20; SRC-91 L237–242)
+
+## Naming and currency
+
+The corpus pages in this module use Azure AI Search (SRC-261 L211–228); one episode says "Azure Search" (SRC-16 L505). **Stale-risk:** the page's aliases also keep older names that the corpus does not use, for search only.
+
+## Appearances in the corpus
+
+Azure AI Search appears in the knowledge-mining module, in the RAG module, in Foundry IQ source selection, and in agent tooling. (SRC-130 L216–218; SRC-102 L240–265; SRC-22 L16–81; SRC-91 L237–242)
+
+## Connections
+
+- [[search-indexes]] — indexes are the searchable output of Azure AI Search. (SRC-187 L218–231)
+- [[indexers-and-data-sources]] — indexers automate extraction from source data into an index. (SRC-92 L218–221)
+- [[ai-enrichment-skillsets]] — skillsets add AI-generated fields during indexing. (SRC-52 L218–232)
+- [[knowledge-store]] — enriched outputs can be persisted beyond the index. (SRC-181 L218–222)
+- [[knowledge-mining]] — knowledge mining is the end-to-end pattern built with Azure AI Search. (SRC-261 L224–228)
+- [[retrieval-augmented-generation]] — Azure AI Search is the corpus's RAG retrieval component in Foundry. (SRC-102 L240–256)
+- [[foundry-iq]] — Foundry IQ is built on Azure AI Search but abstracts infrastructure. (SRC-85 L217–244)
+- [[file-search-tool]] — closest agent-tool confusion. (SRC-91 L237–242)
+- [[src-261-what-is-azure-ai-search]] — service overview.
+- [[src-102-ground-model-retrieval-augmented-generation]] — Azure AI Search as RAG retrieval.
+- *Also linked from:* [[azure-document-intelligence]] · [[azure-functions]] · [[decision-boundaries]] · [[embeddings-and-vector-search]] · [[knowledge-bases-and-sources]] · [[overview]] · [[retrieval-options-compared]] · [[search-queries]] · [[semantic-ranking]] · [[web-search-tool]]
+
+## Sources
+
+- SRC-16 — [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10]] — Foundry IQ episode: the presenter says the knowledge base pulls data "by way of Azure Search".
+- SRC-22 — [[src-22-configure-data-sources-knowledge-bases]] — Foundry IQ source choices, including Azure AI Search Index.
+- SRC-52 — [[src-52-enrich-extracted-data-ai-skills]] — AI enrichment and skillsets.
+- SRC-85 — [[src-85-explore-foundry-iq]] — Foundry IQ built on Azure AI Search.
+- SRC-91 — [[src-91-extend-agent-capabilities-tools]] — File Search vs Azure AI Search tool boundary.
+- SRC-92 — [[src-92-extract-data-indexer]] — indexer and data-source mechanics.
+- SRC-102 — [[src-102-ground-model-retrieval-augmented-generation]] — Azure AI Search for RAG retrieval.
+- SRC-130 — [[src-130-introduction-create-knowledge-mining-solution-azure-ai-search]] — module scope for Azure AI Search knowledge mining.
+- SRC-181 — [[src-181-persist-extracted-information-knowledge-store]] — knowledge-store projections.
+- SRC-187 — [[src-187-search-index]] — index fields and query behavior.
+- SRC-215 — [[src-215-summary-create-knowledge-mining-solution-azure-ai-search]] — module summary.
+- SRC-261 — [[src-261-what-is-azure-ai-search]] — service definition and applications.

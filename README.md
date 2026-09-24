@@ -24,6 +24,8 @@ gaps; live labs have not been validated. Remaining release gates are explicit in
 - **`app/src/data/curriculum/`** — authored teaching, recall, scenario checks, configuration rehearsals, source mappings, and portal guides. `app/src/data/projects.ts` groups them into continuing builds; `app/src/data/objectives.ts` maps them to the official exam objectives.
 - **`app/`** — the site itself: Vite + React + TypeScript, Tailwind + shadcn/ui, [Bklit](https://bklit.com) charts, [Motion](https://motion.dev), and [React Bits](https://reactbits.dev)-style effects.
 - **`CLAUDE.md`** — the full AI-103 Mastery Tutor constitution, plus pointers for anyone (human or Claude Code session) continuing work on this repo.
+- **`wiki/`** — an LLM-maintained wiki compiled from `corpus/` ([Karpathy's LLM Wiki pattern](schema.md)): a source page per raw file, concept, entity and synthesis pages, and generated navigation (`index.md`, `corpus-map.md`, `objective-map.md`). Every claim cites a raw source and line (`SRC-231 L230`), and `python scripts/lint_wiki.py` verifies every locator. [`program.md`](program.md) is the generator/verifier loop that keeps it improving; `loop/` holds its memory.
+- **`graphify-out/`** — a [graphify](https://github.com/safishamsi/graphify) knowledge graph of the raw corpus (open `graph.html`; read `GRAPH_REPORT.md`; `graphify query "…"` from the repo root). `graphify-out-wiki/` is the wiki's own link graph.
 
 ## Running it
 

@@ -1,0 +1,132 @@
+---
+title: "Develop AI agents with Microsoft Foundry and Visual Studio Code - AI-103 - Episode 7"
+type: source
+status: active
+confidence: medium
+created: 2026-09-24
+updated: 2026-09-24
+summary: "Episode walkthrough defining agents, contrasting portal and code approaches, building an IT support agent, and calling it from Python."
+area: agents
+source_ids: [SRC-41]
+objectives: [G07, G08, G09]
+tags: [episode, ai-agents, microsoft-foundry, visual-studio-code, foundry-sdk, code-interpreter, file-search]
+aliases: ["SRC-41"]
+source_kind: episode
+module: "Develop AI agents with Microsoft Foundry and Visual Studio Code"
+learning_path: null
+unit: null
+presenters: ["ROB FOULKROD"]
+raw_file: "41-Develop AI agents with Microsoft Foundry and Visual Studio Code - AI-103 - Episode 7.md"
+url: "https://www.youtube.com/watch?v=EmBPT_tIs8Y"
+ingest_depth: full
+---
+
+# Develop AI agents with Microsoft Foundry and Visual Studio Code - AI-103 - Episode 7
+
+*episode · Develop AI agents with Microsoft Foundry and Visual Studio Code · SRC-41*
+
+## Source metadata
+
+| Field | Value |
+|---|---|
+| Source ID | SRC-41 |
+| Raw file | 41-Develop AI agents with Microsoft Foundry and Visual Studio Code - AI-103 - Episode 7.md |
+| Kind | episode |
+| Learning path | None |
+| Module | Develop AI agents with Microsoft Foundry and Visual Studio Code |
+| Unit / episode | Episode 7 |
+| Presenter(s) | ROB FOULKROD |
+| URL | https://www.youtube.com/watch?v=EmBPT_tIs8Y |
+| Teaching content | L3–1020 of 1020 |
+| Content length | ~4711 words |
+| Capture quality | Medium; auto-captioned transcript with some course-number and product-name drift. |
+| Ingest depth | full |
+
+## TL;DR
+
+Rob Foulkrod frames this episode as a bridge from chat applications into agentic development, defining an agent as an added layer over models, instructions, and tools that is oriented toward actions and loops rather than only conversation. (SRC-41 L3–120) The demo builds an IT Support Agent in Foundry with Code Interpreter and File Search, tests policy and performance questions, then calls the agent from Python by using a Foundry project endpoint and `AIProjectClient`. (SRC-41 L340–900)
+
+## Key claims
+
+- The episode is a pivot from chat applications into agents and introduces enough agent development to prepare for the next section. (SRC-41 L3–25)
+- Agents reuse familiar pieces from chat apps, including large language models, instructions, and tools, but add an agentic layer focused on actions and tasks. (SRC-41 L26–85)
+- Agents are described as useful where tasks are routine, scalable beyond one person, require real-time analysis, or need 24/7 availability. (SRC-41 L120–220)
+- Example use cases include personal productivity, sales, research, summaries, and customer service. (SRC-41 L220–330)
+- Building an agent starts with a Foundry project, a deployed model, instructions, and tools, followed by playground testing, deployment, and application integration. (SRC-41 L300–360)
+- Portal development is described as good for prototyping, while code-based development is described as repeatable and version-controllable. (SRC-41 L330–430)
+- The demo creates an IT Support Agent, adds instructions, Code Interpreter, File Search, an IT policy file, and a system-performance CSV file. (SRC-41 L430–540)
+- The agent answers IT policy questions from the uploaded policy file and analyzes system performance data with generated Python and charts. (SRC-41 L540–620)
+- The code integration uses a project endpoint and agent name because the model and tools are encapsulated by the agent. (SRC-41 L650–720)
+- The Python app uses Azure identity, `AIProjectClient`, and conversation APIs to connect to the project and agent. (SRC-41 L720–820)
+- The knowledge check says Foundry Agent Service handles tool calling, state management, and infrastructure automatically, and conversation context is managed through the Responses API. (SRC-41 L900–940)
+
+## How it works
+
+The episode's model is that a chat app becomes agentic when the system is not only retrieving data for a response but also deciding and taking actions through tools, APIs, tasks, and possibly specialized agents. (SRC-41 L26–120) The demo operationalizes that model by putting the agent definition in Foundry, attaching retrieval and analysis tools, testing in the playground, then having Python call the server-side agent instead of recreating model, instruction, and tool configuration in the application. (SRC-41 L430–900)
+
+## Code and API patterns
+
+The presenter contrasts direct OpenAI endpoint use with the agent path, where the application uses the Foundry project endpoint because the agent is a higher-level abstraction over model and tools. (SRC-41 L650–720) The transcript names `AIProjectClient`, `DefaultAzureCredential`, an OpenAI client obtained through the project client, and conversation APIs with a conversation ID for history. (SRC-41 L720–820) The demo also handles files generated by tools, such as charts created by Code Interpreter. (SRC-41 L800–900)
+
+## Key terms
+
+- **Agentic loop / ambiguity loop** — the repeated loop of deciding and acting until a process is done, especially where inputs are fuzzy rather than deterministic. (SRC-41 L85–120)
+- **IT Support Agent** — the demo agent configured with support instructions, File Search, Code Interpreter, an IT policy file, and a system-performance CSV. (SRC-41 L430–540)
+- **Project endpoint** — the endpoint used when calling the agent abstraction from code rather than directly calling the model endpoint. (SRC-41 L650–720)
+- **Code Interpreter** — the tool used in the demo to analyze CSV performance data and generate charts. (SRC-41 L500–620; SRC-41 L820–900)
+- **File Search** — the tool used in the demo to ground answers in the IT policy file. (SRC-41 L480–580)
+
+## Decision boundaries and exam cues
+
+- **Inference:** Choose an agent rather than a plain chat app when the requirement moves from answering to doing, such as filling forms, calling APIs, starting tasks, or coordinating specialized workers. (SRC-41 L45–85)
+- **Inference:** Choose portal development for fast visual prototyping and code-first development for repeatability, version control, and code review. (SRC-41 L330–430)
+- **Inference:** When an app calls an already configured Foundry agent, the app should identify the project endpoint and agent name rather than manually configuring model and tools. (SRC-41 L650–720)
+- **Inference:** Use Code Interpreter for Python-backed analysis or chart generation from files; use File Search for grounded answers from uploaded policy-like documents. (SRC-41 L480–620)
+
+## Assessment items
+
+- The episode asks what primary benefit Foundry Agent Service provides compared with standard APIs and gives the answer as handling tool calling, state management, and infrastructure automatically. (SRC-41 L900–925)
+- The episode asks how Foundry Agent Service handles conversation state and gives the answer as the Responses API automatically managing conversation context on the server. (SRC-41 L925–940)
+
+## Segment guide
+
+- **Opening and agent definition, L3–120:** The presenter introduces the episode, differentiates agents from chat apps, explains model/instructions/tools, and introduces the agentic or ambiguity loop. (SRC-41 L3–120)
+- **Use cases and value, L120–330:** The talk covers routine tasks, scaling beyond one worker, real-time analysis, 24/7 availability, productivity, sales, research, summaries, and service scenarios. (SRC-41 L120–330)
+- **Build pattern and resource context, L300–430:** The episode lays out Foundry project, model, agent, instructions, tools, playground testing, deployment, and optional resources such as Search, Storage, Key Vault, and Functions. (SRC-41 L300–430)
+- **Portal demo, L430–620:** The presenter creates the IT Support Agent, adds instructions, Code Interpreter, File Search, an IT policy file, and a CSV, then tests policy and performance prompts. (SRC-41 L430–620)
+- **VS Code and Python integration, L620–900:** The demo refreshes the VS Code toolkit, uses the project endpoint and agent name, authenticates with Azure identity, creates an `AIProjectClient`, and runs conversation tests from Python. (SRC-41 L620–900)
+- **Knowledge check and wrap-up, L900–1020:** The episode answers two knowledge-check items and summarizes agents, Foundry SDK use, portal versus code approaches, and the transition to agentic workflows. (SRC-41 L900–1020)
+
+## Tensions, caveats and currency
+
+- **Stale-risk:** The transcript mentions Python 3.13 lab requirements and says the requirement may change by the time the learner reads the lab README. (SRC-41 L760–790)
+- The presenter appears to say the episode finishes the first topic of the AI 102 course, but the source title and opening frame it as AI-103 Episode 7; preserve this as likely caption or speech drift. (SRC-41 L3–15; SRC-41 L950–970)
+- The episode uses both UI and code paths, while Learn units split those details across separate portal, VS Code, configuration, tool, and deployment units. (SRC-41 L330–900)
+
+## Relation to other sources
+
+- [[src-230-understand-ai-agents-microsoft-foundry-agent-service]] gives the structured Learn definition and service features behind the conceptual opening. (SRC-230 L218–276; SRC-41 L3–120)
+- [[src-14-build-first-agent-microsoft-foundry]] aligns with the portal agent creation demo. (SRC-14 L220–246; SRC-41 L430–620)
+- [[src-190-set-up-visual-studio-code-agent-development]] aligns with the VS Code extension portion of the demo. (SRC-190 L218–268; SRC-41 L620–720)
+- [[src-91-extend-agent-capabilities-tools]] supplies structured details on Code Interpreter, File Search, and other tool categories used in the demo. (SRC-91 L229–242; SRC-41 L480–620)
+- [[src-223-test-deploy-integrate-agents]] formalizes deployment and integration concepts that the episode demonstrates through code. (SRC-223 L228–294; SRC-41 L650–900)
+
+## Connections
+
+- [[ai-agents]] — the episode defines how agents extend chat apps. (SRC-41 L26–120)
+- [[foundry-agent-service]] — the episode demonstrates Foundry-hosted agents. (SRC-41 L300–620)
+- [[foundry-sdk]] — code calls the project through `AIProjectClient`. (SRC-41 L720–820)
+- [[foundry-toolkit-for-vs-code]] — the extension surfaces the agent in VS Code. (SRC-41 L620–700)
+- [[code-interpreter-tool]] — used for CSV analysis and charts. (SRC-41 L500–620; SRC-41 L820–900)
+- [[file-search-tool]] — used for IT policy grounding. (SRC-41 L480–580)
+- [[agent-building-options-compared]] — the episode contrasts portal and code-first approaches. (SRC-41 L330–430)
+- *Module units:* [[src-129-introduction-develop-ai-agents-microsoft-foundry-visual-studio-code|1 Introduction]] · [[src-230-understand-ai-agents-microsoft-foundry-agent-service|2 Understand AI Agents and Microsoft Foundry Agent Service]] · [[src-84-explore-development-approaches|3 Explore Development Approaches]] · [[src-14-build-first-agent-microsoft-foundry|4 Build Your First Agent in Microsoft Foundry]] · [[src-190-set-up-visual-studio-code-agent-development|5 Set Up Visual Studio Code for Agent Development]] · [[src-20-configure-manage-agents-visual-studio-code|6 Configure and Manage Agents in Visual Studio Code]] · [[src-91-extend-agent-capabilities-tools|7 Extend Agent Capabilities with Tools]] · [[src-223-test-deploy-integrate-agents|8 Test, Deploy, and Integrate Agents]] · [[src-59-exercise-build-deploy-ai-agent|9 Exercise - Build and Deploy an AI Agent]] · [[src-142-knowledge-check-develop-ai-agents-microsoft-foundry-visual-studio|10 Knowledge Check]] · [[src-212-summary-develop-ai-agents-microsoft-foundry-visual-studio-code|11 Summary]]
+
+## Open questions
+
+- The transcript does not include the full Python source file, requirements file, or environment file. (SRC-41 L650–900)
+- Auto-captioning may have introduced product-name and course-number drift that needs a naming synthesis note. (SRC-41 L3–15; SRC-41 L950–970)
+
+## Sources
+
+- SRC-41 — raw file: [[41-Develop AI agents with Microsoft Foundry and Visual Studio Code - AI-103 - Episode 7]]
