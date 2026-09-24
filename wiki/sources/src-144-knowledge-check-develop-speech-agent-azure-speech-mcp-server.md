@@ -1,0 +1,127 @@
+---
+title: "Knowledge check — Develop a speech agent with the Azure Speech MCP server"
+type: source
+status: active
+confidence: high
+created: 2026-09-24
+updated: 2026-09-24
+summary: "Assesses Speech MCP capabilities, storage requirements, connection credentials, and prompt-level voice selection."
+area: speech
+source_ids: [SRC-144]
+objectives: [T05, T06, G09]
+tags: [knowledge-check, azure-speech, mcp, sas-url, voice-selection]
+aliases: ["SRC-144"]
+source_kind: learn-unit
+module: "Develop a speech agent with the Azure Speech MCP server"
+learning_path: "Develop natural language solutions in Azure"
+unit: "5 of 6"
+presenters: []
+raw_file: "144-Knowledge check - Training - Microsoft Learn.md"
+url: "https://learn.microsoft.com/en-gb/training/modules/develop-speech-agent-speech-mcp/05-knowledge-check"
+ingest_depth: full
+---
+
+# Knowledge check — Develop a speech agent with the Azure Speech MCP server
+
+*learn-unit · Develop a speech agent with the Azure Speech MCP server · unit 5 of 6 · SRC-144*
+
+## Source metadata
+
+| Field | Value |
+|---|---|
+| Source ID | SRC-144 |
+| Raw file | 144-Knowledge check - Training - Microsoft Learn.md |
+| Kind | learn-unit |
+| Learning path | Develop natural language solutions in Azure |
+| Module | Develop a speech agent with the Azure Speech MCP server |
+| Unit / episode | 5 of 6 |
+| Presenter(s) | None |
+| URL | https://learn.microsoft.com/en-gb/training/modules/develop-speech-agent-speech-mcp/05-knowledge-check |
+| Teaching content | L209–232 of 262 |
+| Content length | ~219 words |
+| Capture quality | High for question and option text; answer key is not shown after submission. |
+| Ingest depth | full |
+
+## TL;DR
+
+The knowledge check asks four questions about the Speech MCP server: its two capabilities, why storage is required, what credentials are needed, and how to choose a text-to-speech voice. (SRC-144 L211–229)
+
+## Key claims
+
+- The assessment asks what two core capabilities the Azure Speech MCP server exposes to agents. (SRC-144 L211–214)
+- The assessment contrasts speech-to-text recognition and text-to-speech synthesis with language translation, summarization, named entity recognition, and sentiment analysis. (SRC-144 L211–214)
+- The assessment asks why the server requires Azure Storage and includes an option about storing input and output audio files. (SRC-144 L216–219)
+- The assessment asks what credentials are needed when connecting the server to a Foundry agent and includes an option for a Foundry resource key and blob-container SAS URL. (SRC-144 L221–224)
+- The assessment asks how to specify a particular text-to-speech voice and includes an option for including the voice name in the natural-language prompt. (SRC-144 L226–229)
+- The capture says all questions must be answered before checking work. (SRC-144 L230–232)
+
+## How it works
+
+The page functions as assessment rather than instruction. (SRC-144 L211–232) It samples the module's load-bearing facts: capability scope, audio storage, connection credentials, and prompt-level customization. (SRC-144 L211–229)
+
+## Code and API patterns
+
+Not covered by this source.
+
+## Key terms
+
+- **Speech-to-text recognition** — one capability presented as an option for the server's exposed tools. (SRC-144 L211–214)
+- **Text-to-speech synthesis** — one capability presented as an option for the server's exposed tools. (SRC-144 L211–214)
+- **SAS URL** — the blob-container URL named in the credential option. (SRC-144 L221–224)
+- **Natural language prompt** — the place one option says to include a voice name. (SRC-144 L226–229)
+
+## Decision boundaries and exam cues
+
+- **Inference:** The assessment's distractors show a boundary between the Speech MCP server and Azure Language-style tasks such as named entity recognition and sentiment analysis. (SRC-144 L211–214)
+- **Inference:** Storage is tested as audio-file storage, not agent configuration storage or tool-definition caching. (SRC-144 L216–219)
+- **Inference:** The credential clue is Foundry resource key plus blob-container SAS URL, not OAuth with managed identity endpoint or client certificate with subscription ID. (SRC-144 L221–224)
+- **Inference:** Voice selection is framed as natural-language prompt content, not MCP server preconfiguration or an environment variable. (SRC-144 L226–229)
+
+## Assessment items
+
+1. What two core capabilities does the Azure Speech MCP server expose to agents? (SRC-144 L211)
+   - Language translation and text summarization. (SRC-144 L212)
+   - Speech-to-text recognition and text-to-speech synthesis. (SRC-144 L213)
+   - Named entity recognition and sentiment analysis. (SRC-144 L214)
+   - Answer not shown in capture. (SRC-144 L230–232)
+2. Why does the Azure Speech MCP server require an Azure Storage account? (SRC-144 L216)
+   - To store the agent's instructions and configuration settings. (SRC-144 L217)
+   - To store input audio files and output audio files generated by the speech tools. (SRC-144 L218)
+   - To cache the MCP server's tool definitions for faster discovery. (SRC-144 L219)
+   - Answer not shown in capture. (SRC-144 L230–232)
+3. What credentials are needed when connecting the Azure Speech MCP server to a Foundry agent? (SRC-144 L221)
+   - An OAuth 2.0 token and a managed identity endpoint URL. (SRC-144 L222)
+   - A Foundry resource key and a SAS URL for a blob container. (SRC-144 L223)
+   - A client certificate and the Azure subscription ID. (SRC-144 L224)
+   - Answer not shown in capture. (SRC-144 L230–232)
+4. How can you specify a particular voice when using the text-to-speech tool through the agent? (SRC-144 L226)
+   - By configuring the voice in the MCP server settings before connecting. (SRC-144 L227)
+   - By including the voice name in your natural language prompt to the agent. (SRC-144 L228)
+   - By setting an environment variable in the client application code. (SRC-144 L229)
+   - Answer not shown in capture. (SRC-144 L230–232)
+
+## Tensions, caveats and currency
+
+- The capture includes the questions and options but not a checked answer key, so the answers should be confirmed from the teaching units or live assessment before being treated as capture-shown. (SRC-144 L230–232)
+
+## Relation to other sources
+
+- [[src-236-understand-azure-speech-mcp-server]] teaches the capability, storage, and credential facts assessed in the first three questions. (SRC-236 L226–258; SRC-144 L211–224)
+- [[src-25-connect-speech-mcp-server-agent]] teaches prompt-level customization and the Foundry tool connection details assessed by the later questions. (SRC-25 L234–258; SRC-144 L221–229)
+- [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19]] verbally reviews the first three assessment answers in the episode wrap-up. (SRC-43 L425–444)
+
+## Connections
+
+- [[azure-speech-mcp-server]] — the assessment's main subject. (SRC-144 L211–229)
+- [[speech-to-text]] — assessed as a core capability. (SRC-144 L211–214)
+- [[text-to-speech]] — assessed as a core capability. (SRC-144 L211–214)
+- [[voices-and-audio-formats]] — voice selection is tested as prompt content. (SRC-144 L226–229)
+- [[speech-and-language-options-compared]] — distractors contrast speech tasks with language-analysis tasks. (SRC-144 L211–214)
+
+## Open questions
+
+- The capture does not show the submitted-answer feedback or answer key. (SRC-144 L230–232)
+
+## Sources
+
+- SRC-144 — raw file: [[144-Knowledge check - Training - Microsoft Learn]]

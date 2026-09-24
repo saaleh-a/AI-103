@@ -1,0 +1,2140 @@
+{
+  "description": "Entity resolution for the raw-source graph. Each group lists graphify node IDs judged to denote the same product, service, feature, API, SDK object, concept or pattern across documents; `links` add INFERRED edges between closely related but distinct nodes. Applied by scripts/raw_graph_entity_resolution.py before the build (schema.md §11).",
+  "created": "2026-09-24",
+  "method": "Round 1 (2026-09-24): 123 exact normalised-label groups (lowercase, parentheticals dropped) were proposed deterministically; an LLM reviewer then read all 1,839 extracted node labels (sorted, with neighbour context), confirmed or split the exact groups and added near-duplicate groups under a strict same-referent rule (renames count as the same referent; a product and its feature, a class and the pattern it implements, and exercise/answer nodes are linked, never merged).",
+  "groups": [
+    {
+      "canonical": "Accountability",
+      "members": [
+        "corpus_186_responsible_ai_training_microsoft_learn_accountability",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_accountability"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-186"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Agent Instructions",
+      "members": [
+        "corpus_14_build_your_first_agent_in_microsoft_foundry_training_microsoft_learn_agent_instructions",
+        "corpus_24_connect_and_use_the_language_mcp_server_with_an_agent_training_microsoft_learn_agent_instructions"
+      ],
+      "sources": [
+        "SRC-14",
+        "SRC-24"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Agent Metadata",
+      "members": [
+        "corpus_20_configure_and_manage_agents_in_visual_studio_code_training_microsoft_learn_agent_metadata",
+        "corpus_185_publish_an_agent_from_foundry_portal_to_teams_training_microsoft_learn_agent_metadata"
+      ],
+      "sources": [
+        "SRC-20",
+        "SRC-185"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry Agent Service",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_agent_service",
+        "corpus_34_create_an_azure_ai_agent_with_microsoft_agent_framework_training_microsoft_learn_foundry_agent_service",
+        "corpus_129_introduction_training_microsoft_learn_microsoft_foundry_agent_service",
+        "corpus_230_understand_ai_agents_and_microsoft_foundry_agent_service_training_microsoft_learn_microsoft_foundry_agent_service",
+        "corpus_122_introduction_training_microsoft_learn_microsoft_foundry_agent_service",
+        "corpus_179_options_for_implementing_custom_tools_training_microsoft_learn_microsoft_foundry_agent_service",
+        "corpus_124_introduction_training_microsoft_learn_microsoft_foundry_agent_service",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_microsoft_foundry_agent_service"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-34",
+        "SRC-122",
+        "SRC-124",
+        "SRC-129",
+        "SRC-155",
+        "SRC-179",
+        "SRC-230"
+      ],
+      "basis": "rename/name variant: Agent service / Foundry Agent Service / Microsoft Foundry Agent Service refer to the same hosted agent service",
+      "round": 1
+    },
+    {
+      "canonical": "Agent-to-Agent (A2A) protocol",
+      "members": [
+        "corpus_134_introduction_training_microsoft_learn_agent_to_agent_protocol",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_agent_to_agent_protocol"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-134"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Agent tool selection process",
+      "members": [
+        "corpus_235_understand_the_azure_language_mcp_server_training_microsoft_learn_agent_tool_selection_process",
+        "corpus_236_understand_the_azure_speech_mcp_server_training_microsoft_learn_agent_tool_selection_process"
+      ],
+      "sources": [
+        "SRC-235",
+        "SRC-236"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Agent Tools",
+      "members": [
+        "corpus_129_introduction_training_microsoft_learn_agent_tools",
+        "corpus_91_extend_agent_capabilities_with_tools_training_microsoft_learn_agent_tools",
+        "corpus_4_add_tools_to_azure_ai_agent_training_microsoft_learn_agent_tools"
+      ],
+      "sources": [
+        "SRC-4",
+        "SRC-91",
+        "SRC-129"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "AI Agent",
+      "members": [
+        "corpus_129_introduction_training_microsoft_learn_ai_agent",
+        "corpus_230_understand_ai_agents_and_microsoft_foundry_agent_service_training_microsoft_learn_ai_agent",
+        "corpus_265_why_use_custom_tools_training_microsoft_learn_ai_agent",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_ai_agent"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-129",
+        "SRC-230",
+        "SRC-265"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "AIProjectClient",
+      "members": [
+        "corpus_41_develop_ai_agents_with_microsoft_foundry_and_visual_studio_code_ai_103_episode_7_ai_project_client",
+        "corpus_110_integrate_custom_tools_into_your_agent_ai_103_episode_8_aiprojectclient",
+        "corpus_247_use_workflows_in_code_training_microsoft_learn_aiprojectclient",
+        "corpus_24_connect_and_use_the_language_mcp_server_with_an_agent_training_microsoft_learn_aiprojectclient",
+        "corpus_25_connect_and_use_the_speech_mcp_server_with_an_agent_training_microsoft_learn_aiprojectclient",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_aiprojectclient"
+      ],
+      "sources": [
+        "SRC-18",
+        "SRC-24",
+        "SRC-25",
+        "SRC-41",
+        "SRC-110",
+        "SRC-247"
+      ],
+      "basis": "spacing variant of the same azure-ai-projects SDK client class",
+      "round": 1
+    },
+    {
+      "canonical": "Content Understanding analyzer",
+      "members": [
+        "corpus_30_create_a_content_understanding_analyzer_training_microsoft_learn_analyzer",
+        "corpus_217_summary_training_microsoft_learn_analyzer",
+        "corpus_138_introduction_training_microsoft_learn_analyzer",
+        "corpus_29_create_a_content_understanding_analyzer_training_microsoft_learn_analyzer",
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_analyzer",
+        "corpus_7_analyze_documents_with_content_understanding_ai_103_episode_25_analyzer",
+        "corpus_216_summary_training_microsoft_learn_analyzers",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_analyzers"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-7",
+        "SRC-29",
+        "SRC-30",
+        "SRC-138",
+        "SRC-216",
+        "SRC-217",
+        "SRC-264"
+      ],
+      "basis": "singular/plural variant of the Content Understanding analyzer concept",
+      "round": 1
+    },
+    {
+      "canonical": "API key authentication",
+      "members": [
+        "corpus_9_analyze_images_with_content_understanding_ai_103_episode_24_api_key_authentication",
+        "corpus_7_analyze_documents_with_content_understanding_ai_103_episode_25_api_key_authentication",
+        "corpus_88_explore_the_azure_voice_live_api_training_microsoft_learn_api_key_authentication",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_api_key_authentication",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_api_key_authentication"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-7",
+        "SRC-9",
+        "SRC-18",
+        "SRC-88"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Artificial intelligence",
+      "members": [
+        "corpus_260_what_is_ai_training_microsoft_learn_artificial_intelligence",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_artificial_intelligence"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-260"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Automatic Tool Invocation",
+      "members": [
+        "corpus_142_knowledge_check_training_microsoft_learn_automatic_tool_invocation_question",
+        "corpus_48_develop_an_ai_agent_with_the_microsoft_agent_framework_ai_103_episode_13_automatic_tool_invocation"
+      ],
+      "sources": [
+        "SRC-48",
+        "SRC-142"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure AI Content Safety",
+      "members": [
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_azure_ai_content_safety",
+        "corpus_196_summary_training_microsoft_learn_azure_ai_content_safety"
+      ],
+      "sources": [
+        "SRC-196",
+        "SRC-264"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure AI Search",
+      "members": [
+        "corpus_84_explore_development_approaches_training_microsoft_learn_azure_ai_search",
+        "corpus_91_extend_agent_capabilities_with_tools_training_microsoft_learn_azure_ai_search",
+        "corpus_85_explore_foundry_iq_training_microsoft_learn_azure_ai_search",
+        "corpus_130_introduction_training_microsoft_learn_azure_ai_search",
+        "corpus_261_what_is_azure_ai_search_training_microsoft_learn_azure_ai_search",
+        "corpus_33_create_a_knowledge_mining_solution_with_azure_ai_search_ai_103_episode_26_azure_ai_search",
+        "corpus_102_ground_your_model_with_retrieval_augmented_generation_training_microsoft_learn_azure_ai_search",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_azure_ai_search"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-33",
+        "SRC-84",
+        "SRC-85",
+        "SRC-91",
+        "SRC-102",
+        "SRC-130",
+        "SRC-261"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure AI Search index",
+      "members": [
+        "corpus_22_configure_data_sources_for_knowledge_bases_training_microsoft_learn_azure_ai_search_index",
+        "corpus_92_extract_data_with_an_indexer_training_microsoft_learn_search_index",
+        "corpus_187_search_an_index_training_microsoft_learn_search_index"
+      ],
+      "sources": [
+        "SRC-22",
+        "SRC-92",
+        "SRC-187"
+      ],
+      "basis": "name variant: Azure AI Search Index and Search index in Azure AI Search lessons",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Content Understanding",
+      "members": [
+        "corpus_126_introduction_training_microsoft_learn_azure_content_understanding",
+        "corpus_262_what_is_azure_content_understanding_training_microsoft_learn_azure_content_understanding",
+        "corpus_73_exercise_extract_information_from_multimodal_content_training_microsoft_learn_azure_content_understanding",
+        "corpus_217_summary_training_microsoft_learn_azure_content_understanding",
+        "corpus_138_introduction_training_microsoft_learn_azure_content_understanding",
+        "corpus_201_summary_training_microsoft_learn_azure_content_understanding",
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_azure_content_understanding",
+        "corpus_96_foundry_tools_training_microsoft_learn_azure_content_understanding",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_azure_content_understanding",
+        "corpus_7_analyze_documents_with_content_understanding_ai_103_episode_25_content_understanding"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-7",
+        "SRC-73",
+        "SRC-96",
+        "SRC-126",
+        "SRC-138",
+        "SRC-201",
+        "SRC-217",
+        "SRC-262",
+        "SRC-264"
+      ],
+      "basis": "name variant: Content Understanding and Azure Content Understanding refer to the same product",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Content Understanding API",
+      "members": [
+        "corpus_6_analyze_content_training_microsoft_learn_azure_content_understanding_api",
+        "corpus_67_exercise_develop_a_content_understanding_client_application_training_microsoft_learn_azure_content_understanding_api",
+        "corpus_262_what_is_azure_content_understanding_training_microsoft_learn_content_understanding_api",
+        "corpus_250_use_the_content_understanding_api_training_microsoft_learn_content_understanding_api",
+        "corpus_55_exercise_analyze_images_with_content_understanding_training_microsoft_learn_content_understanding_api",
+        "corpus_216_summary_training_microsoft_learn_content_understanding_api"
+      ],
+      "sources": [
+        "SRC-6",
+        "SRC-55",
+        "SRC-67",
+        "SRC-216",
+        "SRC-250",
+        "SRC-262"
+      ],
+      "basis": "name variant: Content Understanding API and Azure Content Understanding API refer to the same API",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Document Intelligence",
+      "members": [
+        "corpus_117_introduction_training_microsoft_learn_azure_document_intelligence",
+        "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_azure_document_intelligence",
+        "corpus_96_foundry_tools_training_microsoft_learn_azure_document_intelligence"
+      ],
+      "sources": [
+        "SRC-96",
+        "SRC-117",
+        "SRC-263"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Functions",
+      "members": [
+        "corpus_84_explore_development_approaches_training_microsoft_learn_azure_functions",
+        "corpus_179_options_for_implementing_custom_tools_training_microsoft_learn_azure_functions",
+        "corpus_104_how_to_integrate_custom_tools_training_microsoft_learn_azure_functions",
+        "corpus_110_integrate_custom_tools_into_your_agent_ai_103_episode_8_azure_functions"
+      ],
+      "sources": [
+        "SRC-84",
+        "SRC-104",
+        "SRC-110",
+        "SRC-179"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Language MCP server",
+      "members": [
+        "corpus_135_introduction_training_microsoft_learn_azure_language_mcp_server",
+        "corpus_235_understand_the_azure_language_mcp_server_training_microsoft_learn_azure_language_mcp_server"
+      ],
+      "sources": [
+        "SRC-135",
+        "SRC-235"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Logic Apps",
+      "members": [
+        "corpus_179_options_for_implementing_custom_tools_training_microsoft_learn_azure_logic_apps",
+        "corpus_110_integrate_custom_tools_into_your_agent_ai_103_episode_8_azure_logic_apps"
+      ],
+      "sources": [
+        "SRC-110",
+        "SRC-179"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure OpenAI endpoint",
+      "members": [
+        "corpus_155_microsoft_foundry_training_microsoft_learn_azure_openai_endpoint",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_azure_openai_endpoint"
+      ],
+      "sources": [
+        "SRC-18",
+        "SRC-155"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Speech in Foundry Tools",
+      "members": [
+        "corpus_13_azure_speech_in_foundry_tools_training_microsoft_learn_azure_speech_in_foundry_tools",
+        "corpus_229_translation_in_microsoft_foundry_training_microsoft_learn_azure_speech_in_foundry_tools"
+      ],
+      "sources": [
+        "SRC-13",
+        "SRC-229"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure subscription",
+      "members": [
+        "corpus_55_exercise_analyze_images_with_content_understanding_training_microsoft_learn_azure_subscription",
+        "corpus_78_exercise_prepare_for_an_ai_development_project_training_microsoft_learn_azure_subscription"
+      ],
+      "sources": [
+        "SRC-55",
+        "SRC-78"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure subscription with administrative access",
+      "members": [
+        "corpus_73_exercise_extract_information_from_multimodal_content_training_microsoft_learn_azure_subscription_with_administrative_access",
+        "corpus_67_exercise_develop_a_content_understanding_client_application_training_microsoft_learn_azure_subscription_with_administrative_access"
+      ],
+      "sources": [
+        "SRC-67",
+        "SRC-73"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Azure Translator",
+      "members": [
+        "corpus_96_foundry_tools_training_microsoft_learn_azure_translator",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_azure_translator"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-96"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "begin_analyze method",
+      "members": [
+        "corpus_6_analyze_content_training_microsoft_learn_begin_analyze_method",
+        "corpus_9_analyze_images_with_content_understanding_ai_103_episode_24_client_begin_analyze"
+      ],
+      "sources": [
+        "SRC-6",
+        "SRC-9"
+      ],
+      "basis": "qualified and unqualified name for the same ContentUnderstandingClient begin_analyze method",
+      "round": 1
+    },
+    {
+      "canonical": "begin_create_analyzer method",
+      "members": [
+        "corpus_7_analyze_documents_with_content_understanding_ai_103_episode_25_begin_create_analyzer",
+        "corpus_29_create_a_content_understanding_analyzer_training_microsoft_learn_begin_create_analyzer_method"
+      ],
+      "sources": [
+        "SRC-7",
+        "SRC-29"
+      ],
+      "basis": "method-name variant for the same ContentUnderstandingClient analyzer creation method",
+      "round": 1
+    },
+    {
+      "canonical": "Built-in tools",
+      "members": [
+        "corpus_122_introduction_training_microsoft_learn_built_in_tools",
+        "corpus_110_integrate_custom_tools_into_your_agent_ai_103_episode_8_built_in_tools"
+      ],
+      "sources": [
+        "SRC-110",
+        "SRC-122"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Chat Completions API",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_chat_completions_api",
+        "corpus_98_generate_responses_with_the_chatcompletions_api_training_microsoft_learn_chatcompletions_api"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-98"
+      ],
+      "basis": "spacing variant of the same Chat Completions API",
+      "round": 1
+    },
+    {
+      "canonical": "Client application",
+      "members": [
+        "corpus_250_use_the_content_understanding_api_training_microsoft_learn_client_application",
+        "corpus_7_analyze_documents_with_content_understanding_ai_103_episode_25_client_application"
+      ],
+      "sources": [
+        "SRC-7",
+        "SRC-250"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "code_interpreter tool",
+      "members": [
+        "corpus_254_use_the_code_interpreter_tool_training_microsoft_learn_code_interpreter_tool",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_code_interpreter_tool"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-254"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Concurrent orchestration",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_concurrent_multi_agent_pattern",
+        "corpus_231_understand_agent_orchestration_training_microsoft_learn_concurrent_orchestration"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-231"
+      ],
+      "basis": "same concurrent multi-agent orchestration pattern named across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Confidence scores",
+      "members": [
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_confidence_scores",
+        "corpus_216_summary_training_microsoft_learn_confidence_scores"
+      ],
+      "sources": [
+        "SRC-216",
+        "SRC-264"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Content Understanding project",
+      "members": [
+        "corpus_30_create_a_content_understanding_analyzer_training_microsoft_learn_content_understanding_project",
+        "corpus_217_summary_training_microsoft_learn_content_understanding_project"
+      ],
+      "sources": [
+        "SRC-30",
+        "SRC-217"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Content Understanding Studio",
+      "members": [
+        "corpus_262_what_is_azure_content_understanding_training_microsoft_learn_content_understanding_studio",
+        "corpus_30_create_a_content_understanding_analyzer_training_microsoft_learn_content_understanding_studio",
+        "corpus_164_module_assessment_training_microsoft_learn_content_understanding_studio",
+        "corpus_217_summary_training_microsoft_learn_content_understanding_studio",
+        "corpus_9_analyze_images_with_content_understanding_ai_103_episode_24_content_understanding_studio",
+        "corpus_7_analyze_documents_with_content_understanding_ai_103_episode_25_content_understanding_studio"
+      ],
+      "sources": [
+        "SRC-7",
+        "SRC-9",
+        "SRC-30",
+        "SRC-164",
+        "SRC-217",
+        "SRC-262"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "ContentUnderstandingClient",
+      "members": [
+        "corpus_29_create_a_content_understanding_analyzer_training_microsoft_learn_contentunderstandingclient",
+        "corpus_6_analyze_content_training_microsoft_learn_contentunderstandingclient"
+      ],
+      "sources": [
+        "SRC-6",
+        "SRC-29"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Custom analyzers",
+      "members": [
+        "corpus_126_introduction_training_microsoft_learn_custom_analyzers",
+        "corpus_137_introduction_training_microsoft_learn_custom_analyzers",
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_custom_analyzers"
+      ],
+      "sources": [
+        "SRC-126",
+        "SRC-137",
+        "SRC-264"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Custom models",
+      "members": [
+        "corpus_117_introduction_training_microsoft_learn_custom_models",
+        "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_custom_models"
+      ],
+      "sources": [
+        "SRC-117",
+        "SRC-263"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Custom Tools",
+      "members": [
+        "corpus_14_build_your_first_agent_in_microsoft_foundry_training_microsoft_learn_custom_tools",
+        "corpus_122_introduction_training_microsoft_learn_custom_tools",
+        "corpus_265_why_use_custom_tools_training_microsoft_learn_custom_tools",
+        "corpus_110_integrate_custom_tools_into_your_agent_ai_103_episode_8_custom_tools"
+      ],
+      "sources": [
+        "SRC-14",
+        "SRC-110",
+        "SRC-122",
+        "SRC-265"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "DefaultAzureCredential",
+      "members": [
+        "corpus_41_develop_ai_agents_with_microsoft_foundry_and_visual_studio_code_ai_103_episode_7_default_azure_credential",
+        "corpus_34_create_an_azure_ai_agent_with_microsoft_agent_framework_training_microsoft_learn_defaultazurecredential",
+        "corpus_10_analyze_text_with_azure_language_in_foundry_tools_ai_103_episode_15_defaultazurecredential",
+        "corpus_35_create_speech_enabled_apps_with_microsoft_foundry_ai_103_episode_18_defaultazurecredential",
+        "corpus_42_develop_a_generative_ai_chat_app_with_microsoft_foundry_ai_103_episode_3_defaultazurecredential"
+      ],
+      "sources": [
+        "SRC-10",
+        "SRC-34",
+        "SRC-35",
+        "SRC-41",
+        "SRC-42"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Document analysis models",
+      "members": [
+        "corpus_117_introduction_training_microsoft_learn_document_analysis_models",
+        "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_document_analysis_models"
+      ],
+      "sources": [
+        "SRC-117",
+        "SRC-263"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Document cracking",
+      "members": [
+        "corpus_92_extract_data_with_an_indexer_training_microsoft_learn_document_cracking",
+        "corpus_33_create_a_knowledge_mining_solution_with_azure_ai_search_ai_103_episode_26_document_cracking"
+      ],
+      "sources": [
+        "SRC-33",
+        "SRC-92"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Dynamic tool discovery",
+      "members": [
+        "corpus_233_understand_mcp_tool_discovery_training_microsoft_learn_dynamic_tool_discovery",
+        "corpus_235_understand_the_azure_language_mcp_server_training_microsoft_learn_dynamic_tool_discovery",
+        "corpus_236_understand_the_azure_speech_mcp_server_training_microsoft_learn_dynamic_tool_discovery"
+      ],
+      "sources": [
+        "SRC-233",
+        "SRC-235",
+        "SRC-236"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Extracted field values",
+      "members": [
+        "corpus_30_create_a_content_understanding_analyzer_training_microsoft_learn_extracted_field_values",
+        "corpus_8_analyze_images_with_content_understanding_training_microsoft_learn_extracted_field_values"
+      ],
+      "sources": [
+        "SRC-8",
+        "SRC-30"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Fairness",
+      "members": [
+        "corpus_186_responsible_ai_training_microsoft_learn_fairness",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_fairness"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-186"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "FastMCP",
+      "members": [
+        "corpus_108_integrate_agent_tools_using_an_mcp_server_and_client_training_microsoft_learn_fastmcp",
+        "corpus_109_integrate_mcp_tools_with_azure_ai_agents_ai_103_episode_9_fastmcp"
+      ],
+      "sources": [
+        "SRC-108",
+        "SRC-109"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Field extraction",
+      "members": [
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_field_extraction",
+        "corpus_216_summary_training_microsoft_learn_field_extraction"
+      ],
+      "sources": [
+        "SRC-216",
+        "SRC-264"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Fine-tuning",
+      "members": [
+        "corpus_95_fine_tune_a_model_for_consistent_behavior_training_microsoft_learn_fine_tuning",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_fine_tuning"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-95"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry IQ",
+      "members": [
+        "corpus_141_introduction_training_microsoft_learn_foundry_iq",
+        "corpus_85_explore_foundry_iq_training_microsoft_learn_foundry_iq",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_foundry_iq",
+        "corpus_102_ground_your_model_with_retrieval_augmented_generation_training_microsoft_learn_foundry_iq",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_foundry_iq",
+        "corpus_239_understanding_rag_for_agents_training_microsoft_learn_microsoft_foundry_iq"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-85",
+        "SRC-102",
+        "SRC-141",
+        "SRC-155",
+        "SRC-239"
+      ],
+      "basis": "name variant: Foundry IQ and Microsoft Foundry IQ refer to the same knowledge/retrieval capability",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry model catalog",
+      "members": [
+        "corpus_89_explore_the_model_catalog_training_microsoft_learn_foundry_models_catalog",
+        "corpus_114_introduction_training_microsoft_learn_microsoft_foundry_model_catalog"
+      ],
+      "sources": [
+        "SRC-89",
+        "SRC-114"
+      ],
+      "basis": "name variant: Foundry Models catalog and Microsoft Foundry model catalog refer to the same model catalog",
+      "round": 1
+    },
+    {
+      "canonical": "Foundry Playground",
+      "members": [
+        "corpus_39_deploy_models_to_endpoints_training_microsoft_learn_foundry_playground",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_playground"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-39"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry portal",
+      "members": [
+        "corpus_84_explore_development_approaches_training_microsoft_learn_foundry_portal",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_foundry_portal",
+        "corpus_262_what_is_azure_content_understanding_training_microsoft_learn_microsoft_foundry_portal",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_microsoft_foundry_portal",
+        "corpus_183_plan_and_prepare_to_develop_ai_solutions_on_azure_ai_103_episode_1_new_foundry_portal"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-84",
+        "SRC-155",
+        "SRC-183",
+        "SRC-262"
+      ],
+      "basis": "name variant: Foundry portal / Microsoft Foundry portal / New Foundry portal refer to the same portal UI",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry project",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_foundry_project",
+        "corpus_27_course_ai_103t00_a_develop_ai_apps_and_agents_on_azure_training_microsoft_learn_foundry_projects",
+        "corpus_84_explore_development_approaches_training_microsoft_learn_microsoft_foundry_project",
+        "corpus_184_prepare_to_use_the_ai_content_understanding_api_training_microsoft_learn_microsoft_foundry_project",
+        "corpus_86_explore_image_generation_models_in_microsoft_foundry_portal_training_microsoft_learn_microsoft_foundry_project",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_microsoft_foundry_project"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-27",
+        "SRC-84",
+        "SRC-86",
+        "SRC-155",
+        "SRC-184"
+      ],
+      "basis": "name variant and singular/plural form of the same Foundry project container concept",
+      "round": 1
+    },
+    {
+      "canonical": "Foundry project endpoint",
+      "members": [
+        "corpus_110_integrate_custom_tools_into_your_agent_ai_103_episode_8_foundry_project_endpoint",
+        "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_project_endpoint",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_project_endpoint",
+        "corpus_41_develop_ai_agents_with_microsoft_foundry_and_visual_studio_code_ai_103_episode_7_project_endpoint",
+        "corpus_34_create_an_azure_ai_agent_with_microsoft_agent_framework_training_microsoft_learn_project_endpoint",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_project_endpoint"
+      ],
+      "sources": [
+        "SRC-12",
+        "SRC-18",
+        "SRC-34",
+        "SRC-41",
+        "SRC-110",
+        "SRC-155"
+      ],
+      "basis": "name variant: Project endpoint and Foundry project endpoint refer to the same project endpoint value",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry resource",
+      "members": [
+        "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_foundry_resource",
+        "corpus_30_create_a_content_understanding_analyzer_training_microsoft_learn_foundry_resource",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_foundry_resource",
+        "corpus_262_what_is_azure_content_understanding_training_microsoft_learn_microsoft_foundry_resource",
+        "corpus_184_prepare_to_use_the_ai_content_understanding_api_training_microsoft_learn_microsoft_foundry_resource",
+        "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_microsoft_foundry_resource",
+        "corpus_13_azure_speech_in_foundry_tools_training_microsoft_learn_microsoft_foundry_resource",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_microsoft_foundry_resource"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-12",
+        "SRC-13",
+        "SRC-30",
+        "SRC-155",
+        "SRC-184",
+        "SRC-262",
+        "SRC-263"
+      ],
+      "basis": "name variant: Foundry resource and Microsoft Foundry resource refer to the same Azure resource",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry resource endpoint",
+      "members": [
+        "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_resource_endpoint",
+        "corpus_30_create_a_content_understanding_analyzer_training_microsoft_learn_microsoft_foundry_resource_endpoint",
+        "corpus_184_prepare_to_use_the_ai_content_understanding_api_training_microsoft_learn_microsoft_foundry_resource_endpoint",
+        "corpus_9_analyze_images_with_content_understanding_ai_103_episode_24_resource_endpoint"
+      ],
+      "sources": [
+        "SRC-9",
+        "SRC-12",
+        "SRC-30",
+        "SRC-184"
+      ],
+      "basis": "name variant: resource endpoint / Foundry resource endpoint / Microsoft Foundry resource endpoint",
+      "round": 1
+    },
+    {
+      "canonical": "Foundry resource endpoint and key",
+      "members": [
+        "corpus_160_module_assessment_training_microsoft_learn_foundry_resource_endpoint_and_key",
+        "corpus_13_azure_speech_in_foundry_tools_training_microsoft_learn_endpoint_and_key",
+        "corpus_251_use_the_document_intelligence_studio_training_microsoft_learn_resource_endpoint_and_key"
+      ],
+      "sources": [
+        "SRC-13",
+        "SRC-160",
+        "SRC-251"
+      ],
+      "basis": "name variant for the same endpoint-and-key credential pair used by Foundry-backed services",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry SDK",
+      "members": [
+        "corpus_41_develop_ai_agents_with_microsoft_foundry_and_visual_studio_code_ai_103_episode_7_foundry_sdk",
+        "corpus_14_build_your_first_agent_in_microsoft_foundry_training_microsoft_learn_microsoft_foundry_sdk",
+        "corpus_184_prepare_to_use_the_ai_content_understanding_api_training_microsoft_learn_microsoft_foundry_sdk",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_microsoft_foundry_sdk",
+        "corpus_51_developer_tools_and_sdks_training_microsoft_learn_microsoft_foundry_sdk",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_foundry_sdk"
+      ],
+      "sources": [
+        "SRC-14",
+        "SRC-18",
+        "SRC-41",
+        "SRC-51",
+        "SRC-155",
+        "SRC-184"
+      ],
+      "basis": "name variant: Foundry SDK and Microsoft Foundry SDK refer to the same SDK family",
+      "round": 1
+    },
+    {
+      "canonical": "Foundry Tools",
+      "members": [
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_foundry_tool",
+        "corpus_96_foundry_tools_training_microsoft_learn_foundry_tools",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_foundry_tools"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-96",
+        "SRC-264"
+      ],
+      "basis": "singular/plural name variant for the same Foundry Tools capability surface",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry VS Code Extension",
+      "members": [
+        "corpus_51_developer_tools_and_sdks_training_microsoft_learn_foundry_toolkit_extension_for_visual_studio_code",
+        "corpus_190_set_up_visual_studio_code_for_agent_development_training_microsoft_learn_microsoft_foundry_extension",
+        "corpus_84_explore_development_approaches_training_microsoft_learn_microsoft_foundry_vs_code_extension"
+      ],
+      "sources": [
+        "SRC-51",
+        "SRC-84",
+        "SRC-190"
+      ],
+      "basis": "name variant: Foundry Toolkit extension for Visual Studio Code / Microsoft Foundry Extension / Microsoft Foundry VS Code Extension",
+      "round": 1
+    },
+    {
+      "canonical": "Function calling",
+      "members": [
+        "corpus_179_options_for_implementing_custom_tools_training_microsoft_learn_function_calling",
+        "corpus_104_how_to_integrate_custom_tools_training_microsoft_learn_function_calling",
+        "corpus_234_understand_microsoft_agent_framework_ai_agents_training_microsoft_learn_function_calling"
+      ],
+      "sources": [
+        "SRC-104",
+        "SRC-179",
+        "SRC-234"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "FunctionTool",
+      "members": [
+        "corpus_110_integrate_custom_tools_into_your_agent_ai_103_episode_8_functiontool",
+        "corpus_108_integrate_agent_tools_using_an_mcp_server_and_client_training_microsoft_learn_functiontool"
+      ],
+      "sources": [
+        "SRC-108",
+        "SRC-110"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Generative AI",
+      "members": [
+        "corpus_230_understand_ai_agents_and_microsoft_foundry_agent_service_training_microsoft_learn_generative_ai",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_generative_ai"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-230"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "get_openai_client",
+      "members": [
+        "corpus_25_connect_and_use_the_speech_mcp_server_with_an_agent_training_microsoft_learn_get_openai_client",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_get_openai_client"
+      ],
+      "sources": [
+        "SRC-18",
+        "SRC-25"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "GPT-4.1",
+      "members": [
+        "corpus_184_prepare_to_use_the_ai_content_understanding_api_training_microsoft_learn_gpt_4_1",
+        "corpus_9_analyze_images_with_content_understanding_ai_103_episode_24_gpt_4_1"
+      ],
+      "sources": [
+        "SRC-9",
+        "SRC-184"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "GPT-4.1-mini",
+      "members": [
+        "corpus_184_prepare_to_use_the_ai_content_understanding_api_training_microsoft_learn_gpt_4_1_mini",
+        "corpus_9_analyze_images_with_content_understanding_ai_103_episode_24_gpt_4_1_mini"
+      ],
+      "sources": [
+        "SRC-9",
+        "SRC-184"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Group chat orchestration",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_group_chat_multi_agent_pattern",
+        "corpus_231_understand_agent_orchestration_training_microsoft_learn_group_chat_orchestration",
+        "corpus_105_identify_workflow_patterns_training_microsoft_learn_group_chat_workflow"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-105",
+        "SRC-231"
+      ],
+      "basis": "same group-chat multi-agent/workflow orchestration pattern named across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Handoff orchestration",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_handoff_multi_agent_pattern",
+        "corpus_231_understand_agent_orchestration_training_microsoft_learn_handoff_orchestration"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-231"
+      ],
+      "basis": "same handoff multi-agent orchestration pattern named across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Image-generation models",
+      "members": [
+        "corpus_258_what_are_image_generation_models_training_microsoft_learn_image_generation_models",
+        "corpus_89_explore_the_model_catalog_training_microsoft_learn_image_generation_models"
+      ],
+      "sources": [
+        "SRC-89",
+        "SRC-258"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Inclusiveness",
+      "members": [
+        "corpus_186_responsible_ai_training_microsoft_learn_inclusiveness",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_inclusiveness"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-186"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Indexer",
+      "members": [
+        "corpus_92_extract_data_with_an_indexer_training_microsoft_learn_indexer",
+        "corpus_33_create_a_knowledge_mining_solution_with_azure_ai_search_ai_103_episode_26_indexer"
+      ],
+      "sources": [
+        "SRC-33",
+        "SRC-92"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Knowledge bases",
+      "members": [
+        "corpus_85_explore_foundry_iq_training_microsoft_learn_knowledge_bases",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_knowledge_bases"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-85"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Knowledge store",
+      "members": [
+        "corpus_181_persist_extracted_information_in_a_knowledge_store_training_microsoft_learn_knowledge_store",
+        "corpus_33_create_a_knowledge_mining_solution_with_azure_ai_search_ai_103_episode_26_knowledge_store"
+      ],
+      "sources": [
+        "SRC-33",
+        "SRC-181"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Language detection",
+      "members": [
+        "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_language_detection",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_language_detection"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-12"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Layout model",
+      "members": [
+        "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_layout_model",
+        "corpus_249_use_prebuilt_models_training_microsoft_learn_layout_model"
+      ],
+      "sources": [
+        "SRC-249",
+        "SRC-263"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Local MCP server",
+      "members": [
+        "corpus_109_integrate_mcp_tools_with_azure_ai_agents_ai_103_episode_9_local_mcp_server",
+        "corpus_91_extend_agent_capabilities_with_tools_training_microsoft_learn_local_mcp_servers"
+      ],
+      "sources": [
+        "SRC-91",
+        "SRC-109"
+      ],
+      "basis": "singular/plural variant of local Model Context Protocol server",
+      "round": 1
+    },
+    {
+      "canonical": "mcp_approval_response",
+      "members": [
+        "corpus_240_use_azure_ai_agents_with_mcp_servers_training_microsoft_learn_mcp_approval_response",
+        "corpus_109_integrate_mcp_tools_with_azure_ai_agents_ai_103_episode_9_mcp_approval_response"
+      ],
+      "sources": [
+        "SRC-109",
+        "SRC-240"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "MCP client",
+      "members": [
+        "corpus_233_understand_mcp_tool_discovery_training_microsoft_learn_mcp_client",
+        "corpus_108_integrate_agent_tools_using_an_mcp_server_and_client_training_microsoft_learn_mcp_client",
+        "corpus_109_integrate_mcp_tools_with_azure_ai_agents_ai_103_episode_9_mcp_client",
+        "corpus_235_understand_the_azure_language_mcp_server_training_microsoft_learn_mcp_client",
+        "corpus_236_understand_the_azure_speech_mcp_server_training_microsoft_learn_mcp_client"
+      ],
+      "sources": [
+        "SRC-108",
+        "SRC-109",
+        "SRC-233",
+        "SRC-235",
+        "SRC-236"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "MCP host",
+      "members": [
+        "corpus_235_understand_the_azure_language_mcp_server_training_microsoft_learn_mcp_host",
+        "corpus_236_understand_the_azure_speech_mcp_server_training_microsoft_learn_mcp_host"
+      ],
+      "sources": [
+        "SRC-235",
+        "SRC-236"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "MCP server",
+      "members": [
+        "corpus_119_introduction_training_microsoft_learn_mcp_server",
+        "corpus_233_understand_mcp_tool_discovery_training_microsoft_learn_mcp_server",
+        "corpus_108_integrate_agent_tools_using_an_mcp_server_and_client_training_microsoft_learn_mcp_server",
+        "corpus_109_integrate_mcp_tools_with_azure_ai_agents_ai_103_episode_9_mcp_server",
+        "corpus_235_understand_the_azure_language_mcp_server_training_microsoft_learn_mcp_server",
+        "corpus_91_extend_agent_capabilities_with_tools_training_microsoft_learn_model_context_protocol_servers"
+      ],
+      "sources": [
+        "SRC-91",
+        "SRC-108",
+        "SRC-109",
+        "SRC-119",
+        "SRC-233",
+        "SRC-235"
+      ],
+      "basis": "acronym/expansion and singular/plural variant for Model Context Protocol server",
+      "round": 1
+    },
+    {
+      "canonical": "MCP tool approval",
+      "members": [
+        "corpus_24_connect_and_use_the_language_mcp_server_with_an_agent_training_microsoft_learn_mcp_tool_approval",
+        "corpus_43_develop_a_speech_agent_with_the_azure_speech_mcp_server_ai_103_episode_19_mcp_tool_approval"
+      ],
+      "sources": [
+        "SRC-24",
+        "SRC-43"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "MCPTool class",
+      "members": [
+        "corpus_24_connect_and_use_the_language_mcp_server_with_an_agent_training_microsoft_learn_mcptool_class",
+        "corpus_25_connect_and_use_the_speech_mcp_server_with_an_agent_training_microsoft_learn_mcptool_class",
+        "corpus_240_use_azure_ai_agents_with_mcp_servers_training_microsoft_learn_mcptool_object"
+      ],
+      "sources": [
+        "SRC-24",
+        "SRC-25",
+        "SRC-240"
+      ],
+      "basis": "class/object wording variant for the same SDK MCPTool referent",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft 365 Agents Toolkit",
+      "members": [
+        "corpus_232_understand_foundry_agent_publishing_options_training_microsoft_learn_microsoft_365_agents_toolkit",
+        "corpus_5_advanced_use_microsoft_365_agents_toolkit_for_complex_integration_scenarios_training_microsoft_microsoft_365_agents_toolkit"
+      ],
+      "sources": [
+        "SRC-5",
+        "SRC-232"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Agent Framework",
+      "members": [
+        "corpus_124_introduction_training_microsoft_learn_microsoft_agent_framework",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_microsoft_agent_framework"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-124"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Entra ID Authentication",
+      "members": [
+        "corpus_223_test_deploy_and_integrate_agents_training_microsoft_learn_microsoft_entra_id_authentication",
+        "corpus_184_prepare_to_use_the_ai_content_understanding_api_training_microsoft_learn_microsoft_entra_id_authentication",
+        "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_microsoft_entra_id_authentication",
+        "corpus_39_deploy_models_to_endpoints_training_microsoft_learn_microsoft_entra_id_authentication",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_entra_id_authentication"
+      ],
+      "sources": [
+        "SRC-12",
+        "SRC-18",
+        "SRC-39",
+        "SRC-184",
+        "SRC-223"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry",
+      "members": [
+        "corpus_262_what_is_azure_content_understanding_training_microsoft_learn_microsoft_foundry",
+        "corpus_113_introduction_training_microsoft_learn_microsoft_foundry",
+        "corpus_155_microsoft_foundry_training_microsoft_learn_microsoft_foundry",
+        "corpus_28_course_preview_ai_103_develop_ai_apps_and_agents_on_azure_microsoft_foundry"
+      ],
+      "sources": [
+        "SRC-28",
+        "SRC-113",
+        "SRC-155",
+        "SRC-262"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Microsoft Foundry Models",
+      "members": [
+        "corpus_17_choose_a_speech_capable_model_training_microsoft_learn_microsoft_foundry_models",
+        "corpus_259_what_are_tools_training_microsoft_learn_microsoft_foundry_models"
+      ],
+      "sources": [
+        "SRC-17",
+        "SRC-259"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Model Context Protocol",
+      "members": [
+        "corpus_119_introduction_training_microsoft_learn_model_context_protocol",
+        "corpus_233_understand_mcp_tool_discovery_training_microsoft_learn_model_context_protocol",
+        "corpus_109_integrate_mcp_tools_with_azure_ai_agents_ai_103_episode_9_model_context_protocol",
+        "corpus_85_explore_foundry_iq_training_microsoft_learn_model_context_protocol",
+        "corpus_2_access_microsoft_365_data_with_work_iq_training_microsoft_learn_model_context_protocol",
+        "corpus_235_understand_the_azure_language_mcp_server_training_microsoft_learn_model_context_protocol",
+        "corpus_236_understand_the_azure_speech_mcp_server_training_microsoft_learn_model_context_protocol",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_model_context_protocol"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-2",
+        "SRC-85",
+        "SRC-109",
+        "SRC-119",
+        "SRC-233",
+        "SRC-235",
+        "SRC-236"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Multimodal models",
+      "members": [
+        "corpus_131_introduction_training_microsoft_learn_multimodal_models",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_multimodal_models"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-131"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Named entity recognition",
+      "members": [
+        "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_named_entity_recognition",
+        "corpus_93_extract_entities_training_microsoft_learn_named_entity_recognition"
+      ],
+      "sources": [
+        "SRC-12",
+        "SRC-93"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Responses API",
+      "members": [
+        "corpus_24_connect_and_use_the_language_mcp_server_with_an_agent_training_microsoft_learn_openai_responses_api",
+        "corpus_259_what_are_tools_training_microsoft_learn_openai_responses_api",
+        "corpus_99_generate_responses_with_the_responses_api_in_the_foundry_sdk_training_microsoft_learn_responses_api",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_responses_api"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-24",
+        "SRC-99",
+        "SRC-259"
+      ],
+      "basis": "name variant: OpenAI Responses API and Responses API refer to the same API",
+      "round": 1
+    },
+    {
+      "canonical": "OpenAI SDK",
+      "members": [
+        "corpus_41_develop_ai_agents_with_microsoft_foundry_and_visual_studio_code_ai_103_episode_7_openai_sdk",
+        "corpus_18_choose_an_endpoint_and_sdk_training_microsoft_learn_openai_sdk"
+      ],
+      "sources": [
+        "SRC-18",
+        "SRC-41"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "OpenAPI specification tools",
+      "members": [
+        "corpus_179_options_for_implementing_custom_tools_training_microsoft_learn_openapi_specification_tools",
+        "corpus_104_how_to_integrate_custom_tools_training_microsoft_learn_openapi_specification_tools"
+      ],
+      "sources": [
+        "SRC-104",
+        "SRC-179"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Operation ID",
+      "members": [
+        "corpus_250_use_the_content_understanding_api_training_microsoft_learn_operation_id",
+        "corpus_6_analyze_content_training_microsoft_learn_operation_id"
+      ],
+      "sources": [
+        "SRC-6",
+        "SRC-250"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "PII redaction",
+      "members": [
+        "corpus_94_extract_personally_identifiable_information_pii_training_microsoft_learn_pii_redaction",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_pii_redaction"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-94"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Prebuilt analyzers",
+      "members": [
+        "corpus_137_introduction_training_microsoft_learn_prebuilt_analyzers",
+        "corpus_264_what_is_content_understanding_training_microsoft_learn_prebuilt_analyzers"
+      ],
+      "sources": [
+        "SRC-137",
+        "SRC-264"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Prebuilt models",
+      "members": [
+        "corpus_117_introduction_training_microsoft_learn_prebuilt_models",
+        "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_prebuilt_models",
+        "corpus_249_use_prebuilt_models_training_microsoft_learn_prebuilt_models"
+      ],
+      "sources": [
+        "SRC-117",
+        "SRC-249",
+        "SRC-263"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Privacy and security",
+      "members": [
+        "corpus_186_responsible_ai_training_microsoft_learn_privacy_and_security",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_privacy_and_security"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-186"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Prompt engineering",
+      "members": [
+        "corpus_178_optimize_model_output_with_prompt_engineering_training_microsoft_learn_prompt_engineering",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_prompt_engineering"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-178"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Python SDK",
+      "members": [
+        "corpus_138_introduction_training_microsoft_learn_python_sdk",
+        "corpus_201_summary_training_microsoft_learn_python_sdk",
+        "corpus_8_analyze_images_with_content_understanding_training_microsoft_learn_python_sdk"
+      ],
+      "sources": [
+        "SRC-8",
+        "SRC-138",
+        "SRC-201"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Read model",
+      "members": [
+        "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_read_model",
+        "corpus_249_use_prebuilt_models_training_microsoft_learn_read_model"
+      ],
+      "sources": [
+        "SRC-249",
+        "SRC-263"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Reason property",
+      "members": [
+        "corpus_252_use_the_speech_to_text_api_training_microsoft_learn_reason_property",
+        "corpus_253_use_the_text_to_speech_api_training_microsoft_learn_reason_property"
+      ],
+      "sources": [
+        "SRC-252",
+        "SRC-253"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Reliability and safety",
+      "members": [
+        "corpus_186_responsible_ai_training_microsoft_learn_reliability_and_safety",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_reliability_and_safety"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-186"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Remote MCP server",
+      "members": [
+        "corpus_240_use_azure_ai_agents_with_mcp_servers_training_microsoft_learn_remote_mcp_server",
+        "corpus_109_integrate_mcp_tools_with_azure_ai_agents_ai_103_episode_9_remote_mcp_server",
+        "corpus_91_extend_agent_capabilities_with_tools_training_microsoft_learn_remote_mcp_servers"
+      ],
+      "sources": [
+        "SRC-91",
+        "SRC-109",
+        "SRC-240"
+      ],
+      "basis": "singular/plural variant of remote Model Context Protocol server",
+      "round": 1
+    },
+    {
+      "canonical": "responses.create",
+      "members": [
+        "corpus_25_connect_and_use_the_speech_mcp_server_with_an_agent_training_microsoft_learn_responses_create",
+        "corpus_99_generate_responses_with_the_responses_api_in_the_foundry_sdk_training_microsoft_learn_responses_create"
+      ],
+      "sources": [
+        "SRC-25",
+        "SRC-99"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Responsible AI",
+      "members": [
+        "corpus_186_responsible_ai_training_microsoft_learn_responsible_ai",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_responsible_ai"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-186"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "REST API",
+      "members": [
+        "corpus_138_introduction_training_microsoft_learn_rest_api",
+        "corpus_201_summary_training_microsoft_learn_rest_api"
+      ],
+      "sources": [
+        "SRC-138",
+        "SRC-201"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "REST APIs",
+      "members": [
+        "corpus_14_build_your_first_agent_in_microsoft_foundry_training_microsoft_learn_rest_apis",
+        "corpus_96_foundry_tools_training_microsoft_learn_rest_apis"
+      ],
+      "sources": [
+        "SRC-14",
+        "SRC-96"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Retrieval Augmented Generation (RAG)",
+      "members": [
+        "corpus_141_introduction_training_microsoft_learn_retrieval_augmented_generation",
+        "corpus_196_summary_training_microsoft_learn_retrieval_augmented_generation",
+        "corpus_102_ground_your_model_with_retrieval_augmented_generation_training_microsoft_learn_rag",
+        "corpus_156_mitigate_potential_harms_training_microsoft_learn_retrieval_augmented_generation",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_retrieval_augmented_generation"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-102",
+        "SRC-141",
+        "SRC-156",
+        "SRC-196"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Schema",
+      "members": [
+        "corpus_164_module_assessment_training_microsoft_learn_schema",
+        "corpus_7_analyze_documents_with_content_understanding_ai_103_episode_25_schema"
+      ],
+      "sources": [
+        "SRC-7",
+        "SRC-164"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Sequential orchestration",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_sequential_multi_agent_pattern",
+        "corpus_231_understand_agent_orchestration_training_microsoft_learn_sequential_orchestration",
+        "corpus_105_identify_workflow_patterns_training_microsoft_learn_sequential_workflow"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-105",
+        "SRC-231"
+      ],
+      "basis": "same sequential multi-agent/workflow orchestration pattern named across documents",
+      "round": 1
+    },
+    {
+      "canonical": "session.list_tools()",
+      "members": [
+        "corpus_108_integrate_agent_tools_using_an_mcp_server_and_client_training_microsoft_learn_session_list_tools",
+        "corpus_158_module_assessment_training_microsoft_learn_session_list_tools"
+      ],
+      "sources": [
+        "SRC-108",
+        "SRC-158"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Text to speech",
+      "members": [
+        "corpus_221_synthesize_speech_training_microsoft_learn_speech_synthesis",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_text_to_speech"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-221"
+      ],
+      "basis": "synonym: speech synthesis and text to speech describe the same capability",
+      "round": 1
+    },
+    {
+      "canonical": "Speech to text",
+      "members": [
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_speech_to_text",
+        "corpus_225_transcribe_speech_training_microsoft_learn_speech_transcription"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-225"
+      ],
+      "basis": "synonym: speech transcription and speech to text describe the same capability",
+      "round": 1
+    },
+    {
+      "canonical": "Speech to text API",
+      "members": [
+        "corpus_115_introduction_training_microsoft_learn_speech_to_text_api",
+        "corpus_252_use_the_speech_to_text_api_training_microsoft_learn_speech_to_text_api"
+      ],
+      "sources": [
+        "SRC-115",
+        "SRC-252"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Speech Translation API",
+      "members": [
+        "corpus_115_introduction_training_microsoft_learn_speech_translation_api",
+        "corpus_226_translate_speech_training_microsoft_learn_speech_translation_api"
+      ],
+      "sources": [
+        "SRC-115",
+        "SRC-226"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "SpeechConfig",
+      "members": [
+        "corpus_226_translate_speech_training_microsoft_learn_speechconfig",
+        "corpus_13_azure_speech_in_foundry_tools_training_microsoft_learn_speechconfig",
+        "corpus_252_use_the_speech_to_text_api_training_microsoft_learn_speechconfig",
+        "corpus_253_use_the_text_to_speech_api_training_microsoft_learn_speechconfig",
+        "corpus_21_configure_audio_format_and_voices_training_microsoft_learn_speechconfig"
+      ],
+      "sources": [
+        "SRC-13",
+        "SRC-21",
+        "SRC-226",
+        "SRC-252",
+        "SRC-253"
+      ],
+      "basis": "class/object wording variant for the same Speech SDK SpeechConfig class",
+      "round": 1
+    },
+    {
+      "canonical": "SpeechSynthesizer",
+      "members": [
+        "corpus_226_translate_speech_training_microsoft_learn_speechsynthesizer",
+        "corpus_253_use_the_text_to_speech_api_training_microsoft_learn_speechsynthesizer"
+      ],
+      "sources": [
+        "SRC-226",
+        "SRC-253"
+      ],
+      "basis": "class/object wording variant for the same Speech SDK SpeechSynthesizer class",
+      "round": 1
+    },
+    {
+      "canonical": "Streaming responses",
+      "members": [
+        "corpus_34_create_an_azure_ai_agent_with_microsoft_agent_framework_training_microsoft_learn_streaming_responses",
+        "corpus_99_generate_responses_with_the_responses_api_in_the_foundry_sdk_training_microsoft_learn_streaming_responses"
+      ],
+      "sources": [
+        "SRC-34",
+        "SRC-99"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Temperature",
+      "members": [
+        "corpus_14_build_your_first_agent_in_microsoft_foundry_training_microsoft_learn_temperature",
+        "corpus_39_deploy_models_to_endpoints_training_microsoft_learn_temperature"
+      ],
+      "sources": [
+        "SRC-14",
+        "SRC-39"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Text to speech API",
+      "members": [
+        "corpus_115_introduction_training_microsoft_learn_text_to_speech_api",
+        "corpus_253_use_the_text_to_speech_api_training_microsoft_learn_text_to_speech_api"
+      ],
+      "sources": [
+        "SRC-115",
+        "SRC-253"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Tool Catalog",
+      "members": [
+        "corpus_230_understand_ai_agents_and_microsoft_foundry_agent_service_training_microsoft_learn_tool_catalog",
+        "corpus_119_introduction_training_microsoft_learn_tool_catalog"
+      ],
+      "sources": [
+        "SRC-119",
+        "SRC-230"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Top P",
+      "members": [
+        "corpus_14_build_your_first_agent_in_microsoft_foundry_training_microsoft_learn_top_p",
+        "corpus_39_deploy_models_to_endpoints_training_microsoft_learn_top_p"
+      ],
+      "sources": [
+        "SRC-14",
+        "SRC-39"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Transparency",
+      "members": [
+        "corpus_186_responsible_ai_training_microsoft_learn_transparency",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_transparency"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-186"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "User Message",
+      "members": [
+        "corpus_91_extend_agent_capabilities_with_tools_training_microsoft_learn_user_message",
+        "corpus_178_optimize_model_output_with_prompt_engineering_training_microsoft_learn_user_message"
+      ],
+      "sources": [
+        "SRC-91",
+        "SRC-178"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    },
+    {
+      "canonical": "Workflows",
+      "members": [
+        "corpus_231_understand_agent_orchestration_training_microsoft_learn_workflows",
+        "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_workflows"
+      ],
+      "sources": [
+        "SRC-1",
+        "SRC-231"
+      ],
+      "basis": "identical normalized label across documents",
+      "round": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "corpus_245_use_sequential_orchestration_training_microsoft_learn_sequentialbuilder",
+      "target": "corpus_231_understand_agent_orchestration_training_microsoft_learn_sequential_orchestration",
+      "relation": "implements",
+      "confidence_score": 0.95,
+      "basis": "SequentialBuilder is the SDK builder class for sequential orchestration"
+    },
+    {
+      "source": "corpus_241_use_concurrent_orchestration_training_microsoft_learn_concurrentbuilder",
+      "target": "corpus_231_understand_agent_orchestration_training_microsoft_learn_concurrent_orchestration",
+      "relation": "implements",
+      "confidence_score": 0.95,
+      "basis": "ConcurrentBuilder is the SDK builder class for concurrent orchestration"
+    },
+    {
+      "source": "corpus_242_use_group_chat_orchestration_training_microsoft_learn_groupchatbuilder",
+      "target": "corpus_231_understand_agent_orchestration_training_microsoft_learn_group_chat_orchestration",
+      "relation": "implements",
+      "confidence_score": 0.95,
+      "basis": "GroupChatBuilder is the SDK builder class for group chat orchestration"
+    },
+    {
+      "source": "corpus_244_use_magentic_orchestration_training_microsoft_learn_magenticbuilder",
+      "target": "corpus_231_understand_agent_orchestration_training_microsoft_learn_magentic_orchestration",
+      "relation": "implements",
+      "confidence_score": 0.95,
+      "basis": "MagenticBuilder is the SDK builder class for magentic orchestration"
+    },
+    {
+      "source": "corpus_242_use_group_chat_orchestration_training_microsoft_learn_group_chat_manager",
+      "target": "corpus_231_understand_agent_orchestration_training_microsoft_learn_group_chat_orchestration",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "Group chat manager drives agent selection within group chat orchestration"
+    },
+    {
+      "source": "corpus_240_use_azure_ai_agents_with_mcp_servers_training_microsoft_learn_mcptool_object",
+      "target": "corpus_119_introduction_training_microsoft_learn_mcp_server",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "MCPTool object represents a remote tool exposed by an MCP server"
+    },
+    {
+      "source": "corpus_104_how_to_integrate_custom_tools_training_microsoft_learn_azure_function_tool",
+      "target": "corpus_84_explore_development_approaches_training_microsoft_learn_azure_functions",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "Azure Function tool uses Azure Functions as the backing service"
+    },
+    {
+      "source": "corpus_22_configure_data_sources_for_knowledge_bases_training_microsoft_learn_semantic_ranking",
+      "target": "corpus_84_explore_development_approaches_training_microsoft_learn_azure_ai_search",
+      "relation": "conceptually_related_to",
+      "confidence_score": 0.85,
+      "basis": "Semantic ranking is an Azure AI Search ranking feature, not the whole service"
+    },
+    {
+      "source": "corpus_92_extract_data_with_an_indexer_training_microsoft_learn_indexer",
+      "target": "corpus_261_what_is_azure_ai_search_training_microsoft_learn_azure_ai_search",
+      "relation": "conceptually_related_to",
+      "confidence_score": 0.85,
+      "basis": "Indexer is an Azure AI Search indexing component"
+    },
+    {
+      "source": "corpus_181_persist_extracted_information_in_a_knowledge_store_training_microsoft_learn_knowledge_store",
+      "target": "corpus_261_what_is_azure_ai_search_training_microsoft_learn_azure_ai_search",
+      "relation": "conceptually_related_to",
+      "confidence_score": 0.85,
+      "basis": "Knowledge store is an Azure AI Search knowledge-mining output feature"
+    },
+    {
+      "source": "corpus_91_extend_agent_capabilities_with_tools_training_microsoft_learn_file_search",
+      "target": "corpus_84_explore_development_approaches_training_microsoft_learn_azure_ai_search",
+      "relation": "conceptually_related_to",
+      "confidence_score": 0.75,
+      "basis": "File Search is discussed as an agent tool backed by/search-adjacent to Azure AI Search"
+    },
+    {
+      "source": "corpus_255_use_the_file_search_tool_training_microsoft_learn_file_search_tool",
+      "target": "corpus_259_what_are_tools_training_microsoft_learn_tools_array",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "file_search is a tool entry used in the Responses API tools array"
+    },
+    {
+      "source": "corpus_254_use_the_code_interpreter_tool_training_microsoft_learn_code_interpreter_tool",
+      "target": "corpus_259_what_are_tools_training_microsoft_learn_tools_array",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "code_interpreter is a tool entry used in the Responses API tools array"
+    },
+    {
+      "source": "corpus_257_use_the_web_search_tool_training_microsoft_learn_web_search_tool",
+      "target": "corpus_259_what_are_tools_training_microsoft_learn_tools_array",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "web_search is a tool entry used in the Responses API tools array"
+    },
+    {
+      "source": "corpus_115_introduction_training_microsoft_learn_speech_to_text_api",
+      "target": "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_speech_to_text",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "Speech to Text API implements the speech-to-text capability"
+    },
+    {
+      "source": "corpus_115_introduction_training_microsoft_learn_text_to_speech_api",
+      "target": "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_text_to_speech",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "Text to Speech API implements the text-to-speech capability"
+    },
+    {
+      "source": "corpus_115_introduction_training_microsoft_learn_speech_translation_api",
+      "target": "corpus_1_ai_103_develop_ai_apps_and_agents_on_azure_study_cram_speech_translation",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "Speech Translation API implements speech translation"
+    },
+    {
+      "source": "corpus_40_detect_language_training_microsoft_learn_language_detection_api",
+      "target": "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_language_detection",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "Language detection API implements language detection"
+    },
+    {
+      "source": "corpus_252_use_the_speech_to_text_api_training_microsoft_learn_recognizeonceasync",
+      "target": "corpus_115_introduction_training_microsoft_learn_speech_to_text_api",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "RecognizeOnceAsync is a Speech SDK method used for speech-to-text recognition"
+    },
+    {
+      "source": "corpus_253_use_the_text_to_speech_api_training_microsoft_learn_speaktextasync",
+      "target": "corpus_115_introduction_training_microsoft_learn_text_to_speech_api",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "SpeakTextAsync is a Speech SDK method used for text-to-speech synthesis"
+    },
+    {
+      "source": "corpus_226_translate_speech_training_microsoft_learn_translationrecognizer",
+      "target": "corpus_115_introduction_training_microsoft_learn_speech_translation_api",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "TranslationRecognizer is a Speech SDK class used with the Speech Translation API"
+    },
+    {
+      "source": "corpus_10_analyze_text_with_azure_language_in_foundry_tools_ai_103_episode_15_detect_language_method",
+      "target": "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_language_detection",
+      "relation": "implements",
+      "confidence_score": 0.85,
+      "basis": "detect_language method performs language detection"
+    },
+    {
+      "source": "corpus_32_create_a_client_application_that_uses_an_image_generation_model_training_microsoft_learn_openai_python_sdk",
+      "target": "corpus_41_develop_ai_agents_with_microsoft_foundry_and_visual_studio_code_ai_103_episode_7_openai_sdk",
+      "relation": "references",
+      "confidence_score": 0.75,
+      "basis": "OpenAI Python SDK is a language-specific OpenAI SDK"
+    },
+    {
+      "source": "corpus_101_generate_video_in_python_training_microsoft_learn_openai_python_sdk_for_sora_2",
+      "target": "corpus_32_create_a_client_application_that_uses_an_image_generation_model_training_microsoft_learn_openai_python_sdk",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "OpenAI Python SDK for Sora 2 is a use of the OpenAI Python SDK"
+    },
+    {
+      "source": "corpus_52_enrich_extracted_data_with_ai_skills_training_microsoft_learn_azure_document_intelligence_model",
+      "target": "corpus_117_introduction_training_microsoft_learn_azure_document_intelligence",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "Azure Document Intelligence model is a model resource used by Azure Document Intelligence"
+    },
+    {
+      "source": "corpus_263_what_is_azure_document_intelligence_training_microsoft_learn_document_intelligence_resource",
+      "target": "corpus_117_introduction_training_microsoft_learn_azure_document_intelligence",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "Document Intelligence resource is the Azure resource for Azure Document Intelligence"
+    },
+    {
+      "source": "corpus_251_use_the_document_intelligence_studio_training_microsoft_learn_document_intelligence_studio",
+      "target": "corpus_117_introduction_training_microsoft_learn_azure_document_intelligence",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "Document Intelligence Studio is the Studio surface for Azure Document Intelligence"
+    },
+    {
+      "source": "corpus_33_create_a_knowledge_mining_solution_with_azure_ai_search_ai_103_episode_26_azure_ai_search_import_wizard",
+      "target": "corpus_92_extract_data_with_an_indexer_training_microsoft_learn_indexer",
+      "relation": "conceptually_related_to",
+      "confidence_score": 0.85,
+      "basis": "Azure AI Search import wizard creates/configures an indexer in the search workflow"
+    },
+    {
+      "source": "corpus_264_what_is_content_understanding_training_microsoft_learn_grounding",
+      "target": "corpus_102_ground_your_model_with_retrieval_augmented_generation_training_microsoft_learn_grounding",
+      "relation": "semantically_similar_to",
+      "confidence_score": 0.75,
+      "basis": "Grounding in Content Understanding and grounding in RAG both refer to evidence linkage but are not the same referent"
+    },
+    {
+      "source": "corpus_96_foundry_tools_training_microsoft_learn_azure_language",
+      "target": "corpus_12_azure_language_in_microsoft_foundry_tools_training_microsoft_learn_azure_language_in_foundry_tools",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "Azure Language in Foundry Tools exposes Azure Language capabilities through Foundry Tools"
+    },
+    {
+      "source": "corpus_96_foundry_tools_training_microsoft_learn_azure_translator",
+      "target": "corpus_229_translation_in_microsoft_foundry_training_microsoft_learn_azure_translator_in_foundry_tools",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "Azure Translator in Foundry Tools exposes Azure Translator capabilities through Foundry Tools"
+    },
+    {
+      "source": "corpus_96_foundry_tools_training_microsoft_learn_azure_speech",
+      "target": "corpus_13_azure_speech_in_foundry_tools_training_microsoft_learn_azure_speech_in_foundry_tools",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "basis": "Azure Speech in Foundry Tools exposes Azure Speech capabilities through Foundry Tools"
+    },
+    {
+      "source": "corpus_264_what_is_content_understanding_training_microsoft_learn_azure_ai_content_safety",
+      "target": "corpus_106_implement_a_responsible_generative_ai_solution_in_microsoft_foundry_ai_103_episode_6_content_safety_categories",
+      "relation": "conceptually_related_to",
+      "confidence_score": 0.75,
+      "basis": "Content safety categories are categories used by Azure AI Content Safety/content filters"
+    }
+  ]
+}

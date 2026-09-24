@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "date": "2026-09-24T17:25:18.418090+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 265,
+      "note": "host subagent usage not exposed; ~369k words (~0.49M tokens) of raw text read by 15 extraction subagents, then one entity-resolution reviewer over 1,839 labels"
+    }
+  ],
+  "total_input_tokens": 0,
+  "total_output_tokens": 0
+}

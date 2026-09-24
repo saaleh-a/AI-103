@@ -1,0 +1,6 @@
+# The raw-source graph (graphify-out/) indexes ONLY corpus/ — the immutable evidence.
+# Everything else in this repo (the app, design artifacts, the compiled wiki in wiki/,
+# its link graph in graphify-out-wiki/, tooling in scripts/, product docs) is derived or
+# unrelated, and must never be extracted as if it were evidence. See schema.md §2, §11.
+/*
+!/corpus/

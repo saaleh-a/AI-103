@@ -1,0 +1,1327 @@
+{
+  "corpus/1-AI-103 Develop AI Apps and Agents on Azure Study Cram.md": {
+    "mtime": 1790265117.5362964,
+    "ast_hash": "76e1b03d3a06606b276dafb5f3748577",
+    "semantic_hash": "76e1b03d3a06606b276dafb5f3748577"
+  },
+  "corpus/10-Analyze text with Azure Language in Foundry Tools - AI-103 - Episode 15.md": {
+    "mtime": 1790265117.5403278,
+    "ast_hash": "9dfedc3d985b807ca8e76fb688fb20d6",
+    "semantic_hash": "9dfedc3d985b807ca8e76fb688fb20d6"
+  },
+  "corpus/100-Generate video from a prompt - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.542342,
+    "ast_hash": "f032b7e2f2c107827c088314d7f3d7c2",
+    "semantic_hash": "f032b7e2f2c107827c088314d7f3d7c2"
+  },
+  "corpus/101-Generate video in Python - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.544356,
+    "ast_hash": "2175af324e89210edcd0f13038c7c013",
+    "semantic_hash": "2175af324e89210edcd0f13038c7c013"
+  },
+  "corpus/102-Ground your model with Retrieval Augmented Generation - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.544356,
+    "ast_hash": "bb97d2cfa0e8b9eec7d263aa8d3bbb38",
+    "semantic_hash": "bb97d2cfa0e8b9eec7d263aa8d3bbb38"
+  },
+  "corpus/103-Host an A2A Server - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.546372,
+    "ast_hash": "1e30a54bec086596453be6ed49a461b6",
+    "semantic_hash": "1e30a54bec086596453be6ed49a461b6"
+  },
+  "corpus/104-How to integrate custom tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5483885,
+    "ast_hash": "437722dabcb332d25183c80352f875d1",
+    "semantic_hash": "437722dabcb332d25183c80352f875d1"
+  },
+  "corpus/105-Identify workflow patterns - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5483885,
+    "ast_hash": "d246a570fb577832290588d622dada07",
+    "semantic_hash": "d246a570fb577832290588d622dada07"
+  },
+  "corpus/106-Implement a responsible generative AI solution in Microsoft Foundry - AI-103 - Episode 6.md": {
+    "mtime": 1790265117.5504045,
+    "ast_hash": "b606ea14ea81e00c9a8c7fedadd90971",
+    "semantic_hash": "b606ea14ea81e00c9a8c7fedadd90971"
+  },
+  "corpus/107-Implement an Agent Executor - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.552428,
+    "ast_hash": "20086778ea4432ef14c831173d347092",
+    "semantic_hash": "20086778ea4432ef14c831173d347092"
+  },
+  "corpus/108-Integrate Agent Tools Using an MCP Server and Client - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5544436,
+    "ast_hash": "9e3aa567cabccdd660c3b308b13b461f",
+    "semantic_hash": "9e3aa567cabccdd660c3b308b13b461f"
+  },
+  "corpus/109-Integrate MCP tools with Azure AI agents - AI-103 - Episode 9.md": {
+    "mtime": 1790265117.5564594,
+    "ast_hash": "ab56e95a5695bfbec6ea550f64b5c6e2",
+    "semantic_hash": "ab56e95a5695bfbec6ea550f64b5c6e2"
+  },
+  "corpus/11-Apply Power Fx in workflows - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5602345,
+    "ast_hash": "b205ba523a18d1d30c44656ef821d8e5",
+    "semantic_hash": "b205ba523a18d1d30c44656ef821d8e5"
+  },
+  "corpus/110-Integrate custom tools into your agent - AI-103 - Episode 8.md": {
+    "mtime": 1790265117.5622485,
+    "ast_hash": "ed699bbc222ddabc281b440172e56474",
+    "semantic_hash": "ed699bbc222ddabc281b440172e56474"
+  },
+  "corpus/111-Integrate your agent with Microsoft 365 - AI-103 - Episode 11.md": {
+    "mtime": 1790265117.5637672,
+    "ast_hash": "302774fe23b89038449ef2dfe02342d9",
+    "semantic_hash": "302774fe23b89038449ef2dfe02342d9"
+  },
+  "corpus/112-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5657854,
+    "ast_hash": "d714aaec0aa5536ade30820582ee7c46",
+    "semantic_hash": "d714aaec0aa5536ade30820582ee7c46"
+  },
+  "corpus/113-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5708625,
+    "ast_hash": "e749fc9ec2bb7aca446bf4ebed22cfea",
+    "semantic_hash": "e749fc9ec2bb7aca446bf4ebed22cfea"
+  },
+  "corpus/114-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5736313,
+    "ast_hash": "173496913c26e2240e5c009b78bc71a5",
+    "semantic_hash": "173496913c26e2240e5c009b78bc71a5"
+  },
+  "corpus/115-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5776484,
+    "ast_hash": "69634bfa88fd5b68a1d20b0e01dcafe3",
+    "semantic_hash": "69634bfa88fd5b68a1d20b0e01dcafe3"
+  },
+  "corpus/116-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5782347,
+    "ast_hash": "d99a2ce7290639d8dc78692473647a07",
+    "semantic_hash": "d99a2ce7290639d8dc78692473647a07"
+  },
+  "corpus/117-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5782347,
+    "ast_hash": "9ee1a1bdba79c3aeb8bcec36627dfbbe",
+    "semantic_hash": "9ee1a1bdba79c3aeb8bcec36627dfbbe"
+  },
+  "corpus/118-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.583817,
+    "ast_hash": "191a3ba7bd023d423cc431b2ec3a6946",
+    "semantic_hash": "191a3ba7bd023d423cc431b2ec3a6946"
+  },
+  "corpus/119-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5858326,
+    "ast_hash": "2d9403ea157eac4046d0b37d7ae10a9b",
+    "semantic_hash": "2d9403ea157eac4046d0b37d7ae10a9b"
+  },
+  "corpus/12-Azure Language in Microsoft Foundry Tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5858326,
+    "ast_hash": "0b9393edd0a843fe6849e692787a799d",
+    "semantic_hash": "0b9393edd0a843fe6849e692787a799d"
+  },
+  "corpus/120-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.589511,
+    "ast_hash": "53191b603b026f47e91638a1c9e6baac",
+    "semantic_hash": "53191b603b026f47e91638a1c9e6baac"
+  },
+  "corpus/121-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5913289,
+    "ast_hash": "6a909f1cbef30669b8da60016ae0b9bb",
+    "semantic_hash": "6a909f1cbef30669b8da60016ae0b9bb"
+  },
+  "corpus/122-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.593966,
+    "ast_hash": "0b4e5188d4327acbde9783bff735cc7a",
+    "semantic_hash": "0b4e5188d4327acbde9783bff735cc7a"
+  },
+  "corpus/123-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.59605,
+    "ast_hash": "943eb9250981c2bb23ee1d6094ea4d73",
+    "semantic_hash": "943eb9250981c2bb23ee1d6094ea4d73"
+  },
+  "corpus/124-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5982323,
+    "ast_hash": "54d9c5af040b037c89deea3446d7608e",
+    "semantic_hash": "54d9c5af040b037c89deea3446d7608e"
+  },
+  "corpus/125-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.5982323,
+    "ast_hash": "62df92e3269fb382ed90956f2cee5d81",
+    "semantic_hash": "62df92e3269fb382ed90956f2cee5d81"
+  },
+  "corpus/126-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6002495,
+    "ast_hash": "0e195e2e1812a95fe289479aca6fcee6",
+    "semantic_hash": "0e195e2e1812a95fe289479aca6fcee6"
+  },
+  "corpus/127-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6042135,
+    "ast_hash": "e0b5df00841ede8a8a1283843b46f6e7",
+    "semantic_hash": "e0b5df00841ede8a8a1283843b46f6e7"
+  },
+  "corpus/128-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6062298,
+    "ast_hash": "8f868c3a0b8943bce1a2eec3fd091332",
+    "semantic_hash": "8f868c3a0b8943bce1a2eec3fd091332"
+  },
+  "corpus/129-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6101081,
+    "ast_hash": "b32769537e0befed4769ae557804f68a",
+    "semantic_hash": "b32769537e0befed4769ae557804f68a"
+  },
+  "corpus/13-Azure Speech in Foundry Tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6111083,
+    "ast_hash": "6c45909c158c031778b5707a7926533e",
+    "semantic_hash": "6c45909c158c031778b5707a7926533e"
+  },
+  "corpus/130-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6139185,
+    "ast_hash": "9412830042e91b0929e6f29cc669e948",
+    "semantic_hash": "9412830042e91b0929e6f29cc669e948"
+  },
+  "corpus/131-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6159346,
+    "ast_hash": "7e8a82ae38f22c766f2ef0359d465d0f",
+    "semantic_hash": "7e8a82ae38f22c766f2ef0359d465d0f"
+  },
+  "corpus/132-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6179504,
+    "ast_hash": "d65a296262470a468c068ca86e1b1380",
+    "semantic_hash": "d65a296262470a468c068ca86e1b1380"
+  },
+  "corpus/133-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6199665,
+    "ast_hash": "ad17c220225cd658105e82577e0f4efc",
+    "semantic_hash": "ad17c220225cd658105e82577e0f4efc"
+  },
+  "corpus/134-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.621981,
+    "ast_hash": "e3cc8ec90af4cece842fe330ffe998ca",
+    "semantic_hash": "e3cc8ec90af4cece842fe330ffe998ca"
+  },
+  "corpus/135-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6239958,
+    "ast_hash": "4c748753ee4cc0505f7e130ab3c01e69",
+    "semantic_hash": "4c748753ee4cc0505f7e130ab3c01e69"
+  },
+  "corpus/136-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.626011,
+    "ast_hash": "f6f09a83b5f9c212e9aeec9c24f1944d",
+    "semantic_hash": "f6f09a83b5f9c212e9aeec9c24f1944d"
+  },
+  "corpus/137-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6290486,
+    "ast_hash": "3ed442ccc5b9fa556d8856440ba866c5",
+    "semantic_hash": "3ed442ccc5b9fa556d8856440ba866c5"
+  },
+  "corpus/138-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6305623,
+    "ast_hash": "d1e0032bebbbb76c35daa4c70fabe61a",
+    "semantic_hash": "d1e0032bebbbb76c35daa4c70fabe61a"
+  },
+  "corpus/139-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.63307,
+    "ast_hash": "3fbc18dd830b7bfce63a1c327c59ca6d",
+    "semantic_hash": "3fbc18dd830b7bfce63a1c327c59ca6d"
+  },
+  "corpus/14-Build Your First Agent in Microsoft Foundry - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6350758,
+    "ast_hash": "964df6579a07308c8aadc74be21e3da7",
+    "semantic_hash": "964df6579a07308c8aadc74be21e3da7"
+  },
+  "corpus/140-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.637094,
+    "ast_hash": "b700983ed482df5ff4e77ed014b74b91",
+    "semantic_hash": "b700983ed482df5ff4e77ed014b74b91"
+  },
+  "corpus/141-Introduction - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.639113,
+    "ast_hash": "a9418b25a1db609aaaa5a3579083f9d5",
+    "semantic_hash": "a9418b25a1db609aaaa5a3579083f9d5"
+  },
+  "corpus/142-Knowledge Check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.639113,
+    "ast_hash": "16f442ec6d13cea17f14a63504df12d3",
+    "semantic_hash": "16f442ec6d13cea17f14a63504df12d3"
+  },
+  "corpus/143-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6430714,
+    "ast_hash": "a119cd06d58e99a00038d72ec1687385",
+    "semantic_hash": "a119cd06d58e99a00038d72ec1687385"
+  },
+  "corpus/144-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6450858,
+    "ast_hash": "1f776163a95cb7da71e9411961bdd7d2",
+    "semantic_hash": "1f776163a95cb7da71e9411961bdd7d2"
+  },
+  "corpus/145-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6471756,
+    "ast_hash": "42bd92b7a4e8f20f2ccb31c27490da0d",
+    "semantic_hash": "42bd92b7a4e8f20f2ccb31c27490da0d"
+  },
+  "corpus/146-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6471756,
+    "ast_hash": "326068467048d23be8540ba649cb4dd9",
+    "semantic_hash": "326068467048d23be8540ba649cb4dd9"
+  },
+  "corpus/147-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6496415,
+    "ast_hash": "0ea20cc4d0c01b44862fa8bacd02a955",
+    "semantic_hash": "0ea20cc4d0c01b44862fa8bacd02a955"
+  },
+  "corpus/148-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6536791,
+    "ast_hash": "a806a799d5d45329143eae4eb87049f4",
+    "semantic_hash": "a806a799d5d45329143eae4eb87049f4"
+  },
+  "corpus/149-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6536791,
+    "ast_hash": "4dfc63d1f0578a5f71cf94672e1d5c3e",
+    "semantic_hash": "4dfc63d1f0578a5f71cf94672e1d5c3e"
+  },
+  "corpus/15-Build agent-driven workflows using Microsoft Foundry - AI-103 - Episode 12.md": {
+    "mtime": 1790265117.658087,
+    "ast_hash": "c025c3418ec02cc6417ef87bd54e7afe",
+    "semantic_hash": "c025c3418ec02cc6417ef87bd54e7afe"
+  },
+  "corpus/150-Knowledge check - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.660087,
+    "ast_hash": "1dc2b28557ad8c8ce2d622267ab4bbb6",
+    "semantic_hash": "1dc2b28557ad8c8ce2d622267ab4bbb6"
+  },
+  "corpus/151-Maintain workflows in Microsoft Foundry - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6620889,
+    "ast_hash": "6fbf7ae2076691121f0be00ba31caa1b",
+    "semantic_hash": "6fbf7ae2076691121f0be00ba31caa1b"
+  },
+  "corpus/152-Manage a responsible generative AI solution - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.664123,
+    "ast_hash": "6289e354a99611c458919a1ab827d7f2",
+    "semantic_hash": "6289e354a99611c458919a1ab827d7f2"
+  },
+  "corpus/153-Map potential harms - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.667817,
+    "ast_hash": "9a5b5d9d06912ef6f3e5e0239ee44858",
+    "semantic_hash": "9a5b5d9d06912ef6f3e5e0239ee44858"
+  },
+  "corpus/154-Measure potential harms - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.667817,
+    "ast_hash": "c4a7d9a3eca7c1b6a35ea0147efe0c2e",
+    "semantic_hash": "c4a7d9a3eca7c1b6a35ea0147efe0c2e"
+  },
+  "corpus/155-Microsoft Foundry - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.672187,
+    "ast_hash": "a855275cfadbf2d65a02699d83c7bb81",
+    "semantic_hash": "a855275cfadbf2d65a02699d83c7bb81"
+  },
+  "corpus/156-Mitigate potential harms - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6758087,
+    "ast_hash": "5726459ab7726f733e3d6108a1046d42",
+    "semantic_hash": "5726459ab7726f733e3d6108a1046d42"
+  },
+  "corpus/157-Module Assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.677205,
+    "ast_hash": "5fa087cebd0e992427e153b2d5a95a8e",
+    "semantic_hash": "5fa087cebd0e992427e153b2d5a95a8e"
+  },
+  "corpus/158-Module Assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6821904,
+    "ast_hash": "9a05c606a4ff8d7147f0734bb4994bde",
+    "semantic_hash": "9a05c606a4ff8d7147f0734bb4994bde"
+  },
+  "corpus/159-Module Assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.683208,
+    "ast_hash": "91eda3b778d0ea3cdf7c28269a787102",
+    "semantic_hash": "91eda3b778d0ea3cdf7c28269a787102"
+  },
+  "corpus/16-Build knowledge-enhanced AI agents with Foundry IQ - AI-103 - Episode 10.md": {
+    "mtime": 1790265117.6872642,
+    "ast_hash": "888829ab5447ffe7a2d51ce4ee13c9c4",
+    "semantic_hash": "888829ab5447ffe7a2d51ce4ee13c9c4"
+  },
+  "corpus/160-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6892805,
+    "ast_hash": "90aeb02c5b2c423b6ab4248edddd2172",
+    "semantic_hash": "90aeb02c5b2c423b6ab4248edddd2172"
+  },
+  "corpus/161-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6915965,
+    "ast_hash": "78f2958cad1dcb4c266a6ecbc1d1a0e1",
+    "semantic_hash": "78f2958cad1dcb4c266a6ecbc1d1a0e1"
+  },
+  "corpus/162-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6925964,
+    "ast_hash": "1bfc6826eaa5b76e45e70ed01950a249",
+    "semantic_hash": "1bfc6826eaa5b76e45e70ed01950a249"
+  },
+  "corpus/163-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.694,
+    "ast_hash": "64bae06306bcf0c7964d909fe84fdf98",
+    "semantic_hash": "64bae06306bcf0c7964d909fe84fdf98"
+  },
+  "corpus/164-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.696017,
+    "ast_hash": "28f5dd12da1673c9350d2de284a40092",
+    "semantic_hash": "28f5dd12da1673c9350d2de284a40092"
+  },
+  "corpus/165-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6985345,
+    "ast_hash": "95364ffbe536f9a4dbc9a9557de8f6b3",
+    "semantic_hash": "95364ffbe536f9a4dbc9a9557de8f6b3"
+  },
+  "corpus/166-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6985345,
+    "ast_hash": "fb0809a3856bc1de70fdee6d90769e5a",
+    "semantic_hash": "fb0809a3856bc1de70fdee6d90769e5a"
+  },
+  "corpus/167-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.6985345,
+    "ast_hash": "0e6a42da52cd79e4d0daa7b65a9841da",
+    "semantic_hash": "0e6a42da52cd79e4d0daa7b65a9841da"
+  },
+  "corpus/168-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7032483,
+    "ast_hash": "de96b995f0bf4b5e0ca256f1d8720b0f",
+    "semantic_hash": "de96b995f0bf4b5e0ca256f1d8720b0f"
+  },
+  "corpus/169-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7072854,
+    "ast_hash": "9b15cabca48f5c79b182bf23c3f2e80a",
+    "semantic_hash": "9b15cabca48f5c79b182bf23c3f2e80a"
+  },
+  "corpus/17-Choose a speech-capable model - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7093015,
+    "ast_hash": "99ef3e3468c1a458363386dd35a62394",
+    "semantic_hash": "99ef3e3468c1a458363386dd35a62394"
+  },
+  "corpus/170-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7113192,
+    "ast_hash": "e9b3d366284d673b28c6029e1951a45a",
+    "semantic_hash": "e9b3d366284d673b28c6029e1951a45a"
+  },
+  "corpus/171-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7142308,
+    "ast_hash": "fb068db93249ed8b187270e8164c5eae",
+    "semantic_hash": "fb068db93249ed8b187270e8164c5eae"
+  },
+  "corpus/172-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7142308,
+    "ast_hash": "9b6ce1c0b5793003004f3002b76eb948",
+    "semantic_hash": "9b6ce1c0b5793003004f3002b76eb948"
+  },
+  "corpus/173-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7190213,
+    "ast_hash": "f1cf9a30b001c6df829d236aeb4cccd5",
+    "semantic_hash": "f1cf9a30b001c6df829d236aeb4cccd5"
+  },
+  "corpus/174-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7190213,
+    "ast_hash": "ffdb8b324465e464b5f75db169573fed",
+    "semantic_hash": "ffdb8b324465e464b5f75db169573fed"
+  },
+  "corpus/175-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7254882,
+    "ast_hash": "53dd1f0ce65d532cea86020b8d34e733",
+    "semantic_hash": "53dd1f0ce65d532cea86020b8d34e733"
+  },
+  "corpus/176-Module assessment - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7275035,
+    "ast_hash": "4025e90afa7010feb87f89d89c9ecbee",
+    "semantic_hash": "4025e90afa7010feb87f89d89c9ecbee"
+  },
+  "corpus/177-Optimize generative AI model performance with Microsoft Foundry - AI-103 - Episode 5.md": {
+    "mtime": 1790265117.7295194,
+    "ast_hash": "8a71e1553e7b34377cf32c9c9d09188b",
+    "semantic_hash": "8a71e1553e7b34377cf32c9c9d09188b"
+  },
+  "corpus/178-Optimize model output with prompt engineering - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7330558,
+    "ast_hash": "095c944f4f38c86689686b3807887307",
+    "semantic_hash": "095c944f4f38c86689686b3807887307"
+  },
+  "corpus/179-Options for implementing custom tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.73507,
+    "ast_hash": "adbfc2682bb0cf64b0dfe4f3efb4fd9b",
+    "semantic_hash": "adbfc2682bb0cf64b0dfe4f3efb4fd9b"
+  },
+  "corpus/18-Choose an endpoint and SDK - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.73507,
+    "ast_hash": "3eac741ee318e4e31a6c209cdf2517a9",
+    "semantic_hash": "3eac741ee318e4e31a6c209cdf2517a9"
+  },
+  "corpus/180-Orchestrate a multi-agent solution using the Microsoft Agent Framework - AI-103 - Episode 14.md": {
+    "mtime": 1790265117.7370856,
+    "ast_hash": "827e398954aa91309181a0f8e40b6c9c",
+    "semantic_hash": "827e398954aa91309181a0f8e40b6c9c"
+  },
+  "corpus/181-Persist extracted information in a knowledge store - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.739101,
+    "ast_hash": "5a259efb656f82c3d978dc7b9dbf2900",
+    "semantic_hash": "5a259efb656f82c3d978dc7b9dbf2900"
+  },
+  "corpus/182-Plan a responsible generative AI solution - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.741683,
+    "ast_hash": "35bc925f40443438cca3ce14ca3e138c",
+    "semantic_hash": "35bc925f40443438cca3ce14ca3e138c"
+  },
+  "corpus/183-Plan and prepare to develop AI solutions on Azure - AI-103 - Episode 1.md": {
+    "mtime": 1790265117.7426865,
+    "ast_hash": "4c0855d4c9c148719319fc554eb90129",
+    "semantic_hash": "4c0855d4c9c148719319fc554eb90129"
+  },
+  "corpus/184-Prepare to use the AI Content Understanding API - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7456825,
+    "ast_hash": "fcb16b762b5fff7930c9181870ece6f3",
+    "semantic_hash": "fcb16b762b5fff7930c9181870ece6f3"
+  },
+  "corpus/185-Publish an agent from Foundry portal to Teams - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7485719,
+    "ast_hash": "422f861e21b8f9e81b40032b27b6d68c",
+    "semantic_hash": "422f861e21b8f9e81b40032b27b6d68c"
+  },
+  "corpus/186-Responsible AI - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7505891,
+    "ast_hash": "f32bd298c0525886fc7b3a287d1c3894",
+    "semantic_hash": "f32bd298c0525886fc7b3a287d1c3894"
+  },
+  "corpus/187-Search an index - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7526035,
+    "ast_hash": "917b8618c4f66391cc9eaf0de92b39af",
+    "semantic_hash": "917b8618c4f66391cc9eaf0de92b39af"
+  },
+  "corpus/188-Select models using benchmarks - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7546208,
+    "ast_hash": "13e2845ba16c38cf44c075e4f5783f72",
+    "semantic_hash": "13e2845ba16c38cf44c075e4f5783f72"
+  },
+  "corpus/189-Select, deploy, and evaluate Microsoft Foundry models - AI-103 - Episode 2.md": {
+    "mtime": 1790265117.7590296,
+    "ast_hash": "838661d7f1d944226283dcf98a369632",
+    "semantic_hash": "838661d7f1d944226283dcf98a369632"
+  },
+  "corpus/19-Compare and combine optimization strategies - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7611701,
+    "ast_hash": "16e20795d2190570979dede661c78f66",
+    "semantic_hash": "16e20795d2190570979dede661c78f66"
+  },
+  "corpus/190-Set Up Visual Studio Code for Agent Development - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7631836,
+    "ast_hash": "e1f4ed0c050cc7fe1a81af0db068a3e8",
+    "semantic_hash": "e1f4ed0c050cc7fe1a81af0db068a3e8"
+  },
+  "corpus/191-Study guide for Exam AI-103- Developing AI Apps and Agents on Azure - Microsoft Learn.md": {
+    "mtime": 1790265117.7672164,
+    "ast_hash": "a914c963ff7dfa152a8bc27825c5bb3a",
+    "semantic_hash": "a914c963ff7dfa152a8bc27825c5bb3a"
+  },
+  "corpus/192-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7699878,
+    "ast_hash": "bf9494c46aa6cbb7704cd67b004cab85",
+    "semantic_hash": "bf9494c46aa6cbb7704cd67b004cab85"
+  },
+  "corpus/193-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.772002,
+    "ast_hash": "8cdc29384b81e74f4e9a4de3e37df3bc",
+    "semantic_hash": "8cdc29384b81e74f4e9a4de3e37df3bc"
+  },
+  "corpus/194-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.774807,
+    "ast_hash": "51b2e8db27a8932c07eac2edce9e7518",
+    "semantic_hash": "51b2e8db27a8932c07eac2edce9e7518"
+  },
+  "corpus/195-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7788098,
+    "ast_hash": "0395009f977ba1c6effa688e7b69b604",
+    "semantic_hash": "0395009f977ba1c6effa688e7b69b604"
+  },
+  "corpus/196-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7810485,
+    "ast_hash": "397a9573a3ab3a47caab40099f04408e",
+    "semantic_hash": "397a9573a3ab3a47caab40099f04408e"
+  },
+  "corpus/197-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7830641,
+    "ast_hash": "9364064e5ef9cfc4961b30bc3d59f7ad",
+    "semantic_hash": "9364064e5ef9cfc4961b30bc3d59f7ad"
+  },
+  "corpus/198-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7830641,
+    "ast_hash": "d6744d5995704d3ccb085a9eeda7f90b",
+    "semantic_hash": "d6744d5995704d3ccb085a9eeda7f90b"
+  },
+  "corpus/199-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7869742,
+    "ast_hash": "eafffa40dff1d102383fe537d4cbdf1b",
+    "semantic_hash": "eafffa40dff1d102383fe537d4cbdf1b"
+  },
+  "corpus/2-Access Microsoft 365 data with Work IQ - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7869742,
+    "ast_hash": "82191f1af31bd1b0d2a690c7f7ac85a9",
+    "semantic_hash": "82191f1af31bd1b0d2a690c7f7ac85a9"
+  },
+  "corpus/20-Configure and Manage Agents in Visual Studio Code - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7890172,
+    "ast_hash": "a8c6881924520d18ebc99833292db01b",
+    "semantic_hash": "a8c6881924520d18ebc99833292db01b"
+  },
+  "corpus/200-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7903852,
+    "ast_hash": "001af3da72a89d669825a5939b74384b",
+    "semantic_hash": "001af3da72a89d669825a5939b74384b"
+  },
+  "corpus/201-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.792404,
+    "ast_hash": "4db5dd417826995bb9645816ed1ece73",
+    "semantic_hash": "4db5dd417826995bb9645816ed1ece73"
+  },
+  "corpus/202-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.7934031,
+    "ast_hash": "b4f17f752bd985113f943a94dbb10464",
+    "semantic_hash": "b4f17f752bd985113f943a94dbb10464"
+  },
+  "corpus/203-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.795319,
+    "ast_hash": "f4a280e7225aae409e04eea1711734fd",
+    "semantic_hash": "f4a280e7225aae409e04eea1711734fd"
+  },
+  "corpus/204-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.797335,
+    "ast_hash": "c31d3e11dabe150204ef01adca6f3804",
+    "semantic_hash": "c31d3e11dabe150204ef01adca6f3804"
+  },
+  "corpus/205-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8028882,
+    "ast_hash": "bde287352ae6e8938f9d1b6c092a0cf1",
+    "semantic_hash": "bde287352ae6e8938f9d1b6c092a0cf1"
+  },
+  "corpus/206-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8028882,
+    "ast_hash": "8314769da3e63d2644db6712a7c964e4",
+    "semantic_hash": "8314769da3e63d2644db6712a7c964e4"
+  },
+  "corpus/207-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8049066,
+    "ast_hash": "ef73c571d7e41eabfe11eb58ad7e89bb",
+    "semantic_hash": "ef73c571d7e41eabfe11eb58ad7e89bb"
+  },
+  "corpus/208-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8089423,
+    "ast_hash": "181a7453545773fe507de52743238e00",
+    "semantic_hash": "181a7453545773fe507de52743238e00"
+  },
+  "corpus/209-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8165066,
+    "ast_hash": "d0cd2744b8a1878505b0dd649f57f9db",
+    "semantic_hash": "d0cd2744b8a1878505b0dd649f57f9db"
+  },
+  "corpus/21-Configure audio format and voices - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8180232,
+    "ast_hash": "8862c35ad87a0531e3047fb1ee6d39ee",
+    "semantic_hash": "8862c35ad87a0531e3047fb1ee6d39ee"
+  },
+  "corpus/210-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.820038,
+    "ast_hash": "944ea4f9c2bf6c94b1fb2a2357a222a3",
+    "semantic_hash": "944ea4f9c2bf6c94b1fb2a2357a222a3"
+  },
+  "corpus/211-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8220508,
+    "ast_hash": "9c9d92f98b21efb3fe117f93f284e2bd",
+    "semantic_hash": "9c9d92f98b21efb3fe117f93f284e2bd"
+  },
+  "corpus/212-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8248186,
+    "ast_hash": "58a1aa27e2c19bb9e3ce54926192d436",
+    "semantic_hash": "58a1aa27e2c19bb9e3ce54926192d436"
+  },
+  "corpus/213-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.82682,
+    "ast_hash": "24ac01a80414c020015aab61b0bd4b70",
+    "semantic_hash": "24ac01a80414c020015aab61b0bd4b70"
+  },
+  "corpus/214-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8288176,
+    "ast_hash": "1508379dd8766d296662f4c61205a351",
+    "semantic_hash": "1508379dd8766d296662f4c61205a351"
+  },
+  "corpus/215-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8316212,
+    "ast_hash": "0257583b11e8955199d6e7957cb79168",
+    "semantic_hash": "0257583b11e8955199d6e7957cb79168"
+  },
+  "corpus/216-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8336382,
+    "ast_hash": "84307c7ac9c995ea29ee1cdfd4131b73",
+    "semantic_hash": "84307c7ac9c995ea29ee1cdfd4131b73"
+  },
+  "corpus/217-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8356519,
+    "ast_hash": "be1d4adc79a7d10d53b4ce633fbd3496",
+    "semantic_hash": "be1d4adc79a7d10d53b4ce633fbd3496"
+  },
+  "corpus/218-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8376684,
+    "ast_hash": "1f45e8c7b8e7260dd4a96d3658a5d32e",
+    "semantic_hash": "1f45e8c7b8e7260dd4a96d3658a5d32e"
+  },
+  "corpus/219-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8396847,
+    "ast_hash": "bf32cb0d47250099e92829201b7d17a5",
+    "semantic_hash": "bf32cb0d47250099e92829201b7d17a5"
+  },
+  "corpus/22-Configure data sources for knowledge bases - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8461595,
+    "ast_hash": "89e1ce1e9d4b2c7b1e4d34d58acc85f1",
+    "semantic_hash": "89e1ce1e9d4b2c7b1e4d34d58acc85f1"
+  },
+  "corpus/220-Summary - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.852207,
+    "ast_hash": "bfb26aaee34f637928261f42a61eebdc",
+    "semantic_hash": "bfb26aaee34f637928261f42a61eebdc"
+  },
+  "corpus/221-Synthesize speech - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8542218,
+    "ast_hash": "4232d415166447ed0dbe365dcab2cd06",
+    "semantic_hash": "4232d415166447ed0dbe365dcab2cd06"
+  },
+  "corpus/222-Test and iterate your integrated agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8581264,
+    "ast_hash": "2d764204abbfd83b9821159876ac5a93",
+    "semantic_hash": "2d764204abbfd83b9821159876ac5a93"
+  },
+  "corpus/223-Test, Deploy, and Integrate Agents - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8617651,
+    "ast_hash": "1fc7ca6264f09c41706dabee11b6f274",
+    "semantic_hash": "1fc7ca6264f09c41706dabee11b6f274"
+  },
+  "corpus/224-Train and use custom models - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.86378,
+    "ast_hash": "e985d7ce1e41d9cf8d499f4ec21bc0a6",
+    "semantic_hash": "e985d7ce1e41d9cf8d499f4ec21bc0a6"
+  },
+  "corpus/225-Transcribe speech - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.86378,
+    "ast_hash": "b5ae65a6350b87735ef610b71d5f3289",
+    "semantic_hash": "b5ae65a6350b87735ef610b71d5f3289"
+  },
+  "corpus/226-Translate speech - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8657994,
+    "ast_hash": "44cb665495a31b46a64e543def4a78b6",
+    "semantic_hash": "44cb665495a31b46a64e543def4a78b6"
+  },
+  "corpus/227-Translate text - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.867815,
+    "ast_hash": "6aab2c3bb4303ae1ac9a34d9081c9704",
+    "semantic_hash": "6aab2c3bb4303ae1ac9a34d9081c9704"
+  },
+  "corpus/228-Translate text and speech with Microsoft Foundry Tools - AI-103 - Episode 21.md": {
+    "mtime": 1790265117.869832,
+    "ast_hash": "999f6a947fc64c5e5b2cca1584e405be",
+    "semantic_hash": "999f6a947fc64c5e5b2cca1584e405be"
+  },
+  "corpus/229-Translation in Microsoft Foundry - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8740606,
+    "ast_hash": "771acc3937bf6eda15dafe405c867697",
+    "semantic_hash": "771acc3937bf6eda15dafe405c867697"
+  },
+  "corpus/23-Configure retrieval with Foundry IQ - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8760748,
+    "ast_hash": "4f68dbcfe322e64f90006f6a6807e883",
+    "semantic_hash": "4f68dbcfe322e64f90006f6a6807e883"
+  },
+  "corpus/230-Understand AI Agents and Microsoft Foundry Agent Service - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.879117,
+    "ast_hash": "31cf221bc09a71d6aae207c78001168b",
+    "semantic_hash": "31cf221bc09a71d6aae207c78001168b"
+  },
+  "corpus/231-Understand Agent Orchestration - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8836708,
+    "ast_hash": "6f353b893b5e75384bb7f6c88db536a2",
+    "semantic_hash": "6f353b893b5e75384bb7f6c88db536a2"
+  },
+  "corpus/232-Understand Foundry agent publishing options - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8877325,
+    "ast_hash": "09f36a0286c463fd2457ba38cb989fd4",
+    "semantic_hash": "09f36a0286c463fd2457ba38cb989fd4"
+  },
+  "corpus/233-Understand MCP Tool Discovery - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8897471,
+    "ast_hash": "372848e476370067f35b76233852287f",
+    "semantic_hash": "372848e476370067f35b76233852287f"
+  },
+  "corpus/234-Understand Microsoft Agent Framework AI agents - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8948023,
+    "ast_hash": "fd45f1c988f8acae6832256a122b8e15",
+    "semantic_hash": "fd45f1c988f8acae6832256a122b8e15"
+  },
+  "corpus/235-Understand the Azure Language MCP server - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.8968203,
+    "ast_hash": "0f3dac8a0b24e456f13028ada1e6153e",
+    "semantic_hash": "0f3dac8a0b24e456f13028ada1e6153e"
+  },
+  "corpus/236-Understand the Azure Speech MCP server - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9012108,
+    "ast_hash": "9f504eb92060ef9dc0f9a4b9e55567fd",
+    "semantic_hash": "9f504eb92060ef9dc0f9a4b9e55567fd"
+  },
+  "corpus/237-Understand the Microsoft Agent Framework - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9032276,
+    "ast_hash": "cbc3c1046f8ce26268117a9d757775b5",
+    "semantic_hash": "cbc3c1046f8ce26268117a9d757775b5"
+  },
+  "corpus/238-Understand workflows - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9070518,
+    "ast_hash": "64ab6eb987006dd6adad6741b9c75088",
+    "semantic_hash": "64ab6eb987006dd6adad6741b9c75088"
+  },
+  "corpus/239-Understanding RAG for agents - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9114952,
+    "ast_hash": "6d141b8de33d6e06a7a07941f0c4b014",
+    "semantic_hash": "6d141b8de33d6e06a7a07941f0c4b014"
+  },
+  "corpus/24-Connect and use the Language MCP server with an agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9163177,
+    "ast_hash": "2c76f8b3d23840ab568e8f786d508747",
+    "semantic_hash": "2c76f8b3d23840ab568e8f786d508747"
+  },
+  "corpus/240-Use Azure AI agents with MCP servers - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9203527,
+    "ast_hash": "f8a4f3d641cbff7c94f6627919c7ad4f",
+    "semantic_hash": "f8a4f3d641cbff7c94f6627919c7ad4f"
+  },
+  "corpus/241-Use Concurrent Orchestration - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9250276,
+    "ast_hash": "0935d90bb77664a45eadcbe8fd8836c4",
+    "semantic_hash": "0935d90bb77664a45eadcbe8fd8836c4"
+  },
+  "corpus/242-Use Group Chat Orchestration - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.929029,
+    "ast_hash": "9dfb78519515d0828ceda2c2d3588a26",
+    "semantic_hash": "9dfb78519515d0828ceda2c2d3588a26"
+  },
+  "corpus/243-Use Handoff Orchestration - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9308336,
+    "ast_hash": "d28205ab3628429852b7c8eae1638d7a",
+    "semantic_hash": "d28205ab3628429852b7c8eae1638d7a"
+  },
+  "corpus/244-Use Magentic Orchestration - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9323454,
+    "ast_hash": "e0649bc84a026624d1e5299b7f7b66ed",
+    "semantic_hash": "e0649bc84a026624d1e5299b7f7b66ed"
+  },
+  "corpus/245-Use Sequential Orchestration - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.934359,
+    "ast_hash": "4c086e901e1d60f7e29e91f9b2fe170f",
+    "semantic_hash": "4c086e901e1d60f7e29e91f9b2fe170f"
+  },
+  "corpus/246-Use Speech Synthesis Markup Language - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.936372,
+    "ast_hash": "b7d37d8c1fb15646d54cb42166a04259",
+    "semantic_hash": "b7d37d8c1fb15646d54cb42166a04259"
+  },
+  "corpus/247-Use Workflows in Code - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.938386,
+    "ast_hash": "193dc344df2251ccbc56683ff41d5239",
+    "semantic_hash": "193dc344df2251ccbc56683ff41d5239"
+  },
+  "corpus/248-Use a vision-capable model in the Microsoft Foundry portal - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.94264,
+    "ast_hash": "ea34bd24284a3cd7f53a2fdefd426c5a",
+    "semantic_hash": "ea34bd24284a3cd7f53a2fdefd426c5a"
+  },
+  "corpus/249-Use prebuilt models - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9488447,
+    "ast_hash": "49deb22276f5d200d72c1a6e6226fcd2",
+    "semantic_hash": "49deb22276f5d200d72c1a6e6226fcd2"
+  },
+  "corpus/25-Connect and use the Speech MCP server with an agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9528735,
+    "ast_hash": "e447072b499de863bcb9842d86658ee2",
+    "semantic_hash": "e447072b499de863bcb9842d86658ee2"
+  },
+  "corpus/250-Use the Content Understanding API - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.954888,
+    "ast_hash": "7dd62a380cbc852116df6368b9a07f63",
+    "semantic_hash": "7dd62a380cbc852116df6368b9a07f63"
+  },
+  "corpus/251-Use the Document Intelligence Studio - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9569037,
+    "ast_hash": "ff13b5d1a3c6ce2bfe2a919def95390a",
+    "semantic_hash": "ff13b5d1a3c6ce2bfe2a919def95390a"
+  },
+  "corpus/252-Use the Speech to Text API - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9600863,
+    "ast_hash": "d3a04882abd84eb7a9bd315a27a4248e",
+    "semantic_hash": "d3a04882abd84eb7a9bd315a27a4248e"
+  },
+  "corpus/253-Use the Text to Speech API - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9610858,
+    "ast_hash": "16092e285104e9f6e27a89e4a5171d2b",
+    "semantic_hash": "16092e285104e9f6e27a89e4a5171d2b"
+  },
+  "corpus/254-Use the code_interpreter tool - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.963083,
+    "ast_hash": "5e15627eddc3a346ba0279b00638bc95",
+    "semantic_hash": "5e15627eddc3a346ba0279b00638bc95"
+  },
+  "corpus/255-Use the file_search tool - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9650834,
+    "ast_hash": "42db989a9fe879993ec67224cd01ae24",
+    "semantic_hash": "42db989a9fe879993ec67224cd01ae24"
+  },
+  "corpus/256-Use the function tool - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9670844,
+    "ast_hash": "b2798caedb8402068f0d61fdb14d735a",
+    "semantic_hash": "b2798caedb8402068f0d61fdb14d735a"
+  },
+  "corpus/257-Use the web_search tool - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9670844,
+    "ast_hash": "cca6afca312ec3c7251a5a8e61c6db9c",
+    "semantic_hash": "cca6afca312ec3c7251a5a8e61c6db9c"
+  },
+  "corpus/258-What are image-generation models- - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9693062,
+    "ast_hash": "a86ae069c8a6d55408aa652e3d186b48",
+    "semantic_hash": "a86ae069c8a6d55408aa652e3d186b48"
+  },
+  "corpus/259-What are tools- - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.971323,
+    "ast_hash": "514ee3a8834ff0e435d7aaf26357cd98",
+    "semantic_hash": "514ee3a8834ff0e435d7aaf26357cd98"
+  },
+  "corpus/26-Connect to your A2A Agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9737418,
+    "ast_hash": "b854882b29ca236ef942fbb75e04ce9e",
+    "semantic_hash": "b854882b29ca236ef942fbb75e04ce9e"
+  },
+  "corpus/260-What is AI- - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9757614,
+    "ast_hash": "e3bb975842848aa8e308c204024b4954",
+    "semantic_hash": "e3bb975842848aa8e308c204024b4954"
+  },
+  "corpus/261-What is Azure AI Search- - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9767594,
+    "ast_hash": "449214624653e7bd834acbd7de69a0d0",
+    "semantic_hash": "449214624653e7bd834acbd7de69a0d0"
+  },
+  "corpus/262-What is Azure Content Understanding- - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.981046,
+    "ast_hash": "1cf33f7293c3451169e00e0d582f6d82",
+    "semantic_hash": "1cf33f7293c3451169e00e0d582f6d82"
+  },
+  "corpus/263-What is Azure Document Intelligence- - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9830682,
+    "ast_hash": "09d348ba24b647b33a277ee56ab69913",
+    "semantic_hash": "09d348ba24b647b33a277ee56ab69913"
+  },
+  "corpus/264-What is Content Understanding- - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.985085,
+    "ast_hash": "ec781265909ab15fb227654bf5888813",
+    "semantic_hash": "ec781265909ab15fb227654bf5888813"
+  },
+  "corpus/265-Why use custom tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.987103,
+    "ast_hash": "dc62d137a564671858abf0485f1ce4e0",
+    "semantic_hash": "dc62d137a564671858abf0485f1ce4e0"
+  },
+  "corpus/27-Course AI-103T00-A- Develop AI apps and agents on Azure - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9915175,
+    "ast_hash": "828c4a14bea13328dac76319fa4ce144",
+    "semantic_hash": "828c4a14bea13328dac76319fa4ce144"
+  },
+  "corpus/28-Course Preview - AI-103 - Develop AI apps and agents on Azure.md": {
+    "mtime": 1790265117.9945195,
+    "ast_hash": "30577d146d0135c6818f6d303ce621f3",
+    "semantic_hash": "30577d146d0135c6818f6d303ce621f3"
+  },
+  "corpus/29-Create a Content Understanding analyzer - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9965172,
+    "ast_hash": "7946185005c6bdaeb4bd4338636572d8",
+    "semantic_hash": "7946185005c6bdaeb4bd4338636572d8"
+  },
+  "corpus/3-Add agents to a workflow - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9988315,
+    "ast_hash": "624fe90182eb55a4be0e12b95131a544",
+    "semantic_hash": "624fe90182eb55a4be0e12b95131a544"
+  },
+  "corpus/30-Create a Content Understanding analyzer - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9988315,
+    "ast_hash": "09973ecdb09f39aaec7b4f92ea7329b4",
+    "semantic_hash": "09973ecdb09f39aaec7b4f92ea7329b4"
+  },
+  "corpus/31-Create a Voice Live agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9988315,
+    "ast_hash": "01f69ecb7dd06fc7261a5e664f9b0386",
+    "semantic_hash": "01f69ecb7dd06fc7261a5e664f9b0386"
+  },
+  "corpus/32-Create a client application that uses an image generation model - Training - Microsoft Learn.md": {
+    "mtime": 1790265117.9988315,
+    "ast_hash": "22c868757129f8d0cb524336369095de",
+    "semantic_hash": "22c868757129f8d0cb524336369095de"
+  },
+  "corpus/33-Create a knowledge mining solution with Azure AI Search - AI-103 - Episode 26.md": {
+    "mtime": 1790265118.0093844,
+    "ast_hash": "b8349708228fcdf5d050f889a135f179",
+    "semantic_hash": "b8349708228fcdf5d050f889a135f179"
+  },
+  "corpus/34-Create an Azure AI agent with Microsoft Agent Framework - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.0111244,
+    "ast_hash": "79d552a3effb077626505173cbee97d9",
+    "semantic_hash": "79d552a3effb077626505173cbee97d9"
+  },
+  "corpus/35-Create speech-enabled apps with Microsoft Foundry - AI-103 - Episode 18.md": {
+    "mtime": 1790265118.0111244,
+    "ast_hash": "a871f8091ef631b147bc6d75da2d11b4",
+    "semantic_hash": "a871f8091ef631b147bc6d75da2d11b4"
+  },
+  "corpus/36-Create workflows in Microsoft Foundry - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.0169322,
+    "ast_hash": "9dc8a12c94b790b6223554f5653c7233",
+    "semantic_hash": "9dc8a12c94b790b6223554f5653c7233"
+  },
+  "corpus/37-Define an A2A Agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.0189462,
+    "ast_hash": "930d051aa7a64879e11f484c4e4372dc",
+    "semantic_hash": "930d051aa7a64879e11f484c4e4372dc"
+  },
+  "corpus/38-Deploy a video generating model - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.0238614,
+    "ast_hash": "9b0bf5f508afd60a352fcf4c18511a06",
+    "semantic_hash": "9b0bf5f508afd60a352fcf4c18511a06"
+  },
+  "corpus/39-Deploy models to endpoints - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.026081,
+    "ast_hash": "85cd18603a3faa62b9ced3b21a8cea9e",
+    "semantic_hash": "85cd18603a3faa62b9ced3b21a8cea9e"
+  },
+  "corpus/4-Add tools to Azure AI agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.0280793,
+    "ast_hash": "c3ac6fcfdd0c1b7e3e26c57f2e135ddf",
+    "semantic_hash": "c3ac6fcfdd0c1b7e3e26c57f2e135ddf"
+  },
+  "corpus/40-Detect language - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.031921,
+    "ast_hash": "63ae151b8680d2bef9463475dc5e06dd",
+    "semantic_hash": "63ae151b8680d2bef9463475dc5e06dd"
+  },
+  "corpus/41-Develop AI agents with Microsoft Foundry and Visual Studio Code - AI-103 - Episode 7.md": {
+    "mtime": 1790265118.0359554,
+    "ast_hash": "8863f69837913b0c4f85699765145ba4",
+    "semantic_hash": "8863f69837913b0c4f85699765145ba4"
+  },
+  "corpus/42-Develop a generative AI chat app with Microsoft Foundry - AI-103 - Episode 3.md": {
+    "mtime": 1790265118.037974,
+    "ast_hash": "c1ec3352132354ac606282a7cc2ee96b",
+    "semantic_hash": "c1ec3352132354ac606282a7cc2ee96b"
+  },
+  "corpus/43-Develop a speech agent with the Azure Speech MCP server - AI-103 - Episode 19.md": {
+    "mtime": 1790265118.0414767,
+    "ast_hash": "5249b0f5764a93cfc132c69f8d0ca064",
+    "semantic_hash": "5249b0f5764a93cfc132c69f8d0ca064"
+  },
+  "corpus/44-Develop a speech-capable generative AI application - AI-103 - Episode 17.md": {
+    "mtime": 1790265118.0510688,
+    "ast_hash": "4a71cd25d4619eff3595858735246f11",
+    "semantic_hash": "4a71cd25d4619eff3595858735246f11"
+  },
+  "corpus/45-Develop a text analysis agent with the Azure Language MCP server - AI-103 - Episode 16.md": {
+    "mtime": 1790265118.0571122,
+    "ast_hash": "90e39dc130417993e6b1eb7f96343c64",
+    "semantic_hash": "90e39dc130417993e6b1eb7f96343c64"
+  },
+  "corpus/46-Develop a vision-based chat app - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.0624418,
+    "ast_hash": "6a6381076433c06e9242bec933d2bd9b",
+    "semantic_hash": "6a6381076433c06e9242bec933d2bd9b"
+  },
+  "corpus/47-Develop a vision-enabled generative AI application - AI-103 - Episode 22.md": {
+    "mtime": 1790265118.0707066,
+    "ast_hash": "9f08a611604d2302446c1a1b1a5c6bb5",
+    "semantic_hash": "9f08a611604d2302446c1a1b1a5c6bb5"
+  },
+  "corpus/48-Develop an AI agent with the Microsoft Agent Framework - AI-103 - Episode 13.md": {
+    "mtime": 1790265118.0761776,
+    "ast_hash": "1c8cd84e4e5fe51b353a8b12b9aeab19",
+    "semantic_hash": "1c8cd84e4e5fe51b353a8b12b9aeab19"
+  },
+  "corpus/49-Develop an Azure Speech Voice Live agent in Microsoft Foundry - AI-103 - Episode 20.md": {
+    "mtime": 1790265118.0795715,
+    "ast_hash": "fd90a9ff5a24181324021ee1e772c026",
+    "semantic_hash": "fd90a9ff5a24181324021ee1e772c026"
+  },
+  "corpus/5-Advanced - Use Microsoft 365 Agents Toolkit for complex integration scenarios - Training - Microsoft.md": {
+    "mtime": 1790265118.0924468,
+    "ast_hash": "1ca41850c503a6509b3fb3160cb3d927",
+    "semantic_hash": "1ca41850c503a6509b3fb3160cb3d927"
+  },
+  "corpus/50-Develop generative AI apps that use tools - AI-103 - Episode 4.md": {
+    "mtime": 1790265118.0961525,
+    "ast_hash": "712bc54742292fd9f3ac9599e3f8e802",
+    "semantic_hash": "712bc54742292fd9f3ac9599e3f8e802"
+  },
+  "corpus/51-Developer Tools and SDKs - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.0996654,
+    "ast_hash": "1e7fa82fd2f488910a65420f8575535f",
+    "semantic_hash": "1e7fa82fd2f488910a65420f8575535f"
+  },
+  "corpus/52-Enrich extracted data with AI skills - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1016808,
+    "ast_hash": "b0fba402ca99d4dde38dbddfe345c487",
+    "semantic_hash": "b0fba402ca99d4dde38dbddfe345c487"
+  },
+  "corpus/53-Evaluate model performance - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1041949,
+    "ast_hash": "9d63dac5f847e7d8a1fd92d510af1a6a",
+    "semantic_hash": "9d63dac5f847e7d8a1fd92d510af1a6a"
+  },
+  "corpus/54-Exercise - Analyze documents with Document Intelligence - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1084714,
+    "ast_hash": "44ad4aa93a13842b29f3578cd2c8bccf",
+    "semantic_hash": "44ad4aa93a13842b29f3578cd2c8bccf"
+  },
+  "corpus/55-Exercise - Analyze images with Content Understanding - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.111471,
+    "ast_hash": "c0c1f39f668a96c5c9de02676a3919f0",
+    "semantic_hash": "c0c1f39f668a96c5c9de02676a3919f0"
+  },
+  "corpus/56-Exercise - Analyze text - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1134741,
+    "ast_hash": "8b477d9498fafb4b89ac92714e27fd93",
+    "semantic_hash": "8b477d9498fafb4b89ac92714e27fd93"
+  },
+  "corpus/57-Exercise - Apply guardrails to prevent the output of harmful content - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1154356,
+    "ast_hash": "99f7e1d856fa90bd6bed9d70349f3a51",
+    "semantic_hash": "99f7e1d856fa90bd6bed9d70349f3a51"
+  },
+  "corpus/58-Exercise - Build an agent with custom tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1194725,
+    "ast_hash": "fd96840fbd9ec14f4e52f82761adc38e",
+    "semantic_hash": "fd96840fbd9ec14f4e52f82761adc38e"
+  },
+  "corpus/59-Exercise - Build and Deploy an AI Agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1214886,
+    "ast_hash": "a31f9d574de6dfca650dbc1047f9a2ed",
+    "semantic_hash": "a31f9d574de6dfca650dbc1047f9a2ed"
+  },
+  "corpus/6-Analyze content - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1248226,
+    "ast_hash": "7332cac2156569164292e9ff163aae24",
+    "semantic_hash": "7332cac2156569164292e9ff163aae24"
+  },
+  "corpus/60-Exercise - Connect MCP Tools to Azure AI Agents - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1278207,
+    "ast_hash": "7faa87a866d9396fb228adda94648f6a",
+    "semantic_hash": "7faa87a866d9396fb228adda94648f6a"
+  },
+  "corpus/61-Exercise - Connect to remote Azure AI Agents with the A2A protocol - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.129822,
+    "ast_hash": "34e94e1bf9ffe113ff446399f191858f",
+    "semantic_hash": "34e94e1bf9ffe113ff446399f191858f"
+  },
+  "corpus/62-Exercise - Create a generative AI chat app - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.131588,
+    "ast_hash": "31c58f85a71b42effd2ddc6d6409966a",
+    "semantic_hash": "31c58f85a71b42effd2ddc6d6409966a"
+  },
+  "corpus/63-Exercise - Create a generative AI chat app that uses tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.131588,
+    "ast_hash": "c8ee1aa70853e3ad62202ebbf4541914",
+    "semantic_hash": "c8ee1aa70853e3ad62202ebbf4541914"
+  },
+  "corpus/64-Exercise - Create a knowledge mining solution - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1377435,
+    "ast_hash": "e95f6f134f9d5793645f9940ed0206f7",
+    "semantic_hash": "e95f6f134f9d5793645f9940ed0206f7"
+  },
+  "corpus/65-Exercise - Create a speech-enabled app - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1402142,
+    "ast_hash": "3e051b4622ebd763aaca462ef804a993",
+    "semantic_hash": "3e051b4622ebd763aaca462ef804a993"
+  },
+  "corpus/66-Exercise - Create an agent-driven workflow - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.14249,
+    "ast_hash": "4e106b2a3fa1200b32fe89af4391d72b",
+    "semantic_hash": "4e106b2a3fa1200b32fe89af4391d72b"
+  },
+  "corpus/67-Exercise - Develop a Content Understanding client application - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1449678,
+    "ast_hash": "7823759b03395342f1a5c026b8085855",
+    "semantic_hash": "7823759b03395342f1a5c026b8085855"
+  },
+  "corpus/68-Exercise - Develop a Voice Live Agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.147138,
+    "ast_hash": "d841ae8109028c22164fdf0dc06b8f99",
+    "semantic_hash": "d841ae8109028c22164fdf0dc06b8f99"
+  },
+  "corpus/69-Exercise - Develop a multi-agent solution - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.147138,
+    "ast_hash": "376d6924282fff765e7917db1b671dd9",
+    "semantic_hash": "376d6924282fff765e7917db1b671dd9"
+  },
+  "corpus/7-Analyze documents with Content Understanding - AI-103 - Episode 25.md": {
+    "mtime": 1790265118.1521366,
+    "ast_hash": "ad673bd69ee268e476b08f5f38933969",
+    "semantic_hash": "ad673bd69ee268e476b08f5f38933969"
+  },
+  "corpus/70-Exercise - Develop a text analysis agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1541533,
+    "ast_hash": "9aa3498223ef17ff9739797cc2ab08f7",
+    "semantic_hash": "9aa3498223ef17ff9739797cc2ab08f7"
+  },
+  "corpus/71-Exercise - Develop a vision-enabled chat app - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1582313,
+    "ast_hash": "fc045029ef8ee7f0b2bbd946caef2506",
+    "semantic_hash": "fc045029ef8ee7f0b2bbd946caef2506"
+  },
+  "corpus/72-Exercise - Develop an Azure AI agent with the Microsoft Agent Framework SDK - Training - Microsoft L.md": {
+    "mtime": 1790265118.1602223,
+    "ast_hash": "5d5f2df46c4f8075f0a756c956663c41",
+    "semantic_hash": "5d5f2df46c4f8075f0a756c956663c41"
+  },
+  "corpus/73-Exercise - Extract information from multimodal content - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.163223,
+    "ast_hash": "ed7c92a740ea4c1d5334353536a58152",
+    "semantic_hash": "ed7c92a740ea4c1d5334353536a58152"
+  },
+  "corpus/74-Exercise - Generate images with AI - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1650093,
+    "ast_hash": "6387cde3f3f153b241cbaf3a7eaac0e4",
+    "semantic_hash": "6387cde3f3f153b241cbaf3a7eaac0e4"
+  },
+  "corpus/75-Exercise - Generate video with Sora 2 in Microsoft Foundry - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1677847,
+    "ast_hash": "bf56ff691ea11106f786f8e47a4a5009",
+    "semantic_hash": "bf56ff691ea11106f786f8e47a4a5009"
+  },
+  "corpus/76-Exercise - Integrate an AI agent with Foundry IQ - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1677847,
+    "ast_hash": "8cccac0382d25366320ca64c622377ae",
+    "semantic_hash": "8cccac0382d25366320ca64c622377ae"
+  },
+  "corpus/77-Exercise - Optimize generative AI model performance - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1737337,
+    "ast_hash": "2b9923d17addfad8fa3bb6ca9ee969f1",
+    "semantic_hash": "2b9923d17addfad8fa3bb6ca9ee969f1"
+  },
+  "corpus/78-Exercise - Prepare for an AI development project - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.175751,
+    "ast_hash": "1338dab43b63f3b17d9c2c7ee4f4b8dd",
+    "semantic_hash": "1338dab43b63f3b17d9c2c7ee4f4b8dd"
+  },
+  "corpus/79-Exercise - Publish a Foundry agent to Teams - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1785264,
+    "ast_hash": "ffb52e3bcdebc35cef7dfa0bc4ddc740",
+    "semantic_hash": "ffb52e3bcdebc35cef7dfa0bc4ddc740"
+  },
+  "corpus/8-Analyze images with Content Understanding - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.179128,
+    "ast_hash": "266e13102573e99bb1b24b416bb2c47d",
+    "semantic_hash": "266e13102573e99bb1b24b416bb2c47d"
+  },
+  "corpus/80-Exercise - Select, deploy, and evaluate models - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.184558,
+    "ast_hash": "9ff076d355c00c55dba8679cf0628f8c",
+    "semantic_hash": "9ff076d355c00c55dba8679cf0628f8c"
+  },
+  "corpus/81-Exercise - Translate text and speech - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1865745,
+    "ast_hash": "311c87f8198c729f152fc8c599e301c1",
+    "semantic_hash": "311c87f8198c729f152fc8c599e301c1"
+  },
+  "corpus/82-Exercise - Use Azure Speech in an agent - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1887233,
+    "ast_hash": "aa8e0e6cc12a431a38d6cc344b787c70",
+    "semantic_hash": "aa8e0e6cc12a431a38d6cc344b787c70"
+  },
+  "corpus/83-Exercise - Use speech-capable generative AI models - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.191816,
+    "ast_hash": "629ae5767a542775f2814eb0c25c13d0",
+    "semantic_hash": "629ae5767a542775f2814eb0c25c13d0"
+  },
+  "corpus/84-Explore Development Approaches - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.1948106,
+    "ast_hash": "f0bed31e8ea13b5920bcdc07f976cf81",
+    "semantic_hash": "f0bed31e8ea13b5920bcdc07f976cf81"
+  },
+  "corpus/85-Explore Foundry IQ - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.197816,
+    "ast_hash": "b8e67c6eb837dbeeffb09d4f329f103f",
+    "semantic_hash": "b8e67c6eb837dbeeffb09d4f329f103f"
+  },
+  "corpus/86-Explore image-generation models in Microsoft Foundry portal - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.199434,
+    "ast_hash": "8030330e8c88c427c7bb63e79a5e899f",
+    "semantic_hash": "8030330e8c88c427c7bb63e79a5e899f"
+  },
+  "corpus/87-Explore the AI Voice Live Client Library for Python - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.199434,
+    "ast_hash": "2b7f80a5345796a8333a308bc9361105",
+    "semantic_hash": "2b7f80a5345796a8333a308bc9361105"
+  },
+  "corpus/88-Explore the Azure Voice Live API - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.199434,
+    "ast_hash": "69fd3656b6f69c16b46d3ce217ba482f",
+    "semantic_hash": "69fd3656b6f69c16b46d3ce217ba482f"
+  },
+  "corpus/89-Explore the model catalog - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.2071106,
+    "ast_hash": "3f48786202c15ccbb0722cfecc7fc227",
+    "semantic_hash": "3f48786202c15ccbb0722cfecc7fc227"
+  },
+  "corpus/9-Analyze images with Content Understanding - AI-103 - Episode 24.md": {
+    "mtime": 1790265118.2106657,
+    "ast_hash": "a3aecc02ede0d3c912ce15d40534deaf",
+    "semantic_hash": "a3aecc02ede0d3c912ce15d40534deaf"
+  },
+  "corpus/90-Explore with the model playground - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.2106657,
+    "ast_hash": "398071cc600d3cb2494ed5389a307e5d",
+    "semantic_hash": "398071cc600d3cb2494ed5389a307e5d"
+  },
+  "corpus/91-Extend Agent Capabilities with Tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.2106657,
+    "ast_hash": "a93557a1d6922a07ec23491278fa4960",
+    "semantic_hash": "a93557a1d6922a07ec23491278fa4960"
+  },
+  "corpus/92-Extract data with an indexer - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.2168121,
+    "ast_hash": "b5ae9492df7526c3cab7fe78c8598402",
+    "semantic_hash": "b5ae9492df7526c3cab7fe78c8598402"
+  },
+  "corpus/93-Extract entities - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.2188232,
+    "ast_hash": "cb1c1d867911c05b20d1a1c24a216150",
+    "semantic_hash": "cb1c1d867911c05b20d1a1c24a216150"
+  },
+  "corpus/94-Extract personally identifiable information (PII) - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.2228477,
+    "ast_hash": "81e7321822e42cbb741b8a78a7601868",
+    "semantic_hash": "81e7321822e42cbb741b8a78a7601868"
+  },
+  "corpus/95-Fine-tune a model for consistent behavior - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.2258565,
+    "ast_hash": "86e8ee67660a164dab8356181c0a422a",
+    "semantic_hash": "86e8ee67660a164dab8356181c0a422a"
+  },
+  "corpus/96-Foundry Tools - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.227636,
+    "ast_hash": "15743fc7887c9c2dc1eb772ee4f7ece1",
+    "semantic_hash": "15743fc7887c9c2dc1eb772ee4f7ece1"
+  },
+  "corpus/97-Generate images and video - AI-103 - Episode 23.md": {
+    "mtime": 1790265118.229843,
+    "ast_hash": "db59e8d867617fed6168f3040884a96e",
+    "semantic_hash": "db59e8d867617fed6168f3040884a96e"
+  },
+  "corpus/98-Generate responses with the ChatCompletions API - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.229843,
+    "ast_hash": "53f3a8bd7c14eaa84f48b1e1d93638db",
+    "semantic_hash": "53f3a8bd7c14eaa84f48b1e1d93638db"
+  },
+  "corpus/99-Generate responses with the Responses API in the Foundry SDK - Training - Microsoft Learn.md": {
+    "mtime": 1790265118.229843,
+    "ast_hash": "4f11b3555d324366166873b8bfb4662c",
+    "semantic_hash": "4f11b3555d324366166873b8bfb4662c"
+  }
+}
