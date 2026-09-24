@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Bringing Foundry agents into Teams and Microsoft 365 Copilot, with publishing, Work IQ data access, permissions, testing, and Toolkit extensions."
 area: agents
 source_ids: [SRC-2, SRC-5, SRC-111, SRC-125, SRC-185, SRC-209, SRC-222, SRC-232]
-objectives: [P04, P05, P12, G08, G09, G12]
+objectives: [P04, P05, P12, G09]
 objective_gaps: []
 tags: []
 aliases: ["integrate your agent with Microsoft 365", "Microsoft 365 data access", "Teams agent integration", "Microsoft 365 Copilot agent integration"]

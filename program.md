@@ -36,7 +36,7 @@ Generated files are rebuilt by their scripts, never hand-edited: `wiki/index.md`
 
 - `corpus/**` — raw evidence (the app also syncs it; never write inside it).
 - `scripts/**`, including `scripts/data/**` — the verifier and its registries.
-- `loop/rubric.md`, `loop/verifier.lock`, `loop/scores.jsonl` (only `loop_score.py` appends).
+- `loop/rubric.md`, `loop/panel.txt`, `loop/verifier.lock`, `loop/scores.jsonl` (only `loop_score.py` appends).
 - `schema.md`, `program.md`, `CLAUDE.md`, `app/**`, `design/**`.
 
 `scripts/loop_score.py` refuses to score (exit 2) if any locked verifier file changed. A
@@ -61,19 +61,23 @@ generator that can edit its test will optimise the test instead of the wiki.
 
 1. **Mechanical:** `python scripts/loop_score.py` — runs the lint and prints
    `score=[errors, locator problems, uncovered sources, warnings, unlabelled claim lines]`
-   against the best recorded score, with a verdict: IMPROVED, SAME or REGRESSED.
-2. **Judgement:** a reviewer agent that did not write the pages takes the cycle's sample —
-   `python scripts/loop_sample.py --cycle N` (20 pages, stratified across sources, concepts,
-   entities and synthesis, pages changed this cycle first; seeded, so reproducible) — checks each
-   against `loop/rubric.md` by reading the cited raw lines, and returns PASS/FAIL per page with the
-   failing claim, its locator and what the raw text says. It writes nothing (`git status` must be
-   unchanged after it runs). Record it with `--judgement <sampled>:<failing>`.
+   against the best score recorded **under the same lint rules** (a new rule starts a new
+   baseline), with a verdict: IMPROVED, SAME or REGRESSED.
+2. **Judgement:** a reviewer agent that did not write the pages judges the **fixed panel** —
+   `python scripts/loop_sample.py --panel` (the 20 pages in `loop/panel.txt`, stratified across
+   sources, concepts, entities and synthesis) — against `loop/rubric.md`, reading the cited raw
+   lines, and returns PASS/FAIL per page with the failing claim, its locator and what the raw text
+   says. It writes nothing (`git status` must be unchanged after it runs). Record it with
+   `--judgement <judged>:<failing> --panel`. Only panel runs under the same rubric move the
+   ratchet: the same pages judged by the same standard, like a fixed validation set. A rotating
+   sample (`loop_sample.py --cycle N`, changed pages first) may be judged too, to find failure
+   classes the panel misses; record it without `--panel` — it is diagnosis, not a ratchet metric.
 
 ## Done when
 
 - lint: 0 errors, 0 warnings, 265 of 265 raw sources with a source page;
 - unlabelled claim lines ≤ 2% of claim-bearing lines;
-- judgement sample: ≤ 2 of 20 pages fail the rubric;
+- judgement: ≤ 2 of the 20 fixed-panel pages fail the rubric;
 - every one of the 64 objectives has a wiki page in `objective-map`, or is recorded on
   `corpus-gaps` as not taught by the corpus.
 
@@ -90,7 +94,9 @@ generator that can edit its test will optimise the test instead of the wiki.
 2. Read `wiki/lint-report.md` and the last judgement result; pick the highest-value failure class.
 3. Write the hypothesis (one sentence) into `loop/experiments.md`.
 4. Make the change (generator, allowed files only), then regenerate navigation.
-5. Verify: `python scripts/loop_score.py --judgement S:F --record "cycle N: <hypothesis>"`.
+5. Verify: `python scripts/loop_score.py --judgement J:F --panel --record "cycle N: <hypothesis>"`
+   (J pages judged on the fixed panel, F failing). A cycle whose change touches no rubric
+   criterion (e.g. aliases only) may be verified mechanically alone; say so in the record.
 6. **Ratchet:** if the verdict is REGRESSED, revert the cycle (`git restore wiki/`) and record why.
    Otherwise keep it; the new score is the floor.
 7. Record in `loop/experiments.md`: cycle, hypothesis, change, score before → after, judgement,

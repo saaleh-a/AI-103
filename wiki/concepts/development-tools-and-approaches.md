@@ -9,7 +9,7 @@ summary: "How to choose between the Foundry portal, playgrounds, VS Code, GitHub
 area: platform
 source_ids: [SRC-14, SRC-18, SRC-51, SRC-84, SRC-90, SRC-96, SRC-155, SRC-183, SRC-190]
 objectives: [G05, G06]
-objective_gaps: []
+objective_gaps: [P08]
 tags: []
 aliases: ["developer tools and SDKs", "development approaches", "portal vs VS Code", "Foundry Toolkit"]
 ---

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Built-in tool that lets a model or agent generate and run Python in a sandbox for computation and file analysis."
 area: agents
 source_ids: [SRC-4, SRC-91, SRC-254, SRC-255, SRC-256, SRC-257, SRC-259]
-objectives: [P02, P04, G03, G08, G09]
+objectives: [P02, P04, G03, G09]
 objective_gaps: []
 tags: []
 aliases: ["code_interpreter", "Python tool", "code execution tool", "Code Interpreter"]

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Telemetry destination named for tracing conversations, latency, errors and token consumption in deployed AI apps and agents."
 area: platform
 source_ids: [SRC-196, SRC-222, SRC-223]
-objectives: [P10, G12, G15]
+objectives: [G12, G15]
 tags: ["service"]
 aliases: ["Azure Monitor Application Insights", "Azure Monitor"]
 ---

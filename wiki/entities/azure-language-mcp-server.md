@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "MCP server that exposes Azure Language text-analysis capabilities as agent tools in Foundry."
 area: language
 source_ids: [SRC-12, SRC-24, SRC-45, SRC-70, SRC-108, SRC-150, SRC-200, SRC-235]
-objectives: [P04, G08, G09]
+objectives: [P04, G09]
 objective_gaps: []
 tags: ["tool"]
 aliases: ["Language MCP server", "Azure Language tool", "Azure Language in Foundry Tools MCP server"]

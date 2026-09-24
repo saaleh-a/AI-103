@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "MCP server that lets agents discover and call Azure Speech speech-to-text and text-to-speech tools using audio files in Blob Storage."
 area: speech
 source_ids: [SRC-17, SRC-25, SRC-43, SRC-87, SRC-88, SRC-144, SRC-204, SRC-221, SRC-225, SRC-226, SRC-236]
-objectives: [P04, P12, G09, T05, T06]
+objectives: [P04, G09, T05, T06]
 objective_gaps: []
 tags: ["tool"]
 aliases: ["Speech MCP server", "Azure Speech in Foundry Tools MCP server", "Azure Speech MCP Server"]

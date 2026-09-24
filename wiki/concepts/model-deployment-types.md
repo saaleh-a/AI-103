@@ -8,7 +8,8 @@ updated: 2026-09-24
 summary: "Deployment choices in Foundry: global, data-zone, regional, provisioned, batch, serverless API, managed compute and developer deployments."
 area: platform
 source_ids: [SRC-39, SRC-188, SRC-189, SRC-191, SRC-196]
-objectives: [P05, P06, P07, G01]
+objectives: [P06, P07, G01]
+objective_gaps: [P09]
 tags: []
 aliases: ["deployment types", "Global Standard", "provisioned throughput", "serverless API", "data zone deployment", "PTU", "batch deployment", "managed compute"]
 ---

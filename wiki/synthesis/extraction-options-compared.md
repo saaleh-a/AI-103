@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Compares Content Understanding, Document Intelligence, Azure Language, vision-capable models, and AI Search enrichment for extraction."
 area: extraction
 source_ids: [SRC-8, SRC-10, SRC-12, SRC-29, SRC-30, SRC-40, SRC-52, SRC-93, SRC-94, SRC-96, SRC-117, SRC-126, SRC-165, SRC-168, SRC-224, SRC-249, SRC-251, SRC-263, SRC-264]
-objectives: [P01, P02, G09, V10, V11, V13, T01, T02, I03, I04, I06, I07, I08]
+objectives: [P01, P02, V10, V11, V13, T01, T02, I03, I04, I06, I07, I08]
 objective_gaps: []
 tags: []
 aliases: []

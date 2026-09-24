@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "VS Code extension for browsing Foundry projects, configuring agents in Designer/YAML, testing in playgrounds, and deploying hosted agents."
 area: agents
 source_ids: [SRC-20, SRC-51, SRC-84, SRC-190]
-objectives: [P07, G06, G07, G09]
+objectives: [P07, G06, G07]
 tags: ["tool"]
 aliases: ["Microsoft Foundry VS Code extension", "Microsoft Foundry extension for Visual Studio Code", "Foundry extension for Visual Studio Code", "Foundry Toolkit extension for Visual Studio Code"]
 objective_gaps: []

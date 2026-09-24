@@ -103,3 +103,21 @@ Append-only. Newest entries at the bottom. `grep "^## \[" wiki/log.md` lists the
   `loop/rubric.md`; `scripts/loop_score.py` compares judgement rates only under the same rubric
   hash; verifier re-locked. Problem solved: the reviewer lens had widened between cycles, which made
   an unchanged class of pre-existing errors look like a regression.
+
+## [2026-09-24] loop | Cycle 2 and verifier v3
+- Summary: cycle 2 audited the objective claims of all 121 concept, entity and synthesis pages
+  (24 pages trimmed; misused `objective_gaps` additions on 5 pages reverted). Kept on page-level
+  evidence although the rotating-sample judgement read 15/20: that sample was not comparable with
+  cycle 1 (see `loop/experiments.md`).
+- Verifier v3 (human decision): (1) a **fixed judgement panel** (`loop/panel.txt`, drawn once by
+  `scripts/loop_sample.py --make-panel 1`) — only panel runs under the same rubric move the ratchet;
+  rotating samples are diagnosis. (2) Rubric criterion 8 clarified: an objective is claimed when a
+  page teaches at least one named part; untaught parts go in the gap register. (3) New lint rules:
+  non-teaching units and hubs claim no objectives; `objective_gaps` must come from the gap register
+  ([[corpus-gaps]]). (4) `loop_score.py` compares mechanical scores only under the same lint rules.
+  `objective-map` now shows *taught*, *taught in part*, *named only*, *no page*.
+- Problem solved: the judgement metric was non-stationary and the objective rules were ambiguous,
+  so the ratchet could not tell a better wiki from a stricter reviewer.
+- v3 baseline: `[113, 0, 0, 45, 6]` — 107 non-teaching source pages and 6 misused gap lists now fail.
+- Updated: `scripts/lint_wiki.py`, `scripts/loop_score.py`, `scripts/loop_sample.py`,
+  `scripts/build_objective_map.py`, `loop/rubric.md`, `loop/panel.txt`, `program.md`, `schema.md` §6.

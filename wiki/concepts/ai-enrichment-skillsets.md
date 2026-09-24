@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Skillsets are ordered AI skills run by an indexer to add enriched fields before mapping content into an Azure AI Search index."
 area: retrieval
 source_ids: [SRC-52, SRC-92, SRC-130, SRC-176, SRC-181, SRC-187, SRC-261]
-objectives: [P03, G09, I01, I03, I04, I06]
+objectives: [P03, I01, I03]
 tags: []
 aliases: ["skillset", "built-in skills", "custom skills", "enrichment pipeline", "AI skills"]
 objective_gaps: []

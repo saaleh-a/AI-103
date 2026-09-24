@@ -2,7 +2,9 @@
 
 Used by a **read-only reviewer** that did not write the pages it reviews (`program.md`). The
 generator never edits this file. For each sampled page, open the raw files it cites and check
-the claims against the cited lines — not against memory of Azure.
+the claims against the cited lines — not against memory of Azure. Ratchet decisions use the fixed
+panel (`python scripts/loop_sample.py --panel`); rotating samples (`--cycle N`) look for new
+failure classes.
 
 ## Criteria
 
@@ -24,11 +26,16 @@ the claims against the cited lines — not against memory of Azure.
    knowledge dressed as a citation is the worst failure.
 7. **Useful structure** — concept and entity pages give the mechanism and the decision boundary
    against the closest confusion; links go to the right neighbours.
-8. **Honest frontmatter** — `objectives` lists only official objectives (wording in
-   `scripts/data/exam-objectives.json`) that the page's own cited evidence *other than the study
-   guide* teaches; a page on a narrower topic must not claim a broad objective whose named parts it
-   does not cover. Objectives the corpus only names belong in `objective_gaps`. Hub pages (overview,
-   master synthesis, learning path, glossary, decision boundaries) claim none.
+8. **Honest frontmatter** — judged per objective ID, using the wording in
+   `scripts/data/exam-objectives.json`. An ID in `objectives` passes when the page's own cited
+   evidence *other than the study guide* substantively teaches **at least one named part** of that
+   objective and the page is about that part (not merely adjacent to it). A broad objective's other
+   parts may be taught on other pages: missing parts are recorded once, in the gap register
+   ([[corpus-gaps]]), not required on every page. An ID fails when the page teaches none of its
+   parts, or teaches only something the objective does not ask for. `objective_gaps` may only name
+   objectives recorded in the gap register, and only where the page discusses that gap — never to
+   mean "not taught on this page". Hubs and non-teaching units claim none (the lint enforces the
+   mechanical parts of this rule; judge the rest).
 
 ## Verdict
 

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Foundry Tools text-analysis service for language detection, entity extraction, and PII detection/redaction."
 area: language
 source_ids: [SRC-10, SRC-12, SRC-40, SRC-93, SRC-94, SRC-96, SRC-127, SRC-206, SRC-227, SRC-235]
-objectives: [P01, P02, T01, T02]
+objectives: [P01, T01, T02]
 objective_gaps: []
 tags: ["service"]
 aliases: ["Azure Language in Foundry Tools", "Azure Language in Microsoft Foundry Tools", "Azure AI Language", "Azure AI Language service", "Language service", "Text Analytics"]

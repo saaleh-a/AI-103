@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Compares Speech SDK, Voice Live, speech-capable models, Speech/Language MCP, Translator, Azure Language, and LLM translation."
 area: speech
 source_ids: [SRC-10, SRC-12, SRC-17, SRC-25, SRC-40, SRC-49, SRC-88, SRC-94, SRC-96, SRC-115, SRC-139, SRC-166, SRC-221, SRC-225, SRC-226, SRC-227, SRC-229, SRC-235, SRC-236, SRC-252, SRC-253]
-objectives: [P01, P02, P04, G01, G08, G09, T01, T02, T03, T05, T06, T08]
+objectives: [P01, P02, P04, G01, G09, T01, T02, T03, T05, T06, T08]
 objective_gaps: []
 tags: []
 aliases: []

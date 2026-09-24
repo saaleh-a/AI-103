@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "No-code Foundry testing surfaces for model, agent, image, video and multimodal behavior before app integration."
 area: models
 source_ids: [SRC-14, SRC-39, SRC-53, SRC-86, SRC-90, SRC-100, SRC-189, SRC-197, SRC-248]
-objectives: [G01, G04, V01, V02, V06]
+objectives: [G04]
 objective_gaps: []
 tags: []
 aliases: ["chat playground", "agent playground", "model playground", "images playground", "video playground"]

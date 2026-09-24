@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Foundry Tools translation service for text, transliteration, documents, supported-language lists, and custom translation models."
 area: language
 source_ids: [SRC-96, SRC-139, SRC-166, SRC-218, SRC-227, SRC-228, SRC-229]
-objectives: [P01, P02, T03]
+objectives: [P01, T03]
 objective_gaps: []
 tags: ["service"]
 aliases: ["Azure Translator in Foundry Tools", "Translator", "Azure AI Translator", "Azure AI Translate", "TextTranslationClient"]

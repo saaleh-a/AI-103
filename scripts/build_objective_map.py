@@ -8,8 +8,10 @@ guide, SRC-191) and two frontmatter fields on concept, entity and synthesis page
 - `objective_gaps` — objectives the page discusses only to record that the corpus names them
                      (usually in the study guide) without teaching them.
 
-Each objective gets a status: **taught** (at least one page teaches it), **named only** (pages
-record it as a corpus gap) or **no page**. Deterministic; never edit by hand.
+Each objective gets a status: **taught** (at least one page teaches it and no gap is recorded),
+**taught in part** (taught, and the gap register [[corpus-gaps]] records an untaught part),
+**named only** (no page teaches it; the gap is recorded) or **no page**. Deterministic; never edit
+by hand.
 
 Usage (from the repo root):  python scripts/build_objective_map.py
 """
@@ -57,11 +59,14 @@ def main() -> None:
             sources_for[o] |= set(fm.get("source_ids") or [])
         for o in fm.get("objective_gaps") or []:
             named[o].append((p.stem, fm))
-    has_gaps = (WIKI / "synthesis" / "corpus-gaps.md").exists()
+    reg_path = WIKI / "synthesis" / "corpus-gaps.md"
+    has_gaps = reg_path.exists()
+    register = set((load_fm(reg_path).get("objective_gaps") or [])) if has_gaps else set()
     today = _dt.date.today().isoformat()
-    n_taught = sum(1 for o in objectives if taught.get(o["id"]))
-    n_named = sum(1 for o in objectives if not taught.get(o["id"]) and named.get(o["id"]))
-    n_none = len(objectives) - n_taught - n_named
+    n_full = sum(1 for o in objectives if taught.get(o["id"]) and o["id"] not in register)
+    n_part = sum(1 for o in objectives if taught.get(o["id"]) and o["id"] in register)
+    n_named = sum(1 for o in objectives if not taught.get(o["id"]) and (named.get(o["id"]) or o["id"] in register))
+    n_none = len(objectives) - n_full - n_part - n_named
     out = [
         "---",
         "title: Exam objective map",
@@ -70,7 +75,7 @@ def main() -> None:
         "confidence: high",
         "created: 2026-09-24",
         f"updated: {today}",
-        f"summary: The 64 official AI-103 objectives mapped to wiki pages — {n_taught} taught by the corpus, {n_named} named only, {n_none} with no page.",
+        f"summary: The 64 official AI-103 objectives mapped to wiki pages — {n_full} taught, {n_part} taught in part, {n_named} named only, {n_none} with no page.",
         "area: exam",
         "source_ids: [SRC-191]",
         "tags: [navigation, exam, objectives]",
@@ -86,7 +91,7 @@ def main() -> None:
         "corpus-backed teaching; **Named only** lists pages that record the objective as a corpus gap",
         "(`objective_gaps`). " + ("Gap detail is on [[corpus-gaps]]. " if has_gaps else "") + "Back to [[index]].",
         "",
-        f"**{n_taught} of {len(objectives)} objectives are taught by at least one page · {n_named} are named only · {n_none} have no page.**",
+        f"**{n_full} of {len(objectives)} objectives are taught · {n_part} taught in part (a named part is untaught; see the gap register) · {n_named} named only · {n_none} have no page.**",
         "",
     ]
     current_domain = current_skill = None
@@ -99,7 +104,8 @@ def main() -> None:
             current_skill = o["skill"]
             out += [f"### {o['skill']}", ""]
         t, g = taught.get(o["id"], []), named.get(o["id"], [])
-        status = "taught" if t else "named only" if g else "no page"
+        gap = o["id"] in register
+        status = ("taught in part" if gap else "taught") if t else ("named only" if (g or gap) else "no page")
         out.append(f"- **{o['id']}** `{status}` — “{o['objective']}” (SRC-191 L{o['line']})")
         if t:
             n_src = len(sources_for.get(o["id"], set()))
@@ -110,7 +116,7 @@ def main() -> None:
             out.append("  - *No wiki page yet.*")
     out += ["", "## Sources", "", "- SRC-191 — the official study guide (raw file in `corpus/`)."]
     OUT.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
-    print(f"objective-map.md: {n_taught} taught · {n_named} named only · {n_none} no page (of {len(objectives)})")
+    print(f"objective-map.md: {n_full} taught · {n_part} taught in part · {n_named} named only · {n_none} no page (of {len(objectives)})")
 
 
 if __name__ == "__main__":

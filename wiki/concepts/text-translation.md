@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Convert text meaning between languages with Azure Translator or LLM-powered translation flows, and distinguish translation from transliteration."
 area: language
 source_ids: [SRC-40, SRC-139, SRC-166, SRC-218, SRC-227, SRC-228, SRC-229]
-objectives: [T03, P01, P02]
+objectives: [T03, P01]
 objective_gaps: []
 tags: []
 aliases: ["translate text", "machine translation", "LLM translation", "transliteration"]

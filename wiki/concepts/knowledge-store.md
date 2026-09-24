@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "A knowledge store persists enriched outputs from an Azure AI Search skillset as JSON object, table or image-file projections."
 area: retrieval
 source_ids: [SRC-52, SRC-130, SRC-176, SRC-181, SRC-187, SRC-215, SRC-261]
-objectives: [P03, G09, I03, I04]
+objectives: []
 tags: []
 aliases: ["knowledge store projections", "table projections", "object projections", "file projections"]
 objective_gaps: []

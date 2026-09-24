@@ -1,9 +1,10 @@
 {
-  "scripts/lint_wiki.py": "be47611816ce8b9d4bcae367a3cd6903fcbca40fd95c918a157479037c2d66bc",
+  "scripts/lint_wiki.py": "1fc8934f6c01957cb60c8284e17725aad81bd14ccd2f6331db38f563ded0a912",
   "scripts/check_citations.py": "d1a234de082989abc8c89b70283266d8cb3ddd837500a48746b950e0cd36ac1a",
-  "scripts/loop_score.py": "6d1586126a36deec8ca516d9269271bb27b940f7a21e54c50cec1aa0e366536d",
-  "scripts/loop_sample.py": "aef8af4dced21136ac39fe926391b0b6b6f1b33e37783c031fd8fef4ce72885a",
+  "scripts/loop_score.py": "be23483e06efe37312cf7fcca06ce6d3122e4f5d6f2b476a36ed3410a5dca58b",
+  "scripts/loop_sample.py": "27cf8c1367b77561f309bd2f0492a6371255d8bb3e606ec985ba6b88889112b1",
   "scripts/data/corpus-registry.json": "f63895daa281eb5764c6008b5177c21a34630e02eac96dd2bcc10466ccba48f3",
   "scripts/data/exam-objectives.json": "ce2f1917e2595cbea680e3f8a673b84231a200ad4e0c7194c770271a4c8a18f9",
-  "loop/rubric.md": "a18e3561e319b420f15e99bea29d1698e16c1365d02051b8a5bf9c5c2e17edbb"
+  "loop/rubric.md": "c24d6b61106054220adeb6e0a8a31414442ee384539e5367bd349e7a1b3c432e",
+  "loop/panel.txt": "1306a21b8dee3b1ab4170b7da1f6a415e1251f72f9d8e230bd53e7687e91b9bd"
 }

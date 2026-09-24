@@ -53,3 +53,44 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   teach (5 of 20 sampled pages); auditing every page's `objectives` against the objective wording and
   the page's own non-study-guide citations — dropping or moving unsupported IDs — will cut rubric-v2
   judgement failures below the 6/20 baseline without touching page bodies.
+- Change: five generator agents (`loop-c2-A` … `E`) audited the objective claims of all 121 concept,
+  entity and synthesis pages against the objective wording, frontmatter only: 24 pages changed (e.g.
+  text-translation −P02, azure-language-mcp-server −G08, knowledge-mining −I04 −I06,
+  microsoft-365-agents-toolkit −G12, optimization-strategies-compared −G15, knowledge-store → none,
+  ai-103-exam's 64 gap IDs → none; mcp-tool-integration +P16 for tool-access controls).
+- Mechanical score: `[0, 0, 0, 45, 6]` → `[0, 0, 0, 45, 6]` (SAME). Objective map: 53 taught / 11 named
+  only (unchanged — no objective lost its last teaching page).
+- Judgement (`loop_sample.py --cycle 2`): 20 sampled, 15 failing; the tool's verdict is REGRESSED
+  (15/20 vs 6/20). Page-level reading of the reviews:
+  - 5 fails are **source pages** (src-85, src-59, src-64, src-181, src-201) whose objective tags cycle 2
+    never touched — pre-existing, found because both reviewers now applied criterion 8 everywhere;
+    four are non-teaching units (exercise launchers, a summary) claiming objectives.
+  - 8 fails are pages cycle 2 did change, flagged for claims cycle 2 *kept* under the generator's
+    reading of criterion 8 ("at least one named part is taught") while the reviewers read it as "every
+    named part" (e.g. knowledge-mining I01 lacks audio/video; model-catalog P01 lacks Foundry Tools).
+    The cycle-1 reviewer had accepted the same claims (I01, G05, T04).
+  - 2 fails are unlabelled synthesised decision rules (agent-framework-workflows; the three-homes
+    taxonomy on microsoft-365-agent-integration) — criterion 3, unrelated to this cycle.
+  - Genuine regression found in the diff, not by the sample: cycle 2 added taught objectives to
+    `objective_gaps` on 5 pages (model-playgrounds G01/V01/V02/V06, model-catalog P07, foundry-sdk G02,
+    endpoints-and-sdk-choice G02, guardrails G04) — misusing the field as "not taught on this page".
+    **Reverted** before recording; the same misuse also predates cycle 2 on 6 pages.
+- Decision: **kept** (objective removals and the P16 addition), after reverting the misused gap
+  additions. Overriding the tool's REGRESSED verdict is a human-level decision: the two judgement
+  numbers measure different pages with different lenses, so they do not compare cycles.
+- Lessons: (1) the judgement verifier is non-stationary — fresh samples that prefer changed pages,
+  reviewer variance, and an ambiguous criterion; a ratchet needs a **fixed panel** (Karpathy's fixed
+  validation set). (2) Criterion 8 must say which reading applies. (3) Frontmatter rules that can be
+  checked mechanically should be — non-teaching units and hubs claim no objectives; `objective_gaps`
+  must come from one gap register (corpus-gaps). → verifier v3 before cycle 3.
+
+## Verifier v3 (2026-09-24, between cycles 2 and 3)
+- Fixed panel of 20 pages (`loop/panel.txt`); rubric criterion 8 clarified (at-least-one-named-part);
+  lint rules for non-teaching units, hubs and the gap register; mechanical comparisons versioned by lint
+  rules. v3 mechanical baseline `[113, 0, 0, 45, 6]`: 107 non-teaching-unit errors, 6 unregistered gaps.
+
+## Cycle 3 — frontmatter compliance with the v3 rules (2026-09-24)
+- Hypothesis: the 113 v3 errors are all frontmatter that breaks the clarified objective rules;
+  clearing objectives from non-teaching units and resolving each unregistered gap (drop it, or record a
+  genuine corpus gap in the register with citations) brings errors to 0 and removes the panel's
+  criterion-8 failures on those pages.

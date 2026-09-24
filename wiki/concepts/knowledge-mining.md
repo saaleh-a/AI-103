@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Knowledge mining uses Azure AI Search to ingest, enrich, index, optionally persist and query data for insight and analytics."
 area: retrieval
 source_ids: [SRC-33, SRC-52, SRC-92, SRC-102, SRC-130, SRC-181, SRC-187, SRC-215, SRC-261]
-objectives: [P03, I01, I03, I04, I06]
+objectives: [P03, I01, I03]
 tags: []
 aliases: ["knowledge mining solution", "intelligent search solution"]
 objective_gaps: []

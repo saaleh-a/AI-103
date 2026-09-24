@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Microsoft Foundry's portal catalog for discovering, filtering, comparing and starting deployment of models from Azure, partners and community sources."
 area: models
 source_ids: [SRC-17, SRC-38, SRC-89, SRC-114, SRC-188, SRC-258]
-objectives: [P01, P07]
+objectives: [P01]
 objective_gaps: [P06, G01, V01, T05]
 tags: ["feature"]
 aliases: ["Foundry Models", "Microsoft Foundry Models", "model catalog", "Models catalog", "Foundry Models catalog"]

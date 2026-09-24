@@ -8,8 +8,8 @@ updated: 2026-09-24
 summary: "Which endpoint and SDK to use: project endpoint with Foundry SDK, Azure OpenAI endpoint with OpenAI SDK, or tool-specific endpoints."
 area: platform
 source_ids: [SRC-18, SRC-51, SRC-90, SRC-96, SRC-99, SRC-102, SRC-155, SRC-183]
-objectives: [P12, G02, G05, G06]
-objective_gaps: []
+objectives: [G05, G06]
+objective_gaps: [P12]
 tags: []
 aliases: ["project endpoint", "choose an endpoint and SDK", "Azure OpenAI endpoint", "tool-specific endpoint"]
 ---

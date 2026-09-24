@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Indexers start from source data, crack documents, run enrichment and map the final structure into an Azure AI Search index."
 area: retrieval
 source_ids: [SRC-52, SRC-92, SRC-130, SRC-176, SRC-181, SRC-215, SRC-261]
-objectives: [P03, I01, I03, I04]
+objectives: [P03, I01, I03]
 tags: []
 aliases: ["indexer", "document cracking", "field mappings", "data source"]
 objective_gaps: []

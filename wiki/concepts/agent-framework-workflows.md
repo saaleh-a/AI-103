@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Microsoft Agent Framework workflows are code-defined sequences of executors and edges with events, checkpointing, and orchestration builders."
 area: orchestration
 source_ids: [SRC-36, SRC-151, SRC-231, SRC-241, SRC-242, SRC-243, SRC-244, SRC-245, SRC-247]
-objectives: [G03, G10, G11, G16]
+objectives: [G03, G10, G16]
 objective_gaps: []
 tags: []
 aliases: ["executors", "edges", "workflow events", "workflows in code", "control workflows", "WorkflowBuilder"]

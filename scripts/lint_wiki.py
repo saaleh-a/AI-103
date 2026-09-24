@@ -54,6 +54,12 @@ REQUIRED = ["title", "type", "status", "confidence", "created", "updated", "summ
             "source_ids"]
 SOURCE_REQUIRED = ["source_kind", "module", "raw_file", "url", "ingest_depth"]
 NAV = {"index", "log", "lint-report", "corpus-map", "objective-map"}
+# Pages that route to teaching rather than teach: they claim no objectives (schema.md §6).
+HUBS = {"overview", "master-synthesis", "learning-path", "glossary", "decision-boundaries",
+        "ai-103-exam", "ai-103t00-course"}
+GAP_REGISTER = "corpus-gaps"
+NON_TEACHING_TITLES = {"introduction", "summary", "knowledge check", "module assessment"}
+NON_TEACHING_KINDS = {"study-guide", "course-page", "course-preview"}
 LABELS = ("Synthesis:", "Inference:", "Hypothesis:", "Disputed:", "Stale-risk:", "Illustrative")
 UNLABELLED_EXEMPT_SECTIONS = ("source metadata", "connections", "sources", "open questions",
                               "chapter guide")
@@ -202,6 +208,11 @@ def main() -> int:
     registry = {f"SRC-{r['id']}": r for r in json.loads(REGISTRY.read_text(encoding="utf-8"))["sources"]}
     content = {sid: tuple(r["content_lines"]) for sid, r in registry.items() if r["kind"] == "learn-unit"}
     objective_ids = {o["id"] for o in json.loads(OBJECTIVES.read_text(encoding="utf-8"))["objectives"]}
+    register_path = WIKI / "synthesis" / f"{GAP_REGISTER}.md"
+    gap_register = None
+    if register_path.exists():
+        reg_fm, _, _ = split_frontmatter(register_path.read_text(encoding="utf-8"))
+        gap_register = set((reg_fm or {}).get("objective_gaps") or [])
 
     pages: dict[str, dict] = {}
     errors: list[tuple[str, str]] = []
@@ -273,6 +284,13 @@ def main() -> int:
             both = sorted(set(gaps) & set(objs if isinstance(objs, list) else []))
             if both:
                 errors.append((rel, f"objective(s) {', '.join(both)} listed as both taught and gap"))
+            if gap_register is not None and stem != GAP_REGISTER:
+                unregistered = sorted(set(gaps) - gap_register)
+                if unregistered:
+                    errors.append((rel, f"objective_gaps {', '.join(unregistered)} not in the gap register "
+                                        f"([[{GAP_REGISTER}]]): record a corpus gap there first, or drop it"))
+        if stem in HUBS and (objs or gaps):
+            errors.append((rel, "hub page must claim no objectives or objective_gaps (schema.md §6)"))
         if t == "entity":
             tags = set(fm.get("tags") or [])
             if not tags & ENTITY_KINDS:
@@ -303,6 +321,13 @@ def main() -> int:
                         errors.append((rel, f"source_kind '{fm.get('source_kind')}' but the registry says '{reg['kind']}'"))
                     if fm.get("url") != reg["url"]:
                         warnings.append((rel, "url differs from the raw file's '> Source:' line"))
+                    non_teaching = (reg["kind"] in NON_TEACHING_KINDS
+                                    or reg["title"].lower() in NON_TEACHING_TITLES
+                                    or reg["title"].startswith("Exercise"))
+                    if non_teaching and (fm.get("objectives") or fm.get("objective_gaps")):
+                        errors.append((rel, "non-teaching unit (introduction, summary, knowledge check, module "
+                                            "assessment, exercise launcher, study guide or course page) must "
+                                            "claim no objectives (schema.md §6)"))
         if fm.get("status") == "disputed" and not re.search(r"^#{2,4} .*(Tension|Disput|Contradict)", body, re.M):
             errors.append((rel, "status 'disputed' but no Tensions/Disputed section"))
         if t in {"source", "entity", "concept", "synthesis"} and not re.search(r"^## Sources\b", body, re.M):

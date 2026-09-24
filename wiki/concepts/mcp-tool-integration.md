@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "How agents connect to MCP servers, discover tools dynamically, invoke them, restrict access and handle approval."
 area: agents
 source_ids: [SRC-2, SRC-24, SRC-25, SRC-43, SRC-45, SRC-91, SRC-108, SRC-109, SRC-233, SRC-235, SRC-236, SRC-240]
-objectives: [P04, G07, G08, G09, G11, T01, T05]
+objectives: [P04, P16, G07, G09, G11, T01, T05]
 objective_gaps: []
 tags: []
 aliases: ["MCP tool discovery", "MCP server", "MCP client", "remote MCP server", "dynamic tool discovery", "MCPTool"]

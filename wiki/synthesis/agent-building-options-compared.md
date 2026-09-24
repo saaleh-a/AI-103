@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Comparison of Foundry Agent Service, portal/VS Code, Microsoft Agent Framework, Foundry workflows, and Microsoft 365 Agents Toolkit."
 area: agents
 source_ids: [SRC-5, SRC-14, SRC-18, SRC-20, SRC-34, SRC-36, SRC-48, SRC-51, SRC-84, SRC-124, SRC-129, SRC-149, SRC-190, SRC-195, SRC-209, SRC-230, SRC-232, SRC-234, SRC-237, SRC-247]
-objectives: [P02, P04, P07, P12, P15, P16, G05, G06, G07, G08, G09, G10, G11, G12, G15, G16]
+objectives: [P02, P04, P07, G05, G06, G07, G08, G09, G10, G11, G16]
 objective_gaps: [P08]
 tags: []
 aliases: []

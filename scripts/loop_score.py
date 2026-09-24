@@ -16,8 +16,10 @@ edit its verifier will optimise the test instead of the wiki.
 Usage (from the repo root):
     python scripts/loop_score.py                         # score now, compare with the best
     python scripts/loop_score.py --record "cycle 3: …"   # also append the score to loop/scores.jsonl
-    python scripts/loop_score.py --judgement 20:3 --record "…"   # add an LLM-verifier sample result
-                                                         #   (pages sampled : pages failing the rubric)
+    python scripts/loop_score.py --judgement 20:3 --panel --record "…"   # add the fixed-panel judgement
+                                                         #   (pages judged : pages failing the rubric)
+    python scripts/loop_score.py --judgement 20:5 --record "…"   # a rotating-sample judgement
+                                                         #   (recorded for diagnosis; never ratchets)
     python scripts/loop_score.py --lock                  # orchestrator only: re-lock the verifier
 """
 from __future__ import annotations
@@ -37,7 +39,10 @@ SCORES = ROOT / "loop" / "scores.jsonl"
 LOCK = ROOT / "loop" / "verifier.lock"
 VERIFIER = ["scripts/lint_wiki.py", "scripts/check_citations.py", "scripts/loop_score.py",
             "scripts/loop_sample.py", "scripts/data/corpus-registry.json",
-            "scripts/data/exam-objectives.json", "loop/rubric.md"]
+            "scripts/data/exam-objectives.json", "loop/rubric.md", "loop/panel.txt"]
+MECHANICAL = ["scripts/lint_wiki.py", "scripts/data/corpus-registry.json", "scripts/data/exam-objectives.json"]
+# Entries recorded before scores carried a mechanical version were all made under lint v1–v2.
+LEGACY_MECH = "legacy"
 
 
 def digest(rel: str) -> str:
@@ -72,32 +77,44 @@ def main() -> int:
         return 3
     metrics = json.loads(m.group(1))
     score = score_of(metrics)
+    # The mechanical score is comparable only under the same lint rules and registries: a new rule
+    # is a new measuring instrument, so its first score starts a new mechanical baseline.
+    mech = hashlib.sha256("".join(digest(f) for f in MECHANICAL).encode()).hexdigest()
     history = []
     if SCORES.exists():
         history = [json.loads(l) for l in SCORES.read_text(encoding="utf-8").splitlines() if l.strip()]
-    best = min((h["score"] for h in history), default=None)
+    comparable = [h for h in history if h.get("mechanical_sha256", LEGACY_MECH) == mech]
+    best = min((h["score"] for h in comparable), default=None)
     verdict = "BASELINE" if best is None else ("IMPROVED" if score < best else "SAME" if score == best else "REGRESSED")
     judgement = None
     rubric = digest("loop/rubric.md")
+    panel = digest("loop/panel.txt") if (ROOT / "loop" / "panel.txt").exists() else None
     if "--judgement" in args:
         sampled, failing = (int(x) for x in args[args.index("--judgement") + 1].split(":"))
-        judgement = {"sampled": sampled, "failing": failing, "rubric_sha256": rubric}
-        # Judgement rates are comparable only under the same rubric: a stricter rubric is a new
-        # measuring instrument, so its first sample starts a new judgement baseline.
-        prev = [h["judgement"] for h in history
-                if h.get("judgement") and h["judgement"].get("rubric_sha256") == rubric]
-        if prev:
-            last = prev[-1]
-            if failing / max(sampled, 1) > last["failing"] / max(last["sampled"], 1):
-                verdict = "REGRESSED"
-        else:
-            judgement["baseline"] = True
+        on_panel = "--panel" in args
+        judgement = {"sampled": sampled, "failing": failing, "rubric_sha256": rubric,
+                     "sample": "panel" if on_panel else "rotating"}
+        if on_panel:
+            judgement["panel_sha256"] = panel
+            # The ratchet compares judgement rates only between runs of the same fixed panel under
+            # the same rubric — the same pages judged by the same standard. Rotating samples are
+            # recorded for diagnosis but never move the ratchet.
+            prev = [h["judgement"] for h in history if h.get("judgement")
+                    and h["judgement"].get("sample") == "panel"
+                    and h["judgement"].get("rubric_sha256") == rubric
+                    and h["judgement"].get("panel_sha256") == panel]
+            if prev:
+                last = prev[-1]
+                if failing / max(sampled, 1) > last["failing"] / max(last["sampled"], 1):
+                    verdict = "REGRESSED"
+            else:
+                judgement["baseline"] = True
     print("\n".join(summary))
     print(f"score={score} best={best} verdict={verdict}" + (f" judgement={judgement}" if judgement else ""))
     if "--record" in args:
         note = args[args.index("--record") + 1] if len(args) > args.index("--record") + 1 else ""
         entry = {"at": _dt.datetime.now().isoformat(timespec="seconds"), "score": score,
-                 "verdict": verdict, "metrics": metrics, "note": note}
+                 "verdict": verdict, "metrics": metrics, "mechanical_sha256": mech, "note": note}
         if judgement:
             entry["judgement"] = judgement
         SCORES.parent.mkdir(exist_ok=True)

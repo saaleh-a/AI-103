@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Project-level SDK around AIProjectClient for Foundry project operations, OpenAI-compatible clients, agents, tracing, connections and evaluations."
 area: platform
 source_ids: [SRC-18, SRC-51, SRC-99, SRC-102, SRC-155, SRC-183]
-objectives: [G02, G05, G06]
+objectives: [G05, G06]
 objective_gaps: []
 tags: ["sdk"]
 aliases: ["Foundry SDK", "azure-ai-projects", "AIProjectClient", "Azure AI Projects client library", "Azure AI Foundry SDK"]

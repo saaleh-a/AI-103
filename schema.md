@@ -159,8 +159,21 @@ aliases: []
 
 `summary` and `area` exist for retrieval (`scripts/build_index.py` builds the catalogue from
 them); `objectives` and `objective_gaps` drive `wiki/objective-map.md`, which marks each official
-objective **taught**, **named only** or **no page**. Never put an objective in `objectives` because
-the page mentions it — only when the corpus actually teaches it and the page cites that teaching.
+objective **taught**, **named only** or **no page**. The rules (the lint enforces 3–5):
+
+1. An ID belongs in `objectives` when the page's own cited evidence, other than the study guide,
+   substantively teaches **at least one named part** of the objective and the page is about that
+   part. A broad objective's other parts may live on other pages; its untaught parts are recorded
+   once, in the gap register.
+2. Mentioning an objective, or being adjacent to it, is not teaching it.
+3. **The gap register is [[corpus-gaps]]:** its `objective_gaps` lists every objective with a part the
+   corpus names but does not teach, each described in its body with citations. Any other page's
+   `objective_gaps` may only name register objectives it discusses — never "not taught on this page".
+4. **Hubs claim none:** overview, master-synthesis, learning-path, glossary, decision-boundaries,
+   ai-103-exam, ai-103t00-course.
+5. **Non-teaching units claim none:** source pages for introductions, summaries, knowledge checks,
+   module assessments, exercise launchers, the study guide and course pages.
+
 Entity pages carry one kind tag:
 `product`, `service`, `feature`, `sdk`, `api`, `protocol`, `tool`, `model`, `work`, `person` or
 `organisation`.
