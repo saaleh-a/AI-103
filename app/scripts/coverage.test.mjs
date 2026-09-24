@@ -122,11 +122,11 @@ test('changed heading levels cannot silently hide a new domain or a newer outlin
   assert.throws(() => parse(`${MARKDOWN}\n\n${newer}`), /Unexpected skills-outline heading level/)
 })
 
-test('the approved primary mapping accounts for all 35 real topics once across six clusters', () => {
+test('the full-corpus primary mapping accounts for all 65 real topics once across six clusters', () => {
   const actual = report()
-  assert.equal(actual.totalTopics, 35)
+  assert.equal(actual.totalTopics, 65)
   assert.equal(actual.clusterCount, 6)
-  assert.deepEqual(actual.domains.map(({ topicCount }) => topicCount), [3, 12, 1, 11, 8])
+  assert.deepEqual(actual.domains.map(({ topicCount }) => topicCount), [11, 23, 5, 15, 11])
   assert.deepEqual(actual.domains.map(({ status }) => status), ['THIN', 'NOT FLAGGED', 'THIN', 'NOT FLAGGED', 'NOT FLAGGED'])
   assert.deepEqual(actual.domains.flatMap(({ topicIds }) => topicIds).sort(), TOPICS.map(({ id }) => id).sort())
   for (const domain of actual.domains) {
@@ -150,23 +150,24 @@ test('uses exact unrounded thin boundaries, with zero always uncovered', () => {
 
 test('reports an official domain with zero topics rather than omitting it', () => {
   const mapping = structuredClone(PRIMARY_DOMAIN_MAP)
+  const removed = new Set(mapping[2].topicIds)
   mapping[2].topicIds = []
-  const actual = report({ topics: TOPICS.filter(({ id }) => id !== 'image-video-generation'), mapping })
-  assert.equal(actual.totalTopics, 34)
+  const actual = report({ topics: TOPICS.filter(({ id }) => !removed.has(id)), mapping })
+  assert.equal(actual.totalTopics, 60)
   assert.equal(actual.domains.length, 5)
   assert.equal(actual.domains[2].topicCount, 0)
   assert.equal(actual.domains[2].percentage, 0)
   assert.equal(actual.domains[2].status, 'UNCOVERED')
   assert.deepEqual(actual.domains[2].clusters, [])
-  assert.match(formatCoverageReport(actual), /0\/34 topics \(0\.00%\) \| UNCOVERED\n  App clusters\/topics: none\./)
+  assert.match(formatCoverageReport(actual), /0\/60 topics \(0\.00%\) \| UNCOVERED\n  App clusters\/topics: none\./)
 })
 
 test('new topics fail explicitly instead of disappearing from the denominator', () => {
   const topics = [...TOPICS, { ...TOPICS[0], id: 'new-unmapped-topic' }]
   assert.throws(() => report({ topics }), /Unmapped curriculum topic\(s\): new-unmapped-topic.*denominator/)
   const mapping = structuredClone(PRIMARY_DOMAIN_MAP)
-  mapping[0].topicIds.pop()
-  assert.throws(() => report({ mapping }), /Unmapped curriculum topic\(s\): agents-publishing/)
+  const missingId = mapping[0].topicIds.pop()
+  assert.throws(() => report({ mapping }), new RegExp(`Unmapped curriculum topic\\(s\\): ${missingId}`))
 })
 
 test('rejects unknown topic/domain mappings and repeated topic/domain assignments', () => {
@@ -185,7 +186,7 @@ test('rejects unknown topic/domain mappings and repeated topic/domain assignment
 
 test('validates every corpus reference against the generated manifest', () => {
   const absent = TOPICS[0].corpusIds[0]
-  assert.throws(() => report({ manifest: MANIFEST.filter(({ id }) => id !== absent) }), /Topic "agents-what-is-an-agent" references missing corpus ID/)
+  assert.throws(() => report({ manifest: MANIFEST.filter(({ id }) => id !== absent) }), new RegExp(`Topic "${TOPICS[0].id}" references missing corpus ID`))
   const topics = TOPICS.map((topic, index) => index === 0 ? { ...topic, corpusIds: [...topic.corpusIds, 'broken-source-id'] } : topic)
   assert.throws(() => report({ topics }), /missing corpus ID "broken-source-id"/)
   assert.throws(() => report({ manifest: { files: MANIFEST } }), /manifest must be a nonempty array/)
@@ -199,10 +200,10 @@ test('formats provenance, current weights, topic shares, and auditable clusters 
   assert.match(output, new RegExp(OFFICIAL_GUIDE_URL.replaceAll('.', '\\.')))
   assert.ok(output.includes(`Retrieved at: ${RUN_AT.toISOString()}`))
   assert.match(output, /Outline effective date: 2026-04-16/)
-  assert.match(output, /official 25-30% \| 3\/35 topics \(8\.57%\) \| THIN/)
-  assert.match(output, /official 30-35% \| 12\/35 topics \(34\.29%\) \| NOT FLAGGED/)
+  assert.match(output, /official 25-30% \| 11\/65 topics \(16\.92%\) \| THIN/)
+  assert.match(output, /official 30-35% \| 23\/65 topics \(35\.38%\) \| NOT FLAGGED/)
   assert.match(output, /Topic-count maintenance heuristic, not proof of full objective coverage or learner mastery/)
-  assert.match(output, /\[models-deploy-eval\] \(2\): model-catalog, model-deployment/)
+  assert.match(output, /\[models-deploy-eval\] \(\d+\): .*model-catalog.*model-deployment/)
   for (const { id } of TOPICS) assert.ok(output.includes(id), `Missing contributing topic ${id}`)
 })
 
@@ -279,7 +280,7 @@ test('main prints one complete report only after validation succeeds and returns
   const actual = await main({ manifest: MANIFEST, fetchImpl: async () => response(), now: () => RUN_AT, write: (text) => output.push(text) })
   assert.equal(output.length, 1)
   assert.equal(output[0], formatCoverageReport(actual))
-  assert.equal(actual.totalTopics, 35)
+  assert.equal(actual.totalTopics, 65)
   const failedOutput = []
   await assert.rejects(main({
     manifest: MANIFEST,
@@ -293,7 +294,7 @@ test('only flagged domains receive a small tutor and Settings nudge', () => {
   const nudges = formatCoverageReport(report()).split('\n').filter((line) => line.startsWith('  Gap:'))
   assert.equal(nudges.length, 2)
   assert.ok(nudges[0].includes('http://localhost:5173/#/learn/model-deployment'))
-  assert.ok(nudges[1].includes('http://localhost:5173/#/learn/image-video-generation'))
+  assert.ok(nudges[1].includes('http://localhost:5173/#/learn/vision-chat'))
   for (const line of nudges) {
     assert.ok(line.includes('http://localhost:5173/#/settings'))
     assert.ok(line.includes('search the full corpus'))
@@ -317,8 +318,9 @@ test('nudge links preserve a custom app base path and use existing hash routes',
 
 test('an uncovered domain links to an existing lesson instead of inventing a route', () => {
   const mapping = structuredClone(PRIMARY_DOMAIN_MAP)
+  const removed = new Set(mapping[2].topicIds)
   mapping[2].topicIds = []
-  const topics = TOPICS.filter(({ id }) => id !== 'image-video-generation')
+  const topics = TOPICS.filter(({ id }) => !removed.has(id))
   const nudges = formatCoverageReport(report({ topics, mapping })).split('\n').filter((line) => line.startsWith('  Gap:'))
   const linkedTopic = /#\/learn\/(\S+)/.exec(nudges[1])[1]
   assert.ok(topics.some(({ id }) => id === decodeURIComponent(linkedTopic)))

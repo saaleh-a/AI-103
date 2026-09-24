@@ -5,10 +5,8 @@ import type { UIPrefs } from '@/lib/types'
 const STORAGE_KEY = 'ai103-ui-prefs'
 
 function defaultPrefs(): UIPrefs {
-  const prefersReducedMotion =
-    typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
   return {
-    motion: prefersReducedMotion ? 'off' : 'subtle',
+    motion: 'off',
     lowSpoons: false,
     theme: 'system',
   }
@@ -25,10 +23,22 @@ const UIPrefsContext = createContext<UIPrefsApi | null>(null)
 
 export function UIPrefsProvider({ children }: { children: ReactNode }) {
   const [prefs, setPrefs] = useState<UIPrefs>(() => readJSON(STORAGE_KEY, defaultPrefs()))
+  const [systemReduced, setSystemReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => setSystemReduced(media.matches)
+    media.addEventListener('change', update)
+    return () => media.removeEventListener('change', update)
+  }, [])
 
   useEffect(() => {
     writeJSON(STORAGE_KEY, prefs)
   }, [prefs])
+
+  useEffect(() => {
+    document.documentElement.dataset.motion = systemReduced ? 'off' : prefs.motion
+  }, [prefs.motion, systemReduced])
 
   useEffect(() => {
     const root = document.documentElement
@@ -47,7 +57,7 @@ export function UIPrefsProvider({ children }: { children: ReactNode }) {
   }, [prefs.theme])
 
   const value: UIPrefsApi = {
-    prefs,
+    prefs: { ...prefs, motion: systemReduced ? 'off' : prefs.motion },
     setMotion: (motion) => setPrefs((p) => ({ ...p, motion })),
     setLowSpoons: (lowSpoons) => setPrefs((p) => ({ ...p, lowSpoons })),
     setTheme: (theme) => setPrefs((p) => ({ ...p, theme })),

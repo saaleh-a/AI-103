@@ -3,13 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "content": "node scripts/sync-corpus.mjs && node scripts/build-manifest.mjs",
     "predev": "npm run content",
     "dev": "vite",
-    "prebuild": "npm run content",
+    "prebuild": "npm run content && npm run check:curriculum",
     "build": "tsc -b && vite build",
+    "pretest": "npm run content",
     "test": "node --experimental-strip-types --test",
+    "check:curriculum": "node --experimental-strip-types scripts/check-curriculum.mjs",
     "check:coverage": "npm run content && node --experimental-strip-types scripts/check-coverage.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
@@ -19,6 +24,7 @@
     "@base-ui/react": "^1.8.0",
     "@fontsource-variable/geist": "^5.3.0",
     "@number-flow/react": "^0.6.2",
+    "@phosphor-icons/react": "^2.1.10",
     "@visx/event": "^4.0.1-alpha.0",
     "@visx/gradient": "^4.0.1-alpha.0",
     "@visx/grid": "^4.0.1-alpha.0",

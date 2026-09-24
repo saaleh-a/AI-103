@@ -4,7 +4,7 @@ import type { DiscriminationTable, Flashcard, MCQItem } from '@/lib/types'
 // each topic in topics.ts. Not exhaustive (Section 3: don't invent — this is
 // a representative slice), structured so more items are easy to append.
 
-export const FLASHCARDS: Flashcard[] = [
+export const LEGACY_FLASHCARDS: Flashcard[] = [
   { id: 'fc-agent-def', topicId: 'agents-what-is-an-agent', front: 'What makes something an "AI agent" rather than just a chat model?', back: 'It operates independently: it understands context, makes decisions, and takes actions toward a goal, usually by calling tools — not just generating text in response to a prompt.' },
   { id: 'fc-agent-loc', topicId: 'agents-what-is-an-agent', front: 'What does Microsoft Foundry Agent Service manage for you that you\'d otherwise build yourself?', back: 'Compute/storage, the tool-calling lifecycle, conversation state (via the Responses API), and security — so you can build an agent in under ~50 lines of code instead of hand-rolling orchestration.' },
   { id: 'fc-agent-types', topicId: 'agents-types', front: 'Declarative agent vs. hosted agent — what\'s the real difference?', back: 'Declarative = defined by configuration (instructions, model, tools), no custom code, runs on the platform. Hosted = a containerized agent you write and deploy yourself; the platform manages infra but you own the logic.' },
@@ -66,7 +66,7 @@ export const FLASHCARDS: Flashcard[] = [
   { id: 'fc-image-gen', topicId: 'image-video-generation', front: 'What\'s the exam-relevant distinction between image-generation and image-analysis models?', back: 'Image-generation models create images from text (e.g. GPT-image-1). Image-analysis/vision models do the reverse — accept images as input and produce text output about them (e.g. GPT-4.1 multimodal).' },
 ]
 
-export const MCQ_ITEMS: MCQItem[] = [
+export const LEGACY_MCQ_ITEMS: MCQItem[] = [
   {
     id: 'mcq-agent-vs-workflow-agent',
     topicId: 'agents-types',

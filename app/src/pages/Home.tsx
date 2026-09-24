@@ -1,108 +1,73 @@
-import { ArrowRight, CheckCircle2, Clock, RotateCcw } from 'lucide-react'
-import { useEffect, useMemo } from 'react'
+import { ArrowRight, ArrowUpRight, Clock, Pause, Play } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ClusterBadge } from '@/components/ClusterBadge'
-import { CountUp } from '@/components/effects/CountUp'
-import { MotionGate } from '@/components/effects/MotionGate'
-import { LESSONS } from '@/data/lessons'
-import { TOPICS } from '@/data/topics'
+import { BuildMap } from '@/components/study/BuildMap'
+import { COURSE_UNITS, UNIT_BY_ID } from '@/data/curriculum'
+import { CORPUS_SOURCES } from '@/data/curriculum/catalog'
+import { BUILD_PROJECTS, projectUnitIds } from '@/data/projects'
+import { chooseCoachingAction, coachingHref } from '@/lib/coach'
 import { useLearnerState } from '@/lib/learner-state'
-import { estimateReadMinutes, estimateSessionMinutes } from '@/lib/time-estimate'
 import { useUIPrefs } from '@/lib/ui-prefs'
 
+const ACTION_LABELS = {
+  resume: 'Resume where you stopped',
+  repair: 'Untangle this decision',
+  retrieve: 'Bring the idea back',
+  fieldwork: 'Continue in Azure',
+  learn: 'Work on the next task',
+}
+
 export default function Home() {
-  const { state, nextTopicId, dueRetrievalQueue, coverage, recordSessionTouch } = useLearnerState()
+  const { state, setSessionMinutes, storageStatus, setActiveProject } = useLearnerState()
   const { prefs } = useUIPrefs()
-
-  useEffect(() => {
-    recordSessionTouch()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const nextTopic = TOPICS.find((t) => t.id === nextTopicId)
-  const isRetrieval = nextTopicId ? dueRetrievalQueue.some((item) => item.topicId === nextTopicId) : false
-  const allMastered = !nextTopicId
-
-  const minutes = useMemo(() => {
-    if (isRetrieval) return estimateSessionMinutes({ flashcards: 4, mcqs: 4 }) // SESSION_SIZE=8, mixed
-    const lesson = nextTopic && LESSONS[nextTopic.id]
-    return lesson ? estimateReadMinutes(lesson.problem, lesson.mentalModel, lesson.azureMapping, lesson.architecture, lesson.implementation, lesson.watchFor) : 0
-  }, [isRetrieval, nextTopic])
+  const action = chooseCoachingAction(COURSE_UNITS, BUILD_PROJECTS, state)
+  const unit = UNIT_BY_ID.get(action?.unitId ?? '')
+  const project = BUILD_PROJECTS.find((item) => item.id === (action?.projectId ?? state.study.activeProjectId)) ?? BUILD_PROJECTS[0]
+  const minutes = state.study.sessionMinutes
+  const notes = projectUnitIds(project).flatMap((id) => (state.study.units[id]?.portalNotes ?? [])
+    .map((note, index) => ({ id, index, note })).filter((entry) => entry.note.trim()))
+  const observation = notes.at(-1)
 
   return (
-    <div className="flex flex-col gap-6">
-      <MotionGate full={{ initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.35 } }}>
-        {allMastered ? (
-          <Card className="border-success/30 bg-success/5">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <CheckCircle2 className="size-5 text-success" aria-hidden /> Every v1 topic is mastered
-              </CardTitle>
-              <CardDescription>
-                Nice work. Head to Exam mode for mixed retrieval, or Settings to unlock the AI chat panel for open-ended
-                scenarios beyond the v1 topic list.
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        ) : (
-          <Card>
-            <CardHeader>
-              <div className="mb-1 flex flex-wrap items-center gap-1.5">
-                <Badge variant="secondary" className="w-fit">
-                  {isRetrieval ? 'Due for retrieval' : 'Next up'}
-                </Badge>
-                {nextTopic && <ClusterBadge cluster={nextTopic.cluster} />}
-                {minutes > 0 && (
-                  <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <Clock className="size-3.5" aria-hidden />~{minutes} min
-                  </span>
-                )}
-              </div>
-              <CardTitle className="text-2xl">{nextTopic?.title}</CardTitle>
-              <CardDescription>{nextTopic?.orient}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button size="lg" render={<Link to={isRetrieval ? '/practice' : `/learn/${nextTopic?.id}`} />} nativeButton={false}>
-                {isRetrieval ? 'Practice retrieval' : 'Start learning'} <ArrowRight className="size-4" aria-hidden />
-              </Button>
-            </CardContent>
-          </Card>
-        )}
-      </MotionGate>
+    <div className="studio-page">
+      {state.study.pausedAt && <div className="inline-note" role="status"><Pause size={19} aria-hidden /><p><strong>Done for now.</strong> {storageStatus === 'saved' ? 'Your place is saved. The next session starts from your work, not from the top of a module.' : 'Your work is kept in this tab. Export a backup before closing it.'}</p></div>}
+      <div className="home-toolbar">
+        <div className="time-choice" role="group" aria-label="Session size"><span className="mr-1">I have about</span>{([5, 15, 25] as const).map((value) => <button key={value} type="button" aria-pressed={minutes === value} onClick={() => setSessionMinutes(value)}>{value} min</button>)}</div>
+      </div>
 
-      {state.itemsMasteredToday > 0 && (
-        <p className="text-sm text-muted-foreground">
-          <CountUp value={state.itemsMasteredToday} /> item{state.itemsMasteredToday === 1 ? '' : 's'} mastered today. That's
-          a real session — stopping here is a completely fine place to be.
-        </p>
-      )}
+      <div className="coach-overview">
+        <section className="coach-brief">
+          <h1 className="page-heading">{project.title}</h1>
+          <p className="page-description">{project.brief}</p>
+          {unit && action ? <div className="coach-next">
+            <h2>{unit.title}</h2>
+            <p>{action.reason}</p>
+            <div className="lesson-metadata mt-4"><span><Clock size={15} aria-hidden />{action.activity === 'practice' || action.activity === 'exam' ? 'Continue your saved round' : action.kind === 'fieldwork' || action.activity === 'fieldwork' ? `About ${unit.lab.azure.minutes} min in Azure` : action.kind === 'retrieve' ? 'One short retrieval round' : minutes === 5 ? 'One small teaching step' : `About ${unit.minutes} min for the concept`}</span></div>
+            <div className="home-start mt-4">
+              <Link className="primary-button" to={coachingHref(action)} onClick={() => { if (action.kind === 'learn' || action.kind === 'fieldwork') setActiveProject(action.projectId) }}><Play size={15} weight="fill" aria-hidden />{ACTION_LABELS[action.kind]}<ArrowRight size={16} aria-hidden /></Link>
+              <Link className="text-link" to={`/build/${project.id}`}>See the build</Link>
+            </div>
+            {action.kind === 'fieldwork' && <button className="text-link mt-2" type="button" onClick={() => setSessionMinutes(15)}>Not using Azure today - choose a short learning task</button>}
+          </div> : <div className="coach-next">
+            <h2>Reconnect what you have built.</h2><p>The authored path is explored. Look through your observations and return to the decisions you want to explain without notes.</p><Link className="primary-button mt-5" to="/practice">Start a short recall session <ArrowRight size={16} aria-hidden /></Link>
+          </div>}
+          <p className="field-note mt-5">{minutes === 5 ? 'A single idea is enough today. Save after any teaching step; the portal can wait.' : 'The recommendation uses your saved position, repair flags, review schedule, and prerequisites. It does not guess what happened in your Azure account.'}</p>
+        </section>
+        {!prefs.lowSpoons && <BuildMap project={project} key={project.id} />}
+      </div>
 
-      {!prefs.lowSpoons && (
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-base">Coverage</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">
-              <CountUp value={coverage.mastered} /> mastered · <CountUp value={coverage.started} /> started of{' '}
-              <CountUp value={coverage.total} /> v1 topics
-            </p>
-            <Link to="/progress" className="mt-2 inline-flex items-center gap-1 text-sm text-primary hover:underline">
-              See full progress <ArrowRight className="size-3.5" aria-hidden />
-            </Link>
-          </CardContent>
-        </Card>
-      )}
-
-      {!prefs.lowSpoons && state.retrievalQueue.length > 0 && (
-        <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
-          <RotateCcw className="size-3.5" aria-hidden /> {state.retrievalQueue.length} topic
-          {state.retrievalQueue.length === 1 ? '' : 's'} queued for retrieval practice.
-        </p>
-      )}
+      {!prefs.lowSpoons && <div className="build-session-bottom">
+        <section>
+          <h2>Your work carries forward.</h2>
+          <p>{notes.length ? 'Keep the evidence you actually observed, including things that did not work. It belongs to the build, not a disposable lesson checklist.' : 'Record the result you see in Azure, the setting that changed it, or the error you hit. Those notes and your resource names stay with you between tasks.'}</p>
+          {observation && <blockquote><p>{observation.note}</p><Link to={`/labs/${observation.id}`} className="note-attribution">{UNIT_BY_ID.get(observation.id)?.title} · checkpoint {observation.index + 1}</Link></blockquote>}
+          <Link className="text-link" to={`/build/${project.id}#field-notebook`}>Open your field notebook <ArrowRight size={15} aria-hidden /></Link>
+        </section>
+        <section>
+          <h2>The corpus is the reference, not the itinerary.</h2>
+          <p>All {CORPUS_SOURCES.length} source documents feed {COURSE_UNITS.length} concepts across {BUILD_PROJECTS.length} practice builds. You can still inspect every source and jump to a topic.</p>
+          <div className="flex flex-wrap gap-5"><Link className="text-link" to="/learn">Course coverage <ArrowUpRight size={15} aria-hidden /></Link><Link className="text-link" to="/sources">Original sources <ArrowUpRight size={15} aria-hidden /></Link></div>
+        </section>
+      </div>}
     </div>
   )
 }

@@ -10,6 +10,9 @@ function isSessionLogEntry(value: unknown): value is SessionLogEntry {
     && 'correct' in value && typeof value.correct === 'boolean'
     && 'timestamp' in value && typeof value.timestamp === 'string' && Number.isFinite(Date.parse(value.timestamp))
     && 'msToAnswer' in value && typeof value.msToAnswer === 'number' && Number.isFinite(value.msToAnswer) && value.msToAnswer >= 0
+    && (!('selectedOptionId' in value) || value.selectedOptionId === undefined || typeof value.selectedOptionId === 'string')
+    && (!('evidenceKind' in value) || value.evidenceKind === undefined || value.evidenceKind === 'self-report' || value.evidenceKind === 'scenario' || value.evidenceKind === 'diagnostic')
+    && (!('assisted' in value) || value.assisted === undefined || typeof value.assisted === 'boolean')
 }
 
 export function normalizeSessionLog(value: unknown): SessionLogEntry[] {

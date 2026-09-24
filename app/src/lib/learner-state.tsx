@@ -1,10 +1,14 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { LearnerStateContext } from '@/lib/learner-state-context'
 import { TOPICS } from '@/data/topics'
+import { UNIT_BY_ID } from '@/data/curriculum'
 import { emptyState, normalizeLearnerState } from '@/lib/learner-state-data'
 import { isRetrievalDue, nextRetrievalDeadline, scheduleRetrieval, selectNextTopicId, type RetrievalReason } from '@/lib/retrieval'
 import { appendLogEntry } from '@/lib/session-log'
-import { readJSON, writeJSON } from '@/lib/storage'
-import type { LearnerState, MasteryState, RetrievalQueueItem, SessionLogEntry } from '@/lib/types'
+import { writeJSON } from '@/lib/storage'
+import { completeLesson, hasLearnedTopic, updateStudyUnit } from '@/lib/study-state'
+import { advanceReview, answerReview, saveReviewDraft, startReview, type ReviewAnswer, type ReviewDraft, type ReviewPosition } from '@/lib/review-session'
+import type { LearnerState, MasteryState, RetrievalQueueItem, ReviewItem, ReviewMode, SessionLogEntry, StudyActivity, StudyUnitProgress, StudyState, ProjectWorkspace } from '@/lib/types'
 
 const STORAGE_KEY = 'ai103-learner-state'
 
@@ -12,7 +16,7 @@ function todayKey(): string {
   return new Date().toISOString().slice(0, 10)
 }
 
-interface LearnerStateApi {
+export interface LearnerStateApi {
   state: LearnerState
   /** The single next resumable action (Section 25/45): one topic to work on. */
   nextTopicId: string | null
@@ -27,29 +31,115 @@ interface LearnerStateApi {
   removeFromRetrievalQueue: (topicId: string) => void
   recordSessionTouch: () => void
   endSession: () => void
+  /** Records a finished lesson's application check once; finishing a revisited lesson only restores its completion view. */
+  completeLessonCheck: (unitId: string, correctOptionId: string) => void
   exportState: () => string
   importState: (json: string) => boolean
   resetState: () => void
+  saveStudyProgress: (topicId: string, patch: Partial<StudyUnitProgress>) => void
+  pauseStudy: () => void
+  setSessionMinutes: (minutes: StudyState['sessionMinutes']) => void
+  storageStatus: 'saved' | 'unavailable' | 'invalid'
+  setActiveProject: (id: string) => void
+  saveWorkspace: (patch: Partial<ProjectWorkspace>) => void
+  activateStudy: (unitId: string, activity: StudyActivity) => void
+  startReviewSession: (mode: ReviewMode, items: readonly ReviewItem[], topicId?: string, replaceExisting?: boolean) => void
+  resumeReviewSession: (mode: ReviewMode) => void
+  saveReviewResponse: (mode: ReviewMode, position: ReviewPosition, patch: Partial<ReviewDraft>) => void
+  commitReviewAnswer: (mode: ReviewMode, position: ReviewPosition, answer: ReviewAnswer) => void
+  advanceReviewSession: (mode: ReviewMode, position: ReviewPosition) => void
 }
 
-const LearnerStateContext = createContext<LearnerStateApi | null>(null)
-
 export function LearnerStateProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<LearnerState>(() => {
+  const [initial] = useState((): { state: LearnerState; status: 'saved' | 'unavailable' | 'invalid' } => {
     try {
-      return normalizeLearnerState(readJSON<unknown>(STORAGE_KEY, emptyState(TOPICS)), TOPICS)
+      const raw = localStorage.getItem(STORAGE_KEY)
+      return { state: raw ? normalizeLearnerState(JSON.parse(raw), TOPICS) : emptyState(TOPICS), status: 'saved' }
     } catch (error) {
-      if (!(error instanceof TypeError)) throw error
+      if (!(error instanceof TypeError) && !(error instanceof SyntaxError) && !(error instanceof DOMException)) throw error
       console.warn('[learner-state] Saved progress could not be loaded.', error)
-      return emptyState(TOPICS)
+      return { state: emptyState(TOPICS), status: error instanceof DOMException ? 'unavailable' : 'invalid' }
     }
   })
+  const [state, setState] = useState<LearnerState>(initial.state)
+  const [storageStatus, setStorageStatus] = useState(initial.status)
+  const [preserveInvalidSave, setPreserveInvalidSave] = useState(initial.status === 'invalid')
+  const [now, setNow] = useState(() => Date.now())
 
   useEffect(() => {
-    writeJSON(STORAGE_KEY, state)
-  }, [state])
+    if (preserveInvalidSave) return
+    setStorageStatus(writeJSON(STORAGE_KEY, state) ? 'saved' : 'unavailable')
+  }, [state, preserveInvalidSave])
 
-  const [now, setNow] = useState(() => Date.now())
+  // Code outside React (the stale-deploy reload, the top-level crash screen) must know whether a reload is safe.
+  useEffect(() => {
+    document.documentElement.dataset.progress = storageStatus
+  }, [storageStatus])
+
+  const saveStudyProgress = useCallback((topicId: string, patch: Partial<StudyUnitProgress>) => {
+    setState((prev) => ({
+      ...prev,
+      lastActiveAt: new Date().toISOString(),
+      study: updateStudyUnit(prev.study, topicId, patch),
+    }))
+  }, [])
+
+  const pauseStudy = useCallback(() => {
+    setState((prev) => ({ ...prev, study: { ...prev.study, pausedAt: new Date().toISOString() } }))
+  }, [])
+
+  const setSessionMinutes = useCallback((minutes: StudyState['sessionMinutes']) => {
+    setState((prev) => ({ ...prev, study: { ...prev.study, sessionMinutes: minutes } }))
+  }, [])
+
+  const setActiveProject = useCallback((id: string) => {
+    setState((prev) => prev.study.activeProjectId === id ? prev : ({
+      ...prev, study: { ...prev.study, activeProjectId: id, activeUnitId: undefined, activeActivity: undefined, pausedAt: undefined },
+    }))
+  }, [])
+
+  const activateStudy = useCallback((unitId: string, activity: StudyActivity) => {
+    setState((prev) => ({
+      ...prev,
+      study: { ...prev.study, activeUnitId: unitId, activeActivity: activity, pausedAt: undefined },
+    }))
+  }, [])
+
+  const startReviewSession = useCallback((mode: ReviewMode, items: readonly ReviewItem[], topicId?: string, replaceExisting = false) => {
+    if (items.length === 0) return
+    const id = crypto.randomUUID()
+    const startedAt = Date.now()
+    setState((prev) => prev.study[mode] && !replaceExisting ? prev : startReview(prev, mode, items, id, topicId, startedAt))
+  }, [])
+
+  const resumeReviewSession = useCallback((mode: ReviewMode) => {
+    setState((prev) => {
+      const session = prev.study[mode]
+      // Viewing a finished round's summary must not replace the resume pointer to unfinished work.
+      if (!session || session.completedAt) return prev
+      return { ...prev, study: { ...prev.study, activeActivity: mode, activeUnitId: session.items[session.index]?.topicId, pausedAt: undefined } }
+    })
+  }, [])
+
+  const saveReviewResponse = useCallback((mode: ReviewMode, position: ReviewPosition, patch: Partial<ReviewDraft>) => {
+    setState((prev) => saveReviewDraft(prev, mode, position, patch))
+  }, [])
+
+  const commitReviewAnswer = useCallback((mode: ReviewMode, position: ReviewPosition, answer: ReviewAnswer) => {
+    const answeredAt = Date.now()
+    setNow(answeredAt)
+    setState((prev) => answerReview(prev, mode, position, answer, answeredAt))
+  }, [])
+
+  const advanceReviewSession = useCallback((mode: ReviewMode, position: ReviewPosition) => {
+    const advancedAt = Date.now()
+    setState((prev) => advanceReview(prev, mode, position, advancedAt))
+  }, [])
+
+  const saveWorkspace = useCallback((patch: Partial<ProjectWorkspace>) => {
+    setState((prev) => ({ ...prev, study: { ...prev.study, workspace: { ...prev.study.workspace, ...patch } } }))
+  }, [])
+
   useEffect(() => {
     const refresh = () => setNow(Date.now())
     const deadline = nextRetrievalDeadline(state.retrievalQueue, now)
@@ -117,6 +207,15 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, sessionsCompleted: prev.sessionsCompleted + 1 }))
   }, [])
 
+  const completeLessonCheck = useCallback((unitId: string, correctOptionId: string) => {
+    const finishedAt = Date.now()
+    setNow(finishedAt)
+    setState((prev) => {
+      const next = completeLesson(prev, unitId, correctOptionId, finishedAt)
+      return next.sessionsCompleted > prev.sessionsCompleted ? { ...next, lastSessionDate: todayKey() } : next
+    })
+  }, [])
+
   const exportState = useCallback(() => JSON.stringify(state, null, 2), [state])
 
   const importState = useCallback((json: string) => {
@@ -125,6 +224,7 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
       const importedAt = new Date()
       const imported = normalizeLearnerState(parsed, TOPICS, importedAt)
       setNow(importedAt.getTime())
+      setPreserveInvalidSave(false)
       setState(imported)
       return true
     } catch (error) {
@@ -133,10 +233,13 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const resetState = useCallback(() => setState(emptyState(TOPICS)), [])
+  const resetState = useCallback(() => {
+    setPreserveInvalidSave(false)
+    setState(emptyState(TOPICS))
+  }, [])
 
   const coverage = useMemo(() => {
-    const values = Object.values(state.topics)
+    const values = TOPICS.map((topic) => state.topics[topic.id]).filter(Boolean)
     return {
       total: TOPICS.length,
       started: values.filter((t) => t.state !== 'not-encountered').length,
@@ -144,7 +247,8 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     }
   }, [state.topics])
 
-  const dueRetrievalQueue = state.retrievalQueue.filter((item) => isRetrievalDue(item, now))
+  // Only taught, current lessons can be practised, so only they count as ready for recall.
+  const dueRetrievalQueue = state.retrievalQueue.filter((item) => isRetrievalDue(item, now) && UNIT_BY_ID.has(item.topicId) && hasLearnedTopic(state, item.topicId))
   const nextTopicId = selectNextTopicId(state, TOPICS, now)
 
   const value: LearnerStateApi = {
@@ -161,9 +265,22 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     removeFromRetrievalQueue,
     recordSessionTouch,
     endSession,
+    completeLessonCheck,
     exportState,
     importState,
     resetState,
+    saveStudyProgress,
+    pauseStudy,
+    setSessionMinutes,
+    storageStatus,
+    setActiveProject,
+    saveWorkspace,
+    activateStudy,
+    startReviewSession,
+    resumeReviewSession,
+    saveReviewResponse,
+    commitReviewAnswer,
+    advanceReviewSession,
   }
 
   return <LearnerStateContext.Provider value={value}>{children}</LearnerStateContext.Provider>

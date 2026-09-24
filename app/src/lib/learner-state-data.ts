@@ -1,6 +1,7 @@
 import { normalizeSessionLog } from './session-log.ts'
 import { normalizeRetrievalQueue } from './retrieval.ts'
 import { MASTERY_ORDER } from './types.ts'
+import { emptyStudyState, normalizeStudyState } from './study-state.ts'
 import type { LearnerState, Topic, TopicMastery } from './types'
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -45,6 +46,7 @@ export function emptyState(topics: readonly Pick<Topic, 'id'>[]): LearnerState {
     sessionLog: [],
     sessionsCompleted: 0,
     itemsMasteredToday: 0,
+    study: emptyStudyState(),
   }
 }
 
@@ -70,5 +72,6 @@ export function normalizeLearnerState(value: unknown, topics: readonly Pick<Topi
     itemsMasteredToday: lastSessionDate === now.toISOString().slice(0, 10) ? itemsMasteredToday : 0,
     lastActiveAt: optionalString(value.lastActiveAt, 'lastActiveAt'),
     lastSessionDate,
+    study: normalizeStudyState(value.study),
   }
 }

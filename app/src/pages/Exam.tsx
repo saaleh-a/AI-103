@@ -1,188 +1,67 @@
-import { CheckCircle2, Clock, XCircle } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { ArrowRight, Check, Pause } from '@phosphor-icons/react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ClusterBadge } from '@/components/ClusterBadge'
-import { Progress as ProgressBar } from '@/components/ui/progress'
-import { MCQ_ITEMS } from '@/data/content'
-import { CLUSTER_ACCENT, CLUSTER_LABELS, TOPICS } from '@/data/topics'
+import { ApplicationCheck } from '@/components/study/ApplicationCheck'
+import { COURSE_UNITS, UNIT_BY_ID } from '@/data/curriculum'
 import { useLearnerState } from '@/lib/learner-state'
-import { estimateSessionMinutes } from '@/lib/time-estimate'
-import { useAnswerTimer } from '@/lib/use-answer-timer'
-
-function shuffledItems() {
-  return [...MCQ_ITEMS].sort(() => Math.random() - 0.5)
-}
+import { shuffled } from '@/lib/study-practice'
 
 export default function Exam() {
-  const { setTopicState, addToRetrievalQueue, removeFromRetrievalQueue, appendSessionLog } = useLearnerState()
-  const [items] = useState(shuffledItems)
-  const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState<string | null>(null)
-  const [results, setResults] = useState<{ topicId: string; correct: boolean }[]>([])
-  const finishAnswer = useAnswerTimer(index)
+  const learner = useLearnerState()
+  const { resumeReviewSession, startReviewSession } = learner
+  const session = learner.state.study.exam
+  const sessionId = session?.id
+  const index = session?.index ?? 0
+  const current = session?.items[index]
+  const unit = UNIT_BY_ID.get(current?.topicId ?? '')
+  const response = session?.responses[index]
 
-  const current = items[index]
-  const topic = current ? TOPICS.find((t) => t.id === current.topicId) : undefined
-  const done = index >= items.length
-  const remainingMinutes = useMemo(() => estimateSessionMinutes({ mcqs: Math.max(0, items.length - index) }), [items.length, index])
+  useEffect(() => {
+    if (sessionId) resumeReviewSession('exam')
+  }, [sessionId, resumeReviewSession])
 
-  function answer(optionId: string) {
-    if (!current || selected !== null) return
-    const msToAnswer = finishAnswer()
-    if (msToAnswer === null) return
-    setSelected(optionId)
-    const correct = optionId === current.correctOptionId
-    appendSessionLog({
-      topicId: current.topicId,
-      itemType: 'mcq',
-      itemId: current.id,
-      correct,
-      timestamp: new Date().toISOString(),
-      msToAnswer,
-    })
-    if (correct) {
-      setTopicState(current.topicId, 'applicable', 'Correctly applied in exam mode.')
-      removeFromRetrievalQueue(current.topicId)
-    } else {
-      setTopicState(current.topicId, 'needs-repair', 'Missed in exam mode.')
-      addToRetrievalQueue(current.topicId, 'miss')
-    }
-    setResults((r) => [...r, { topicId: current.topicId, correct }])
+  useEffect(() => {
+    document.getElementById('exam-step-title')?.focus({ preventScroll: true })
+  }, [sessionId, index])
+
+  function start() {
+    startReviewSession('exam', shuffled(COURSE_UNITS).slice(0, 8).map((item) => ({ kind: 'mcq', topicId: item.id, id: `scenario-${item.id}` })), undefined, true)
   }
 
-  function next() {
-    setSelected(null)
-    setIndex((i) => i + 1)
-  }
+  if (!session) return (
+    <div className="studio-page max-w-3xl">
+      <div><h1 className="page-heading">A small exam rehearsal.</h1><p className="page-description">Eight mixed scenarios, no countdown. Choose the requirement that matters, then compare the reasoning and the tempting alternatives. You can stop and resume the same round.</p></div>
+      <div className="inline-note"><p>This mode can include material you have not learned. Those answers are diagnostic: they do not create a failure or mastery promotion for an untaught topic. Questions are authored from the corpus, not official exam items.</p></div>
+      <button type="button" className="primary-button self-start" onClick={start}>Begin eight scenarios <ArrowRight size={16} aria-hidden /></button>
+    </div>
+  )
 
-  if (items.length === 0) {
-    return <p className="text-muted-foreground">No exam questions yet.</p>
-  }
-
-  if (done) {
-    const correctCount = results.filter((r) => r.correct).length
-    const byCluster = new Map<string, { correct: number; total: number }>()
-    for (const r of results) {
-      const t = TOPICS.find((tp) => tp.id === r.topicId)
-      if (!t) continue
-      const entry = byCluster.get(t.cluster) ?? { correct: 0, total: 0 }
-      entry.total += 1
-      if (r.correct) entry.correct += 1
-      byCluster.set(t.cluster, entry)
-    }
-    const missedTopicIds = [...new Set(results.filter((r) => !r.correct).map((r) => r.topicId))]
-
+  if (session.completedAt) {
+    const missed = session.items.filter((_, itemIndex) => session.responses[itemIndex].outcome !== 'correct')
     return (
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl">
-            {correctCount} / {results.length} correct
-          </CardTitle>
-          <CardDescription>Breakdown by domain, and what to revisit.</CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            {[...byCluster.entries()].map(([cluster, s]) => (
-              <div key={cluster} className="flex items-center gap-3 text-sm">
-                <span className="flex w-56 shrink-0 items-center gap-1.5">
-                  <span
-                    className="size-2 shrink-0 rounded-full"
-                    style={{ backgroundColor: CLUSTER_ACCENT[cluster as keyof typeof CLUSTER_ACCENT].fg }}
-                    aria-hidden
-                  />
-                  {CLUSTER_LABELS[cluster as keyof typeof CLUSTER_LABELS]}
-                </span>
-                <ProgressBar value={(s.correct / s.total) * 100} className="h-1.5 flex-1" />
-                <span className="w-12 shrink-0 text-right text-muted-foreground">
-                  {s.correct}/{s.total}
-                </span>
-              </div>
-            ))}
-          </div>
-          {missedTopicIds.length > 0 && (
-            <div>
-              <p className="mb-1.5 text-sm font-medium">Worth revisiting</p>
-              <ul className="flex flex-col gap-1">
-                {missedTopicIds.map((id) => {
-                  const t = TOPICS.find((tp) => tp.id === id)
-                  return (
-                    t && (
-                      <li key={id}>
-                        <Link to={`/learn/${id}`} className="text-sm text-primary hover:underline">
-                          {t.title}
-                        </Link>
-                      </li>
-                    )
-                  )
-                })}
-              </ul>
-            </div>
-          )}
-          <Button className="w-fit" render={<Link to="/" />} nativeButton={false}>
-            Back to Continue
-          </Button>
-        </CardContent>
-      </Card>
+      <div className="lesson-sheet max-w-3xl"><div className="completion">
+        <div className="complete-symbol"><Check size={24} aria-hidden /></div>
+        <h1 id="exam-step-title" tabIndex={-1} className="page-heading">That round is complete.</h1>
+        <p className="page-description">{session.responses.filter((answer) => answer.outcome === 'correct').length} decisions fit the requirement. {session.responses.filter((answer) => answer.outcome === 'unsure').length} left uncertain, without being recorded as wrong answers. Untaught material remains diagnostic; a single scenario does not establish mastery.</p>
+        {missed.length > 0 && <div className="mt-6 flex flex-col gap-1">{missed.map((item) => <Link key={item.id} className="text-link" to={`/learn/${item.topicId}`}>{UNIT_BY_ID.get(item.topicId)?.title ?? 'Revisit this concept'}<ArrowRight size={14} aria-hidden /></Link>)}</div>}
+        <div className="portal-actions"><Link className="primary-button" to="/" onClick={learner.pauseStudy}>Done for now <Pause size={16} aria-hidden /></Link><button className="quiet-button" type="button" onClick={start}>Start another round</button></div>
+      </div></div>
     )
   }
 
+  if (!current || !unit || !response || session.items.some((item) => !UNIT_BY_ID.has(item.topicId))) return (
+    <div className="empty-state"><h1 className="page-heading">This saved rehearsal includes an unavailable lesson.</h1><p className="page-description">Your earlier evidence is unchanged. Export a backup before replacing the round.</p><div className="portal-actions"><Link className="primary-button" to="/settings">Open backup settings</Link><button className="quiet-button" type="button" onClick={start}>Start a new rehearsal</button></div></div>
+  )
+  const position = { sessionId: session.id, itemId: current.id }
+
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-3">
-        <ProgressBar value={(index / items.length) * 100} className="h-1.5 flex-1" />
-        <span className="text-xs text-muted-foreground">
-          {index + 1} / {items.length}
-        </span>
-        <span className="flex items-center gap-1 text-xs text-muted-foreground">
-          <Clock className="size-3.5" aria-hidden />~{remainingMinutes} min left
-        </span>
-      </div>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">{current.scenario}</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-2">
-          {current.options.map((opt) => {
-            const isSelected = selected === opt.id
-            const isCorrect = opt.id === current.correctOptionId
-            const showResult = selected !== null
-            return (
-              <button
-                key={opt.id}
-                disabled={showResult}
-                onClick={() => answer(opt.id)}
-                className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm transition-colors ${
-                  showResult && isCorrect
-                    ? 'border-success bg-success/10'
-                    : showResult && isSelected
-                      ? 'border-destructive bg-destructive/10'
-                      : 'border-border hover:bg-muted'
-                }`}
-              >
-                {showResult && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-success" aria-hidden />}
-                {showResult && isSelected && !isCorrect && <XCircle className="size-4 shrink-0 text-destructive" aria-hidden />}
-                <span>{opt.text}</span>
-              </button>
-            )
-          })}
-          {selected && (
-            <div className="mt-2 flex flex-col gap-2 rounded-md bg-muted p-3 text-sm">
-              <p>{current.explanation}</p>
-              {selected !== current.correctOptionId && current.distractorNotes[selected] && (
-                <p className="text-muted-foreground">Why that one's tempting: {current.distractorNotes[selected]}</p>
-              )}
-              <Button className="w-fit" onClick={next}>
-                Next
-              </Button>
-            </div>
-          )}
-        </CardContent>
-      </Card>
-
-      {topic && <ClusterBadge cluster={topic.cluster} className="w-fit" />}
+    <div className="studio-page max-w-3xl">
+      <div className="section-heading mb-0"><h1 id="exam-step-title" tabIndex={-1} className="page-heading">Exam practice.</h1><Link className="text-link" to="/" onClick={learner.pauseStudy}>Done for now <Pause size={16} aria-hidden /></Link></div>
+      <div className="lesson-sheet"><div className="teaching-content">
+        <p className="text-sm text-muted-foreground">{index + 1} of {session.items.length} scenarios. Your position and shown feedback are saved.</p>
+        <ApplicationCheck check={unit.check} selectedId={response.selectedOptionId} onAnswer={(id) => learner.commitReviewAnswer('exam', position, { kind: 'scenario', selectedOptionId: id, correctOptionId: unit.check.correctOptionId })} />
+        {response.outcome && <div className="portal-actions"><button className="primary-button" type="button" onClick={() => learner.advanceReviewSession('exam', position)}>{index === session.items.length - 1 ? 'See what to revisit' : 'Next scenario'}<ArrowRight size={16} aria-hidden /></button></div>}
+      </div></div>
     </div>
   )
 }

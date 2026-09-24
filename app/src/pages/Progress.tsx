@@ -1,125 +1,83 @@
+import { ArrowRight, BookOpen } from '@phosphor-icons/react'
+import { Link } from 'react-router-dom'
 import { Bar } from '@/components/charts/bar'
 import { BarChart } from '@/components/charts/bar-chart'
+import { BarXAxis } from '@/components/charts/bar-x-axis'
 import { Grid } from '@/components/charts/grid'
-import { RadarArea } from '@/components/charts/radar-area'
-import { RadarAxis } from '@/components/charts/radar-axis'
-import { RadarChart } from '@/components/charts/radar-chart'
-import { RadarGrid } from '@/components/charts/radar-grid'
-import { RadarLabels } from '@/components/charts/radar-labels'
-import { Ring } from '@/components/charts/ring'
-import { RingCenter } from '@/components/charts/ring-center'
-import { RingChart } from '@/components/charts/ring-chart'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { CLUSTER_ACCENT, CLUSTER_LABELS, CLUSTER_ORDER, TOPICS } from '@/data/topics'
+import { COURSE_UNITS } from '@/data/curriculum'
+import { CORPUS_SOURCES } from '@/data/curriculum/catalog'
+import { CLUSTER_LABELS, CLUSTER_ORDER } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
 import { useUIPrefs } from '@/lib/ui-prefs'
 
-export default function Progress() {
-  const { state, coverage } = useLearnerState()
-  const { prefs } = useUIPrefs()
-  const animate = prefs.motion !== 'off'
+const SHORT_LABELS = ['Models', 'Agents', 'Search', 'Docs', 'Text', 'Voice']
 
-  const barData = CLUSTER_ORDER.map((cluster) => {
-    const topicsInCluster = TOPICS.filter((t) => t.cluster === cluster)
-    const mastered = topicsInCluster.filter((t) => state.topics[t.id]?.state === 'mastered').length
-    return { name: CLUSTER_LABELS[cluster].replace('Azure AI ', '').replace('Models: ', ''), mastered, total: topicsInCluster.length }
+export default function Progress() {
+  const { state, coverage, dueRetrievalQueue } = useLearnerState()
+  const { prefs } = useUIPrefs()
+  const explored = COURSE_UNITS.filter((unit) => state.study.units[unit.id]?.completedAt)
+  const fieldwork = COURSE_UNITS.filter((unit) => state.study.units[unit.id]?.portalCompletedAt)
+  const rows = CLUSTER_ORDER.map((cluster, index) => {
+    const units = COURSE_UNITS.filter((unit) => unit.cluster === cluster)
+    const complete = units.filter((unit) => state.study.units[unit.id]?.completedAt).length
+    return {
+      cluster,
+      name: SHORT_LABELS[index],
+      explored: complete,
+      remaining: units.length - complete,
+      total: units.length,
+      fieldwork: units.filter((unit) => state.study.units[unit.id]?.portalCompletedAt).length,
+      mastered: units.filter((unit) => state.topics[unit.id]?.state === 'mastered').length,
+    }
   })
 
-  const radarMetrics = CLUSTER_ORDER.map((cluster) => ({ key: cluster, label: CLUSTER_LABELS[cluster].replace('Azure AI ', '').replace('Models: ', '') }))
-  const radarValues: Record<string, number> = {}
-  for (const cluster of CLUSTER_ORDER) {
-    const topicsInCluster = TOPICS.filter((t) => t.cluster === cluster)
-    const started = topicsInCluster.filter((t) => (state.topics[t.id]?.state ?? 'not-encountered') !== 'not-encountered').length
-    radarValues[cluster] = topicsInCluster.length ? Math.round((started / topicsInCluster.length) * 100) : 0
-  }
-
   return (
-    <div className="flex flex-col gap-6">
-      <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Progress</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          {coverage.mastered} of {coverage.total} v1 topics mastered, {coverage.started} started.
-        </p>
+    <div className="studio-page">
+      <div><h1 className="page-heading">See what is taking root.</h1><p className="page-description">Three different kinds of progress: lessons explored, things you tried in Azure, and knowledge supported by mastery evidence. None stands in for the others.</p></div>
+      <div className="progress-overview">
+        <section>
+          <h2>{explored.length ? 'A little more connected than before.' : 'Your first lesson is the starting point.'}</h2>
+          <p>{explored.length ? 'A finished lesson is useful exposure. Reconstructing the idea later, applying it, and explaining why are the next evidence to look for.' : 'There is no invented readiness score here. Learn an idea, use it, and come back to it later. Your progress will reflect those actions.'}</p>
+          <Link className="text-link mt-3" to={dueRetrievalQueue.length ? '/practice' : '/'}>{dueRetrievalQueue.length ? `${dueRetrievalQueue.length} topic${dueRetrievalQueue.length === 1 ? '' : 's'} ready for recall` : 'Go to your next step'}<ArrowRight size={15} aria-hidden /></Link>
+        </section>
+        <dl className="progress-summary">
+          <div><dt>Lessons explored</dt><dd>{explored.length} / {COURSE_UNITS.length}</dd></div>
+          <div><dt>Azure walkthroughs you recorded</dt><dd>{fieldwork.length} / {COURSE_UNITS.length}</dd></div>
+          <div><dt>Topics with a mastered state</dt><dd>{coverage.mastered} / {coverage.total}</dd></div>
+          <div><dt>Corpus sources mapped into the course</dt><dd>{CORPUS_SOURCES.length} / {CORPUS_SOURCES.length}</dd></div>
+        </dl>
       </div>
 
-      <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-        {CLUSTER_ORDER.map((cluster) => (
-          <span key={cluster} className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            <span className="size-2 shrink-0 rounded-full" style={{ backgroundColor: CLUSTER_ACCENT[cluster].fg }} aria-hidden />
-            {CLUSTER_LABELS[cluster]}
-          </span>
-        ))}
-      </div>
-
-      <div className="grid gap-6 sm:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Overall mastery</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <RingChart data={[{ label: 'Mastered', value: coverage.mastered, maxValue: coverage.total }]} size={200} className="mx-auto">
-              <Ring index={0} animate={animate} />
-              <RingCenter defaultLabel="Mastered" />
-            </RingChart>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Started, by domain</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <RadarChart data={[{ label: 'Coverage', values: radarValues }]} metrics={radarMetrics} size={220} className="mx-auto" animate={animate}>
-              <RadarGrid />
-              <RadarAxis />
-              <RadarLabels />
-              <RadarArea index={0} />
-            </RadarChart>
-          </CardContent>
-        </Card>
-      </div>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">Mastered topics, by domain</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <BarChart data={barData} xDataKey="name" animationDuration={animate ? 900 : 0}>
+      <section className="progress-chart" aria-labelledby="course-chart-title">
+        <h2 id="course-chart-title">Where you have spent your attention</h2>
+        <p>Green is explored lessons; the lighter part is still ahead. These tracks are not exam-domain weights.</p>
+        <div aria-hidden="true">
+          <BarChart data={rows} xDataKey="name" stacked aspectRatio="2.8 / 1" margin={{ top: 20, left: 14, right: 14, bottom: 38 }} animationDuration={prefs.motion === 'off' ? 0 : 350} enterTransition={{ duration: prefs.motion === 'off' ? 0 : 0.2 }}>
             <Grid horizontal />
-            <Bar dataKey="mastered" fill="var(--chart-1)" />
+            <Bar dataKey="explored" fill="var(--primary)" animate={prefs.motion !== 'off'} animationType="fade" lineCap={3} />
+            <Bar dataKey="remaining" fill="var(--chart-4)" animate={prefs.motion !== 'off'} animationType="fade" lineCap={3} />
+            <BarXAxis />
           </BarChart>
-        </CardContent>
-      </Card>
+        </div>
+        <table className="progress-table">
+          <caption className="sr-only">Equivalent course progress values, including self-reported Azure work and mastery states</caption>
+          <thead><tr><th scope="col">Learning track</th><th scope="col">Explored</th><th scope="col">Azure work</th><th scope="col">Mastered</th></tr></thead>
+          <tbody>{rows.map((row) => <tr key={row.cluster}><th scope="row"><Link className="hover:underline" to={`/learn?track=${row.cluster}`}>{CLUSTER_LABELS[row.cluster]}</Link></th><td>{row.explored} / {row.total}</td><td>{row.fieldwork}</td><td>{row.mastered}</td></tr>)}</tbody>
+        </table>
+      </section>
 
-      {state.weaknesses.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Weaknesses noted by the tutor</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-              {state.weaknesses.map((w) => (
-                <li key={w}>{w}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      )}
+      {fieldwork.length > 0 && <section>
+        <div className="section-heading"><div><h2>Evidence from your own fieldwork</h2><p>Self-recorded observations. The site does not independently inspect Azure.</p></div><Link className="text-link" to="/settings">Export with your progress <ArrowRight size={14} aria-hidden /></Link></div>
+        <div className="course-strip">{fieldwork.slice(-5).reverse().map((unit) => {
+          const notes = state.study.units[unit.id].portalNotes.filter((note) => note.trim())
+          return <Link key={unit.id} to={`/labs/${unit.id}`} className="source-row"><BookOpen size={20} aria-hidden /><span><span className="unit-name">{unit.lab.azure.title}</span><span className="unit-meta line-clamp-2">{notes.at(-1) ?? 'Walkthrough checkpoints recorded.'}</span></span><ArrowRight size={15} aria-hidden /></Link>
+        })}</div>
+      </section>}
 
-      {state.confusions.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Confusions to watch for</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-              {state.confusions.map((c) => (
-                <li key={c}>{c}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      )}
+      {(state.weaknesses.length > 0 || state.confusions.length > 0) && <section>
+        <div className="section-heading"><h2>Connections worth repairing</h2></div>
+        <ul className="flex flex-col gap-3 text-sm leading-7 text-muted-foreground">{[...state.weaknesses, ...state.confusions].map((note, index) => <li key={`${index}-${note}`}>{note}</li>)}</ul>
+      </section>}
     </div>
   )
 }

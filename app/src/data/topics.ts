@@ -1,10 +1,10 @@
 import type { Topic } from '@/lib/types'
+import { COURSE_UNITS } from './curriculum/index.ts'
+import { getSource } from './curriculum/catalog.ts'
 
-// v1 curriculum map (Section 6/38): a representative, prerequisite-ordered
-// slice of the 265-file corpus, grouped into the domain clusters the exam
-// itself weights. Not exhaustive — the AI chat panel can still retrieve from
-// the full corpus for anything not listed here.
-export const TOPICS: Topic[] = [
+// Historical topic IDs and references are retained for migration checks.
+// The active, full-corpus path is derived from COURSE_UNITS below.
+export const LEGACY_TOPICS: Topic[] = [
   // --- Agents & orchestration ---
   {
     id: 'agents-what-is-an-agent',
@@ -275,22 +275,31 @@ export const TOPICS: Topic[] = [
   },
 ]
 
+export const TOPICS: Topic[] = COURSE_UNITS.map((unit) => ({
+  id: unit.id,
+  cluster: unit.cluster,
+  title: unit.title,
+  orient: unit.summary,
+  corpusIds: unit.sourceIds.map((id) => getSource(id).id),
+  prerequisites: unit.prerequisites,
+}))
+
 export const CLUSTER_LABELS: Record<Topic['cluster'], string> = {
   'agents-orchestration': 'Agents & Orchestration',
-  'content-document': 'Content Understanding & Document Intelligence',
-  language: 'Azure AI Language',
-  speech: 'Azure AI Speech',
-  'search-rag': 'Azure AI Search & RAG',
-  'models-deploy-eval': 'Models: Catalog, Deployment & Evaluation',
+  'content-document': 'Documents & vision',
+  language: 'Language & translation',
+  speech: 'Speech & voice',
+  'search-rag': 'Search & grounding',
+  'models-deploy-eval': 'Foundations & models',
 }
 
 export const CLUSTER_ORDER: Topic['cluster'][] = [
   'models-deploy-eval',
   'agents-orchestration',
+  'search-rag',
   'content-document',
   'language',
   'speech',
-  'search-rag',
 ]
 
 // Each domain cluster gets a consistent colour identity, reused across

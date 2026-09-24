@@ -35,6 +35,10 @@ jobs:
         working-directory: app
         run: npm ci
 
+      - name: Test (a failing suite blocks deployment)
+        working-directory: app
+        run: npm test
+
       - name: Build (syncs corpus + builds the static site)
         working-directory: app
         run: npm run build

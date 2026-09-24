@@ -1,213 +1,124 @@
-import { CheckCircle2, Clock, XCircle } from 'lucide-react'
-import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ClusterBadge } from '@/components/ClusterBadge'
-import { Progress as ProgressBar } from '@/components/ui/progress'
-import { MotionGate } from '@/components/effects/MotionGate'
-import { FLASHCARDS, MCQ_ITEMS } from '@/data/content'
-import { TOPICS } from '@/data/topics'
+import { ArrowLeft, ArrowRight, Check, Pause } from '@phosphor-icons/react'
+import { useEffect, useState } from 'react'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { ApplicationCheck } from '@/components/study/ApplicationCheck'
+import { COURSE_UNITS, UNIT_BY_ID } from '@/data/curriculum'
 import { useLearnerState } from '@/lib/learner-state'
-import { prioritizeDueItems } from '@/lib/retrieval'
-import { estimateSessionMinutes } from '@/lib/time-estimate'
-import { useAnswerTimer } from '@/lib/use-answer-timer'
-import type { MasteryState, RetrievalQueueItem } from '@/lib/types'
+import { buildReviewQueue } from '@/lib/study-practice'
+import { hasLearnedTopic } from '@/lib/study-state'
+import type { ReviewAnswer } from '@/lib/review-session'
 
 export const SESSION_SIZE = 8
-
-type QueueItem = { kind: 'flashcard'; id: string } | { kind: 'mcq'; id: string }
-
-function buildQueue(retrievalQueue: RetrievalQueueItem[]): QueueItem[] {
-  const flashcards = FLASHCARDS.map((f) => ({ kind: 'flashcard' as const, id: f.id, topicId: f.topicId }))
-  const mcqs = MCQ_ITEMS.map((m) => ({ kind: 'mcq' as const, id: m.id, topicId: m.topicId }))
-  const all = [...flashcards, ...mcqs]
-  return prioritizeDueItems(all, retrievalQueue).slice(0, SESSION_SIZE).map(({ kind, id }) => ({ kind, id }))
-}
+/** A summary stays on screen across a reload; a round finished in an earlier visit is history. */
+const SUMMARY_FRESH_MS = 30 * 60 * 1000
 
 export default function Practice() {
-  const { state, setTopicState, removeFromRetrievalQueue, addToRetrievalQueue, appendSessionLog } = useLearnerState()
-  const [queue] = useState<QueueItem[]>(() => buildQueue(state.retrievalQueue))
-  const [index, setIndex] = useState(0)
-  const [correctCount, setCorrectCount] = useState(0)
-  const [revealed, setRevealed] = useState(false)
-  const [selectedOption, setSelectedOption] = useState<string | null>(null)
-  const finishAnswer = useAnswerTimer(index)
+  const [params] = useSearchParams()
+  const topic = params.get('topic')
+  return <ReviewSession key={topic ?? 'mixed'} topicId={topic} />
+}
 
-  const current = queue[index]
-  const flashcard = current?.kind === 'flashcard' ? FLASHCARDS.find((f) => f.id === current.id) : undefined
-  const mcq = current?.kind === 'mcq' ? MCQ_ITEMS.find((m) => m.id === current.id) : undefined
-  const topic = TOPICS.find((t) => t.id === (flashcard?.topicId ?? mcq?.topicId))
+function ReviewSession({ topicId }: { topicId: string | null }) {
+  const learner = useLearnerState()
+  const navigate = useNavigate()
+  const { state, pauseStudy, startReviewSession, resumeReviewSession, saveReviewResponse, commitReviewAnswer, advanceReviewSession } = learner
+  const limit = state.study.sessionMinutes === 5 ? 3 : state.study.sessionMinutes === 15 ? 6 : SESSION_SIZE
+  const [initialQueue] = useState(() => buildReviewQueue(COURSE_UNITS.map((unit) => unit.id), state, limit, topicId))
+  const [openedAt] = useState(() => Date.now())
+  const [exhausted, setExhausted] = useState(false)
+  const session = state.study.practice
+  const sessionId = session?.id
+  const completedAt = session?.completedAt
+  const differentTopic = Boolean(topicId && session && session.requestedTopicId !== topicId)
+  const replacing = Boolean(completedAt && (differentTopic || Date.parse(completedAt) < openedAt - SUMMARY_FRESH_MS))
+  const eligible = !topicId || (UNIT_BY_ID.has(topicId) && hasLearnedTopic(state, topicId))
+  const index = session?.index ?? 0
+  const queue = session?.items ?? initialQueue
+  const item = queue[index]
+  const unit = item ? UNIT_BY_ID.get(item.topicId) : undefined
+  const response = session?.responses[index]
+  const position = { sessionId: sessionId ?? '', itemId: item?.id ?? '' }
 
-  const remainingMinutes = useMemo(() => {
-    const remaining = queue.slice(index)
-    return estimateSessionMinutes({
-      flashcards: remaining.filter((i) => i.kind === 'flashcard').length,
-      mcqs: remaining.filter((i) => i.kind === 'mcq').length,
-    })
-  }, [queue, index])
-
-  function progressTopic(topicId: string, remembered: boolean) {
-    if (!current) return
-    const msToAnswer = finishAnswer()
-    if (msToAnswer === null) return
-    appendSessionLog({
-      topicId,
-      itemType: current.kind,
-      itemId: current.id,
-      correct: remembered,
-      timestamp: new Date().toISOString(),
-      msToAnswer,
-    })
-    const mastery = state.topics[topicId]?.state ?? 'not-encountered'
-    if (remembered) {
-      const next: MasteryState = mastery === 'understood' || mastery === 'not-encountered' || mastery === 'introduced' ? 'retrievable' : mastery === 'retrievable' ? 'discriminable' : 'mastered'
-      setTopicState(topicId, next, 'Correct in a practice session.')
-      removeFromRetrievalQueue(topicId)
-      setCorrectCount((c) => c + 1)
-    } else {
-      setTopicState(topicId, 'needs-repair', 'Missed in a practice session.')
-      addToRetrievalQueue(topicId, 'miss')
+  useEffect(() => {
+    if (!eligible) return
+    if (!sessionId || replacing) {
+      if (initialQueue.length) startReviewSession('practice', initialQueue, topicId ?? undefined, replacing)
+    } else if (!differentTopic && !completedAt) {
+      resumeReviewSession('practice')
     }
-    next()
+  }, [sessionId, completedAt, differentTopic, replacing, eligible, initialQueue, topicId, startReviewSession, resumeReviewSession])
+
+  useEffect(() => {
+    document.getElementById('review-step-title')?.focus({ preventScroll: true })
+  }, [index, sessionId])
+
+  function restart() {
+    const next = buildReviewQueue(COURSE_UNITS.map((candidate) => candidate.id), state, limit, topicId)
+    if (!next.length) {
+      setExhausted(true)
+      return
+    }
+    startReviewSession('practice', next, topicId ?? undefined, true)
   }
 
-  function next() {
-    setRevealed(false)
-    setSelectedOption(null)
-    setIndex((i) => i + 1)
+  function rate(answer: ReviewAnswer) {
+    commitReviewAnswer('practice', position, answer)
+    advanceReviewSession('practice', position)
   }
 
-  function done() {
-    return index >= queue.length
-  }
-
-  if (queue.length === 0) {
-    return <p className="text-muted-foreground">No practice content yet — try Learn first.</p>
-  }
-
-  if (done()) {
-    return (
-      <MotionGate full={{ initial: { opacity: 0, scale: 0.98 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.3 } }}>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-xl">
-              <CheckCircle2 className="size-5 text-success" aria-hidden /> Session complete
-            </CardTitle>
-            <CardDescription>
-              {correctCount} of {queue.length} remembered cleanly. That's a real session — stopping here is fine.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex gap-2">
-            <Button render={<Link to="/" />} nativeButton={false}>
-              Back to Continue
-            </Button>
-            <Button variant="outline" onClick={() => window.location.reload()}>
-              Another round
-            </Button>
-          </CardContent>
-        </Card>
-      </MotionGate>
-    )
-  }
+  if (!eligible || exhausted || (!queue.length && !session) || (replacing && !initialQueue.length)) return (
+    <div className="empty-state">
+      <h1 className="page-heading">Learn it before you retrieve it.</h1>
+      <p className="page-description">{topicId ? 'This topic has not been taught yet, or the link names an unavailable topic.' : 'Your recall queue will fill with ideas you have actually been taught. New material is not a surprise test.'}</p>
+      <Link className="primary-button" to={topicId && UNIT_BY_ID.has(topicId) ? `/learn/${topicId}` : '/'}>Start with the explanation <ArrowRight size={16} aria-hidden /></Link>
+    </div>
+  )
+  if (differentTopic && session && !completedAt) return (
+    <div className="empty-state">
+      <h1 className="page-heading">Your earlier round is still saved.</h1>
+      <p className="page-description">Resume prompt {index + 1} of {queue.length}, or deliberately replace this round with a review of {UNIT_BY_ID.get(topicId ?? '')?.title}. Your recorded answers and lesson notes will remain.</p>
+      <div className="portal-actions"><Link className="primary-button" to="/practice">Resume the saved round <ArrowRight size={16} aria-hidden /></Link><button className="quiet-button" type="button" onClick={restart}>Start this topic instead</button></div>
+    </div>
+  )
+  if (!session || replacing) return <p role="status" className="page-description">Preparing your review round.</p>
+  if (completedAt) return (
+    <div className="lesson-sheet max-w-3xl">
+      <div className="completion">
+        <div className="complete-symbol"><Check size={24} aria-hidden /></div>
+        <h1 id="review-step-title" tabIndex={-1} className="page-heading">That is enough for a real session.</h1>
+        <p className="page-description">{session.responses.filter((answer) => answer.outcome === 'correct').length} prompts self-recalled or answered correctly. {session.responses.filter((answer) => answer.outcome === 'unsure').length} left uncertain, without counting as wrong answers. Supported recall stays distinct from independent evidence; nothing here establishes mastery.</p>
+        <div className="portal-actions"><Link className="primary-button" to="/" onClick={pauseStudy}>Done for now <Pause size={16} aria-hidden /></Link><button className="quiet-button" type="button" onClick={restart}>Another short round</button></div>
+      </div>
+    </div>
+  )
+  if (!unit || !response || queue.some((saved) => !UNIT_BY_ID.has(saved.topicId))) return (
+    <div className="empty-state"><h1 className="page-heading">This saved round includes an unavailable lesson.</h1><p className="page-description">Your notebook and recorded evidence have not been removed. Export them in Settings, or start a round from the current course.</p><Link className="primary-button" to="/settings">Open backup settings</Link>{initialQueue.length > 0 && <button className="quiet-button mt-4" type="button" onClick={restart}>Start a new round</button>}</div>
+  )
+  const { revealed, uncertain, reflection, selectedOptionId: selected } = response
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-3">
-        <ProgressBar value={(index / queue.length) * 100} className="h-1.5 flex-1" />
-        <span className="text-xs text-muted-foreground">
-          {index + 1} / {queue.length}
-        </span>
-        <span className="flex items-center gap-1 text-xs text-muted-foreground">
-          <Clock className="size-3.5" aria-hidden />~{remainingMinutes} min left
-        </span>
+    <div>
+      <div className="lesson-toolbar"><Link className="text-link" to="/"><ArrowLeft size={16} aria-hidden />Back to Today</Link><button className="quiet-button" type="button" onClick={() => { pauseStudy(); navigate('/') }}><Pause size={16} aria-hidden />Done for now</button></div>
+      <div className="mb-7"><h1 className="page-heading">Make it yours again.</h1><p className="page-description">Only ideas you have been taught. A due idea starts with its scenario, before any explanation, so the answer is yours.</p></div>
+      <div className="lesson-sheet max-w-3xl">
+        <div className="teaching-content">
+          <div className="lesson-metadata mb-5"><span>{index + 1} of {queue.length}</span><span>{item.kind === 'flashcard' ? 'Free recall' : 'Apply the distinction'}</span></div>
+          <h2 id="review-step-title" tabIndex={-1}>{item.kind === 'flashcard' ? unit.recall.prompt : 'Change the situation.'}</h2>
+          {item.kind === 'flashcard' ? (
+            <>
+              <label className="field-label mt-5 block" htmlFor="practice-reflection">Your explanation (optional)</label>
+              <textarea className="study-textarea" id="practice-reflection" maxLength={4000} value={reflection} onChange={(event) => saveReviewResponse('practice', position, { reflection: event.target.value })} placeholder="Try reconstructing the mechanism before revealing it." />
+              <p className="field-note">Your draft and any explanation already revealed travel with this saved round.</p>
+              {!revealed ? <div className="portal-actions"><button className="primary-button" type="button" onClick={() => saveReviewResponse('practice', position, { revealed: true })}>Compare with the explanation</button><button className="quiet-button" type="button" onClick={() => saveReviewResponse('practice', position, { uncertain: true })}>I don't know yet</button></div>
+                : <><div className="lesson-example"><span>Check your mental model</span>{unit.recall.answer}</div><p className="field-note mt-3">This is your self-rating, not an automated assessment of your words.</p><div className="portal-actions">
+                  {!uncertain && <button className="primary-button" type="button" onClick={() => rate({ kind: 'self-rating', retrieved: true })}>I retrieved that before looking <Check size={16} aria-hidden /></button>}
+                  <button className={uncertain ? 'primary-button' : 'quiet-button'} type="button" onClick={() => rate(uncertain ? { kind: 'unsure' } : { kind: 'self-rating', retrieved: false })}>Keep it in my review queue <ArrowRight size={16} aria-hidden /></button>
+                </div></>}
+            </>
+          ) : <><ApplicationCheck check={unit.check} selectedId={selected} onAnswer={(id) => commitReviewAnswer('practice', position, { kind: 'scenario', selectedOptionId: id, correctOptionId: unit.check.correctOptionId })} />{selected && <button className="primary-button mt-6" type="button" onClick={() => advanceReviewSession('practice', position)}>{index === queue.length - 1 ? 'Finish this round' : 'Next idea'}<ArrowRight size={16} aria-hidden /></button>}</>}
+          <div className="mt-6 border-t border-border pt-3"><Link className="text-link" to={`/learn/${unit.id}`}>Revisit {unit.title} <ArrowRight size={14} aria-hidden /></Link></div>
+        </div>
       </div>
-
-      {topic && (
-        <ClusterBadge cluster={topic.cluster} className="w-fit">
-          {topic.title}
-        </ClusterBadge>
-      )}
-
-      {flashcard && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">{flashcard.front}</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-3">
-            {revealed && <p className="rounded-md bg-muted p-3 text-sm">{flashcard.back}</p>}
-            {!revealed ? (
-              <div className="flex flex-wrap gap-2">
-                <Button variant="outline" onClick={() => setRevealed(true)}>
-                  I don't know
-                </Button>
-                <Button onClick={() => setRevealed(true)}>Show answer</Button>
-              </div>
-            ) : (
-              <div className="flex flex-wrap gap-2">
-                <Button
-                  variant="outline"
-                  onClick={() => progressTopic(flashcard.topicId, false)}
-                >
-                  Still shaky
-                </Button>
-                <Button
-                  onClick={() => progressTopic(flashcard.topicId, true)}
-                >
-                  Remembered it
-                </Button>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      )}
-
-      {mcq && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">{mcq.scenario}</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-2">
-            {mcq.options.map((opt) => {
-              const isSelected = selectedOption === opt.id
-              const isCorrect = opt.id === mcq.correctOptionId
-              const showResult = selectedOption !== null
-              return (
-                <button
-                  key={opt.id}
-                  disabled={showResult}
-                  onClick={() => setSelectedOption(opt.id)}
-                  className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm transition-colors ${
-                    showResult && isCorrect
-                      ? 'border-success bg-success/10'
-                      : showResult && isSelected
-                        ? 'border-destructive bg-destructive/10'
-                        : 'border-border hover:bg-muted'
-                  }`}
-                >
-                  {showResult && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-success" aria-hidden />}
-                  {showResult && isSelected && !isCorrect && <XCircle className="size-4 shrink-0 text-destructive" aria-hidden />}
-                  <span>{opt.text}</span>
-                </button>
-              )
-            })}
-            {selectedOption && (
-              <div className="mt-2 flex flex-col gap-2 rounded-md bg-muted p-3 text-sm">
-                <p>{mcq.explanation}</p>
-                {selectedOption !== mcq.correctOptionId && mcq.distractorNotes[selectedOption] && (
-                  <p className="text-muted-foreground">Why that one's tempting: {mcq.distractorNotes[selectedOption]}</p>
-                )}
-                <Button
-                  className="w-fit"
-                  onClick={() => progressTopic(mcq.topicId, selectedOption === mcq.correctOptionId)}
-                >
-                  Continue
-                </Button>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      )}
     </div>
   )
 }
