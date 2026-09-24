@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle, Circle, Clock, Info, Pause } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
-import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { StudyStepper } from '@/components/effects/StudyStepper'
 import { CodeBlock } from '@/components/study/CodeBlock'
@@ -15,7 +15,7 @@ import { BUILD_PROJECTS } from '@/data/projects'
 import { chooseCoachingAction, coachingHref } from '@/lib/coach'
 import { useLearnerState } from '@/lib/learner-state'
 import { emptyStudyUnit, missingPrerequisites } from '@/lib/study-state'
-import { MASTERY_ORDER, type StudyStage, type StudyUnitProgress } from '@/lib/types'
+import type { StudyStage, StudyUnitProgress } from '@/lib/types'
 import { useAnswerTimer } from '@/lib/use-answer-timer'
 import { useUIPrefs } from '@/lib/ui-prefs'
 
@@ -31,7 +31,7 @@ export default function Study({ portalOnly = false }: { portalOnly?: boolean }) 
 
 function StudySession({ unit, portalOnly }: { unit: CourseUnit; portalOnly: boolean }) {
   const learner = useLearnerState()
-  const { state, saveStudyProgress, setTopicState, pauseStudy, addToRetrievalQueue, endSession, activateStudy } = learner
+  const { state, saveStudyProgress, setTopicState, pauseStudy, completeLessonCheck, activateStudy } = learner
   const { prefs } = useUIPrefs()
   const navigate = useNavigate()
   const progress = state.study.units[unit.id] ?? emptyStudyUnit()
@@ -40,7 +40,6 @@ function StudySession({ unit, portalOnly }: { unit: CourseUnit; portalOnly: bool
   const step = unit.steps[lessonIndex]
   const stageIndex = stage === 'complete' ? 3 : STAGES.indexOf(stage)
   const prerequisites = missingPrerequisites(unit, state)
-  const finishGuard = useRef(false)
   const [tutorOpen, setTutorOpen] = useState(false)
   const mastery = state.topics[unit.id]?.state ?? 'not-encountered'
 
@@ -85,25 +84,15 @@ function StudySession({ unit, portalOnly }: { unit: CourseUnit; portalOnly: bool
   function continueFromLab(skipped: boolean) {
     change({
       labSkipped: skipped && !progress.portalCompletedAt,
-      stage: progress.lessonComplete ? 'recall' : 'learn',
+      // Fieldwork on a finished lesson returns to its completion view, not to an already-answered check.
+      stage: progress.completedAt ? 'complete' : progress.lessonComplete ? 'recall' : 'learn',
     })
     if (portalOnly) navigate(`/learn/${unit.id}`)
   }
 
   function finishLesson() {
-    if (finishGuard.current || !progress.checkAnswerId || !progress.lessonComplete) return
-    finishGuard.current = true
-    const correct = progress.checkAnswerId === unit.check.correctOptionId
-    change({ stage: 'complete', completedAt: new Date().toISOString() })
-    if (correct && !progress.checkAssisted) {
-      if (MASTERY_ORDER.indexOf(mastery) < MASTERY_ORDER.indexOf('understood')) {
-        setTopicState(unit.id, 'understood', 'Answered an immediate application check after teaching. Spaced retrieval and transfer are still needed.')
-      }
-    } else if (progress.checkAnswerId !== 'unsure' && !correct) {
-      setTopicState(unit.id, 'needs-repair', 'A taught decision boundary needs another pass; the lesson included corrective feedback.')
-    }
-    addToRetrievalQueue(unit.id, !correct && progress.checkAnswerId !== 'unsure' ? 'miss' : 'support')
-    endSession()
+    if (!progress.checkAnswerId || !progress.lessonComplete) return
+    completeLessonCheck(unit.id, unit.check.correctOptionId)
   }
 
   const nextAction = chooseCoachingAction(COURSE_UNITS, BUILD_PROJECTS, state)

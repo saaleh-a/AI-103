@@ -1,3 +1,5 @@
+import { scheduleRetrieval } from './retrieval.ts'
+import { MASTERY_ORDER } from './types.ts'
 import type { LearnerState, MasteryState, ReviewItem, ReviewResponse, ReviewSessionProgress, StudyActivity, StudyState, StudyUnitProgress } from './types'
 
 export function emptyStudyState(): StudyState {
@@ -152,19 +154,25 @@ export function normalizeStudyState(value: unknown): StudyState {
 }
 
 type UnitReference = { id: string; prerequisites: readonly string[] }
+type TaughtEvidence = Pick<LearnerState, 'study' | 'topics'> & Partial<Pick<LearnerState, 'sessionLog'>>
 
-export function hasLearnedTopic(state: Pick<LearnerState, 'study' | 'topics'>, id: string): boolean {
-  return state.study.units[id]?.lessonComplete === true
-    || ['understood', 'retrievable', 'discriminable', 'applicable', 'mastered'].includes(state.topics[id]?.state ?? 'not-encountered')
+const TAUGHT_STATES: readonly MasteryState[] = ['understood', 'retrievable', 'discriminable', 'applicable', 'mastered']
+
+export function hasLearnedTopic(state: TaughtEvidence, id: string): boolean {
+  if (state.study.units[id]?.lessonComplete === true) return true
+  const current = state.topics[id]?.state ?? 'not-encountered'
+  if (TAUGHT_STATES.includes(current)) return true
+  // A miss on taught material flags repair; it does not make the topic new again.
+  return current === 'needs-repair' && Boolean(state.sessionLog?.some((entry) => entry.topicId === id && entry.evidenceKind !== undefined && entry.evidenceKind !== 'diagnostic'))
 }
 
-export function missingPrerequisites(unit: UnitReference, state: Pick<LearnerState, 'study' | 'topics'>): string[] {
+export function missingPrerequisites(unit: UnitReference, state: TaughtEvidence): string[] {
   return unit.prerequisites.filter((id) => !hasLearnedTopic(state, id))
 }
 
 export function selectStudyUnit(
   units: readonly UnitReference[],
-  state: Pick<LearnerState, 'study' | 'topics'>,
+  state: TaughtEvidence,
 ): string | null {
   const active = units.find((unit) => unit.id === state.study.activeUnitId)
   if (active && state.study.units[active.id]?.stage !== 'complete') return active.id
@@ -188,4 +196,39 @@ export function practiceEvidenceState(current: MasteryState, kind: 'flashcard' |
   if (!correct) return current === 'not-encountered' ? 'introduced' : 'needs-repair'
   if (kind === 'flashcard' || current === 'needs-repair') return current
   return current === 'introduced' ? 'understood' : current
+}
+
+/**
+ * Records a finished lesson and its application check as one update. Finishing again after revisiting
+ * the lesson only returns to its completion view: the original answer is already evidence, and
+ * re-applying it would erase a later repair flag or schedule a second miss.
+ */
+export function completeLesson(state: LearnerState, unitId: string, correctOptionId: string, now = Date.now()): LearnerState {
+  const progress = state.study.units[unitId]
+  const answer = progress?.checkAnswerId
+  if (!progress?.lessonComplete || !answer) return state
+  const finishedAt = new Date(now).toISOString()
+  if (progress.completedAt) {
+    return progress.stage === 'complete' ? state : { ...state, study: updateStudyUnit(state.study, unitId, { stage: 'complete' }) }
+  }
+  const correct = answer === correctOptionId
+  const mastery = state.topics[unitId] ?? { state: 'not-encountered' as MasteryState, evidence: [] }
+  const evidence = correct && !progress.checkAssisted
+    ? MASTERY_ORDER.indexOf(mastery.state) < MASTERY_ORDER.indexOf('understood')
+      ? { state: 'understood' as MasteryState, note: 'Answered an immediate application check after teaching. Spaced retrieval and transfer are still needed.' }
+      : undefined
+    : answer !== 'unsure' && !correct
+      ? { state: 'needs-repair' as MasteryState, note: 'A taught decision boundary needs another pass; the lesson included corrective feedback.' }
+      : undefined
+  return {
+    ...state,
+    lastActiveAt: finishedAt,
+    sessionsCompleted: state.sessionsCompleted + 1,
+    study: updateStudyUnit(state.study, unitId, { stage: 'complete', completedAt: finishedAt }),
+    topics: evidence ? {
+      ...state.topics,
+      [unitId]: { state: evidence.state, lastEvidenceAt: finishedAt, evidence: [...mastery.evidence.slice(-9), evidence.note] },
+    } : state.topics,
+    retrievalQueue: scheduleRetrieval(state.retrievalQueue, unitId, !correct && answer !== 'unsure' ? 'miss' : 'support', now),
+  }
 }

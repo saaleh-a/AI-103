@@ -93,7 +93,7 @@ export function PortalGuide({ unit, progress, onChange, onContinue, compact = fa
           </details>
           <div className="portal-observation"><strong>Decide what to keep for the next build step</strong><p>Keep a dedicated lab resource only if you plan to reuse it and understand its ongoing charges. Recorded names do not prove a resource still exists.</p><p className="mt-2">{guide.cleanup}</p></div>
           <div className="portal-actions">
-            <button className="primary-button" type="button" onClick={() => onContinue(false)}>{progress.lessonComplete ? 'Recall what changed' : 'Return to the lesson'}<ArrowRight size={16} aria-hidden /></button>
+            <button className="primary-button" type="button" onClick={() => onContinue(false)}>{progress.lessonComplete && !progress.completedAt ? 'Recall what changed' : 'Return to the lesson'}<ArrowRight size={16} aria-hidden /></button>
             <button className="quiet-button" type="button" onClick={() => { onChange({ labStep: 0 }); setReviewing(true) }}>Revisit walkthrough</button>
           </div>
         </section>

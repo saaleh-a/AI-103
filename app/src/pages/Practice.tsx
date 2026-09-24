@@ -9,6 +9,8 @@ import { hasLearnedTopic } from '@/lib/study-state'
 import type { ReviewAnswer } from '@/lib/review-session'
 
 export const SESSION_SIZE = 8
+/** A summary stays on screen across a reload; a round finished in an earlier visit is history. */
+const SUMMARY_FRESH_MS = 30 * 60 * 1000
 
 export default function Practice() {
   const [params] = useSearchParams()
@@ -22,10 +24,13 @@ function ReviewSession({ topicId }: { topicId: string | null }) {
   const { state, pauseStudy, startReviewSession, resumeReviewSession, saveReviewResponse, commitReviewAnswer, advanceReviewSession } = learner
   const limit = state.study.sessionMinutes === 5 ? 3 : state.study.sessionMinutes === 15 ? 6 : SESSION_SIZE
   const [initialQueue] = useState(() => buildReviewQueue(COURSE_UNITS.map((unit) => unit.id), state, limit, topicId))
+  const [openedAt] = useState(() => Date.now())
+  const [exhausted, setExhausted] = useState(false)
   const session = state.study.practice
   const sessionId = session?.id
   const completedAt = session?.completedAt
   const differentTopic = Boolean(topicId && session && session.requestedTopicId !== topicId)
+  const replacing = Boolean(completedAt && (differentTopic || Date.parse(completedAt) < openedAt - SUMMARY_FRESH_MS))
   const eligible = !topicId || (UNIT_BY_ID.has(topicId) && hasLearnedTopic(state, topicId))
   const index = session?.index ?? 0
   const queue = session?.items ?? initialQueue
@@ -36,19 +41,24 @@ function ReviewSession({ topicId }: { topicId: string | null }) {
 
   useEffect(() => {
     if (!eligible) return
-    if (!sessionId || (differentTopic && completedAt)) {
-      if (initialQueue.length) startReviewSession('practice', initialQueue, topicId ?? undefined, Boolean(completedAt))
-    } else if (!differentTopic) {
+    if (!sessionId || replacing) {
+      if (initialQueue.length) startReviewSession('practice', initialQueue, topicId ?? undefined, replacing)
+    } else if (!differentTopic && !completedAt) {
       resumeReviewSession('practice')
     }
-  }, [sessionId, completedAt, differentTopic, eligible, initialQueue, topicId, startReviewSession, resumeReviewSession])
+  }, [sessionId, completedAt, differentTopic, replacing, eligible, initialQueue, topicId, startReviewSession, resumeReviewSession])
 
   useEffect(() => {
     document.getElementById('review-step-title')?.focus({ preventScroll: true })
   }, [index, sessionId])
 
   function restart() {
-    startReviewSession('practice', buildReviewQueue(COURSE_UNITS.map((candidate) => candidate.id), state, limit, topicId), topicId ?? undefined, true)
+    const next = buildReviewQueue(COURSE_UNITS.map((candidate) => candidate.id), state, limit, topicId)
+    if (!next.length) {
+      setExhausted(true)
+      return
+    }
+    startReviewSession('practice', next, topicId ?? undefined, true)
   }
 
   function rate(answer: ReviewAnswer) {
@@ -56,7 +66,7 @@ function ReviewSession({ topicId }: { topicId: string | null }) {
     advanceReviewSession('practice', position)
   }
 
-  if (!eligible || (!queue.length && !session)) return (
+  if (!eligible || exhausted || (!queue.length && !session) || (replacing && !initialQueue.length)) return (
     <div className="empty-state">
       <h1 className="page-heading">Learn it before you retrieve it.</h1>
       <p className="page-description">{topicId ? 'This topic has not been taught yet, or the link names an unavailable topic.' : 'Your recall queue will fill with ideas you have actually been taught. New material is not a surprise test.'}</p>
@@ -70,7 +80,7 @@ function ReviewSession({ topicId }: { topicId: string | null }) {
       <div className="portal-actions"><Link className="primary-button" to="/practice">Resume the saved round <ArrowRight size={16} aria-hidden /></Link><button className="quiet-button" type="button" onClick={restart}>Start this topic instead</button></div>
     </div>
   )
-  if (!session) return <p role="status" className="page-description">Preparing your review round.</p>
+  if (!session || replacing) return <p role="status" className="page-description">Preparing your review round.</p>
   if (completedAt) return (
     <div className="lesson-sheet max-w-3xl">
       <div className="completion">
@@ -89,7 +99,7 @@ function ReviewSession({ topicId }: { topicId: string | null }) {
   return (
     <div>
       <div className="lesson-toolbar"><Link className="text-link" to="/"><ArrowLeft size={16} aria-hidden />Back to Today</Link><button className="quiet-button" type="button" onClick={() => { pauseStudy(); navigate('/') }}><Pause size={16} aria-hidden />Done for now</button></div>
-      <div className="mb-7"><h1 className="page-heading">Make it yours again.</h1><p className="page-description">Only previously taught ideas. Retrieve first, then check the connection.</p></div>
+      <div className="mb-7"><h1 className="page-heading">Make it yours again.</h1><p className="page-description">Only ideas you have been taught. A due idea starts with its scenario, before any explanation, so the answer is yours.</p></div>
       <div className="lesson-sheet max-w-3xl">
         <div className="teaching-content">
           <div className="lesson-metadata mb-5"><span>{index + 1} of {queue.length}</span><span>{item.kind === 'flashcard' ? 'Free recall' : 'Apply the distinction'}</span></div>

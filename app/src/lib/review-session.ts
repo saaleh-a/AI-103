@@ -106,15 +106,14 @@ export function answerReview(
   const updateMastery = learned && !uncertain
   let retrievalQueue = state.retrievalQueue
   if (learned) {
+    const existing = retrievalQueue.find((queued) => queued.topicId === item.topicId)
     if (!correct && !uncertain) {
       retrievalQueue = scheduleRetrieval(retrievalQueue, item.topicId, 'miss', now)
-    } else {
-      const existing = retrievalQueue.find((queued) => queued.topicId === item.topicId)
-      if (correct && item.kind === 'mcq' && !assisted && existing && isRetrievalDue(existing, now)) {
-        retrievalQueue = retrievalQueue.filter((queued) => queued.topicId !== item.topicId)
-      } else {
-        retrievalQueue = scheduleRetrieval(retrievalQueue, item.topicId, 'support', now)
-      }
+    } else if (correct && item.kind === 'mcq' && !assisted && existing && isRetrievalDue(existing, now)) {
+      retrievalQueue = retrievalQueue.filter((queued) => queued.topicId !== item.topicId)
+    } else if (uncertain || existing) {
+      // Uncertainty earns another look; a correct answer never adds review work or shortens a later deadline.
+      retrievalQueue = scheduleRetrieval(retrievalQueue, item.topicId, 'support', now)
     }
   }
   return {

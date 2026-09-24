@@ -1,11 +1,12 @@
 import { useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { LearnerStateContext } from '@/lib/learner-state-context'
 import { TOPICS } from '@/data/topics'
+import { UNIT_BY_ID } from '@/data/curriculum'
 import { emptyState, normalizeLearnerState } from '@/lib/learner-state-data'
 import { isRetrievalDue, nextRetrievalDeadline, scheduleRetrieval, selectNextTopicId, type RetrievalReason } from '@/lib/retrieval'
 import { appendLogEntry } from '@/lib/session-log'
 import { writeJSON } from '@/lib/storage'
-import { updateStudyUnit } from '@/lib/study-state'
+import { completeLesson, hasLearnedTopic, updateStudyUnit } from '@/lib/study-state'
 import { advanceReview, answerReview, saveReviewDraft, startReview, type ReviewAnswer, type ReviewDraft, type ReviewPosition } from '@/lib/review-session'
 import type { LearnerState, MasteryState, RetrievalQueueItem, ReviewItem, ReviewMode, SessionLogEntry, StudyActivity, StudyUnitProgress, StudyState, ProjectWorkspace } from '@/lib/types'
 
@@ -30,6 +31,8 @@ export interface LearnerStateApi {
   removeFromRetrievalQueue: (topicId: string) => void
   recordSessionTouch: () => void
   endSession: () => void
+  /** Records a finished lesson's application check once; finishing a revisited lesson only restores its completion view. */
+  completeLessonCheck: (unitId: string, correctOptionId: string) => void
   exportState: () => string
   importState: (json: string) => boolean
   resetState: () => void
@@ -98,6 +101,7 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const startReviewSession = useCallback((mode: ReviewMode, items: readonly ReviewItem[], topicId?: string, replaceExisting = false) => {
+    if (items.length === 0) return
     const id = crypto.randomUUID()
     const startedAt = Date.now()
     setState((prev) => prev.study[mode] && !replaceExisting ? prev : startReview(prev, mode, items, id, topicId, startedAt))
@@ -106,7 +110,8 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
   const resumeReviewSession = useCallback((mode: ReviewMode) => {
     setState((prev) => {
       const session = prev.study[mode]
-      if (!session) return prev
+      // Viewing a finished round's summary must not replace the resume pointer to unfinished work.
+      if (!session || session.completedAt) return prev
       return { ...prev, study: { ...prev.study, activeActivity: mode, activeUnitId: session.items[session.index]?.topicId, pausedAt: undefined } }
     })
   }, [])
@@ -197,6 +202,15 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, sessionsCompleted: prev.sessionsCompleted + 1 }))
   }, [])
 
+  const completeLessonCheck = useCallback((unitId: string, correctOptionId: string) => {
+    const finishedAt = Date.now()
+    setNow(finishedAt)
+    setState((prev) => {
+      const next = completeLesson(prev, unitId, correctOptionId, finishedAt)
+      return next.sessionsCompleted > prev.sessionsCompleted ? { ...next, lastSessionDate: todayKey() } : next
+    })
+  }, [])
+
   const exportState = useCallback(() => JSON.stringify(state, null, 2), [state])
 
   const importState = useCallback((json: string) => {
@@ -228,7 +242,8 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     }
   }, [state.topics])
 
-  const dueRetrievalQueue = state.retrievalQueue.filter((item) => isRetrievalDue(item, now))
+  // Only taught, current lessons can be practised, so only they count as ready for recall.
+  const dueRetrievalQueue = state.retrievalQueue.filter((item) => isRetrievalDue(item, now) && UNIT_BY_ID.has(item.topicId) && hasLearnedTopic(state, item.topicId))
   const nextTopicId = selectNextTopicId(state, TOPICS, now)
 
   const value: LearnerStateApi = {
@@ -245,6 +260,7 @@ export function LearnerStateProvider({ children }: { children: ReactNode }) {
     removeFromRetrievalQueue,
     recordSessionTouch,
     endSession,
+    completeLessonCheck,
     exportState,
     importState,
     resetState,

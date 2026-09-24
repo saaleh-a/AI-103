@@ -1,4 +1,4 @@
-import { prioritizeDueItems } from './retrieval.ts'
+import { isRetrievalDue, prioritizeDueItems } from './retrieval.ts'
 import { hasLearnedTopic } from './study-state.ts'
 import type { LearnerState } from './types'
 
@@ -10,16 +10,19 @@ export interface ReviewItem {
 
 export function buildReviewQueue(
   topicIds: readonly string[],
-  state: Pick<LearnerState, 'topics' | 'study' | 'retrievalQueue'>,
+  state: Pick<LearnerState, 'topics' | 'study' | 'retrievalQueue'> & Partial<Pick<LearnerState, 'sessionLog'>>,
   limit: number,
   requestedTopic?: string | null,
   now = Date.now(),
 ): ReviewItem[] {
   const eligible = topicIds.filter((id) => hasLearnedTopic(state, id) && (!requestedTopic || requestedTopic === id))
-  const items: ReviewItem[] = eligible.flatMap((topicId) => [
-    { kind: 'flashcard', topicId, id: `recall-${topicId}` },
-    { kind: 'mcq', topicId, id: `scenario-${topicId}` },
-  ])
+  const due = new Set(state.retrievalQueue.filter((entry) => isRetrievalDue(entry, now)).map((entry) => entry.topicId))
+  const items: ReviewItem[] = eligible.flatMap((topicId): ReviewItem[] => {
+    const recall: ReviewItem = { kind: 'flashcard', topicId, id: `recall-${topicId}` }
+    const scenario: ReviewItem = { kind: 'mcq', topicId, id: `scenario-${topicId}` }
+    // Only an unassisted scenario can retire a due review, so it must precede that topic's recall explanation.
+    return due.has(topicId) ? [scenario, recall] : [recall, scenario]
+  })
   return prioritizeDueItems(items, state.retrievalQueue, now).slice(0, limit)
 }
 
