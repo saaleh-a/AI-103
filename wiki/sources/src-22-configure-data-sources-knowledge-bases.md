@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Catalogs Foundry IQ knowledge-base source types and gives decision guidance for Azure AI Search, Blob Storage, web, SharePoint, and OneLake."
 area: retrieval
 source_ids: [SRC-22]
-objectives: [P03, P04, G09, I01, I05]
+objectives: [P03, P04, G09, I01]
 tags: [foundry-iq, data-sources, azure-ai-search, blob-storage, sharepoint, onelake, web-grounding]
 aliases: ["SRC-22"]
 source_kind: learn-unit

@@ -462,3 +462,50 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
 - Changes (part 2, two generator agents on disjoint page sets): each of the 165 candidates decided
   against its cited lines; claims that assert an answer rewritten to what the capture shows, with the
   answer attributed to a teaching unit or episode review line the agent read.
+- Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).
+- Judgement (panel, incremental): text-translation PASS; naming-and-currency FAIL on a clause the cycle
+  did not touch (PII "through the Language MCP server" — the PII MCP demo is SRC-45 L299–317)
+  → **2/20 → 1/20**.
+- Judgement (rotating, seed 15, unbiased): **3/20 fail** (2/10, 1/10) — src-22 (I05 claimed),
+  conversation-state (a synthesis sentence cited to lines that carry only half of it), and
+  naming-and-currency (an evidence-map row citing SRC-183 L120–190 for Toolkit labels).
+- After the judgement, the three seed-15 findings and the panel's PII clause were fixed (committed
+  after the judged state; not re-judged).
+- Decision: kept.
+
+## Where the loop stopped (2026-09-24)
+- Done-when (program.md): lint 0 errors / 0 warnings, 265 of 265 sources with a page — met since
+  cycle 6; unlabelled claim lines 0 of 14,373 (≤ 2%) — met since cycle 8; fixed panel ≤ 2/20 —
+  met since cycle 11 (1/20 at the end); every objective has a page or a registered gap — met (40
+  taught · 13 taught in part · 11 named only · 0 no page).
+- Honest quality estimate: five unbiased rotating samples of 20 pages under the v4 protocol read
+  10/20 (before cycle 12), 5/20, 7/20, 2/20 and 3/20. The last two (after cycles 14–15) put the
+  page-failure rate at roughly 10–15% under a deliberately harsh reviewer who checks every citation
+  of five claims per page. Most residual failures are single claims: a range one or two lines off, an
+  unlabelled framing, an alternate product name the cited lines do not contain.
+- The page that fails most often is naming-and-currency: about forty naming claims, each reviewer
+  samples five, and four consecutive judgements each found a different defect. A line-by-line audit
+  of that page is the cheapest next repair.
+
+### Recommendations for the human (verifier changes are yours)
+1. **Refresh or rotate the fixed panel (verifier v5).** The panel has been re-judged and repaired
+   since cycle 3 and read 1/20 while unbiased samples read 10/20; it measures the repairs, not the
+   wiki. Either draw a new panel (`loop_sample.py --make-panel <seed>`) or ratchet on a pooled
+   rotating sample.
+2. **Promote two scans into the lint.** Chrome-only / navigation-only citations and backticked
+   identifiers absent from their cited lines are both mechanical, and both found real defects.
+3. Keep the reviewer protocol as it is: it is strict, and its variance is honest.
+
+### Results by cycle
+| Cycle | Change | Mechanical | Panel | Rotating |
+|---|---|---|---|---|
+| 0 | baseline | [0,0,0,45,6] | 3/20 (v1) | — |
+| 1–2 | objective honesty, verifier v3 | [113,0,0,45,6] (v3) | 6/20 (v3) | — |
+| 3–5 | frontmatter rules, panel repairs | [0,0,0,45,6] | 0/20 | — |
+| 6–8 | warnings, drift, labels | [0,0,0,0,0] | 3/20 (v4) | 11/20 (biased) |
+| 9–10 | offsets, decision rules | [0,0,0,0,0] | 5/20 | — |
+| 11 | chrome-only citations | [0,0,0,0,0] | 1/20 | 10/20 |
+| 12 | gap discussions, Disputed, 131 objective over-claims | [0,0,0,0,0] | 1/20 | 5/20 |
+| 13 | assessment answers, shifted ranges | [0,0,0,0,0] | 1/20 | 7/20 |
+| 14 | range tails, identifiers, framings, naming | [0,0,0,0,0] | 2/20 | 2/20 |
+| 15 | assessment-answer class, final findings | [0,0,0,0,0] | 1/20 | 3/20 |

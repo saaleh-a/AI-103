@@ -22,7 +22,7 @@ Conversation state is the context a chat app or agent carries across turns; in t
 
 ## The problem it solves
 
-A single model call only sees the active context sent with that call. For a conversation, the system must decide which previous instructions, user messages, assistant responses, tool schemas, tool outputs and retrieved documents should be present in that active context window. (SRC-99 L281–288)
+A single model call only sees the active context sent with that call. **Synthesis:** For a conversation, the system must decide which previous instructions, user messages, assistant responses, tool schemas, tool outputs and retrieved documents should be present in that active context window: the active window can hold all of these (SRC-99 L281–288), and manual chaining lets the app customize which messages are included and prune them (SRC-99 L271–274).
 
 ## Mental model
 

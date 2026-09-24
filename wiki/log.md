@@ -187,3 +187,14 @@ Append-only. Newest entries at the bottom. `grep "^## \[" wiki/log.md` lists the
   Naming · Retrieval, Search and RAG · MCP and Azure Language · Publishing, Entra ID and Microsoft 365.
 - Most-connected pages: [[decision-boundaries]] (96 edges), [[microsoft-foundry]] (73),
   [[agent-tools]] (64), [[responses-api]] (53), [[master-synthesis]] (48).
+
+## [2026-09-24] loop | Cycle 15 and where the loop stopped
+- Cycle 15: the remaining assessment-answer claims (165 candidates, 53 rewritten with the answer
+  attributed to a teaching line; 14 new teaching citations checked) and the last reviewer findings.
+- The loop's done-when conditions are all met: lint 0 errors / 0 warnings; 0 of 14,373 claim lines
+  unlabelled; fixed panel 1/20; every exam objective has a page or a registered gap.
+- Honest estimate: the last two unbiased 20-page samples failed 2/20 and 3/20 under the strict
+  every-citation protocol. The residue is single claims (small locator offsets, unlabelled framings,
+  alternate names). [[naming-and-currency]] is the page most worth a line-by-line audit next.
+- Recommended verifier changes for the human (see `loop/experiments.md`): refresh the fixed panel,
+  which has been overfit by repeated repair, and move the chrome-only and identifier scans into the lint.
