@@ -23,13 +23,13 @@ function RouteLoading() {
 }
 
 function RouteBoundary({ children }: { children: ReactNode }) {
-  const { pathname } = useLocation()
+  const { pathname, search } = useLocation()
   return (
-    <ErrorBoundary resetKey={pathname} fallback={(retry) => (
+    <ErrorBoundary resetKey={pathname + search} fallback={(retry) => (
       <div className="empty-state" role="alert">
         <h1 className="page-heading">This page hit a problem.</h1>
-        <p className="page-description">Your progress is saved on this device. Try again, go back to Today, or export a backup from Settings.</p>
-        <div className="portal-actions"><button className="primary-button" type="button" onClick={retry}>Try again</button><Link className="text-link" to="/">Back to Today</Link><Link className="text-link" to="/settings">Settings & backup</Link></div>
+        <p className="page-description">Your progress is saved on this device. Try again, or reload if the studio was updated while this tab was open. You can also go back to Today or export a backup from Settings.</p>
+        <div className="portal-actions"><button className="primary-button" type="button" onClick={retry}>Try again</button><button className="quiet-button" type="button" onClick={() => window.location.reload()}>Reload the studio</button><Link className="text-link" to="/">Back to Today</Link><Link className="text-link" to="/settings">Settings & backup</Link></div>
       </div>
     )}>
       {children}

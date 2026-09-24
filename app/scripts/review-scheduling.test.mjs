@@ -79,6 +79,17 @@ test('misses escalate 1, 3, 7 only while they are successive', () => {
   assert.equal(state.retrievalQueue[0].dueAt, new Date(later + 1000 + day).toISOString())
 })
 
+test('two misses on one idea in the same round count as one lapse', () => {
+  let state = round(learned(), now)
+  state = playScenario(state, wrong, now + 1000)
+  const afterFirst = state.retrievalQueue[0]
+  assert.equal(afterFirst.missStreak, 2)
+  assert.equal(afterFirst.dueAt, new Date(now + 1000 + 3 * day).toISOString())
+  state = playRecall(state, false, now + 2000)
+  assert.deepEqual(state.retrievalQueue, [afterFirst])
+  assert.equal(state.sessionLog.length, 2, 'both answers are still recorded')
+})
+
 test('a miss flags repair without making a taught topic new again', () => {
   const imported = emptyState(COURSE_UNITS)
   imported.topics[topicId] = { state: 'retrievable', evidence: ['Promoted by an earlier version of the app.'] }

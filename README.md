@@ -67,7 +67,8 @@ elapsed time from first presentation to commitment, including any interruption;
 it is not a speed grade. Study lesson-check timing measures the current visit.
 
 A wrong taught answer schedules review after one, three, then seven days for
-successive misses. When an idea is due, its round opens with the scenario before
+successive misses; a second miss on the same idea within one round counts once.
+When an idea is due, its round opens with the scenario before
 any explanation, so an independent correct answer can retire the review and reset
 the streak. Self-rating, uncertainty, and coached success cannot erase a needed
 review, and a correct answer never adds review work. After support or repair, an

@@ -107,8 +107,10 @@ export function answerReview(
   let retrievalQueue = state.retrievalQueue
   if (learned) {
     const existing = retrievalQueue.find((queued) => queued.topicId === item.topicId)
+    const missedEarlier = earlier.some((saved) => saved.outcome === 'incorrect')
     if (!correct && !uncertain) {
-      retrievalQueue = scheduleRetrieval(retrievalQueue, item.topicId, 'miss', now)
+      // A second miss on the same idea within one round is the same lapse, not another successive miss.
+      if (!missedEarlier) retrievalQueue = scheduleRetrieval(retrievalQueue, item.topicId, 'miss', now)
     } else if (correct && item.kind === 'mcq' && !assisted && existing && isRetrievalDue(existing, now)) {
       retrievalQueue = retrievalQueue.filter((queued) => queued.topicId !== item.topicId)
     } else if (uncertain || existing) {
