@@ -37,6 +37,14 @@ npm ci
 npm run dev
 ```
 
+If your network blocks `registry.npmjs.org` and your npm registry is a mirror whose
+URL includes a path (for example `https://packagefeedproxy.microsoft.io/npm/`),
+`npm ci` fails with 404s: npm rewrites only the host of lockfile URLs. Install
+with `node scripts/install-via-mirror.mjs` instead. It uses your configured registry
+for that one install and restores `package-lock.json` exactly. Don't regenerate the
+lockfile through a mirror. `npm test` fails if the lockfile has non-public URLs or
+missing integrity hashes, because CI installs from the public registry.
+
 `npm run dev` / `npm run build` first sync `corpus/` and `CLAUDE.md` into `app/public/` and build a search manifest (`npm run content`) — see `app/scripts/`.
 
 No account or API key is needed for the learning flow. The optional AI tutor opens
