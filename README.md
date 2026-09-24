@@ -38,9 +38,9 @@ npm run dev
 
 `npm run dev` / `npm run build` first sync `corpus/` and `CLAUDE.md` into `app/public/` and build a search manifest (`npm run content`) — see `app/scripts/`.
 
-No account or API key is needed for the learning flow. The optional, separately
-opened AI chat remains available in Settings; it is not used to grade the core
-activities or substitute for missing course content.
+No account or API key is needed for the learning flow. The optional AI tutor opens
+from the bottom of each lesson once you add your own Anthropic key in Settings; it
+is not used to grade the core activities or substitute for missing course content.
 
 ## Stop, resume, and keep your evidence
 
@@ -67,12 +67,17 @@ elapsed time from first presentation to commitment, including any interruption;
 it is not a speed grade. Study lesson-check timing measures the current visit.
 
 A wrong taught answer schedules review after one, three, then seven days for
-successive misses. An independent correct scenario can remove a **due** review.
-Self-rating, uncertainty, and coached success cannot erase a needed review.
-After support or repair, an already-due review moves to the next day without
-adding a miss; a later deadline stays unchanged. Practice only selects taught
-topics; exam rehearsal explicitly allows prior-knowledge diagnosis without
-mastery penalties for untaught material.
+successive misses. When an idea is due, its round opens with the scenario before
+any explanation, so an independent correct answer can retire the review and reset
+the streak. Self-rating, uncertainty, and coached success cannot erase a needed
+review, and a correct answer never adds review work. After support or repair, an
+already-due review moves to the next day without adding a miss; a later deadline
+stays unchanged. Finishing a lesson schedules its first recall for the next day;
+finishing a revisited lesson again records nothing new. A miss flags repair but
+does not make a taught idea new again. Practice only selects taught topics; exam
+rehearsal explicitly allows prior-knowledge diagnosis without mastery penalties
+for untaught material. A round finished in an earlier visit gives way to a fresh
+one.
 
 Older progress imports gain the new notebook/session fields without losing topic
 evidence. Malformed saves are retained rather than overwritten, with a visible
@@ -123,4 +128,13 @@ npm run build
 
 ## Deploying
 
-Pushing to `main` builds and deploys `app/` to GitHub Pages via `.github/workflows/deploy.yml`. GitHub Pages itself needs to be enabled once, in the repo's Settings → Pages, with the source set to "GitHub Actions".
+Pull requests run lint, the native tests, the production build, and the prototype
+engine tests (`.github/workflows/verify.yml`). Pushing to `main` runs the tests
+again, then builds and deploys `app/` to GitHub Pages via
+`.github/workflows/deploy.yml`. GitHub Pages itself needs to be enabled once, in
+the repo's Settings → Pages, with the source set to "GitHub Actions".
+
+Keep `app/package-lock.json` resolvable from the public npm registry: CI installs
+from it with `npm ci`. If your network only reaches a private npm mirror, do not
+commit a lockfile regenerated through it; mirror URLs and missing `integrity`
+hashes break the GitHub-hosted install.

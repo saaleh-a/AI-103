@@ -206,6 +206,11 @@ extension record for stateful CSS samples, motion, breakpoints, and narrative.
 Its eight-step relative-OKLCH ramps are **panel-only derived swatch previews**,
 not additional shipped colors or permission to broaden the palette.
 
+The standalone, AI-free replacement prototype under `design/` (see
+`design/REPLACEMENT_DESIGN.md`) carries this direction forward. It is a design
+artifact with its own stylesheet, not shipped styling; this file remains the
+authority for `app/`.
+
 ## Colors
 
 A low-chroma, green-tinted neutral system: cool paper for reading, deep graphite

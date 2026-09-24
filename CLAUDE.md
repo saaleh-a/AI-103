@@ -8,8 +8,10 @@ This repo is the AI-103 Mastery Tutor: a website (`app/`) that teaches the AI-10
 - `app/src/data/curriculum/` — corpus-grounded, prerequisite-linked teaching units, guided Azure portal fieldwork, recall and application checks. `app/src/data/content.ts` retains legacy practice material and comparison tables.
 - `app/` — the Vite + React + TypeScript site itself (Tailwind + shadcn/ui + Bklit charts + Motion + React Bits), the AI chat panel, and the `learner-state` persistence layer (browser `localStorage`, exportable as JSON).
 - `learner-state` (runtime, in the browser, exportable from Settings) — the concrete home for the constitution's Section 37 "Memory / Progress State": topic mastery ladder, strengths/weaknesses/confusions, retrieval queue, coverage, evidence, lesson position, and self-recorded Azure fieldwork checkpoints/notes. Source mapping, lesson completion, and fieldwork observations are not mastery claims.
+- `PRODUCT.md`, `PRODUCT_CONSTITUTION.md` — product truth and the explicit release gates that are not yet met (objective-level content audit, live Azure validation, learner outcomes).
+- `design/` — the accepted no-AI, AuDHD-first replacement design, its quality gates, and a standalone prototype. Design artifacts, not the shipped app.
 
-If you are a Claude Code session working on this repo (building it further, or tutoring interactively), treat the constitution below as durable and load-bearing. Treat the current state of `app/` and `content/` — what's built, what's stubbed, what's missing — as the dynamic context to check before changing anything (Section 42: don't fossilize dynamic facts into universal rules).
+If you are a Claude Code session working on this repo (building it further, or tutoring interactively), treat the constitution below as durable and load-bearing. Treat the current state of `app/` — what's built, what's stubbed, what's missing — as the dynamic context to check before changing anything (Section 42: don't fossilize dynamic facts into universal rules).
 
 ---
 
