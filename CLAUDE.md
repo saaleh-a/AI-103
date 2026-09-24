@@ -5,7 +5,7 @@ This repo is the AI-103 Mastery Tutor: a website (`app/`) that teaches the AI-10
 ## Where things live
 
 - `corpus/` — 265 raw source files (Microsoft Learn training pages, "AI-103 Episode" transcripts, the Study Cram transcript), verbatim, unmodified. This is the primary source of truth referenced throughout the constitution below (Section 3).
-- `app/src/data/curriculum/` — corpus-grounded, prerequisite-linked teaching units, guided Azure portal fieldwork, recall and application checks. `app/src/data/content.ts` retains legacy practice material and comparison tables.
+- `app/src/data/curriculum/` — corpus-grounded, prerequisite-linked teaching units, guided Azure portal fieldwork, recall and application checks. `app/src/data/objectives.ts` maps the 64 official exam objectives to those units and names corpus gaps. `app/src/data/content.ts` retains legacy practice material and comparison tables.
 - `app/` — the Vite + React + TypeScript site itself (Tailwind + shadcn/ui + Bklit charts + Motion + React Bits), the AI chat panel, and the `learner-state` persistence layer (browser `localStorage`, exportable as JSON).
 - `learner-state` (runtime, in the browser, exportable from Settings) — the concrete home for the constitution's Section 37 "Memory / Progress State": topic mastery ladder, strengths/weaknesses/confusions, retrieval queue, coverage, evidence, lesson position, and self-recorded Azure fieldwork checkpoints/notes. Source mapping, lesson completion, and fieldwork observations are not mastery claims.
 - `PRODUCT.md`, `PRODUCT_CONSTITUTION.md` — product truth and the explicit release gates that are not yet met (objective-level content audit, live Azure validation, learner outcomes).

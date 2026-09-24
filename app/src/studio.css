@@ -114,6 +114,20 @@
 .unit-name { display: block; font-size: 13px; font-weight: 550; line-height: 1.55; }
 .unit-meta { display: block; max-width: 65ch; margin-top: 4px; color: var(--muted-foreground); font-size: 11px; line-height: 1.65; }
 .unit-state { display: flex; flex-direction: column; gap: 5px; text-align: right; color: var(--muted-foreground); font-size: 11px; }
+.objective-summary { display: flex; flex-direction: column; gap: 8px; max-width: 72ch; color: var(--muted-foreground); font-size: 13px; line-height: 1.7; }
+.objective-summary a { color: var(--primary); text-decoration: underline; text-underline-offset: 0.2em; }
+.objective-list { margin: 0 0 18px; padding: 0; list-style: none; border-top: 1px solid var(--border); }
+.objective-row { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; align-items: start; gap: 14px; padding: 15px 16px; border-bottom: 1px solid var(--border); background: var(--card); }
+.objective-id { padding-top: 2px; color: var(--muted-foreground); font-size: 11px; font-weight: 550; font-variant-numeric: tabular-nums; }
+.objective-links { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 14px; margin-top: 6px; font-size: 12px; }
+.objective-links > span { color: var(--muted-foreground); font-size: 11px; }
+.objective-links a { display: inline-flex; align-items: center; min-height: 24px; color: var(--primary); text-decoration: none; }
+.objective-links a:hover { text-decoration: underline; }
+.objective-gap { max-width: 68ch; margin-top: 6px; color: var(--muted-foreground); font-size: 11px; line-height: 1.65; }
+.objective-gap strong { color: var(--foreground); font-weight: 550; }
+.objective-status { display: flex; flex-direction: column; gap: 4px; text-align: right; white-space: nowrap; color: var(--muted-foreground); font-size: 11px; }
+.objective-status strong { color: var(--foreground); font-weight: 550; }
+.objective-status.status-taught strong { color: var(--primary); }
 .empty-state { padding: 38px 0; max-width: 55ch; }
 .empty-state h2 { margin-bottom: 12px; font-size: 22px; font-weight: 550; }
 .empty-state p { color: var(--muted-foreground); font-size: 14px; line-height: 1.8; }
@@ -367,6 +381,8 @@
   .unit-row .unit-state { display: none; }
   .unit-meta { font-size: 11px; }
   .unit-marker { width: 22px; height: 22px; }
+  .objective-row { grid-template-columns: 32px minmax(0, 1fr); gap: 11px; padding-inline: 12px; }
+  .objective-status { grid-column: 2; flex-direction: row; gap: 10px; text-align: left; white-space: normal; }
   .lesson-toolbar { margin-bottom: 16px; font-size: 11px; }
   .lesson-toolbar .quiet-button, .lesson-toolbar .text-link { font-size: 11px; }
   .lesson-layout { gap: 24px; }

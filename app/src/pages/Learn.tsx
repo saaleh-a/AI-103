@@ -2,8 +2,10 @@ import { ArrowRight, Books, CaretDown, Check, MagnifyingGlass } from '@phosphor-
 import { useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { DomainIcon } from '@/components/DomainIcon'
+import { ObjectiveMap } from '@/components/study/ObjectiveMap'
 import { COURSE_UNITS } from '@/data/curriculum'
 import { CORPUS_SOURCES, getSource } from '@/data/curriculum/catalog'
+import { OBJECTIVES } from '@/data/objectives'
 import { CLUSTER_LABELS, CLUSTER_ORDER } from '@/data/topics'
 import { useLearnerState } from '@/lib/learner-state'
 import { missingPrerequisites } from '@/lib/study-state'
@@ -12,6 +14,7 @@ export default function Learn() {
   const { state } = useLearnerState()
   const [search, setSearch] = useState('')
   const [params, setParams] = useSearchParams()
+  const byObjective = params.get('view') === 'objectives'
   const selected = CLUSTER_ORDER.find((cluster) => cluster === params.get('track'))
   const query = search.trim().toLowerCase()
   const filtered = COURSE_UNITS.filter((unit) => (!selected || unit.cluster === selected)
@@ -22,9 +25,15 @@ export default function Learn() {
       <div>
         <h1 className="page-heading">Your course map.</h1>
         <p className="page-description">Every part of your corpus has a place. Start with the foundations, follow a connection, or return to an idea that needs another pass.</p>
-        <div className="lesson-metadata mt-5"><span>{COURSE_UNITS.length} authored lessons</span><span>{CORPUS_SOURCES.length} mapped sources</span><span>Six learning tracks, not exam weightings</span></div>
+        <div className="lesson-metadata mt-5"><span>{COURSE_UNITS.length} authored lessons</span><span>{CORPUS_SOURCES.length} mapped sources</span><span>{byObjective ? `${OBJECTIVES.length} official exam objectives` : 'Six learning tracks, not exam weightings'}</span></div>
       </div>
 
+      <div className="course-filter" role="group" aria-label="Organize the course">
+        <button type="button" aria-pressed={!byObjective} onClick={() => setParams({})}>By learning track</button>
+        <button type="button" aria-pressed={byObjective} onClick={() => setParams({ view: 'objectives' })}>By exam objective</button>
+      </div>
+
+      {byObjective ? <ObjectiveMap /> : <>
       <div className="course-toolbar">
         <div className="search-field">
           <label htmlFor="course-search">Find a concept or source</label>
@@ -69,6 +78,7 @@ export default function Learn() {
           })}
         </div>
       )}
+      </>}
     </div>
   )
 }

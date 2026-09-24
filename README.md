@@ -13,14 +13,15 @@ and incur charges; local rehearsal is not evidence of a real Azure run.
 The [replacement design package](design/README.md) records the accepted
 project-led/AuDHD-focused direction and its standalone prototype. The production
 app now includes the Learning Studio, but it is **not a verified complete
-replacement course**: mapping 265 sources to lessons is not an objective-level
-content audit, live-lab validation, or evidence of learner mastery. Remaining
-release gates are explicit in [the product constitution](PRODUCT_CONSTITUTION.md).
+replacement course**: mapping 265 sources to lessons is not learner mastery, and
+the objective map below is unreviewed editorial judgement that still shows corpus
+gaps; live labs have not been validated. Remaining release gates are explicit in
+[the product constitution](PRODUCT_CONSTITUTION.md).
 
 ## Structure
 
 - **`corpus/`** — 265 raw source files (Microsoft Learn training pages, "AI-103 Episode" transcripts, a Study Cram transcript), verbatim. The primary source of truth.
-- **`app/src/data/curriculum/`** — authored teaching, recall, scenario checks, configuration rehearsals, source mappings, and portal guides. `app/src/data/projects.ts` groups them into continuing builds.
+- **`app/src/data/curriculum/`** — authored teaching, recall, scenario checks, configuration rehearsals, source mappings, and portal guides. `app/src/data/projects.ts` groups them into continuing builds; `app/src/data/objectives.ts` maps them to the official exam objectives.
 - **`app/`** — the site itself: Vite + React + TypeScript, Tailwind + shadcn/ui, [Bklit](https://bklit.com) charts, [Motion](https://motion.dev), and [React Bits](https://reactbits.dev)-style effects.
 - **`CLAUDE.md`** — the full AI-103 Mastery Tutor constitution, plus pointers for anyone (human or Claude Code session) continuing work on this repo.
 
@@ -95,6 +96,18 @@ questions, and configuration slots without contacting an external service:
 npm run content
 npm run check:curriculum
 ```
+
+It also validates the objective ledger in `app/src/data/objectives.ts`: all 64
+official objectives, verbatim from the study guide in the corpus (source 191),
+each linked to the lessons that teach it, with named gaps where the corpus falls
+short. The check prints how many objectives are taught, partly taught, or not
+taught, and how many are blocked by corpus gaps; the corpus does not teach, for
+example, CI/CD pipelines, private networking, image inpainting, Content
+Understanding pro mode, or custom speech models. No objective is release-ready yet:
+each lesson reuses one scenario for later review, and nothing has been
+independently reviewed. The same map is on the Course coverage page under
+**By exam objective**. The lesson links are editorial judgement, not a mastery
+claim.
 
 For the separate live, topic-count comparison with the official outline:
 
