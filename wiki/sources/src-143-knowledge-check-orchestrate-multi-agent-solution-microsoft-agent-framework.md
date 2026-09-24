@@ -43,7 +43,7 @@ ingest_depth: full
 
 ## TL;DR
 
-This source is a compact knowledge check for the multi-agent orchestration module. (SRC-143 L8–22) It tests the unified orchestration workflow, the group chat pattern for brainstorming and collaboration, and the handoff pattern for context-based transfer of control. (SRC-143 L10–22)
+This source is a compact knowledge check for the multi-agent orchestration module. (SRC-143 L8–22) It includes questions and options about the unified orchestration workflow, brainstorming/collaboration pattern selection, and context-based transfer-of-control pattern selection. (SRC-143 L10–22)
 
 ## Key claims
 
@@ -54,7 +54,7 @@ This source is a compact knowledge check for the multi-agent orchestration modul
 
 ## How it works
 
-The page functions as an assessment checkpoint rather than a teaching unit. (SRC-143 L8–22) Its questions map to the module's pattern distinctions: setup of the orchestration workflow, group chat for collaboration, and handoff for context-based control transfer. (SRC-143 L10–22)
+The page functions as an assessment checkpoint rather than a teaching unit. (SRC-143 L8–22) Its questions ask about the orchestration workflow setup, a collaboration scenario, and a context-based control-transfer scenario. (SRC-143 L10–22)
 
 ## Code and API patterns
 

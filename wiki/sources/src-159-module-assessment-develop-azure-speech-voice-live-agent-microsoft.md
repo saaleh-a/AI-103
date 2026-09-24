@@ -59,7 +59,7 @@ It connects authentication choices, avatar transport, portal workflow, and event
 
 ## Code and API patterns
 
-The assessment names `ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED` as the event to handle when stopping audio playback during user interruption. (SRC-159 L227–230)
+The assessment asks how to stop audio playback when a user interrupts the voice agent and lists `ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED` as one option. (SRC-159 L227–230)
 No code snippet is captured in this source. (SRC-159 L227–230)
 
 ## Key terms

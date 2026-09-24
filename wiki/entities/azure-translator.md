@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Foundry Tools translation service for text, transliteration, documents, supported-language lists, and custom translation models."
 area: language
-source_ids: [SRC-96, SRC-139, SRC-166, SRC-218, SRC-227, SRC-228, SRC-229]
+source_ids: [SRC-96, SRC-139, SRC-166, SRC-218, SRC-226, SRC-227, SRC-228, SRC-229]
 objectives: [P01, T03]
 objective_gaps: []
 tags: ["service"]
@@ -70,7 +70,7 @@ The corpus uses "Azure Translator in Foundry Tools", "Azure Translator", "Azure 
 - Translation module: LLM-versus-specialized-translation framing and text/speech split (SRC-229 L216–219).
 - Translate text unit: APIs, endpoints, SDKs, `translate`, `transliterate`, documents, custom models (SRC-227 L216–268).
 - Episode 21: `TextTranslationClient` walkthrough and Translator versus LLM language coverage clue (SRC-228 L50–151; SRC-228 L330–430).
-- Assessment: distinguishes `translate` from `transliterate` and Speech translation configuration (SRC-166 L212–224).
+- Assessment: asks learners to choose among `translate`, `transliterate`, and Speech translation configuration options (SRC-166 L212–224); the teaching units use `translate` for text translation, `transliterate` for script conversion, and `SpeechTranslationConfig` for spoken translation (SRC-227 L248–268; SRC-226 L14–22).
 
 ## Connections
 
@@ -88,6 +88,7 @@ The corpus uses "Azure Translator in Foundry Tools", "Azure Translator", "Azure 
 - SRC-139 — [[src-139-introduction-translate-text-speech-microsoft-foundry-tools]] — translation problem framing.
 - SRC-166 — [[src-166-module-assessment-translate-text-speech-microsoft-foundry-tools]] — assessment boundary for translate/transliterate/speech translation.
 - SRC-218 — [[src-218-summary-translate-text-speech-microsoft-foundry-tools]] — module summary.
+- SRC-226 — [[src-226-translate-speech]] — SpeechTranslationConfig setup for speech translation.
 - SRC-227 — [[src-227-translate-text]] — Translator API and SDK details.
 - SRC-228 — [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21]] — episode walkthrough.
 - SRC-229 — [[src-229-translation-microsoft-foundry]] — LLM versus specialized translation services.

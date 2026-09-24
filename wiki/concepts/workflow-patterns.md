@@ -70,7 +70,7 @@ Do not choose group chat merely because multiple agents exist: the source says g
 
 Do not choose human-in-the-loop only for safety review: the source also names approvals, confirmations, and missing context as reasons to pause (SRC-105 L222).
 
-Do not ignore structured outputs: the module assessment says structured outputs provide predictable data that can be stored in variables, evaluated with conditions, and trigger workflow steps (SRC-171 L19–22).
+Do not ignore structured outputs: the module assessment asks how structured outputs are used in workflows and lists predictable data for variables, conditions, and workflow steps among the options (SRC-171 L19–22); the workflow summary teaches that structured outputs are captured in variables and drive routing, escalation, or continuation decisions (SRC-219 L221).
 
 ## Solution Engineering transfer
 

@@ -49,7 +49,7 @@ This assessment asks what custom tools are, how to integrate an OpenAPI 3.0-base
 - The capture requires all questions to be answered before checking work. (SRC-167 L226–228)
 
 ## How it works
-The assessment is a knowledge-check page rather than an explanatory unit. It tests recognition of the custom-tool definition, OpenAPI specification tool use and function-calling tool use. (SRC-167 L212–225)
+The assessment is a knowledge-check page rather than an explanatory unit. It asks about the custom-tool definition, OpenAPI specification tool use and function-calling tool use. (SRC-167 L212–225)
 
 ## Code and API patterns
 Not covered by this source. The assessment mentions a local function in agent application code and an OpenAPI 3.0-based web service, but it does not show code or an OpenAPI document. (SRC-167 L217–225)

@@ -44,18 +44,18 @@ ingest_depth: full
 
 ## TL;DR
 
-The knowledge check asks learners to distinguish RAG from simple agents, identify the real-time SharePoint source, understand scoring profiles, and explain why retrieval behavior belongs in agent instructions. (SRC-147 L212–231) The capture shows the questions and options but not the post-submission answer key. (SRC-147 L232–234)
+The knowledge check asks learners about RAG versus simple agents, SharePoint source options, scoring profiles, and why retrieval behavior belongs in agent instructions. (SRC-147 L212–231) The capture shows the questions and options but not the post-submission answer key. (SRC-147 L232–234)
 
 ## Key claims
 
-- The assessment treats RAG's advantage as grounding responses in current organizational information with source transparency, contrasting that with eliminating LLMs or automatic retraining. (SRC-147 L212–216)
-- The assessment distinguishes SharePoint Remote from SharePoint Indexed and Azure Blob Storage for real-time SharePoint access with Microsoft 365 governance. (SRC-147 L217–221)
+- The assessment asks about RAG's advantage and lists grounding responses in current organizational information with source transparency among the options. (SRC-147 L212–216)
+- The assessment asks which data source provides real-time SharePoint access with Microsoft 365 governance and lists SharePoint Indexed, SharePoint Remote, and Azure Blob Storage as options. (SRC-147 L217–221)
 - The assessment describes scoring profiles as boosting specific fields or attributes so important results surface first. (SRC-147 L222–226)
-- The assessment tests retrieval instructions as protection against training-data answers, unverifiable responses, and missing citations. (SRC-147 L227–231)
+- The assessment asks why retrieval behavior should be specified in agent instructions and lists training-data answers, unverifiable responses, and missing citations among the option text. (SRC-147 L227–231)
 
 ## How it works
 
-This source is a knowledge-check unit, so its content is organized as four multiple-choice items rather than explanatory prose. (SRC-147 L212–231) It reinforces the module sequence: RAG grounding, data-source selection, retrieval relevance tuning, and agent instruction behavior. (SRC-147 L212–231)
+This source is a knowledge-check unit, so its content is organized as four multiple-choice items rather than explanatory prose. (SRC-147 L212–231) Its items follow the module sequence by asking about RAG, data-source selection, retrieval relevance tuning, and agent instruction behavior. (SRC-147 L212–231)
 
 ## Code and API patterns
 
@@ -70,7 +70,7 @@ Not covered by this source.
 
 ## Decision boundaries and exam cues
 
-- **Inference:** If the answer choice says RAG eliminates LLMs, reject it; the check contrasts that distractor with grounding LLM-backed agents in current organizational information. (SRC-147 L212–216)
+- **Inference:** If an option says RAG eliminates LLMs, treat it as a distractor (SRC-147 L212–216): the RAG unit has the agent generate its response from both training data and retrieved information, with real-time updates and source transparency as the advantages (SRC-239 L225–230).
 - **Inference:** If the scenario asks for real-time SharePoint access with Microsoft 365 governance, choose SharePoint Remote rather than SharePoint Indexed. (SRC-147 L217–221)
 - **Inference:** If the scenario asks to boost important fields in retrieval results, choose scoring profiles rather than encryption or chunking configuration. (SRC-147 L222–226)
 - **Inference:** If the agent may answer from training data or omit citations, specify retrieval behavior in instructions. (SRC-147 L227–231)

@@ -49,15 +49,15 @@ The assessment asks about three practical discriminators — what grounding is f
 ## Key claims
 
 - The assessment asks the purpose of grounding in Content Understanding. (SRC-169 L209)
-- One listed answer for grounding is identifying the specific content regions where each value was extracted. (SRC-169 L211)
+- One listed option for grounding is identifying the specific content regions where each value was extracted. (SRC-169 L211)
 - The assessment asks what a 0.95 confidence score indicates for an extracted field. (SRC-169 L214)
-- One listed answer for a 0.95 confidence score is that the value can be trusted for automated processing. (SRC-169 L216)
+- One listed option for a 0.95 confidence score is that the value can be trusted for automated processing. (SRC-169 L216)
 - The assessment asks which prebuilt analyzer extracts vendor names and item totals from a purchase receipt. (SRC-169 L219)
 - The listed analyzer options are `prebuilt-image`, `prebuilt-invoice`, and `prebuilt-receipt`. (SRC-169 L220–222)
 
 ## How it works
 
-This assessment does not teach a new procedure. It validates whether the learner can map module concepts to choices: grounding maps to source regions, confidence maps to automation or review, and receipt extraction maps to the receipt analyzer. (SRC-169 L209–222)
+This assessment does not teach a new procedure. Its questions and options cover grounding/source regions, confidence and automation/review, and receipt-extraction analyzer choices. (SRC-169 L209–222)
 
 ## Code and API patterns
 
@@ -112,4 +112,3 @@ Not covered by this source.
 ## Sources
 
 - SRC-169 — raw file: [[169-Module assessment - Training - Microsoft Learn]]
-

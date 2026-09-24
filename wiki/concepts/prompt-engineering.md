@@ -38,7 +38,7 @@ A language model does not automatically know the role, boundaries, output format
 - The Responses API supports adding instructions, often called a system prompt, in addition to user input (SRC-99 L242–244).
 - Agent retrieval behavior can also be shaped through instructions: for Foundry IQ, instructions can tell the agent when to retrieve, cite sources, and fall back if knowledge is missing (SRC-23 L225–233).
 - The video-generation unit treats prompting as briefing a cinematographer: prompt anatomy includes camera framing, subject, action, lighting and palette, and style (SRC-100 L231–253).
-- The module assessment reinforces the boundary: a system message defines role, behavior, and output constraints; RAG is for domain-specific or current data; fine-tuning is for behavior, style, and output-format consistency (SRC-161 L213–230).
+- The module assessment asks about system-message purpose and the boundaries among RAG, prompt engineering, and fine-tuning (SRC-161 L213–230). Teaching units state that system messages define role, tone, output format, and constraints, while RAG and fine-tuning address external factual context and consistent style/format respectively (SRC-178 L226–231; SRC-19 L217–222).
 
 ## How it works in Azure
 

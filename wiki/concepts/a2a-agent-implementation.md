@@ -87,7 +87,7 @@ Configure the server base URL, retrieve the Agent Card from the well-known endpo
 
 ## Failure modes and misconceptions
 
-- Confusing the Agent Card with a secret store. The assessment explicitly distinguishes it from API-key storage: it provides metadata such as capabilities and available functions (SRC-157 L223–226).
+- Confusing the Agent Card with a secret store. The assessment asks what the Agent Card is used for and lists both API-key storage and metadata among the options (SRC-157 L223–226); the A2A definition unit teaches that the Agent Card is a structured document for discovering an agent's capabilities and how to interact with it (SRC-37 L234–243).
 - Putting business logic in the server instead of the executor. The executor processes incoming requests and generates responses/events; the server routes requests and exposes endpoints (SRC-157 L213–221; SRC-103 L18–31; SRC-107 L12–36).
 - Treating every collaboration as A2A. The corpus also teaches Microsoft Agent Framework workflows for explicit multi-agent orchestration in code, with executors and edges, and MCP for tool discovery and invocation (SRC-231 L214–240; SRC-108 L216–234).
 - Assuming every agent must support cancellation or task objects. The executor source says cancellation may not be supported for simple agents, and the client source says simple agents may return messages directly while advanced agents may manage multiple tasks (SRC-107 L21–35; SRC-26 L233–240).
@@ -141,6 +141,5 @@ Configure the server base URL, retrieve the Agent Card from the well-known endpo
 
 - The corpus does not specify the exact A2A wire schema, supported authentication schemes, or deployment topology choices beyond the card, server, executor, and client roles.
 - The corpus does not show how to use Microsoft Entra ID or managed identity specifically with an A2A server, even though it says authentication is built in and cards can indicate credential requirements (SRC-37 L223; SRC-37 L243–249).
-
 
 

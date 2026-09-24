@@ -38,7 +38,7 @@ SRC-242 says it supports free-flowing ideation, formal role-based workflows, app
 
 SRC-242 says to avoid it when simple delegation or linear pipelines are enough, speed requirements make discussion overhead impractical, deterministic hierarchy is needed, completion cannot be clearly determined, or many agents make flow hard to manage. (SRC-242 L235–240)
 
-The knowledge check maps “brainstorming and collaborative problem solving among multiple agents” to group chat. (SRC-143 L14–17)
+The knowledge check asks which orchestration pattern fits “brainstorming and collaborative problem solving among multiple agents” and lists Group Chat among the options (SRC-143 L14–17); the orchestration overview teaches that group chat is best for brainstorming, collaborative problem solving, and building consensus (SRC-231 L250–253).
 
 ## How it works in Azure
 

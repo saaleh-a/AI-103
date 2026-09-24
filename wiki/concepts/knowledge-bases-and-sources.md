@@ -55,7 +55,7 @@ OneLake provides access to unstructured files and documents stored in Microsoft 
 
 The corpus does not provide complete SDK or REST calls for creating a Foundry IQ knowledge base. It does provide configuration choices: select the source type based on where data lives and retrieval needs, combine multiple sources in a single knowledge base, write agent instructions for retrieval and citation behavior, and test/monitor retrieval quality. (SRC-22 L79–83; SRC-23 L229–278)
 
-The knowledge check states that scoring profiles boost specific fields or attributes so more important results surface first. (SRC-147 L222–226)
+The knowledge check asks about the purpose of scoring profiles and lists boosting fields or attributes among the options (SRC-147 L222–226); the module summary teaches that scoring profiles boost specific fields or attributes to surface more relevant results (SRC-194 L222–225).
 
 ## Decision boundaries
 

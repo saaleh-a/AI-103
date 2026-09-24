@@ -30,7 +30,7 @@ SRC-232 introduces the Toolkit as a way to create a proxy application that conne
 
 SRC-5 expands that decision. It says direct Foundry publishing is simplest for most scenarios, while the Toolkit gives more control over the integration layer. (SRC-5 L218–224) It also says the unit can be skipped by learners getting started, then revisited when a Toolkit requirement appears. (SRC-5 L219–221)
 
-SRC-149 assesses the boundary: consider the Toolkit instead of direct publishing when you need custom SSO, middleware logic, or multi-environment deployment. (SRC-149 L237–244)
+SRC-149 asks when to consider the Toolkit instead of direct publishing and lists custom SSO, middleware logic, and multi-environment deployment among the options (SRC-149 L237–244). The Toolkit unit teaches that these are scenarios where the Toolkit approach is useful (SRC-5 L218–224).
 
 ## Capabilities and components
 

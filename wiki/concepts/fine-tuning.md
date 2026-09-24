@@ -38,7 +38,7 @@ Prompt engineering and RAG can still leave a model inconsistent. The fine-tuning
 - The episode demonstration shows fine-tuning data in JSONL or lines format with a standard system prompt, user content, and assistant responses that demonstrate the desired style (SRC-177 L661–710).
 - The comparison source says fine-tuning has the highest upfront investment: training data, training compute, custom-model hosting, and possible retraining when base models or requirements change (SRC-19 L231).
 - The model catalog can be filtered by supported fine-tuning methods, so fine-tuning availability is model-specific (SRC-89 L220–224).
-- The module assessment tests fine-tuning as optimizing consistency of behavior, style, and output format, and combines it with RAG for product-catalog data and prompt engineering for conversation-specific instructions (SRC-161 L228–235).
+- The module assessment asks what fine-tuning optimizes and includes a combined product-catalog-and-brand-voice scenario among its questions and options (SRC-161 L228–235).
 - The module summary gives the same boundary: start with prompt engineering, add RAG for domain-specific factual accuracy, and consider fine-tuning when consistent style and format cannot be achieved reliably with prompting alone (SRC-202 L211–224).
 
 ## How it works in Azure

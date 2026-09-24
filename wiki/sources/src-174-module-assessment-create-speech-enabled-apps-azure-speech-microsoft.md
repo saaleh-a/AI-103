@@ -58,7 +58,7 @@ This module assessment captures three questions but not the checked answers. (SR
 
 ## How it works
 
-The assessment samples the module's setup, recognition and synthesis customization concepts. (SRC-174 L214–227) It checks whether the learner distinguishes resource access values from unrelated Azure management values, distinguishes `AudioConfig` from `SpeechConfig` and `SpeechRecognizer`, and distinguishes voice selection from output format or filename selection. (SRC-174 L214–227)
+The assessment samples the module's setup, recognition and synthesis customization concepts. (SRC-174 L214–227) Its questions and options cover resource access values, unrelated Azure management values, `AudioConfig`, `SpeechConfig`, `SpeechRecognizer`, voice selection, output format, and filename selection. (SRC-174 L214–227)
 
 ## Code and API patterns
 
@@ -116,7 +116,7 @@ No code is shown, but the options name SDK objects and properties. (SRC-174 L220
 - [[azure-speech]] — all questions assess Azure Speech SDK usage. (SRC-174 L214–227)
 - [[speech-to-text]] — the second question assesses audio-file input for transcription. (SRC-174 L219–222)
 - [[text-to-speech]] — the third question assesses synthesis voice selection. (SRC-174 L223–227)
-- [[voices-and-audio-formats]] — the third question distinguishes voice configuration from output format and file output. (SRC-174 L223–227)
+- [[voices-and-audio-formats]] — the third question lists voice configuration, output format and file output options. (SRC-174 L223–227)
 - *Module units:* [[src-115-introduction-create-speech-enabled-apps-azure-speech-microsoft-foundry|1 Introduction]] · [[src-13-azure-speech-foundry-tools|2 Azure Speech in Foundry Tools]] · [[src-252-speech-text-api|3 Use the Speech to Text API]] · [[src-253-text-speech-api|4 Use the Text to Speech API]] · [[src-21-configure-audio-format-voices|5 Configure audio format and voices]] · [[src-246-speech-synthesis-markup-language|6 Use Speech Synthesis Markup Language]] · [[src-65-exercise-create-speech-enabled-app|7 Exercise - Create a speech-enabled app]] · [[src-192-summary-create-speech-enabled-apps-azure-speech-microsoft-foundry|9 Summary]] · [[src-35-create-speech-enabled-apps-microsoft-foundry-episode-18|episode 18]]
 
 ## Open questions

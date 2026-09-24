@@ -94,7 +94,7 @@ Not covered by this source.
 
 - [[src-37-define-a2a-agent]] defines the skills and Agent Card before this source explains request execution. (SRC-37 L224–243)
 - [[src-103-host-a2a-server]] places the Agent Executor behind a request handler and task store on an A2A server. (SRC-103 L24–27)
-- [[src-157-module-assessment-discover-azure-ai-agents-a2a]] tests the executor's role as processing incoming requests and generating responses or events. (SRC-157 L218–221)
+- [[src-157-module-assessment-discover-azure-ai-agents-a2a]] asks about the executor's role and lists processing incoming requests and generating responses or events as one option. (SRC-157 L218–221)
 
 ## Connections
 

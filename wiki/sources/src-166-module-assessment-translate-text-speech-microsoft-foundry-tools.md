@@ -55,7 +55,7 @@ The assessment checks three discriminations: converting a Chinese word to Englis
 
 ## How it works
 
-This unit is an assessment page rather than an instructional page. It tests whether the learner can separate meaning translation from script transliteration and can identify the configuration object for speech translation languages. (SRC-166 L212–225)
+This unit is an assessment page rather than an instructional page. It presents questions and options about meaning translation, script transliteration, and the Speech SDK object used to specify speech translation languages. (SRC-166 L212–225)
 
 ## Code and API patterns
 

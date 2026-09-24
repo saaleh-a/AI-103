@@ -52,7 +52,7 @@ The assessment asks which model kind can respond to visual input, listing multim
 - The options for responding to visual input are only OpenAI GPT models, embedding models, and multimodal models. (SRC-173 L209–212)
 - The assessment tests prompt construction for asking a model to analyze an image. (SRC-173 L214)
 - One option states that the prompt contains a multi-part user message with both text content and image content. (SRC-173 L215–216)
-- The assessment tests whether an image can be included as a URL or binary data. (SRC-173 L219–222)
+- One option says an image can be included as a URL or binary data. (SRC-173 L219–222)
 - The capture does not show checked answers; it ends with the requirement to submit all answers before checking work. (SRC-173 L223–225)
 
 ## How it works
@@ -107,7 +107,7 @@ Not covered by this source.
 
 ## Connections
 
-- [[vision-enabled-chat]] — the assessment tests the core vision-chat prompt shape. (SRC-173 L214–222)
+- [[vision-enabled-chat]] — the assessment asks about the vision-chat prompt shape. (SRC-173 L214–222)
 - [[model-selection]] — the assessment asks which model kind responds to visual input. (SRC-173 L209–212)
 - [[responses-api]] — adjacent implementation content uses Responses API for image prompts. (SRC-46 L215–217)
 - [[chat-completions-api]] — adjacent implementation content gives Chat Completions for unsupported Responses API cases. (SRC-46 L220–223)

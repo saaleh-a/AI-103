@@ -49,7 +49,7 @@ The corpus does not include a full prebuilt-model code listing in this unit. It 
 - **Inference:** Use a prebuilt document-type model for fixed fields from a common business document; form-specific models identify a fixed field set, such as `CustomerName` and `InvoiceTotal` for invoices (SRC-249 L242–248).
 - **Inference:** Use a custom model for an industry-specific or unique form; prebuilt models cover common document types, while unique forms may need custom training (SRC-249 L249–250).
 
-**Exam cue:** The assessment asks for the layout model when the task is to extract text and table structure from varying-format documents without identifying specific labelled fields (SRC-165 L215–219).
+**Exam cue:** The assessment asks which model fits extracting text and table structure from varying-format documents without identifying specific labelled fields, and lists the layout model among the options (SRC-165 L215–219); the prebuilt-model unit teaches that the layout model extends text extraction with selection marks, tables, and document structure information (SRC-249 L225–226).
 
 ## Failure modes and misconceptions
 
@@ -83,4 +83,3 @@ The corpus does not include a full prebuilt-model code listing in this unit. It 
 ## Open questions
 
 - The corpus does not enumerate the full current list of prebuilt models; it points to Learn pages for the model-specific list (SRC-249 L251–257).
-

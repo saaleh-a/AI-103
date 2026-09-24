@@ -56,7 +56,7 @@ The assessment asks three Document Intelligence decision questions: model choice
 
 ## How it works
 
-The assessment turns the module's model taxonomy into scenario choices. (SRC-165 L215–229) It tests whether the learner can distinguish read, layout, and invoice models for structure extraction; identify REST custom-training artifacts; and select a routing approach for multiple document types. (SRC-165 L216–229)
+The assessment turns the module's model taxonomy into scenario choices. (SRC-165 L215–229) It presents questions and options about read, layout, and invoice models; REST custom-training artifacts; and routing across multiple document types. (SRC-165 L216–229)
 
 ## Code and API patterns
 

@@ -43,7 +43,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The module assessment tests whether the learner can distinguish system-message purpose, RAG's use for domain/current data, temperature's randomness control, fine-tuning's behavior consistency role, and combined RAG/fine-tuning/prompt strategy. (SRC-161 L213–236)
+The module assessment asks about system-message purpose, when to use RAG, what temperature controls, what fine-tuning optimizes, and how to combine RAG, fine-tuning, and prompt engineering in a scenario. (SRC-161 L213–236)
 The capture shows options but does not show checked answers. (SRC-161 L237–239)
 
 ## Key claims

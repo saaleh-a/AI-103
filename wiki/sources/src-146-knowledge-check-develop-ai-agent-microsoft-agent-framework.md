@@ -55,11 +55,11 @@ This knowledge-check capture tests the creation order for a Microsoft Foundry ag
 
 ## How it works
 
-The page is an assessment page, not a teaching explanation. It surfaces the module's expected discriminations: client/agent/thread creation order, `AgentThread` versus `ChatAgent` versus `AzureAIAgentClient`, and Python function tools versus portal connection strings or model-architecture modification. (SRC-146 L10–22)
+The page is an assessment page, not a teaching explanation. It surfaces questions and options about client/agent/thread creation order, `AgentThread` versus `ChatAgent` versus `AzureAIAgentClient`, and custom-function approaches. (SRC-146 L10–22)
 
 ## Code and API patterns
 
-The capture names `AzureAIAgentClient`, `ChatAgent`, and `AgentThread` as Microsoft Agent Framework components in the knowledge-check options. (SRC-146 L10–17) It also names the `ChatAgent` `tools` parameter as the place where Python custom functions can be passed. (SRC-146 L19–22)
+The capture names `AzureAIAgentClient`, `ChatAgent`, and `AgentThread` as Microsoft Agent Framework components in the knowledge-check options. (SRC-146 L10–17) It also includes an option where Python custom functions are passed to the `ChatAgent` `tools` parameter. (SRC-146 L19–22)
 
 ## Key terms
 

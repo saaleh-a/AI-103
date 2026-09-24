@@ -37,7 +37,7 @@ Even with the same model and prompt, an application may need different output be
 - The deployment playground source names temperature as creativity versus consistency, max tokens as response length limits, and top-p as nucleus sampling (SRC-39 L261).
 - The VS Code agent source says Temperature controls response creativity and randomness, with lower values producing consistent focused outputs and higher values producing creative varied outputs; it says Top P controls diversity by limiting vocabulary choices and can be lowered for constrained predictable output (SRC-20 L233–240).
 - The model playground exposes temperature and max tokens as adjustable settings, and the agent portal exposes Temperature and Top P as agent model parameters (SRC-90 L220–224; SRC-14 L232–234).
-- An episode transcript frames temperature as creativity versus consistency and max tokens as an application-sized output cap (SRC-42 L46–72). The module assessment tests temperature as randomness and creativity, not token count or speed (SRC-161 L222–225).
+- An episode transcript frames temperature as creativity versus consistency and max tokens as an application-sized output cap (SRC-42 L46–72). The module assessment asks what temperature controls and lists token count, randomness and creativity, and processing speed among the options (SRC-161 L222–225).
 
 ## How it works in Azure
 

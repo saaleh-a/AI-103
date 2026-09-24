@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-This knowledge check asks five questions about Microsoft 365 agent integration. (SRC-149 L214–244) It assesses Bot Service creation, shared versus organization publishing scope, published identity permissions, Work IQ, and when to choose Microsoft 365 Agents Toolkit. (SRC-149 L216–244)
+This knowledge check asks five questions about Microsoft 365 agent integration. (SRC-149 L214–244) It covers portal-created Azure resources, shared versus organization publishing scope, tool permissions after publishing, Work IQ, and when to choose Microsoft 365 Agents Toolkit. (SRC-149 L216–244)
 
 ## Key claims
 
@@ -57,7 +57,7 @@ This knowledge check asks five questions about Microsoft 365 agent integration. 
 
 ## How it works
 
-The source is an assessment page rather than explanatory teaching content. (SRC-149 L214–244) Its answer options mirror the module's decision points: Azure Bot Service as the resource created by portal publication, admin approval for organization scope, a new published agent identity needing permission reassignment, Work IQ as CLI plus MCP server, and Agents Toolkit for custom SSO, middleware, or multi-environment deployment. (SRC-149 L216–244)
+The source is an assessment page rather than explanatory teaching content. (SRC-149 L214–244) Its questions and options cover portal publication resources, shared and organization scope, permissions after publishing, Work IQ, and Agents Toolkit use cases. (SRC-149 L216–244)
 
 ## Code and API patterns
 

@@ -26,7 +26,7 @@ MCP is described as an open protocol in which a host, client, and server let age
 
 ## What the sources say
 
-- The server's primary role in the knowledge check is to expose Azure Language text-analysis capabilities as MCP tools for agents, not to train custom language models or deploy LLMs (SRC-150 L211–214).
+- The knowledge check asks for the Azure Language MCP server's primary role and lists training custom language models, exposing Language text-analysis tools, and deploying LLMs as options (SRC-150 L211–214); the teaching unit states that the server exposes Azure Language NLP capabilities as tools any MCP-compatible agent can call (SRC-235 L225–231).
 - When connected, the agent receives a full list of available tools and its model chooses which tool or combination of tools to call from the user prompt (SRC-235 L230–239).
 - The connection unit says to connect it in the Foundry portal from **Tools** → **Connect a tool** → **Azure Language in Foundry Tools**, using key-based authentication with `Ocp-Apim-Subscription-Key` (SRC-24 L222–231).
 - The same unit says the first MCP tool use prompts for approval, and logs show each MCP tool call, input, and result (SRC-24 L240–245).

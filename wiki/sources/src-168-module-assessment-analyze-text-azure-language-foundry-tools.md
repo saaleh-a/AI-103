@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The assessment tests two decision boundaries. (SRC-168 L213–221) For news articles where the application needs key people, places, and dates for indexing, the shown correct option is Azure Language in Foundry Tools to extract named entities. (SRC-168 L213–216) For publishing customer testimonials after removing personal details, the matching episode gives the answer as Azure Language in Foundry Tools to find and redact PII, but this capture itself does not show checked-answer feedback for the second item. (SRC-168 L218–224; SRC-10 L799–810)
+The assessment asks two scenario questions about choosing Azure Language capabilities. (SRC-168 L213–221) For news articles where the application needs key people, places, and dates for indexing, one option is Azure Language in Foundry Tools to extract named entities. (SRC-168 L213–216) For publishing customer testimonials after removing personal details, the matching episode gives the answer as Azure Language in Foundry Tools to find and redact PII, but this capture itself does not show checked-answer feedback for the second item. (SRC-168 L218–224; SRC-10 L799–810)
 
 ## Key claims
 
@@ -57,7 +57,7 @@ The assessment tests two decision boundaries. (SRC-168 L213–221) For news arti
 
 ## How it works
 
-This source is an assessment rather than a teaching unit. (SRC-168 L213–221) It maps scenario requirements to Azure Language capabilities: entity indexing maps to named entity extraction, while removal of personal details maps to PII finding and redaction. (SRC-168 L213–221)
+This source is an assessment rather than a teaching unit. (SRC-168 L213–221) Its scenarios and options cover entity indexing, named entity extraction, personal-detail removal, and PII finding/redaction. (SRC-168 L213–221)
 
 ## Code and API patterns
 

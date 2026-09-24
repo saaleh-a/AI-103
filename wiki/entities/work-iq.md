@@ -30,7 +30,7 @@ Work IQ is built on the Model Context Protocol. As an MCP server, it exposes cap
 
 SRC-2 is the dedicated Work IQ source. It says Work IQ runs in CLI mode for direct terminal queries and MCP server mode for AI assistants such as GitHub Copilot in Visual Studio Code. (SRC-2 L235–244) It also says both approaches access the same underlying data with the same permissions. (SRC-2 L280–294)
 
-SRC-209 summarizes the module by saying Work IQ connects agents to Microsoft 365 data through MCP. (SRC-209 L218–224) SRC-149 assesses the definition: Work IQ is a CLI and MCP server that connects AI agents to Microsoft 365 data. (SRC-149 L232–236)
+SRC-209 summarizes the module by saying Work IQ connects agents to Microsoft 365 data through MCP. (SRC-209 L218–224) SRC-149 asks what Microsoft Work IQ is and lists the CLI/MCP-server definition among the options (SRC-149 L232–236). The Work IQ unit defines it as a CLI and server that connects AI assistants to Microsoft 365 Copilot data (SRC-2 L218–220).
 
 SRC-79 is only an exercise launch page, but it points learners to optional Work IQ practice in the Microsoft 365 publishing exercise context. (SRC-79 L217–218)
 

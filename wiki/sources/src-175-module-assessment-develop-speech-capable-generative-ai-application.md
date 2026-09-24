@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The assessment checks whether learners can map text-from-speech to a transcribe model and speech-from-text to a TTS model. (SRC-175 L212–220) The capture does not show submitted or checked answers; it shows a message that all questions must be answered before checking work. (SRC-175 L221–223)
+The assessment asks which model to use for generating text from speech and which model to use for generating speech from text. (SRC-175 L212–220) The capture does not show submitted or checked answers; it shows a message that all questions must be answered before checking work. (SRC-175 L221–223)
 
 ## Key claims
 

@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Choosing neural voices and output/input audio formats for Azure Speech synthesis, MCP tools, and real-time voice scenarios."
 area: speech
-source_ids: [SRC-21, SRC-35, SRC-49, SRC-88, SRC-144, SRC-174, SRC-236, SRC-246, SRC-253]
+source_ids: [SRC-21, SRC-35, SRC-49, SRC-88, SRC-144, SRC-174, SRC-226, SRC-236, SRC-246, SRC-253]
 objectives: [T05]
 objective_gaps: []
 tags: []
@@ -33,9 +33,9 @@ Text-to-speech is not finished when text becomes "some audio." Applications may 
 - Azure Speech supports multiple output formats for the generated synthesis audio stream; the choice can be based on audio file type, sample rate, and bit depth (SRC-21 L218–224).
 - The Azure Speech service provides multiple voices for personalizing speech-enabled applications, and voice names indicate locale, a person's name, and other details, for example `en-US-Brian:DragonHDLatestNeural` (SRC-21 L228–230).
 - Text to speech `AudioConfig` controls the output device: default system speaker, audio file, or null so the returned audio stream object can be processed directly (SRC-253 L222).
-- The module assessment distinguishes changing voice from output format and file destination: voice changes through the `speech_synthesis_voice_name` property of `SpeechConfig` (SRC-174 L223–227).
+- The module assessment asks how to change the voice used in speech synthesis and lists output format, `speech_synthesis_voice_name`, and file destination options (SRC-174 L223–227); a speech-translation code sample sets `speech_cfg.speech_synthesis_voice_name` before constructing a `SpeechSynthesizer` (SRC-226 L40–41).
 - The Azure Speech MCP server's Synthesize capability supports multiple languages and neural voices such as `en-US-JennyNeural` or `en-GB-SoniaNeural`, and generates WAV, MP3, or other formats (SRC-236 L232–233).
-- A knowledge check says a particular voice can be specified for the agent by including the voice name in the natural-language prompt to the agent (SRC-144 L226–228).
+- A knowledge check asks how to specify a particular voice through the agent and includes the voice-name-in-prompt option (SRC-144 L226–228).
 - Voice Live sources mention real-time audio processing with formats such as PCM16 and G.711 and voice options including OpenAI voices and Azure custom voices (SRC-88 L222–223; SRC-49 L99–130).
 
 ## How it works in Azure
@@ -59,7 +59,7 @@ This map is an illustration of the relationships preserved in the corpus, not a 
 
 ## Code and configuration
 
-For output format, choose based on the required file type, sample rate, and bit depth (SRC-21 L220–224). For voice, set the desired voice name on `SpeechConfig`; assessment material specifically identifies `speech_synthesis_voice_name` as the property for changing the synthesis voice (SRC-174 L223–227).
+For output format, choose based on the required file type, sample rate, and bit depth (SRC-21 L220–224). For voice, set the desired voice name on `SpeechConfig`; the speech-translation sample sets `speech_cfg.speech_synthesis_voice_name` before synthesizing translated speech (SRC-226 L40–41).
 
 For agent speech through the MCP server, the prompt can include the desired voice name, and the server-side tool can generate audio files in formats such as WAV or MP3 (SRC-144 L226–228; SRC-236 L233–234).
 
@@ -104,6 +104,7 @@ For Voice Live, format choices include PCM16, described in the episode as uncomp
 - SRC-88 — [[src-88-explore-azure-voice-live-api]] — Voice Live audio and voice features.
 - SRC-144 — [[src-144-knowledge-check-develop-speech-agent-azure-speech-mcp-server]] — MCP prompt voice selection.
 - SRC-174 — [[src-174-module-assessment-create-speech-enabled-apps-azure-speech-microsoft]] — assessment boundary for voice versus format/file output.
+- SRC-226 — [[src-226-translate-speech]] — speech translation configuration and voice-name assignment in synthesis code.
 - SRC-236 — [[src-236-understand-azure-speech-mcp-server]] — MCP neural voices and output formats.
 - SRC-246 — [[src-246-speech-synthesis-markup-language]] — SSML boundary.
 - SRC-253 — [[src-253-text-speech-api]] — `AudioConfig` output destination.

@@ -57,7 +57,7 @@ The knowledge check asks four questions about the Speech MCP server: its two cap
 
 ## How it works
 
-The page functions as assessment rather than instruction. (SRC-144 L211–229) It samples the module's load-bearing facts: capability scope, audio storage, connection credentials, and prompt-level customization. (SRC-144 L211–229)
+The page functions as assessment rather than instruction. (SRC-144 L211–229) It samples questions and options about capability scope, audio storage, connection credentials, and voice-selection customization. (SRC-144 L211–229)
 
 ## Code and API patterns
 

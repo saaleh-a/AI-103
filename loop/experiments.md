@@ -434,3 +434,31 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   never mentions (Form Recognizer, Azure Cognitive Search) removed. (5) overview's first claim now
   cites the corpus only for what the corpus says. Plus the seed-13 findings.
 - Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).
+- Judgement (panel, incremental): the 7 panel pages changed since ed9c52d re-judged by two fresh
+  reviewers — five PASS; text-translation FAIL on two claims the cycle did not change (an assessment
+  answer read from an unmarked capture; SRC-228 L330–349 stops before the translate call) and
+  naming-and-currency FAIL on two further alternate names ("Azure AI Language" is at SRC-45 L17–19,
+  "Microsoft AI Toolkit" at SRC-183 L932–934) → **1/20 → 2/20**; the tool's verdict is REGRESSED,
+  still within the ≤ 2/20 bar. On the same tree an independent rotating reviewer judged
+  naming-and-currency PASS — the page has many naming claims and each reviewer samples five.
+- Judgement (rotating, seed 14, unbiased): **2/20 fail** (2/10 and 0/10). src-116's "uses Microsoft
+  Foundry" cited teaching lines that never say it — a regression this cycle introduced when it split
+  a naming sentence to attach citations; src-147 still read assessment answers from unmarked options.
+- Decision: kept (the REGRESSED panel verdict comes from untouched claims; the rotating estimate fell
+  from 7/20 to 2/20).
+
+## Cycle 15 — final findings and the rest of the assessment-answer class (2026-09-24)
+- Hypothesis: the last findings are fixable exactly, and the assessment-answer class that cycle 13
+  cleaned with a phrase-based scan still has members phrased differently ("the knowledge check maps
+  … to group chat", "the assessment treats … as", "SRC-149 assesses the definition: …"); a broader
+  scan (claims citing only assessment captures with an assertive verb) finds 165 candidates, most of
+  them harmless descriptions of questions and options.
+- Changes (part 1, orchestrator): src-116 and src-89 naming claims now cite only lines that contain
+  the names (SRC-116's teaching lines name no platform; its module title does, and that title sits in
+  site navigation, which the lint rejects as a locator — so the page now points at its `module`
+  field); text-translation's answer claim cites the Translator unit (SRC-227 L217, L261–262) and its
+  episode range reaches the translate call (SRC-228 L330–390); naming-and-currency cites SRC-45
+  L17–19 and SRC-183 L928–934.
+- Changes (part 2, two generator agents on disjoint page sets): each of the 165 candidates decided
+  against its cited lines; claims that assert an answer rewritten to what the capture shows, with the
+  answer attributed to a teaching unit or episode review line the agent read.

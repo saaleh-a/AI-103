@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-This assessment checks three distinctions: which tool answers from uploaded policy documents, what an app should do after a `function_call` item, and what the `code_interpreter` tool can do (SRC-163 L214–227). The capture lists options but does not show submitted answers or correctness feedback (SRC-163 L228–230).
+This assessment asks three tool-use questions: which tool answers from uploaded policy documents, what an app should do after a `function_call` item, and what the `code_interpreter` tool can do (SRC-163 L214–227). The capture lists options but does not show submitted answers or correctness feedback (SRC-163 L228–230).
 
 ## Key claims
 

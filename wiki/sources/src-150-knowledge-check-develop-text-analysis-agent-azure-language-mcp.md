@@ -55,7 +55,7 @@ The knowledge check asks about four module facts, and the capture shows no check
 
 ## How it works
 
-This source is assessment rather than instruction. (SRC-150 L211–229) **Inference:** Its choices summarize the module's expected mental model: the MCP server exposes language tools, the agent selects from descriptions, the client points the Responses API call at an agent reference, and the portal tool connection authenticates with a key. (SRC-150 L211–229)
+This source is assessment rather than instruction. (SRC-150 L211–229) Its questions and options cover MCP server purpose, how an agent selects a tool, what the Responses API call references, and portal tool-connection authentication. (SRC-150 L211–229)
 
 ## Code and API patterns
 

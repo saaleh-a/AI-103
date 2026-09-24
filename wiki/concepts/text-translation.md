@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Convert text meaning between languages with Azure Translator or LLM-powered translation flows, and distinguish translation from transliteration."
 area: language
-source_ids: [SRC-40, SRC-139, SRC-166, SRC-218, SRC-227, SRC-228, SRC-229]
+source_ids: [SRC-40, SRC-139, SRC-166, SRC-218, SRC-226, SRC-227, SRC-228, SRC-229]
 objectives: [T03, P01]
 objective_gaps: []
 tags: []
@@ -61,7 +61,7 @@ The module assessment asks which function converts Chinese text to English and w
 ## Failure modes and misconceptions
 
 - Do not confuse translation with transliteration: translation changes meaning into another language; transliteration changes script or writing system without translating meaning (SRC-228 L120–151).
-- Do not choose Speech SDK objects for text-only translation; the assessment reserves `SpeechTranslationConfig` for speech translation languages, not text `translate` or `transliterate` (SRC-166 L212–224).
+- Do not choose Speech SDK objects for text-only translation; the assessment asks about `translate`, `transliterate`, and `SpeechTranslationConfig` in separate text and speech questions (SRC-166 L212–224), while the teaching units use `translate` for text translation, `transliterate` for script conversion, and `SpeechTranslationConfig` for speech translation languages (SRC-227 L248–268; SRC-226 L14–22).
 - Do not assume LLM translation is always the specialized choice: the corpus says comprehensive multi-language translation generally requires specialized Foundry Tools (SRC-229 L216–219).
 - **Stale-risk:** Supported-language counts, endpoint hostnames, and model options can change and should be checked for a live build (SRC-227 L216; SRC-227 L230–235).
 
@@ -86,6 +86,7 @@ The module assessment asks which function converts Chinese text to English and w
 - SRC-139 — [[src-139-introduction-translate-text-speech-microsoft-foundry-tools]] — translation problem framing.
 - SRC-166 — [[src-166-module-assessment-translate-text-speech-microsoft-foundry-tools]] — translate/transliterate/speech assessment boundary.
 - SRC-218 — [[src-218-summary-translate-text-speech-microsoft-foundry-tools]] — module summary.
+- SRC-226 — [[src-226-translate-speech]] — SpeechTranslationConfig setup for speech translation.
 - SRC-227 — [[src-227-translate-text]] — Translator methods, endpoints, SDKs, document/custom features.
 - SRC-228 — [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21]] — episode method and transliteration explanation.
 - SRC-229 — [[src-229-translation-microsoft-foundry]] — LLM translation versus specialized Foundry Tools.

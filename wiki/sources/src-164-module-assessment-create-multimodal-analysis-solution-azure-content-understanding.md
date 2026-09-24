@@ -44,16 +44,16 @@ ingest_depth: full
 
 ## TL;DR
 
-The module assessment checks three points: Content Understanding is for analyzers that extract from documents, images, videos, and audio; Content Understanding Studio is the graphical project tool; and schemas define the information to extract. (SRC-164 L212–225)
+The module assessment asks three questions about Content Understanding's purpose, Content Understanding Studio, and what schemas define. (SRC-164 L212–225)
 
 ## Key claims
 
 - The assessment asks what kind of AI solution Azure Content Understanding helps build. (SRC-164 L212)
-- One option identifies analyzers that extract information from documents, images, videos, and audio files. (SRC-164 L214)
+- One option describes analyzers that extract information from documents, images, videos, and audio files. (SRC-164 L214)
 - The assessment asks which graphical tool should be used to create a Content Understanding project. (SRC-164 L217)
-- One option identifies Content Understanding Studio as the graphical tool. (SRC-164 L220)
+- One option describes Content Understanding Studio as the graphical tool. (SRC-164 L220)
 - The assessment asks what to define for information to extract from content. (SRC-164 L222)
-- One option identifies a schema. (SRC-164 L223)
+- One option describes a schema. (SRC-164 L223)
 - The capture does not show submitted results or correct-answer feedback. (SRC-164 L226–228)
 
 ## How it works

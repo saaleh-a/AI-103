@@ -40,7 +40,7 @@ ingest_depth: full
 | Ingest depth | full |
 
 ## TL;DR
-The module assessment checks three discriminators: the scheduled component that extracts and enriches data, the service that supports built-in AI skills, and the projection type that produces a relational data schema. (SRC-176 L215–229) The capture lists options but does not show checked answers. (SRC-176 L230–232)
+The module assessment asks about the scheduled component that extracts and enriches data, the service that supports built-in AI skills, and the projection type that produces a relational data schema. (SRC-176 L215–229) The capture lists options but does not show checked answers. (SRC-176 L230–232)
 
 ## Key claims
 - One assessment item asks which Azure AI Search component is scheduled to extract and enrich data to populate an index. (SRC-176 L215–219)

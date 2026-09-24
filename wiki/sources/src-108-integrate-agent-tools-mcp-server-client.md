@@ -101,7 +101,7 @@ Not covered by this source.
 
 - [[src-233-understand-mcp-tool-discovery]] explains why dynamic discovery is useful before this unit shows the client/server setup (SRC-233 L216-L239).
 - [[src-240-azure-ai-agents-mcp-servers]] contrasts this wrapper pattern with the remote MCP path where the Foundry agent uses an `MCPTool` object and does not manually call `session.call_tool` (SRC-240 L216-L231).
-- [[src-158-module-assessment-integrate-mcp-tools-azure-ai-agents]] tests `session.list_tools()` and async wrapper reasoning from this unit (SRC-158 L14-L22).
+- [[src-158-module-assessment-integrate-mcp-tools-azure-ai-agents]] asks about MCP client tool discovery and async wrappers, listing `session.list_tools()` and nonblocking tool calls among the options (SRC-158 L14-L22).
 - [[src-109-integrate-mcp-tools-azure-ai-agents-episode-9]] demonstrates a local inventory MCP server and wrapper pattern (SRC-109 L421-L532).
 
 ## Connections
@@ -121,4 +121,3 @@ Not covered by this source.
 ## Sources
 
 - SRC-108 — raw file: [[108-Integrate Agent Tools Using an MCP Server and Client - Training - Microsoft Learn]]
-

@@ -38,7 +38,7 @@ SRC-243 says to use the pattern when the number or order of agents cannot be det
 
 SRC-243 says to avoid it when the agents and order are fixed, routing is simple and rule-based, bad routing would frustrate users, operations must run simultaneously, or infinite bouncing between agents is hard to prevent. (SRC-243 L229–234)
 
-The knowledge check reinforces the exam cue: “dynamically transfers control between agents based on context or rules” maps to handoff. (SRC-143 L19–22)
+The knowledge check asks which pattern “dynamically transfers control between agents based on context or rules” and lists Handoff among the options (SRC-143 L19–22); the orchestration overview teaches that handoff dynamically transfers control between agents based on context or rules (SRC-231 L250–252).
 
 ## How it works in Azure
 
