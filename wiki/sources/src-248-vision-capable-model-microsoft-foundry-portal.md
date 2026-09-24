@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Shows that image prompts require a deployed multimodal model and can be tested in the Foundry chat playground."
 area: vision
 source_ids: [SRC-248]
-objectives: [P01, G01, V06, V08]
+objectives: [P01, G01, V06]
 tags: [multimodal-models, model-catalog, chat-playground, microsoft-foundry]
 aliases: ["SRC-248"]
 source_kind: learn-unit

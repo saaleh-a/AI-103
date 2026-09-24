@@ -78,7 +78,7 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-182-plan-responsible-generative-ai-solution]] expands this introduction into four stages. (SRC-182 L14–18)
+- [[src-182-plan-responsible-generative-ai-solution]] expands this introduction into four stages. (SRC-182 L12–16)
 - [[src-106-implement-responsible-generative-ai-solution-microsoft-foundry-episode-6]] gives a presenter-led version of the same risk premise. (SRC-106 L12–30)
 
 ## Connections

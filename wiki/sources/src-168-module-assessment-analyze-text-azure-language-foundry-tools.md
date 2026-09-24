@@ -83,7 +83,7 @@ Not covered by this source. (SRC-168 L213–224)
    - Option 0: Use a generative AI model with a custom function tool that matches strings using a regular expression. (SRC-168 L214)
    - Option 1: Use Azure Language in Foundry Tools to extract PII entities. (SRC-168 L215)
    - Option 2: Use Azure Language in Foundry Tools to extract named entities. (SRC-168 L216)
-   - **Answer shown in capture:** Option 2. (SRC-168 L216–217)
+   - **Answer:** not shown in capture; the episode review gives named-entity extraction with Azure Language. (SRC-10 L790–798)
 
 2. **Question:** You want to publish extracts from customer testimonials on a web site, and you need to remove personal details from the text before publishing it. (SRC-168 L218)
    - Option 0: Use Azure Language in Foundry Tools to find and redact PII entities. (SRC-168 L219)
@@ -93,7 +93,7 @@ Not covered by this source. (SRC-168 L213–224)
 
 ## Tensions, caveats and currency
 
-- The first assessment item visibly shows option 2 after the question, but the second item does not show a numbered answer before the Submit button in this capture. (SRC-168 L216–224)
+- The capture shows no checked answers: the `2.` after the first item's options is the second question's number, and each `[-] N` marker indexes the next option. (SRC-168 L213–224)
 - The capture includes the repeated warning that all questions must be answered before checking work, so official feedback is not visible. (SRC-168 L222–224)
 
 ## Relation to other sources

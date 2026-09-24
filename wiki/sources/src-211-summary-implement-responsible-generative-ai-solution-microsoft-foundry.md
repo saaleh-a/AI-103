@@ -43,7 +43,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The summary says generative AI requires a responsible approach to prevent or mitigate potentially harmful content. (SRC-211 L218) The module process is to identify relevant harms, measure harms in use, mitigate harmful generation at multiple levels, and deploy with adequate plans for responsible operation. (SRC-211 L217–221)
+The summary says generative AI requires a responsible approach to prevent or mitigate potentially harmful content. (SRC-211 L218) The module process is to identify relevant harms, measure harms in use, mitigate harmful generation at multiple levels, and deploy with adequate plans for responsible operation. (SRC-211 L219–222)
 
 ## Key claims
 
@@ -55,7 +55,7 @@ The summary says generative AI requires a responsible approach to prevent or mit
 
 ## How it works
 
-The summary compresses the module's lifecycle into four action bullets. (SRC-211 L217–221) Its identify, measure, mitigate, and deploy language aligns with the plan unit's map, measure, mitigate, and manage stages. (SRC-211 L217–221; SRC-182 L14–18)
+The summary compresses the module's lifecycle into four action bullets. (SRC-211 L218–222) Its identify, measure, mitigate, and deploy language aligns with the plan unit's map, measure, mitigate, and manage stages. (SRC-211 L219–222; SRC-182 L13–16)
 
 ## Code and API patterns
 
@@ -67,7 +67,7 @@ Not covered by this source.
 
 ## Decision boundaries and exam cues
 
-- **Inference:** The summary reinforces the whole lifecycle; a single filter or a one-time review is narrower than the module process. (SRC-211 L217–221)
+- **Inference:** The summary reinforces the whole lifecycle; a single filter or a one-time review is narrower than the module process. (SRC-211 L218–222)
 
 ## Assessment items
 
@@ -79,7 +79,7 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-182-plan-responsible-generative-ai-solution]] states the same process in more explicit stage names. (SRC-182 L14–18)
+- [[src-182-plan-responsible-generative-ai-solution]] states the same process in more explicit stage names. (SRC-182 L12–16)
 - [[src-106-implement-responsible-generative-ai-solution-microsoft-foundry-episode-6]] closes with mapping risks, guardrails, testing before and after launch, and repetition. (SRC-106 L588–607)
 
 ## Connections

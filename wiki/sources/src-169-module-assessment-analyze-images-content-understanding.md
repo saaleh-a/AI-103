@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The assessment checks three practical discriminators: grounding means locating where extracted values came from, a 0.95 confidence score supports automated processing, and receipt data should use `prebuilt-receipt`. (SRC-169 L209–222)
+The assessment asks about three practical discriminators — what grounding is for, what a 0.95 confidence score means, and which prebuilt analyzer fits receipts — and the capture shows no checked answers. (SRC-169 L209–224) The image-analysis unit teaches the answers: grounding shows where in the image each value was found, a confidence of 0.9 or more can be trusted for automated processing, and `prebuilt-receipt` extracts vendor names, items and totals from receipts. (SRC-8 L239; SRC-8 L245; SRC-8 L220)
 
 ## Key claims
 
@@ -79,15 +79,15 @@ Not covered by this source.
 
 1. **Question:** What is the purpose of grounding in Content Understanding? (SRC-169 L209)  
    **Options:** To connect Content Understanding to Azure storage; to identify the specific regions in content where each value was extracted; to filter out harmful content from images. (SRC-169 L210–212)  
-   **Answer shown in capture:** The capture lists the region-identification option as the answer-bearing choice for the module concept. (SRC-169 L209–212)
+   **Answer:** not shown in capture; the unit teaches that grounding shows where each value was found. (SRC-8 L239)
 
 2. **Question:** What does a confidence score of 0.95 indicate for an extracted field? (SRC-169 L214)  
    **Options:** The extraction failed and needs manual review; the value can be trusted for automated processing; the field was classified rather than extracted. (SRC-169 L215–217)  
-   **Answer shown in capture:** The capture lists automated processing as the answer-bearing choice for a 0.95 score. (SRC-169 L214–217)
+   **Answer:** not shown in capture; the unit teaches that 0.9+ confidence can be trusted for automated processing. (SRC-8 L245)
 
 3. **Question:** Which prebuilt analyzer would you use to extract vendor names and item totals from a purchase receipt? (SRC-169 L219)  
    **Options:** `prebuilt-image`; `prebuilt-invoice`; `prebuilt-receipt`. (SRC-169 L220–222)  
-   **Answer shown in capture:** The capture lists `prebuilt-receipt` as the answer-bearing choice for receipt extraction. (SRC-169 L219–222)
+   **Answer:** not shown in capture; the unit lists `prebuilt-receipt` for vendor names, items and totals from receipts. (SRC-8 L220)
 
 ## Tensions, caveats and currency
 

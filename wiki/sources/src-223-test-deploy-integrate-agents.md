@@ -44,11 +44,11 @@ ingest_depth: full
 
 ## TL;DR
 
-Testing should cover happy paths, edge cases, boundaries, multi-turn conversations, and tool invocation. (SRC-223 L218–227) Publishing creates an Agent Application with a stable Responses API endpoint, Entra authentication, its own identity, and operational needs around monitoring, security, cost, error handling, and conversation management. (SRC-223 L228–294)
+Testing should cover happy paths, edge cases, boundaries, multi-turn conversations, and tool invocation. (SRC-223 L220–228) Publishing creates an Agent Application with a stable Responses API endpoint, Entra authentication, its own identity, and operational needs around monitoring, security, cost, error handling, and conversation management. (SRC-223 L228–294)
 
 ## Key claims
 
-- Playground testing should cover happy paths, edge cases, boundaries, multi-turn conversations, and tool invocation. (SRC-223 L218–226)
+- Playground testing should cover happy paths, edge cases, boundaries, multi-turn conversations, and tool invocation. (SRC-223 L220–228)
 - Deployment saves agent configuration to the Foundry project for access, testing, and iteration. (SRC-223 L228–239)
 - Publishing moves an agent into an Agent Application, a managed Azure resource with a stable endpoint. (SRC-223 L240–253)
 - Publishing creates an Agent Application and a deployment of a specific agent version. (SRC-223 L244–248)

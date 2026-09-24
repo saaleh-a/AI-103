@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-Foundry IQ supports six primary knowledge-base data source types: Azure AI Search Index, Azure Blob Storage, Web, SharePoint Remote, SharePoint Indexed, and OneLake. (SRC-22 L11–14) The source's decision guide maps each option to where data lives and whether the implementation needs freshness, direct file access, existing search investment, current web information, or advanced search pipelines. (SRC-22 L75–83)
+Foundry IQ supports six primary knowledge-base data source types: Azure AI Search Index, Azure Blob Storage, Web, SharePoint Remote, SharePoint Indexed, and OneLake. (SRC-22 L13–14) The source's decision guide maps each option to where data lives and whether the implementation needs freshness, direct file access, existing search investment, current web information, or advanced search pipelines. (SRC-22 L75–83)
 
 ## Key claims
 

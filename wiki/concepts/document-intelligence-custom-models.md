@@ -50,7 +50,7 @@ A custom classifier identifies the document type before invoking an extraction m
 
 ## Code and configuration
 
-For REST API or SDK training, the corpus lists required training artifacts in Azure Blob Storage: sample forms, an `ocr.json` for each sample, a single `fields.json`, and a `labels.json` for each sample (SRC-224 L236–244). The assessment reinforces that the required REST API training artifacts are sample forms plus `ocr.json`, `labels.json`, and `fields.json` in a blob container (SRC-165 L221–224).
+For REST API or SDK training, the corpus lists required training artifacts in Azure Blob Storage: sample forms, an `ocr.json` for each sample, a single `fields.json`, and a `labels.json` for each sample (SRC-224 L236–244). The module assessment asks which artifacts REST API training requires and lists that combination among its options (SRC-165 L221–224).
 
 The training path also requires a SAS URL for the container, a Build model REST API call or SDK equivalent, and a Get model REST API call to retrieve the trained model ID (SRC-224 L242–244). To use the custom model, call the Analyze document function with the model ID by SDK or REST API; a successful response contains an `analyzeResult` with extracted content and pages (SRC-224 L248–256).
 
@@ -63,7 +63,7 @@ Studio is an alternative workflow: it can generate `ocr.json`, `labels.json`, an
 - **Inference:** Use a custom classifier or composed model when multiple form types enter one pipeline and the system must route each document to the right extraction model (SRC-224 L234–235; SRC-165 L225–229).
 - Check prebuilt models first for common invoice, receipt, ID, or tax forms before building a custom model (SRC-249 L249–250).
 
-**Exam cue:** The module assessment asks for a composed model or custom classifier when a company processes both invoices and receipts and wants one endpoint that routes each document to the correct extraction model (SRC-165 L225–229).
+The module assessment asks what a company that processes invoices and receipts should use for one endpoint that routes each document to the correct extraction model, listing a composed model or a custom classifier paired with extraction models among the options (SRC-165 L225–229); the unit teaches both routes (SRC-224 L235; SRC-224 L258).
 
 ## Failure modes and misconceptions
 

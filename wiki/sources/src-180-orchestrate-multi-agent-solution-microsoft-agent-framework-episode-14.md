@@ -109,7 +109,7 @@ The demo uses a Foundry project endpoint and model deployment name, imports Agen
 
 - **Stale-risk:** The transcript is auto-captioned and uses `magnetic` in places, while the Learn unit title uses Magentic. (SRC-180 L241–248; SRC-244 L220)
 - **Stale-risk:** The Semantic Kernel and AutoGen lineage statement should be checked against current product history before becoming a live-product claim. (SRC-180 L46–54)
-- The presenter says Magentic could be arguable for the brainstorming question if the learner imagines a more complicated problem, while the knowledge check points toward group chat. (SRC-180 L523–535; SRC-143 L14–18)
+- The presenter says Magentic could be arguable for the brainstorming question if the learner imagines a more complicated problem, and settles on group chat as the answer to the knowledge-check question. (SRC-180 L523–535; SRC-143 L14–17)
 
 ## Relation to other sources
 

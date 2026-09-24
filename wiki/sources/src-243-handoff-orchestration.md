@@ -88,7 +88,7 @@ Not covered by this source.
 ## Relation to other sources
 
 - [[src-231-understand-agent-orchestration]] defines handoff as dynamically transferring control based on context or rules. (SRC-231 L252; SRC-243 L220–256)
-- [[src-245-sequential-orchestration]] contrasts with handoff because sequential orchestration has a known fixed order. (SRC-245 L218–220; SRC-243 L229)
+- [[src-245-sequential-orchestration]] contrasts with handoff because sequential orchestration has a known fixed order. (SRC-245 L220–221; SRC-243 L229)
 - [[src-180-orchestrate-multi-agent-solution-microsoft-agent-framework-episode-14]] describes handoff as delegation to a specialist when the path is unknown at the beginning. (SRC-180 L111–186)
 
 ## Connections

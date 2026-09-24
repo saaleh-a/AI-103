@@ -43,14 +43,14 @@ ingest_depth: full
 
 ## TL;DR
 
-The assessment tests four facts: Voice Live supports Microsoft Entra keyless authentication and API keys, avatar streaming uses WebRTC, portal integration is configured by enabling voice mode in the agent playground, and interruption handling uses `ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED`. (SRC-159 L212–229)
+The assessment asks four questions — Voice Live's authentication methods, the avatar-streaming protocol, how to configure and test Voice Live in the portal, and how to stop playback when a user interrupts — and the capture shows no checked answers. (SRC-159 L212–233) The episode review and the Voice Live unit give the answers: Microsoft Entra ID or an API key, WebRTC, enabling voice mode in the agent playground, and handling the input-audio-buffer speech-started event. (SRC-49 L690–710; SRC-88 L270)
 
 ## Key claims
 
-- The captured correct authentication option is Microsoft Entra keyless authentication and API key. (SRC-159 L212–215)
-- The captured correct avatar-streaming protocol option is WebRTC. (SRC-159 L217–220)
-- The captured correct portal configuration option is enabling voice mode in the agent playground. (SRC-159 L222–225)
-- The captured correct interruption-handling option is handling `ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED`. (SRC-159 L227–230)
+- The assessment asks which two authentication methods Voice Live supports; the episode review answers Microsoft Entra ID and an API key. (SRC-159 L212–215; SRC-49 L690–697)
+- It asks which protocol avatar streaming uses and lists WebRTC among the options; the Voice Live unit teaches WebRTC-based avatar streaming. (SRC-159 L217–220; SRC-88 L270)
+- It asks how to configure and test Voice Live integration in the Foundry portal; the episode review answers: enable voice mode in the agent playground. (SRC-159 L222–225; SRC-49 L698–703)
+- It asks how to stop audio playback when a user interrupts; the episode review answers: handle the input-audio-buffer speech-started event. (SRC-159 L227–230; SRC-49 L704–710)
 
 ## How it works
 
@@ -77,10 +77,10 @@ No code snippet is captured in this source. (SRC-159 L227–230)
 
 ## Assessment items
 
-1. What are the two authentication methods supported by the Voice Live API? Options: OAuth 2.0 and JWT; Basic authentication and API keys; Microsoft Entra (keyless) and API key. Answer shown: Microsoft Entra (keyless) and API key. (SRC-159 L212–215)
-2. Which protocol is used for avatar streaming integration in Voice Live API? Options: HTTP/2; WebRTC; gRPC. Answer shown: WebRTC. (SRC-159 L217–220)
-3. How do you configure and test Voice Live agent integration in the Foundry Portal? Options: Voice Live is only accessible through REST API or Python SDK; Azure Speech in Foundry Tools Voice Live playground; Enable Voice mode in the agent playground. Answer shown: Enable Voice mode in the agent playground. (SRC-159 L222–225)
-4. How can you stop audio playback when a user interrupts the voice agent? Options: user must wait; handle `ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED`; reset the Voice Live session and clear conversation history. Answer shown: handle `ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED`. (SRC-159 L227–230)
+1. What are the two authentication methods supported by the Voice Live API? Options: OAuth 2.0 and JWT; Basic authentication and API keys; Microsoft Entra (keyless) and API key. (SRC-159 L212–215) Answer not shown in capture; the episode review gives Microsoft Entra ID and an API key. (SRC-49 L690–697)
+2. Which protocol is used for avatar streaming integration in Voice Live API? Options: HTTP/2; WebRTC; gRPC. (SRC-159 L217–220) Answer not shown in capture; the Voice Live unit teaches WebRTC-based avatar streaming. (SRC-88 L270)
+3. How do you configure and test Voice Live agent integration in the Foundry Portal? Options: Voice Live is only accessible through REST API or Python SDK; Azure Speech in Foundry Tools Voice Live playground; Enable Voice mode in the agent playground. (SRC-159 L222–225) Answer not shown in capture; the episode review gives enabling voice mode in the agent playground. (SRC-49 L698–703)
+4. How can you stop audio playback when a user interrupts the voice agent? Options: user must wait; handle `ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED`; reset the Voice Live session and clear conversation history. (SRC-159 L227–230) Answer not shown in capture; the episode review gives handling the input-audio-buffer speech-started event. (SRC-49 L704–710)
 
 ## Tensions, caveats and currency
 
@@ -97,7 +97,7 @@ No code snippet is captured in this source. (SRC-159 L227–230)
 ## Connections
 
 - [[voice-live-api]] — assessment target. (SRC-159 L212–230)
-- [[keyless-authentication]] — correct authentication option includes Microsoft Entra keyless. (SRC-159 L212–215)
+- [[keyless-authentication]] — one authentication option names Microsoft Entra keyless; the episode review gives it with an API key. (SRC-159 L212–215; SRC-49 L690–697)
 - [[microsoft-entra-id]] — named authentication option. (SRC-159 L212–215)
 - [[microsoft-foundry]] — portal agent playground configuration is assessed. (SRC-159 L222–225)
 - [[agent-testing-and-evaluation]] — the assessment tests whether learners retained module behaviours. (SRC-159 L212–230)

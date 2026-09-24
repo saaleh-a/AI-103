@@ -104,7 +104,7 @@ The episode verbally reviews three questions: why to create an AI impact assessm
 
 ## Relation to other sources
 
-- [[src-182-plan-responsible-generative-ai-solution]] gives the concise map-measure-mitigate-manage lifecycle. (SRC-182 L14–18)
+- [[src-182-plan-responsible-generative-ai-solution]] gives the concise map-measure-mitigate-manage lifecycle. (SRC-182 L12–16)
 - [[src-153-map-potential-harms]] gives the formal mapping steps. (SRC-153 L216–244)
 - [[src-154-measure-potential-harms]] defines baselining and criteria. (SRC-154 L12–20)
 - [[src-156-mitigate-potential-harms]] gives the Learn version of layered mitigation and Foundry guardrails. (SRC-156 L217–240)

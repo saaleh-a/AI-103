@@ -47,7 +47,7 @@ Evaluation checks whether a deployed model is accurate, relevant, safe, and impr
 
 ## Key claims
 
-- Evaluation supports quality assurance, user satisfaction, continuous improvement, and compliance/safety verification. (SRC-53 L214–219)
+- Evaluation supports quality assurance, user satisfaction, continuous improvement, and compliance/safety verification. (SRC-53 L218–221)
 - Manual evaluation includes playground testing, side-by-side model testing, structured human review, and user studies. (SRC-53 L220–241)
 - Automated metrics include generation quality metrics such as groundedness, relevance, coherence, and fluency. (SRC-53 L237–242)
 - Risk and safety metrics include self-harm, hateful and unfair content, violent content, sexual content, protected material, and indirect attack. (SRC-53 L243–250)
@@ -96,7 +96,7 @@ Not covered by this source.
 
 - [[src-39-deploy-models-endpoints]] explains deployment details required before evaluating a deployed model. (SRC-39 L215; SRC-53 L215)
 - [[src-188-select-models-benchmarks]] covers benchmark comparison before deployment; this source covers evaluating model outputs after deployment or generation. (SRC-188 L213–216; SRC-53 L260–282)
-- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks for the metric that measures linguistic correctness and natural language quality. (SRC-53 L252; SRC-145 L223–227)
+- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks for the metric that measures linguistic correctness and natural language quality. (SRC-53 L242; SRC-145 L223–227)
 - [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] demonstrates automated model evaluation with generated travel prompts and safety/relevance evaluators. (SRC-53 L260–296; SRC-189 L761–910)
 
 ## Connections

@@ -18,7 +18,7 @@ aliases: ["image-generation models", "gpt-image-1", "DALL-E", "text to image", "
 
 ## Summary
 
-Image generation uses a model that creates new graphical output from natural-language input; the output is original rather than retrieved from an image catalog (SRC-258 L219–223). The corpus teaches model discovery, playground experimentation, reference images, SDK/API consumption, and base64/binary handling, while inpainting and mask-based image editing are only named in the study guide (SRC-86 L214–215; SRC-32 L214–218; SRC-191 L161–166).
+Image generation uses a model that creates new graphical output from natural-language input; the output is original rather than retrieved from an image catalog (SRC-258 L219–223). The corpus teaches model discovery, playground experimentation, reference images, SDK/API consumption, and base64/binary handling, while inpainting and mask-based image editing are only named in the study guide (SRC-86 L214–215; SRC-32 L214–218; SRC-97 L398–402; SRC-191 L161–166).
 
 ## The problem it solves
 
@@ -35,7 +35,7 @@ You choose a model with text-to-image capability, give it a prompt describing th
 - SRC-86 teaches the portal workflow: create a Foundry project, use the model playground, submit prompts, view generated images, and where supported specify resolution and reference image (SRC-86 L214–215).
 - SRC-32 teaches the application workflow: use a language-specific SDK such as the OpenAI Python SDK or Azure OpenAI .NET SDK; the example uses the OpenAI Images API and receives a binary stream containing the requested image (SRC-32 L214–218).
 - SRC-97’s episode warns that a model used for chat and vision reading may not generate images; it demonstrates filtering to text-to-image, deploying an image model, using `client.images.generate`, and decoding base64 image data from the response (SRC-97 L33–57; SRC-97 L273–291; SRC-97 L370–407).
-- SRC-172 assessment cues confirm the inference task is `Text to image` and the relevant OpenAI API is `Image` (SRC-172 L210–218).
+- SRC-172's assessment asks which inference task to filter by to find image-generation models and which OpenAI API to use with them, listing `Text to image` and `Image` among the options (SRC-172 L210–218); the capture shows no checked answers, but the teaching units carry both cues: filter the catalog by inference task to find text-to-image models (SRC-258 L218), and use the OpenAI Images API (SRC-32 L215).
 
 ## How it works in Azure
 

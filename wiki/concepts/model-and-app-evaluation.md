@@ -32,7 +32,7 @@ Evaluation turns subjective model behavior into evidence. Manual evaluation uses
 
 - Evaluation serves quality assurance, user satisfaction, continuous improvement, and compliance or safety verification (SRC-53 L215–221).
 - Manual evaluation includes interactive playground testing, side-by-side model comparison, structured review with rating criteria, and user studies. It captures subjective quality aspects that metrics alone may miss (SRC-53 L220–239).
-- Automated evaluation metrics include generation quality metrics: groundedness, relevance, coherence, and fluency (SRC-53 L238–242). A knowledge check asks which metric measures linguistic correctness and natural language quality; the listed correct answer is Fluency (SRC-145 L223–226).
+- Automated evaluation metrics include generation quality metrics: groundedness, relevance, coherence, and fluency (SRC-53 L238–242). A knowledge check asks which metric measures linguistic correctness and natural language quality; Fluency is among the options, and the evaluation unit defines fluency in exactly those terms (SRC-145 L223–226; SRC-53 L242).
 - Risk and safety metrics include self-harm, hateful and unfair content, violent content, sexual content, protected material, and indirect attack or jailbreak vulnerability (SRC-53 L243–249).
 - For content harm metrics, results aggregate as defect rate over a severity threshold, and protected material or indirect attack defect rate is true instances divided by total instances times 100 (SRC-53 L250).
 - AI-assisted evaluation uses a GPT model as an evaluator that analyzes deployed-model responses and assigns scores based on selected criteria (SRC-53 L251).

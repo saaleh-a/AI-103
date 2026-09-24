@@ -84,7 +84,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source states that Foundry IQ is built on Azure AI Search, while later units still require choices among Azure AI Search indexes, Blob Storage, web, SharePoint, and OneLake as data sources. (SRC-85 L220; SRC-22 L11–14)
+- The source states that Foundry IQ is built on Azure AI Search, while later units still require choices among Azure AI Search indexes, Blob Storage, web, SharePoint, and OneLake as data sources. (SRC-85 L220; SRC-22 L13–14)
 - **Stale-risk:** The source identifies MCP as the connection mechanism for Foundry IQ knowledge bases; protocol and product integration details may change and should be verified for production work. (SRC-85 L263)
 
 ## Relation to other sources

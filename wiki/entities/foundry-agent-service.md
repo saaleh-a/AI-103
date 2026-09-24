@@ -18,7 +18,7 @@ objective_gaps: []
 
 ## Summary
 
-Microsoft Foundry Agent Service is the managed Foundry service for building, deploying, and scaling AI agents without managing underlying compute and storage resources (SRC-230 L256–257). It supports agents configured through the Foundry portal, Visual Studio Code, SDK/framework code, tools, service-managed conversation state, observability, security, and publication to user-facing channels (SRC-84 L258–280; SRC-230 L267–273; SRC-232 L216–252).
+Microsoft Foundry Agent Service is the managed Foundry service for building, deploying, and scaling AI agents without managing underlying compute and storage resources (SRC-230 L256–257). It supports agents configured through the Foundry portal, Visual Studio Code, SDK/framework code, tools, service-managed conversation state, observability, security, and publication to user-facing channels (SRC-84 L258–280; SRC-34 L216–226; SRC-230 L267–273; SRC-232 L216–252).
 
 ## What it is
 

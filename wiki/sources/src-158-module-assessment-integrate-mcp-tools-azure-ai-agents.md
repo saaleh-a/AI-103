@@ -55,7 +55,7 @@ This assessment capture tests MCP server role, MCP client tool discovery, and as
 
 ## How it works
 
-The capture functions as a knowledge check rather than a teaching unit. It reinforces that the server is responsible for making tool definitions discoverable, the client retrieves tools with a list-tools call, and async wrappers matter for invocation behavior (SRC-158 L10-L22).
+The capture functions as a knowledge check rather than a teaching unit. Its options cover what the server does, how the client retrieves tools and why tools are wrapped in async functions (SRC-158 L10-L22); the teaching unit gives the answers: the server hosts tool definitions, the client fetches them with `session.list_tools()`, and each tool is wrapped in an async function that invokes `session.call_tool` (SRC-108 L228-L231).
 
 ## Code and API patterns
 

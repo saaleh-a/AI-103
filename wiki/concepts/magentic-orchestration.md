@@ -34,7 +34,7 @@ The episode frames it as “group chat, but one generation past”: an orchestra
 
 SRC-231 defines Magentic as a manager-driven approach that plans, delegates, and adapts across specialized agents for complex open-ended problems where the solution path evolves. (SRC-231 L254)
 
-SRC-244 says the manager decides the next agent based on evolving context, task progress, and agent capabilities; it also maintains shared context, tracks progress, and adapts the workflow in real time. (SRC-244 L218–220)
+SRC-244 says the manager decides the next agent based on evolving context, task progress, and agent capabilities; it also maintains shared context, tracks progress, and adapts the workflow in real time. (SRC-244 L220–221)
 
 SRC-244 says to avoid the pattern when the solution path is fixed or deterministic, no ledger or plan is needed, the task is simple enough for a lighter pattern, speed is the priority, or stalls and loops are expected. (SRC-244 L231–236)
 
@@ -52,7 +52,7 @@ The code shape in the corpus is: define specialized agents such as `ChatAgent`, 
 
 **Inference:** Magentic versus group chat is decided by planning burden. Group chat is a managed conversation; Magentic is manager-led planning and adaptive delegation with a ledger for evolving open-ended work. (SRC-242 L218–226; SRC-244 L218–230)
 
-**Inference:** Magentic versus sequential is decided by whether the path is fixed. Sequential is a predetermined pipeline; Magentic is for cases where the solution path evolves and the plan is built during execution. (SRC-245 L220–221; SRC-244 L218–230)
+**Inference:** Magentic versus sequential is decided by whether the path is fixed. Sequential is a predetermined pipeline; Magentic is for cases where the solution path evolves and the plan is built during execution. (SRC-245 L220–221; SRC-244 L220–231)
 
 
 ## Failure modes and misconceptions

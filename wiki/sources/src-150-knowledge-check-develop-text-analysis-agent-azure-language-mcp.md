@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The knowledge check confirms four module facts: the Language MCP server exposes Azure Language text-analysis capabilities as tools, agents select tools by matching prompts to tool descriptions, Python clients reference the Foundry agent by name in `agent_reference` inside `extra_body`, and portal connection uses key-based `Ocp-Apim-Subscription-Key` authentication. (SRC-150 L211–229)
+The knowledge check asks about four module facts, and the capture shows no checked answers. (SRC-150 L211–232) The episode review and teaching units give the answers: the Language MCP server exposes Azure Language text-analysis capabilities as MCP tools, and an agent matches the prompt to tool descriptions from the server (SRC-45 L576–588); a Python client names the agent in `extra_body` (SRC-24 L252); and the connection uses key-based `Ocp-Apim-Subscription-Key` authentication (SRC-24 L228–229).
 
 ## Key claims
 
@@ -55,11 +55,11 @@ The knowledge check confirms four module facts: the Language MCP server exposes 
 
 ## How it works
 
-This source is assessment rather than instruction. (SRC-150 L211–232) Its choices summarize the module's expected mental model: the MCP server exposes language tools, the agent selects from descriptions, the client points the Responses API call at an agent reference, and the portal tool connection authenticates with a key. (SRC-150 L211–229)
+This source is assessment rather than instruction. (SRC-150 L211–232) **Inference:** Its choices summarize the module's expected mental model: the MCP server exposes language tools, the agent selects from descriptions, the client points the Responses API call at an agent reference, and the portal tool connection authenticates with a key. (SRC-150 L211–229)
 
 ## Code and API patterns
 
-The code-related pattern assessed is the Responses API agent reference: when building a Python client, the correct option is to specify the agent name in `agent_reference` inside `extra_body`. (SRC-150 L221–225)
+The code-related pattern assessed is the Responses API agent reference: when building a Python client, the option the module teaches is to specify the agent by name in `extra_body` (SRC-150 L221–224; SRC-24 L252).
 
 ## Key terms
 
@@ -81,17 +81,17 @@ The code-related pattern assessed is the Responses API agent reference: when bui
    - To train and fine-tune custom language models for use by AI agents. (SRC-150 L212)
    - To expose Azure Language text analysis capabilities as MCP tools for agents. (SRC-150 L213)
    - To deploy and manage large language models in an Azure subscription. (SRC-150 L214)
-   - Answer shown in capture: option 2. (SRC-150 L213–215)
+   - Answer not shown in capture; the episode review gives exposing Azure Language text-analysis capabilities as MCP tools. (SRC-45 L576–582)
 2. How does an agent determine which Azure Language MCP tool to call when processing a user's prompt? (SRC-150 L216–220)
    - The developer writes routing logic to direct each prompt to a specific tool. (SRC-150 L217)
    - The agent matches the prompt to tool descriptions received from the MCP server. (SRC-150 L218)
    - The MCP server analyzes the prompt and automatically routes it to a tool. (SRC-150 L219)
-   - Answer shown in capture: option 2. (SRC-150 L218–220)
+   - Answer not shown in capture; the episode review gives matching the prompt to tool descriptions from the MCP server. (SRC-45 L583–588)
 3. When building a Python client application, how do you reference a Foundry agent when calling the OpenAI Responses API? (SRC-150 L221–225)
    - By passing the agent's API key as a request header to the endpoint. (SRC-150 L222)
    - By specifying the agent name in the `agent_reference` field in `extra_body`. (SRC-150 L223)
    - By passing the agent's endpoint URL as the model parameter value. (SRC-150 L224)
-   - Answer shown in capture: option 2. (SRC-150 L223–225)
+   - Answer not shown in capture; the module instruction names the agent in `extra_body`. (SRC-24 L252)
 4. What authentication method is used when connecting the Azure Language MCP server to a Foundry agent? (SRC-150 L226–229)
    - OAuth 2.0 authentication with a client certificate and tenant ID. (SRC-150 L227)
    - Key-based authentication using the `Ocp-Apim-Subscription-Key` credential. (SRC-150 L228)

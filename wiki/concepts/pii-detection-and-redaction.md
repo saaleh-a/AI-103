@@ -35,7 +35,7 @@ The service scans text for sensitive spans, classifies them as PII categories, a
 - The response includes identified PII entities with categories and confidence scores (SRC-94 L219–223).
 - Redaction replaces PII with asterisks or a specified character (SRC-94 L225).
 - The episode calls `recognize_pii_entities`, lists entity text and category, and shows redacted text where the PII units are hidden (SRC-10 L702–716).
-- The assessment tests that publishing customer testimonials after hiding email addresses and phone numbers should use Azure Language in Foundry Tools PII detection and redaction (SRC-168 L218–220).
+- The module assessment asks what to use to remove personal details from customer testimonials before publishing them; its options include finding and redacting PII with Azure Language, which the episode review gives as the answer (SRC-168 L218–219; SRC-10 L799–810).
 
 ## How it works in Azure
 

@@ -63,7 +63,7 @@ The assigned corpus calls the service Azure Document Intelligence and also place
 - Introductory unit and summary establish the module outcomes and service scope (SRC-117 L217–223; SRC-220 L217–223).
 - The core service unit covers model categories, access paths, resources, and input requirements (SRC-263 L220–245).
 - Studio, prebuilt, and custom units provide the operational paths (SRC-251 L217–241; SRC-249 L220–250; SRC-224 L217–258).
-- Exercise and assessment pages show the corpus expects hands-on use of both prebuilt and custom models and exam-style discrimination between layout, custom artifacts, and composed/classifier routing (SRC-54 L213–219; SRC-165 L215–229).
+- **Inference:** Exercise and assessment pages suggest the corpus expects hands-on use of both prebuilt and custom models and exam-style discrimination between layout, custom artifacts, and composed/classifier routing (SRC-54 L213–219; SRC-165 L215–229).
 
 ## Connections
 

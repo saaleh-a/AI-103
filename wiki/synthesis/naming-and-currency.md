@@ -43,7 +43,7 @@ aliases: ["renames", "product naming"]
 
 - **Stale-risk:** The official guide says most questions cover GA features, but Preview features may appear if commonly used; it is explicitly measured as of April 16, 2026 (SRC-191 L101–102).
 - **Stale-risk:** Work IQ is explicitly in preview and its features and APIs may change (SRC-2 L295–296).
-- **Stale-risk:** Sora 2 video generation, model names, and video durations are time-sensitive; episode guidance tells learners to check supported lengths rather than treating transcript values as durable (SRC-97 L206–217; SRC-191 L101).
+- **Stale-risk:** Sora 2 video generation, model names, and video durations are time-sensitive; episode guidance tells learners to check supported lengths rather than treating transcript values as durable (SRC-97 L460–463; SRC-97 L206–217; SRC-191 L101).
 - **Stale-risk:** The Content Understanding API setup uses default model names such as GPT-4.1 and GPT-4.1-mini in the capture; model defaults can change (SRC-184 L210–236; SRC-191 L101).
 - **Stale-risk:** The model catalog and deployment episode discusses catalog size, leaderboards, tokens-per-minute and deployment trade-offs; catalog inventory, limits and costs should be rechecked near exam date (SRC-89 L209–244; SRC-189 L120–250; SRC-189 L500–610).
 - **Stale-risk:** Speech MCP and Speech/Voice model details are source-time facts; the corpus includes tool-capability patterns but product models and supported audio formats can change (SRC-236 L225–262; SRC-49 L200–280).

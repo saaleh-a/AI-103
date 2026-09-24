@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Foundry workflow patterns are predefined shapes: sequential, human-in-the-loop, and group chat, chosen by data flow and oversight needs."
 area: orchestration
-source_ids: [SRC-36, SRC-105, SRC-118, SRC-171, SRC-219, SRC-231, SRC-247]
+source_ids: [SRC-11, SRC-36, SRC-105, SRC-118, SRC-171, SRC-219, SRC-231, SRC-247]
 objectives: [G03, G10, G11]
 objective_gaps: []
 tags: []
@@ -60,7 +60,7 @@ Pattern configuration is visual/declarative in Foundry workflows. The corpus doe
 
 **Inference:** Choose group chat when multiple specialised agents must collaborate and adapt to changing inputs rather than follow a fixed path (SRC-105 L223).
 
-**Inference:** If the exam wording says "multiple tickets without duplicating nodes," the pattern mechanics point to For-Each looping rather than creating repeated branches, because the module explicitly tests For-Each for multiple tickets (SRC-171 L14–17; SRC-118 L224).
+**Inference:** If the exam wording says "multiple tickets without duplicating nodes," the pattern mechanics point to For-Each looping rather than creating repeated branches, because the module assessment asks which node handles multiple tickets without duplicating nodes, with For-Each among the options (SRC-171 L14–17), and the module teaches For-Each loops for processing multiple inputs in one workflow (SRC-118 L224; SRC-11 L233).
 
 Closest confusion: Foundry workflow patterns are not the same taxonomy as Microsoft Agent Framework orchestration patterns. Foundry's pattern unit names sequential, human-in-the-loop, and group chat; Agent Framework's orchestration overview names concurrent, sequential, handoff, group chat, and Magentic as SDK patterns (SRC-105 L221–224; SRC-231 L249–255).
 
@@ -89,6 +89,7 @@ Do not ignore structured outputs: the module assessment says structured outputs 
 
 ## Sources
 
+- SRC-11 — [[src-11-apply-power-fx-workflows]] — For-each nodes use Power Fx to iterate over collections.
 - SRC-36 — [[src-36-create-workflows-microsoft-foundry]] — selecting a pattern in the workflow designer.
 - SRC-105 — [[src-105-identify-workflow-patterns]] — predefined Foundry workflow patterns and choosing among them.
 - SRC-118 — [[src-118-introduction-build-agent-driven-workflows-microsoft-foundry]] — routing, loops, and human escalation outcomes.

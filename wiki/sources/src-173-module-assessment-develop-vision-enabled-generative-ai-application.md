@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The assessment asks which model kind can respond to visual input and includes multimodal models as the correct-looking option among distractors. (SRC-173 L209–212) It asks how to submit an image-analysis prompt and includes a multi-part user message with text and image content as the correct-looking option. (SRC-173 L214–217) It asks how to include an image in a message and includes URL or binary data as the correct-looking option. (SRC-173 L219–222)
+The assessment asks which model kind can respond to visual input, listing multimodal models among the options. (SRC-173 L209–212) It asks how to submit an image-analysis prompt, listing a multi-part user message with text and image content among the options. (SRC-173 L214–217) It asks how to include an image in a message, listing a URL or binary data among the options. (SRC-173 L219–222) **Inference:** In each case the teaching units match that option (SRC-248 L213; SRC-46 L214; SRC-46 L216).
 
 ## Key claims
 
@@ -96,7 +96,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The raw capture includes the questions and answer options but not the post-submit checked answers. (SRC-173 L223–225)
+- The raw capture includes the questions and answer options but not the post-submit checked answers. (SRC-173 L223–225) The `2.` and `3.` lines are the numbers of the second and third questions, not marked answers, and each `[-] N` marker indexes the next option. (SRC-173 L213; SRC-173 L218)
 - **Inference:** The correct-looking answers can be inferred from adjacent module content, but the source page itself must preserve that the capture does not show checked answers. (SRC-46 L214–216; SRC-248 L213)
 
 ## Relation to other sources

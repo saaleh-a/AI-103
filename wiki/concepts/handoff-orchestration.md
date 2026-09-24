@@ -59,7 +59,7 @@ The code shape in the corpus is not a named `HandoffBuilder`; it is a control wo
 
 ## Failure modes and misconceptions
 
-Do not choose handoff for a known, fixed pipeline; that is a sequential orchestration cue. (SRC-243 L229; SRC-245 L218–220)
+Do not choose handoff for a known, fixed pipeline; that is a sequential orchestration cue. (SRC-243 L229; SRC-245 L220–221)
 
 Do not choose handoff when operations must run at the same time; that conflicts with the one-agent-at-a-time control model. (SRC-243 L221–222, L233)
 
@@ -74,7 +74,7 @@ Handoff loops are an explicit risk: if preventing excessive bouncing is difficul
 ## Connections
 
 - [[multi-agent-orchestration]] — handoff is one supported Agent Framework pattern. (SRC-231 L252)
-- [[sequential-orchestration]] — closest contrast when order is fixed. (SRC-243 L229; SRC-245 L218–220)
+- [[sequential-orchestration]] — closest contrast when order is fixed. (SRC-243 L229; SRC-245 L220–221)
 - [[group-chat-orchestration]] — closest contrast when agents share a managed conversation. (SRC-243 L221–222; SRC-242 L218–226)
 - [[agent-framework-workflows]] — implementation uses control workflows and switch-case edges. (SRC-243 L235–254)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.

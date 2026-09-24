@@ -35,7 +35,7 @@ Think of an analyzer as a typed extraction contract. The input side says which b
 - The custom-analyzer unit says analyzers are based on schemas that define the fields you want to extract or generate from a content file. (SRC-29 L218–221)
 - The Studio unit says schema templates and field types depend on the source content type, with document-specific optional features such as barcodes and formulae. (SRC-30 L234–238)
 - The image-analysis unit says image schemas can use one of three extraction methods and that results include markdown, fields with confidence, and source grounding. (SRC-8 L223–248)
-- Assessment captures test that a field to be computed rather than read should use a generate-style field and that prebuilt image analyzers fit common image scenarios. (SRC-164 L221–225; SRC-169 L219–222)
+- Assessment captures ask what to define for the information to extract and which prebuilt analyzer fits purchase receipts, listing a schema and `prebuilt-receipt` among the options (SRC-164 L222–225; SRC-169 L219–222); the teaching units supply both: analyzers are based on schemas (SRC-29 L218), and `prebuilt-receipt` extracts vendor names, items and totals (SRC-8 L220).
 
 ## How it works in Azure
 

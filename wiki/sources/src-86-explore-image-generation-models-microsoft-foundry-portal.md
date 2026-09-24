@@ -55,7 +55,7 @@ The unit says learners can create a Microsoft Foundry project and use the model 
 
 ## How it works
 
-This source presents the portal workflow as a low-code exploration loop: create or use a Foundry project, open the playground, submit prompts, and inspect generated image results. (SRC-86 L212–214) It also introduces controllable inputs, including size and reference image, as model-dependent playground options. (SRC-86 L215)
+This source presents the portal workflow as a low-code exploration loop: create or use a Foundry project, open the playground, submit prompts, and inspect generated image results. (SRC-86 L214) It also introduces controllable inputs, including size and reference image, as model-dependent playground options. (SRC-86 L215)
 
 ## Code and API patterns
 

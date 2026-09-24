@@ -34,7 +34,7 @@ NER turns unstructured text into a list of things mentioned plus their categorie
 - The dedicated NER unit lists examples: Person, Location, DateTime, Organization, Address, Email, and URL (SRC-93 L217–224).
 - The response includes a list of categorized entities found in each document (SRC-93 L227–230).
 - The episode illustrates entity extraction with John Smith as a person, Contoso Bank as an organization, and Seattle as a place, then connects the output to tagging or the beginning of an index (SRC-10 L226–241).
-- The assessment tests that an AI solution extracting people, organizations, and locations from news articles should use Azure Language in Foundry Tools named entity recognition (SRC-168 L213–216).
+- The module assessment asks how to build an application that extracts the key people, places and dates mentioned in news articles; its options include named-entity extraction with Azure Language, which the episode review gives as the answer (SRC-168 L213–216; SRC-10 L790–798).
 
 ## How it works in Azure
 

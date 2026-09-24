@@ -59,7 +59,7 @@ Python applications can use the OpenAI Python SDK with a Sora 2 deployment in Mi
 
 ## How it works
 
-The source describes video generation as a job workflow rather than an immediate response: create the video job, poll until the job reaches a final state, and then download the video result. (SRC-101 L212–215) It adds two programmatic variations: `input_reference` for starting from an image and `remix` for modifying an existing video through its original video ID. (SRC-101 L220–226)
+The source describes video generation as a job workflow rather than an immediate response: create the video job, poll until the job reaches a final state, and then download the video result. (SRC-101 L214–216) It adds two programmatic variations: `input_reference` for starting from an image and `remix` for modifying an existing video through its original video ID. (SRC-101 L220–226)
 
 ## Code and API patterns
 

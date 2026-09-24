@@ -44,12 +44,12 @@ ingest_depth: full
 
 ## TL;DR
 
-Content Understanding solutions center on analyzers trained to extract specific information from a particular content type according to a schema. (SRC-30 L216) The Studio workflow is: create a Foundry resource, define a schema, build an analyzer, and use it on new content. (SRC-30 L215–219)
+Content Understanding solutions center on analyzers trained to extract specific information from a particular content type according to a schema. (SRC-30 L216) The Studio workflow is: create a Foundry resource, define a schema, build an analyzer, and use it on new content. (SRC-30 L217–221)
 
 ## Key claims
 
 - Content Understanding solutions are based on creating an analyzer trained for a particular content type and a schema-defined extraction target. (SRC-30 L216)
-- The high-level process is to create a Foundry resource, define a schema, build an analyzer, and then use it to extract or generate fields from new content. (SRC-30 L215–219)
+- The high-level process is to create a Foundry resource, define a schema, build an analyzer, and then use it to extract or generate fields from new content. (SRC-30 L217–221)
 - The schema can be based on a content sample and analyzer template. (SRC-30 L216)
 - Analyzer templates help developers create analyzers quickly. (SRC-30 L222)
 - Because Content Understanding has generative AI capabilities, minimal training data can define a schema by example. (SRC-30 L222)

@@ -42,7 +42,7 @@ That split matters because the source says manual speech-to-speech synthesis is 
 - The translation overview says many LLMs can translate, but comprehensive multilingual translation generally requires specialized models; Foundry exposes Azure Translator for text and Azure Speech for speech-to-text and speech-to-speech translation in multiple languages simultaneously (SRC-229 L216–218).
 - The speech unit says the Speech Translation API returns translation as text or speech, and is used from application code through `TranslationRecognizer` connected with `SpeechTranslationConfig` (SRC-226 L12–17).
 - `SpeechTranslationConfig` configures the source and target languages, and `AudioConfig` specifies the source audio stream (SRC-226 L21–22).
-- The module assessment tests that `SpeechTranslationConfig` is the SDK object for specifying target translation language(s) (SRC-166 L222–224).
+- The module assessment asks which SDK object specifies the languages into which speech is translated and lists `SpeechTranslationConfig` among the options; the translation unit teaches that `SpeechTranslationConfig` configures the source and target languages (SRC-166 L222–225; SRC-226 L21).
 - The summary states the learning outcome as using Azure Speech in Foundry Tools for speech translation (SRC-218 L218).
 
 ## How it works in Azure

@@ -58,7 +58,7 @@ The module summary says learners published Microsoft Foundry agents to Microsoft
 
 ## How it works
 
-This summary compresses the module into three phases. (SRC-209 L216–232) First, direct portal publishing moves agents into Teams and Microsoft 365 Copilot while provisioning Bot Service and Entra registrations. (SRC-209 L216–218) Second, deployment choices include Agents Toolkit for complex enterprise needs, shared versus organization scopes, and RBAC considerations for published-agent identity. (SRC-209 L218–222) Third, Work IQ adds Microsoft 365 data access through MCP, and follow-on learning extends agents with tools, Azure AI Search grounding, and multi-agent workflows. (SRC-209 L222–232)
+This summary compresses the module into three phases. (SRC-209 L216–232) First, direct portal publishing moves agents into Teams and Microsoft 365 Copilot while provisioning Bot Service and Entra registrations. (SRC-209 L218–219) Second, deployment choices include Agents Toolkit for complex enterprise needs, shared versus organization scopes, and RBAC considerations for published-agent identity. (SRC-209 L218–222) Third, Work IQ adds Microsoft 365 data access through MCP, and follow-on learning extends agents with tools, Azure AI Search grounding, and multi-agent workflows. (SRC-209 L222–232)
 
 ## Code and API patterns
 

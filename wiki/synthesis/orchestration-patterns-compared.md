@@ -52,7 +52,7 @@ aliases: []
 
 1. **Inference:** If a customer says, *summarize, then classify, then produce an action*, choose sequential because each step depends on the previous output; if the same customer says, *get three independent specialist opinions quickly*, choose concurrent because independence and speed are decisive. (SRC-245 L220–228; SRC-241 L225–231)
 
-2. **Inference:** If a support case starts general and then routes to billing after the user's details emerge, choose handoff because the specialist is not known upfront; if the route is always triage → diagnosis → response, choose sequential because the order is predetermined. (SRC-243 L221–228; SRC-245 L218–220)
+2. **Inference:** If a support case starts general and then routes to billing after the user's details emerge, choose handoff because the specialist is not known upfront; if the route is always triage → diagnosis → response, choose sequential because the order is predetermined. (SRC-243 L221–228; SRC-245 L220–221)
 
 3. **Inference:** If reviewers must see and react to one another in a shared thread, choose group chat; if each reviewer should work blind and a later step merges answers, choose concurrent. (SRC-242 L218–226; SRC-241 L218–222)
 
