@@ -44,9 +44,9 @@ For transliteration, submit text to `transliterate` with `from_script` and `to_s
 
 ## Code and configuration
 
-The main SDK object cue is `TextTranslationClient`; the episode creates it from a Foundry resource endpoint and credential, then calls language-list and translation methods (SRC-228 L74–92; SRC-228 L330–349). Translator REST endpoints can be global, regional, or Foundry resource endpoints (SRC-227 L230–235).
+The main SDK object cue is `TextTranslationClient`; the episode creates it from a Foundry resource endpoint and credential, then calls language-list and translation methods (SRC-228 L74–92; SRC-228 L330–390). Translator REST endpoints can be global, regional, or Foundry resource endpoints (SRC-227 L230–235).
 
-The assessment boundary is explicit: use `translate` to convert Chinese text to English, and use `transliterate` to convert Russian Cyrillic characters to Latin characters (SRC-166 L212–220).
+The module assessment asks which function converts Chinese text to English and which converts Russian Cyrillic characters to Latin characters, listing `translate` and `transliterate` among the options (SRC-166 L212–220); the Translator unit teaches both methods, with `transliterate` converting text from one script to another (SRC-227 L217; SRC-227 L261–262).
 
 ## Decision boundaries
 

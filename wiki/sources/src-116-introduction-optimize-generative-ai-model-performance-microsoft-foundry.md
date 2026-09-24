@@ -79,7 +79,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-The source uses the product name Microsoft Foundry (SRC-116 L215–218), while two related Learn units still use Azure AI Foundry wording, one of them for an SDK (SRC-102 L251; SRC-234 L230).
+The unit's teaching lines do not name the platform; its module is titled *Optimize generative AI model performance with Microsoft Foundry* (the `module` field above), while two related Learn units still use Azure AI Foundry wording, one of them for an SDK (SRC-102 L251; SRC-234 L230).
 
 ## Relation to other sources
 
