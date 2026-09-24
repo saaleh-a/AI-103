@@ -56,7 +56,7 @@ Microsoft Work IQ connects AI agents to Microsoft 365 data such as emails, meeti
 - Work IQ runs in CLI mode for terminal queries and MCP server mode for AI assistants such as GitHub Copilot in Visual Studio Code. (SRC-2 L240–249)
 - Work IQ requires Node.js for local CLI use, a Microsoft 365 subscription with a Copilot license, and tenant admin consent for the Work IQ application. (SRC-2 L266–270)
 - Work IQ inherits the Microsoft 365 Copilot security model, including permission-based access, no data storage, enterprise security policies, and admin visibility. (SRC-2 L272–279)
-- Work IQ accesses data through Microsoft Graph with the authenticated identity, so users cannot access documents they lack permission to view. (SRC-2 L280–284)
+- Work IQ accesses data through Microsoft Graph with the authenticated identity, so users cannot access documents they lack permission to view. (SRC-2 L276–279)
 - Work IQ is currently in preview. (SRC-2 L296)
 
 ## How it works
@@ -74,7 +74,7 @@ The capture omits exact commands and JSON bodies, but identifies the surrounding
 - CLI installation can use npm. (SRC-2 L250–253)
 - GitHub Copilot CLI installation uses Copilot CLI, a plugin marketplace, and `workiq@copilot-plugins`. (SRC-2 L254–259)
 - Visual Studio Code configuration adds Work IQ as an MCP server in MCP settings. (SRC-2 L260–263)
-- Before first use, the user must accept the End User License Agreement. (SRC-2 L264–265)
+- Before first use, the user must accept the End User License Agreement. (SRC-2 L260)
 - CLI use runs `workiq ask` from the terminal for ad-hoc queries. (SRC-2 L286–289)
 
 ## Key terms
@@ -100,7 +100,7 @@ Not covered by this source.
 
 - **Stale-risk:** Work IQ is in preview, so the source warns that features and APIs may change. (SRC-2 L296)
 - The capture collapses install commands and MCP JSON configuration after Copy markers, so exact syntax is not recoverable from this source page. (SRC-2 L250–265)
-- Work IQ is described as accessing Microsoft 365 Copilot data and as using Microsoft Graph with the authenticated identity; the source does not detail exact Graph endpoints or permissions. (SRC-2 L219–221; SRC-2 L280–284)
+- Work IQ is described as accessing Microsoft 365 Copilot data and as using Microsoft Graph with the authenticated identity; the source does not detail exact Graph endpoints or permissions. (SRC-2 L220; SRC-2 L276–279)
 
 ## Relation to other sources
 

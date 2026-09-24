@@ -26,7 +26,7 @@ Without tools, an agent can only generate text from what it already knows; tools
 
 ## Mental model
 
-Think of a tool as a declared capability with a name, description, inputs, execution environment, and returned result. The model decides whether a user request needs that capability, emits or invokes a tool call, receives the result, and incorporates the result into its final response. (SRC-91 L222–229; SRC-256 L240–246)
+Think of a tool as a declared capability with a name, description, inputs, execution environment, and returned result. The model decides whether a user request needs that capability, emits or invokes a tool call, receives the result, and incorporates the result into its final response. (SRC-91 L222–229; SRC-256 L240–247)
 
 ## What the sources say
 
@@ -102,6 +102,5 @@ For Responses API apps, tools are specified in the request to the deployed model
 ## Open questions
 
 - The corpus does not enumerate every currently available tool in the Foundry catalog; it says the catalog continues to expand. (SRC-91 L245–247)
-
 
 

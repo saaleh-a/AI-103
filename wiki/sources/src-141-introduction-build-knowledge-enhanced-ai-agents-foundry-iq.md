@@ -44,19 +44,19 @@ ingest_depth: full
 
 ## TL;DR
 
-Organizations want agents to move beyond predefined tasks by accessing policies, procedures, product documentation, support articles, and domain expertise. (SRC-141 L213–215) The unit frames Foundry IQ as a unified knowledge platform that avoids rebuilding custom RAG pipelines for every project and lets multiple agents share improved knowledge bases. (SRC-141 L218–219)
+Organizations want agents to move beyond predefined tasks by accessing policies, procedures, product documentation, support articles, and domain expertise. (SRC-141 L215–216) The unit frames Foundry IQ as a unified knowledge platform that avoids rebuilding custom RAG pipelines for every project and lets multiple agents share improved knowledge bases. (SRC-141 L219)
 
 ## Key claims
 
-- AI agents become more useful when they can access organizational knowledge such as policies, procedures, product documentation, support articles, and domain expertise. (SRC-141 L213–215)
-- Traditional agents are limited by private-data access, knowledge cutoff dates, generic responses, and incorrect information when factual grounding is missing. (SRC-141 L216)
-- Building knowledge-enabled agents directly requires data-source connections, chunking strategies, vector databases, and access-control management. (SRC-141 L217)
-- Foundry IQ is described as Microsoft's unified knowledge platform for agent access to organizational data. (SRC-141 L218)
-- Shared knowledge bases let multiple agents use the same knowledge and benefit immediately when that knowledge is improved. (SRC-141 L218–219)
+- AI agents become more useful when they can access organizational knowledge such as policies, procedures, product documentation, support articles, and domain expertise. (SRC-141 L215–216)
+- Traditional agents are limited by private-data access, knowledge cutoff dates, generic responses, and incorrect information when factual grounding is missing. (SRC-141 L217)
+- Building knowledge-enabled agents directly requires data-source connections, chunking strategies, vector databases, and access-control management. (SRC-141 L218)
+- Foundry IQ is described as Microsoft's unified knowledge platform for agent access to organizational data. (SRC-141 L219)
+- Shared knowledge bases let multiple agents use the same knowledge and benefit immediately when that knowledge is improved. (SRC-141 L219)
 
 ## How it works
 
-The source introduces a problem-and-platform flow: agents need organizational data, direct custom RAG work repeats complex retrieval engineering, and Foundry IQ provides shared knowledge management instead. (SRC-141 L213–219) The unit's learning objectives then sequence the module: explain RAG, describe Foundry IQ, configure data sources, configure retrieval instructions and citations, and test or monitor retrieval quality. (SRC-141 L220–226)
+The source introduces a problem-and-platform flow: agents need organizational data, direct custom RAG work repeats complex retrieval engineering, and Foundry IQ provides shared knowledge management instead. (SRC-141 L215–219) The unit's learning objectives then sequence the module: explain RAG, describe Foundry IQ, configure data sources, configure retrieval instructions and citations, and test or monitor retrieval quality. (SRC-141 L220–226)
 
 ## Code and API patterns
 
@@ -64,15 +64,15 @@ Not covered by this source.
 
 ## Key terms
 
-- **Organizational knowledge** — policies, procedures, product documentation, support articles, and domain expertise that agents need for company-specific answers. (SRC-141 L214–215)
+- **Organizational knowledge** — policies, procedures, product documentation, support articles, and domain expertise that agents need for company-specific answers. (SRC-141 L216)
 - **Retrieval Augmented Generation (RAG)** — introduced as the approach that connects agents to real-time information. (SRC-141 L221; SRC-141 L228)
-- **Foundry IQ** — Microsoft's unified knowledge platform for organizational data access by AI agents. (SRC-141 L218)
-- **Knowledge bases** — shared stores that multiple agents can access and that improve all connected agents when updated. (SRC-141 L218–219)
+- **Foundry IQ** — Microsoft's unified knowledge platform for organizational data access by AI agents. (SRC-141 L219)
+- **Knowledge bases** — shared stores that multiple agents can access and that improve all connected agents when updated. (SRC-141 L219)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** Choose Foundry IQ when a scenario emphasizes multiple agents sharing organizational knowledge instead of each team rebuilding chunking, vector databases, data connections, and access controls. (SRC-141 L217–219)
-- **Inference:** Treat generic, unsupported answers from an agent as a grounding problem, because the source ties missing factual grounding to incorrect information. (SRC-141 L216)
+- **Inference:** Choose Foundry IQ when a scenario emphasizes multiple agents sharing organizational knowledge instead of each team rebuilding chunking, vector databases, data connections, and access controls. (SRC-141 L218–219)
+- **Inference:** Treat generic, unsupported answers from an agent as a grounding problem, because the source ties missing factual grounding to incorrect information. (SRC-141 L217)
 
 ## Assessment items
 
@@ -80,22 +80,22 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source names Foundry IQ as Microsoft's unified knowledge platform but does not specify service limits, regions, pricing, API versions, or deployment prerequisites. (SRC-141 L218–226)
-- The source uses both a general term, knowledge-enabled agents, and the product name Foundry IQ; later pages must preserve the distinction between the pattern and the platform. (SRC-141 L217–219)
+- The source names Foundry IQ as Microsoft's unified knowledge platform but does not specify service limits, regions, pricing, API versions, or deployment prerequisites. (SRC-141 L219–226)
+- The source uses both a general term, knowledge-enabled agents, and the product name Foundry IQ; later pages must preserve the distinction between the pattern and the platform. (SRC-141 L219)
 
 ## Relation to other sources
 
 - [[src-239-understanding-rag-agents]] supplies the RAG mechanism that this introduction says comes next. (SRC-141 L228; SRC-239 L214–231)
-- [[src-85-explore-foundry-iq]] expands the shared platform claim by describing knowledge bases, data-source integration, and built-in retrieval intelligence. (SRC-141 L218–219; SRC-85 L219–251)
+- [[src-85-explore-foundry-iq]] expands the shared platform claim by describing knowledge bases, data-source integration, and built-in retrieval intelligence. (SRC-141 L219; SRC-85 L219–251)
 - [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10]] presents the same module arc in video form: RAG fundamentals, Foundry IQ, retrieval configuration, and an end-to-end integration. (SRC-141 L220–226; SRC-16 L14–26)
 
 ## Connections
 
-- [[foundry-iq]] — the product introduced as the shared knowledge platform for agents. (SRC-141 L218–219)
+- [[foundry-iq]] — the product introduced as the shared knowledge platform for agents. (SRC-141 L219)
 - [[retrieval-augmented-generation]] — the grounding pattern the module starts with. (SRC-141 L221; SRC-141 L228)
 - [[ai-agents]] — the unit frames agents as the consumers of organizational knowledge. (SRC-141 L213–219)
-- [[knowledge-bases-and-sources]] — the source names shared knowledge bases and data-source configuration as central module outcomes. (SRC-141 L218–224)
-- [[retrieval-options-compared]] — useful later for comparing custom RAG pipelines with Foundry IQ knowledge bases. (SRC-141 L217–219)
+- [[knowledge-bases-and-sources]] — the source names shared knowledge bases and data-source configuration as central module outcomes. (SRC-141 L219–224)
+- [[retrieval-options-compared]] — useful later for comparing custom RAG pipelines with Foundry IQ knowledge bases. (SRC-141 L219)
 - *Module units:* [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions

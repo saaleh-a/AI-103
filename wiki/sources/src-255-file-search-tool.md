@@ -61,7 +61,7 @@ The source describes a retrieval pipeline: documents are uploaded into a vector 
 
 ## Code and API patterns
 
-The source states that the OpenAI Responses API request includes `file_search` in the tools array with vector store IDs (SRC-255 L231; SRC-255 L235–238). The captured Python example is omitted from the raw file beyond the `Python` and `Copy` markers (SRC-255 L230–234).
+The source states that the OpenAI Responses API request includes `file_search` in the tools array with vector store IDs (SRC-255 L238; SRC-255 L235–238). The captured Python example is omitted from the raw file beyond the `Python` and `Copy` markers (SRC-255 L230–234).
 
 ## Key terms
 

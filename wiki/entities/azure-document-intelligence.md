@@ -36,7 +36,7 @@ The problem is manual document processing: claims, patient enrolment, receipts, 
 
 - **Document analysis models:** read extracts text and languages; layout adds table and structure extraction (SRC-263 L221–222).
 - **Prebuilt models:** extract information from common document types such as invoices, receipts, tax forms, and ID documents without training (SRC-263 L223; SRC-249 L230–231).
-- **Custom models:** use your labelled datasets for business-specific forms; the corpus names custom template, custom neural, composed models, and custom classifiers (SRC-263 L224; SRC-224 L217–219).
+- **Custom models:** use your labelled datasets for business-specific forms; the corpus names custom template, custom neural, composed models, and custom classifiers (SRC-224 L217; SRC-263 L224).
 - **Document Intelligence Studio:** a visual interface for analyzing layouts, extracting with prebuilt models, and training custom models (SRC-251 L217–223).
 - **Integration path:** custom Azure AI Search skills can wrap Document Intelligence, passing indexer data into a model that extracts fields from forms (SRC-52 L230).
 

@@ -43,7 +43,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The Agent Executor is the A2A component that connects protocol-level requests to the agent's business logic. (SRC-107 L12) It handles incoming requests through `AgentExecutor`, uses `RequestContext` to understand the request, and uses `EventQueue` to send messages, task updates, artifacts, or other events back to the client. (SRC-107 L14; SRC-107 L24; SRC-107 L28)
+The Agent Executor is the A2A component that connects protocol-level requests to the agent's business logic. (SRC-107 L12) It handles incoming requests through `AgentExecutor` and uses `RequestContext` to understand the request. (SRC-107 L14; SRC-107 L28) Its `EventQueue` sends results or events back to the client, including messages, task updates, or artifacts. (SRC-107 L24; SRC-107 L28)
 
 ## Key claims
 

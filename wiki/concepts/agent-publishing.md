@@ -44,7 +44,7 @@ SRC-209 summarizes the module by naming direct portal publishing, Azure Bot Serv
 
 For Microsoft 365, direct portal publishing provisions Azure Bot Service, registers an Entra application, creates a Microsoft 365 publishing package, and prepares distribution. (SRC-232 L231–237) The portal asks for display metadata and icons, then lets the publisher choose shared scope or organization scope. (SRC-185 L243–263)
 
-Shared scope is immediate and fits testing or small teams; organization scope requires administrator approval and fits production distribution. (SRC-185 L256–263; SRC-149 L221–226) Once organization scope is approved, the agent appears in the Built by your org section of the Teams agent store, subject to app policies. (SRC-185 L278–284)
+Shared scope is immediate and fits testing or small teams; organization scope requires administrator approval and fits production distribution. (SRC-185 L256–263; SRC-149 L221–226) Once organization scope is approved, the agent appears in the Built by your org section of the Teams agent store, subject to app policies. (SRC-185 L279–285)
 
 ## Code and configuration
 
@@ -67,7 +67,7 @@ Do not assume project-time permissions transfer to the published agent. Both SRC
 
 Do not confuse shared and organization scope. Shared scope is for immediate testing or limited use; organization scope requires admin approval before broad availability. (SRC-185 L256–263; SRC-149 L221–226)
 
-Do not treat metadata as private configuration. SRC-185 warns not to include secrets or sensitive information in metadata fields because users can see them. (SRC-185 L235–238)
+Do not treat metadata as private configuration. SRC-185 warns not to include secrets or sensitive information in metadata fields because users can see them. (SRC-185 L233–239)
 
 ## Solution Engineering transfer
 

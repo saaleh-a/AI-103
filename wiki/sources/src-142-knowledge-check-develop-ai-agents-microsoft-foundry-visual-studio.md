@@ -71,10 +71,10 @@ Not covered by this source. (SRC-142 L216–243)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** The plausible answer to question 1 is the option about handling tool calling, state management, and infrastructure automatically because it matches the managed-service lesson. (SRC-142 L216–221; SRC-230 L270–276)
-- **Inference:** The plausible answer to question 2 is the Responses API option because the module states service-managed data uses the Responses API. (SRC-142 L223–228; SRC-230 L271)
-- **Inference:** The plausible answer to question 3 is unrestricted enterprise-data access because it conflicts with least privilege and RBAC practices. (SRC-142 L230–235; SRC-230 L253–257)
-- **Inference:** The plausible answer to question 4 is automatic tool invocation, result processing, and response incorporation because that mirrors the tool lifecycle. (SRC-142 L236–240; SRC-91 L222–224)
+- **Inference:** The plausible answer to question 1 is the option about handling tool calling, state management, and infrastructure automatically because it matches the managed-service lesson. (SRC-142 L216–221; SRC-230 L267–273)
+- **Inference:** The plausible answer to question 2 is the Responses API option because the module states service-managed data uses the Responses API. (SRC-142 L223–228; SRC-230 L268)
+- **Inference:** The plausible answer to question 3 is unrestricted enterprise-data access because it conflicts with least privilege and RBAC practices. (SRC-142 L230–235; SRC-230 L247–254)
+- **Inference:** The plausible answer to question 4 is automatic tool invocation, result processing, and response incorporation because that mirrors the tool lifecycle. (SRC-142 L236–240; SRC-91 L223–229)
 
 ## Assessment items
 
@@ -90,7 +90,7 @@ Not covered by this source. (SRC-142 L216–243)
 ## Relation to other sources
 
 - [[src-230-understand-ai-agents-microsoft-foundry-agent-service]] teaches the managed-service, Responses API, and security content tested here. (SRC-230 L250–276; SRC-142 L216–235)
-- [[src-91-extend-agent-capabilities-tools]] teaches the automatic tool-calling lifecycle tested in question 4. (SRC-91 L222–224; SRC-142 L236–241)
+- [[src-91-extend-agent-capabilities-tools]] teaches the automatic tool-calling lifecycle tested in question 4. (SRC-91 L223–229; SRC-142 L236–241)
 - [[src-41-develop-ai-agents-microsoft-foundry-visual-studio-code-episode]] verbally answers the first two knowledge-check questions in the episode. (SRC-41 L900–940; SRC-142 L216–229)
 
 ## Connections

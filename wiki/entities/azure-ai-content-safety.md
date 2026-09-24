@@ -27,19 +27,19 @@ The corpus describes Azure AI Content Safety as a protection layer that can bloc
 
 - SRC-196 says to apply Azure AI Content Safety services as an additional protection layer against harmful content; content filters can block inappropriate inputs and outputs, complementing model-level safety features (SRC-196 L24).
 - SRC-264 says Content Understanding includes built-in Responsible AI protections and integrates Azure AI Content Safety to detect and prevent harmful content; harmful material includes violence, hate speech, and exploitation (SRC-264 L36–39).
-- SRC-53 says when safety metrics show concerns, mitigation options include implementing Azure AI Content Safety services, prompt hardening, and output validation (SRC-53 L292–294).
+- SRC-53 says when safety metrics show concerns, mitigation options include implementing Azure AI Content Safety services, prompt hardening, and output validation (SRC-53 L291–294).
 - SRC-156 does not name the service directly, but it describes the related Foundry guardrail mechanism: content filters classify prompts and responses into severity levels for harm categories (SRC-156 L229–230).
 
 ## Capabilities and components
 
 - Harmful-content protection: block inappropriate inputs and outputs as an extra layer beyond model-level safety (SRC-196 L24).
 - Service integration: Content Understanding integrates Azure AI Content Safety to detect and prevent harmful material during multimodal processing (SRC-264 L36–39).
-- Evaluation-driven mitigation: if safety metrics show concerns, Azure AI Content Safety services are one mitigation option alongside prompt hardening and output validation (SRC-53 L292–294).
+- Evaluation-driven mitigation: if safety metrics show concerns, Azure AI Content Safety services are one mitigation option alongside prompt hardening and output validation (SRC-53 L291–294).
 - **Synthesis:** The corpus connects the service to content filters, but the detailed harm-category and severity model is documented on [[guardrails-and-content-filters]] because the clearest category/severity source describes Foundry guardrails rather than the standalone service (SRC-156 L229–230; SRC-196 L24).
 
 ## How to use it
 
-The corpus does not provide Azure AI Content Safety SDK calls or portal setup steps. It gives usage placement: add it as a protection layer when safety metrics show concerns, and rely on integrations such as Content Understanding where the service is built in (SRC-53 L292–294; SRC-196 L24; SRC-264 L36–39).
+The corpus does not provide Azure AI Content Safety SDK calls or portal setup steps. It gives usage placement: add it as a protection layer when safety metrics show concerns, and rely on integrations such as Content Understanding where the service is built in (SRC-53 L291–294; SRC-196 L24; SRC-264 L36–39).
 
 ## Decision boundaries
 
@@ -50,7 +50,7 @@ The corpus does not provide Azure AI Content Safety SDK calls or portal setup st
 | The clue asks for indirect prompt injection or jailbreak | — | [[prompt-injection-and-jailbreaks]] (SRC-53 L248–250) |
 | The clue asks for extracting content with built-in harmful-content checks | Use this page with [[azure-content-understanding]] (SRC-264 L36–39) | [[azure-content-understanding]] for analyzer behaviour |
 
-**Inference:** In exam wording, a request for "Azure AI Content Safety services" is a service-selection clue, while "configure guardrails" is a Foundry configuration clue (SRC-53 L292–294; SRC-156 L229–230).
+**Inference:** In exam wording, a request for "Azure AI Content Safety services" is a service-selection clue, while "configure guardrails" is a Foundry configuration clue (SRC-53 L291–294; SRC-156 L229–230).
 
 ## Naming and currency
 
@@ -58,7 +58,7 @@ The corpus uses both "Azure AI Content Safety services" and "Azure AI Content Sa
 
 ## Appearances in the corpus
 
-- Model evaluation mitigation: Azure AI Content Safety services are suggested when safety metrics show concerns (SRC-53 L292–294).
+- Model evaluation mitigation: Azure AI Content Safety services are suggested when safety metrics show concerns (SRC-53 L291–294).
 - Model-deployment summary: Azure AI Content Safety services add a protection layer and content filters can block inappropriate input and output (SRC-196 L24).
 - Content Understanding: the service integrates Azure AI Content Safety and filters harmful content including violence, hate speech, and exploitation (SRC-264 L36–39).
 

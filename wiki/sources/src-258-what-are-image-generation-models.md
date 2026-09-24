@@ -44,14 +44,14 @@ ingest_depth: full
 
 ## TL;DR
 
-Microsoft Foundry supports multiple image-capable model families, including OpenAI `gpt-image-1` and Black Forest Labs FLUX models. (SRC-258 L212–214) Image-generation models create graphical data from natural-language input, producing original images rather than retrieving catalogued images. (SRC-258 L216–223)
+Microsoft Foundry supports multiple image-capable model families, including OpenAI `gpt-image-1` and Black Forest Labs FLUX models. (SRC-258 L214–216) Image-generation models create graphical data from natural-language input, producing original images rather than retrieving catalogued images. (SRC-258 L219–223)
 
 ## Key claims
 
-- Microsoft Foundry supports multiple image-generating models, including the OpenAI `gpt-image-1` series and the Black Forest Labs FLUX series. (SRC-258 L212–214)
+- Microsoft Foundry supports multiple image-generating models, including the OpenAI `gpt-image-1` series and the Black Forest Labs FLUX series. (SRC-258 L214–216)
 - The Foundry model catalog can be filtered by inference task to find text-to-image models. (SRC-258 L215)
 - Image-generation models create graphical data from natural-language input. (SRC-258 L216)
-- A prompt such as `A robot eating spaghetti` can produce graphical output. (SRC-258 L218–220)
+- A prompt such as `A robot eating spaghetti` can produce graphical output. (SRC-258 L220–222)
 - Generated images are original and are not retrieved from a curated image catalog. (SRC-258 L221–223)
 
 ## How it works
@@ -67,7 +67,7 @@ Not covered by this source. It identifies model families and the model catalog f
 - **Image-generation model:** a generative AI model that creates graphical data from natural-language input. (SRC-258 L216)
 - **Text to image:** the inference-task filter named for finding image-generation models in the Foundry portal. (SRC-258 L215)
 - **gpt-image-1:** an OpenAI model series named as image-capable in Foundry. (SRC-258 L213)
-- **FLUX:** a Black Forest Labs model series named as image-capable in Foundry. (SRC-258 L214)
+- **FLUX:** a Black Forest Labs model series named as image-capable in Foundry. (SRC-258 L216)
 
 ## Decision boundaries and exam cues
 

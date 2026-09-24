@@ -88,7 +88,7 @@ Not covered by this source.
    - Option 2: Azure Blob Storage, which connects to SharePoint files stored as blobs. (SRC-147 L221)
    - Answer shown in capture: answer not shown in capture. (SRC-147 L232–234)
 3. What is the purpose of scoring profiles in Foundry IQ knowledge bases? (SRC-147 L222–226)
-   - Option 0: To encrypt sensitive fields and protect confidential information during retrieval. (SRC-147 L223)
+   - Option 0: To encrypt sensitive fields and protect confidential information during retrieval. (SRC-147 L224)
    - Option 1: To boost specific fields or attributes so more important results surface first. (SRC-147 L224–225)
    - Option 2: To configure how documents are chunked and embedded for semantic search. (SRC-147 L226)
    - Answer shown in capture: answer not shown in capture. (SRC-147 L232–234)

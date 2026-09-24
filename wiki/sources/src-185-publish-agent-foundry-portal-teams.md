@@ -44,19 +44,19 @@ ingest_depth: full
 
 ## TL;DR
 
-The Foundry portal guides publication by creating an agent application, provisioning Azure resources, and generating a package for Teams and Microsoft 365 Copilot distribution. (SRC-185 L216) Preparation includes testing in the Foundry playground, confirming roles and permissions, registering the Bot Service provider, and collecting visible metadata such as icons, contact details, privacy policy, and terms of use. (SRC-185 L217–239) After publishing, test the package in Teams, handle organization-scope admin approval, reassign Azure permissions to the new published agent identity, and republish when the Foundry agent changes. (SRC-185 L268–299)
+The Foundry portal guides publication by creating an agent application, provisioning Azure resources, and generating a package for Teams and Microsoft 365 Copilot distribution. (SRC-185 L218) Preparation includes testing in the Foundry playground, confirming roles and permissions, registering the Bot Service provider, and collecting visible metadata such as icons, contact details, privacy policy, and terms of use. (SRC-185 L220–239) After publishing, test the package in Teams, handle organization-scope admin approval, reassign Azure permissions to the new published agent identity, and republish when the Foundry agent changes. (SRC-185 L268–299)
 
 ## Key claims
 
-- Portal publishing creates an agent application, provisions required Azure resources, and generates a publishing package. (SRC-185 L216)
+- Portal publishing creates an agent application, provisions required Azure resources, and generates a publishing package. (SRC-185 L218)
 - Before publishing, the source recommends testing varied inputs, checking tools, and verifying responses in the Foundry playground. (SRC-185 L218–221)
 - Required permissions include Azure AI Project Manager on the Foundry project, Azure AI User for published-agent invocation, subscription resource-creation permissions, and Entra app registration permissions. (SRC-185 L222–227)
 - The Microsoft.BotService provider must be registered because publishing creates an Azure Bot Service resource. (SRC-185 L228–230)
 - Metadata includes display name, brief description, PNG icons, organization/contact details, privacy policy URL, and terms of use URL. (SRC-185 L231–238)
 - The warning says not to include secrets, API keys, or sensitive information in metadata fields visible to users. (SRC-185 L239)
 - Publishing uses `Publish`, then `Publish to Teams and Microsoft 365 Copilot`, and creates Azure Bot Service during configuration. (SRC-185 L240–254)
-- Shared scope appears under `Your agents`, is available immediately, and fits testing or small teams. (SRC-185 L255–257)
-- Organization scope appears under `Built by your org`, requires admin approval, and fits production deployments. (SRC-185 L257–258)
+- Shared scope appears under `Your agents`, is available immediately, and fits testing or small teams. (SRC-185 L257–259)
+- Organization scope appears under `Built by your org`, requires admin approval, and fits production deployments. (SRC-185 L259–260)
 - A downloaded package can be uploaded as a custom app in Teams for local testing. (SRC-185 L263–273)
 - Published agents get a distinct identity, so resource access must be reassigned with appropriate RBAC roles. (SRC-185 L281–292)
 
@@ -74,8 +74,8 @@ Not covered by this source.
 
 ## Key terms
 
-- **Shared scope** — the scope where the agent appears under `Your agents`, is available immediately, and fits testing or small teams. (SRC-185 L255–257)
-- **Organization scope** — the scope where the agent appears under `Built by your org`, requires admin approval, and fits production deployment. (SRC-185 L257–258)
+- **Shared scope** — the scope where the agent appears under `Your agents`, is available immediately, and fits testing or small teams. (SRC-185 L257–259)
+- **Organization scope** — the scope where the agent appears under `Built by your org`, requires admin approval, and fits production deployment. (SRC-185 L259–260)
 - **Publishing package** — the package created by `Prepare Agent` that can be downloaded or used in the in-product publishing flow. (SRC-185 L259–267)
 - **Published agent identity** — the new identity whose RBAC permissions must be granted for accessed Azure resources. (SRC-185 L281–292)
 

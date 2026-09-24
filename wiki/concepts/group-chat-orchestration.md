@@ -18,7 +18,7 @@ aliases: ["group chat manager", "GroupChatBuilder", "GroupChatManager", "maker-c
 
 ## Summary
 
-Group chat orchestration models a collaborative conversation among multiple agents and optionally a human participant, with a central chat manager deciding who responds next and when user input is needed. (SRC-242 L218–219)
+Group chat orchestration models a collaborative conversation among multiple agents and optionally a human participant, with a central chat manager deciding who responds next and when user input is needed. (SRC-242 L220)
 
 ## The problem it solves
 
@@ -26,15 +26,15 @@ Some tasks need iterative dialogue rather than a fixed pipeline or a one-way han
 
 ## Mental model
 
-Group chat is a managed meeting. Agents share a single conversation thread, the chat manager controls turns, and a human can guide or intervene. (SRC-242 L218–226)
+Group chat is a managed meeting. Agents share a single conversation thread, the chat manager controls turns, and a human can guide or intervene. (SRC-242 L220–227)
 
 The episode stresses the shared-context point: responses return to the same middle chat, so agents have access to the whole conversation rather than starting separate conversations that lose prior context. (SRC-180 L187–240)
 
 ## What the sources say
 
-SRC-231 defines group chat as coordinating a shared conversation among agents and optionally a human, managed by a chat manager that chooses who speaks next; it is best for brainstorming, collaborative problem solving, and consensus. (SRC-231 L251)
+SRC-231 defines group chat as coordinating a shared conversation among agents and optionally a human, managed by a chat manager that chooses who speaks next; it is best for brainstorming, collaborative problem solving, and consensus. (SRC-231 L253)
 
-SRC-242 says it supports free-flowing ideation, formal role-based workflows, approval steps, and human-in-the-loop setups; agents typically contribute to the conversation rather than directly changing running systems. (SRC-242 L220–222)
+SRC-242 says it supports free-flowing ideation, formal role-based workflows, approval steps, and human-in-the-loop setups; agents typically contribute to the conversation rather than directly changing running systems. (SRC-242 L221–227)
 
 SRC-242 says to avoid it when simple delegation or linear pipelines are enough, speed requirements make discussion overhead impractical, deterministic hierarchy is needed, completion cannot be clearly determined, or many agents make flow hard to manage. (SRC-242 L235–240)
 
@@ -56,9 +56,9 @@ For custom management, extend `GroupChatManager` and override manager methods su
 
 ## Decision boundaries
 
-**Inference:** Group chat versus handoff is decided by shared conversation. Handoff transfers control to one specialist at a time; group chat keeps an auditable shared thread managed by a chat manager. (SRC-243 L221–222; SRC-242 L218–226)
+**Inference:** Group chat versus handoff is decided by shared conversation. Handoff transfers control to one specialist at a time; group chat keeps an auditable shared thread managed by a chat manager. (SRC-243 L221–222; SRC-242 L220–227)
 
-**Inference:** Group chat versus Magentic is decided by planning authority and task shape. Group chat is a managed discussion; Magentic adds a dedicated manager that maintains shared context, tracks progress, builds a task ledger, and adapts a plan for open-ended tasks. (SRC-242 L218–226; SRC-244 L218–221)
+**Inference:** Group chat versus Magentic is decided by planning authority and task shape. Group chat is a managed discussion; Magentic adds a dedicated manager that maintains shared context, tracks progress, builds a task ledger, and adapts a plan for open-ended tasks. (SRC-242 L220–227; SRC-244 L218–221)
 
 
 ## Failure modes and misconceptions
@@ -75,10 +75,10 @@ Group chat can add discussion overhead; the source warns against it for real-tim
 
 ## Connections
 
-- [[multi-agent-orchestration]] — group chat is one supported Agent Framework pattern. (SRC-231 L251)
-- [[handoff-orchestration]] — closest contrast: transfer control instead of shared discussion. (SRC-243 L221–222; SRC-242 L218–226)
+- [[multi-agent-orchestration]] — group chat is one supported Agent Framework pattern. (SRC-231 L253)
+- [[handoff-orchestration]] — closest contrast: transfer control instead of shared discussion. (SRC-243 L221–222; SRC-242 L220–227)
 - [[magentic-orchestration]] — closest contrast: manager-led planning and task ledger. (SRC-244 L218–221)
-- [[human-in-the-loop-approval]] — human input may be requested by the chat manager. (SRC-242 L218–226, L256)
+- [[human-in-the-loop-approval]] — human input may be requested by the chat manager. (SRC-242 L220–227, L256)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-242-group-chat-orchestration]] — source page for this pattern.
 - *Also linked from:* [[a2a-agent-implementation]] · [[agent-framework-workflows]] · [[concurrent-orchestration]] · [[overview]]

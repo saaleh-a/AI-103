@@ -43,21 +43,21 @@ ingest_depth: full
 
 ## TL;DR
 
-Management begins after harms have been mapped, measured, and mitigated and before release. (SRC-152 L216) The source recommends prerelease compliance reviews and operational plans. (SRC-152 L217–225) Responsible operation includes phased delivery, incident response, rollback, harmful-response blocking, misuse blocking, feedback, and privacy-compliant telemetry. (SRC-152 L225–233)
+Management begins after harms have been mapped, measured, and mitigated and before release. (SRC-152 L216) The source recommends prerelease compliance reviews and operational plans. (SRC-152 L218–227) Responsible operation includes phased delivery, incident response, rollback, harmful-response blocking, misuse blocking, feedback, and privacy-compliant telemetry. (SRC-152 L227–233)
 
 ## Key claims
 
 - Before release, teams should identify compliance requirements and provide review opportunities for appropriate teams. (SRC-152 L217–218)
 - Common compliance reviews include legal, privacy, security, and accessibility. (SRC-152 L219–223)
-- Phased delivery releases first to a restricted user group to gather feedback and find problems. (SRC-152 L225)
-- Incident response and rollback plans should be prepared before release. (SRC-152 L226–227)
-- The solution should support immediate blocking of harmful responses and blocking of abusive users, applications, or client IP addresses. (SRC-152 L228–229)
-- Users should be able to report inaccurate, incomplete, harmful, offensive, or otherwise problematic generated content. (SRC-152 L230–231)
-- Telemetry should identify satisfaction, functional gaps, and usability challenges while respecting privacy obligations. (SRC-152 L232–233)
+- Phased delivery releases first to a restricted user group to gather feedback and find problems. (SRC-152 L227)
+- Incident response and rollback plans should be prepared before release. (SRC-152 L228–229)
+- The solution should support immediate blocking of harmful responses and blocking of abusive users, applications, or client IP addresses. (SRC-152 L230–231)
+- Users should be able to report inaccurate, incomplete, harmful, offensive, or otherwise problematic generated content. (SRC-152 L232)
+- Telemetry should identify satisfaction, functional gaps, and usability challenges while respecting privacy obligations. (SRC-152 L233)
 
 ## How it works
 
-This unit shifts from design-time safety to operational readiness. (SRC-152 L216–217) It first puts the system and documentation through compliance review, then requires release mechanics that make problems discoverable, blockable, and reversible. (SRC-152 L217–233)
+This unit shifts from design-time safety to operational readiness. (SRC-152 L218–219) It first puts the system and documentation through compliance review, then requires release mechanics that make problems discoverable, blockable, and reversible. (SRC-152 L218–233)
 
 ## Code and API patterns
 
@@ -65,14 +65,14 @@ Not covered by this source.
 
 ## Key terms
 
-- **Phased delivery plan** — restricted initial release for feedback and issue discovery. (SRC-152 L225)
-- **Incident response plan** — a plan with response-time estimates for unanticipated incidents. (SRC-152 L226)
-- **Rollback plan** — steps to revert the solution after an incident. (SRC-152 L227)
-- **Telemetry** — data for satisfaction, functional gaps, and usability challenges under privacy constraints. (SRC-152 L232–233)
+- **Phased delivery plan** — restricted initial release for feedback and issue discovery. (SRC-152 L227)
+- **Incident response plan** — a plan with response-time estimates for unanticipated incidents. (SRC-152 L228)
+- **Rollback plan** — steps to revert the solution after an incident. (SRC-152 L229)
+- **Telemetry** — data for satisfaction, functional gaps, and usability challenges under privacy constraints. (SRC-152 L233)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** Choose management when a scenario is about prerelease reviews, rollout, incident response, feedback, telemetry, or operations. (SRC-152 L217–233)
+- **Inference:** Choose management when a scenario is about prerelease reviews, rollout, incident response, feedback, telemetry, or operations. (SRC-152 L218–233)
 - **Inference:** Choose mitigation when a scenario is about reducing harms at solution layers before release. (SRC-156 L217–240)
 
 ## Assessment items
@@ -81,7 +81,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- Telemetry is required for operations, but the source constrains it by privacy laws and organizational privacy commitments. (SRC-152 L232–233)
+- Telemetry is required for operations, but the source constrains it by privacy laws and organizational privacy commitments. (SRC-152 L233)
 
 ## Relation to other sources
 

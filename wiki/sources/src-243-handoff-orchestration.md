@@ -43,11 +43,11 @@ ingest_depth: full
 
 ## TL;DR
 
-Handoff orchestration transfers control between agents based on task context or user requests so the best-suited specialist handles each part. (SRC-243 L218–220) It fits dynamic delegation when the next agent is not known upfront, but not fixed orders, simple rules, parallel operations, or loop-prone routing. (SRC-243 L221–234)
+Handoff orchestration transfers control between agents based on task context or user requests so the best-suited specialist handles each part. (SRC-243 L220) It fits dynamic delegation when the next agent is not known upfront, but not fixed orders, simple rules, parallel operations, or loop-prone routing. (SRC-243 L221–234)
 
 ## Key claims
 
-- Handoff orchestration lets agents hand off a conversation to another agent with the right expertise. (SRC-243 L218)
+- Handoff orchestration lets agents hand off a conversation to another agent with the right expertise. (SRC-243 L220)
 - It fits scenarios where the best agent is not known upfront or requirements become clearer during processing. (SRC-243 L221)
 - Unlike parallel patterns, agents work one at a time and fully hand off control. (SRC-243 L221–222)
 - Use it for dynamically emerging expertise needs, multi-domain sequential problems, and clear transfer signals. (SRC-243 L224–228)
@@ -61,13 +61,13 @@ Each agent processes the task, and the workflow decides the next agent from the 
 ## Code and API patterns
 
 - `response_format` configures agents for structured JSON output. (SRC-243 L239–243)
-- Factory functions generate condition checkers for classification values. (SRC-243 L248)
-- `Case` objects define switch-case branches, and a `Default` case handles unexpected scenarios. (SRC-243 L250–251)
+- Factory functions generate condition checkers for classification values. (SRC-243 L247)
+- `Case` objects define switch-case branches, and a `Default` case handles unexpected scenarios. (SRC-243 L249–250)
 - `WorkflowBuilder` connects executors and switch-case edge groups. (SRC-243 L252–254)
 
 ## Key terms
 
-- **Handoff orchestration** — dynamic transfer of control from one agent to another. (SRC-243 L218–222)
+- **Handoff orchestration** — dynamic transfer of control from one agent to another. (SRC-243 L220–222)
 - **Control workflow** — a workflow where agent output determines which agent runs next. (SRC-243 L235–236)
 - **Switch-case routing** — routing based on classification results. (SRC-243 L236, L250–253)
 
@@ -87,15 +87,15 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-231-understand-agent-orchestration]] defines handoff as dynamically transferring control based on context or rules. (SRC-231 L250; SRC-243 L218–256)
+- [[src-231-understand-agent-orchestration]] defines handoff as dynamically transferring control based on context or rules. (SRC-231 L252; SRC-243 L220–256)
 - [[src-245-sequential-orchestration]] contrasts with handoff because sequential orchestration has a known fixed order. (SRC-245 L218–220; SRC-243 L229)
 - [[src-180-orchestrate-multi-agent-solution-microsoft-agent-framework-episode-14]] describes handoff as delegation to a specialist when the path is unknown at the beginning. (SRC-180 L111–186)
 
 ## Connections
 
-- [[handoff-orchestration]] — the page's core pattern. (SRC-243 L218–256)
+- [[handoff-orchestration]] — the page's core pattern. (SRC-243 L220–256)
 - [[agent-framework-workflows]] — implementation uses control workflows and switch-case edges. (SRC-243 L235–254)
-- [[multi-agent-orchestration]] — the pattern routes among specialist agents. (SRC-243 L218–228)
+- [[multi-agent-orchestration]] — the pattern routes among specialist agents. (SRC-243 L220–228)
 - [[orchestration-patterns-compared]] — the source gives use and avoid criteria. (SRC-243 L224–234)
 - *Module units:* [[src-133-introduction-orchestrate-multi-agent-solution-microsoft-agent-framework|1 Introduction]] · [[src-237-understand-microsoft-agent-framework|2 Understand the Microsoft Agent Framework]] · [[src-231-understand-agent-orchestration|3 Understand Agent Orchestration]] · [[src-241-concurrent-orchestration|4 Use Concurrent Orchestration]] · [[src-245-sequential-orchestration|5 Use Sequential Orchestration]] · [[src-242-group-chat-orchestration|6 Use Group Chat Orchestration]] · [[src-244-magentic-orchestration|8 Use Magentic Orchestration]] · [[src-69-exercise-develop-multi-agent-solution|9 Exercise - Develop a multi-agent solution]] · [[src-143-knowledge-check-orchestrate-multi-agent-solution-microsoft-agent-framework|10 Knowledge check]] · [[src-199-summary-orchestrate-multi-agent-solution-microsoft-agent-framework|11 Summary]] · [[src-180-orchestrate-multi-agent-solution-microsoft-agent-framework-episode-14|episode 14]]
 

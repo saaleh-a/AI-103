@@ -68,7 +68,7 @@ SRC-8 says Content Understanding analysis output includes `markdown`, a text rep
 
 ### Evaluation and safety
 
-SRC-53 lists RAG integration as an improvement when evaluation scores are lower than required and responses need grounding in data. (SRC-53 L286–291)
+SRC-53 lists RAG integration as an improvement when evaluation scores are lower than required and responses need grounding in data. (SRC-53 L283–289)
 
 SRC-156 places RAG in the system-message-and-grounding mitigation layer for reducing potential harms by retrieving contextual data from trusted sources and including it in prompts. (SRC-156 L232–237)
 
@@ -107,7 +107,7 @@ The corpus's captured code blocks are mostly placeholders, but it states these i
 - RAG response quality depends on search index quality and chunking/indexing quality. (SRC-19 L231–235)
 - A knowledge base alone is insufficient if agent instructions do not force retrieval, citations and fallback behavior. (SRC-23 L219–233)
 - File search quality depends on document quality, coverage and chunk relevance. (SRC-255 L248–250)
-- **Inference:** RAG does not replace safety systems or evaluation; the corpus positions it as one mitigation/improvement layer among others. (SRC-53 L286–291; SRC-156 L232–237)
+- **Inference:** RAG does not replace safety systems or evaluation; the corpus positions it as one mitigation/improvement layer among others. (SRC-53 L283–292; SRC-156 L232–237)
 
 ## Solution Engineering transfer
 
@@ -126,7 +126,7 @@ The corpus's captured code blocks are mostly placeholders, but it states these i
 - [[embeddings-and-vector-search]] — embeddings and vector search make semantic retrieval possible. (SRC-102 L232–250)
 - [[semantic-ranking]] — Foundry IQ and Azure AI Search sources name semantic relevance and ranking. (SRC-22 L17–20; SRC-102 L246–250)
 - [[azure-content-understanding]] — can produce markdown representations useful for RAG. (SRC-8 L232–237)
-- [[model-and-app-evaluation]] — low evaluation scores can trigger RAG integration as a remediation. (SRC-53 L286–291)
+- [[model-and-app-evaluation]] — low evaluation scores can trigger RAG integration as a remediation. (SRC-53 L283–289)
 - *Also linked from:* [[content-understanding-analyzers]] · [[conversation-state]] · [[fine-tuning]] · [[foundry-sdk]] · [[generative-ai-fundamentals]] · [[knowledge-bases-and-sources]] · [[knowledge-mining]] · [[model-selection]] · [[overview]] · [[prompt-engineering]]
 
 ## Sources
@@ -146,4 +146,3 @@ The corpus's captured code blocks are mostly placeholders, but it states these i
 ## Open questions
 
 The corpus does not provide detailed chunk-size, embedding-model, reranking, or citation-format recipes for production RAG beyond the high-level instructions and service roles cited above. (SRC-19 L231–235; SRC-23 L231–252; SRC-102 L232–250)
-

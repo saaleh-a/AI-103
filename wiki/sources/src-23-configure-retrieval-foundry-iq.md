@@ -57,26 +57,26 @@ The unit warns that well-indexed content still fails if the agent does not know 
 
 ## How it works
 
-The source treats retrieval control as an instruction, test, and monitor loop. (SRC-23 L225–278) Instructions define mandatory knowledge-base use, source-attribution format, and fallback behavior when information is unavailable. (SRC-23 L227–233) Test conversations check whether the agent behaves as configured across query types. (SRC-23 L234–243) Production usage then supplies data for refining instructions, improving knowledge-base content, and adjusting search configurations. (SRC-23 L264–278)
+The source treats retrieval control as an instruction, test, and monitor loop. (SRC-23 L225–278) Instructions define mandatory knowledge-base use, source-attribution format, and fallback behavior when information is unavailable. (SRC-23 L227–233) Test conversations check whether the agent behaves as configured across query types. (SRC-23 L234–243) Production usage then supplies data for refining instructions, improving knowledge-base content, and adjusting search configurations. (SRC-23 L269–278)
 
 ## Code and API patterns
 
-The capture labels several Python examples for basic instructions, effective instructions, test conversations, and specialized agent types, but the actual code text is not visible in the captured content. (SRC-23 L225–263) The implementation pattern the source does expose is conceptual: instructions should define scope, retrieval requirements, citation standards, and edge-case handling. (SRC-23 L257–263)
+The capture labels several Python examples for basic instructions, effective instructions, test conversations, and specialized agent types, but the actual code text is not visible in the captured content. (SRC-23 L225–268) The implementation pattern the source does expose is conceptual: instructions should define scope, retrieval requirements, citation standards, and edge-case handling. (SRC-23 L230–233; SRC-23 L268)
 
 ## Key terms
 
 - **Retrieval behavior** — whether and how an agent uses a knowledge base before answering. (SRC-23 L214–226)
-- **Grounding** — response information comes from the knowledge base rather than training data. (SRC-23 L244–248)
-- **Citation** — factual claims include source references. (SRC-23 L244–249)
+- **Grounding** — response information comes from the knowledge base rather than training data. (SRC-23 L249)
+- **Citation** — factual claims include source references. (SRC-23 L250)
 - **Fallback behavior** — the agent's response when the knowledge base lacks the answer. (SRC-23 L227–233)
 - **Retrieval accuracy** — whether retrieved documents actually contain the answers users need. (SRC-23 L273–277)
 
 ## Decision boundaries and exam cues
 
 - **Inference:** If a scenario says the knowledge base exists but responses are inconsistent or uncited, fix agent instructions and tests rather than only rebuilding the index. (SRC-23 L214–233)
-- **Inference:** For customer-facing support agents, prioritize high accuracy and refusal to provide uncertain information. (SRC-23 L252–255)
-- **Inference:** For internal research assistants, allow synthesis across documents and broader context when that matches the agent purpose. (SRC-23 L256–258)
-- **Inference:** Treat ongoing monitoring as part of retrieval quality, because real users ask questions differently from test scenarios. (SRC-23 L264–278)
+- **Inference:** For customer-facing support agents, prioritize high accuracy and refusal to provide uncertain information. (SRC-23 L255–257)
+- **Inference:** For internal research assistants, allow synthesis across documents and broader context when that matches the agent purpose. (SRC-23 L260–261)
+- **Inference:** Treat ongoing monitoring as part of retrieval quality, because real users ask questions differently from test scenarios. (SRC-23 L269–278)
 
 ## Assessment items
 
@@ -84,8 +84,8 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source references Python snippets, but the raw capture only shows labels such as `Python` and `Copy`, so the source page cannot recover exact SDK code. (SRC-23 L225–263)
-- The source gives monitoring categories but does not specify telemetry tools, metric schemas, or thresholds for production. (SRC-23 L264–278)
+- The source references Python snippets, but the raw capture only shows labels such as `Python` and `Copy`, so the source page cannot recover exact SDK code. (SRC-23 L225–268)
+- The source gives monitoring categories but does not specify telemetry tools, metric schemas, or thresholds for production. (SRC-23 L269–278)
 
 ## Relation to other sources
 
@@ -98,13 +98,13 @@ Not covered by this source.
 - [[foundry-iq]] — the platform whose retrieval behavior is configured. (SRC-23 L214–218)
 - [[prompt-engineering]] — instructions shape when the agent retrieves, cites, and falls back. (SRC-23 L225–233)
 - [[agent-testing-and-evaluation]] — the source requires systematic testing of retrieval behavior. (SRC-23 L234–251)
-- [[observability-and-tracing]] — production monitoring tracks usage and retrieval quality signals. (SRC-23 L264–278)
+- [[observability-and-tracing]] — production monitoring tracks usage and retrieval quality signals. (SRC-23 L269–278)
 - [[retrieval-augmented-generation]] — retrieval instructions determine whether the agent stays grounded in the retrieved context. (SRC-23 L244–251)
 - *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-85-explore-foundry-iq|3 Explore Foundry IQ]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions
 
-- The unit does not show the exact Python code, data structures, or API calls used to configure the example agents. (SRC-23 L225–263)
+- The unit does not show the exact Python code, data structures, or API calls used to configure the example agents. (SRC-23 L225–268)
 
 ## Sources
 

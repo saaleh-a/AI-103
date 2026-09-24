@@ -18,11 +18,11 @@ aliases: ["MCP", "Model Context Protocol", "MCP host"]
 
 ## Summary
 
-The Model Context Protocol is an open protocol that lets AI agents interact with external tools, data sources and services through a host, client and server architecture (SRC-235 L217–223; SRC-236 L217–223). Its central value in the corpus is dynamic tool discovery: an agent can query an MCP server at runtime, receive tool descriptions and call the right tool without hardcoding every integration (SRC-233 L217–239).
+The Model Context Protocol is an open protocol that lets AI agents interact with external tools, data sources and services through a host, client and server architecture (SRC-235 L217–222; SRC-236 L217–223). Its central value in the corpus is dynamic tool discovery: an agent can query an MCP server at runtime, receive tool descriptions and call the right tool without hardcoding every integration (SRC-233 L217–239).
 
 ## What it is
 
-MCP defines how an AI host, an MCP client and an MCP server communicate. The host is the application that runs the agent, the client manages server connections and communication, and the server exposes tools, resources and prompts that an agent can discover and call (SRC-235 L217–223; SRC-236 L217–223). Work IQ is also built on MCP and acts as an MCP server for Microsoft 365 data (SRC-2 L229–239).
+MCP defines how an AI host, an MCP client and an MCP server communicate. The host is the application that runs the agent, the client manages server connections and communication, and the server exposes tools, resources and prompts that an agent can discover and call (SRC-235 L217–222; SRC-236 L217–223). Work IQ is also built on MCP and acts as an MCP server for Microsoft 365 data (SRC-2 L229–239).
 
 ## What the sources say
 
@@ -35,10 +35,10 @@ MCP defines how an AI host, an MCP client and an MCP server communicate. The hos
 
 ## Capabilities and components
 
-- Host: the app running the agent, such as Microsoft Foundry or a custom app (SRC-235 L219–220).
-- Client: the component inside the host that manages MCP server connections and communication (SRC-235 L220–221).
-- Server: a program exposing tools, resources and prompts for discovery and calls (SRC-235 L221–223; SRC-2 L229–239).
-- Tool catalog: the list of available tools and descriptions returned to the agent when it connects (SRC-235 L222–224; SRC-109 L80–150).
+- Host: the app running the agent, such as Microsoft Foundry or a custom app (SRC-235 L218).
+- Client: the component inside the host that manages MCP server connections and communication (SRC-235 L219).
+- Server: a program exposing tools, resources and prompts for discovery and calls (SRC-235 L220; SRC-2 L229–239).
+- Tool catalog: the list of available tools and descriptions returned to the agent when it connects (SRC-235 L221; SRC-109 L80–150).
 - Runtime calls: the client can list tools and invoke tool calls; in the local pattern this is represented by `session.list_tools()` and `session.call_tool()` (SRC-108 L221–233; SRC-109 L648–655).
 
 ## How to use it
@@ -51,7 +51,7 @@ There are two corpus patterns (SRC-108 L217–233; SRC-240 L217–239).
 ## Decision boundaries
 
 - MCP vs function calling: function calling defines tools directly in the application and leaves execution to the application; MCP moves tool definitions to a server that the agent/client can discover dynamically (SRC-108 L217–235; SRC-256 L219–263 on [[function-calling]]).
-- MCP vs A2A: MCP is for agent-to-tool/data/service access; A2A is for agent-to-agent communication and collaboration (SRC-235 L217–223; SRC-37 L217–224).
+- MCP vs A2A: MCP is for agent-to-tool/data/service access; A2A is for agent-to-agent communication and collaboration (SRC-235 L217–222; SRC-37 L217–224).
 - MCP vs a fixed API integration: MCP is strongest when tools change or many teams own tool servers; dynamic discovery allows tools to be added, updated or removed centrally without modifying agent code (SRC-233 L225–239).
 
 ## Naming and currency

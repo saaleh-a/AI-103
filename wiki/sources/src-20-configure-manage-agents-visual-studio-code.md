@@ -52,9 +52,9 @@ This unit applies to declarative prompt-based agents and shows that VS Code conf
 - Agent Designer configures core properties that define agent behavior and performance. (SRC-20 L223–224)
 - Essential properties include agent name, model selection, description, system instructions, and agent ID. (SRC-20 L225–232)
 - Temperature controls response creativity and randomness. (SRC-20 L233–237)
-- Top P controls diversity by limiting vocabulary choices. (SRC-20 L237–239)
-- Model settings remain synchronized across Designer and YAML views. (SRC-20 L239–240)
-- YAML contains metadata, model configuration, instructions, and tools sections. (SRC-20 L241–248)
+- Top P controls diversity by limiting vocabulary choices. (SRC-20 L235)
+- Model settings remain synchronized across Designer and YAML views. (SRC-20 L236)
+- YAML contains metadata, model configuration, instructions, and tools sections. (SRC-20 L243)
 - YAML editing supports version control, bulk updates, templates, code review, and automation. (SRC-20 L249–256)
 - Best practices include committing YAML, descriptive names and tags, documenting complex instructions, testing after every change, starting simple, and focused instructions. (SRC-20 L257–260)
 
@@ -64,14 +64,14 @@ VS Code provides two synchronized views of the same declarative agent: a visual 
 
 ## Code and API patterns
 
-The source says a complete YAML example is provided, but the capture contains only `YAML` and `Copy` markers and not the snippet. (SRC-20 L241–246) The source still describes the YAML sections as metadata, model configuration, instructions, and tools. (SRC-20 L247–248)
+The source says a complete YAML example is provided, but the capture contains only `YAML` and `Copy` markers and not the snippet. (SRC-20 L237–242) The source still describes the YAML sections as metadata, model configuration, instructions, and tools. (SRC-20 L243)
 
 ## Key terms
 
 - **System instructions** — the configuration that defines agent behavior, personality, response style, and role. (SRC-20 L230–231)
 - **Agent ID** — an extension-generated unique identifier used when calling the agent through APIs. (SRC-20 L231–232)
 - **Temperature** — a parameter controlling creativity and randomness. (SRC-20 L233–237)
-- **Top P** — a parameter controlling vocabulary diversity during generation. (SRC-20 L237–239)
+- **Top P** — a parameter controlling vocabulary diversity during generation. (SRC-20 L235)
 
 ## Decision boundaries and exam cues
 
@@ -85,7 +85,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The captured YAML example is incomplete, so exact schema keys must come from another source or current documentation before implementation. (SRC-20 L241–248)
+- The captured YAML example is incomplete, so exact schema keys must come from another source or current documentation before implementation. (SRC-20 L237–243)
 - **Stale-risk:** Parameter ranges and defaults may need rechecking against current model behavior. (SRC-20 L233–239)
 
 ## Relation to other sources

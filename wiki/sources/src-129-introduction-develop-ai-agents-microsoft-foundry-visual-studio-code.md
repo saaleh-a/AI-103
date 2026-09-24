@@ -49,8 +49,8 @@ Microsoft Foundry Agent Service is introduced as a way to simplify building secu
 ## Key claims
 
 - Microsoft Foundry Agent Service simplifies complex agent systems while maintaining enterprise-grade security. (SRC-129 L218–220)
-- The service is a fully managed platform for building, deploying, and scaling AI agents without managing underlying compute and storage resources. (SRC-129 L220)
-- The module teaches development with both the Foundry portal and the Microsoft Foundry extension for Visual Studio Code. (SRC-129 L221–222)
+- The service is a fully managed platform for building, deploying, and scaling AI agents without managing underlying compute and storage resources. (SRC-129 L219)
+- The module teaches development with both the Foundry portal and the Microsoft Foundry extension for Visual Studio Code. (SRC-129 L220)
 - The objectives include describing AI agents, explaining service features, configuring the VS Code extension, building agents, adding tools and functions, testing agents, and deploying/integrating them. (SRC-129 L223–231)
 - The prerequisites are Azure and Azure portal familiarity, generative AI understanding, and basic Visual Studio Code familiarity. (SRC-129 L232–234)
 
@@ -64,8 +64,8 @@ Not covered by this source. (SRC-129 L221–231)
 
 ## Key terms
 
-- **Microsoft Foundry Agent Service** — a fully managed platform for building, deploying, and scaling AI agents without managing compute and storage resources. (SRC-129 L220)
-- **Microsoft Foundry extension for Visual Studio Code** — the VS Code setup target in the module objectives. (SRC-129 L221–226)
+- **Microsoft Foundry Agent Service** — a fully managed platform for building, deploying, and scaling AI agents without managing compute and storage resources. (SRC-129 L219)
+- **Microsoft Foundry extension for Visual Studio Code** — the VS Code setup target in the module objectives. (SRC-129 L220–226)
 - **Tools and functions** — the named way to extend agent capabilities in the module objectives. (SRC-129 L228)
 
 ## Decision boundaries and exam cues

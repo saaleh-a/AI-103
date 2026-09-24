@@ -43,14 +43,14 @@ ingest_depth: full
 
 ## TL;DR
 
-After selection, a model must be deployed so applications can access it through an endpoint; Foundry offers deployment types that trade off data residency, throughput, billing, and hosting control. (SRC-39 L213–225)
+After selection, a model must be deployed so applications can access it through an endpoint; Foundry offers deployment types that trade off data residency, throughput, billing, and hosting control. (SRC-39 L215–226)
 
 ## Key claims
 
-- Foundry deployment makes a selected model accessible through endpoints that applications can use. (SRC-39 L213)
-- Deployment types include Global Standard, Global Provisioned, Global Batch, Data Zone Standard, Data Zone Provisioned, Data Zone Batch, Standard, Regional Provisioned, and Developer. (SRC-39 L214–225)
-- Global Standard is recommended whenever possible for Foundry resources because it provides maximum capabilities. (SRC-39 L226–228)
-- Deployment configuration includes deployment name and deployment type; managed compute also requires VM SKU and instance count. (SRC-39 L235–246)
+- Foundry deployment makes a selected model accessible through endpoints that applications can use. (SRC-39 L215)
+- Deployment types include Global Standard, Global Provisioned, Global Batch, Data Zone Standard, Data Zone Provisioned, Data Zone Batch, Standard, Regional Provisioned, and Developer. (SRC-39 L216–226)
+- Global Standard is recommended whenever possible for Foundry resources because it provides maximum capabilities. (SRC-39 L227)
+- Deployment configuration includes deployment name and deployment type; managed compute also requires VM SKU and instance count. (SRC-39 L235–240)
 - After deployment, the Build > Models area shows deployment configuration/status, endpoint URL, authentication keys or tokens, monitoring/usage metrics, and settings/delete options. (SRC-39 L247–254)
 - The playground lets a learner test a deployed model immediately, adjust system messages and generation parameters, and view code samples. (SRC-39 L255–264)
 - Applications need the endpoint URL, authentication key or Entra ID token, and deployment name. (SRC-39 L265–270)
@@ -67,18 +67,18 @@ The source does not show code, but it identifies the parameters an application u
 
 ## Key terms
 
-- Deployment name — the name used by code in the model parameter to route inference to the deployment. (SRC-39 L239)
-- Global Standard — a pay-per-token deployment that can use any Azure region and provides the highest quota for general workloads. (SRC-39 L215)
-- Provisioned throughput units — reserved throughput used by provisioned deployments for predictable high-throughput. (SRC-39 L216; SRC-39 L219; SRC-39 L223)
-- Data Zone deployment — a deployment option that keeps data within a specific data zone. (SRC-39 L218–220)
-- Managed compute deployment — a deployment that requires VM SKU and instance count. (SRC-39 L243–245)
+- Deployment name — the name used by code in the model parameter to route inference to the deployment. (SRC-39 L236)
+- Global Standard — a pay-per-token deployment that can use any Azure region and provides the highest quota for general workloads. (SRC-39 L218)
+- Provisioned throughput units — reserved throughput used by provisioned deployments for predictable high-throughput. (SRC-39 L219; SRC-39 L222; SRC-39 L225)
+- Data Zone deployment — a deployment option that keeps data within a specific data zone. (SRC-39 L221–223)
+- Managed compute deployment — a deployment that requires VM SKU and instance count. (SRC-39 L238–240)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** Choose Global Standard for general use and largest quota when no stricter residency or provisioned-throughput requirement is stated. (SRC-39 L215; SRC-39 L226–228)
-- **Inference:** Choose Data Zone options when the scenario requires data to stay within a broad zone such as EU or US. (SRC-39 L218–220)
-- **Inference:** Choose regional Standard or Regional Provisioned when the scenario requires single-region data residency or reserved regional throughput. (SRC-39 L222–223)
-- **Inference:** Choose batch deployment when the work is large and asynchronous rather than interactive. (SRC-39 L217; SRC-39 L221)
+- **Inference:** Choose Global Standard for general use and largest quota when no stricter residency or provisioned-throughput requirement is stated. (SRC-39 L218; SRC-39 L227)
+- **Inference:** Choose Data Zone options when the scenario requires data to stay within a broad zone such as EU or US. (SRC-39 L221–223)
+- **Inference:** Choose regional Standard or Regional Provisioned when the scenario requires single-region data residency or reserved regional throughput. (SRC-39 L224–225)
+- **Inference:** Choose batch deployment when the work is large and asynchronous rather than interactive. (SRC-39 L220; SRC-39 L223)
 - **Inference:** Use Entra ID authentication for production scenarios because the source explicitly recommends it. (SRC-39 L267–268)
 
 ## Assessment items
@@ -87,29 +87,29 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- **Stale-risk:** Deployment types, Marketplace terms, VM SKUs, quotas, and portal navigation can change. (SRC-39 L214–246)
-- The source contains the phrase Developer Developer deployments, but its meaning is fine-tuned model evaluation only. (SRC-39 L224)
+- **Stale-risk:** Deployment types, Marketplace terms, VM SKUs, quotas, and portal navigation can change. (SRC-39 L216–240)
+- The source contains the phrase Developer Developer deployments, but its meaning is fine-tuned model evaluation only. (SRC-39 L226)
 
 ## Relation to other sources
 
-- [[src-188-select-models-benchmarks]] precedes deployment by comparing models before making them consumable. (SRC-188 L213–216; SRC-39 L213)
-- [[src-53-evaluate-model-performance]] follows deployment by evaluating whether the deployed model meets requirements. (SRC-39 L213; SRC-53 L213–216)
-- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks which deployment type is general-use with largest quota. (SRC-39 L215; SRC-145 L218–222)
-- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] demonstrates Global Standard deployment and playground comparison. (SRC-39 L214–246; SRC-189 L184–309; SRC-189 L661–760)
+- [[src-188-select-models-benchmarks]] precedes deployment by comparing models before making them consumable. (SRC-188 L215–219; SRC-39 L215)
+- [[src-53-evaluate-model-performance]] follows deployment by evaluating whether the deployed model meets requirements. (SRC-39 L215; SRC-53 L213–216)
+- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks which deployment type is general-use with largest quota. (SRC-39 L218; SRC-145 L218–222)
+- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] demonstrates Global Standard deployment and playground comparison. (SRC-39 L216–240; SRC-189 L184–309; SRC-189 L661–760)
 
 ## Connections
 
-- [[model-deployment-types]] — deployment options are the source's core teaching point. (SRC-39 L214–225)
+- [[model-deployment-types]] — deployment options are the source's core teaching point. (SRC-39 L216–226)
 - [[endpoints-and-sdk-choice]] — applications consume endpoints with endpoint URL, auth, and deployment name. (SRC-39 L265–270)
 - [[keyless-authentication]] — Entra ID is recommended for production authentication. (SRC-39 L267–268)
 - [[model-playgrounds]] — deployed models can be tested without code. (SRC-39 L255–264)
-- [[quotas-rate-limits-and-cost]] — deployment type affects quota, billing, and throughput. (SRC-39 L214–225)
-- [[deployment-options-compared]] — this source provides the model-side deployment comparison. (SRC-39 L214–225)
+- [[quotas-rate-limits-and-cost]] — deployment type affects quota, billing, and throughput. (SRC-39 L216–226)
+- [[deployment-options-compared]] — this source provides the model-side deployment comparison. (SRC-39 L216–226)
 - *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models|7 Knowledge check]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 
-- The source does not explain exact quota numbers, pricing, or how the portal selects a deployment type automatically. (SRC-39 L226–239)
+- The source does not explain exact quota numbers, pricing, or how the portal selects a deployment type automatically. (SRC-39 L227–237)
 
 ## Sources
 

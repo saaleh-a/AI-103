@@ -22,7 +22,7 @@ An AI agent is a software service that uses generative AI to understand context,
 
 ## The problem it solves
 
-Traditional applications usually follow predetermined rules; the corpus contrasts that with agents that can understand context, make decisions, and take actions toward a goal (SRC-230 L220). Simple generative chat can answer or draft, but business workflows often need retrieval, API calls, approvals, scheduling, code execution, or handoff to a specialist component (SRC-230 L222–241; SRC-91 L218–230).
+Traditional applications usually follow predetermined rules; the corpus contrasts that with agents that can understand context, make decisions, and take actions toward a goal (SRC-230 L220). Simple generative chat can answer or draft, but business workflows often need retrieval, API calls, approvals, scheduling, code execution, or handoff to a specialist component (SRC-230 L222–241; SRC-91 L220–230).
 
 ## Mental model
 
@@ -41,11 +41,11 @@ In Microsoft Foundry Agent Service, an agent can be configured with instructions
 
 ## Code and configuration
 
-Agents are usually configured by naming the agent, choosing a deployed model, writing instructions, and adding tools (SRC-14 L225–244). Tool definitions may be built-in, custom functions, Azure Functions, OpenAPI specifications, or MCP servers, and the agent decides when to call them from the user request and tool descriptions (SRC-91 L218–230; SRC-104 L219–249).
+Agents are usually configured by naming the agent, choosing a deployed model, writing instructions, and adding tools (SRC-14 L225–244). Tool definitions may be built-in, custom functions, Azure Functions, OpenAPI specifications, or MCP servers, and the agent decides when to call them from the user request and tool descriptions (SRC-91 L220–230; SRC-104 L219–249).
 
 ## Decision boundaries
 
-- Agent: complete tasks with model reasoning, tools, and state (SRC-230 L220; SRC-91 L218–230).
+- Agent: complete tasks with model reasoning, tools, and state (SRC-230 L220; SRC-91 L220–230).
 - Plain chat app: **Inference:** generate responses from a prompt or message history when no external action is required.
 - Deciding detail: **Inference:** choose an agent when the solution needs actions, tool use, persistent task context, or autonomous/semiautonomous workflow (SRC-230 L258–276).
 - Exam cue: **Inference:** words like automate, schedule, retrieve from tools, approve, publish, or integrate with systems point toward an agent; words like summarize, draft, classify, or answer may only require a chat app.
@@ -86,4 +86,3 @@ Agents are usually configured by naming the agent, choosing a deployed model, wr
 ## Open questions
 
 - The corpus names security risks for agents, but the captured table under “Key security risks” is collapsed and does not expose the full list (SRC-230 L242–257).
-

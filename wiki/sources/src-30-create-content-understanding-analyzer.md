@@ -53,13 +53,13 @@ Content Understanding solutions center on analyzers trained to extract specific 
 - The schema can be based on a content sample and analyzer template. (SRC-30 L216)
 - Analyzer templates help developers create analyzers quickly. (SRC-30 L220)
 - Because Content Understanding has generative AI capabilities, minimal training data can define a schema by example. (SRC-30 L220)
-- The service can often identify data values in sample content that map to schema elements automatically. (SRC-30 L221)
+- The service can often identify data values in sample content that map to schema elements automatically. (SRC-30 L222)
 - Developers can explicitly label fields in documents to improve analyzer performance. (SRC-30 L221)
 - Content Understanding Studio provides a visual interface to create projects, define schemas, and build and test analyzers. (SRC-30 L222–223)
 - Custom analyzer creation and testing should use Content Understanding Studio rather than only the limited prebuilt models available in Microsoft Foundry portal. (SRC-30 L225–226)
-- Creating a Content Understanding project provisions supporting Azure resources, including storage and a key vault for credentials and keys. (SRC-30 L227)
-- Schema templates and field types depend on the content type of the file used to define the schema. (SRC-30 L233)
-- Analyzer testing returns extracted field values and the JSON output that client applications receive. (SRC-30 L237–238)
+- Creating a Content Understanding project provisions supporting Azure resources, including storage and a key vault for credentials and keys. (SRC-30 L228)
+- Schema templates and field types depend on the content type of the file used to define the schema. (SRC-30 L234)
+- Analyzer testing returns extracted field values and the JSON output that client applications receive. (SRC-30 L240)
 - Building an analyzer makes it accessible to client applications through the Microsoft Foundry resource endpoint. (SRC-30 L239–241)
 
 ## How it works
@@ -89,7 +89,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- **Stale-risk:** The source says Content Understanding schemas can only be created in supported Azure locations, so region support must be checked before implementation. (SRC-30 L228–229)
+- **Stale-risk:** The source says Content Understanding schemas can only be created in supported Azure locations, so region support must be checked before implementation. (SRC-30 L230)
 - The source distinguishes the Microsoft Foundry portal, where only certain prebuilt models are available, from Content Understanding Studio for custom analyzer creation and testing. (SRC-30 L225–226)
 - Templates and field types vary by content type, so a schema pattern from one modality may not transfer unchanged to another. (SRC-30 L233–236)
 

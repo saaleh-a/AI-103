@@ -74,7 +74,7 @@ Not covered by this source.
 ## Decision boundaries and exam cues
 
 - **Inference:** The most source-aligned answer to question 1 is `Azure Bot Service`, because earlier units state the portal creates Bot Service for Teams publishing. (SRC-149 L216–220; SRC-185 L228–230)
-- **Inference:** The most source-aligned answer to question 2 is organization scope requiring admin approval before tenant-wide availability. (SRC-149 L221–225; SRC-185 L255–258)
+- **Inference:** The most source-aligned answer to question 2 is organization scope requiring admin approval before tenant-wide availability. (SRC-149 L221–225; SRC-185 L257–260)
 - **Inference:** The most source-aligned answer to question 3 is that the published agent gets a new identity and needs permissions reassigned. (SRC-149 L226–231; SRC-185 L281–292)
 - **Inference:** The most source-aligned answer to question 4 is that Work IQ is a CLI and MCP server connecting agents to Microsoft 365 data. (SRC-149 L232–236; SRC-2 L219–239)
 - **Inference:** The most source-aligned answer to question 5 is to use Agents Toolkit for custom SSO, middleware, or multi-environment deployment. (SRC-149 L237–244; SRC-5 L222–227)

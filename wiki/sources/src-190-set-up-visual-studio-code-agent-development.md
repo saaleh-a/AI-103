@@ -67,7 +67,7 @@ Not covered by this source. (SRC-190 L218–268)
 
 ## Key terms
 
-- **Resources** — the extension area for deployed models, agents, connections, and vector stores. (SRC-190 L222; SRC-190 L242–243)
+- **Resources** — the extension area for deployed models, agents, connections, and vector stores. (SRC-190 L223; SRC-190 L242–243)
 - **Model deployments** — required deployed AI models that become available in agent configuration dropdowns. (SRC-190 L245–257)
 - **Capacity settings** — deployment settings configured for throughput based on need. (SRC-190 L252–255)
 - **Archive unused agents** — an organization action for keeping the workspace manageable. (SRC-190 L264–267)

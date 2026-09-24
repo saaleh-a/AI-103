@@ -33,7 +33,7 @@ The extension connects VS Code to a Microsoft Foundry project and exposes resour
 
 ## Capabilities and components
 
-The Resources section includes model deployments, declarative agents, hosted agents, connections, and vector stores (SRC-84 L239–246; SRC-190 L220–248). The Tools section includes model catalog access, model playground, agent playgrounds, local visualizer, and deployed hosted-agent support (SRC-84 L247–252; SRC-190 L239–248). Agent development features include a visual Agent Designer, direct YAML editing, real-time YAML validation, testing in integrated playgrounds, and generated integration code (SRC-20 L218–269; SRC-84 L253–257).
+The Resources section includes model deployments, declarative agents, hosted agents, connections, and vector stores (SRC-84 L235–240; SRC-190 L220–248). The Tools section includes model catalog access, model playground, agent playgrounds, local visualizer, and deployed hosted-agent support (SRC-84 L241–246; SRC-190 L239–248). Agent development features include a visual Agent Designer, direct YAML editing, real-time YAML validation, testing in integrated playgrounds, and generated integration code (SRC-20 L218–269; SRC-84 L248–256).
 
 ## How to use it
 
@@ -72,4 +72,3 @@ The extension appears in the general developer-tools unit as part of the Foundry
 - SRC-51 — [[src-51-developer-tools-sdks]] — general Foundry Toolkit extension capabilities.
 - SRC-84 — [[src-84-explore-development-approaches]] — portal vs VS Code development approach.
 - SRC-190 — [[src-190-set-up-visual-studio-code-agent-development]] — installation, Azure connection, model deployment, and agent management.
-

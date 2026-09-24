@@ -55,7 +55,7 @@ aliases: ["master synthesis", "whole architecture"]
 
 ### 7. Evaluation, monitoring, and operations layer
 
-**Synthesis:** Evaluation starts before and after deployment: benchmarks compare candidate models, app/model evaluators inspect response quality and safety, and low scores can trigger prompt changes, RAG, fine-tuning, or other improvements (SRC-188 L215–219; SRC-53 L215–291). Operations also include quota, rate-limit, cost, drift, safety events, grounding quality, ingestion quality, index health, relevance, traces, token analytics, safety signals, and latency breakdowns in the official objectives (SRC-191 L131–133; SRC-191 L154; SRC-191 L158). **Inference:** Production readiness is the ability to prove the system works, explain when it fails, and change the right layer without overcorrecting another.
+**Synthesis:** Evaluation starts before and after deployment: benchmarks compare candidate models, app/model evaluators inspect response quality and safety, and low scores can trigger prompt changes, RAG, fine-tuning, or other improvements (SRC-188 L215–219; SRC-53 L215–291). Operations also include quota, rate-limit, cost, drift, safety events, grounding quality, ingestion quality, index health, relevance, traces, token analytics, safety signals, and latency breakdowns in the official objectives (SRC-191 L131–133; SRC-191 L158). **Inference:** Production readiness is the ability to prove the system works, explain when it fails, and change the right layer without overcorrecting another.
 
 ## Recurring architectural patterns
 

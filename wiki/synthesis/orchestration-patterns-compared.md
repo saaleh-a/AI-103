@@ -36,21 +36,21 @@ aliases: []
 | Building blocks | Invoke agent, Flow, Data transformation, Basic chat, and End nodes; variables, conditions, loops, and Power Fx. (SRC-36 L224–233; SRC-118 L222–226) | Executors, direct/conditional/switch/fan-out/fan-in edges, events, checkpointing, and pattern builders. (SRC-231 L229–264) |
 | Persistence and maintenance | Saves create immutable versions; notes and YAML support maintainability. (SRC-151 L220–233) | Workflow state can be checkpointed, but the corpus does not show checkpoint API details. (SRC-231 L229–232) |
 | Code interaction | Application code invokes a saved workflow by name and streams workflow events. (SRC-247 L12–27) | Application code constructs and runs the workflow itself. (SRC-231 L254–264; SRC-245 L234–242) |
-| **Inference:** exam cue | Visual designer, YAML, nodes, variables, Power Fx, saved workflow name. (SRC-36 L220–236; SRC-247 L12–16) | `SequentialBuilder`, `ConcurrentBuilder`, `GroupChatBuilder`, `WorkflowBuilder`, `MagenticBuilder`, executors, edges, events. (SRC-241 L237–247; SRC-242 L245–261; SRC-243 L235–254; SRC-244 L237–244; SRC-245 L234–242) |
+| **Inference:** exam cue | Visual designer, YAML, nodes, variables, Power Fx, saved workflow name. (SRC-36 L220–236; SRC-247 L12–16) | `SequentialBuilder`, `ConcurrentBuilder`, `GroupChatBuilder`, `WorkflowBuilder`, `MagenticBuilder`, executors, edges, events. (SRC-241 L237–247; SRC-242 L247–261; SRC-243 L235–254; SRC-244 L237–244; SRC-245 L234–242) |
 
 ### Pattern decision table
 
 | **Synthesis:** Pattern | Use when | Avoid when | Exam cue | Wiki link |
 |---|---|---|---|---|
-| Sequential | Ordered dependent stages where each output becomes the next input. (SRC-245 L218–227) | Stages can run independently, one agent can do the task, or dynamic routing/iteration is required. (SRC-245 L228–233) | Fixed pipeline, progressive refinement, draft-review-polish. (SRC-231 L249; SRC-245 L222–227) | [[sequential-orchestration]] |
-| Concurrent | Independent agents can work on the same task in parallel and results can be gathered. (SRC-241 L218–231) | Agents must build on each other, strict sequence is required, quota/conflict/merge issues dominate. (SRC-241 L232–236) | Parallel analysis, ensemble, voting, speed-sensitive independent work. (SRC-231 L248; SRC-241 L225–231) | [[concurrent-orchestration]] |
-| Handoff | The right specialist or order emerges during processing, with one active agent at a time. (SRC-243 L218–228) | The order is fixed, operations must run simultaneously, or handoff loops are hard to prevent. (SRC-243 L229–234) | Dynamic transfer based on context/rules; expert routing; escalation. (SRC-231 L250; SRC-243 L218–228) | [[handoff-orchestration]] |
-| Group chat | Agents and optionally a human collaborate in one shared conversation managed by a chat manager. (SRC-242 L218–234) | Simple delegation or a linear pipeline is enough, speed matters more than discussion, or completion cannot be determined. (SRC-242 L235–240) | Brainstorming, debate, consensus, maker-checker, human-in-the-loop chat manager. (SRC-231 L251; SRC-242 L223–261) | [[group-chat-orchestration]] |
+| Sequential | Ordered dependent stages where each output becomes the next input. (SRC-245 L220–228) | Stages can run independently, one agent can do the task, or dynamic routing/iteration is required. (SRC-245 L230–234) | Fixed pipeline, progressive refinement, draft-review-polish. (SRC-231 L251; SRC-245 L224–227) | [[sequential-orchestration]] |
+| Concurrent | Independent agents can work on the same task in parallel and results can be gathered. (SRC-241 L218–231) | Agents must build on each other, strict sequence is required, quota/conflict/merge issues dominate. (SRC-241 L232–236) | Parallel analysis, ensemble, voting, speed-sensitive independent work. (SRC-231 L250; SRC-241 L225–231) | [[concurrent-orchestration]] |
+| Handoff | The right specialist or order emerges during processing, with one active agent at a time. (SRC-243 L218–228) | The order is fixed, operations must run simultaneously, or handoff loops are hard to prevent. (SRC-243 L229–234) | Dynamic transfer based on context/rules; expert routing; escalation. (SRC-231 L252; SRC-243 L218–228) | [[handoff-orchestration]] |
+| Group chat | Agents and optionally a human collaborate in one shared conversation managed by a chat manager. (SRC-242 L220–221) | Simple delegation or a linear pipeline is enough, speed matters more than discussion, or completion cannot be determined. (SRC-242 L235–240) | Brainstorming, debate, consensus, maker-checker, human-in-the-loop chat manager. (SRC-231 L253; SRC-242 L223–261) | [[group-chat-orchestration]] |
 | Magentic | Complex open-ended work needs a manager that plans, delegates, adapts, and tracks a task ledger. (SRC-244 L218–230) | The route is fixed/deterministic, the task is simple, speed is the priority, or stalls/loops are likely. (SRC-244 L231–236) | Manager-led planning, evolving path, task ledger, adaptive delegation. (SRC-231 L252; SRC-244 L218–244) | [[magentic-orchestration]] |
 
 ### Near-miss scenario contrasts
 
-1. **Inference:** If a customer says, *summarize, then classify, then produce an action*, choose sequential because each step depends on the previous output; if the same customer says, *get three independent specialist opinions quickly*, choose concurrent because independence and speed are decisive. (SRC-245 L218–227; SRC-241 L225–231)
+1. **Inference:** If a customer says, *summarize, then classify, then produce an action*, choose sequential because each step depends on the previous output; if the same customer says, *get three independent specialist opinions quickly*, choose concurrent because independence and speed are decisive. (SRC-245 L220–228; SRC-241 L225–231)
 
 2. **Inference:** If a support case starts general and then routes to billing after the user's details emerge, choose handoff because the specialist is not known upfront; if the route is always triage → diagnosis → response, choose sequential because the order is predetermined. (SRC-243 L221–228; SRC-245 L218–220)
 
@@ -77,7 +77,7 @@ aliases: []
 
 ## Implications for the exam and for practice
 
-**Inference:** For exam reasoning, identify the one detail that changes the answer: fixed order, independent parallelism, dynamic expert transfer, shared conversation, or adaptive manager planning. (SRC-231 L248–252; SRC-241 L225–236; SRC-242 L223–240; SRC-243 L224–234; SRC-244 L224–236; SRC-245 L222–233)
+**Inference:** For exam reasoning, identify the one detail that changes the answer: fixed order, independent parallelism, dynamic expert transfer, shared conversation, or adaptive manager planning. (SRC-231 L250–254; SRC-241 L225–236; SRC-242 L223–240; SRC-243 L224–234; SRC-244 L220–235; SRC-245 L220–233)
 
 **Inference:** For practice, choose Foundry workflows when collaboration, visual inspection, versions, nodes, variables, Power Fx, and portal governance matter; choose Agent Framework workflows when orchestration is application code with custom executors, typed routing, event handling, and SDK-level tests. (SRC-36 L220–236; SRC-151 L220–233; SRC-231 L229–264)
 

@@ -44,39 +44,39 @@ ingest_depth: full
 
 ## TL;DR
 
-Foundry IQ is described as a managed knowledge platform for AI agents, built on Azure AI Search and usable as a shared service by multiple agents. (SRC-85 L219–221) The source emphasizes knowledge bases organized by business domain, data-source integrations for SharePoint, Blob Storage, OneLake, and search indexes, and automatic retrieval intelligence such as query analysis, strategy selection, ranking, and citations. (SRC-85 L225–251)
+Foundry IQ is described as a managed knowledge platform for AI agents, built on Azure AI Search and usable as a shared service by multiple agents. (SRC-85 L220–221) The source emphasizes knowledge bases organized by business domain, data-source integrations for SharePoint, Blob Storage, OneLake, and search indexes, and automatic retrieval intelligence such as query analysis, strategy selection, ranking, and citations. (SRC-85 L224–245)
 
 ## Key claims
 
-- Building separate RAG systems for multiple agents repeats vector database, embedding pipeline, retrieval tuning, and search-infrastructure work. (SRC-85 L214–216)
-- Foundry IQ is a managed knowledge platform for AI agents built on Azure AI Search. (SRC-85 L219–220)
-- Foundry IQ lets teams create knowledge bases once and connect any agent to them. (SRC-85 L221–224)
-- Knowledge bases organize information by business domain rather than technical storage location. (SRC-85 L225–233)
-- Foundry IQ handles indexing, embedding generation, and search optimization when data sources are connected. (SRC-85 L234–241)
-- When an agent queries a knowledge base, Foundry IQ analyzes the question, selects retrieval strategies, ranks results, and provides citations. (SRC-85 L242–251)
-- Foundry IQ uses the Model Context Protocol to connect agents to knowledge bases. (SRC-85 L262–263)
+- Building separate RAG systems for multiple agents repeats vector database, embedding pipeline, retrieval tuning, and search-infrastructure work. (SRC-85 L217)
+- Foundry IQ is a managed knowledge platform for AI agents built on Azure AI Search. (SRC-85 L220)
+- Foundry IQ lets teams create knowledge bases once and connect any agent to them. (SRC-85 L221)
+- Knowledge bases organize information by business domain rather than technical storage location. (SRC-85 L224–231)
+- Foundry IQ handles indexing, embedding generation, and search optimization when data sources are connected. (SRC-85 L233–239)
+- When an agent queries a knowledge base, Foundry IQ analyzes the question, selects retrieval strategies, ranks results, and provides citations. (SRC-85 L241–245)
+- Foundry IQ uses the Model Context Protocol to connect agents to knowledge bases. (SRC-85 L263)
 
 ## How it works
 
-Foundry IQ sits between agents and organizational content as a shared retrieval service. (SRC-85 L219–224) Administrators connect existing storage locations, and Foundry IQ discovers documents, processes them into chunks and embeddings, indexes them, and monitors changes for automatic reindexing. (SRC-85 L234–241) Agents query a knowledge base as a unified source, while the platform handles query analysis, retrieval strategy selection, relevance ranking, and citations. (SRC-85 L242–251)
+Foundry IQ sits between agents and organizational content as a shared retrieval service. (SRC-85 L219–224) Administrators connect existing storage locations, and Foundry IQ discovers documents, processes them into chunks and embeddings, indexes them, and monitors changes for automatic reindexing. (SRC-85 L233–239) Agents query a knowledge base as a unified source, while the platform handles query analysis, retrieval strategy selection, relevance ranking, and citations. (SRC-85 L241–245)
 
 ## Code and API patterns
 
-The capture introduces an example support agent connected to product documentation, but the actual Python code is not included in the text capture beyond the label. (SRC-85 L252–254) The source states the agent retrieves information from the knowledge base like any other tool, without custom retrieval logic or search-infrastructure management. (SRC-85 L254–255)
+The capture introduces an example support agent connected to product documentation, but the actual Python code is not included in the text capture beyond the label. (SRC-85 L247–251) The source states the agent retrieves information from the knowledge base like any other tool, without custom retrieval logic or search-infrastructure management. (SRC-85 L251)
 
 ## Key terms
 
-- **Foundry IQ** — a managed knowledge platform for AI agents built on Azure AI Search. (SRC-85 L219–220)
-- **Knowledge base** — a business-domain organization of related information, independent of where the source data is stored. (SRC-85 L225–233)
-- **Data source integration** — a connection from Foundry IQ to SharePoint sites, Blob containers, or OneLake instances. (SRC-85 L234–235)
-- **Built-in retrieval intelligence** — automatic query analysis, retrieval strategy selection, result ranking, and citations. (SRC-85 L242–251)
-- **Model Context Protocol (MCP)** — the standard the source says Foundry IQ uses to connect agents to knowledge bases securely. (SRC-85 L262–263)
+- **Foundry IQ** — a managed knowledge platform for AI agents built on Azure AI Search. (SRC-85 L220)
+- **Knowledge base** — a business-domain organization of related information, independent of where the source data is stored. (SRC-85 L224–231)
+- **Data source integration** — a connection from Foundry IQ to SharePoint sites, Blob containers, or OneLake instances. (SRC-85 L233)
+- **Built-in retrieval intelligence** — automatic query analysis, retrieval strategy selection, result ranking, and citations. (SRC-85 L241–245)
+- **Model Context Protocol (MCP)** — the standard the source says Foundry IQ uses to connect agents to knowledge bases securely. (SRC-85 L263)
 
 ## Decision boundaries and exam cues
 
 - **Inference:** Choose Foundry IQ over custom RAG when a scenario emphasizes shared knowledge bases, multiple agents, and reduced search-infrastructure work. (SRC-85 L214–224; SRC-85 L256–261)
-- **Inference:** Choose a business-domain knowledge base when the source data spans storage systems but should appear to agents as one source such as product documentation or HR policies. (SRC-85 L225–233)
-- **Inference:** Treat citations as part of the desired retrieval behavior, because Foundry IQ provides citations so agents can reference source documents. (SRC-85 L249–251)
+- **Inference:** Choose a business-domain knowledge base when the source data spans storage systems but should appear to agents as one source such as product documentation or HR policies. (SRC-85 L224–231)
+- **Inference:** Treat citations as part of the desired retrieval behavior, because Foundry IQ provides citations so agents can reference source documents. (SRC-85 L245)
 
 ## Assessment items
 
@@ -84,24 +84,24 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source states that Foundry IQ is built on Azure AI Search, while later units still require choices among Azure AI Search indexes, Blob Storage, web, SharePoint, and OneLake as data sources. (SRC-85 L219–220; SRC-22 L11–14)
-- **Stale-risk:** The source identifies MCP as the connection mechanism for Foundry IQ knowledge bases; protocol and product integration details may change and should be verified for production work. (SRC-85 L262–263)
+- The source states that Foundry IQ is built on Azure AI Search, while later units still require choices among Azure AI Search indexes, Blob Storage, web, SharePoint, and OneLake as data sources. (SRC-85 L220; SRC-22 L11–14)
+- **Stale-risk:** The source identifies MCP as the connection mechanism for Foundry IQ knowledge bases; protocol and product integration details may change and should be verified for production work. (SRC-85 L263)
 
 ## Relation to other sources
 
 - [[src-239-understanding-rag-agents]] explains the underlying RAG problem that Foundry IQ packages as a managed platform. (SRC-239 L219–231; SRC-85 L219–224)
-- [[src-22-configure-data-sources-knowledge-bases]] expands the data-source integrations named here into a source-by-source decision guide. (SRC-85 L234–241; SRC-22 L11–83)
+- [[src-22-configure-data-sources-knowledge-bases]] expands the data-source integrations named here into a source-by-source decision guide. (SRC-85 L233–239; SRC-22 L11–83)
 - [[src-23-configure-retrieval-foundry-iq]] continues from knowledge-base connection to agent instructions, testing, and production monitoring. (SRC-85 L252–255; SRC-23 L214–278)
 - [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10]] demonstrates the same concepts with a product expert agent, Blob Storage data, Azure AI Search, and agent approvals. (SRC-85 L219–263; SRC-16 L285–763)
 
 ## Connections
 
-- [[foundry-iq]] — the managed knowledge platform described by the unit. (SRC-85 L219–220)
+- [[foundry-iq]] — the managed knowledge platform described by the unit. (SRC-85 L220)
 - [[azure-ai-search]] — the service Foundry IQ is built on and an input source for existing indexes. (SRC-85 L219–220; SRC-85 L233)
-- [[knowledge-bases-and-sources]] — the unit explains knowledge bases and source integrations. (SRC-85 L225–241)
-- [[model-context-protocol]] — the source states MCP connects agents to knowledge bases. (SRC-85 L262–263)
+- [[knowledge-bases-and-sources]] — the unit explains knowledge bases and source integrations. (SRC-85 L224–239)
+- [[model-context-protocol]] — the source states MCP connects agents to knowledge bases. (SRC-85 L263)
 - [[retrieval-augmented-generation]] — Foundry IQ implements RAG-style retrieval capabilities as a managed service. (SRC-85 L219–224)
-- [[agent-tools]] — the source says agents retrieve from the knowledge base like they use any other tool. (SRC-85 L254–255)
+- [[agent-tools]] — the source says agents retrieve from the knowledge base like they use any other tool. (SRC-85 L251)
 - *Module units:* [[src-141-introduction-build-knowledge-enhanced-ai-agents-foundry-iq|1 Introduction]] · [[src-239-understanding-rag-agents|2 Understanding RAG for agents]] · [[src-22-configure-data-sources-knowledge-bases|4 Configure data sources for knowledge bases]] · [[src-23-configure-retrieval-foundry-iq|5 Configure retrieval with Foundry IQ]] · [[src-147-knowledge-check-build-knowledge-enhanced-ai-agents-foundry-iq|6 Knowledge check]] · [[src-76-exercise-integrate-ai-agent-foundry-iq|7 Exercise - Integrate an AI agent with Foundry IQ]] · [[src-194-summary-build-knowledge-enhanced-ai-agents-foundry-iq|8 Summary]] · [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10|episode 10]]
 
 ## Open questions

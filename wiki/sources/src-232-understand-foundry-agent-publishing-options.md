@@ -72,14 +72,14 @@ Not covered by this source.
 ## Key terms
 
 - **Agent Application** — the published managed Azure resource with endpoint, identity, user isolation, and routing behavior. (SRC-232 L217–224)
-- **Dedicated invocation URL** — the stable endpoint created for the published agent. (SRC-232 L219)
+- **Dedicated invocation URL** — the stable endpoint created for the published agent. (SRC-232 L221)
 - **Agent identity** — the distinct Microsoft Entra identity created for the agent, separate from the development project. (SRC-232 L220; SRC-232 L251–256)
 - **Azure Bot Service** — the resource that routes messages between Microsoft 365 and the Foundry agent. (SRC-232 L226)
 - **Microsoft 365 publishing package** — the generated package used to distribute the agent into Microsoft 365. (SRC-232 L227)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** Choose direct Foundry portal publishing when the scenario asks for quick Teams or Copilot availability and does not require custom middleware or deployment pipelines. (SRC-232 L232–238)
+- **Inference:** Choose direct Foundry portal publishing when the scenario asks for quick Teams or Copilot availability and does not require custom middleware or deployment pipelines. (SRC-232 L237–239)
 - **Inference:** Choose Microsoft 365 Agents Toolkit when the scenario explicitly requires custom SSO, advanced middleware, or multi-environment deployment. (SRC-232 L238–242)
 - **Inference:** If tools worked during development but fail after publication, check the published agent identity's Azure permissions because project identity permissions do not transfer automatically. (SRC-232 L251–256)
 - **Inference:** If users need a browser demo, custom app embedding, or non-Microsoft-365 chat channels, the other publishing channels may fit better than Microsoft 365 publishing. (SRC-232 L245–250)

@@ -82,7 +82,7 @@ Not covered by this source.
 ## Tensions, caveats and currency
 
 - The model can request a function call, but the application must execute it (SRC-256 L255).
-- Tool arguments can be incorrect or unexpected, so they require validation (SRC-256 L250; SRC-256 L256).
+- Tool arguments can be incorrect or unexpected, so they require validation (SRC-256 L256).
 - Function calling improves reliability, but critical final outputs still need review (SRC-256 L258).
 
 ## Relation to other sources

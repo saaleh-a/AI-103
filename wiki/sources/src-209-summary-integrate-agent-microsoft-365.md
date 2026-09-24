@@ -49,10 +49,10 @@ The module summary says learners published Microsoft Foundry agents to Microsoft
 ## Key claims
 
 - The module taught publishing Microsoft Foundry agents to Microsoft Teams and Microsoft 365 Copilot. (SRC-209 L216)
-- Direct Foundry portal publishing automatically provisions Azure Bot Service and creates Microsoft Entra ID registrations. (SRC-209 L217–218)
+- Direct Foundry portal publishing automatically provisions Azure Bot Service and creates Microsoft Entra ID registrations. (SRC-209 L219)
 - Microsoft 365 Agents Toolkit is an alternative for complex enterprise scenarios. (SRC-209 L218–219)
 - Shared scope is for testing, and organization scope is for broad distribution. (SRC-209 L220–221)
-- The module covered agent identity considerations for RBAC permissions. (SRC-209 L221)
+- The module covered agent identity considerations for RBAC permissions. (SRC-209 L220)
 - Work IQ connects agents to Microsoft 365 data through Model Context Protocol. (SRC-209 L222–224)
 - Suggested next steps include adding tools, grounding with enterprise data sources like Azure AI Search, and building multi-agent systems. (SRC-209 L229–232)
 
@@ -66,7 +66,7 @@ Not covered by this source.
 
 ## Key terms
 
-- **Direct publishing workflow** — the Foundry portal route that provisions Bot Service and creates Entra registrations. (SRC-209 L217–218)
+- **Direct publishing workflow** — the Foundry portal route that provisions Bot Service and creates Entra registrations. (SRC-209 L219)
 - **Microsoft 365 Agents Toolkit** — the alternative named for complex enterprise scenarios. (SRC-209 L218–219)
 - **Publish scopes** — shared for testing and organization for broad distribution. (SRC-209 L220–221)
 - **Work IQ** — the MCP-based route for connecting agents to Microsoft 365 data. (SRC-209 L222–224)

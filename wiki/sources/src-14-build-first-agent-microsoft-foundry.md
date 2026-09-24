@@ -67,8 +67,8 @@ The source does not include code, but it states that a deployed agent can be int
 
 ## Key terms
 
-- **Instructions** — the field that defines how the agent understands its role, responds to users, and handles scenarios. (SRC-14 L230–232)
-- **Temperature** — a model parameter that controls response randomness. (SRC-14 L232–233)
+- **Instructions** — the field that defines how the agent understands its role, responds to users, and handles scenarios. (SRC-14 L233)
+- **Temperature** — a model parameter that controls response randomness. (SRC-14 L234)
 - **Top P** — a model parameter that controls response diversity. (SRC-14 L232–233)
 - **Tool catalog** — the portal area for adding Configured, Catalog, or Custom tools. (SRC-14 L239–244)
 

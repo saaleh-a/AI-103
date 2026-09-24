@@ -32,7 +32,7 @@ The episode illustrates this with general support delegating to billing after in
 
 ## What the sources say
 
-SRC-231 defines handoff as dynamically transferring control between agents based on context or rules, useful for escalation, fallback, and expert routing where one agent works at a time. (SRC-231 L250)
+SRC-231 defines handoff as dynamically transferring control between agents based on context or rules, useful for escalation, fallback, and expert routing where one agent works at a time. (SRC-231 L252)
 
 SRC-243 says to use the pattern when the number or order of agents cannot be determined in advance, expertise requirements emerge during processing, multiple-domain problems require different specialists sequentially, and transfer signals can be defined. (SRC-243 L224–228)
 
@@ -52,7 +52,7 @@ The code shape in the corpus is not a named `HandoffBuilder`; it is a control wo
 
 ## Decision boundaries
 
-**Inference:** Handoff versus sequential is decided by whether the route is known upfront. Sequential has a fixed order decided beforehand; handoff is for dynamic routing as expertise needs emerge. (SRC-245 L220; SRC-243 L221–228)
+**Inference:** Handoff versus sequential is decided by whether the route is known upfront. Sequential has a fixed order decided beforehand; handoff is for dynamic routing as expertise needs emerge. (SRC-245 L221; SRC-243 L221–228)
 
 **Inference:** Handoff versus group chat is decided by control and shared discussion: handoff has one active specialist at a time and fully transfers control, while group chat keeps a managed shared conversation with a chat manager. (SRC-243 L221–222; SRC-242 L218–226)
 
@@ -73,7 +73,7 @@ Handoff loops are an explicit risk: if preventing excessive bouncing is difficul
 
 ## Connections
 
-- [[multi-agent-orchestration]] — handoff is one supported Agent Framework pattern. (SRC-231 L250)
+- [[multi-agent-orchestration]] — handoff is one supported Agent Framework pattern. (SRC-231 L252)
 - [[sequential-orchestration]] — closest contrast when order is fixed. (SRC-243 L229; SRC-245 L218–220)
 - [[group-chat-orchestration]] — closest contrast when agents share a managed conversation. (SRC-243 L221–222; SRC-242 L218–226)
 - [[agent-framework-workflows]] — implementation uses control workflows and switch-case edges. (SRC-243 L235–254)

@@ -43,20 +43,20 @@ ingest_depth: full
 
 ## TL;DR
 
-Mitigation follows baseline measurement, and the modified system can be retested against that baseline. (SRC-156 L216) The source teaches four mitigation layers: model, safety system, system message and grounding, and user experience. (SRC-156 L217–221) Foundry guardrails sit in the safety-system layer and can suppress prompts and responses by harm category and severity. (SRC-156 L227–230)
+Mitigation follows baseline measurement, and the modified system can be retested against that baseline. (SRC-156 L218) The source teaches four mitigation layers: model, safety system, system message and grounding, and user experience. (SRC-156 L219–223) Foundry guardrails sit in the safety-system layer and can suppress prompts and responses by harm category and severity. (SRC-156 L230–231)
 
 ## Key claims
 
-- Mitigation techniques can be applied at the model, safety system, system message and grounding, and user experience layers. (SRC-156 L217–221)
-- Model-layer mitigations include selecting an appropriate model and fine-tuning a foundational model with training data. (SRC-156 L222–226)
-- Foundry guardrails classify content into severity levels for hate and fairness, sexual, violence, self-harm, and task-adherence categories. (SRC-156 L227–229)
-- Prompt shields use abuse detection algorithms to detect systematic abuse, such as attempts to subvert the system prompt. (SRC-156 L230)
-- System-message and grounding mitigations include behavioral system inputs, grounding data, prompt engineering, and RAG from trusted sources. (SRC-156 L231–235)
-- User-experience mitigations include constrained inputs, validation, and transparent documentation about capabilities, limitations, models, and residual harms. (SRC-156 L236–240)
+- Mitigation techniques can be applied at the model, safety system, system message and grounding, and user experience layers. (SRC-156 L219–223)
+- Model-layer mitigations include selecting an appropriate model and fine-tuning a foundational model with training data. (SRC-156 L224–228)
+- Foundry guardrails classify content into severity levels for hate and fairness, sexual, violence, self-harm, and task-adherence categories. (SRC-156 L230)
+- Prompt shields use abuse detection algorithms to detect systematic abuse, such as attempts to subvert the system prompt. (SRC-156 L231)
+- System-message and grounding mitigations include behavioral system inputs, grounding data, prompt engineering, and RAG from trusted sources. (SRC-156 L232–236)
+- User-experience mitigations include constrained inputs, validation, and transparent documentation about capabilities, limitations, models, and residual harms. (SRC-156 L237–240)
 
 ## How it works
 
-The source presents mitigation as defense in depth. (SRC-156 L217–221) Model selection and fine-tuning shape the base behavior, safety-system guardrails filter risky prompts and responses, prompting and grounding increase relevance, and the application experience constrains input while explaining limits to users. (SRC-156 L222–240)
+The source presents mitigation as defense in depth. (SRC-156 L219–223) Model selection and fine-tuning shape the base behavior, safety-system guardrails filter risky prompts and responses, prompting and grounding increase relevance, and the application experience constrains input while explaining limits to users. (SRC-156 L224–240)
 
 ## Code and API patterns
 
@@ -64,15 +64,15 @@ Not covered by this source.
 
 ## Key terms
 
-- **Guardrails** — Foundry support for suppressing prompts and responses using content filters. (SRC-156 L227–229)
-- **Prompt shields** — abuse detection that can identify attempts to subvert the system prompt. (SRC-156 L230)
-- **RAG** — retrieving contextual data from trusted data sources and including it in prompts. (SRC-156 L234–235)
+- **Guardrails** — Foundry support for suppressing prompts and responses using content filters. (SRC-156 L230)
+- **Prompt shields** — abuse detection that can identify attempts to subvert the system prompt. (SRC-156 L231)
+- **RAG** — retrieving contextual data from trusted data sources and including it in prompts. (SRC-156 L235–236)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** Choose Foundry guardrails for platform-level suppression of harmful prompts or responses. (SRC-156 L227–230)
-- **Inference:** Choose grounding or RAG when the scenario asks for trusted contextual data in prompts. (SRC-156 L231–235)
-- **Inference:** Choose user-experience mitigation when the scenario emphasizes UI constraints, validation, or transparent documentation. (SRC-156 L236–240)
+- **Inference:** Choose Foundry guardrails for platform-level suppression of harmful prompts or responses. (SRC-156 L230–231)
+- **Inference:** Choose grounding or RAG when the scenario asks for trusted contextual data in prompts. (SRC-156 L232–236)
+- **Inference:** Choose user-experience mitigation when the scenario emphasizes UI constraints, validation, or transparent documentation. (SRC-156 L237–240)
 
 ## Assessment items
 
@@ -80,8 +80,8 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- **Stale-risk:** Guardrail categories and severity levels are platform details that may evolve. (SRC-156 L227–229)
-- The source says documentation should disclose harms that mitigation may not always address, so mitigation is not total elimination. (SRC-156 L239–240)
+- **Stale-risk:** Guardrail categories and severity levels are platform details that may evolve. (SRC-156 L230)
+- The source says documentation should disclose harms that mitigation may not always address, so mitigation is not total elimination. (SRC-156 L240)
 
 ## Relation to other sources
 
@@ -100,7 +100,7 @@ Not covered by this source.
 
 ## Open questions
 
-- The source does not provide step-by-step guardrail configuration. (SRC-156 L227–230)
+- The source does not provide step-by-step guardrail configuration. (SRC-156 L230–231)
 
 ## Sources
 

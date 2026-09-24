@@ -43,18 +43,18 @@ ingest_depth: full
 
 ## TL;DR
 
-The assessment tests three decisions: why to create an AI Impact Assessment, which Foundry capability mitigates harmful content at the safety-system level, and why phased delivery is useful. (SRC-170 L216–229) The capture lists options but does not show checked answers. (SRC-170 L230–233)
+The assessment tests three decisions: why to create an AI Impact Assessment, which Foundry capability mitigates harmful content at the safety-system level, and why phased delivery is useful. (SRC-170 L217–230) The capture lists options but does not show checked answers. (SRC-170 L231–233)
 
 ## Key claims
 
-- One question asks why to consider an AI Impact Assessment when designing a generative AI solution. (SRC-170 L216–220)
-- One question asks which Microsoft Foundry capability mitigates harmful content generation at the safety-system level. (SRC-170 L221–225)
-- One question asks why to consider a phased delivery plan. (SRC-170 L226–229)
-- The capture requires all questions to be answered before checking work and does not show answer results. (SRC-170 L230–233)
+- One question asks why to consider an AI Impact Assessment when designing a generative AI solution. (SRC-170 L217–220)
+- One question asks which Microsoft Foundry capability mitigates harmful content generation at the safety-system level. (SRC-170 L222–225)
+- One question asks why to consider a phased delivery plan. (SRC-170 L227–230)
+- The capture requires all questions to be answered before checking work and does not show answer results. (SRC-170 L231–233)
 
 ## How it works
 
-This is an assessment page rather than a teaching unit. (SRC-170 L216–233) Its distractors mirror the module: AI Impact Assessment is tied to documenting purpose, expected use, and harms; guardrails are the safety-system mitigation option; phased delivery is for feedback and issue discovery before broad release. (SRC-170 L216–229; SRC-153 L228; SRC-156 L227–230; SRC-152 L225)
+This is an assessment page rather than a teaching unit. (SRC-170 L217–233) Its distractors mirror the module: AI Impact Assessment is tied to documenting purpose, expected use, and harms; guardrails are the safety-system mitigation option; phased delivery is for feedback and issue discovery before broad release. (SRC-170 L217–230; SRC-153 L228; SRC-156 L227–230; SRC-152 L227)
 
 ## Code and API patterns
 
@@ -62,42 +62,42 @@ Not covered by this source.
 
 ## Key terms
 
-- **AI Impact Assessment** — connected in the options to documenting purpose, expected use, and potential harms. (SRC-170 L216–220)
-- **Guardrails** — an option for safety-system-level mitigation. (SRC-170 L221–225)
-- **Phased delivery plan** — connected to feedback and issue discovery before broader release. (SRC-170 L226–229)
+- **AI Impact Assessment** — connected in the options to documenting purpose, expected use, and potential harms. (SRC-170 L217–220)
+- **Guardrails** — an option for safety-system-level mitigation. (SRC-170 L222–225)
+- **Phased delivery plan** — connected to feedback and issue discovery before broader release. (SRC-170 L227–230)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** For safety-system-level mitigation in Foundry, the module points to guardrails rather than DALL-E support or fine-tuning. (SRC-170 L221–225; SRC-156 L227–230)
-- **Inference:** Phased release is for feedback and issue discovery, not for skipping map, measure, mitigate, and manage. (SRC-170 L226–229; SRC-152 L225)
+- **Inference:** For safety-system-level mitigation in Foundry, the module points to guardrails rather than DALL-E support or fine-tuning. (SRC-170 L222–225; SRC-156 L227–230)
+- **Inference:** Phased release is for feedback and issue discovery, not for skipping map, measure, mitigate, and manage. (SRC-170 L227–230; SRC-152 L227)
 
 ## Assessment items
 
-1. Why should you consider creating an AI Impact Assessment when designing a generative AI solution? (SRC-170 L216)
-   - To make a legal case that indemnifies you from responsibility for harms caused by the solution. (SRC-170 L217)
-   - To document the purpose, expected use, and potential harms for the solution. (SRC-170 L218)
-   - To evaluate the cost of cloud services required to implement your solution. (SRC-170 L219)
-   - Answer not shown in capture. (SRC-170 L230–233)
-2. What capability of Microsoft Foundry helps mitigate harmful content generation at the Safety System level? (SRC-170 L221)
-   - DALL-E model support. (SRC-170 L222)
-   - Fine-tuning. (SRC-170 L223)
-   - Guardrails. (SRC-170 L224)
-   - Answer not shown in capture. (SRC-170 L230–233)
-3. Why should you consider a phased delivery plan for your generative AI solution? (SRC-170 L226)
-   - To enable you to gather feedback and identify issues before releasing the solution more broadly. (SRC-170 L227)
-   - To eliminate the need to map, measure, mitigate, and manage potential harms. (SRC-170 L228)
-   - To enable you to charge more for the solution. (SRC-170 L229)
-   - Answer not shown in capture. (SRC-170 L230–233)
+1. Why should you consider creating an AI Impact Assessment when designing a generative AI solution? (SRC-170 L217)
+   - To make a legal case that indemnifies you from responsibility for harms caused by the solution. (SRC-170 L218)
+   - To document the purpose, expected use, and potential harms for the solution. (SRC-170 L219)
+   - To evaluate the cost of cloud services required to implement your solution. (SRC-170 L220)
+   - Answer not shown in capture. (SRC-170 L231–233)
+2. What capability of Microsoft Foundry helps mitigate harmful content generation at the Safety System level? (SRC-170 L222)
+   - DALL-E model support. (SRC-170 L223)
+   - Fine-tuning. (SRC-170 L224)
+   - Guardrails. (SRC-170 L225)
+   - Answer not shown in capture. (SRC-170 L231–233)
+3. Why should you consider a phased delivery plan for your generative AI solution? (SRC-170 L227)
+   - To enable you to gather feedback and identify issues before releasing the solution more broadly. (SRC-170 L228)
+   - To eliminate the need to map, measure, mitigate, and manage potential harms. (SRC-170 L229)
+   - To enable you to charge more for the solution. (SRC-170 L230)
+   - Answer not shown in capture. (SRC-170 L231–233)
 
 ## Tensions, caveats and currency
 
-- The assessment capture lists options but not correctness results. (SRC-170 L230–233)
+- The assessment capture lists options but not correctness results. (SRC-170 L231–233)
 
 ## Relation to other sources
 
 - [[src-153-map-potential-harms]] supports impact-assessment planning. (SRC-153 L228)
 - [[src-156-mitigate-potential-harms]] supports guardrails as the safety-system answer. (SRC-156 L227–230)
-- [[src-152-manage-responsible-generative-ai-solution]] supports phased delivery. (SRC-152 L225)
+- [[src-152-manage-responsible-generative-ai-solution]] supports phased delivery. (SRC-152 L227)
 
 ## Connections
 

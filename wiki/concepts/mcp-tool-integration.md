@@ -18,7 +18,7 @@ aliases: ["MCP tool discovery", "MCP server", "MCP client", "remote MCP server",
 
 ## Summary
 
-MCP tool integration is the pattern of connecting an agent to an MCP server so the agent can discover tool definitions at runtime, choose tools from descriptions and call external capabilities without hardcoded routing logic (SRC-233 L217–239; SRC-235 L236–243). The corpus covers this in the MCP tools module, Azure Language MCP server module, Azure Speech MCP server module and Work IQ module (SRC-108 L217–233; SRC-24 L217–270; SRC-25 L217–270; SRC-2 L217–239).
+MCP tool integration is the pattern of connecting an agent to an MCP server so the agent can discover tool definitions at runtime, choose tools from descriptions and call external capabilities without hardcoded routing logic (SRC-233 L217–239; SRC-235 L230–239). The corpus covers this in the MCP tools module, Azure Language MCP server module, Azure Speech MCP server module and Work IQ module (SRC-108 L217–233; SRC-24 L217–270; SRC-25 L217–270; SRC-2 L217–239).
 
 ## The problem it solves
 
@@ -26,14 +26,14 @@ Manually integrating every tool requires bespoke dispatcher code, function schem
 
 ## Mental model
 
-Think of the MCP server as a live catalog plus execution endpoint. It publishes tool names, descriptions and parameter expectations; the MCP client asks for the catalog; the agent reasons over that catalog; and when the model decides a tool is needed, the client calls the server-side tool and returns the result to the agent (SRC-108 L217–233; SRC-235 L236–243).
+Think of the MCP server as a live catalog plus execution endpoint. It publishes tool names, descriptions and parameter expectations; the MCP client asks for the catalog; the agent reasons over that catalog; and when the model decides a tool is needed, the client calls the server-side tool and returns the result to the agent (SRC-108 L217–233; SRC-235 L230–239).
 
 ## What the sources say
 
 - The MCP discovery unit says tools can be added, updated or removed centrally without modifying agent code, while the agent can always use the latest tool version (SRC-233 L225–239).
 - The server/client unit says a FastMCP server hosts tool definitions decorated with `@mcp.tool`; the client discovers them with `session.list_tools()`, wraps them and registers a `FunctionTool` with the agent (SRC-108 L217–233).
 - The managed Foundry unit says that when using Foundry Agent Service, you do not manually create a client session; instead you create an `MCPTool` object, point it at the MCP server and add server information to the agent thread or tool configuration (SRC-240 L217–239).
-- The Language MCP module says the agent can call multiple text-analysis tools in one turn and synthesize the results (SRC-235 L236–243; SRC-24 L259–270).
+- The Language MCP module says the agent can call multiple text-analysis tools in one turn and synthesize the results (SRC-235 L230–239; SRC-24 L259–270).
 - The Speech MCP module says the agent calls speech-to-text or text-to-speech based on the prompt, and Speech MCP requires blob storage/SAS URL handling for audio files (SRC-236 L236–253; SRC-25 L217–270).
 - The Work IQ source says an MCP server can expose tools, resources and prompts, and Work IQ is the MCP server for Microsoft 365 workplace data (SRC-2 L229–239).
 
@@ -53,11 +53,11 @@ For Azure Language, the portal path is Tools → Connect a tool → Azure Langua
 
 ## Code and configuration
 
-- `server_label`: unique identifier for the MCP server (SRC-240 L226–227).
+- `server_label`: unique identifier for the MCP server (SRC-240 L223).
 - `server_url`: remote MCP endpoint (SRC-240 L226–228).
 - `allowed_tools`: optional list restricting which tools the agent may access (SRC-240 L228–229).
 - `require_approval`: controls approval before tool invocation; the managed source says `always` is the default if no value is provided and `never` disables approval (SRC-240 L226–239).
-- Custom headers: used for API keys, OAuth tokens or other required server headers (SRC-240 L231–234).
+- Custom headers: used for API keys, OAuth tokens or other required server headers (SRC-240 L227–229).
 
 ## Decision boundaries
 

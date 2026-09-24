@@ -54,8 +54,8 @@ Azure Content Understanding is described as a generative AI service for extracti
 - Using Content Understanding requires provisioning a Microsoft Foundry resource in an Azure subscription. (SRC-262 L215)
 - Content Understanding solutions can be developed and managed in the Microsoft Foundry portal, Content Understanding Studio, or the Content Understanding API. (SRC-262 L216–218)
 - The service provides a single service and straightforward, consistent development process for multimodal content analysis. (SRC-262 L219)
-- It can analyze documents and forms to retrieve specific field values, such as invoice data for payment processing. (SRC-262 L221–222)
-- It can analyze images for charts, product defects, objects or people, and other visual information. (SRC-262 L224–225)
+- It can analyze documents and forms to retrieve specific field values, such as invoice data for payment processing. (SRC-262 L224)
+- It can analyze images for charts, product defects, objects or people, and other visual information. (SRC-262 L226)
 - It can analyze audio for conference-call summaries, sentiment in recorded customer conversations, and key data in telephone messages. (SRC-262 L227–228)
 - It can analyze video to extract key points, summarize presentations, or detect activity in security footage. (SRC-262 L230)
 

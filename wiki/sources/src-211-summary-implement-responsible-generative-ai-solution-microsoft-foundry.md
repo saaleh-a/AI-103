@@ -43,11 +43,11 @@ ingest_depth: full
 
 ## TL;DR
 
-The summary says generative AI requires a responsible approach to prevent or mitigate potentially harmful content. (SRC-211 L216) The module process is to identify relevant harms, measure harms in use, mitigate harmful generation at multiple levels, and deploy with adequate plans for responsible operation. (SRC-211 L217–221)
+The summary says generative AI requires a responsible approach to prevent or mitigate potentially harmful content. (SRC-211 L218) The module process is to identify relevant harms, measure harms in use, mitigate harmful generation at multiple levels, and deploy with adequate plans for responsible operation. (SRC-211 L217–221)
 
 ## Key claims
 
-- Generative AI requires a responsible approach to prevent or mitigate potentially harmful content. (SRC-211 L216)
+- Generative AI requires a responsible approach to prevent or mitigate potentially harmful content. (SRC-211 L218)
 - Responsible practice includes identifying harms relevant to the solution. (SRC-211 L218)
 - Responsible practice includes measuring harms when the system is used. (SRC-211 L219)
 - Responsible practice includes mitigating harmful content generation at multiple levels. (SRC-211 L220)

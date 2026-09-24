@@ -32,11 +32,11 @@ The episode describes the pattern as work farmed out in parallel and then merged
 
 ## What the sources say
 
-SRC-231 defines the pattern as broadcasting the same task to multiple agents at once and collecting their independent results; it is useful for parallel analysis, independent subtasks, or ensemble decision making. (SRC-231 L248)
+SRC-231 defines the pattern as broadcasting the same task to multiple agents at once and collecting their independent results; it is useful for parallel analysis, independent subtasks, or ensemble decision making. (SRC-231 L250)
 
-SRC-241 says the results are usually combined into a final answer, but each agent can also produce a separate result, such as calling tools or updating different data stores independently. (SRC-241 L220–221)
+SRC-241 says the results are usually combined into a final answer, but each agent can also produce a separate result, such as calling tools or updating different data stores independently. (SRC-241 L220–222)
 
-SRC-241 warns against the pattern when agents must build on each other's work, strict sequence or repeatability is required, quotas make parallelism inefficient, shared-data coordination is unreliable, conflicts cannot be resolved, or combining results lowers quality. (SRC-241 L232–236)
+SRC-241 warns against the pattern when agents must build on each other's work, strict sequence or repeatability is required, quotas make parallelism inefficient, shared-data coordination is unreliable, conflicts cannot be resolved, or combining results lowers quality. (SRC-241 L235–240)
 
 ## How it works in Azure
 
@@ -54,12 +54,12 @@ The code shape in the corpus is: create an `AzureOpenAIChatClient`, create named
 
 **Inference:** Concurrent versus sequential is decided by dependence and time: use concurrent when work can run independently and diversity or speed matters; use sequential when each stage must build on the previous output. (SRC-241 L225–236; SRC-245 L218–228)
 
-**Inference:** Concurrent versus group chat is decided by interaction: concurrent agents work independently and do not share results during the run, while group chat agents contribute to one managed shared conversation. (SRC-241 L222; SRC-242 L218–226)
+**Inference:** Concurrent versus group chat is decided by interaction: concurrent agents work independently and do not share results during the run, while group chat agents contribute to one managed shared conversation. (SRC-241 L223; SRC-242 L220–227)
 
 
 ## Failure modes and misconceptions
 
-Do not choose concurrent merely because several agents exist. If agents need shared context in a specific order, if results conflict without a clear resolver, or if quotas make parallel calls inefficient, the source says to avoid concurrent orchestration. (SRC-241 L232–236)
+Do not choose concurrent merely because several agents exist. If agents need shared context in a specific order, if results conflict without a clear resolver, or if quotas make parallel calls inefficient, the source says to avoid concurrent orchestration. (SRC-241 L235–240)
 
 Do not confuse the low-level fan-out edge with the full pattern. A fan-out edge sends one message to multiple executors, while concurrent orchestration is the agent pattern that broadcasts a task and gathers results. (SRC-231 L241–248)
 
@@ -71,9 +71,9 @@ Do not confuse the low-level fan-out edge with the full pattern. A fan-out edge 
 
 ## Connections
 
-- [[multi-agent-orchestration]] — concurrent is one supported Agent Framework pattern. (SRC-231 L248)
+- [[multi-agent-orchestration]] — concurrent is one supported Agent Framework pattern. (SRC-231 L250)
 - [[sequential-orchestration]] — closest contrast: ordered dependent stages. (SRC-241 L232; SRC-245 L218–228)
-- [[group-chat-orchestration]] — contrast: shared conversation rather than independent parallel work. (SRC-241 L222; SRC-242 L218–226)
+- [[group-chat-orchestration]] — contrast: shared conversation rather than independent parallel work. (SRC-241 L223; SRC-242 L220–227)
 - [[agent-framework-workflows]] — fan-out/fan-in workflow mechanics are related. (SRC-231 L241–242)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-241-concurrent-orchestration]] — source page for this pattern.

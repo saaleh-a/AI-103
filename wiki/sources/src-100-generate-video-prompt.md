@@ -52,7 +52,7 @@ After deploying Sora 2, video generation is asynchronous: submit a request with 
 - The Video playground in Microsoft Foundry portal can test a deployed Sora 2 model. (SRC-100 L216–222)
 - Video generation typically takes 1 to 5 minutes, depending on settings. (SRC-100 L223)
 - Content generation APIs include a content moderation filter, and harmful prompts do not return generated video. (SRC-100 L224–226)
-- The playground can show prefilled cURL code samples through `View code`. (SRC-100 L227–228)
+- The playground can show prefilled cURL code samples through `View code`. (SRC-100 L230)
 - Effective prompts can specify framing, subject, action, lighting and palette, and style. (SRC-100 L231–239)
 - Reference images use the `input_reference` parameter as an anchor for the first frame while the prompt defines what happens next. (SRC-100 L249–251)
 - Remixing modifies specific aspects of an existing video while preserving scene transitions, visual layout, and overall structure. (SRC-100 L256–258)

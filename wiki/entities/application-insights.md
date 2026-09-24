@@ -17,7 +17,7 @@ aliases: ["Azure Monitor Application Insights", "Azure Monitor"]
 
 ## Summary
 
-Application Insights is the telemetry destination the corpus names for deployed models and agents: it can trace conversations, analyze error patterns, measure latency, and track token consumption when integration is configured. (SRC-196 L26; SRC-222 L271–275; SRC-223 L288–290)
+Application Insights is the telemetry destination the corpus names for deployed models and agents: it can trace conversations, analyze error patterns, measure latency, and track token consumption when integration is configured. (SRC-196 L26; SRC-222 L271–275; SRC-223 L290)
 
 ## What it is
 
@@ -27,11 +27,11 @@ The corpus does not provide a standalone Application Insights lesson. It mention
 
 - SRC-196 says production performance should be monitored using Azure Monitor and Application Insights to track usage, latency, costs and errors. (SRC-196 L26)
 - SRC-222 says Application Insights can trace individual conversations, analyze error patterns and measure end-to-end latency if integration is configured. (SRC-222 L271–275)
-- SRC-223 says production agents should track response times, tool invocation success rates, error patterns and token consumption using Application Insights integration. (SRC-223 L288–290)
+- SRC-223 says production agents should track response times, tool invocation success rates, error patterns and token consumption using Application Insights integration. (SRC-223 L290)
 
 ## Capabilities and components
 
-From the corpus, Application Insights is associated with conversation traces, error-pattern analysis, end-to-end latency measurement, token-consumption tracking, and broader usage/cost/error monitoring through the Azure Monitor/Application Insights pairing. (SRC-196 L26; SRC-222 L271–275; SRC-223 L288–290)
+From the corpus, Application Insights is associated with conversation traces, error-pattern analysis, end-to-end latency measurement, token-consumption tracking, and broader usage/cost/error monitoring through the Azure Monitor/Application Insights pairing. (SRC-196 L26; SRC-222 L271–275; SRC-223 L290)
 
 ## How to use it
 
@@ -51,7 +51,7 @@ The corpus pairs Azure Monitor and Application Insights in a summary sentence an
 
 ## Appearances in the corpus
 
-Application Insights appears in model deployment summary material and in deployed-agent testing/integration material. Its appearances are operational, not tutorial-level setup instructions. (SRC-196 L26; SRC-222 L271–275; SRC-223 L288–290)
+Application Insights appears in model deployment summary material and in deployed-agent testing/integration material. Its appearances are operational, not tutorial-level setup instructions. (SRC-196 L26; SRC-222 L271–275; SRC-223 L290)
 
 ## Connections
 

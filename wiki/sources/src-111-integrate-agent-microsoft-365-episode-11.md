@@ -49,7 +49,7 @@ Rob Foulkrod frames Microsoft 365 integration as meeting users inside Teams, Mic
 ## Key claims
 
 - Users already work inside Microsoft 365 and Teams, so the integration goal is to bring the agent to those surfaces. (SRC-111 L4–21)
-- Foundry offers a direct publishing option described as a click and a few dialogs. (SRC-111 L22–34)
+- Foundry offers a direct publishing option described as a click and a few dialogs. (SRC-111 L35–43)
 - Publishing provides a dedicated URL that remains stable as versions are updated. (SRC-111 L35–45)
 - Publishing creates an agent identity in Entra ID, allowing monitoring to distinguish the agent from the host app or user. (SRC-111 L46–72)
 - Published apps preserve user data isolation, so one user's prompts are not visible to another user. (SRC-111 L73–96)

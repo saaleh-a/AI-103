@@ -55,12 +55,12 @@ Testing should cover happy paths, edge cases, boundaries, multi-turn conversatio
 - Deploying keeps the agent in the project, while publishing creates a dedicated endpoint callable by external consumers without project access. (SRC-223 L249–250)
 - Published agents expose a stable Responses API protocol endpoint. (SRC-223 L259–261)
 - Agent Applications use Microsoft Entra ID authentication, and callers need the Azure AI User role on the Agent Application resource. (SRC-223 L262–264)
-- A published agent receives its own dedicated Entra identity, and permissions must be reassigned for resources the agent accesses. (SRC-223 L265–268)
+- A published agent receives its own dedicated Entra identity, and permissions must be reassigned for resources the agent accesses. (SRC-223 L264)
 - Production considerations include Application Insights monitoring, managed identities and least privilege, token and rate-limit cost controls, retry/backoff, and client-side conversation history. (SRC-223 L285–294)
 
 ## How it works
 
-The source separates testing, deployment, publishing, updating, and integration. (SRC-223 L218–294) Deployment keeps configuration in the Foundry project, while publishing creates an externally callable Agent Application endpoint and separate identity boundary. (SRC-223 L228–268)
+The source separates testing, deployment, publishing, updating, and integration. (SRC-223 L218–294) Deployment keeps configuration in the Foundry project, while publishing creates an externally callable Agent Application endpoint and separate identity boundary. (SRC-223 L228–264)
 
 ## Code and API patterns
 
@@ -76,7 +76,7 @@ The published endpoint uses the Responses API protocol and follows `https://<fou
 ## Decision boundaries and exam cues
 
 - **Inference:** Choose deployment when the scenario says save or iterate on the agent inside the project; choose publishing when it needs a stable external endpoint. (SRC-223 L228–250)
-- **Inference:** If tool calls work during development but fail after publishing, check the dedicated published-agent identity and reassigned RBAC roles. (SRC-223 L262–268)
+- **Inference:** If tool calls work during development but fail after publishing, check the dedicated published-agent identity and reassigned RBAC roles. (SRC-223 L262–264)
 - **Inference:** For multi-turn integrations using Agent Application endpoints, the client must store conversation history because the source says those endpoints currently support only stateless Responses API. (SRC-223 L291–294)
 
 ## Assessment items
@@ -92,15 +92,15 @@ Not covered by this source.
 ## Relation to other sources
 
 - [[src-20-configure-manage-agents-visual-studio-code]] recommends testing after configuration changes; this source defines broader testing strategies. (SRC-20 L257–260; SRC-223 L218–227)
-- [[src-91-extend-agent-capabilities-tools]] explains tools, and this source explains testing invocation and production authorization. (SRC-91 L220–224; SRC-223 L225–226; SRC-223 L265–268)
+- [[src-91-extend-agent-capabilities-tools]] explains tools, and this source explains testing invocation and production authorization. (SRC-91 L220–224; SRC-223 L225–226; SRC-223 L264)
 - [[src-41-develop-ai-agents-microsoft-foundry-visual-studio-code-episode]] demonstrates code integration with a project endpoint and agent name. (SRC-41 L650–900; SRC-223 L259–294)
 
 ## Connections
 
 - [[agent-testing-and-evaluation]] — testing strategies are the first major section. (SRC-223 L218–227)
-- [[agent-publishing]] — publishing and Agent Applications are central. (SRC-223 L240–268)
+- [[agent-publishing]] — publishing and Agent Applications are central. (SRC-223 L240–264)
 - [[responses-api]] — published endpoints use the Responses API protocol. (SRC-223 L259–261; SRC-223 L291–294)
-- [[microsoft-entra-id]] — authentication and dedicated identities use Entra ID. (SRC-223 L262–268)
+- [[microsoft-entra-id]] — authentication and dedicated identities use Entra ID. (SRC-223 L262–264)
 - [[application-insights]] — production monitoring destination named by the source. (SRC-223 L285–286)
 - *Module units:* [[src-129-introduction-develop-ai-agents-microsoft-foundry-visual-studio-code|1 Introduction]] · [[src-230-understand-ai-agents-microsoft-foundry-agent-service|2 Understand AI Agents and Microsoft Foundry Agent Service]] · [[src-84-explore-development-approaches|3 Explore Development Approaches]] · [[src-14-build-first-agent-microsoft-foundry|4 Build Your First Agent in Microsoft Foundry]] · [[src-190-set-up-visual-studio-code-agent-development|5 Set Up Visual Studio Code for Agent Development]] · [[src-20-configure-manage-agents-visual-studio-code|6 Configure and Manage Agents in Visual Studio Code]] · [[src-91-extend-agent-capabilities-tools|7 Extend Agent Capabilities with Tools]] · [[src-59-exercise-build-deploy-ai-agent|9 Exercise - Build and Deploy an AI Agent]] · [[src-142-knowledge-check-develop-ai-agents-microsoft-foundry-visual-studio|10 Knowledge Check]] · [[src-212-summary-develop-ai-agents-microsoft-foundry-visual-studio-code|11 Summary]] · [[src-41-develop-ai-agents-microsoft-foundry-visual-studio-code-episode|episode 7]]
 

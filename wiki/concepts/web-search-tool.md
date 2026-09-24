@@ -33,7 +33,7 @@ Web Search is a grounding tool for public, time-sensitive information: the model
 - The Responses API tools overview says `web_search` lets the model find general information on the Internet and base responses on more current data than it was trained on. (SRC-259 L224)
 - The dedicated source says the tool enables the model to retrieve fresh information from the web while generating a response. (SRC-257 L218)
 - It lists live information retrieval, source-grounded responses, reduced hallucination risk, automatic query generation, and one-flow user experience as key features. (SRC-257 L223–227)
-- In the Foundry agent tools source, Bing Web Search connects an agent to real-time internet information and includes automatic citation generation. (SRC-91 L236–237)
+- In the Foundry agent tools source, Bing Web Search connects an agent to real-time internet information and includes automatic citation generation. (SRC-91 L240)
 - Agent Framework treats web search as a service-provided tool where the provider supports it. (SRC-4 L217–220)
 
 ## How it works in Azure
@@ -50,7 +50,7 @@ The captured Learn code block is elided, but the implementation pattern is expli
 
 - Use [[web-search-tool]] for current, public, indexable web information. (SRC-257 L218–227)
 - Use [[file-search-tool]] for private uploaded files, internal documents, manuals, or contracts. (SRC-255 L218–227)
-- Use [[azure-ai-search]] for enterprise indexes and controlled retrieval over an organization's indexed data sources. (SRC-91 L240–241)
+- Use [[azure-ai-search]] for enterprise indexes and controlled retrieval over an organization's indexed data sources. (SRC-91 L242)
 - Use [[function-calling]] when the answer needs data or an action from a developer-controlled API rather than public search. (SRC-256 L219–224)
 
 **Inference:** If a scenario says "latest pricing" or "current release announcement," Web Search is plausible; if it says "internal HR policy PDF," File Search is the closer tool; if it says "customer order status from our ERP," function calling or a custom tool is the execution boundary. (SRC-257 L220–227; SRC-255 L218–227; SRC-256 L219–224)

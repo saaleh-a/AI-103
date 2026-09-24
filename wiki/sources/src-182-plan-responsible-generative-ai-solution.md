@@ -43,19 +43,19 @@ ingest_depth: full
 
 ## TL;DR
 
-Microsoft's guidance is presented as practical and actionable. (SRC-182 L12) It defines a four-stage process: map potential harms, measure harms in outputs, mitigate harms at multiple layers with transparent risk communication, and manage deployment and operational readiness. (SRC-182 L14–18) The source says these stages correspond closely to NIST AI Risk Management Framework functions. (SRC-182 L19)
+Microsoft's guidance is presented as practical and actionable. (SRC-182 L12) It defines a four-stage process: map potential harms, measure harms in outputs, mitigate harms at multiple layers with transparent risk communication, and manage deployment and operational readiness. (SRC-182 L13–16) The source says these stages correspond closely to NIST AI Risk Management Framework functions. (SRC-182 L18)
 
 ## Key claims
 
-- The responsible generative AI process has four stages. (SRC-182 L12–18)
-- Mapping identifies potential harms relevant to the planned solution. (SRC-182 L14)
-- Measurement checks generated outputs for those harms. (SRC-182 L15)
-- Mitigation minimizes harm presence and impact at multiple solution layers. (SRC-182 L16)
-- Management uses a deployment and operational readiness plan. (SRC-182 L17)
+- The responsible generative AI process has four stages. (SRC-182 L12–16)
+- Mapping identifies potential harms relevant to the planned solution. (SRC-182 L13)
+- Measurement checks generated outputs for those harms. (SRC-182 L14)
+- Mitigation minimizes harm presence and impact at multiple solution layers. (SRC-182 L15)
+- Management uses a deployment and operational readiness plan. (SRC-182 L16)
 
 ## How it works
 
-This page is the module's process map. (SRC-182 L12–18) The sequence moves from discovery, to evidence, to controls, to operation: map what could go wrong, measure whether it occurs, reduce it through layered mitigations, and manage the release responsibly. (SRC-182 L14–18)
+This page is the module's process map. (SRC-182 L12–16) The sequence moves from discovery, to evidence, to controls, to operation: map what could go wrong, measure whether it occurs, reduce it through layered mitigations, and manage the release responsibly. (SRC-182 L13–16)
 
 ## Code and API patterns
 
@@ -63,15 +63,15 @@ Not covered by this source.
 
 ## Key terms
 
-- **Map** — identify relevant potential harms. (SRC-182 L14)
-- **Measure** — find harms in generated outputs. (SRC-182 L15)
-- **Mitigate** — reduce harms at multiple layers and communicate risk. (SRC-182 L16)
-- **Manage** — define and follow readiness plans. (SRC-182 L17)
+- **Map** — identify relevant potential harms. (SRC-182 L13)
+- **Measure** — find harms in generated outputs. (SRC-182 L14)
+- **Mitigate** — reduce harms at multiple layers and communicate risk. (SRC-182 L15)
+- **Manage** — define and follow readiness plans. (SRC-182 L16)
 
 ## Decision boundaries and exam cues
 
-- **Inference:** Mapping and measuring are distinct: mapping lists relevant harms, while measuring looks for those harms in outputs. (SRC-182 L14–15)
-- **Inference:** Mitigation is not the last stage, because operation still requires management. (SRC-182 L16–17)
+- **Inference:** Mapping and measuring are distinct: mapping lists relevant harms, while measuring looks for those harms in outputs. (SRC-182 L13–14)
+- **Inference:** Mitigation is not the last stage, because operation still requires management. (SRC-182 L15–16)
 
 ## Assessment items
 
@@ -79,7 +79,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source cites NIST alignment but does not explain the NIST framework. (SRC-182 L19)
+- The source cites NIST alignment but does not explain the NIST framework. (SRC-182 L18)
 
 ## Relation to other sources
 
@@ -97,7 +97,7 @@ Not covered by this source.
 
 ## Open questions
 
-- The source does not specify tools or metrics for each stage. (SRC-182 L14–18)
+- The source does not specify tools or metrics for each stage. (SRC-182 L13–16)
 
 ## Sources
 

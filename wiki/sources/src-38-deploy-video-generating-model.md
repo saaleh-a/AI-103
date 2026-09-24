@@ -52,11 +52,11 @@ To generate videos from text prompts, learners need to deploy a video-generation
 - Sora 2 creates video scenes from text instructions, input images, or existing videos. (SRC-38 L212–214)
 - Before deployment, learners need an Azure subscription, access to the Microsoft Foundry portal, and deployment permissions in a Foundry project. (SRC-38 L215–218)
 - The deployment path is to sign in to Foundry portal, create or select a project, select `Build`, select `Models`, find Sora-2, and deploy it with chosen settings. (SRC-38 L219–226)
-- After deployment, Sora 2 can generate videos in various resolutions and durations. (SRC-38 L229–232)
+- After deployment, Sora 2 can generate videos in various resolutions and durations. (SRC-38 L233)
 
 ## How it works
 
-The source treats deployment as a prerequisite step: the user starts in a Foundry project, locates Sora-2 through the Models experience, deploys it, and then uses the deployment for video creation. (SRC-38 L215–226) The deployed model can then support text, reference-image, and remix workflows for video creation. (SRC-38 L229–232)
+The source treats deployment as a prerequisite step: the user starts in a Foundry project, locates Sora-2 through the Models experience, deploys it, and then uses the deployment for video creation. (SRC-38 L215–226) The deployed model can then support text, reference-image, and remix workflows for video creation. (SRC-38 L233)
 
 ## Code and API patterns
 
@@ -79,7 +79,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- **Stale-risk:** Model availability, deployment settings, supported resolutions, and supported durations are platform details that may change. (SRC-38 L224–232)
+- **Stale-risk:** Model availability, deployment settings, supported resolutions, and supported durations are platform details that may change. (SRC-38 L224–233)
 
 ## Relation to other sources
 
@@ -98,7 +98,7 @@ Not covered by this source.
 
 ## Open questions
 
-- The source does not list exact deployment setting values, supported regions, quota, or pricing. (SRC-38 L224–232)
+- The source does not list exact deployment setting values, supported regions, quota, or pricing. (SRC-38 L224–233)
 
 ## Sources
 

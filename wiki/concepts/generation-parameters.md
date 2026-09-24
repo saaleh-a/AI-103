@@ -41,7 +41,7 @@ Prompt text says what the model should do. Generation parameters tune how freely
 
 ## How it works in Azure
 
-Foundry exposes these settings in multiple places. In the Model playground, you can adjust temperature and max tokens while testing deployed models (SRC-90 L220–224). In the deployment playground, you can modify temperature, max tokens, and top-p before copying code samples (SRC-39 L255–264). In VS Code agent configuration, Temperature and Top P appear in both the Designer interface and the YAML file and remain synchronized across views (SRC-20 L233–240). In SDK calls through the Responses API, the same controls appear as request parameters (SRC-99 L245–251).
+Foundry exposes these settings in multiple places. In the Model playground, you can adjust temperature and max tokens while testing deployed models (SRC-90 L220–224). In the deployment playground, you can modify temperature, max tokens, and top-p before copying code samples (SRC-39 L252–263). In VS Code agent configuration, Temperature and Top P appear in both the Designer interface and the YAML file and remain synchronized across views (SRC-20 L233–240). In SDK calls through the Responses API, the same controls appear as request parameters (SRC-99 L245–251).
 
 For media generation, the corpus uses a broader sense of generation controls. Image generation in the playground may support resolution and reference image controls, while video generation has parameters such as prompt and video settings, resolution, duration, and reference-image requirements (SRC-86 L212–215; SRC-100 L214–226; SRC-100 L255–263).
 
@@ -50,7 +50,7 @@ For media generation, the corpus uses a broader sense of generation controls. Im
 **Synthesis:** The corpus names these parameter shapes across portal and API surfaces (SRC-20 L233–240; SRC-39 L261; SRC-99 L245–251):
 
 - `temperature`: randomness/creativity. Lower for factual or structured work; higher for creative variation (SRC-178 L273–279; SRC-99 L249).
-- `top_p` or Top P: alternative randomness/diversity control through probable-token sampling or constrained vocabulary choices (SRC-178 L276–278; SRC-20 L237–239; SRC-99 L251).
+- `top_p` or Top P: alternative randomness/diversity control through probable-token sampling or constrained vocabulary choices (SRC-178 L276–278; SRC-20 L233–235; SRC-99 L251).
 - `max tokens` or `max_output_tokens`: length cap on generated output (SRC-39 L261; SRC-99 L250).
 - Media settings: image resolution and reference image when supported; video resolution and duration in the Video playground (SRC-86 L212–215; SRC-100 L221–226).
 
@@ -73,7 +73,7 @@ For media generation, the corpus uses a broader sense of generation controls. Im
 - Changing temperature and top_p together too early. The prompt-engineering unit recommends adjusting one or the other, not both at the same time (SRC-178 L278).
 - Using higher temperature to fix missing facts. Temperature changes variation, not the model's access to current or private data (SRC-178 L273–279; SRC-19 L228–230).
 - Treating max tokens as a quality metric. It caps length; it does not make the answer more accurate (SRC-99 L250).
-- Assuming every surface uses identical names. The corpus uses Top P in the VS Code agent UI/YAML context and `top_p` in API-oriented contexts (SRC-20 L237–240; SRC-99 L251).
+- Assuming every surface uses identical names. The corpus uses Top P in the VS Code agent UI/YAML context and `top_p` in API-oriented contexts (SRC-20 L233–236; SRC-99 L251).
 - Forgetting modality differences. Image and video controls include resolution, duration, and reference media rather than only text token-sampling settings (SRC-86 L212–215; SRC-100 L221–263).
 
 ## Solution Engineering transfer

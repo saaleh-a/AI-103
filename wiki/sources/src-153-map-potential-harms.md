@@ -43,14 +43,14 @@ ingest_depth: full
 
 ## TL;DR
 
-Mapping is the first responsible generative AI stage. (SRC-153 L216) The stage identifies harms, prioritizes them, tests and verifies prioritized harms, and documents and shares verified harms. (SRC-153 L217–221) The source emphasizes services, models, fine-tuning, grounding data, documentation, impact assessment, and red-team testing as inputs to harm discovery. (SRC-153 L222–229; SRC-153 L237–242)
+Mapping is the first responsible generative AI stage. (SRC-153 L216) The stage identifies harms, prioritizes them, tests and verifies prioritized harms, and documents and shares verified harms. (SRC-153 L217–222) The source emphasizes services, models, fine-tuning, grounding data, documentation, impact assessment, and red-team testing as inputs to harm discovery. (SRC-153 L224–229; SRC-153 L237–242)
 
 ## Key claims
 
-- Relevant harms depend on services, models, fine-tuning, and grounding data. (SRC-153 L222)
-- Common harms include offensive or discriminatory content, factual inaccuracies, and support for illegal or unethical behavior. (SRC-153 L223–226)
-- Builders should consult documentation such as Azure OpenAI transparency notes and model system cards. (SRC-153 L227)
-- The Microsoft Responsible AI Impact Assessment Guide and template can help document harms. (SRC-153 L228)
+- Relevant harms depend on services, models, fine-tuning, and grounding data. (SRC-153 L224)
+- Common harms include offensive or discriminatory content, factual inaccuracies, and support for illegal or unethical behavior. (SRC-153 L225–227)
+- Builders should consult documentation such as Azure OpenAI transparency notes and model system cards. (SRC-153 L228)
+- The Microsoft Responsible AI Impact Assessment Guide and template can help document harms. (SRC-153 L229)
 - Harms should be prioritized by likelihood and impact, considering intended use and potential misuse. (SRC-153 L231–236)
 - Red-team testing deliberately probes for weaknesses and attempts to produce harmful results. (SRC-153 L237–242)
 - Verified harms should be documented, shared, maintained, and extended when new harms are found. (SRC-153 L244)
@@ -65,9 +65,9 @@ Not covered by this source.
 
 ## Key terms
 
-- **Potential harm** — a harmful output risk such as discriminatory, inaccurate, illegal, or unethical content. (SRC-153 L222–226)
+- **Potential harm** — a harmful output risk such as discriminatory, inaccurate, illegal, or unethical content. (SRC-153 L224–227)
 - **Red-team testing** — deliberate probing to produce harmful results. (SRC-153 L238–240)
-- **Impact assessment** — a recommended guide and template for documenting harms. (SRC-153 L228)
+- **Impact assessment** — a recommended guide and template for documenting harms. (SRC-153 L229)
 
 ## Decision boundaries and exam cues
 
@@ -81,7 +81,7 @@ Not covered by this source.
 ## Tensions, caveats and currency
 
 - The source says prioritization can be subjective and may require policy or legal experts. (SRC-153 L232–236)
-- External documentation and templates are referenced but not included in the capture. (SRC-153 L227–228; SRC-153 L242)
+- External documentation and templates are referenced but not included in the capture. (SRC-153 L228–229; SRC-153 L242)
 
 ## Relation to other sources
 

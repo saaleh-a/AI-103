@@ -18,7 +18,7 @@ aliases: ["tokens per minute", "TPM", "provisioned throughput units", "PTU", "to
 
 ## Summary
 
-The corpus teaches cost and throughput as model-selection and deployment trade-offs, token usage as a driver of conversational cost, and Application Insights as a place to monitor token consumption for agents. It does not substantively teach rate-limit handling, quota-increase workflows, scaling procedures or cost-monitoring dashboards, even though objective P09 names them. (SRC-188 L243–263; SRC-39 L217–226; SRC-99 L279–288; SRC-191 L130–131; SRC-223 L288–290)
+The corpus teaches cost and throughput as model-selection and deployment trade-offs, token usage as a driver of conversational cost, and Application Insights as a place to monitor token consumption for agents. It does not substantively teach quota-increase workflows, scaling procedures or cost-monitoring dashboards, even though objective P09 names them. (SRC-188 L243–263; SRC-39 L217–226; SRC-99 L279–288; SRC-191 L130–131; SRC-223 L290–292)
 
 ## The problem it solves
 
@@ -60,7 +60,7 @@ Configuration choices that affect cost and throughput include deployment type, V
 | Need predictable high throughput | Use provisioned deployments / PTUs rather than only pay-per-token standard. (SRC-39 L219; SRC-189 L304–314) |
 | Need non-interactive large overnight work | Use batch rather than interactive deployment. (SRC-189 L317–340; SRC-196 L16) |
 | Token usage unexpectedly high | Inspect context history, tool schemas, tool outputs and retrieved documents being sent each turn. (SRC-99 L279–288) |
-| Agent production cost visibility | Monitor token consumption with Application Insights integration if configured. (SRC-223 L288–290) |
+| Agent production cost visibility | Monitor token consumption with Application Insights integration if configured. (SRC-223 L290) |
 
 **Inference:** Rate-limit wording belongs here, but the corpus does not teach the actual retry/backoff pattern; do not invent it from general Azure practice.
 
@@ -100,4 +100,3 @@ Configuration choices that affect cost and throughput include deployment type, V
 ## Open questions
 
 - The corpus does not teach rate-limit errors, retry/backoff, quota request procedures, scaling runbooks or budget alert configuration. (SRC-191 L130–131)
-

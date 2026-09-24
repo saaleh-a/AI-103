@@ -18,29 +18,29 @@ aliases: ["evaluation", "evaluators", "groundedness", "relevance metrics", "flue
 
 ## Summary
 
-Model and app evaluation is the measurement loop that checks whether a model, agent, dataset, or application response is accurate, relevant, safe, grounded, fluent, coherent, and good enough to ship or improve (SRC-53 L213–219; SRC-53 L240–296).
+Model and app evaluation is the measurement loop that checks whether a model, agent, dataset, or application response is accurate, relevant, safe, grounded, fluent, coherent, and good enough to ship or improve (SRC-53 L215–221; SRC-53 L240–296).
 
 ## The problem it solves
 
-Generative AI behavior can look acceptable in a few examples while still failing on quality, safety, grounding, or user expectations. Evaluation catches those failures before production, supports continuous improvement as prompts or models change, and verifies compliance and safety requirements (SRC-53 L213–219). The AI-103 study guide also makes evaluation a recurring requirement across model performance, drift, safety events, grounding quality, fabrications, and agent behavior (SRC-191 L132–154).
+Generative AI behavior can look acceptable in a few examples while still failing on quality, safety, grounding, or user expectations. Evaluation catches those failures before production, supports continuous improvement as prompts or models change, and verifies compliance and safety requirements (SRC-53 L215–221). The AI-103 study guide also makes evaluation a recurring requirement across model performance, drift, safety events, grounding quality, fabrications, and agent behavior (SRC-191 L132–154).
 
 ## Mental model
 
-Evaluation turns subjective model behavior into evidence. Manual evaluation uses people to inspect responses and understand nuance; automated evaluation applies metrics and evaluators over test data at scale; comprehensive Foundry evaluations run jobs against models, agents, or datasets and report aggregate and per-row results (SRC-53 L220–296). The result is not merely a score: it decides whether to change prompts, try another model, add RAG, fine-tune, apply filters, or validate that a change did not regress quality (SRC-53 L288–296).
+Evaluation turns subjective model behavior into evidence. Manual evaluation uses people to inspect responses and understand nuance; automated evaluation applies metrics and evaluators over test data at scale; comprehensive Foundry evaluations run jobs against models, agents, or datasets and report aggregate and per-row results (SRC-53 L222–296). The result is not merely a score: it decides whether to change prompts, try another model, add RAG, fine-tune, apply filters, or validate that a change did not regress quality (SRC-53 L288–296).
 
 ## What the sources say
 
-- Evaluation serves quality assurance, user satisfaction, continuous improvement, and compliance or safety verification (SRC-53 L213–219).
+- Evaluation serves quality assurance, user satisfaction, continuous improvement, and compliance or safety verification (SRC-53 L215–221).
 - Manual evaluation includes interactive playground testing, side-by-side model comparison, structured review with rating criteria, and user studies. It captures subjective quality aspects that metrics alone may miss (SRC-53 L220–239).
-- Automated evaluation metrics include generation quality metrics: groundedness, relevance, coherence, and fluency (SRC-53 L240–253). A knowledge check asks which metric measures linguistic correctness and natural language quality; the listed correct answer is Fluency (SRC-145 L223–226).
-- Risk and safety metrics include self-harm, hateful and unfair content, violent content, sexual content, protected material, and indirect attack or jailbreak vulnerability (SRC-53 L254–260).
-- For content harm metrics, results aggregate as defect rate over a severity threshold, and protected material or indirect attack defect rate is true instances divided by total instances times 100 (SRC-53 L261–262).
-- AI-assisted evaluation uses a GPT model as an evaluator that analyzes deployed-model responses and assigns scores based on selected criteria (SRC-53 L263–265).
-- NLP metrics such as F1, BLEU, METEOR, ROUGE, and GLEU compare generated outputs with ground truth or reference texts and are less suitable for open-ended generation with many valid responses (SRC-53 L266–269).
-- Foundry evaluations can target a model, agent, or dataset. Model or agent evaluations need input datasets; dataset evaluations use pre-generated outputs (SRC-53 L270–278).
-- Test data can be uploaded as CSV or JSONL, selected from existing datasets, or generated synthetically from a topic description and optional uploaded files (SRC-53 L279–285).
-- Evaluation jobs run asynchronously after configuring metrics, field mappings, and system prompt, then produce aggregate scores and prompt-level details (SRC-53 L286–287).
-- The evaluator library lists Microsoft-curated and custom evaluators, supports details such as parameters and annotation prompts, and supports version management (SRC-53 L293–296).
+- Automated evaluation metrics include generation quality metrics: groundedness, relevance, coherence, and fluency (SRC-53 L238–242). A knowledge check asks which metric measures linguistic correctness and natural language quality; the listed correct answer is Fluency (SRC-145 L223–226).
+- Risk and safety metrics include self-harm, hateful and unfair content, violent content, sexual content, protected material, and indirect attack or jailbreak vulnerability (SRC-53 L243–249).
+- For content harm metrics, results aggregate as defect rate over a severity threshold, and protected material or indirect attack defect rate is true instances divided by total instances times 100 (SRC-53 L250).
+- AI-assisted evaluation uses a GPT model as an evaluator that analyzes deployed-model responses and assigns scores based on selected criteria (SRC-53 L251).
+- NLP metrics such as F1, BLEU, METEOR, ROUGE, and GLEU compare generated outputs with ground truth or reference texts and are less suitable for open-ended generation with many valid responses (SRC-53 L253–259).
+- Foundry evaluations can target a model, agent, or dataset. Model or agent evaluations need input datasets; dataset evaluations use pre-generated outputs (SRC-53 L260–266).
+- Test data can be uploaded as CSV or JSONL, selected from existing datasets, or generated synthetically from a topic description and optional uploaded files (SRC-53 L266–269).
+- Evaluation jobs run asynchronously after configuring metrics, field mappings, and system prompt, then produce aggregate scores and prompt-level details (SRC-53 L271–273).
+- The evaluator library lists Microsoft-curated and custom evaluators, supports details such as parameters and annotation prompts, and supports version management (SRC-53 L274–282).
 
 ## How it works in Azure
 
@@ -50,13 +50,13 @@ Responsible AI sources widen the purpose: reliability and safety require rigorou
 
 ## Code and configuration
 
-**Synthesis:** The corpus describes Foundry evaluation configuration more than application code. The load-bearing configuration objects are (SRC-53 L270–296; SRC-189 L761–910):
+**Synthesis:** The corpus describes Foundry evaluation configuration more than application code. The load-bearing configuration objects are (SRC-53 L260–282; SRC-189 L761–910):
 
-- Evaluation target: model, agent, or dataset (SRC-53 L270–273).
-- Dataset: uploaded CSV/JSONL, existing project dataset, or synthetic dataset generated from a topic description and optional files (SRC-53 L274–285).
-- Metrics/evaluators: quality, safety, NLP, Microsoft-curated, or custom evaluators (SRC-53 L240–269; SRC-53 L293–296).
-- Field mappings and system prompt: required to map evaluation data and model context before the asynchronous job starts (SRC-53 L286).
-- Results: aggregate scores plus details for each test prompt; episode analysis shows failed examples and recommendations for improvement (SRC-53 L287; SRC-189 L850–910).
+- Evaluation target: model, agent, or dataset (SRC-53 L260–265).
+- Dataset: uploaded CSV/JSONL, existing project dataset, or synthetic dataset generated from a topic description and optional files (SRC-53 L266–269).
+- Metrics/evaluators: quality, safety, NLP, Microsoft-curated, or custom evaluators (SRC-53 L238–259; SRC-53 L274–282).
+- Field mappings and system prompt: required to map evaluation data and model context before the asynchronous job starts (SRC-53 L271).
+- Results: aggregate scores plus details for each test prompt; episode analysis shows failed examples and recommendations for improvement (SRC-53 L273; SRC-189 L850–910).
 
 **Inference:** for app evaluation, persist the prompt, model/deployment, generation parameters, retrieval context, expected answer if any, and safety policy version with each test row so failures can be diagnosed rather than only scored.
 
@@ -65,29 +65,29 @@ Responsible AI sources widen the purpose: reliability and safety require rigorou
 | **Inference:** Scenario detail | Evaluation approach |
 |---|---|
 | Early exploration or qualitative debugging | Manual playground testing and side-by-side comparison (SRC-53 L220–225; SRC-189 L661–760). |
-| Repeatable quality evidence across many examples | Foundry evaluation job with datasets, metrics, field mappings and asynchronous results (SRC-53 L270–287). |
+| Repeatable quality evidence across many examples | Foundry evaluation job with datasets, metrics, field mappings and asynchronous results (SRC-53 L260–273). |
 | Subjective brand fit or user satisfaction | Structured human review or user studies (SRC-53 L226–239). |
-| Factual grounding in supplied context | Groundedness or Groundedness Pro (SRC-53 L246–248). |
-| Linguistic correctness | Fluency (SRC-53 L252; SRC-145 L223–226). |
-| Harmful content or jailbreak vulnerability | Risk and safety metrics and defect rate (SRC-53 L254–262). |
-| Exact-answer or reference-text comparison | NLP metrics such as F1, BLEU, METEOR, ROUGE, or GLEU (SRC-53 L266–269). |
+| Factual grounding in supplied context | Groundedness or Groundedness Pro (SRC-53 L239). |
+| Linguistic correctness | Fluency (SRC-53 L242; SRC-145 L223–226). |
+| Harmful content or jailbreak vulnerability | Risk and safety metrics and defect rate (SRC-53 L243–250). |
+| Exact-answer or reference-text comparison | NLP metrics such as F1, BLEU, METEOR, ROUGE, or GLEU (SRC-53 L253–259). |
 
-**Inference:** an exam scenario asking whether answers are based on provided context points to groundedness; whether the wording is natural and linguistically correct points to fluency; whether the answer addresses the prompt points to relevance; whether it flows logically points to coherence (SRC-53 L246–253).
+**Inference:** an exam scenario asking whether answers are based on provided context points to groundedness; whether the wording is natural and linguistically correct points to fluency; whether the answer addresses the prompt points to relevance; whether it flows logically points to coherence (SRC-53 L239–242).
 
 ## Failure modes and misconceptions
 
-- Mistaking playground success for full evaluation. Playground testing is useful but manual and qualitative; automated evaluation scales and gives consistent measurements (SRC-53 L220–225; SRC-53 L240–270).
-- Choosing NLP metrics for open-ended generation. The source says NLP metrics work best with definitive correct answers or reference texts and are less suitable for open-ended generation (SRC-53 L266–269).
+- Mistaking playground success for full evaluation. Playground testing is useful but manual and qualitative; automated evaluation scales and gives consistent measurements (SRC-53 L222–225; SRC-53 L235–271).
+- Choosing NLP metrics for open-ended generation. The source says NLP metrics work best with definitive correct answers or reference texts and are less suitable for open-ended generation (SRC-53 L253–259).
 - Evaluating without enough test data. The episode notes more samples generally improve thoroughness, even though a smaller set was used for demonstration (SRC-189 L720–735).
-- Treating a single aggregate score as the whole answer. The Foundry results include aggregate scores and details for each test prompt; the episode drills into a failed conversation and improvement suggestions (SRC-53 L287; SRC-189 L850–910).
+- Treating a single aggregate score as the whole answer. The Foundry results include aggregate scores and details for each test prompt; the episode drills into a failed conversation and improvement suggestions (SRC-53 L273; SRC-189 L850–910).
 - Optimizing without a baseline. The fine-tuning source warns that without baseline performance it is hard to detect whether a change improved or degraded behavior (SRC-95 L245–247).
 - Treating prompt instructions as sufficient safety or quality proof. The prompt source says system messages influence behavior but require testing, iteration, content filtering, and evaluation (SRC-178 L239–240).
 
 ## Solution Engineering transfer
 
-**Inference:** customer signal: the customer asks how they will know whether a model or agent is safe and accurate enough, or whether a prompt/model change made things better. Map this to evaluation datasets, metrics, and repeated runs rather than ad hoc demos (SRC-53 L213–219; SRC-53 L270–296).
+**Inference:** customer signal: the customer asks how they will know whether a model or agent is safe and accurate enough, or whether a prompt/model change made things better. Map this to evaluation datasets, metrics, and repeated runs rather than ad hoc demos (SRC-53 L215–221; SRC-53 L260–295).
 
-**Inference:** discovery question: ask what failure matters most: unsupported facts, irrelevant answers, unsafe content, poor language, user dissatisfaction, or regression after changes. That selects groundedness, relevance, safety defect rate, fluency, manual review, or benchmark-style regression tests (SRC-53 L226–269).
+**Inference:** discovery question: ask what failure matters most: unsupported facts, irrelevant answers, unsafe content, poor language, user dissatisfaction, or regression after changes. That selects groundedness, relevance, safety defect rate, fluency, manual review, or benchmark-style regression tests (SRC-53 L226–259).
 
 **Inference:** trade-off: manual review is slower but sees nuance; automated evaluation scales but depends on metric fit, data quality, and evaluator configuration (SRC-53 L220–270).
 

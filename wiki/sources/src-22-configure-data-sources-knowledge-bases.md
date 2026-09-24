@@ -54,12 +54,12 @@ Foundry IQ supports six primary knowledge-base data source types: Azure AI Searc
 - Web access grounds an agent in real-time internet content via Bing, especially for recent or frequently changing information. (SRC-22 L37–48)
 - SharePoint Remote queries SharePoint sites and libraries in real time and respects Microsoft 365 governance and existing SharePoint permissions. (SRC-22 L49–61)
 - SharePoint Indexed preprocesses SharePoint content into Azure AI Search for faster responses and advanced search features. (SRC-22 L62–70)
-- OneLake connects Foundry IQ to unstructured data stored in Microsoft Fabric lakehouses. (SRC-22 L71–74)
+- OneLake connects Foundry IQ to unstructured data stored in Microsoft Fabric lakehouses. (SRC-22 L69–70)
 - Multiple sources can be combined in a single knowledge base. (SRC-22 L82–83)
 
 ## How it works
 
-The source divides sources by access pattern. (SRC-22 L11–14) Indexed options such as Azure AI Search Index and SharePoint Indexed rely on preprocessed searchable content. (SRC-22 L15–24; SRC-22 L62–70) Direct options such as Blob Storage and OneLake connect files or lakehouse content to the knowledge base. (SRC-22 L25–36; SRC-22 L71–74) Real-time options such as Web and SharePoint Remote query current external or Microsoft 365 content at answer time. (SRC-22 L37–61)
+The source divides sources by access pattern. (SRC-22 L11–14) Indexed options such as Azure AI Search Index and SharePoint Indexed rely on preprocessed searchable content. (SRC-22 L15–24; SRC-22 L62–70) Direct options such as Blob Storage and OneLake connect files or lakehouse content to the knowledge base. (SRC-22 L25–36; SRC-22 L69–81) Real-time options such as Web and SharePoint Remote query current external or Microsoft 365 content at answer time. (SRC-22 L37–61)
 
 ## Code and API patterns
 
@@ -72,7 +72,7 @@ Not covered by this source.
 - **Web** — a real-time Bing-backed source for current public information. (SRC-22 L37–48)
 - **SharePoint Remote** — real-time SharePoint querying with Microsoft 365 governance and existing permission handling. (SRC-22 L49–61)
 - **SharePoint Indexed** — SharePoint content indexed into Azure AI Search for custom pipelines and advanced search. (SRC-22 L62–70)
-- **OneLake** — access to unstructured data stored in a Microsoft Fabric lakehouse. (SRC-22 L71–74)
+- **OneLake** — access to unstructured data stored in a Microsoft Fabric lakehouse. (SRC-22 L69–70)
 
 ## Decision boundaries and exam cues
 
@@ -80,7 +80,7 @@ Not covered by this source.
 - **Inference:** Choose SharePoint Indexed when the scenario asks for advanced search, custom pipelines, custom analyzers, enrichment pipelines, or combining SharePoint data with other sources. (SRC-22 L62–70; SRC-22 L75–83)
 - **Inference:** Choose Azure AI Search Index when the organization already has an Azure AI Search investment or needs semantic ranking, custom scoring, faceting, or multilingual search. (SRC-22 L15–24; SRC-22 L75–83)
 - **Inference:** Choose Web for public, current information, but avoid relying on it as the controlled source when accuracy and source verification are critical. (SRC-22 L37–48)
-- **Inference:** Choose OneLake when the content is in Microsoft Fabric and the agent should reference BI reports, data documentation, analytical findings, or research outputs. (SRC-22 L71–74)
+- **Inference:** Choose OneLake when the content is in Microsoft Fabric and the agent should reference BI reports, data documentation, analytical findings, or research outputs. (SRC-22 L69–78)
 
 ## Assessment items
 

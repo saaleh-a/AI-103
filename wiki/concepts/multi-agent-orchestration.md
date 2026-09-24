@@ -28,7 +28,7 @@ The dedicated orchestration unit explains the same limitation more generally: a 
 
 ## Mental model
 
-Think of orchestration as the traffic system around a team of agents: agents do specialized work, while the orchestration pattern decides whether they run in parallel, in a fixed chain, through dynamic handoffs, in a managed shared conversation, or under an adaptive planning manager. (SRC-231 L248–252)
+Think of orchestration as the traffic system around a team of agents: agents do specialized work, while the orchestration pattern decides whether they run in parallel, in a fixed chain, through dynamic handoffs, in a managed shared conversation, or under an adaptive planning manager. (SRC-231 L250–254)
 
 In the Agent Framework layer, that traffic system is implemented as workflows: executors do the work, edges define message flow, and events expose progress, errors, and performance for observability and debugging. (SRC-231 L229–244)
 
@@ -58,30 +58,30 @@ The corpus does not provide one universal `MultiAgentOrchestration` class. Inste
 
 **Inference:** Do not treat every agent app as a multi-agent orchestration problem. If one agent can do the work effectively, the sequential unit names that as a reason to avoid even a simple multi-agent pipeline. (SRC-245 L229)
 
-**Inference:** The pattern choice is the exam-discrimination step: independent parallel approaches point to concurrent, known ordered dependencies point to sequential, dynamic one-at-a-time expert routing points to handoff, managed discussion or human participation points to group chat, and open-ended adaptive planning points to Magentic. (SRC-231 L248–252; SRC-241 L225–236; SRC-245 L222–233; SRC-243 L224–234; SRC-242 L223–240; SRC-244 L224–236)
+**Inference:** The pattern choice is the exam-discrimination step: independent parallel approaches point to concurrent, known ordered dependencies point to sequential, dynamic one-at-a-time expert routing points to handoff, managed discussion or human participation points to group chat, and open-ended adaptive planning points to Magentic. (SRC-231 L250–254; SRC-241 L226–240; SRC-245 L224–235; SRC-243 L224–234; SRC-242 L223–240; SRC-244 L224–236)
 
 
 ## Failure modes and misconceptions
 
-A common mistake is mixing workflow mechanics with orchestration patterns: fan-out and fan-in are edge types, while concurrent orchestration is a higher-level pattern that uses parallel agent execution and output aggregation. (SRC-231 L236–248; SRC-241 L218–220)
+A common mistake is mixing workflow mechanics with orchestration patterns: fan-out and fan-in are edge types, while concurrent orchestration is a higher-level pattern that uses parallel agent execution and output aggregation. (SRC-231 L236–250; SRC-241 L218–220)
 
-Another mistake is assuming all multi-agent work means free collaboration. The corpus separates fixed pipelines, parallel independent work, handoffs, group conversation, and manager-led planning as distinct patterns with different anti-fits. (SRC-231 L248–252; SRC-241 L232–236; SRC-245 L228–233; SRC-242 L235–240; SRC-244 L231–236)
+Another mistake is assuming all multi-agent work means free collaboration. The corpus separates fixed pipelines, parallel independent work, handoffs, group conversation, and manager-led planning as distinct patterns with different anti-fits. (SRC-231 L250–254; SRC-241 L225–240; SRC-245 L231–235; SRC-242 L235–240; SRC-244 L231–236)
 
 ## Solution Engineering transfer
 
-**Inference:** Customer signal: "one bot cannot cover every specialty," "we need several expert perspectives," or "the route depends on what the customer asks" should trigger discovery about whether the path is fixed, parallel, conversational, or open-ended. (SRC-231 L222–226; SRC-241 L225–236; SRC-243 L224–234)
+**Inference:** Customer signal: "one bot cannot cover every specialty," "we need several expert perspectives," or "the route depends on what the customer asks" should trigger discovery about whether the path is fixed, parallel, conversational, or open-ended. (SRC-231 L222–226; SRC-241 L226–240; SRC-243 L224–234)
 
-**Inference:** Trade-off: multi-agent designs can improve specialization and collaborative problem solving, but they add coordination, quota, routing, completion, and loop risks that simpler single-agent or fixed workflows may avoid. (SRC-199 L220; SRC-241 L234–236; SRC-242 L237–240; SRC-243 L232–234; SRC-244 L234–236)
+**Inference:** Trade-off: multi-agent designs can improve specialization and collaborative problem solving, but they add coordination, quota, routing, completion, and loop risks that simpler single-agent or fixed workflows may avoid. (SRC-199 L220; SRC-241 L237–240; SRC-242 L237–240; SRC-243 L232–234; SRC-244 L234–235)
 
 ## Connections
 
 - [[microsoft-agent-framework]] — the SDK surface used for these orchestration patterns. (SRC-231 L254–264)
 - [[agent-framework-workflows]] — workflows, executors, edges, and events are the underlying control model. (SRC-231 L229–244)
-- [[concurrent-orchestration]] — the parallel independent pattern. (SRC-231 L248)
-- [[sequential-orchestration]] — the fixed pipeline pattern. (SRC-231 L249)
-- [[handoff-orchestration]] — the dynamic one-agent-at-a-time routing pattern. (SRC-231 L250)
-- [[group-chat-orchestration]] — the managed shared conversation pattern. (SRC-231 L251)
-- [[magentic-orchestration]] — the adaptive manager-led pattern. (SRC-231 L252)
+- [[concurrent-orchestration]] — the parallel independent pattern. (SRC-231 L254)
+- [[sequential-orchestration]] — the fixed pipeline pattern. (SRC-231 L251)
+- [[handoff-orchestration]] — the dynamic one-agent-at-a-time routing pattern. (SRC-231 L254)
+- [[group-chat-orchestration]] — the managed shared conversation pattern. (SRC-231 L253)
+- [[magentic-orchestration]] — the adaptive manager-led pattern. (SRC-231 L254)
 - [[orchestration-patterns-compared]] — synthesis page for choosing among the five exam-confusable patterns.
 - [[src-231-understand-agent-orchestration]] — the central source page for this concept.
 - *Also linked from:* [[a2a-agent-implementation]] · [[agent2agent-protocol]] · [[overview]] · [[workflow-patterns]]

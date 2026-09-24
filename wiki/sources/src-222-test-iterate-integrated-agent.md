@@ -48,15 +48,15 @@ The Foundry playground is useful for development testing, but it does not simula
 
 ## Key claims
 
-- Ongoing testing and monitoring help ensure the published agent performs reliably for users. (SRC-222 L216)
+- Ongoing testing and monitoring help ensure the published agent performs reliably for users. (SRC-222 L218)
 - After publishing, the source says to test in Teams for UI rendering, authentication flows, production response times, and published identity permissions. (SRC-222 L217–220)
-- Multiple-user testing can reveal phrasing differences, confusing responses, and platform-specific issues across desktop, web, and mobile Teams clients. (SRC-222 L221–222)
+- Multiple-user testing can reveal phrasing differences, confusing responses, and platform-specific issues across desktop, web, and mobile Teams clients. (SRC-222 L225–226)
 - If an agent does not respond in Teams, possible causes include Bot Service not running, bad Bot Service configuration, or network issues. (SRC-222 L223–231)
 - If tools work in Foundry but fail in Teams, the likely cause is missing permissions on the published agent identity. (SRC-222 L232–238)
 - If users cannot find the agent, possible causes include wrong publish scope, pending admin approval, or tenant policies that block custom apps. (SRC-222 L239–247)
-- Slow responses can come from complex instructions, large tool queries, or network latency. (SRC-222 L248–255)
-- Foundry metrics include request volume and patterns, response times, error rates, and tool invocation statistics. (SRC-222 L258–265)
-- Application Insights can trace conversations, analyze error patterns, measure end-to-end latency, and set up anomaly alerts. (SRC-222 L266–271)
+- Slow responses can come from complex instructions, large tool queries, or network latency. (SRC-222 L253–257)
+- Foundry metrics include request volume and patterns, response times, error rates, and tool invocation statistics. (SRC-222 L265–269)
+- Application Insights can trace conversations, analyze error patterns, measure end-to-end latency, and set up anomaly alerts. (SRC-222 L271–276)
 - User feedback channels and a reusable testing checklist support iteration and release quality. (SRC-222 L272–285)
 
 ## How it works
@@ -73,8 +73,8 @@ Not covered by this source.
 
 ## Key terms
 
-- **Foundry metrics** — portal metrics for request volume, response times, error rates, and tool invocation statistics. (SRC-222 L258–265)
-- **Application Insights integration** — configured monitoring that can trace conversations, analyze errors, measure latency, and alert on anomalies. (SRC-222 L266–271)
+- **Foundry metrics** — portal metrics for request volume, response times, error rates, and tool invocation statistics. (SRC-222 L265–269)
+- **Application Insights integration** — configured monitoring that can trace conversations, analyze errors, measure latency, and alert on anomalies. (SRC-222 L271–276)
 - **Testing checklist** — an agent-specific list of release scenarios used before each release for consistent quality. (SRC-222 L284–285)
 
 ## Decision boundaries and exam cues
@@ -82,7 +82,7 @@ Not covered by this source.
 - **Inference:** If the symptom is tools failing only in Teams, choose published-agent identity permissions rather than agent instructions as the first check. (SRC-222 L232–238)
 - **Inference:** If users cannot find the agent, check publish scope, organization-scope approval, and tenant custom-app policies. (SRC-222 L239–247)
 - **Inference:** If the question asks what to monitor after deployment, Foundry metrics and Application Insights are directly named monitoring paths. (SRC-222 L258–271)
-- **Inference:** If quality differs across users or clients, test with multiple users and Teams desktop, web, and mobile clients. (SRC-222 L221–222)
+- **Inference:** If quality differs across users or clients, test with multiple users and Teams desktop, web, and mobile clients. (SRC-222 L225–226)
 
 ## Assessment items
 
@@ -90,7 +90,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source says updates for organization-scope deployments may require re-approval depending on tenant policies, so deployment iteration can be organization-policy dependent. (SRC-222 L280–282)
+- The source says updates for organization-scope deployments may require re-approval depending on tenant policies, so deployment iteration can be organization-policy dependent. (SRC-222 L283)
 - The source says `If you've configured Application Insights integration`, so tracing and alerts depend on prior configuration not detailed in this unit. (SRC-222 L266–271)
 
 ## Relation to other sources

@@ -43,15 +43,15 @@ ingest_depth: full
 
 ## TL;DR
 
-The Foundry Models catalog is the discovery hub for more than 1,900 models, with filters for provider, capability, task, fine-tuning method, industry, and collection. (SRC-89 L213–225)
+The Foundry Models catalog is the discovery hub for more than 1,900 models, with filters for provider, capability, task, fine-tuning method, industry, and collection. (SRC-89 L215–227)
 
 ## Key claims
 
-- The model catalog is a central hub for discovering and comparing AI models, and it requires filtering because the catalog contains more than 1,900 models. (SRC-89 L213)
-- The catalog separates models sold directly by Azure from models provided by partners and the community, with different licensing and pricing implications. (SRC-89 L214–216)
-- Model cards expose provider, capabilities, benchmark metrics, responsible AI considerations, and deployment options. (SRC-89 L217–218)
+- The model catalog is a central hub for discovering and comparing AI models, and it requires filtering because the catalog contains more than 1,900 models. (SRC-89 L215)
+- The catalog separates models sold directly by Azure from models provided by partners and the community, with different licensing and pricing implications. (SRC-89 L216–218)
+- Model cards expose provider, capabilities, benchmark metrics, responsible AI considerations, and deployment options. (SRC-89 L220)
 - Catalog filters include collection, capabilities, source, inference tasks, fine-tuning methods, and industry. (SRC-89 L219–225)
-- The unit distinguishes LLMs for complex reasoning and extensive context from SLMs for efficiency, lower cost, speed, and edge or lower-end hardware scenarios. (SRC-89 L226–228)
+- The unit distinguishes LLMs for complex reasoning and extensive context from SLMs for efficiency, lower cost, speed, and edge or lower-end hardware scenarios. (SRC-89 L229–231)
 - Specialized catalog models include embeddings, image generation, video generation, image analysis, text to speech, and speech to text. (SRC-89 L232–238)
 
 ## How it works
@@ -67,14 +67,14 @@ Not covered by this source.
 ## Key terms
 
 - Foundry Models sold directly by Azure — Azure-billed models, including Azure OpenAI models and models from Microsoft and other providers. (SRC-89 L214–215)
-- Foundry Models from partners and community — models from trusted partners and the community with their own licensing and pricing. (SRC-89 L216)
-- Model card — the catalog page showing provider, capabilities, benchmarks, responsible AI considerations, and deployment options. (SRC-89 L217–218)
-- Embedding models — models that convert text into numerical representations for semantic search, recommendations, and RAG. (SRC-89 L233)
+- Foundry Models from partners and community — models from trusted partners and the community with their own licensing and pricing. (SRC-89 L218)
+- Model card — the catalog page showing provider, capabilities, benchmarks, responsible AI considerations, and deployment options. (SRC-89 L220)
+- Embedding models — models that convert text into numerical representations for semantic search, recommendations, and RAG. (SRC-89 L237)
 
 ## Decision boundaries and exam cues
 
 - **Inference:** If the requirement is to discover available models by capability, task, provider, or industry, start with the model catalog filters. (SRC-89 L217–225)
-- **Inference:** If the scenario prioritizes deep reasoning or extensive context, the source points toward LLMs; if it prioritizes cost, speed, or lower-end hardware, it points toward SLMs. (SRC-89 L227–228)
+- **Inference:** If the scenario prioritizes deep reasoning or extensive context, the source points toward LLMs; if it prioritizes cost, speed, or lower-end hardware, it points toward SLMs. (SRC-89 L230–231)
 - **Inference:** If the task is semantic search or RAG retrieval rather than generating an answer directly, the catalog model type to recognize is an embedding model. (SRC-89 L233)
 
 ## Assessment items

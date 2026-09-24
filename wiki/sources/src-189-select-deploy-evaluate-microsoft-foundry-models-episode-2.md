@@ -102,8 +102,8 @@ Not covered by this source; the episode is a portal demonstration rather than a 
 ## Assessment items
 
 1. Which model benchmark indicates the model's ability to process prompts and return comprehensive responses quickly? Answer: throughput. (SRC-189 L911–919)
-2. Which deployment in Microsoft Foundry is best for general use while offering the largest quota among the available choices? Answer: Global Standard. (SRC-189 L920–930)
-3. Which evaluation metric measures linguistic correctness and natural language quality? Answer: fluency. (SRC-189 L931–941)
+2. Which deployment in Microsoft Foundry is best for general use while offering the largest quota among the available choices? Answer: Global Standard. (SRC-189 L935–941)
+3. Which evaluation metric measures linguistic correctness and natural language quality? Answer: fluency. (SRC-189 L944–946)
 
 ## Tensions, caveats and currency
 

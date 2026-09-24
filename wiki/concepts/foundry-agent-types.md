@@ -18,11 +18,11 @@ objective_gaps: []
 
 ## Summary
 
-Microsoft Foundry supports declarative agents and hosted agents. Declarative agents include prompt-based agents and workflow agents; hosted agents are containerized agents created and deployed in code but hosted by the Foundry platform (SRC-230 L263–269). The module summary also contrasts declarative agents configured through visual designers and YAML with hosted agents created and deployed through code (SRC-212 L217–219).
+Microsoft Foundry supports declarative agents and hosted agents. Declarative agents include prompt-based agents and workflow agents; hosted agents are containerized agents created and deployed in code but hosted by the Foundry platform (SRC-230 L259–263). The module summary also contrasts declarative agents configured through visual designers and YAML with hosted agents created and deployed through code (SRC-212 L217–219).
 
 ## The problem it solves
 
-Teams need different levels of control. A quick assistant can be configured through instructions and tools, a complex process may need a multi-agent YAML workflow, and custom logic may need a code-deployed container while still using managed Foundry infrastructure (SRC-230 L258–269; SRC-84 L258–280).
+Teams need different levels of control. A quick assistant can be configured through instructions and tools, a complex process may need a multi-agent YAML workflow, and custom logic may need a code-deployed container while still using managed Foundry infrastructure (SRC-230 L259–263; SRC-84 L258–280).
 
 ## Mental model
 
@@ -30,9 +30,9 @@ Teams need different levels of control. A quick assistant can be configured thro
 
 ## What the sources say
 
-- SRC-230 says prompt-based declarative agents are single agents configured with a model, instructions, tools, and prompts, and are the most common type and module focus (SRC-230 L263–267).
-- SRC-230 says workflow agents are multi-agent orchestrations defined in YAML for complex collaboration (SRC-230 L265–268).
-- SRC-230 says hosted agents are containerized agents created and deployed in code, giving full control over logic and execution while the platform manages infrastructure (SRC-230 L268–269).
+- SRC-230 says prompt-based declarative agents are single agents configured with a model, instructions, tools, and prompts, and are the most common type and module focus (SRC-230 L260–262).
+- SRC-230 says workflow agents are multi-agent orchestrations defined in YAML for complex collaboration (SRC-230 L262).
+- SRC-230 says hosted agents are containerized agents created and deployed in code, giving full control over logic and execution while the platform manages infrastructure (SRC-230 L263).
 - SRC-20 notes that its VS Code configuration workflow applies to declarative prompt-based agents, while hosted agents are configured through code and workflow agents use a different YAML schema (SRC-20 L218–224).
 - SRC-190 says the VS Code extension Resources section includes declarative agents and hosted agents, and its Tools section includes deployment of hosted agents (SRC-190 L220–248).
 
@@ -46,16 +46,16 @@ Declarative prompt agents have YAML configuration with metadata, model configura
 
 ## Decision boundaries
 
-- Prompt-based declarative agent: choose it for a single assistant with instructions, a model, and tools; it is a single configured agent and the most common starting point (SRC-230 L263–267).
-- Workflow agent: choose it when multiple agents collaborate in an explicit process; the corpus defines workflow agents as multi-agent orchestrations in YAML (SRC-230 L265–268).
-- Hosted agent: choose it when you need full control over logic and execution in code; hosted agents are containerized and created/deployed in code while Foundry manages infrastructure (SRC-230 L268–269).
+- Prompt-based declarative agent: choose it for a single assistant with instructions, a model, and tools; it is a single configured agent and the most common starting point (SRC-230 L260–262).
+- Workflow agent: choose it when multiple agents collaborate in an explicit process; the corpus defines workflow agents as multi-agent orchestrations in YAML (SRC-230 L262).
+- Hosted agent: choose it when you need full control over logic and execution in code; hosted agents are containerized and created/deployed in code while Foundry manages infrastructure (SRC-230 L263).
 
 **Inference:** If the scenario emphasizes visual configuration or YAML for a single agent, think prompt agent. If it emphasizes orchestration among several agents, think workflow agent. If it emphasizes custom runtime logic or containerized code, think hosted agent.
 
 ## Failure modes and misconceptions
 
 - Confusing all YAML as the same: SRC-20 says declarative prompt agents have the configuration workflow shown there, but workflow agents use a different YAML schema (SRC-20 L218–224).
-- Assuming hosted agents are unmanaged: SRC-230 says the platform still manages infrastructure for hosted agents (SRC-230 L268–269).
+- Assuming hosted agents are unmanaged: SRC-230 says the platform still manages infrastructure for hosted agents (SRC-230 L263).
 - Treating portal vs VS Code as agent types: SRC-84 says both surfaces support the same overall workflow and differ mainly by interface style and team needs (SRC-84 L258–280).
 
 ## Solution Engineering transfer
@@ -84,4 +84,3 @@ Declarative prompt agents have YAML configuration with metadata, model configura
 ## Open questions
 
 - The corpus names workflow agents and their YAML schema but does not include a complete workflow-agent schema on this page set; see [[foundry-workflows]] for workflow-specific coverage.
-

@@ -62,7 +62,7 @@ Not covered by this source.
 
 ## Key terms
 
-- **Group Chat** — one answer option for collaborative problem solving. (SRC-143 L15–18)
+- **Group Chat** — one answer option for collaborative problem solving. (SRC-143 L14–17)
 - **Handoff** — one answer option for dynamic transfer of control based on context or rules. (SRC-143 L19–22)
 
 ## Decision boundaries and exam cues
@@ -103,4 +103,3 @@ Not covered by this source.
 ## Sources
 
 - SRC-143 — raw file: [[143-Knowledge check - Training - Microsoft Learn]]
-

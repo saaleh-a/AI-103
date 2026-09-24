@@ -32,7 +32,7 @@ The episode frames it as “group chat, but one generation past”: an orchestra
 
 ## What the sources say
 
-SRC-231 defines Magentic as a manager-driven approach that plans, delegates, and adapts across specialized agents for complex open-ended problems where the solution path evolves. (SRC-231 L252)
+SRC-231 defines Magentic as a manager-driven approach that plans, delegates, and adapts across specialized agents for complex open-ended problems where the solution path evolves. (SRC-231 L254)
 
 SRC-244 says the manager decides the next agent based on evolving context, task progress, and agent capabilities; it also maintains shared context, tracks progress, and adapts the workflow in real time. (SRC-244 L218–220)
 
@@ -52,7 +52,7 @@ The code shape in the corpus is: define specialized agents such as `ChatAgent`, 
 
 **Inference:** Magentic versus group chat is decided by planning burden. Group chat is a managed conversation; Magentic is manager-led planning and adaptive delegation with a ledger for evolving open-ended work. (SRC-242 L218–226; SRC-244 L218–230)
 
-**Inference:** Magentic versus sequential is decided by whether the path is fixed. Sequential is a predetermined pipeline; Magentic is for cases where the solution path evolves and the plan is built during execution. (SRC-245 L218–220; SRC-244 L218–230)
+**Inference:** Magentic versus sequential is decided by whether the path is fixed. Sequential is a predetermined pipeline; Magentic is for cases where the solution path evolves and the plan is built during execution. (SRC-245 L220–221; SRC-244 L218–230)
 
 
 ## Failure modes and misconceptions
@@ -61,19 +61,19 @@ Do not choose Magentic simply because the task is multi-agent. The source explic
 
 Magentic trades speed for planning. If fast execution is the priority, the source says to avoid this method because it emphasizes planning over fast execution. (SRC-244 L234)
 
-Loops and stalls are first-class risks: the source mentions stall limits in implementation and says frequent stalls or loops without clear resolution are an avoid condition. (SRC-244 L236, L241)
+Loops and stalls are first-class risks: the source mentions stall limits in implementation and says frequent stalls or loops without clear resolution are an avoid condition. (SRC-244 L235, L240)
 
 ## Solution Engineering transfer
 
 **Inference:** Customer signal: "we need the system to figure out the plan, decide which tools or specialists to use, and document its approach" points to Magentic. "We just need a transparent debate or maker-checker review" points to group chat. (SRC-244 L220–230; SRC-242 L223–244)
 
-**Inference:** Discovery question: "Is the value in adaptive planning, or can we define the route upfront?" decides between Magentic and lighter orchestration patterns. (SRC-244 L224–236; SRC-245 L218–220)
+**Inference:** Discovery question: "Is the value in adaptive planning, or can we define the route upfront?" decides between Magentic and lighter orchestration patterns. (SRC-244 L224–236; SRC-245 L220–221)
 
 ## Connections
 
-- [[multi-agent-orchestration]] — Magentic is one supported Agent Framework pattern. (SRC-231 L252)
+- [[multi-agent-orchestration]] — Magentic is one supported Agent Framework pattern. (SRC-231 L254)
 - [[group-chat-orchestration]] — closest neighbour: managed conversation without the same ledger/planning emphasis. (SRC-242 L218–226; SRC-244 L218–221)
-- [[sequential-orchestration]] — contrast: fixed path instead of evolving plan. (SRC-244 L231; SRC-245 L218–220)
+- [[sequential-orchestration]] — contrast: fixed path instead of evolving plan. (SRC-244 L231; SRC-245 L220–221)
 - [[agent-framework-workflows]] — implementation streams workflow events and final output. (SRC-244 L239–244)
 - [[orchestration-patterns-compared]] — side-by-side discrimination set for the five patterns.
 - [[src-244-magentic-orchestration]] — source page for this pattern.

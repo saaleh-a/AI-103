@@ -18,23 +18,23 @@ objective_gaps: []
 
 ## Summary
 
-Microsoft Foundry Agent Service is the managed Foundry service for building, deploying, and scaling AI agents without managing underlying compute and storage resources (SRC-230 L258–262). It supports agents configured through the Foundry portal, Visual Studio Code, SDK/framework code, tools, service-managed conversation state, observability, security, and publication to user-facing channels (SRC-84 L258–280; SRC-230 L270–276; SRC-232 L216–252).
+Microsoft Foundry Agent Service is the managed Foundry service for building, deploying, and scaling AI agents without managing underlying compute and storage resources (SRC-230 L256–257). It supports agents configured through the Foundry portal, Visual Studio Code, SDK/framework code, tools, service-managed conversation state, observability, security, and publication to user-facing channels (SRC-84 L258–280; SRC-230 L267–273; SRC-232 L216–252).
 
 ## What it is
 
-The corpus describes the service as a fully managed platform for secure, high-quality AI agents that are tailored with custom instructions and advanced tools (SRC-230 L258–262). It is also the infrastructure where a Foundry-built agent runs before and after publishing; publishing promotes the development asset into an Agent Application resource with a stable endpoint, independent identity, and governance capabilities (SRC-232 L216–225).
+The corpus describes the service as a fully managed platform for secure, high-quality AI agents that are tailored with custom instructions and advanced tools (SRC-230 L256). It is also the infrastructure where a Foundry-built agent runs before and after publishing; publishing promotes the development asset into an Agent Application resource with a stable endpoint, independent identity, and governance capabilities (SRC-232 L216–225).
 
 ## What the sources say
 
 - SRC-129 introduces the service as a solution for healthcare-style agent automation where the team needs security and wants to avoid managing infrastructure (SRC-129 L214–220).
-- SRC-230 gives the main definition, says the service reduces the coding effort that standard APIs previously required, and says agents can be built through the Foundry portal or applications with fewer than 50 lines of code (SRC-230 L258–262).
+- SRC-230 gives the main definition, says the service reduces the coding effort that standard APIs previously required, and says agents can be built through the Foundry portal or applications with fewer than 50 lines of code (SRC-230 L256–257).
 - SRC-84 says the Foundry portal and VS Code extension both support the consistent workflow of connecting to a project, creating an agent, configuring instructions, adding tools, testing, iterating, deploying, and integrating into applications (SRC-84 L258–266).
 - SRC-232 says publishing creates an Agent Application resource with a dedicated invocation URL, distinct Microsoft Entra identity, and user data isolation (SRC-232 L216–225).
 - SRC-234 and SRC-34 position Foundry Agent Service as the recommended production provider for Microsoft Agent Framework when service-side conversation history matters (SRC-234 L230–238; SRC-34 L216–258).
 
 ## Capabilities and components
 
-Core agent runtime capabilities include automatic tool calling, securely managed conversation state through the Responses API, a tool catalog, model selection, enterprise-grade security, storage choices, and observability/tracing (SRC-230 L270–276). The service supports declarative prompt agents, workflow agents, and hosted agents (SRC-230 L263–269). Tools can be built-in, catalog, or custom, including Code Interpreter, File Search, Bing Web Search, Azure AI Search, OpenAPI tools, and MCP servers (SRC-91 L218–297).
+Core agent runtime capabilities include automatic tool calling, securely managed conversation state through the Responses API, a tool catalog, model selection, enterprise-grade security, storage choices, and observability/tracing (SRC-230 L267–273). The service supports declarative prompt agents, workflow agents, and hosted agents (SRC-230 L260–263). Tools can be built-in, catalog, or custom, including Code Interpreter, File Search, Bing Web Search, Azure AI Search, OpenAPI tools, and MCP servers (SRC-91 L218–297).
 
 Publishing adds an Agent Application layer with a stable invocation URL, a distinct Entra identity, and routing across agent versions without changing the public endpoint (SRC-232 L216–225). For Microsoft 365 publication, Foundry creates an Azure Bot Service resource, a Microsoft 365 publishing package, and a Microsoft Entra ID application, making the agent discoverable in the Teams agent store (SRC-232 L226–239).
 
@@ -48,10 +48,10 @@ Framework use connects Microsoft Agent Framework to a Foundry project with a pro
 
 ## Decision boundaries
 
-- Plain chat app boundary: choose Foundry Agent Service when the solution needs managed agents, tool calling, service-managed state, deployment, tracing, or publication (SRC-230 L270–276; SRC-232 L216–252). **Inference:** choose a plain chat app when the application owns retrieval, tool execution, state, and deployment.
+- Plain chat app boundary: choose Foundry Agent Service when the solution needs managed agents, tool calling, service-managed state, deployment, tracing, or publication (SRC-230 L267–273; SRC-232 L216–252). **Inference:** choose a plain chat app when the application owns retrieval, tool execution, state, and deployment.
 - Microsoft Agent Framework boundary: choose Foundry Agent Service for managed hosting, conversation history, built-in tools, identity integration, and production runtime (SRC-34 L216–258; SRC-234 L230–238). Choose Microsoft Agent Framework for code-first SDK abstraction, provider-agnostic chat clients, explicit workflow/orchestration patterns, or integration of agents from multiple sources (SRC-237 L220–232).
 - Foundry portal boundary: use the portal for visual creation, quick prototyping, centralized management, or stakeholder review (SRC-84 L220–232). Use VS Code for Git-tracked YAML, developer-centric workflow, local development, or code-adjacent iteration (SRC-84 L233–257).
-- Microsoft 365 Agents Toolkit boundary: direct Foundry publishing fits when agent logic remains in Foundry (SRC-232 L234–239). Agents Toolkit fits custom SSO, advanced middleware logic, or multi-environment deployment pipelines (SRC-232 L240–244).
+- Microsoft 365 Agents Toolkit boundary: direct Foundry publishing fits when agent logic remains in Foundry (SRC-232 L235–239). Agents Toolkit fits custom SSO, advanced middleware logic, or multi-environment deployment pipelines (SRC-232 L239).
 
 ## Naming and currency
 
@@ -101,6 +101,5 @@ Framework use connects Microsoft Agent Framework to a Foundry project with a pro
 
 ## Open questions
 
-- The corpus names “fewer than 50 lines of code” for app integration but does not include the complete code sample on the service overview page (SRC-230 L258–262).
+- The corpus names “fewer than 50 lines of code” for app integration but does not include the complete code sample on the service overview page (SRC-230 L257).
 - The corpus lists expandable tables for tool catalogs, provider matrices, and publishing scopes, but some capture tables are collapsed and not available as evidence in the raw text (SRC-91 L263–270; SRC-232 L245–247; SRC-237 L228–232).
-

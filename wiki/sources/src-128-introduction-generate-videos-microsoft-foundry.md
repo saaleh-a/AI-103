@@ -51,7 +51,7 @@ The introduction says generative AI has expanded beyond text and images into vid
 - Generative AI has expanded beyond text and images to video creation. (SRC-128 L212)
 - Sora 2 in Microsoft Foundry can generate realistic and imaginative video scenes. (SRC-128 L212–213)
 - Sora 2 can use text prompts, reference images, or remixing existing videos. (SRC-128 L213)
-- The module teaches deploying Sora 2, writing effective prompts, and building a Python application that creates videos programmatically with the OpenAI SDK. (SRC-128 L214)
+- The module teaches deploying Sora 2, writing effective prompts, and building a Python application that creates videos programmatically with the OpenAI SDK. (SRC-128 L213)
 
 ## How it works
 
@@ -59,19 +59,19 @@ The source frames video generation as an extension of generative media workflows
 
 ## Code and API patterns
 
-The source names a Python application and the OpenAI SDK as part of the module outcome, but it does not show code in the introduction. (SRC-128 L214)
+The source names a Python application and the OpenAI SDK as part of the module outcome, but it does not show code in the introduction. (SRC-128 L213)
 
 ## Key terms
 
 - **Sora 2:** the video-generation model named for Microsoft Foundry. (SRC-128 L212–214)
 - **Reference images:** one input type named for Sora 2 video generation. (SRC-128 L213)
 - **Remixing existing videos:** one named way to generate or revise video scenes. (SRC-128 L213)
-- **OpenAI SDK:** the SDK named for building a Python video-generation application. (SRC-128 L214)
+- **OpenAI SDK:** the SDK named for building a Python video-generation application. (SRC-128 L213)
 
 ## Decision boundaries and exam cues
 
 - **Inference:** Choose Sora 2 when the requirement is video creation from text, reference images, or existing videos, rather than still-image generation. (SRC-128 L212–214)
-- **Inference:** If a scenario asks for programmatic video creation in Python, this module points to the OpenAI SDK path. (SRC-128 L214)
+- **Inference:** If a scenario asks for programmatic video creation in Python, this module points to the OpenAI SDK path. (SRC-128 L213)
 
 ## Assessment items
 
@@ -92,7 +92,7 @@ Not covered by this source.
 
 - [[video-generation]] — this source introduces video generation as the module topic. (SRC-128 L212–214)
 - [[sora-2]] — Sora 2 is the named model for the module. (SRC-128 L212–214)
-- [[openai-sdk]] — the module includes Python application development with the OpenAI SDK. (SRC-128 L214)
+- [[openai-sdk]] — the module includes Python application development with the OpenAI SDK. (SRC-128 L213)
 - [[microsoft-foundry]] — Sora 2 is described as being in Microsoft Foundry. (SRC-128 L212–213)
 - *Module units:* [[src-38-deploy-video-generating-model|2 Deploy a video generating model]] · [[src-100-generate-video-prompt|3 Generate video from a prompt]] · [[src-101-generate-video-python|4 Generate video in Python]] · [[src-75-exercise-generate-video-sora-2-microsoft-foundry|5 Exercise - Generate video with Sora 2 in Microsoft Foundry]]
 

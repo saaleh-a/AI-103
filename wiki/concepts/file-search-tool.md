@@ -18,7 +18,7 @@ aliases: ["file_search", "vector store", "uploaded file search", "document-groun
 
 ## Summary
 
-`file_search` is the built-in tool for grounding model or agent answers in uploaded files. It indexes documents in a vector store, retrieves relevant chunks, and supplies those passages to the model for a grounded answer. (SRC-255 L218–227; SRC-91 L234–235)
+`file_search` is the built-in tool for grounding model or agent answers in uploaded files. It indexes documents in a vector store, retrieves relevant chunks, and supplies those passages to the model for a grounded answer. (SRC-255 L218–227; SRC-91 L237)
 
 ## The problem it solves
 
@@ -33,13 +33,13 @@ File Search is a small RAG pipeline wrapped as a tool: upload documents, index t
 - The Responses API tools overview defines `file_search` as a tool that searches specific files uploaded to a dedicated vector search index so responses can be grounded in specific knowledge. (SRC-259 L225–227)
 - The dedicated source says File Search retrieves relevant information from uploaded documents during a response. (SRC-255 L218)
 - It highlights document-grounded answers, semantic retrieval, vector store integration, citations/transparency, and enterprise relevance. (SRC-255 L222–227)
-- The Foundry agent tools source says File Search provides RAG by searching uploaded documents, indexing them in a vector store, and retrieving relevant information when needed. (SRC-91 L234)
-- That same source says File Search supports PDF, Word `.docx`, plain text `.txt`, Markdown `.md`, and other formats. (SRC-91 L235)
+- The Foundry agent tools source says File Search provides RAG by searching uploaded documents, indexing them in a vector store, and retrieving relevant information when needed. (SRC-91 L237)
+- That same source says File Search supports PDF, Word `.docx`, plain text `.txt`, Markdown `.md`, and other formats. (SRC-91 L238)
 - In Agent Framework, file search is a service-provided tool when supported by the provider. (SRC-4 L217–220)
 
 ## How it works in Azure
 
-For Responses API usage, the application includes `file_search` in the tools array with vector store IDs; the model searches indexed chunks and receives matching passages. (SRC-255 L235–241) For Foundry agents, adding File Search creates or selects a vector store for document indexing. (SRC-91 L257–258)
+For Responses API usage, the application includes `file_search` in the tools array with vector store IDs; the model searches indexed chunks and receives matching passages. (SRC-255 L235–241) For Foundry agents, adding File Search creates or selects a vector store for document indexing. (SRC-91 L260)
 
 ## Code and configuration
 
@@ -57,10 +57,10 @@ The captured Learn code is elided, but the source gives the configuration sequen
 
 ## Failure modes and misconceptions
 
-- Retrieval quality depends on document quality, coverage, and chunk relevance. (SRC-255 L251)
+- Retrieval quality depends on document quality, coverage, and chunk relevance. (SRC-255 L249)
 - Very large or mixed-domain vector stores can return less focused context, so stores should be scoped carefully. (SRC-255 L247–252)
-- Updated source files may require re-indexing before new content is searchable. (SRC-255 L253)
-- Retrieval improves grounding but does not remove the need for human review in sensitive decisions. (SRC-255 L254)
+- Updated source files may require re-indexing before new content is searchable. (SRC-255 L251)
+- Retrieval improves grounding but does not remove the need for human review in sensitive decisions. (SRC-255 L252)
 
 ## Solution Engineering transfer
 
@@ -89,8 +89,7 @@ The captured Learn code is elided, but the source gives the configuration sequen
 
 ## Open questions
 
-- The corpus does not specify vector-store limits, chunking defaults, file-size limits, citation response schema, or exact supported formats beyond examples. (SRC-91 L235; SRC-255 L251–255)
-
+- The corpus does not specify vector-store limits, chunking defaults, file-size limits, citation response schema, or exact supported formats beyond examples. (SRC-91 L238; SRC-255 L249–255)
 
 
 

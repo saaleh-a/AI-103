@@ -56,13 +56,13 @@ The Content Understanding API is a programmatic interface for creating, managing
 - A common API use is submitting content to an existing analyzer and retrieving analysis results. (SRC-250 L219)
 - An analysis request returns an operation ID for an asynchronous task. (SRC-250 L219)
 - The client sends another request with the operation ID to retrieve operation status, potentially polling until completion. (SRC-250 L219)
-- Results are returned in JSON format when analysis completes. (SRC-250 L219; SRC-250 L232)
+- Results are returned in JSON format when analysis completes. (SRC-250 L219; SRC-250 L231)
 - Content can be provided by URL, or binary file data can be submitted with `analyzeBinary`. (SRC-250 L224)
 - The `analyzerResults` endpoint is used with `GET` to check operation status until success or failure. (SRC-250 L228)
 
 ## How it works
 
-The API flow starts with an already-built analyzer. (SRC-250 L219) The client sends a POST-style analysis request to the analyzer, either pointing to content by URL or sending binary data with `analyzeBinary`. (SRC-250 L222–224) The request does not immediately return final extracted fields; it returns an operation ID for an asynchronous task. (SRC-250 L219; SRC-250 L226–228) The client then calls `analyzerResults` with `GET` until the operation succeeds or fails, and successful completion returns the analyzer-specific JSON payload. (SRC-250 L228–233)
+The API flow starts with an already-built analyzer. (SRC-250 L219) The client sends a POST-style analysis request to the analyzer, either pointing to content by URL or sending binary data with `analyzeBinary`. (SRC-250 L222–224) The request does not immediately return final extracted fields; it returns an operation ID for an asynchronous task. (SRC-250 L219; SRC-250 L219) The client then calls `analyzerResults` with `GET` until the operation succeeds or fails, and successful completion returns the analyzer-specific JSON payload. (SRC-250 L228–233)
 
 ## Code and API patterns
 
@@ -72,7 +72,7 @@ The source names the API patterns, but the captured JSON and HTTP blocks contain
 - Authentication: authorization key in request header, with Entra ID connection through the Microsoft Foundry API also mentioned. (SRC-250 L217–218)
 - Content submission: analyze request with URL, or `analyzeBinary` for direct binary file data. (SRC-250 L222–224)
 - Async status: operation ID returned by the request, then `GET` to `analyzerResults` until success or failure. (SRC-250 L219; SRC-250 L228)
-- Output: JSON payload whose fields depend on the content and schema. (SRC-250 L232)
+- Output: JSON payload whose fields depend on the content and schema. (SRC-250 L231)
 
 ## Key terms
 
