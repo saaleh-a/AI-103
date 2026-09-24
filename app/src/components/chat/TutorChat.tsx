@@ -79,7 +79,7 @@ export function TutorChat({ topic }: { topic?: Topic }) {
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         {messages.length > 0 && (
-          <div className="flex max-h-80 flex-col gap-3 overflow-y-auto rounded-md border border-border/60 p-3">
+          <div role="log" aria-label="Tutor conversation" aria-live="polite" className="flex max-h-80 flex-col gap-3 overflow-y-auto rounded-md border border-border/60 p-3">
             {messages.map((m, i) => (
               <div key={i} className={m.role === 'user' ? 'ml-auto max-w-[85%] rounded-lg bg-primary/10 px-3 py-2 text-sm' : 'mr-auto max-w-[85%] whitespace-pre-line rounded-lg bg-muted px-3 py-2 text-sm'}>
                 {m.text}
@@ -87,7 +87,7 @@ export function TutorChat({ topic }: { topic?: Topic }) {
             ))}
           </div>
         )}
-        {error && error !== 'no-key' && <p className="text-sm text-destructive">{error}</p>}
+        {error && error !== 'no-key' && <p role="alert" className="text-sm text-destructive">{error}</p>}
         <div className="flex gap-2">
           <label htmlFor="tutor-message" className="sr-only">Ask about this lesson</label>
           <Textarea
