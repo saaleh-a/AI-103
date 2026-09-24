@@ -81,7 +81,7 @@ Not covered by this source.
 ## Tensions, caveats and currency
 
 - **Stale-risk:** The source states that Foundry offers more than 1,900 models; catalog size, provider list, and available models are time-sensitive. (SRC-114 L215)
-- The source uses Microsoft Foundry terminology while related captures and screenshots may still show older Azure AI Foundry naming. (SRC-114 L215)
+- The source uses Microsoft Foundry terminology (SRC-114 L215), while two related Learn units still say Azure AI Foundry (SRC-102 L251; SRC-234 L230).
 
 ## Relation to other sources
 

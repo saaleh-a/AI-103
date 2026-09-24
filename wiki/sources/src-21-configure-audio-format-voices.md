@@ -67,7 +67,7 @@ Voices personalize the speech output. (SRC-21 L228–229) The source does not de
 The capture omits the Python code bodies, but it states both examples operate on `SpeechConfig`. (SRC-21 L218; SRC-21 L224–232)
 
 - Audio format pattern: set the speech output format for an existing `SpeechConfig` object named `speech_config`. (SRC-21 L224–226)
-- Voice pattern: set the voice to be used for synthesis. (SRC-21 L230–234)
+- Voice pattern: set the voice to be used for synthesis. (SRC-21 L230)
 - Documentation lookup: the source directs readers to Azure Speech SDK documentation for supported format enumeration values and voice information. (SRC-21 L227; SRC-21 L233)
 
 ## Key terms

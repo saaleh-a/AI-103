@@ -26,7 +26,7 @@ The corpus frames the Microsoft 365 problem as a gap between where the agent was
 
 ## Mental model
 
-Publishing is a controlled handoff from project workspace to a production-facing application. In general Foundry publishing, the Agent Application becomes the Azure resource with an invocation URL, authentication policy, and Entra agent identity. (SRC-223 L240–252) For Microsoft 365 publication, Azure Bot Service routes messages between Teams or Microsoft 365 Chat and the Foundry agent, while a Microsoft 365 package and Entra app registration support distribution and authentication. (SRC-232 L225–237; SRC-185 L241–247)
+**Synthesis:** Publishing is a controlled handoff from project workspace to a production-facing application. In general Foundry publishing, the Agent Application becomes the Azure resource with an invocation URL, authentication policy, and Entra agent identity. (SRC-223 L240–252) For Microsoft 365 publication, Azure Bot Service routes messages between Teams or Microsoft 365 Chat and the Foundry agent, while a Microsoft 365 package and Entra app registration support distribution and authentication. (SRC-232 L225–237; SRC-185 L241–247)
 
 ## What the sources say
 

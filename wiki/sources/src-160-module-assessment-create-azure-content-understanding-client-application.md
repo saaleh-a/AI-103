@@ -55,7 +55,7 @@ The assessment tests three module takeaways: which configuration values are need
 
 ## How it works
 
-This page functions as a module assessment rather than a teaching unit. (SRC-160 L212–228) Its distractors reveal the tested boundaries: endpoint/key versus Azure administrative identifiers, analyzer name versus Foundry resource name or creation-operation callback, and type-specific extracted values versus generic strings or blobs. (SRC-160 L212–225)
+This page functions as a module assessment rather than a teaching unit. (SRC-160 L212–225) Its distractors reveal the tested boundaries: endpoint/key versus Azure administrative identifiers, analyzer name versus Foundry resource name or creation-operation callback, and type-specific extracted values versus generic strings or blobs. (SRC-160 L212–225)
 
 ## Code and API patterns
 

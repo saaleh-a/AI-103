@@ -26,7 +26,7 @@ Raw documents, images, audio, and video do not naturally arrive as clean JSON fi
 
 ## Mental model
 
-Think of an analyzer as a typed extraction contract. The input side says which base content type and model pipeline to use; the schema side says which fields the business wants; the output side returns extracted or generated fields, confidence, grounding, and normalized representations such as markdown or JSON. This is a **Synthesis:** of the corpus component list and analyzer-creation flow. (SRC-264 L20–31; SRC-30 L216–243)
+**Synthesis:** Think of an analyzer as a typed extraction contract. The input side says which base content type and model pipeline to use; the schema side says which fields the business wants; the output side returns extracted or generated fields, confidence, grounding, and normalized representations such as markdown or JSON. This is a **Synthesis:** of the corpus component list and analyzer-creation flow. (SRC-264 L20–31; SRC-30 L216–243)
 
 ## What the sources say
 
@@ -41,7 +41,7 @@ Think of an analyzer as a typed extraction contract. The input side says which b
 
 The high-level lifecycle is: create a Foundry resource; define a Content Understanding schema, often from a sample and analyzer template; build an analyzer from the schema; and use the analyzer to extract or generate fields from new content. (SRC-30 L216–222)
 
-Content Understanding Studio supports this visually: create a project associated with a Microsoft Foundry resource, upload a sample document/image/audio/video file, apply a schema template, define the fields, test the analyzer, and then build it. (SRC-30 L224–243) Building makes the analyzer reachable from client applications through the Microsoft Foundry resource endpoint, and later revisions can be saved as named versions. (SRC-30 L241–244)
+Content Understanding Studio supports this visually: create a project associated with a Microsoft Foundry resource, upload a sample document/image/audio/video file, apply a schema template, define the fields, test the analyzer, and then build it. (SRC-30 L224–243) Building makes the analyzer reachable from client applications through the Microsoft Foundry resource endpoint, and later revisions can be saved as named versions. (SRC-30 L241–243)
 
 The API path uses a JSON analyzer definition. The corpus gives a document example with `ContactName` and `EmailAddress` fields, notes that extracted string values are values expected to exist in the document rather than values inferred about it, and says the `models` object specifies the generative models used for processing. (SRC-29 L218–225)
 

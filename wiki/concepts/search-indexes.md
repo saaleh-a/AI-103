@@ -26,7 +26,7 @@ Source files, blobs, databases, images, and document text are not automatically 
 
 ## Mental model
 
-Think of the index as the final searchable shelf, not the whole factory. The factory is indexing; the shelf is the structured collection of documents and fields that an application can ask questions against. (SRC-92 L218–221; SRC-187 L218–231)
+**Synthesis:** Think of the index as the final searchable shelf, not the whole factory. The factory is indexing; the shelf is the structured collection of documents and fields that an application can ask questions against. (SRC-92 L218–221; SRC-187 L218–231)
 
 ## What the sources say
 

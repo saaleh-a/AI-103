@@ -84,7 +84,7 @@ Not covered by this source.
 ## Tensions, caveats and currency
 
 - **Stale-risk:** The number of models, provider names, model examples, and model versions are time-sensitive catalog details. (SRC-89 L215; SRC-89 L222; SRC-89 L227–238)
-- The source uses Microsoft Foundry / Foundry Models naming while some related corpus items use Azure AI Foundry. (SRC-89 L213–216)
+- The source uses Microsoft Foundry / Foundry Models naming (SRC-89 L213–216), while two related Learn units still say Azure AI Foundry (SRC-102 L251; SRC-234 L230).
 
 ## Relation to other sources
 

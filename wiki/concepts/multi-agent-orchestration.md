@@ -28,9 +28,9 @@ The dedicated orchestration unit explains the same limitation more generally: a 
 
 ## Mental model
 
-Think of orchestration as the traffic system around a team of agents: agents do specialized work, while the orchestration pattern decides whether they run in parallel, in a fixed chain, through dynamic handoffs, in a managed shared conversation, or under an adaptive planning manager. (SRC-231 L250–254)
+**Inference:** Think of orchestration as the traffic system around a team of agents: agents do specialized work, while the orchestration pattern decides whether they run in parallel, in a fixed chain, through dynamic handoffs, in a managed shared conversation, or under an adaptive planning manager. (SRC-231 L250–254)
 
-In the Agent Framework layer, that traffic system is implemented as workflows: executors do the work, edges define message flow, and events expose progress, errors, and performance for observability and debugging. (SRC-231 L229–244)
+**Inference:** In the Agent Framework layer, that traffic system is implemented as workflows: executors do the work, edges define message flow, and events expose progress, errors, and performance for observability and debugging. (SRC-231 L229–244)
 
 ## What the sources say
 

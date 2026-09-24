@@ -34,7 +34,7 @@ Text translation starts after you already have text. Speech translation starts w
 4. Recognize once or continuously and read translated text results (SRC-226 L27–32).
 5. If the experience needs speech-to-speech, synthesize those text translations into audio (SRC-226 L33–45).
 
-That split matters because the source says manual speech-to-speech synthesis is essentially two separate operations: translate speech into text, then use `SpeechSynthesizer` to synthesize each translation (SRC-226 L33–39).
+**Inference:** That split matters because the source says manual speech-to-speech synthesis is essentially two separate operations: translate speech into text, then use `SpeechSynthesizer` to synthesize each translation (SRC-226 L33–39).
 
 ## What the sources say
 
@@ -54,7 +54,7 @@ The corpus uses Azure Speech in Foundry Tools as the Azure mapping. A client app
 The load-bearing configuration is:
 
 - Resource connection: `SpeechTranslationConfig` with Foundry key/endpoint or subscription/region (SRC-226 L16–19).
-- Source language: `speech_recognition_language`, such as `en-US` (SRC-226 L21–22).
+- Source language: `speech_recognition_language`, such as `en-US` (SRC-226 L21–23).
 - Target languages: add one or more targets such as French and Japanese (SRC-226 L21–22).
 - Audio input: `AudioConfig`, for example the default system microphone (SRC-226 L21–22).
 - Recognition: `TranslationRecognizer` performs the speech translation and returns translations (SRC-226 L27–32).

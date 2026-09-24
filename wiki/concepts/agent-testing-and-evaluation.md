@@ -26,7 +26,7 @@ An agent can look correct in a playground but fail when published because of cha
 
 ## Mental model
 
-Testing asks whether the agent behaves correctly in a known situation. Evaluation measures quality, safety, relevance, groundedness, or other criteria across a dataset or review process. Monitoring checks the deployed system over time for request patterns, response times, errors, tool calls, and conversation traces. (SRC-223 L220–227; SRC-53 L216–296; SRC-222 L262–276)
+**Synthesis:** Testing asks whether the agent behaves correctly in a known situation. Evaluation measures quality, safety, relevance, groundedness, or other criteria across a dataset or review process. Monitoring checks the deployed system over time for request patterns, response times, errors, tool calls, and conversation traces. (SRC-223 L220–227; SRC-53 L216–296; SRC-222 L262–276)
 
 ## What the sources say
 
@@ -44,13 +44,13 @@ SRC-53 covers formal evaluation. It says Foundry evaluation can evaluate a model
 
 During development, use Foundry or Visual Studio Code playgrounds for interactive tests and regression checks. (SRC-223 L220–227; SRC-212 L218–221) Before publishing to Microsoft 365, test in the Foundry playground; after publishing, test in Teams because the channel adds rendering, authentication, identity, and latency factors. (SRC-185 L220–224; SRC-222 L219–226)
 
-For systematic evaluation, Foundry Evaluation can run jobs over uploaded, existing, or synthetic datasets. The evaluation job maps fields, uses selected metrics, and runs asynchronously, producing aggregate scores and per-prompt details. (SRC-53 L276–300)
+For systematic evaluation, Foundry Evaluation can run jobs over uploaded, existing, or synthetic datasets. The evaluation job maps fields, uses selected metrics, and runs asynchronously, producing aggregate scores and per-prompt details. (SRC-53 L276–296)
 
 For deployed agents, the Foundry portal provides published-agent metrics for request volume, response times, error rates, and tool invocation statistics. If Application Insights is configured, it can trace individual conversations, analyze error patterns, measure end-to-end latency, and alert on anomalies. (SRC-222 L262–276)
 
 ## Code and configuration
 
-The corpus does not provide a single agent test harness script for these pages. It does provide configuration actions: use playgrounds, record test results, set up Application Insights when needed, and run Foundry evaluation jobs with datasets, metrics, field mappings, and a system prompt. (SRC-223 L220–227; SRC-222 L262–276; SRC-53 L276–300)
+The corpus does not provide a single agent test harness script for these pages. It does provide configuration actions: use playgrounds, record test results, set up Application Insights when needed, and run Foundry evaluation jobs with datasets, metrics, field mappings, and a system prompt. (SRC-223 L220–227; SRC-222 L262–276; SRC-53 L276–296)
 
 ## Decision boundaries
 

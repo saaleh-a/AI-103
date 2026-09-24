@@ -54,7 +54,7 @@ The Learn capture contains three knowledge-check questions, but it does not show
 
 ## How it works
 
-This source is assessment content, not teaching content. (SRC-148 L215–233)
+This source is assessment content, not teaching content. (SRC-148 L215–230)
 
 ## Code and API patterns
 
@@ -90,7 +90,7 @@ The assessment options include `client.chat.completions.create()`, `client.get_r
 
 ## Connections
 
-- [[ai-103-exam]] — this is an assessment-style source. (SRC-148 L215–233)
+- [[ai-103-exam]] — this is an assessment-style source. (SRC-148 L215–230)
 - [[endpoints-and-sdk-choice]] — the questions test endpoint and package selection. (SRC-148 L216–225)
 - [[responses-api]] — the third question tests the Responses API method. (SRC-148 L226–230)
 - [[foundry-sdk]] — the second question tests the Foundry SDK package. (SRC-148 L221–225)

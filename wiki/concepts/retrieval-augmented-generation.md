@@ -28,7 +28,7 @@ Without grounding, a response can be grammatical and plausible but inaccurate or
 
 ## Mental model
 
-RAG is a three-step loop: retrieve evidence, augment the prompt with that evidence, then generate the answer. (SRC-102 L227–230; SRC-239 L224–227)
+**Synthesis:** RAG is a three-step loop: retrieve evidence, augment the prompt with that evidence, then generate the answer. (SRC-102 L227–230; SRC-239 L224–227)
 
 **Synthesis:** The retrieval component can be a custom Azure AI Search index, a managed Foundry IQ knowledge base, or a built-in file search/vector store, but the model still needs retrieved content inserted into its active context. (SRC-102 L240–256; SRC-85 L220–238; SRC-255 L235–241)
 

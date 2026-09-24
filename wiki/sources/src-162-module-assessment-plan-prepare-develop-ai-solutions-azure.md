@@ -48,10 +48,10 @@ This module assessment asks three questions about the Microsoft Foundry portal, 
 - The capture requires all questions to be answered before checking work, and it does not show the post-check answer state. (SRC-162 L228–230)
 
 ## How it works
-This is an assessment capture rather than a teaching unit. (SRC-162 L214–230) It provides question text and multiple-choice options, but it does not include explanations or visible answer validation. (SRC-162 L214–230)
+This is an assessment capture rather than a teaching unit. (SRC-162 L214–230) It provides question text and multiple-choice options, but it does not include explanations or visible answer validation. (SRC-162 L214–227)
 
 ## Code and API patterns
-Not covered by this source's teaching content. (SRC-162 L214–230)
+Not covered by this source's teaching content. (SRC-162 L214–227)
 
 ## Key terms
 - Microsoft Foundry portal: Listed as one option for the project-assets portal question. (SRC-162 L214–217)
@@ -77,7 +77,7 @@ Not covered by this source's teaching content. (SRC-162 L214–230)
 - SRC-183 verbally answers similar checks and creates a tooling-name tension on the third item. ([[src-183-plan-prepare-develop-ai-solutions-azure-episode-1]]; SRC-183 L912–934)
 
 ## Connections
-- [[ai-103-exam]] — this is a module assessment source. (SRC-162 L214–230)
+- [[ai-103-exam]] — this is a module assessment source. (SRC-162 L214–227)
 - [[microsoft-foundry]] — the assessment tests portal use for Foundry project assets. (SRC-162 L214–217)
 - [[foundry-tools]] — the assessment tests prebuilt services for common AI tasks. (SRC-162 L219–222)
 - [[foundry-toolkit-for-vs-code]] — the assessment tests the VS Code extension. (SRC-162 L223–227)

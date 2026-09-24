@@ -95,7 +95,7 @@ Not covered by this source.
 
 - [[src-89-explore-model-catalog]] explains model cards, which are one entry point for benchmark tabs. (SRC-89 L217–218; SRC-188 L217–219)
 - [[src-53-evaluate-model-performance]] shifts from benchmark comparison to evaluating a deployed model or agent with test data and metrics. (SRC-188 L215; SRC-53 L250–275)
-- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks which benchmark indicates the ability to process prompts and return comprehensive responses quickly; this unit's throughput measures carry the answer. (SRC-145 L213–217; SRC-188 L257–261)
+- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks which benchmark indicates the ability to process prompts and return comprehensive responses quickly; this unit's throughput measures carry the answer. (SRC-145 L213–216; SRC-188 L257–261)
 - [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] demonstrates the leaderboard, trade-off charts, and model comparison. (SRC-188 L265–271; SRC-189 L421–660)
 
 ## Connections

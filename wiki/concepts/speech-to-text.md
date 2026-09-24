@@ -26,7 +26,7 @@ Applications and agents often need to accept spoken input rather than typed inpu
 
 ## Mental model
 
-Speech to text is an input adapter. Audio enters the system, a speech capability identifies spoken language content, and the application or agent receives text that downstream code can store, analyze, summarize, translate, or use as the next user message (SRC-225 L216–220; SRC-236 L230–241).
+**Synthesis:** Speech to text is an input adapter. Audio enters the system, a speech capability identifies spoken language content, and the application or agent receives text that downstream code can store, analyze, summarize, translate, or use as the next user message (SRC-225 L216–220; SRC-236 L230–241).
 
 ## What the sources say
 

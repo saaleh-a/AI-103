@@ -57,7 +57,7 @@ This knowledge check asks five questions about Microsoft 365 agent integration. 
 
 ## How it works
 
-The source is an assessment page rather than explanatory teaching content. (SRC-149 L214–247) Its answer options mirror the module's decision points: Azure Bot Service as the resource created by portal publication, admin approval for organization scope, a new published agent identity needing permission reassignment, Work IQ as CLI plus MCP server, and Agents Toolkit for custom SSO, middleware, or multi-environment deployment. (SRC-149 L216–244)
+The source is an assessment page rather than explanatory teaching content. (SRC-149 L214–244) Its answer options mirror the module's decision points: Azure Bot Service as the resource created by portal publication, admin approval for organization scope, a new published agent identity needing permission reassignment, Work IQ as CLI plus MCP server, and Agents Toolkit for custom SSO, middleware, or multi-environment deployment. (SRC-149 L216–244)
 
 ## Code and API patterns
 
@@ -90,7 +90,7 @@ Not covered by this source.
 ## Tensions, caveats and currency
 
 - The answer key is not visible in the capture because the page says all questions must be answered before checking work. (SRC-149 L245–247)
-- This page is useful for confirming module decision boundaries, but it does not independently teach the mechanisms. (SRC-149 L214–247)
+- This page is useful for confirming module decision boundaries, but it does not independently teach the mechanisms. (SRC-149 L214–244)
 
 ## Relation to other sources
 

@@ -26,7 +26,7 @@ A search index needs structured fields, but original content can live in blobs, 
 
 ## Mental model
 
-The data source is the raw-material bin. The indexer is the scheduled factory job. Document cracking and skills transform raw files into a hierarchical JSON-like document. Field mappings decide which final values land in the index. (SRC-92 L219–223; SRC-92 L269–271)
+**Inference:** The data source is the raw-material bin. The indexer is the scheduled factory job. Document cracking and skills transform raw files into a hierarchical JSON-like document. Field mappings decide which final values land in the index. (SRC-92 L219–223; SRC-92 L269–271)
 
 ## What the sources say
 

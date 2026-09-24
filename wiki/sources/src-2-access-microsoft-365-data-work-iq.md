@@ -75,7 +75,7 @@ The capture omits exact commands and JSON bodies, but identifies the surrounding
 - GitHub Copilot CLI installation uses Copilot CLI, a plugin marketplace, and `workiq@copilot-plugins`. (SRC-2 L254–259)
 - Visual Studio Code configuration adds Work IQ as an MCP server in MCP settings. (SRC-2 L257–260)
 - Before first use, the user must accept the End User License Agreement. (SRC-2 L260)
-- CLI use runs `workiq ask` from the terminal for ad-hoc queries. (SRC-2 L286–289)
+- CLI use runs `workiq ask` from the terminal for ad-hoc queries. (SRC-2 L283; SRC-2 L286)
 
 ## Key terms
 

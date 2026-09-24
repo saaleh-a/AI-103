@@ -26,7 +26,7 @@ Text-only applications cannot speak to users, read messages aloud, generate audi
 
 ## Mental model
 
-Text to speech is an output adapter. An app starts with text, chooses how the voice should sound and where the audio should go, then receives or plays an audio stream containing vocalized speech (SRC-253 L218–230; SRC-221 L216–220).
+**Synthesis:** Text to speech is an output adapter. An app starts with text, chooses how the voice should sound and where the audio should go, then receives or plays an audio stream containing vocalized speech (SRC-253 L218–230; SRC-221 L216–220).
 
 ## What the sources say
 

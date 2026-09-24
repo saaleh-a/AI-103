@@ -102,7 +102,7 @@ The assessment references REST API training artifacts for a custom model: sample
 
 ## Open questions
 
-- The source does not show which answers Microsoft marks correct after submission. (SRC-165 L230–232)
+- The source does not show which answers Microsoft marks correct after submission. (SRC-165 L230)
 
 ## Sources
 

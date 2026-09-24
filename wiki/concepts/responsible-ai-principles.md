@@ -25,7 +25,7 @@ AI systems affect users and society through probabilistic models that depend on 
 
 ## Mental model
 
-Think of the principles as design constraints, not product features. **Inference:** A model can pass through a content filter and still violate transparency if users do not understand its limits; it can be accurate on average and still violate fairness if performance is poor for a subgroup. The principles therefore sit above individual controls and guide what must be mapped, measured, mitigated, reviewed, and owned (SRC-186 L223–237).
+**Inference:** Think of the principles as design constraints, not product features. **Inference:** A model can pass through a content filter and still violate transparency if users do not understand its limits; it can be accurate on average and still violate fairness if performance is poor for a subgroup. The principles therefore sit above individual controls and guide what must be mapped, measured, mitigated, reviewed, and owned (SRC-186 L223–237).
 
 ## What the sources say
 

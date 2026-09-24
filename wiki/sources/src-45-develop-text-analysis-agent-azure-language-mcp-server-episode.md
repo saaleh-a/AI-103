@@ -129,7 +129,7 @@ The episode includes a recap check rather than a formal Learn knowledge check. (
 - [[src-135-introduction-develop-text-analysis-agent-azure-language-mcp-server]] introduces the same module goal in Learn-unit form. (SRC-135 L213–216; SRC-45 L16–24)
 - [[src-235-understand-azure-language-mcp-server]] matches the episode's MCP architecture and dynamic-selection explanation. (SRC-235 L217–239; SRC-45 L70–93)
 - [[src-24-connect-language-mcp-server-agent]] is the structured Learn version of the portal and SDK workflow demonstrated here. (SRC-24 L215–260; SRC-45 L175–390)
-- [[src-150-knowledge-check-develop-text-analysis-agent-azure-language-mcp]] formalizes the recap questions at the end of the episode. (SRC-150 L211–220; SRC-45 L573–594)
+- [[src-150-knowledge-check-develop-text-analysis-agent-azure-language-mcp]] formalizes the recap questions at the end of the episode. (SRC-150 L211–219; SRC-45 L573–594)
 
 ## Connections
 

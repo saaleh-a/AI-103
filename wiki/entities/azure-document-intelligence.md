@@ -56,7 +56,7 @@ Supported inputs include JPEG, PNG, BMP, PDF, and TIFF; the read model also acce
 
 ## Naming and currency
 
-The assigned corpus calls the service Azure Document Intelligence and also places it under Microsoft Foundry and Foundry Tools (SRC-117 L217; SRC-96 L229–230). The aliases retain older and adjacent names because the service historically appears near Form Recognizer and Azure AI Document Intelligence naming, but this page cites only the names found in the assigned corpus. **Stale-risk:** resource names, endpoints, model lists, add-on capabilities, and pricing are time-sensitive; the Studio unit also notes that some add-ons are premium features (SRC-251 L242–246).
+The assigned corpus calls the service Azure Document Intelligence and also places it under Microsoft Foundry and Foundry Tools (SRC-117 L217; SRC-96 L229–230). The page's aliases also keep older and adjacent names for search; the corpus itself uses Azure Document Intelligence. **Stale-risk:** resource names, endpoints, model lists, add-on capabilities, and pricing are time-sensitive; the Studio unit also notes that some add-ons are premium features (SRC-251 L242–246).
 
 ## Appearances in the corpus
 

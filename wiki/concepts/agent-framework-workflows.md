@@ -26,7 +26,7 @@ Single-agent systems are limited by one prompt or instruction set; multi-agent w
 
 ## Mental model
 
-An Agent Framework workflow is a programmatic graph. Executors are workers, edges are routing rules, events are the runtime trace, and builder/runtime APIs start the graph and return results asynchronously (SRC-231 L229–263).
+**Inference:** An Agent Framework workflow is a programmatic graph. Executors are workers, edges are routing rules, events are the runtime trace, and builder/runtime APIs start the graph and return results asynchronously (SRC-231 L229–263).
 
 ## What the sources say
 

@@ -96,7 +96,7 @@ Not covered by this source.
 
 - [[src-14-build-first-agent-microsoft-foundry]] introduces the portal tool catalog categories. (SRC-14 L239–244; SRC-91 L225–227)
 - [[src-20-configure-manage-agents-visual-studio-code]] introduces YAML and a tools section that this source expands. (SRC-20 L241–248; SRC-91 L252–257)
-- [[src-142-knowledge-check-develop-ai-agents-microsoft-foundry-visual-studio]] assesses automatic tool calling. (SRC-91 L222–224; SRC-142 L236–241)
+- [[src-142-knowledge-check-develop-ai-agents-microsoft-foundry-visual-studio]] assesses automatic tool calling. (SRC-91 L222–224; SRC-142 L236–240)
 
 ## Connections
 

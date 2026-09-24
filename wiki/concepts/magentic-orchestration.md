@@ -26,9 +26,9 @@ Some problems require planning, delegation, tool use, and adaptation as new info
 
 ## Mental model
 
-Magentic orchestration is a project manager for agents. The Magentic manager maintains shared context, tracks progress, chooses which specialist acts next, and builds a task ledger of goals, subgoals, and execution plans. (SRC-244 L218–221)
+**Inference:** Magentic orchestration is a project manager for agents. The Magentic manager maintains shared context, tracks progress, chooses which specialist acts next, and builds a task ledger of goals, subgoals, and execution plans. (SRC-244 L218–221)
 
-The episode frames it as “group chat, but one generation past”: an orchestrator with higher sophistication handles a complicated issue by deciding which agent to send next based on what earlier agents return to the ledger. (SRC-180 L241–323)
+**Inference:** The episode frames it as “group chat, but one generation past”: an orchestrator with higher sophistication handles a complicated issue by deciding which agent to send next based on what earlier agents return to the ledger. (SRC-180 L241–323)
 
 ## What the sources say
 

@@ -49,7 +49,7 @@ For Azure AI Search, the corpus pattern is: create a custom skill that performs 
 
 | Compare (SRC-104 L228–234; SRC-110 L272–290) | Azure Functions | Neighbour |
 |---|---|---|
-| Function tool | Azure-hosted serverless compute that can offload work and respond to triggers (SRC-104 L228–234; SRC-110 L203–250). | Function tool code runs under the application/framework pattern; the model requests a call but application code executes it (SRC-256 L219–263 on [[function-calling]]). |
+| Function tool | Azure-hosted serverless compute that can offload work and respond to triggers (SRC-104 L228–234; SRC-110 L203–250). | Function tool code runs under the application/framework pattern; the model requests a call but application code executes it (SRC-256 L219–259 on [[function-calling]]). |
 | Logic Apps | Code-first function execution (SRC-110 L272–290). | Logic Apps are described as low-code/no-code workflow connectivity (SRC-179 L222). |
 | AI Search built-in skills | Custom skill logic, possibly wrapping another service (SRC-52 L225–230). | Built-in skills use Foundry Tools capabilities such as Language and Vision during indexing (SRC-52 L219–225). |
 
@@ -61,7 +61,7 @@ The corpus uses both singular "Azure Function" for an individual deployed functi
 
 ## Appearances in the corpus
 
-- Agent custom tools: option listing and integration flow (SRC-104 L216–234; SRC-179 L217–225).
+- Agent custom tools: option listing and integration flow (SRC-104 L216–234; SRC-179 L217–223).
 - Episode explanation: code-first offloaded compute, contrasted with local custom functions and Logic Apps (SRC-110 L203–290).
 - Azure AI Search enrichment: custom skill wrapper around document-extraction logic (SRC-52 L225–230).
 

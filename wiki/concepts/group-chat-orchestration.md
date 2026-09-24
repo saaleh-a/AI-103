@@ -26,9 +26,9 @@ Some tasks need iterative dialogue rather than a fixed pipeline or a one-way han
 
 ## Mental model
 
-Group chat is a managed meeting. Agents share a single conversation thread, the chat manager controls turns, and a human can guide or intervene. (SRC-242 L220–227)
+**Inference:** Group chat is a managed meeting. Agents share a single conversation thread, the chat manager controls turns, and a human can guide or intervene. (SRC-242 L220–227)
 
-The episode stresses the shared-context point: responses return to the same middle chat, so agents have access to the whole conversation rather than starting separate conversations that lose prior context. (SRC-180 L187–240)
+**Inference:** The episode stresses the shared-context point: responses return to the same middle chat, so agents have access to the whole conversation rather than starting separate conversations that lose prior context. (SRC-180 L187–240)
 
 ## What the sources say
 
@@ -38,7 +38,7 @@ SRC-242 says it supports free-flowing ideation, formal role-based workflows, app
 
 SRC-242 says to avoid it when simple delegation or linear pipelines are enough, speed requirements make discussion overhead impractical, deterministic hierarchy is needed, completion cannot be clearly determined, or many agents make flow hard to manage. (SRC-242 L235–240)
 
-The knowledge check maps “brainstorming and collaborative problem solving among multiple agents” to group chat. (SRC-143 L14–18)
+The knowledge check maps “brainstorming and collaborative problem solving among multiple agents” to group chat. (SRC-143 L14–17)
 
 ## How it works in Azure
 
@@ -50,7 +50,7 @@ During each round, the manager checks `should_request_user_input`, checks `shoul
 
 The code shape in the corpus is: create an `AzureOpenAIChatClient`, define agents with `create_agent`, use `GroupChatBuilder().participants(...).build()`, call `run`, extract outputs with `get_outputs()`, and process messages with author names and content. (SRC-242 L246–249)
 
-For custom management, extend `GroupChatManager` and override manager methods such as `should_request_user_input`, `should_terminate`, `filter_results`, and `select_next_agent`. (SRC-242 L250–261)
+For custom management, extend `GroupChatManager` and override manager methods such as `should_request_user_input`, `should_terminate`, `filter_results`, and `select_next_agent`. (SRC-242 L250–263)
 
 **Stale-risk:** `GroupChatBuilder`, `GroupChatManager`, and manager method names are SDK details captured in this Learn unit. (SRC-242 L245–261)
 

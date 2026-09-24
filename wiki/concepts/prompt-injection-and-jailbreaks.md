@@ -26,7 +26,7 @@ Generative AI systems can accept inputs from users, tools, RAG systems, the web,
 
 ## Mental model
 
-A jailbreak is an attack on the instruction hierarchy: the attacker tries to make the system ignore or override its intended behaviour. **Inference:** Direct jailbreaks usually come from a user prompt; indirect prompt injection arrives through content the model is asked to read, such as retrieved documents, web pages, or image text. The corpus supports the boundary by naming user attempts to subvert the system prompt in guardrails and separately naming indirect prompt injection embedded in images (SRC-156 L231; SRC-191 L176–179).
+**Synthesis:** A jailbreak is an attack on the instruction hierarchy: the attacker tries to make the system ignore or override its intended behaviour. **Inference:** Direct jailbreaks usually come from a user prompt; indirect prompt injection arrives through content the model is asked to read, such as retrieved documents, web pages, or image text. The corpus supports the boundary by naming user attempts to subvert the system prompt in guardrails and separately naming indirect prompt injection embedded in images (SRC-156 L231; SRC-191 L176–179).
 
 ## What the sources say
 

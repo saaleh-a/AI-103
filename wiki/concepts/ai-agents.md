@@ -26,7 +26,7 @@ Traditional applications usually follow predetermined rules; the corpus contrast
 
 ## Mental model
 
-Think of an agent as a goal-directed layer around a model. The model interprets the request, instructions define the role and constraints, tools provide capabilities outside the model, and conversation/session state lets the agent continue a task across turns (SRC-230 L220; SRC-237 L223–230). **Inference:** The agent is not the model itself; it is the runtime pattern that uses the model to decide when to answer, retrieve, call a tool, ask for approval, or continue the loop.
+**Synthesis:** Think of an agent as a goal-directed layer around a model. The model interprets the request, instructions define the role and constraints, tools provide capabilities outside the model, and conversation/session state lets the agent continue a task across turns (SRC-230 L220; SRC-237 L223–230). **Inference:** The agent is not the model itself; it is the runtime pattern that uses the model to decide when to answer, retrieve, call a tool, ask for approval, or continue the loop.
 
 ## What the sources say
 

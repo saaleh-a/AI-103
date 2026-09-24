@@ -50,8 +50,8 @@ The assessment checks two image-generation facts: which Foundry inference-task f
 
 - The first captured question asks which inference task to filter by in Microsoft Foundry to generate images. (SRC-172 L210)
 - The options for the first question are `Text to image`, `Image to text`, and `Embeddings`. (SRC-172 L211–213)
-- The second captured question asks which OpenAI API can be used with image-generation models. (SRC-172 L214)
-- The options for the second question are `Video`, `Image`, and `Graphics`. (SRC-172 L215–216)
+- The second captured question asks which OpenAI API can be used with image-generation models. (SRC-172 L215)
+- The options for the second question are `Video`, `Image`, and `Graphics`. (SRC-172 L216–218)
 
 ## How it works
 
@@ -59,23 +59,23 @@ This is an assessment page, so it tests recognition of the Foundry inference-tas
 
 ## Code and API patterns
 
-The source names an API-choice question but does not show code. (SRC-172 L214–216)
+The source names an API-choice question but does not show code. (SRC-172 L215–218)
 
 ## Key terms
 
 - **Text to image:** one option for the Foundry inference-task filter. (SRC-172 L210–211)
-- **Image API:** one option for the OpenAI API used with image-generation models. (SRC-172 L214–216)
+- **Image API:** one option for the OpenAI API used with image-generation models. (SRC-172 L215–218)
 - **Embeddings:** a distractor option in the inference-task question. (SRC-172 L210–213)
 
 ## Decision boundaries and exam cues
 
 - **Inference:** The assessment reinforces the distinction between image generation and image analysis because `Image to text` is a distractor against `Text to image`. (SRC-172 L210–213)
-- **Inference:** The API-object cue for this module is image generation, not video generation or a generic graphics API. (SRC-172 L214–216)
+- **Inference:** The API-object cue for this module is image generation, not video generation or a generic graphics API. (SRC-172 L215–218)
 
 ## Assessment items
 
 1. You want to find a model in Microsoft Foundry to generate images. Which inference task should you filter by? Options: `Text to image`; `Image to text`; `Embeddings`. Answer not shown in capture. (SRC-172 L210–213)
-2. Which OpenAI API can you use with image-generation models? Options: `Video`; `Image`; `Graphics`. Answer not shown in capture. (SRC-172 L214–216)
+2. Which OpenAI API can you use with image-generation models? Options: `Video`; `Image`; `Graphics`. Answer not shown in capture. (SRC-172 L215–218)
 
 ## Tensions, caveats and currency
 
@@ -91,7 +91,7 @@ The source names an API-choice question but does not show code. (SRC-172 L214–
 
 - [[image-generation]] — the assessment checks image model filtering and API selection. (SRC-172 L210–216)
 - [[model-catalog]] — the first item tests selecting models with an inference-task filter. (SRC-172 L210–213)
-- [[openai-sdk]] — the second item tests the OpenAI API surface for image models. (SRC-172 L214–216)
+- [[openai-sdk]] — the second item tests the OpenAI API surface for image models. (SRC-172 L215–218)
 - [[decision-boundaries]] — the distractors separate text-to-image from image-to-text and embeddings. (SRC-172 L210–213)
 - *Module units:* [[src-136-introduction-generate-images-ai|1 Introduction]] · [[src-258-what-are-image-generation-models|2 What are image-generation models-]] · [[src-86-explore-image-generation-models-microsoft-foundry-portal|3 Explore image-generation models in Microsoft Foundry portal]] · [[src-32-create-client-application-that-uses-image-generation-model|4 Create a client application that uses an image generation model]] · [[src-74-exercise-generate-images-ai|5 Exercise - Generate images with AI]] · [[src-197-summary-generate-images-ai|7 Summary]] · [[src-97-generate-images-video-episode-23|episode 23]]
 

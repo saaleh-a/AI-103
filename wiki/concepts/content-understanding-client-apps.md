@@ -26,7 +26,7 @@ The analyzer is useful only if an application can feed it real files and consume
 
 ## Mental model
 
-The client application is the runtime bridge between business files and analyzer output. It does not define the whole extraction problem from scratch on every request; it points the service at an analyzer that already encodes the schema, sends the content as a URL or bytes, waits for the long-running operation, and then maps the returned fields/markdown/metadata into app logic. This is a **Synthesis:** of the API and analysis-result sources. (SRC-250 L219–229; SRC-6 L216–243)
+**Synthesis:** The client application is the runtime bridge between business files and analyzer output. It does not define the whole extraction problem from scratch on every request; it points the service at an analyzer that already encodes the schema, sends the content as a URL or bytes, waits for the long-running operation, and then maps the returned fields/markdown/metadata into app logic. This is a **Synthesis:** of the API and analysis-result sources. (SRC-250 L219–229; SRC-6 L216–243)
 
 ## What the sources say
 

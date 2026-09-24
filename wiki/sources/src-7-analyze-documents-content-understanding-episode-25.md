@@ -119,7 +119,7 @@ The code walkthrough identifies these objects and calls rather than showing a co
 
 ## Tensions, caveats and currency
 
-- The transcript is auto-captioned and includes a speaker-name typo, `ROB FOUKROD`, in one location. (SRC-7 L720–733)
+- The transcript is auto-captioned and includes a speaker-name typo, `ROB FOUKROD`, in one location. (SRC-7 L719)
 - The presenter states Entra ID is preferred over API keys, but API keys still work. (SRC-7 L966–973)
 - **Stale-risk:** Model names, Studio URLs, and exact UI labels in this episode can change over time. (SRC-7 L281–303; SRC-7 L1118–1121)
 

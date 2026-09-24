@@ -25,7 +25,7 @@ Prebuilt models cover common document types, but organizations also have industr
 
 ## Mental model
 
-A custom extraction model is a trained field recognizer. You provide examples, labels, and layout information; Document Intelligence learns where the fields appear and how to extract them from new documents (SRC-224 L217; SRC-224 L236–247).
+**Inference:** A custom extraction model is a trained field recognizer. You provide examples, labels, and layout information; Document Intelligence learns where the fields appear and how to extract them from new documents (SRC-224 L217; SRC-224 L236–247).
 
 ## What the sources say
 

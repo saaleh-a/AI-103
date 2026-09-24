@@ -56,7 +56,7 @@ Provider flexibility is a core benefit: the common interface lets developers swi
 
 For a Foundry-backed agent, the corpus gives a consistent sequence: create a Foundry project with a deployed model, configure Azure authentication through `DefaultAzureCredential`, initialize a Foundry chat client with credentials/project endpoint/model name, create the agent with instructions and optional tools, open a session, and run messages through the session (SRC-34 L218–236).
 
-The Foundry provider is recommended for production scenarios where context persistence matters because Foundry Agent Service supplies service-side chat history, so conversation state can survive application restarts or scale-out across instances (SRC-234 L230–234; SRC-34 L237–244).
+The Foundry provider is recommended for production scenarios where context persistence matters because Foundry Agent Service supplies service-side chat history, so conversation state can survive application restarts or scale-out across instances (SRC-234 L230–234; SRC-34 L237–243).
 
 For multi-agent solutions, the workflow starts by defining agents and capabilities, selecting an orchestration pattern, optionally configuring callbacks or transforms, starting a runtime, invoking the orchestration, and retrieving results asynchronously (SRC-231 L256–263).
 
@@ -68,7 +68,7 @@ For multi-agent solutions, the workflow starts by defining agents and capabiliti
 
 Choose the lower-level [[foundry-sdk]] or [[openai-sdk]] when the task is direct project/model/service access rather than an agent-framework abstraction. **Inference:** This follows from the episode's contrast between Foundry/OpenAI SDKs as relatively single-environment targets and Agent Framework as the higher agentic abstraction layer (SRC-48 L35–61).
 
-Closest confusion: Foundry Agent Service is the managed provider/host that can persist chat history and expose service-side capabilities; Microsoft Agent Framework is the SDK abstraction that connects to Foundry or other providers, creates agents, registers tools, manages sessions, and builds workflows (SRC-234 L230–238; SRC-34 L226–244).
+Closest confusion: Foundry Agent Service is the managed provider/host that can persist chat history and expose service-side capabilities; Microsoft Agent Framework is the SDK abstraction that connects to Foundry or other providers, creates agents, registers tools, manages sessions, and builds workflows (SRC-234 L230–238; SRC-34 L226–243).
 
 ## Naming and currency
 

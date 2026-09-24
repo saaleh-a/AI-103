@@ -26,7 +26,7 @@ A single model call only sees the active context sent with that call. For a conv
 
 ## Mental model
 
-Think of conversation state as the app's memory budget for the next request. **Synthesis:** Chat Completions makes the app carry the message list; Responses can link turns by response ID; agent frameworks can wrap history in sessions or service-side history. (SRC-98 L223–232; SRC-99 L279–280; SRC-237 L230; SRC-234 L233)
+**Synthesis:** Think of conversation state as the app's memory budget for the next request. **Synthesis:** Chat Completions makes the app carry the message list; Responses can link turns by response ID; agent frameworks can wrap history in sessions or service-side history. (SRC-98 L223–232; SRC-99 L279–280; SRC-237 L230; SRC-234 L233)
 
 ## What the sources say
 

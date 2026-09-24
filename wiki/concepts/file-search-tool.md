@@ -26,7 +26,7 @@ A general model may not know a team's policies, contracts, manuals, or internal 
 
 ## Mental model
 
-File Search is a small RAG pipeline wrapped as a tool: upload documents, index them into a searchable vector store, let the model search for relevant chunks, inject matching passages into context, and generate an answer from those passages. (SRC-255 L224–241)
+**Inference:** File Search is a small RAG pipeline wrapped as a tool: upload documents, index them into a searchable vector store, let the model search for relevant chunks, inject matching passages into context, and generate an answer from those passages. (SRC-255 L224–241)
 
 ## What the sources say
 

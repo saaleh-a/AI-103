@@ -152,3 +152,22 @@ Append-only. Newest entries at the bottom. `grep "^## \[" wiki/log.md` lists the
   **Inference:**; 18 reviewer-named fixes applied after checking each against the raw lines (locators,
   objective trims, a missing SRC-11 citation, the glossary's uncited scope statement, src-167's
   assessment wording). Panel 4/20 → 5/20, all five failures on claims the two cycles did not touch.
+
+## [2026-09-24] loop | Cycles 11–13: chrome citations, a fresh-sample audit, assessment honesty
+- Cycle 11: 49 citations whose every cited line was Learn page chrome (`Tip`, `Copy`, `35 minutes`,
+  "See the Text and images tab…") re-cited to the line that carries the claim; the five open panel
+  failures fixed → panel 1/20, which meets the loop's ≤ 2/20 bar. `scripts/find_locator_drift.py`
+  now also lists chrome-only citations.
+- Diagnosis: an unbiased rotating sample (seed 11) read **10/20** on the same tree — the fixed panel
+  had been repaired page by page since cycle 3 and no longer measured the wiki.
+- Cycle 12: the sample's defect classes fixed wiki-wide — `objective_gaps` on pages that never
+  discuss the gap (nine pages now state the gap and link [[corpus-gaps]], three drop it); all eight
+  **Disputed:** labels relabelled (none recorded two sources in conflict; [[key-tensions]] is now
+  `active`); a criterion-8 audit of all 686 objective claims dropped 131 on 82 pages. The objective
+  map did not change (40 taught · 13 in part · 11 named only), because every dropped claim was
+  also taught elsewhere. A fresh sample (seed 12) read 5/20 (4/20 after one reviewer misreading).
+- Cycle 13: assessment captures never mark a checked answer, so 30 claims that read question
+  numbers or option markers as answers now attribute the answer to the episode review or teaching
+  unit that gives it; 15 ranges that started on page chrome and stopped short of the carrying line
+  re-cited.
+- Wiki link graph rebuilt at the end of the loop (see the graph entry below).

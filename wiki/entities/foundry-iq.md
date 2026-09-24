@@ -43,7 +43,7 @@ Data source integrations include SharePoint sites, Blob containers, OneLake inst
 
 Built-in retrieval intelligence includes question analysis, strategy selection, relevance ranking, and citations that let users verify source documents. (SRC-85 L240–246)
 
-Foundry IQ uses Model Context Protocol to connect agents to knowledge bases, according to the Explore Foundry IQ unit. (SRC-85 L263–264)
+Foundry IQ uses Model Context Protocol to connect agents to knowledge bases, according to the Explore Foundry IQ unit. (SRC-85 L263)
 
 ## How to use it
 
@@ -66,7 +66,7 @@ The exercise capture is thin: it names the exercise (integrate an AI agent with 
 
 ## Appearances in the corpus
 
-- The Foundry IQ Learn module introduces the product, source options, retrieval instructions, exercise, knowledge check, and summary. (SRC-141 L218–226; SRC-85 L219–264; SRC-22 L12–83; SRC-23 L217–278; SRC-147 L211–230; SRC-194 L217–231)
+- The Foundry IQ Learn module introduces the product, source options, retrieval instructions, exercise, knowledge check, and summary. (SRC-141 L218–226; SRC-85 L219–263; SRC-22 L12–83; SRC-23 L217–278; SRC-147 L211–230; SRC-194 L217–231)
 - Episode 10 demonstrates and explains Foundry IQ as a source for agents, with data from SharePoint, OneLake, and Blob Storage. (SRC-16 L700–756)
 - The RAG unit outside the Foundry IQ module points to Foundry IQ for agents that need grounded knowledge without managing search infrastructure. (SRC-102 L265)
 

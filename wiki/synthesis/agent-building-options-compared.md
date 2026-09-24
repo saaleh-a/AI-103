@@ -43,7 +43,7 @@ aliases: []
 | **Synthesis:** Question | Foundry Agent Service | Microsoft Agent Framework |
 |---|---|---|
 | What is it? | Managed service for secure, hosted, scalable agents and publishing. (SRC-230 L255–274; SRC-232 L226–239) | SDK/framework for creating agents, sessions, tools, providers, and workflows in code. (SRC-237 L218–232; SRC-124 L215) |
-| State | Service-managed conversation state through Responses API is named as a service feature. (SRC-230 L270–276) | `AgentSession` manages conversation; Foundry provider can store session history in Foundry Agent Service. (SRC-34 L237–258; SRC-237 L231–232) |
+| State | Service-managed conversation state through Responses API is named as a service feature. (SRC-230 L270–276) | `AgentSession` manages conversation; Foundry provider can store session history in Foundry Agent Service. (SRC-34 L237–258; SRC-237 L230–232) |
 | Tools | Tool catalog with built-in, catalog, and custom options. (SRC-230 L270–276) | Function tools and provider-supported service tools, with schemas from function signatures. (SRC-234 L223–229) |
 | Portability | Managed Foundry runtime and publishing target. (SRC-230 L258–276; SRC-232 L216–252) | Provider abstraction lets developers switch inference service by changing client configuration rather than rewriting agent logic. (SRC-234 L235–238) |
 | **Inference:** exam cue | Portal/Agent Service, publish, Agent Application, service-managed history, stable invocation URL. (SRC-232 L216–225; SRC-230 L270–276) | `AgentSession`, chat clients, tools in code, providers, orchestration patterns, builders. (SRC-34 L218–260; SRC-237 L228–232) |

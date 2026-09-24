@@ -26,7 +26,7 @@ A Foundry project exposes several ways to reach AI capabilities. Using the wrong
 
 ## Mental model
 
-The endpoint is the door; the SDK is the handle. A project endpoint opens Foundry-specific project features. An Azure OpenAI endpoint opens OpenAI-compatible model inference. A tool-specific endpoint opens a purpose-built Foundry Tool. (SRC-18 L236–307; SRC-96 L233)
+**Synthesis:** The endpoint is the door; the SDK is the handle. A project endpoint opens Foundry-specific project features. An Azure OpenAI endpoint opens OpenAI-compatible model inference. A tool-specific endpoint opens a purpose-built Foundry Tool. (SRC-18 L236–307; SRC-96 L233)
 
 ## What the sources say
 

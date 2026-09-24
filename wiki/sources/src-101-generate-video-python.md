@@ -54,7 +54,7 @@ Python applications can use the OpenAI Python SDK with a Sora 2 deployment in Mi
 - A reference image's resolution must match the target video size. (SRC-101 L220)
 - Reference images containing human faces are currently rejected. (SRC-101 L224)
 - To modify an existing video while preserving its structure, use the `remix` method with the original video's ID. (SRC-101 L224–226)
-- Failed jobs should be diagnosed by checking `video.error`. (SRC-101 L230–231)
+- Failed jobs should be diagnosed by checking `video.error`. (SRC-101 L232)
 - The source states limits and lifecycle considerations: up to two simultaneous video creation jobs, completed videos downloadable for 24 hours, exact reference-image resolution matching, and content moderation for harmful prompts. (SRC-101 L232–237)
 
 ## How it works
@@ -63,14 +63,14 @@ The source describes video generation as a job workflow rather than an immediate
 
 ## Code and API patterns
 
-The code blocks are not preserved in the capture, but the source names the important API concepts: `input_reference`, `remix`, job status handling, and `video.error`. (SRC-101 L220–231) The source's captured algorithm is create job, poll, and download. (SRC-101 L214–215)
+The code blocks are not preserved in the capture, but the source names the important API concepts: `input_reference`, `remix`, job status handling, and `video.error`. (SRC-101 L220–232) The source's captured algorithm is create job, poll, and download. (SRC-101 L214–215)
 
 ## Key terms
 
 - **OpenAI Python SDK:** the SDK named for programmatic video generation. (SRC-101 L214)
 - **input_reference:** the parameter for providing a starting image. (SRC-101 L220)
 - **remix:** the method for modifying an existing video while preserving its structure. (SRC-101 L224–226)
-- **video.error:** the property named for failure details. (SRC-101 L230–231)
+- **video.error:** the property named for failure details. (SRC-101 L232)
 
 ## Decision boundaries and exam cues
 

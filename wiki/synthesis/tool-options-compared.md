@@ -18,11 +18,11 @@ aliases: []
 
 ## Summary
 
-**Synthesis:** Tools are the corpus's bridge from model text to action or grounded data: built-in service tools handle common hosted capabilities, function calling asks developer code to execute business logic, Azure Functions moves that logic to serverless Azure compute, OpenAPI specified tools expose REST APIs, Logic Apps provide low-code workflow connectivity, MCP servers publish dynamic reusable tool catalogs, and A2A connects to another agent rather than to a tool. (SRC-91 L218–297; SRC-104 L216–250; SRC-179 L217–230; SRC-108 L217–233; SRC-240 L217–239; SRC-37 L217–249)
+**Synthesis:** Tools are the corpus's bridge from model text to action or grounded data: built-in service tools handle common hosted capabilities, function calling asks developer code to execute business logic, Azure Functions moves that logic to serverless Azure compute, OpenAPI specified tools expose REST APIs, Logic Apps provide low-code workflow connectivity, MCP servers publish dynamic reusable tool catalogs, and A2A connects to another agent rather than to a tool. (SRC-91 L218–297; SRC-104 L216–249; SRC-179 L217–230; SRC-108 L217–233; SRC-240 L217–239; SRC-37 L217–249)
 
 ## Scope and question
 
-**Synthesis:** This page compares integration choices for agent or model capabilities: how the capability is described, who executes it, what changes without redeployment, what security/approval boundary is visible in the corpus, and when A2A is not a tool choice at all. (SRC-256 L219–263; SRC-104 L216–250; SRC-233 L217–239; SRC-37 L217–249)
+**Synthesis:** This page compares integration choices for agent or model capabilities: how the capability is described, who executes it, what changes without redeployment, what security/approval boundary is visible in the corpus, and when A2A is not a tool choice at all. (SRC-256 L219–259; SRC-104 L216–249; SRC-233 L217–239; SRC-37 L217–249)
 
 ## Synthesis
 
@@ -33,7 +33,7 @@ aliases: []
 | Run Python analysis, calculations, charts, or file processing in a sandbox | Built-in Code Interpreter | The model gets a Python runtime in a sandbox. (SRC-254 L218–224) | Not for arbitrary external system access. (SRC-254 L252–253) |
 | Answer from uploaded private files | Built-in File Search | Uploaded documents are indexed in a vector store and retrieved as chunks. (SRC-255 L218–241) | For enterprise indexes, use Azure AI Search instead of direct uploaded files. (SRC-91 L237–242) |
 | Answer from current public web information | Built-in Web Search | The model retrieves fresh web information while generating. (SRC-257 L218–241) | Web quality, access, latency, and repeatability vary. (SRC-257 L247–252) |
-| Run app-owned business logic or internal API logic | Function tool / function calling | The model requests a structured call, but application/framework code validates, runs, and returns output. (SRC-256 L219–248; SRC-4 L225–230) | The application must validate arguments, handle errors, authorize side effects, and return results. (SRC-256 L248–263) |
+| Run app-owned business logic or internal API logic | Function tool / function calling | The model requests a structured call, but application/framework code validates, runs, and returns output. (SRC-256 L219–248; SRC-4 L225–230) | The application must validate arguments, handle errors, authorize side effects, and return results. (SRC-256 L248–259) |
 | Offload custom code to Azure serverless compute | Azure Functions tool | A deployed function handles serverless/event-driven work; the Foundry example sends requests through a storage queue. (SRC-104 L228–234) | The corpus gives a high-level pattern, not complete syntax. (SRC-104 L230–234) |
 | Call an existing REST API with a machine-readable contract | OpenAPI specified tool | Foundry Agent Service can use an OpenAPI 3.0 spec with anonymous, API key, or managed identity auth at capture time. (SRC-104 L236–243) | **Stale-risk:** authentication support is platform-moving. (SRC-104 L238–240) |
 | Connect low-code/no-code workflows across apps/data/services | Logic Apps | The corpus names Logic Apps as a low-code/no-code workflow option. (SRC-179 L222; SRC-110 L272–290) | This corpus does not provide full Logic Apps implementation steps. (SRC-179 L222) |
@@ -46,11 +46,11 @@ aliases: []
 |---|---|---|---|---|---|
 | Who owns execution? | Application/framework code. (SRC-256 L219–248; SRC-4 L225–230) | Azure-hosted function. (SRC-104 L228–234) | External REST API described by OpenAPI 3.0. (SRC-104 L236–246) | MCP server tools invoked by client/session or managed `MCPTool`. (SRC-108 L217–233; SRC-240 L217–239) | Remote agent server/executor. (SRC-103 L12–39; SRC-107 L12–36) |
 | What is discovered? | Function schema or signature; not a live server catalog. (SRC-4 L226–230; SRC-256 L234–246) | The function is configured as an agent tool after deployment. (SRC-104 L230–234) | API operations from the OpenAPI file. (SRC-104 L241–246) | Tool definitions from `session.list_tools()` or remote MCP config. (SRC-108 L221–233; SRC-240 L226–229) | Agent skills and metadata from Agent Card. (SRC-37 L224–249) |
-| Best exam cue | `function_call_output`, custom functions, developer validation. (SRC-256 L240–263) | Serverless, triggers, queue messages, bindings. (SRC-104 L228–234; SRC-110 L203–250) | Swagger/OpenAPI 3.0, REST API contract. (SRC-104 L236–246; SRC-110 L250–271) | MCP server/client, `MCPTool`, dynamic catalog, approvals. (SRC-108 L217–233; SRC-240 L217–239) | Agent Card, Agent Executor, A2A server/client, remote agent delegation. (SRC-37 L232–249; SRC-205 L217–218) |
+| Best exam cue | `function_call_output`, custom functions, developer validation. (SRC-256 L240–259) | Serverless, triggers, queue messages, bindings. (SRC-104 L228–234; SRC-110 L203–250) | Swagger/OpenAPI 3.0, REST API contract. (SRC-104 L236–246; SRC-110 L250–271) | MCP server/client, `MCPTool`, dynamic catalog, approvals. (SRC-108 L217–233; SRC-240 L217–239) | Agent Card, Agent Executor, A2A server/client, remote agent delegation. (SRC-37 L232–249; SRC-205 L217–218) |
 
 ### Near-miss scenario contrasts
 
-1. **Inference:** If a claims agent must call an in-process eligibility function and the app must validate every side effect, use function calling; if the same code should scale independently behind queues or triggers, use Azure Functions. (SRC-256 L219–263; SRC-104 L228–234; SRC-110 L203–250)
+1. **Inference:** If a claims agent must call an in-process eligibility function and the app must validate every side effect, use function calling; if the same code should scale independently behind queues or triggers, use Azure Functions. (SRC-256 L219–259; SRC-104 L228–234; SRC-110 L203–250)
 
 2. **Inference:** If the backend already has a REST API with a formal OpenAPI 3.0 description, use OpenAPI specified tools; if the backend is a set of evolving tools owned by several teams, use MCP so the tool catalog changes server-side. (SRC-104 L236–246; SRC-233 L225–239)
 
@@ -79,11 +79,11 @@ aliases: []
 
 **Inference:** In exam questions, do not stop at the word "tool"; identify what must be reached: Python runtime, uploaded files, public web, app-owned code, serverless function, REST API, low-code workflow, dynamic tool catalog, or another agent. (SRC-254 L218–224; SRC-255 L218–227; SRC-257 L218–227; SRC-256 L219–224; SRC-104 L228–246; SRC-108 L217–233; SRC-37 L217–249)
 
-**Inference:** In practice, start with built-in tools when they fit, because custom integration adds execution, authentication, latency, validation, approval, and observability responsibilities; the corpus explicitly warns not to add tools without a clear purpose because each tool adds latency. (SRC-91 L287–292; SRC-256 L248–263; SRC-240 L226–239)
+**Inference:** In practice, start with built-in tools when they fit, because custom integration adds execution, authentication, latency, validation, approval, and observability responsibilities; the corpus explicitly warns not to add tools without a clear purpose because each tool adds latency. (SRC-91 L287–292; SRC-256 L248–259; SRC-240 L226–239)
 
 ## Open questions
 
-- The corpus does not provide full production governance patterns for tool approval, audit logging, secret rotation, or tool sandboxing across every option. (SRC-256 L248–263; SRC-240 L226–245)
+- The corpus does not provide full production governance patterns for tool approval, audit logging, secret rotation, or tool sandboxing across every option. (SRC-256 L248–259; SRC-240 L226–240)
 - The corpus does not settle a universal A2A-versus-MCP deployment topology beyond the agent-versus-tool boundary. (SRC-37 L217–249; SRC-108 L217–233)
 
 ## Sources

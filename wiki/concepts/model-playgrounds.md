@@ -26,7 +26,7 @@ Before writing app code, you need a fast way to discover whether a deployment be
 
 ## Mental model
 
-A playground is an interactive test bench attached to a Foundry project or deployment. **Inference:** It is not the production app and it is not the evaluator service (SRC-39 L252; SRC-53 L223–225). It is where a developer manually changes input, instructions, model choice, and generation settings, observes output, and learns what configuration should later be captured in code or evaluation datasets (SRC-39 L252–263; SRC-53 L220–225).
+**Synthesis:** A playground is an interactive test bench attached to a Foundry project or deployment. **Inference:** It is not the production app and it is not the evaluator service (SRC-39 L252; SRC-53 L223–225). It is where a developer manually changes input, instructions, model choice, and generation settings, observes output, and learns what configuration should later be captured in code or evaluation datasets (SRC-39 L252–263; SRC-53 L220–225).
 
 ## What the sources say
 

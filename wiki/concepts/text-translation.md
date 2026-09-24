@@ -26,7 +26,7 @@ Translation between languages is specialized and can be time-consuming and expen
 
 ## Mental model
 
-Text translation is meaning transfer: text in language A becomes equivalent text in language B. Transliteration is script transfer: the pronunciation or writing system changes, but the meaning is not translated (SRC-228 L120–151).
+**Inference:** Text translation is meaning transfer: text in language A becomes equivalent text in language B. Transliteration is script transfer: the pronunciation or writing system changes, but the meaning is not translated (SRC-228 L120–151).
 
 ## What the sources say
 

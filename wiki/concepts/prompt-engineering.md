@@ -26,7 +26,7 @@ A language model does not automatically know the role, boundaries, output format
 
 ## Mental model
 
-A prompt is the control surface around a model call. The corpus describes chat prompts as built from system, user, assistant, and example messages. The system message sets behavior, role, tone, constraints, and format; user messages contain the request; assistant messages preserve prior responses; examples show the pattern you expect (SRC-178 L221–231). The model is still probabilistic: a system message influences behavior but does not guarantee compliance, so prompts need testing, iteration, and mitigation layers such as content filtering and evaluation (SRC-178 L239–240).
+**Inference:** A prompt is the control surface around a model call. The corpus describes chat prompts as built from system, user, assistant, and example messages. The system message sets behavior, role, tone, constraints, and format; user messages contain the request; assistant messages preserve prior responses; examples show the pattern you expect (SRC-178 L221–231). The model is still probabilistic: a system message influences behavior but does not guarantee compliance, so prompts need testing, iteration, and mitigation layers such as content filtering and evaluation (SRC-178 L239–240).
 
 ## What the sources say
 
@@ -61,8 +61,8 @@ Prompt engineering appears across several Azure surfaces. In the Foundry model p
 | **Inference:** Scenario detail | Prompt engineering | RAG | Fine-tuning |
 |---|---|---|---|
 | Primary lever | Instructions, examples, formatting, decomposition, and parameters (SRC-178 L221–279). | External data retrieved into the prompt at query time (SRC-19 L220; SRC-19 L230). | Training a model on examples so behavior patterns are embedded in weights (SRC-95 L217–225). |
-| Best when | You need tone, format, task guidance, quick iteration, or low cost (SRC-178 L280–287). | The model lacks current, private, or domain data needed for accurate answers (SRC-19 L230; SRC-19 L252–258). | Detailed prompts and examples still do not produce consistent style, tone, or format (SRC-95 L213–220). |
-| Not enough when | Missing knowledge or stubborn inconsistency remains (SRC-178 L288–291). | Search/index quality is not available or not the issue. | You have no high-quality representative training examples (SRC-95 L245–256). |
+| Best when | You need tone, format, task guidance, quick iteration, or low cost (SRC-178 L280–286). | The model lacks current, private, or domain data needed for accurate answers (SRC-19 L230; SRC-19 L252–258). | Detailed prompts and examples still do not produce consistent style, tone, or format (SRC-95 L213–220). |
+| Not enough when | Missing knowledge or stubborn inconsistency remains (SRC-178 L286). | Search/index quality is not available or not the issue. | You have no high-quality representative training examples (SRC-95 L245–256). |
 
 **Inference:** keep the full prompt-engineering versus RAG versus fine-tuning comparison in [[optimization-strategies-compared]]. This page owns the prompt layer; [[retrieval-augmented-generation]] owns grounding; [[fine-tuning]] owns model-weight adaptation.
 

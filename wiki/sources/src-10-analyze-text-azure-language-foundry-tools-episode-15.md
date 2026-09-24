@@ -69,7 +69,7 @@ Rob Foulkrod introduces Learning Path 3 as the path for language and speech capa
 - The demo uses the AI Toolkit to select a Foundry project and get the project endpoint. (SRC-10 L497–514)
 - For the code, only the resource portion of the endpoint is needed, not the project path. (SRC-10 L515–531)
 - The Python example imports `DefaultAzureCredential` from `azure.identity`. (SRC-10 L579–586)
-- `DefaultAzureCredential` is described as a chained token credential that tries multiple token sources until one succeeds. (SRC-10 L587–593)
+- `DefaultAzureCredential` is described as a chained token credential that tries multiple token sources until one succeeds. (SRC-10 L586–593)
 - The demo authenticates through Azure CLI login, and future Text Analytics client use authenticates as the signed-in user. (SRC-10 L594–604; SRC-10 L634–649)
 - The AI client is built by passing in the Foundry endpoint and credentials. (SRC-10 L619–624)
 - The demo calls `detect-language`, `recognize_entities`, and `recognize_pii_entities`. (SRC-10 L672–716)
@@ -93,7 +93,7 @@ In code, the demo imports `DefaultAzureCredential` and the Text Analytics client
 The transcript describes code rather than preserving full snippets. (SRC-10 L575–716)
 
 - Credential import: `DefaultAzureCredential` comes from `azure.identity`. (SRC-10 L579–586)
-- Credential behavior: `DefaultAzureCredential` tries multiple token sources until one succeeds. (SRC-10 L587–593)
+- Credential behavior: `DefaultAzureCredential` tries multiple token sources until one succeeds. (SRC-10 L586–593)
 - Login source: the demo uses Azure CLI `az login` as the token source. (SRC-10 L594–604; SRC-10 L634–645)
 - Client purpose: the Text Analytics client provides access to Azure Language text-analysis components. (SRC-10 L606–612)
 - Client construction: pass the Foundry endpoint and credentials into the AI client. (SRC-10 L619–624)

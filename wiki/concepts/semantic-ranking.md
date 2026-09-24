@@ -26,7 +26,7 @@ Keyword search can miss relevant content when the user's words differ from the d
 
 ## Mental model
 
-Semantic ranking is a relevance-improvement layer: after content is indexed and retrievable, semantic models help surface results whose meaning fits the question, rather than relying only on literal terms. (SRC-102 L248; SRC-194 L223–227)
+**Synthesis:** Semantic ranking is a relevance-improvement layer: after content is indexed and retrievable, semantic models help surface results whose meaning fits the question, rather than relying only on literal terms. (SRC-102 L248; SRC-194 L223–227)
 
 ## What the sources say
 

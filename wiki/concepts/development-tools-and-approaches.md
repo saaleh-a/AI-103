@@ -26,7 +26,7 @@ AI solution development spans discovery, prototyping, code integration, configur
 
 ## Mental model
 
-Think of the surfaces as layers over the same Foundry assets. The portal and playgrounds help you discover and validate. VS Code and GitHub help you build, version, and deploy. The Foundry SDK manages project-level capabilities. The OpenAI SDK handles compatible model inference. Foundry Tools SDKs and REST APIs call specific AI-service capabilities. (SRC-51 L218–238; SRC-18 L292–307)
+**Synthesis:** Think of the surfaces as layers over the same Foundry assets. The portal and playgrounds help you discover and validate. VS Code and GitHub help you build, version, and deploy. The Foundry SDK manages project-level capabilities. The OpenAI SDK handles compatible model inference. Foundry Tools SDKs and REST APIs call specific AI-service capabilities. (SRC-51 L218–238; SRC-18 L292–307)
 
 ## What the sources say
 

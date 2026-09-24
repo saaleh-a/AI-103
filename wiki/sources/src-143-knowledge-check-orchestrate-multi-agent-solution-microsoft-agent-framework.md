@@ -43,18 +43,18 @@ ingest_depth: full
 
 ## TL;DR
 
-This source is a compact knowledge check for the multi-agent orchestration module. (SRC-143 L8–23) It tests the unified orchestration workflow, the group chat pattern for brainstorming and collaboration, and the handoff pattern for context-based transfer of control. (SRC-143 L10–22)
+This source is a compact knowledge check for the multi-agent orchestration module. (SRC-143 L8–22) It tests the unified orchestration workflow, the group chat pattern for brainstorming and collaboration, and the handoff pattern for context-based transfer of control. (SRC-143 L10–22)
 
 ## Key claims
 
 - The capture includes first-question options: select and create an orchestration pattern, define agents and capabilities, and start a runtime. (SRC-143 L10–12)
-- The second question asks which pattern fits brainstorming and collaborative problem solving among multiple agents. (SRC-143 L14–18)
+- The second question asks which pattern fits brainstorming and collaborative problem solving among multiple agents. (SRC-143 L14–17)
 - The third question asks which pattern dynamically transfers control between agents based on context or rules. (SRC-143 L19–22)
 - The page requires all questions to be answered before checking work. (SRC-143 L23)
 
 ## How it works
 
-The page functions as an assessment checkpoint rather than a teaching unit. (SRC-143 L8–23) Its questions map to the module's pattern distinctions: setup of the orchestration workflow, group chat for collaboration, and handoff for context-based control transfer. (SRC-143 L10–22)
+The page functions as an assessment checkpoint rather than a teaching unit. (SRC-143 L8–22) Its questions map to the module's pattern distinctions: setup of the orchestration workflow, group chat for collaboration, and handoff for context-based control transfer. (SRC-143 L10–22)
 
 ## Code and API patterns
 
@@ -84,16 +84,16 @@ Not covered by this source.
 ## Relation to other sources
 
 - [[src-231-understand-agent-orchestration]] gives the unified workflow order that likely underlies the first knowledge-check item. (SRC-231 L254–261; SRC-143 L10–12)
-- [[src-242-group-chat-orchestration]] supports the group-chat cue for brainstorming and collaboration. (SRC-242 L223–234; SRC-143 L14–18)
+- [[src-242-group-chat-orchestration]] supports the group-chat cue for brainstorming and collaboration. (SRC-242 L223–234; SRC-143 L14–17)
 - [[src-243-handoff-orchestration]] supports the handoff cue for dynamic transfer based on context or rules. (SRC-243 L218–228; SRC-143 L19–22)
 - [[src-180-orchestrate-multi-agent-solution-microsoft-agent-framework-episode-14]] verbally reviews the same knowledge-check answers. (SRC-180 L512–535)
 
 ## Connections
 
 - [[orchestration-patterns-compared]] — the page tests distinctions between patterns. (SRC-143 L14–22)
-- [[group-chat-orchestration]] — one assessed pattern. (SRC-143 L14–18)
+- [[group-chat-orchestration]] — one assessed pattern. (SRC-143 L14–17)
 - [[handoff-orchestration]] — one assessed pattern. (SRC-143 L19–22)
-- [[multi-agent-orchestration]] — the assessment belongs to the multi-agent orchestration module. (SRC-143 L8–23)
+- [[multi-agent-orchestration]] — the assessment belongs to the multi-agent orchestration module. (SRC-143 L8–22)
 - *Module units:* [[src-133-introduction-orchestrate-multi-agent-solution-microsoft-agent-framework|1 Introduction]] · [[src-237-understand-microsoft-agent-framework|2 Understand the Microsoft Agent Framework]] · [[src-231-understand-agent-orchestration|3 Understand Agent Orchestration]] · [[src-241-concurrent-orchestration|4 Use Concurrent Orchestration]] · [[src-245-sequential-orchestration|5 Use Sequential Orchestration]] · [[src-242-group-chat-orchestration|6 Use Group Chat Orchestration]] · [[src-243-handoff-orchestration|7 Use Handoff Orchestration]] · [[src-244-magentic-orchestration|8 Use Magentic Orchestration]] · [[src-69-exercise-develop-multi-agent-solution|9 Exercise - Develop a multi-agent solution]] · [[src-199-summary-orchestrate-multi-agent-solution-microsoft-agent-framework|11 Summary]] · [[src-180-orchestrate-multi-agent-solution-microsoft-agent-framework-episode-14|episode 14]]
 
 ## Open questions

@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "A requirements-first process for choosing LLMs, SLMs, multimodal, speech, image, video, embedding or Foundry Tool options."
 area: models
-source_ids: [SRC-17, SRC-18, SRC-32, SRC-89, SRC-114, SRC-188, SRC-191, SRC-221, SRC-225, SRC-248, SRC-258]
+source_ids: [SRC-17, SRC-18, SRC-32, SRC-89, SRC-96, SRC-114, SRC-188, SRC-191, SRC-221, SRC-225, SRC-248, SRC-258]
 objectives: [P01]
 objective_gaps: []
 tags: []
@@ -28,8 +28,8 @@ The catalog contains many models and model types, so picking by brand name alone
 
 **Synthesis:** Select models by eliminating mismatches in layers (SRC-89 L221–226; SRC-188 L215–219):
 
-1. **Synthesis:** **Task modality:** text, image, audio, video, embeddings or tool/service output (SRC-89 L221–226).
-2. **Synthesis:** **Capability:** reasoning, tool calling, multimodal processing, generation, transcription, synthesis or domain specialization (SRC-89 L221–246).
+1. **Synthesis:** **Task modality:** text, image, audio, video, embeddings or tool/service output (SRC-89 L223–225; SRC-89 L237–242; SRC-96 L219).
+2. **Synthesis:** **Capability:** reasoning, tool calling, multimodal processing, generation, transcription, synthesis or domain specialization (SRC-89 L221–244).
 3. **Synthesis:** **Operational fit:** cost, latency, throughput, deployment option and endpoint compatibility (SRC-188 L242–271).
 4. **Synthesis:** **Risk fit:** safety, responsible AI considerations and evaluation requirements (SRC-89 L219–220; SRC-188 L232–241).
 
@@ -68,7 +68,7 @@ In Azure/Foundry terms, selection usually starts in [[model-catalog]], where fil
 | Image in the prompt | Multimodal image-capable model | Vision prompts require a model supporting image-based input (SRC-248 L213–221). |
 | Generate a new image from text | Image-generation model | Image models create original graphical output from natural-language input (SRC-258 L218–223). |
 | Transcribe or synthesize speech | Speech-capable generative model | The corpus separates speech-to-text and text-to-speech use cases (SRC-17 L217–221). |
-| Structured extraction, translation, safety or other focused service outcome | Foundry Tools may fit | The study guide explicitly includes Foundry Tools in the model/service choice objective (SRC-191 L121–122). |
+| Structured extraction, translation or another focused service outcome | Foundry Tools may fit | Foundry Tools are prebuilt APIs and models for tasks such as language analysis, translation and field extraction (SRC-96 L219; SRC-96 L224; SRC-96 L228; SRC-96 L230), and the study guide includes Foundry Tools in the model-choice objective (SRC-191 L121–122). |
 
 ## Failure modes and misconceptions
 
@@ -100,6 +100,7 @@ In Azure/Foundry terms, selection usually starts in [[model-catalog]], where fil
 - SRC-18 — [[src-18-choose-endpoint-sdk]] — SDK implications of model choice.
 - SRC-32 — [[src-32-create-client-application-that-uses-image-generation-model]] — image-generation SDK implication.
 - SRC-89 — [[src-89-explore-model-catalog]] — model categories, filters and capabilities.
+- SRC-96 — [[src-96-foundry-tools]] — Foundry Tools: prebuilt APIs and models for language, speech, translation, document and content extraction.
 - SRC-114 — [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models]] — select, deploy and evaluate workflow.
 - SRC-188 — [[src-188-select-models-benchmarks]] — benchmark dimensions and trade-offs.
 - SRC-191 — [[src-191-study-guide-exam-ai-103-developing-ai-apps-agents]] — official model-choice objectives.

@@ -78,12 +78,12 @@ The episode's code path uses a project endpoint from environment variables, defa
 
 ## Decision boundaries and exam cues
 - **Inference:** If a scenario includes brittle prompt instructions such as always doing conditional logic inside one agent, workflows are a better fit because the presenter says agents are not logic engines (SRC-15 L60–100).
-- **Inference:** If the scenario asks to process a list of tickets, use a For-each loop rather than duplicating nodes (SRC-15 L415–445; SRC-15 L985–990).
+- **Inference:** If the scenario asks to process a list of tickets, use a For-each loop rather than duplicating nodes (SRC-15 L415–445; SRC-15 L985–991).
 - **Inference:** If a scenario asks for predictable branching from an agent result, use structured JSON output stored in variables (SRC-15 L525–600; SRC-15 L615–685).
 - **Inference:** If a scenario asks for application integration, invoke the saved workflow from code through a project client, conversation, Responses API call, and workflow agent reference (SRC-15 L855–930).
 
 ## Assessment items
-The episode asks which node invokes an AI agent and answers that it is an agent node (SRC-15 L980–985). It asks which node handles multiple items without duplicating nodes and answers `For-Each` (SRC-15 L985–990).
+The episode asks which node invokes an AI agent and answers that it is an agent node (SRC-15 L980–985). It asks which node handles multiple items without duplicating nodes and answers `For-Each` (SRC-15 L985–991).
 
 ## Tensions, caveats and currency
 - **Stale-risk:** The presenter notes that workflows and orchestration patterns are still maturing (SRC-15 L1035–1043).

@@ -26,7 +26,7 @@ Organizations often need to remove personally identifiable information from cust
 
 ## Mental model
 
-The service scans text for sensitive spans, classifies them as PII categories, and can produce two useful outputs: a list of found PII entities and a redacted text version where those spans are masked (SRC-94 L218–225).
+**Inference:** The service scans text for sensitive spans, classifies them as PII categories, and can produce two useful outputs: a list of found PII entities and a redacted text version where those spans are masked (SRC-94 L218–225).
 
 ## What the sources say
 

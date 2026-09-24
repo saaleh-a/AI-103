@@ -47,14 +47,14 @@ The knowledge check asks learners to identify throughput, Global Standard deploy
 
 ## Key claims
 
-- The assessment tests which benchmark indicates fast prompt processing and comprehensive responses. (SRC-145 L213–217)
-- The assessment tests which deployment type is best for general use while offering the largest quota. (SRC-145 L218–222)
-- The assessment tests which evaluation metric measures linguistic correctness and natural language quality. (SRC-145 L223–227)
+- The assessment tests which benchmark indicates fast prompt processing and comprehensive responses. (SRC-145 L213–216)
+- The assessment tests which deployment type is best for general use while offering the largest quota. (SRC-145 L218–221)
+- The assessment tests which evaluation metric measures linguistic correctness and natural language quality. (SRC-145 L223–226)
 - The capture requires all questions to be answered before checking work and does not show validated answers. (SRC-145 L228–229)
 
 ## How it works
 
-Not covered by this source beyond the assessment prompts. (SRC-145 L213–229)
+Not covered by this source beyond the assessment prompts. (SRC-145 L213–226)
 
 ## Code and API patterns
 
@@ -62,9 +62,9 @@ Not covered by this source.
 
 ## Key terms
 
-- Throughput — one of the benchmark choices for prompt-processing speed and comprehensive responses. (SRC-145 L213–217)
-- Global Standard — one of the deployment choices for general use and largest quota. (SRC-145 L218–222)
-- Fluency — one of the metric choices for linguistic correctness and natural-language quality. (SRC-145 L223–227)
+- Throughput — one of the benchmark choices for prompt-processing speed and comprehensive responses. (SRC-145 L213–216)
+- Global Standard — one of the deployment choices for general use and largest quota. (SRC-145 L218–221)
+- Fluency — one of the metric choices for linguistic correctness and natural-language quality. (SRC-145 L223–226)
 
 ## Decision boundaries and exam cues
 
@@ -84,22 +84,22 @@ Not covered by this source.
 
 ## Relation to other sources
 
-- [[src-188-select-models-benchmarks]] teaches throughput and other benchmark metrics tested here. (SRC-145 L213–217; SRC-188 L251–264)
-- [[src-39-deploy-models-endpoints]] teaches Global Standard deployment. (SRC-145 L218–222; SRC-39 L218)
-- [[src-53-evaluate-model-performance]] teaches fluency, groundedness, and relevance. (SRC-145 L223–227; SRC-53 L239–242)
-- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] gives the review answers for the same three questions. (SRC-145 L213–227; SRC-189 L929–947)
+- [[src-188-select-models-benchmarks]] teaches throughput and other benchmark metrics tested here. (SRC-145 L213–216; SRC-188 L251–264)
+- [[src-39-deploy-models-endpoints]] teaches Global Standard deployment. (SRC-145 L218–221; SRC-39 L218)
+- [[src-53-evaluate-model-performance]] teaches fluency, groundedness, and relevance. (SRC-145 L223–226; SRC-53 L239–242)
+- [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] gives the review answers for the same three questions. (SRC-145 L213–226; SRC-189 L929–947)
 
 ## Connections
 
-- [[model-benchmarks]] — question 1 tests benchmark vocabulary. (SRC-145 L213–217)
-- [[model-deployment-types]] — question 2 tests deployment choice. (SRC-145 L218–222)
-- [[model-and-app-evaluation]] — question 3 tests evaluation metrics. (SRC-145 L223–227)
-- [[ai-103-exam]] — the page is an exam-style knowledge check. (SRC-145 L213–229)
+- [[model-benchmarks]] — question 1 tests benchmark vocabulary. (SRC-145 L213–216)
+- [[model-deployment-types]] — question 2 tests deployment choice. (SRC-145 L218–221)
+- [[model-and-app-evaluation]] — question 3 tests evaluation metrics. (SRC-145 L223–226)
+- [[ai-103-exam]] — the page is an exam-style knowledge check. (SRC-145 L213–226)
 - *Module units:* [[src-114-introduction-select-deploy-evaluate-microsoft-foundry-models|1 Introduction]] · [[src-89-explore-model-catalog|2 Explore the model catalog]] · [[src-188-select-models-benchmarks|3 Select models using benchmarks]] · [[src-39-deploy-models-endpoints|4 Deploy models to endpoints]] · [[src-53-evaluate-model-performance|5 Evaluate model performance]] · [[src-80-exercise-select-deploy-evaluate-models|6 Exercise - Select, deploy, and evaluate models]] · [[src-196-summary-select-deploy-evaluate-microsoft-foundry-models|8 Summary]] · [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2|episode 2]]
 
 ## Open questions
 
-- The page does not show whether the learner answered correctly or which option Microsoft selected after submission. (SRC-145 L228–229)
+- The page does not show whether the learner answered correctly or which option Microsoft selected after submission. (SRC-145 L228)
 
 ## Sources
 

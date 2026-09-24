@@ -22,7 +22,7 @@ Sora 2 is the named OpenAI video-generation model in the corpus. Microsoft Learn
 
 ## What it is
 
-Sora 2 is an AI model for video generation, not a general chat model. It is deployed from the Foundry model catalog, then used to create video jobs from prompts, reference images, or remix requests (SRC-38 L220–227; SRC-128 L212–213). **Stale-risk:** the model name, availability, limits, and deployment controls are time-sensitive.
+**Synthesis:** Sora 2 is an AI model for video generation, not a general chat model. It is deployed from the Foundry model catalog, then used to create video jobs from prompts, reference images, or remix requests (SRC-38 L220–227; SRC-128 L212–213). **Stale-risk:** the model name, availability, limits, and deployment controls are time-sensitive.
 
 ## What the sources say
 

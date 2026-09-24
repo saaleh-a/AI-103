@@ -22,7 +22,7 @@ Azure OpenAI appears in this corpus as both a model source in the Microsoft Foun
 
 ## What it is
 
-Azure OpenAI is not the whole of Microsoft Foundry. In this wiki boundary, Azure OpenAI is the Azure-hosted OpenAI-compatible model inference surface: a Foundry project exposes an Azure OpenAI endpoint, the OpenAI SDK can call Azure OpenAI deployments, and the optional `AzureOpenAI` client is used when code needs version-specific Azure OpenAI API functionality (SRC-18 L257–287). The broader [[model-catalog]] includes Azure OpenAI models alongside Microsoft, partner and community models (SRC-89 L216–224).
+**Synthesis:** Azure OpenAI is not the whole of Microsoft Foundry. In this wiki boundary, Azure OpenAI is the Azure-hosted OpenAI-compatible model inference surface: a Foundry project exposes an Azure OpenAI endpoint, the OpenAI SDK can call Azure OpenAI deployments, and the optional `AzureOpenAI` client is used when code needs version-specific Azure OpenAI API functionality (SRC-18 L257–287). The broader [[model-catalog]] includes Azure OpenAI models alongside Microsoft, partner and community models (SRC-89 L216–224).
 
 ## What the sources say
 

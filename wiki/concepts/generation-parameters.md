@@ -26,7 +26,7 @@ Even with the same model and prompt, an application may need different output be
 
 ## Mental model
 
-Prompt text says what the model should do. Generation parameters tune how freely it samples the next tokens and how long the response can be. Lower randomness narrows the model toward predictable completions; higher randomness increases variation. Token limits stop output from growing beyond the desired length or cost envelope (SRC-99 L245–251; SRC-178 L273–279).
+**Synthesis:** Prompt text says what the model should do. Generation parameters tune how freely it samples the next tokens and how long the response can be. Lower randomness narrows the model toward predictable completions; higher randomness increases variation. Token limits stop output from growing beyond the desired length or cost envelope (SRC-99 L245–251; SRC-178 L273–279).
 
 ## What the sources say
 
@@ -80,7 +80,7 @@ For media generation, the corpus uses a broader sense of generation controls. Im
 
 **Inference:** customer signal: the model gives different wording on repeated runs, or factual responses are too creative. Lower temperature first because the sources define temperature as the randomness control (SRC-178 L273–279; SRC-20 L233–236).
 
-**Inference:** discovery question: ask whether the requirement is about variability, length, missing facts, or persistent behavior. Variability and length map to parameters; missing facts map to RAG; persistent behavior after good prompts maps to fine-tuning (SRC-178 L273–291; SRC-19 L220–225).
+**Inference:** discovery question: ask whether the requirement is about variability, length, missing facts, or persistent behavior. Variability and length map to parameters; missing facts map to RAG; persistent behavior after good prompts maps to fine-tuning (SRC-178 L273–286; SRC-19 L220–225).
 
 ## Connections
 

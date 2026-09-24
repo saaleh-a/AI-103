@@ -26,7 +26,7 @@ Without tools, an agent can only generate text from what it already knows; tools
 
 ## Mental model
 
-Think of a tool as a declared capability with a name, description, inputs, execution environment, and returned result. The model decides whether a user request needs that capability, emits or invokes a tool call, receives the result, and incorporates the result into its final response. (SRC-91 L222–229; SRC-256 L240–247)
+**Synthesis:** Think of a tool as a declared capability with a name, description, inputs, execution environment, and returned result. The model decides whether a user request needs that capability, emits or invokes a tool call, receives the result, and incorporates the result into its final response. (SRC-91 L222–229; SRC-256 L240–247)
 
 ## What the sources say
 

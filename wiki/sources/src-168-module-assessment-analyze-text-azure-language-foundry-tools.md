@@ -44,7 +44,7 @@ ingest_depth: full
 
 ## TL;DR
 
-The assessment tests two decision boundaries. (SRC-168 L213–221) For news articles where the application needs key people, places, and dates for indexing, the shown correct option is Azure Language in Foundry Tools to extract named entities. (SRC-168 L213–217) For publishing customer testimonials after removing personal details, the matching episode gives the answer as Azure Language in Foundry Tools to find and redact PII, but this capture itself does not show checked-answer feedback for the second item. (SRC-168 L218–224; SRC-10 L799–810)
+The assessment tests two decision boundaries. (SRC-168 L213–221) For news articles where the application needs key people, places, and dates for indexing, the shown correct option is Azure Language in Foundry Tools to extract named entities. (SRC-168 L213–216) For publishing customer testimonials after removing personal details, the matching episode gives the answer as Azure Language in Foundry Tools to find and redact PII, but this capture itself does not show checked-answer feedback for the second item. (SRC-168 L218–224; SRC-10 L799–810)
 
 ## Key claims
 
@@ -57,11 +57,11 @@ The assessment tests two decision boundaries. (SRC-168 L213–221) For news arti
 
 ## How it works
 
-This source is an assessment rather than a teaching unit. (SRC-168 L213–224) It maps scenario requirements to Azure Language capabilities: entity indexing maps to named entity extraction, while removal of personal details maps to PII finding and redaction. (SRC-168 L213–221)
+This source is an assessment rather than a teaching unit. (SRC-168 L213–221) It maps scenario requirements to Azure Language capabilities: entity indexing maps to named entity extraction, while removal of personal details maps to PII finding and redaction. (SRC-168 L213–221)
 
 ## Code and API patterns
 
-Not covered by this source. (SRC-168 L213–224)
+Not covered by this source. (SRC-168 L213–221)
 
 ## Key terms
 
@@ -107,7 +107,7 @@ Not covered by this source. (SRC-168 L213–224)
 - [[named-entity-recognition]] — tested by the news-article indexing scenario. (SRC-168 L213–216)
 - [[pii-detection-and-redaction]] — tested by the testimonial-publication scenario. (SRC-168 L218–220)
 - [[azure-language]] — both assessment options use Azure Language in Foundry Tools. (SRC-168 L216; SRC-168 L219)
-- [[ai-103-exam]] — this source is assessment material for the AI-103 learning corpus. (SRC-168 L213–224)
+- [[ai-103-exam]] — this source is assessment material for the AI-103 learning corpus. (SRC-168 L213–221)
 - *Module units:* [[src-127-introduction-analyze-text-azure-language-foundry-tools|1 Introduction]] · [[src-12-azure-language-microsoft-foundry-tools|2 Azure Language in Microsoft Foundry Tools]] · [[src-40-detect-language|3 Detect language]] · [[src-93-extract-entities|6 Extract entities]] · [[src-94-extract-personally-identifiable-information-pii|7 Extract personally identifiable information (PII)]] · [[src-56-exercise-analyze-text|8 Exercise - Analyze text]] · [[src-206-summary-analyze-text-azure-language-foundry-tools|10 Summary]] · [[src-10-analyze-text-azure-language-foundry-tools-episode-15|episode 15]]
 
 ## Open questions

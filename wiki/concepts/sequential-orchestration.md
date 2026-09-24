@@ -26,9 +26,9 @@ Some multi-agent tasks are not independent; each step needs the result from the 
 
 ## Mental model
 
-Sequential orchestration is an assembly line for agents. The path is known before execution, agents do not decide the next step, and every stage hands its work to the next stage. (SRC-245 L220–221)
+**Inference:** Sequential orchestration is an assembly line for agents. The path is known before execution, agents do not decide the next step, and every stage hands its work to the next stage. (SRC-245 L220–221)
 
-The episode explains the same idea with a summarizer, translator, and Q&A builder: each input must complete before the next agent can move forward. (SRC-180 L64–90)
+**Inference:** The episode explains the same idea with a summarizer, translator, and Q&A builder: each input must complete before the next agent can move forward. (SRC-180 L64–90)
 
 ## What the sources say
 

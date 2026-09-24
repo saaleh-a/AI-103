@@ -94,7 +94,7 @@ Not covered by this source.
 
 - [[src-188-select-models-benchmarks]] precedes deployment by comparing models before making them consumable. (SRC-188 L215–219; SRC-39 L215)
 - [[src-53-evaluate-model-performance]] follows deployment by evaluating whether the deployed model meets requirements. (SRC-39 L215; SRC-53 L213–216)
-- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks which deployment type is general-use with largest quota. (SRC-39 L218; SRC-145 L218–222)
+- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] asks which deployment type is general-use with largest quota. (SRC-39 L218; SRC-145 L218–221)
 - [[src-189-select-deploy-evaluate-microsoft-foundry-models-episode-2]] demonstrates Global Standard deployment and playground comparison. (SRC-39 L216–240; SRC-189 L209–309; SRC-189 L661–760)
 
 ## Connections

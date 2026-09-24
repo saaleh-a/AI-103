@@ -26,9 +26,9 @@ Some tasks require specialized knowledge, but the right specialist or order is n
 
 ## Mental model
 
-Handoff orchestration is specialist routing. One agent works at a time, decides or helps determine the next specialist, then fully hands off control rather than running a parallel discussion. (SRC-243 L221–222)
+**Inference:** Handoff orchestration is specialist routing. One agent works at a time, decides or helps determine the next specialist, then fully hands off control rather than running a parallel discussion. (SRC-243 L221–222)
 
-The episode illustrates this with general support delegating to billing after input reveals the question belongs there; the path is not known at the beginning. (SRC-180 L111–186)
+**Inference:** The episode illustrates this with general support delegating to billing after input reveals the question belongs there; the path is not known at the beginning. (SRC-180 L111–186)
 
 ## What the sources say
 

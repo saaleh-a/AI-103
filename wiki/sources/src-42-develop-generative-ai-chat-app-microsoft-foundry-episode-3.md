@@ -114,7 +114,7 @@ The demo sets up a local Python project, virtual environment and requirements, i
 ## Tensions, caveats and currency
 
 - The transcript says Azure Foundry in the opening, while the Learn module title uses Microsoft Foundry. (SRC-42 L11–14; SRC-120 L215)
-- The transcript says Open API in places where the surrounding context indicates OpenAI, likely an auto-caption error. (SRC-42 L757–766)
+- The transcript says Open API in places where the surrounding context indicates OpenAI, likely an auto-caption error. (SRC-42 L451; SRC-42 L572–573)
 - The presenter says the OpenAI endpoint is used in the demo even though the Learn text also describes Responses through Foundry SDK or OpenAI SDK paths. (SRC-42 L472–496; SRC-99 L217)
 
 ## Relation to other sources
@@ -123,7 +123,7 @@ The demo sets up a local Python project, virtual environment and requirements, i
 - [[src-18-choose-endpoint-sdk]] is the Learn unit counterpart for endpoint, SDK and authentication choices. (SRC-18 L217–308)
 - [[src-99-generate-responses-responses-api-foundry-sdk]] is the Learn unit counterpart for Responses concepts, response IDs, streaming and async. (SRC-99 L217–305)
 - [[src-98-generate-responses-chatcompletions-api]] is the Learn unit counterpart for ChatCompletions history handling. (SRC-98 L217–233)
-- [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry]] contains the same knowledge-check questions without answers shown. (SRC-148 L215–233)
+- [[src-148-knowledge-check-develop-generative-ai-chat-app-microsoft-foundry]] contains the same knowledge-check questions without answers shown. (SRC-148 L215–230)
 
 ## Connections
 
@@ -139,7 +139,7 @@ The demo sets up a local Python project, virtual environment and requirements, i
 ## Open questions
 
 - Which exact code repository and lab files were cloned in the demo are not fully recoverable from the transcript lines. (SRC-42 L508–560)
-- The transcript is auto-captioned, so product names such as OpenAI/Open API need cautious interpretation against Learn pages. (SRC-42 L757–766)
+- The transcript is auto-captioned, so product names such as OpenAI/Open API need cautious interpretation against Learn pages. (SRC-42 L451; SRC-42 L572–573)
 
 ## Sources
 

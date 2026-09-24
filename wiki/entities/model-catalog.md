@@ -22,7 +22,7 @@ The Foundry model catalog is the portal surface for discovering and comparing AI
 
 ## What it is
 
-The catalog is a feature of the Microsoft Foundry portal, not a model family. It contains model cards and filters that help you find a model whose provider, capability, task, deployment option and governance notes fit your use case (SRC-89 L219–226). It is the evidence-backed home for questions like "where do I find a model?", while [[model-selection]] is the reasoning process for deciding which model type fits a requirement.
+**Inference:** The catalog is a feature of the Microsoft Foundry portal, not a model family. It contains model cards and filters that help you find a model whose provider, capability, task, deployment option and governance notes fit your use case (SRC-89 L219–226). It is the evidence-backed home for questions like "where do I find a model?", while [[model-selection]] is the reasoning process for deciding which model type fits a requirement.
 
 ## What the sources say
 

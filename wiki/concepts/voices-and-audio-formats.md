@@ -26,7 +26,7 @@ Text-to-speech is not finished when text becomes "some audio." Applications may 
 
 ## Mental model
 
-Voice choice answers "who speaks?" Audio format answers "what kind of audio comes out?" Output destination answers "where does it go?" SSML answers "how exactly should the words be spoken?" (SRC-21 L218–230; SRC-253 L222; SRC-246 L218–224).
+**Synthesis:** Voice choice answers "who speaks?" Audio format answers "what kind of audio comes out?" Output destination answers "where does it go?" SSML answers "how exactly should the words be spoken?" (SRC-21 L218–230; SRC-253 L222; SRC-246 L218–224).
 
 ## What the sources say
 

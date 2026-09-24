@@ -48,14 +48,14 @@ The knowledge check asks about four module facts, and the capture shows no check
 
 ## Key claims
 
-- The primary role of the Azure Language MCP server is to expose Azure Language text-analysis capabilities as MCP tools for agents. (SRC-150 L211–215)
-- An agent determines which Language MCP tool to call by matching the prompt to tool descriptions received from the MCP server. (SRC-150 L216–220)
-- A Python client references a Foundry agent in the OpenAI Responses API by specifying the agent name in the `agent_reference` field in `extra_body`. (SRC-150 L221–225)
+- The primary role of the Azure Language MCP server is to expose Azure Language text-analysis capabilities as MCP tools for agents. (SRC-150 L211–214)
+- An agent determines which Language MCP tool to call by matching the prompt to tool descriptions received from the MCP server. (SRC-150 L216–219)
+- A Python client references a Foundry agent in the OpenAI Responses API by specifying the agent name in the `agent_reference` field in `extra_body`. (SRC-150 L221–224)
 - Connecting the Azure Language MCP server to a Foundry agent uses key-based authentication with the `Ocp-Apim-Subscription-Key` credential. (SRC-150 L226–229)
 
 ## How it works
 
-This source is assessment rather than instruction. (SRC-150 L211–232) **Inference:** Its choices summarize the module's expected mental model: the MCP server exposes language tools, the agent selects from descriptions, the client points the Responses API call at an agent reference, and the portal tool connection authenticates with a key. (SRC-150 L211–229)
+This source is assessment rather than instruction. (SRC-150 L211–229) **Inference:** Its choices summarize the module's expected mental model: the MCP server exposes language tools, the agent selects from descriptions, the client points the Responses API call at an agent reference, and the portal tool connection authenticates with a key. (SRC-150 L211–229)
 
 ## Code and API patterns
 
@@ -77,17 +77,17 @@ The code-related pattern assessed is the Responses API agent reference: when bui
 
 ## Assessment items
 
-1. What is the primary role of the Azure Language MCP server? (SRC-150 L211–215)
+1. What is the primary role of the Azure Language MCP server? (SRC-150 L211–214)
    - To train and fine-tune custom language models for use by AI agents. (SRC-150 L212)
    - To expose Azure Language text analysis capabilities as MCP tools for agents. (SRC-150 L213)
    - To deploy and manage large language models in an Azure subscription. (SRC-150 L214)
    - Answer not shown in capture; the episode review gives exposing Azure Language text-analysis capabilities as MCP tools. (SRC-45 L576–582)
-2. How does an agent determine which Azure Language MCP tool to call when processing a user's prompt? (SRC-150 L216–220)
+2. How does an agent determine which Azure Language MCP tool to call when processing a user's prompt? (SRC-150 L216–219)
    - The developer writes routing logic to direct each prompt to a specific tool. (SRC-150 L217)
    - The agent matches the prompt to tool descriptions received from the MCP server. (SRC-150 L218)
    - The MCP server analyzes the prompt and automatically routes it to a tool. (SRC-150 L219)
    - Answer not shown in capture; the episode review gives matching the prompt to tool descriptions from the MCP server. (SRC-45 L583–588)
-3. When building a Python client application, how do you reference a Foundry agent when calling the OpenAI Responses API? (SRC-150 L221–225)
+3. When building a Python client application, how do you reference a Foundry agent when calling the OpenAI Responses API? (SRC-150 L221–224)
    - By passing the agent's API key as a request header to the endpoint. (SRC-150 L222)
    - By specifying the agent name in the `agent_reference` field in `extra_body`. (SRC-150 L223)
    - By passing the agent's endpoint URL as the model parameter value. (SRC-150 L224)
@@ -101,11 +101,11 @@ The code-related pattern assessed is the Responses API agent reference: when bui
 ## Tensions, caveats and currency
 
 - The first three questions show numeric answer lines in the capture, but the fourth question does not show a selected answer line before the submit prompt. (SRC-150 L211–230)
-- The knowledge-check answer for client code uses `agent_reference`, while the preceding unit's prose says the key part is specifying the agent by name in `extra_body`; the code itself is absent. (SRC-24 L252–255; SRC-150 L221–225)
+- The knowledge-check answer for client code uses `agent_reference`, while the preceding unit's prose says the key part is specifying the agent by name in `extra_body`; the code itself is absent. (SRC-24 L252–255; SRC-150 L221–224)
 
 ## Relation to other sources
 
-- [[src-235-understand-azure-language-mcp-server]] teaches the server role and tool-selection model assessed by questions 1 and 2. (SRC-235 L225–239; SRC-150 L211–220)
+- [[src-235-understand-azure-language-mcp-server]] teaches the server role and tool-selection model assessed by questions 1 and 2. (SRC-235 L225–239; SRC-150 L211–219)
 - [[src-24-connect-language-mcp-server-agent]] teaches the Responses API and authentication details assessed by questions 3 and 4. (SRC-24 L226–255; SRC-150 L221–229)
 - [[src-200-summary-develop-text-analysis-agent-azure-language-mcp-server]] summarizes the same capabilities after the assessment. (SRC-150 L211–229; SRC-200 L215–221)
 

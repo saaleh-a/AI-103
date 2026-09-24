@@ -18,7 +18,7 @@ aliases: ["prompt engineering vs RAG vs fine-tuning"]
 
 ## Summary
 
-**Synthesis:** The corpus presents optimization as a layered loop: prompt engineering and generation parameters are the lightest behavior controls, RAG adds missing trusted context, fine-tuning changes model behaviour through examples, and evaluation decides whether any change improved quality, safety, groundedness or consistency (SRC-178 L213–291; SRC-19 L216–239; SRC-102 L217–230; SRC-95 L217–256; SRC-53 L270–296).
+**Synthesis:** The corpus presents optimization as a layered loop: prompt engineering and generation parameters are the lightest behavior controls, RAG adds missing trusted context, fine-tuning changes model behaviour through examples, and evaluation decides whether any change improved quality, safety, groundedness or consistency (SRC-178 L213–286; SRC-19 L216–239; SRC-102 L217–230; SRC-95 L217–256; SRC-53 L270–296).
 
 ## Scope and question
 

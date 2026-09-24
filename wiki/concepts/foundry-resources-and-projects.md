@@ -26,9 +26,9 @@ Nontrivial AI solutions need more than a single model call. They may need deploy
 
 ## Mental model
 
-Think of the Foundry resource as the Azure platform container, and the project as the solution workspace. The resource provides the shared cloud substrate; the project is where developers work with a particular solution's models, agents, tools, knowledge, data, code, endpoints and configuration. (SRC-155 L15–22)
+**Inference:** Think of the Foundry resource as the Azure platform container, and the project as the solution workspace. The resource provides the shared cloud substrate; the project is where developers work with a particular solution's models, agents, tools, knowledge, data, code, endpoints and configuration. (SRC-155 L15–22)
 
-SRC-183 phrases it similarly in the episode: the resource is the landing place for network and compute resources, and the project can contain multiple models, agents, tools, and knowledge. (SRC-183 L203–219)
+**Inference:** SRC-183 phrases it similarly in the episode: the resource is the landing place for network and compute resources, and the project can contain multiple models, agents, tools, and knowledge. (SRC-183 L203–219)
 
 ## What the sources say
 

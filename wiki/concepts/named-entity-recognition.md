@@ -26,7 +26,7 @@ Large text collections contain names, places, organizations, dates, addresses, e
 
 ## Mental model
 
-NER turns unstructured text into a list of things mentioned plus their categories. **Inference:** It does not answer an open-ended question about the document; it extracts structured entity spans that other systems can use (SRC-93 L217–230; SRC-10 L226–241).
+**Synthesis:** NER turns unstructured text into a list of things mentioned plus their categories. **Inference:** It does not answer an open-ended question about the document; it extracts structured entity spans that other systems can use (SRC-93 L217–230; SRC-10 L226–241).
 
 ## What the sources say
 

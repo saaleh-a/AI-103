@@ -26,7 +26,7 @@ Prompt engineering and RAG can still leave a model inconsistent. The fine-tuning
 
 ## Mental model
 
-Fine-tuning specializes a generalist. The base model keeps broad language ability, but additional examples move it toward a narrower response pattern. The corpus says Foundry fine-tuning uses LoRA, which updates a smaller subset of important parameters rather than retraining every parameter, making customization faster and more cost-effective than full retraining (SRC-95 L220–222).
+**Inference:** Fine-tuning specializes a generalist. The base model keeps broad language ability, but additional examples move it toward a narrower response pattern. The corpus says Foundry fine-tuning uses LoRA, which updates a smaller subset of important parameters rather than retraining every parameter, making customization faster and more cost-effective than full retraining (SRC-95 L220–222).
 
 ## What the sources say
 

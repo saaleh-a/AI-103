@@ -104,7 +104,7 @@ aliases: ["customer conversations"]
 |---|---|
 | Planning and service selection | Official planning objectives (SRC-191 L121–124) |
 | RAG and travel/inventory-current data | RAG current-data and travel-agency examples (SRC-102 L260–263) |
-| Workflow / support tickets | Workflow pattern source and support-ticket iteration example (SRC-105 L220–225; SRC-11 L233) |
+| Workflow / support tickets | Workflow pattern source and support-ticket iteration example (SRC-105 L220–224; SRC-11 L233) |
 | Text analysis / support routing | Language episode support-ticket framing (SRC-10 L41–63) |
 | Responsible AI | Four-layer mitigation source (SRC-156 L212–240) |
 | Speech agents | Speech MCP capabilities and security requirements (SRC-236 L225–262) |

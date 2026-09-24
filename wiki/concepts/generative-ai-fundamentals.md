@@ -26,7 +26,7 @@ Without generative AI, application logic has to predefine most outputs or hand o
 
 ## Mental model
 
-A generative app is a loop: collect user intent, package it as a prompt plus optional instructions and context, send that package to a model, receive generated output, and decide whether to show, store, stream, evaluate or continue the conversation. In the Responses API source, the prompt is passed as `input`, the generated response is exposed as `output_text`, and the response object also reports `usage` for input, output and total tokens (SRC-99 L230–236). **Inference:** Tokens are the billing and context-window unit underneath this loop: the app may feel conversational, but each run still sends tokenized instructions, current input and selected context to a model.
+**Inference:** A generative app is a loop: collect user intent, package it as a prompt plus optional instructions and context, send that package to a model, receive generated output, and decide whether to show, store, stream, evaluate or continue the conversation. In the Responses API source, the prompt is passed as `input`, the generated response is exposed as `output_text`, and the response object also reports `usage` for input, output and total tokens (SRC-99 L230–236). **Inference:** Tokens are the billing and context-window unit underneath this loop: the app may feel conversational, but each run still sends tokenized instructions, current input and selected context to a model.
 
 ## What the sources say
 

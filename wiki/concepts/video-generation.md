@@ -26,7 +26,7 @@ Text and image generation produce static outputs. Video generation adds time, mo
 
 ## Mental model
 
-Unlike image generation, a video request is a job. You ask the model to create or revise a clip, get back an object with an ID and status, poll until the status reaches a final state, and then download content with the video ID (SRC-97 L218–256; SRC-101 L214–216).
+**Synthesis:** Unlike image generation, a video request is a job. You ask the model to create or revise a clip, get back an object with an ID and status, poll until the status reaches a final state, and then download content with the video ID (SRC-97 L218–256; SRC-101 L214–216).
 
 ## What the sources say
 

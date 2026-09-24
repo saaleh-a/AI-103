@@ -91,7 +91,7 @@ Not covered by this source.
 ## Tensions, caveats and currency
 
 - The source says updates for organization-scope deployments may require re-approval depending on tenant policies, so deployment iteration can be organization-policy dependent. (SRC-222 L283)
-- The source says `If you've configured Application Insights integration`, so tracing and alerts depend on prior configuration not detailed in this unit. (SRC-222 L266–271)
+- The source says `If you've configured Application Insights integration`, so tracing and alerts depend on prior configuration not detailed in this unit. (SRC-222 L272–276)
 
 ## Relation to other sources
 

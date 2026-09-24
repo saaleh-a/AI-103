@@ -26,7 +26,7 @@ Generative AI behavior can look acceptable in a few examples while still failing
 
 ## Mental model
 
-Evaluation turns subjective model behavior into evidence. Manual evaluation uses people to inspect responses and understand nuance; automated evaluation applies metrics and evaluators over test data at scale; comprehensive Foundry evaluations run jobs against models, agents, or datasets and report aggregate and per-row results (SRC-53 L222–296). The result is not merely a score: it decides whether to change prompts, try another model, add RAG, fine-tune, apply filters, or validate that a change did not regress quality (SRC-53 L288–296).
+**Inference:** Evaluation turns subjective model behavior into evidence. Manual evaluation uses people to inspect responses and understand nuance; automated evaluation applies metrics and evaluators over test data at scale; comprehensive Foundry evaluations run jobs against models, agents, or datasets and report aggregate and per-row results (SRC-53 L222–296). The result is not merely a score: it decides whether to change prompts, try another model, add RAG, fine-tune, apply filters, or validate that a change did not regress quality (SRC-53 L288–296).
 
 ## What the sources say
 

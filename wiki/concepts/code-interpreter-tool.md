@@ -26,7 +26,7 @@ Some user requests need exact computation or file processing rather than natural
 
 ## Mental model
 
-The model becomes a supervised analyst with a temporary Python workspace: it decides code execution is useful, writes Python, runs it in a sandbox, sees the output or error, and folds the result into the response. (SRC-254 L238–244; SRC-254 L251)
+**Inference:** The model becomes a supervised analyst with a temporary Python workspace: it decides code execution is useful, writes Python, runs it in a sandbox, sees the output or error, and folds the result into the response. (SRC-254 L238–244; SRC-254 L251)
 
 ## What the sources say
 
@@ -40,7 +40,7 @@ The model becomes a supervised analyst with a temporary Python workspace: it dec
 
 In a Responses API app, the application includes `code_interpreter` in the tools array, and the model determines whether code execution is needed. (SRC-254 L238–240) In Foundry agent scenarios, Code Interpreter is a built-in/service-provided tool enabled in the agent configuration or tool catalog. (SRC-91 L232–235; SRC-4 L217–220)
 
-The runtime is sandboxed and has access to common libraries such as pandas, numpy, and math; the model receives execution results and can fix errors automatically. (SRC-254 L242–257)
+The runtime is sandboxed and has access to common libraries such as pandas, numpy, and math; the model receives execution results and can fix errors automatically. (SRC-254 L242–256)
 
 ## Code and configuration
 
@@ -55,7 +55,7 @@ The corpus's captured code blocks are elided by the Learn capture (SRC-254 L229�
 - **Inference:** Use [[function-calling]] instead when execution must happen in developer-owned business logic, APIs, databases, or workflows rather than the tool's Python sandbox. (SRC-256 L219–224; SRC-254 L252–253)
 - **Inference:** Use [[web-search-tool]] instead when the missing input is current public web information. (SRC-257 L218–227; SRC-254 L252–253)
 
-**Inference:** If a scenario asks for exact math over a CSV and a chart, Code Interpreter is the built-in match; if it asks for an approved internal payroll system action, use function calling or a custom tool because the source says Code Interpreter has no external network access. (SRC-254 L252–257; SRC-256 L219–224)
+**Inference:** If a scenario asks for exact math over a CSV and a chart, Code Interpreter is the built-in match; if it asks for an approved internal payroll system action, use function calling or a custom tool because the source says Code Interpreter has no external network access. (SRC-254 L252–256; SRC-256 L219–224)
 
 ## Failure modes and misconceptions
 
@@ -66,7 +66,7 @@ The corpus's captured code blocks are elided by the Learn capture (SRC-254 L229�
 
 ## Solution Engineering transfer
 
-**Inference:** Customer signal: "Can the assistant analyze this spreadsheet and produce calculations or charts?" Discovery question: "Does the data fit in files the tool can process, and can the work run without calling external systems?" Trade-off: use Code Interpreter for sandboxed analysis; use functions/custom tools for governed enterprise actions. (SRC-254 L222–257; SRC-256 L219–224)
+**Inference:** Customer signal: "Can the assistant analyze this spreadsheet and produce calculations or charts?" Discovery question: "Does the data fit in files the tool can process, and can the work run without calling external systems?" Trade-off: use Code Interpreter for sandboxed analysis; use functions/custom tools for governed enterprise actions. (SRC-254 L222–256; SRC-256 L219–224)
 
 ## Connections
 

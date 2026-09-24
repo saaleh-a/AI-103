@@ -26,7 +26,7 @@ The search index is the primary queryable output, but enriched values can also b
 
 ## Mental model
 
-If the index is the searchable output, the knowledge store is the reusable by-product store. The same enrichment pipeline that fills the index can also project selected enriched data into forms that analytics and integration systems can consume. (SRC-181 L218–222)
+**Inference:** If the index is the searchable output, the knowledge store is the reusable by-product store. The same enrichment pipeline that fills the index can also project selected enriched data into forms that analytics and integration systems can consume. (SRC-181 L218–222)
 
 ## What the sources say
 

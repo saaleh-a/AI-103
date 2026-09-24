@@ -85,7 +85,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The source uses Microsoft Foundry as the availability surface, while related captures and older naming may mention Azure AI services or Foundry Tools elsewhere. (SRC-262 L215–218)
+- The source uses Microsoft Foundry as the availability surface (SRC-262 L215–218); the Foundry Tools unit notes that these tools were previously called Azure AI Services and, before that, Azure Cognitive Services (SRC-96 L236).
 - The source gives examples of modality use, but does not document supported file types, confidence scoring, pricing, or regional availability. (SRC-262 L219–230)
 
 ## Relation to other sources

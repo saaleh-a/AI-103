@@ -22,7 +22,7 @@ The OpenAI SDK is the official client library for calling the OpenAI API; in thi
 
 ## What it is
 
-The SDK is the OpenAI-compatible inference client path for applications that primarily need model calls rather than Foundry project management. (SRC-18 L282–287; SRC-18 L301–307)
+**Inference:** The SDK is the OpenAI-compatible inference client path for applications that primarily need model calls rather than Foundry project management. (SRC-18 L282–287; SRC-18 L301–307)
 
 In Microsoft Foundry chat application planning, the endpoint and SDK choice matters because each project has a Project endpoint and an Azure OpenAI endpoint, and the SDK choice determines which capabilities are directly available. (SRC-18 L217–221)
 

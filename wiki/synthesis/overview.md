@@ -17,7 +17,7 @@ aliases: ["overview"]
 
 ## Summary
 
-**Synthesis:** The AI-103 wiki is a compiled map over 265 corpus sources: Learn units, episodes, course pages, a study cram, and the study guide; the corpus map groups them by learning path, module, unit, episode, and app lessons (SRC-191 L92–201; SRC-27 L214–240; SRC-28 L76–95; SRC-1 “replaces the AI 102”).
+**Synthesis:** The corpus frames AI-103 from four kinds of source: the study guide defines the exam's skills (SRC-191 L92–201), the course pages list its learning paths (SRC-27 L214–240; SRC-28 L76–95), and the study cram says AI-103 replaces AI-102 (SRC-1 “replaces the AI 102”); Learn units and episode transcripts teach the skills. [[corpus-map]] lists all 265 raw sources by learning path, module, unit and episode.
 
 ## Scope and question
 
@@ -25,7 +25,7 @@ aliases: ["overview"]
 
 ## Synthesis
 
-**Synthesis:** Domain priority is clear: **Implement generative AI and agentic solutions** is 30–35%; **Plan and manage an Azure AI solution** is 25–30%; **computer vision**, **text analysis**, and **information extraction** are each 10–15% (SRC-191 L113–201). **Inference:** Start with [[microsoft-foundry]], [[foundry-resources-and-projects]], [[model-selection]], [[model-catalog]], and [[model-deployment-types]] because those decisions support later apps, agents, retrieval, media, language, and extraction (SRC-155 L12–22; SRC-89 L221–246; SRC-39 L214–254).
+**Synthesis:** Domain priority is clear: **Implement generative AI and agentic solutions** is 30–35%; **Plan and manage an Azure AI solution** is 25–30%; **computer vision**, **text analysis**, and **information extraction** are each 10–15% (SRC-191 L113–201). **Inference:** Start with [[microsoft-foundry]], [[foundry-resources-and-projects]], [[model-selection]], [[model-catalog]], and [[model-deployment-types]] because those decisions support later apps, agents, retrieval, media, language, and extraction (SRC-155 L12–22; SRC-89 L221–244; SRC-39 L214–254).
 
 **Synthesis:** The areas connect as one system: applications call deployed models through SDK/API choices; agents add instructions, state, and tools; retrieval and extraction produce trusted context; identity, responsible AI, observability, and evaluation control risk; media, language, and speech capabilities become app features or tools (SRC-18 L217–221; SRC-230 L258–276; SRC-91 L222–229; SRC-102 L227–256; SRC-53 L215–221; SRC-182 L12–18).
 

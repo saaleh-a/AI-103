@@ -26,7 +26,7 @@ Applications often receive text without a known language: content stores can col
 
 ## Mental model
 
-The service reads the submitted text, predicts the most likely language, and attaches a score from 0 to 1 that indicates confidence in the prediction (SRC-40 L217–219). **Inference:** Treat it as classification metadata about the text, not as translation or summarization (SRC-40 L217–224; SRC-227 L248–252).
+**Synthesis:** The service reads the submitted text, predicts the most likely language, and attaches a score from 0 to 1 that indicates confidence in the prediction (SRC-40 L217–219). **Inference:** Treat it as classification metadata about the text, not as translation or summarization (SRC-40 L217–224; SRC-227 L248–252).
 
 ## What the sources say
 

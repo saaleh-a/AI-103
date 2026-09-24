@@ -70,7 +70,7 @@ aliases: ["confusable technologies", "exam decision boundaries"]
 ## Open questions
 
 - The corpus does not settle private networking implementation for the security objective; it names security topics elsewhere but does not teach a private networking procedure in the pages synthesized here. (SRC-223 L261–264)
-- The corpus does not settle current regional/model availability or full production limits for model deployments, Foundry IQ, Voice Live, or MCP tools. (SRC-39 L227; SRC-85 L219–246; SRC-88 L227–228; SRC-240 L217–245)
+- The corpus does not settle current regional/model availability or full production limits for model deployments, Foundry IQ, Voice Live, or MCP tools. (SRC-39 L227; SRC-85 L219–246; SRC-88 L227–228; SRC-240 L217–240)
 
 ## Sources
 

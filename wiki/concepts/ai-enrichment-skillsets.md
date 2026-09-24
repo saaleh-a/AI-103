@@ -26,7 +26,7 @@ Raw documents often do not contain the fields users want to search, filter, anal
 
 ## Mental model
 
-A skillset is a sequence of transformations on the in-progress index document. Each skill reads from a context in the document hierarchy and writes new fields. Later skills can use earlier outputs. The indexer orchestrates this sequence. (SRC-52 L218; SRC-92 L237–257)
+**Synthesis:** A skillset is a sequence of transformations on the in-progress index document. Each skill reads from a context in the document hierarchy and writes new fields. Later skills can use earlier outputs. The indexer orchestrates this sequence. (SRC-52 L218; SRC-92 L237–257)
 
 ## What the sources say
 

@@ -57,7 +57,7 @@ The assessment asks which model kind can respond to visual input, listing multim
 
 ## How it works
 
-The source is assessment-only, so it encodes module takeaways as questions rather than teaching a procedure. (SRC-173 L209–225) The three assessed decisions align with the module's implementation chain: choose a multimodal model, send a single multi-part user message with text and image content, and include the image by URL or binary data. (SRC-173 L209–222)
+The source is assessment-only, so it encodes module takeaways as questions rather than teaching a procedure. (SRC-173 L209–222) The three assessed decisions align with the module's implementation chain: choose a multimodal model, send a single multi-part user message with text and image content, and include the image by URL or binary data. (SRC-173 L209–222)
 
 ## Code and API patterns
 
@@ -96,7 +96,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-- The raw capture includes the questions and answer options but not the post-submit checked answers. (SRC-173 L223–225) The `2.` and `3.` lines are the numbers of the second and third questions, not marked answers, and each `[-] N` marker indexes the next option. (SRC-173 L213; SRC-173 L218)
+- The raw capture includes the questions and answer options but not the post-submit checked answers. (SRC-173 L223–225) The `2.` and `3.` lines are the numbers of the second and third questions, not marked answers, and each `[-] N` marker indexes the next option. (SRC-173 L214; SRC-173 L219)
 - **Inference:** The correct-looking answers can be inferred from adjacent module content, but the source page itself must preserve that the capture does not show checked answers. (SRC-46 L214–216; SRC-248 L213)
 
 ## Relation to other sources

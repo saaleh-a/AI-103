@@ -26,7 +26,7 @@ The source problem is workflow fit: users spend their day in Teams and Microsoft
 
 ## Mental model
 
-Think of Microsoft 365 integration as three linked but distinct routes. First, publish the agent so it appears in Teams and Copilot surfaces. Second, recheck identity and permissions because publication creates a distinct agent identity. Third, use either Work IQ or the Microsoft 365 Agents Toolkit when the problem is data context or custom integration behavior rather than basic channel publication. (SRC-232 L225–249; SRC-2 L218–296; SRC-5 L218–241)
+**Synthesis:** Think of Microsoft 365 integration as three linked but distinct routes. First, publish the agent so it appears in Teams and Copilot surfaces. Second, recheck identity and permissions because publication creates a distinct agent identity. Third, use either Work IQ or the Microsoft 365 Agents Toolkit when the problem is data context or custom integration behavior rather than basic channel publication. (SRC-232 L225–249; SRC-2 L218–296; SRC-5 L218–241)
 
 ## What the sources say
 

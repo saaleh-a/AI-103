@@ -26,9 +26,9 @@ When a task benefits from diverse independent perspectives or speed, sequential 
 
 ## Mental model
 
-Concurrent orchestration is a fan-out/fan-in team review. The task fans out to agents with different roles, agents do not depend on each other's intermediate results, and the system later fans results back in when a combined answer is needed. (SRC-231 L241–242; SRC-241 L220–223)
+**Synthesis:** Concurrent orchestration is a fan-out/fan-in team review. The task fans out to agents with different roles, agents do not depend on each other's intermediate results, and the system later fans results back in when a combined answer is needed. (SRC-231 L241–242; SRC-241 L220–223)
 
-The episode describes the pattern as work farmed out in parallel and then merged, with parallelism optimizing for getting things done more quickly. (SRC-180 L91–110)
+**Inference:** The episode describes the pattern as work farmed out in parallel and then merged, with parallelism optimizing for getting things done more quickly. (SRC-180 L91–110)
 
 ## What the sources say
 

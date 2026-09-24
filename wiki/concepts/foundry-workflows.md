@@ -28,9 +28,9 @@ For customer-support-style automation, the corpus frames workflows as a way to t
 
 ## Mental model
 
-A Foundry workflow is a flowchart that runs: requests enter, connected nodes perform actions, variables carry state, Power Fx formulas evaluate conditions or loop collections, and the runtime follows the configured path until an End node returns a result (SRC-36 L220–236; SRC-11 L220–236).
+**Synthesis:** A Foundry workflow is a flowchart that runs: requests enter, connected nodes perform actions, variables carry state, Power Fx formulas evaluate conditions or loop collections, and the runtime follows the configured path until an End node returns a result (SRC-36 L220–236; SRC-11 L220–236).
 
-Agents are reasoning nodes inside the larger process, not the whole process: the workflow can invoke agents, store their output in variables, branch on structured output, ask users for input, or transform data before the next step (SRC-3 L220–224; SRC-36 L224–231).
+**Synthesis:** Agents are reasoning nodes inside the larger process, not the whole process: the workflow can invoke agents, store their output in variables, branch on structured output, ask users for input, or transform data before the next step (SRC-3 L220–224; SRC-36 L224–231).
 
 ## What the sources say
 

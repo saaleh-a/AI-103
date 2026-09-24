@@ -22,7 +22,7 @@ The Azure Speech MCP server exposes Azure Speech in Foundry Tools to agents thro
 
 ## What it is
 
-The server is an agent-facing tool layer, not a speech model and not the live voice transport. The source first explains MCP as a client-server protocol where a host runs an agent, a client manages the MCP connection, and a server exposes tools, resources, and prompts (SRC-236 L217–221). The Speech MCP server is the concrete server for Azure Speech capabilities: any MCP-compatible agent can call speech recognition or synthesis tools (SRC-236 L225–234).
+The source first explains MCP as a client-server protocol where a host runs an agent, a client manages the MCP connection, and a server exposes tools, resources, and prompts (SRC-236 L217–221). The Speech MCP server is the concrete server for Azure Speech capabilities: any MCP-compatible agent can call speech recognition or synthesis tools (SRC-236 L225–234). **Inference:** So the server is an agent-facing tool layer — not a speech model (compare [[speech-capable-models]]) and not the live voice transport (compare [[voice-live-api]]).
 
 ## What the sources say
 
@@ -80,7 +80,7 @@ The Learn unit calls the tool connection **Azure Speech in Foundry Tools** and t
 - [[src-236-understand-azure-speech-mcp-server]] — main capability source.
 - [[src-25-connect-speech-mcp-server-agent]] — portal and code connection source.
 - [[src-43-develop-speech-agent-azure-speech-mcp-server-episode-19]] — episode source with auth tension.
-- *Also linked from:* [[overview]] · [[speech-capable-models]] · [[voices-and-audio-formats]]
+- *Also linked from:* [[overview]] · [[voices-and-audio-formats]]
 
 ## Sources
 

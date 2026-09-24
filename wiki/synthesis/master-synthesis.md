@@ -31,7 +31,7 @@ aliases: ["master synthesis", "whole architecture"]
 
 ### 2. Model layer
 
-**Synthesis:** Model work starts in the catalog, where candidates can be filtered by capability, provider, task, fine-tuning support, and industry; the catalog distinguishes LLMs, SLMs, reasoning, embeddings, image, video, image-analysis, speech-to-text, and text-to-speech model categories (SRC-89 L221–246). Benchmarks compare quality, safety, cost, and performance before deployment, and deployment exposes the selected model through an endpoint for application use (SRC-188 L215–219; SRC-39 L214–254). **Inference:** Model choice is not a prestige contest: the deciding variables are task modality, capability, latency, cost, safety, and deployment compatibility.
+**Synthesis:** Model work starts in the catalog, where candidates can be filtered by capability, provider, task, fine-tuning support, and industry; the catalog distinguishes LLMs, SLMs, reasoning, embeddings, image, video, image-analysis, speech-to-text, and text-to-speech model categories (SRC-89 L221–244). Benchmarks compare quality, safety, cost, and performance before deployment, and deployment exposes the selected model through an endpoint for application use (SRC-188 L215–219; SRC-39 L214–254). **Inference:** Model choice is not a prestige contest: the deciding variables are task modality, capability, latency, cost, safety, and deployment compatibility.
 
 ### 3. Generation and optimization layer
 
@@ -51,7 +51,7 @@ aliases: ["master synthesis", "whole architecture"]
 
 **Synthesis:** Security is not one feature; it appears as endpoint access, RBAC, prompt filtering, human approval, logging, dependency audit, validation, managed identity, keyless credentials, private networking, role policies, tool-access controls, and oversight modes across the objectives and agent sources (SRC-191 L134–139; SRC-230 L242–257; SRC-256 L248–254; SRC-4 L234). **Inference:** The identity question is always: which actor is calling which resource with what permission, and which actions need approval or audit?
 
-**Synthesis:** Responsible AI is a lifecycle: map potential harms, measure outputs against criteria, mitigate at model/safety-system/prompt-grounding/UX layers, and manage release with reviews, phased delivery, incident response, rollback, blocking, feedback, and telemetry (SRC-182 L12–18; SRC-153 L217–246; SRC-154 L12–20; SRC-156 L218–240; SRC-152 L218–233). Guardrails and filters are controls inside that lifecycle, not a substitute for it (SRC-156 L229–231; SRC-170 L214–236).
+**Synthesis:** Responsible AI is a lifecycle: map potential harms, measure outputs against criteria, mitigate at model/safety-system/prompt-grounding/UX layers, and manage release with reviews, phased delivery, incident response, rollback, blocking, feedback, and telemetry (SRC-182 L12–18; SRC-153 L217–246; SRC-154 L12–20; SRC-156 L218–240; SRC-152 L218–233). Guardrails and filters are controls inside that lifecycle, not a substitute for it (SRC-156 L229–231; SRC-170 L214–230).
 
 ### 7. Evaluation, monitoring, and operations layer
 
@@ -85,7 +85,7 @@ aliases: ["master synthesis", "whole architecture"]
 
 ## Implications for the exam and for practice
 
-**Inference:** For exam scenarios, identify the layer first: model choice, endpoint/SDK, prompt/grounding, tool/action, orchestration pattern, extraction service, responsible AI control, or monitoring/evaluation. Then rule out neighbours by their input/output boundary: model generates, Search retrieves, Content Understanding analyzes multimodal content, Document Intelligence extracts documents, tools act, and evaluation measures (SRC-191 L120–201; SRC-89 L221–246; SRC-261 L218–226; SRC-264 L20–31; SRC-263 L217–224; SRC-91 L222–229; SRC-53 L215–221).
+**Inference:** For exam scenarios, identify the layer first: model choice, endpoint/SDK, prompt/grounding, tool/action, orchestration pattern, extraction service, responsible AI control, or monitoring/evaluation. Then rule out neighbours by their input/output boundary: model generates, Search retrieves, Content Understanding analyzes multimodal content, Document Intelligence extracts documents, tools act, and evaluation measures (SRC-191 L120–201; SRC-89 L221–244; SRC-261 L218–226; SRC-264 L20–31; SRC-263 L217–224; SRC-91 L222–229; SRC-53 L215–221).
 
 **Inference:** For practice, run discovery in the same sequence: what user outcome, what modality, what data source, what action boundary, what identity, what safety risk, what evaluation signal, and what operational owner? This keeps the conversation architecture-first rather than product-name-first (SRC-230 L242–276; SRC-152 L218–233; SRC-191 L131–139).
 

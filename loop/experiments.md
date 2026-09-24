@@ -356,3 +356,45 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   unchanged (40 taught · 13 taught in part · 11 named only · 0 no page), because every dropped claim
   had another page that teaches the objective — the over-claims were redundant as well as wrong.
 - Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).
+- Judgement (panel, incremental): the 4 panel pages changed since the cycle-11 judgements
+  (speech-and-language, naming-and-currency, microsoft-agent-framework, extraction-options) re-judged
+  by a fresh reviewer — three PASS; naming-and-currency FAIL on a claim the cycle did not touch (the
+  Sora 2 / model-name stale-risk cited only SRC-97 L206–217 and SRC-191 L101) → **1/20 → 1/20**
+  (SAME).
+- Judgement (rotating, seed 12, unbiased and disjoint from seed 11 except one page): **5/20 fail as
+  judged** (4/10 and 1/10), against 10/20 for seed 11 before the cycle. One failure is a demonstrable
+  reviewer misreading: src-173's reviewer took the question number `2.` (SRC-173 L213) for a marked
+  answer; the capture numbers questions the same way at L218, as do SRC-168 L217 and SRC-159 L216, and
+  no Learn assessment capture marks a checked answer → 4/20 corrected. Two samples of 20 are noisy
+  (50% vs 20–25%), so the drop is suggestive, not proof.
+- Decision: kept.
+- Lessons: (1) wiki-wide classes found from a fresh sample are worth more than panel repairs — the
+  cycle's biggest change (131 objective over-claims) was invisible to the panel. (2) The objective
+  over-claims were redundant: removing them changed no objective's map status, so the objective map
+  was never the right check for honest frontmatter.
+
+## Cycle 13 — assessment captures, shifted ranges, the seed-12 findings (2026-09-24)
+- Hypothesis: two of the seed-12 failure types are wiki-wide classes: (1) assessment pages and the
+  concept pages that quote them state answers the captures do not show — Learn assessment captures
+  never mark a checked answer; the `2.` lines are question numbers and each `[-] N` marker indexes the
+  next option, which page writers (and one reviewer) misread; (2) ranges that start on page chrome and
+  stop one line short of the carrying line (SRC-211 L217–221 for a claim at L219–222). Fixing both
+  classes with the answer attributed to the episode review or teaching unit that gives it lowers the
+  failure rate of a fresh rotating sample.
+- Changes: 30 assessment-answer claims on 17 pages rewritten to say what the capture shows (question
+  and options) and cite the episode review or teaching unit for the answer — e.g. src-159's "Answer
+  shown: WebRTC" now cites the Voice Live unit (SRC-88 L270), its other answers the episode review
+  (SRC-49 L690–710); src-150's "Answer shown in capture: option 2" now cites SRC-45 L576–588 and
+  SRC-24 L252; src-169 cites the image-analysis unit (SRC-8 L220, L239, L245); two claims were also
+  wrong about the question (named-entity-recognition said "people, organizations, and locations" —
+  the question says "key people, places, and dates"; pii-detection said "email addresses and phone
+  numbers" — it says "personal details"); content-understanding-analyzers cited two assessments for a
+  "generate-style field" question neither contains. 15 shifted ranges re-cited after reading the raw
+  lines (a scan of chrome-leading ranges found 801, of which 23 were followed by a line sharing
+  distinctive claim words; 15 of those genuinely stopped short — e.g. SRC-245 L218–220 → L220–221 for
+  "the order is fixed", SRC-223 L218–227 → L220–228 for tool-invocation testing; 8 already carried
+  the claim). The remaining ~780 chrome-leading ranges include every carrying line and are left:
+  no reviewer has failed a range for leading chrome. Seed-12 findings fixed (src-211, src-248 −V08,
+  image-generation, foundry-agent-service, naming-and-currency); src-173 unchanged in substance — it
+  now says why the `2.` lines are not answers.
+- Mechanical: `[0, 0, 0, 0, 0]` → `[0, 0, 0, 0, 0]` (SAME).

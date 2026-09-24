@@ -26,7 +26,7 @@ Agents need access to organizational policies, procedures, documentation, suppor
 
 ## Mental model
 
-A knowledge base is the agent-facing knowledge product; a data source is where the raw information lives. Foundry IQ connects sources into a knowledge base, processes them for retrieval, and lets agents query the knowledge base as one unified source. (SRC-85 L223–238)
+**Inference:** A knowledge base is the agent-facing knowledge product; a data source is where the raw information lives. Foundry IQ connects sources into a knowledge base, processes them for retrieval, and lets agents query the knowledge base as one unified source. (SRC-85 L223–238)
 
 ## What the sources say
 

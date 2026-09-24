@@ -117,7 +117,7 @@ Not covered by this source; the episode is a portal demonstration rather than a 
 - [[src-188-select-models-benchmarks]] gives the Learn-unit version of the benchmark dimensions demonstrated in the leaderboard. (SRC-188 L213–271; SRC-189 L124–208; SRC-189 L421–660)
 - [[src-39-deploy-models-endpoints]] gives the detailed deployment-type taxonomy that the episode explains. (SRC-39 L214–225; SRC-189 L209–309)
 - [[src-53-evaluate-model-performance]] gives the detailed evaluation metrics behind the episode's manual and automated evaluation demo. (SRC-53 L213–296; SRC-189 L310–420; SRC-189 L761–910)
-- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] has the same three knowledge-check questions, while this episode gives the spoken answers. (SRC-145 L213–227; SRC-189 L911–941)
+- [[src-145-knowledge-check-select-deploy-evaluate-microsoft-foundry-models]] has the same three knowledge-check questions, while this episode gives the spoken answers. (SRC-145 L213–226; SRC-189 L911–941)
 
 ## Connections
 

@@ -26,7 +26,7 @@ Models need controlled access to real systems: APIs, databases, workflows, utili
 
 ## Mental model
 
-The model is a planner, not the executor. You describe callable functions and their parameters; the model decides a call is needed, emits a structured call, your code or framework validates and runs the matching function, returns output, and the model completes the answer. (SRC-256 L240–246)
+**Inference:** The model is a planner, not the executor. You describe callable functions and their parameters; the model decides a call is needed, emits a structured call, your code or framework validates and runs the matching function, returns output, and the model completes the answer. (SRC-256 L240–246)
 
 ## What the sources say
 

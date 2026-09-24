@@ -44,24 +44,24 @@ ingest_depth: full
 
 ## TL;DR
 
-The knowledge check tests four ideas: why Foundry Agent Service is preferable to standard APIs, how it handles conversation state, which agent security practice is not recommended, and what happens when an agent needs a tool. (SRC-142 L216–241) The capture lists options but does not show the checked answers. (SRC-142 L216–243)
+The knowledge check tests four ideas: why Foundry Agent Service is preferable to standard APIs, how it handles conversation state, which agent security practice is not recommended, and what happens when an agent needs a tool. (SRC-142 L216–240) The capture lists options but does not show the checked answers. (SRC-142 L216–243)
 
 ## Key claims
 
 - Question 1 asks for the primary benefit of Microsoft Foundry Agent Service compared with standard APIs. (SRC-142 L216–222)
 - One option says the service handles tool calling, state management, and infrastructure automatically. (SRC-142 L219–221)
-- Question 2 asks how Microsoft Foundry Agent Service handles conversation state. (SRC-142 L223–229)
+- Question 2 asks how Microsoft Foundry Agent Service handles conversation state. (SRC-142 L223–228)
 - One option says conversation context is automatically managed through the Responses API. (SRC-142 L226–228)
-- Question 3 asks which option is not a recommended AI-agent security practice. (SRC-142 L230–235)
-- Question 4 asks what happens when an agent determines it needs a tool. (SRC-142 L236–241)
+- Question 3 asks which option is not a recommended AI-agent security practice. (SRC-142 L230–234)
+- Question 4 asks what happens when an agent determines it needs a tool. (SRC-142 L236–240)
 
 ## How it works
 
-The page is an assessment unit rather than an explanatory unit. (SRC-142 L216–243) Its distractors contrast managed service automation against model access alone, Azure subscription requirements, portal-only use, manual state handling, external databases, local files, unrestricted data access, and developer-interrupt tool handling. (SRC-142 L216–241)
+The page is an assessment unit rather than an explanatory unit. (SRC-142 L216–240) Its distractors contrast managed service automation against model access alone, Azure subscription requirements, portal-only use, manual state handling, external databases, local files, unrestricted data access, and developer-interrupt tool handling. (SRC-142 L216–240)
 
 ## Code and API patterns
 
-Not covered by this source. (SRC-142 L216–243)
+Not covered by this source. (SRC-142 L216–240)
 
 ## Key terms
 
@@ -89,16 +89,16 @@ Not covered by this source. (SRC-142 L216–243)
 
 ## Relation to other sources
 
-- [[src-230-understand-ai-agents-microsoft-foundry-agent-service]] teaches the managed-service, Responses API, and security content tested here. (SRC-230 L250–276; SRC-142 L216–235)
-- [[src-91-extend-agent-capabilities-tools]] teaches the automatic tool-calling lifecycle tested in question 4. (SRC-91 L223–229; SRC-142 L236–241)
-- [[src-41-develop-ai-agents-microsoft-foundry-visual-studio-code-episode]] verbally answers the first two knowledge-check questions in the episode. (SRC-41 L900–940; SRC-142 L216–229)
+- [[src-230-understand-ai-agents-microsoft-foundry-agent-service]] teaches the managed-service, Responses API, and security content tested here. (SRC-230 L250–276; SRC-142 L216–234)
+- [[src-91-extend-agent-capabilities-tools]] teaches the automatic tool-calling lifecycle tested in question 4. (SRC-91 L223–229; SRC-142 L236–240)
+- [[src-41-develop-ai-agents-microsoft-foundry-visual-studio-code-episode]] verbally answers the first two knowledge-check questions in the episode. (SRC-41 L900–940; SRC-142 L216–228)
 
 ## Connections
 
-- [[foundry-agent-service]] — the assessment's main service. (SRC-142 L216–229)
+- [[foundry-agent-service]] — the assessment's main service. (SRC-142 L216–228)
 - [[responses-api]] — assessed for conversation state. (SRC-142 L223–228)
-- [[agent-tools]] — assessed for automatic tool invocation. (SRC-142 L236–241)
-- [[keyless-authentication]] — RBAC and least privilege are related security practices. (SRC-142 L230–235)
+- [[agent-tools]] — assessed for automatic tool invocation. (SRC-142 L236–240)
+- [[keyless-authentication]] — RBAC and least privilege are related security practices. (SRC-142 L230–234)
 - *Module units:* [[src-129-introduction-develop-ai-agents-microsoft-foundry-visual-studio-code|1 Introduction]] · [[src-230-understand-ai-agents-microsoft-foundry-agent-service|2 Understand AI Agents and Microsoft Foundry Agent Service]] · [[src-84-explore-development-approaches|3 Explore Development Approaches]] · [[src-14-build-first-agent-microsoft-foundry|4 Build Your First Agent in Microsoft Foundry]] · [[src-190-set-up-visual-studio-code-agent-development|5 Set Up Visual Studio Code for Agent Development]] · [[src-20-configure-manage-agents-visual-studio-code|6 Configure and Manage Agents in Visual Studio Code]] · [[src-91-extend-agent-capabilities-tools|7 Extend Agent Capabilities with Tools]] · [[src-223-test-deploy-integrate-agents|8 Test, Deploy, and Integrate Agents]] · [[src-59-exercise-build-deploy-ai-agent|9 Exercise - Build and Deploy an AI Agent]] · [[src-212-summary-develop-ai-agents-microsoft-foundry-visual-studio-code|11 Summary]] · [[src-41-develop-ai-agents-microsoft-foundry-visual-studio-code-episode|episode 7]]
 
 ## Open questions

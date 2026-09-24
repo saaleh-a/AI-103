@@ -26,7 +26,7 @@ Agentic systems can take actions, call tools, retrieve organizational data and p
 
 ## Mental model
 
-Human-in-the-loop adds a checkpoint in an otherwise automated run. The system reaches a decision or action boundary, pauses, exposes enough context for a person to approve, deny, provide missing information or take over, and then resumes, exits or escalates based on that human response (SRC-105 L222–224; SRC-240 L234–239).
+**Synthesis:** Human-in-the-loop adds a checkpoint in an otherwise automated run. The system reaches a decision or action boundary, pauses, exposes enough context for a person to approve, deny, provide missing information or take over, and then resumes, exits or escalates based on that human response (SRC-105 L222–224; SRC-240 L234–239).
 
 ## What the sources say
 

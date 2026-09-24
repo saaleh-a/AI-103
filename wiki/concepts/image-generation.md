@@ -26,7 +26,7 @@ When the desired asset can be described but does not already exist, image genera
 
 ## Mental model
 
-You choose a model with text-to-image capability, give it a prompt describing the desired scene, optionally constrain size or provide a reference image if the model supports it, and handle image bytes returned by the API (SRC-86 L214–215; SRC-97 L58–68; SRC-97 L370–407).
+**Synthesis:** You choose a model with text-to-image capability, give it a prompt describing the desired scene, optionally constrain size or provide a reference image if the model supports it, and handle image bytes returned by the API (SRC-86 L214–215; SRC-97 L58–68; SRC-97 L370–407).
 
 ## What the sources say
 

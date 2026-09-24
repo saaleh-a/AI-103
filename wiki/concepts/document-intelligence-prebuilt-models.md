@@ -25,7 +25,7 @@ Organizations often need information from standard document types but do not wan
 
 ## Mental model
 
-Think of prebuilt models as ready-made extractors. The read model extracts the text substrate; the layout model adds page structure; domain-specific prebuilt models recognize a fixed set of fields for known document types (SRC-249 L220–248).
+**Inference:** Think of prebuilt models as ready-made extractors. The read model extracts the text substrate; the layout model adds page structure; domain-specific prebuilt models recognize a fixed set of fields for known document types (SRC-249 L220–248).
 
 ## What the sources say
 

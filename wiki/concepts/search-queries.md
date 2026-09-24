@@ -26,7 +26,7 @@ An index is only useful if client applications can retrieve, narrow, and order i
 
 ## Mental model
 
-Think of a query as three layers: first, searchable text finds candidate documents; second, filters and facets narrow or present the candidate set; third, scoring and ordering decide which results appear first. (SRC-187 L228–241; SRC-187 L245–264)
+**Inference:** Think of a query as three layers: first, searchable text finds candidate documents; second, filters and facets narrow or present the candidate set; third, scoring and ordering decide which results appear first. (SRC-187 L228–241; SRC-187 L245–264)
 
 ## What the sources say
 

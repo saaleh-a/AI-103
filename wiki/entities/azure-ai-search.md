@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Azure search service for indexing, enriching, querying and grounding data; supports knowledge mining, RAG and agent retrieval."
 area: retrieval
-source_ids: [SRC-22, SRC-52, SRC-85, SRC-91, SRC-92, SRC-102, SRC-130, SRC-181, SRC-187, SRC-215, SRC-261]
+source_ids: [SRC-16, SRC-22, SRC-52, SRC-85, SRC-91, SRC-92, SRC-102, SRC-130, SRC-181, SRC-187, SRC-215, SRC-261]
 objectives: [P03, G02, G09, I01, I02, I03]
 tags: ["service"]
 aliases: ["AI Search", "Azure Search", "Azure Cognitive Search"]
@@ -64,7 +64,7 @@ For Foundry IQ, an existing Azure AI Search index is one source type when data i
 
 ## Naming and currency
 
-The assigned aliases include older names such as Azure Search and Azure Cognitive Search, but the corpus pages in this module use Azure AI Search. (SRC-261 L211–228)
+The corpus pages in this module use Azure AI Search (SRC-261 L211–228); one episode says "Azure Search" (SRC-16 L505). **Stale-risk:** the page's aliases also keep older names that the corpus does not use, for search only.
 
 ## Appearances in the corpus
 
@@ -86,6 +86,7 @@ Azure AI Search appears in the knowledge-mining module, in the RAG module, in Fo
 
 ## Sources
 
+- SRC-16 — [[src-16-build-knowledge-enhanced-ai-agents-foundry-iq-episode-10]] — Foundry IQ episode: the presenter says the knowledge base pulls data "by way of Azure Search".
 - SRC-22 — [[src-22-configure-data-sources-knowledge-bases]] — Foundry IQ source choices, including Azure AI Search Index.
 - SRC-52 — [[src-52-enrich-extracted-data-ai-skills]] — AI enrichment and skillsets.
 - SRC-85 — [[src-85-explore-foundry-iq]] — Foundry IQ built on Azure AI Search.

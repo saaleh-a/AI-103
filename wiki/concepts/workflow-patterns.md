@@ -26,7 +26,7 @@ Workflow structure matters as much as agent prompts: different problems require 
 
 ## Mental model
 
-A pattern is the workflow's control-flow skeleton before the nodes are filled in. Sequential is a conveyor belt, human-in-the-loop is a conveyor belt with a stop for a person, and group chat is a collaborative room where control can shift between agents based on context, rules, or intermediate results (SRC-105 L221–224).
+**Inference:** A pattern is the workflow's control-flow skeleton before the nodes are filled in. Sequential is a conveyor belt, human-in-the-loop is a conveyor belt with a stop for a person, and group chat is a collaborative room where control can shift between agents based on context, rules, or intermediate results (SRC-105 L221–224).
 
 ## What the sources say
 

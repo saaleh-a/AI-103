@@ -40,7 +40,7 @@ Publishing adds an Agent Application layer with a stable invocation URL, a disti
 
 ## How to use it
 
-Portal use starts in Microsoft Foundry at `https://ai.azure.com`: select a project, choose **Build > Agents**, create an agent, provide name, description, and model, then configure instructions, model parameters, tools, and testing in the integrated playground (SRC-14 L225–244). The portal is strongest for quick prototyping, visual configuration, centralized management, stakeholder collaboration, and dashboards for token usage, latency, and evaluation outcomes (SRC-84 L220–232).
+Portal use starts in Microsoft Foundry at `https://ai.azure.com`: select a project, choose **Build > Agents**, create an agent, provide name, description, and model, then configure instructions, model parameters, tools, and testing in the integrated playground (SRC-14 L223–244). The portal is strongest for quick prototyping, visual configuration, centralized management, stakeholder collaboration, and dashboards for token usage, latency, and evaluation outcomes (SRC-84 L220–232).
 
 VS Code use relies on the Microsoft Foundry extension, which connects to existing Foundry projects and displays resources such as deployed models, declarative agents, hosted agents, connections, and vector stores (SRC-190 L220–248). The extension supports Agent Designer, YAML editing, integrated playgrounds, local visualization, hosted-agent deployment, and generated integration code (SRC-84 L233–257; SRC-190 L220–248).
 
@@ -61,7 +61,7 @@ Framework use connects Microsoft Agent Framework to a Foundry project with a pro
 
 ## Appearances in the corpus
 
-- Agent creation and configuration: SRC-14 explains portal creation, instructions, parameters, playground testing, tool catalog categories, deployment, and SDK/REST access (SRC-14 L225–250).
+- Agent creation and configuration: SRC-14 explains portal creation, instructions, parameters, playground testing, tool catalog categories, deployment, and SDK/REST access (SRC-14 L225–246).
 - Development approaches: SRC-84 compares portal and VS Code workflows and required Azure resources (SRC-84 L220–280).
 - Tools: SRC-91 covers the tool catalog and built-in/custom/MCP tool options; SRC-104 gives custom function, Azure Functions, and OpenAPI patterns (SRC-91 L218–297; SRC-104 L219–249).
 - MCP: SRC-240 says the service can connect directly to remote MCP servers through an MCPTool object, avoiding manual MCP client/session wrapping in that path (SRC-240 L216–255).

@@ -54,7 +54,7 @@ The assessment tests three decisions: why to create an AI Impact Assessment, whi
 
 ## How it works
 
-This is an assessment page rather than a teaching unit. (SRC-170 L217–233) Its distractors mirror the module: AI Impact Assessment is tied to documenting purpose, expected use, and harms; guardrails are the safety-system mitigation option; phased delivery is for feedback and issue discovery before broad release. (SRC-170 L217–230; SRC-153 L228; SRC-156 L227–230; SRC-152 L227)
+This is an assessment page rather than a teaching unit. (SRC-170 L217–230) Its distractors mirror the module: AI Impact Assessment is tied to documenting purpose, expected use, and harms; guardrails are the safety-system mitigation option; phased delivery is for feedback and issue discovery before broad release. (SRC-170 L217–230; SRC-153 L228; SRC-156 L227–230; SRC-152 L227)
 
 ## Code and API patterns
 

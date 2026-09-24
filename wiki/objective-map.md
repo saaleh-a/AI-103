@@ -79,7 +79,7 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
   - Taught: [[generative-ai-fundamentals|Generative AI fundamentals]] · [[model-deployment-types|Model deployment types]] · [[speech-capable-models|Speech-capable generative models]] · [[azure-openai|Azure OpenAI]] · [[deployment-options-compared|Deployment and access options compared]] · 33 sources cited across them
   - Named only: [[corpus-gaps|Corpus gaps]]
 - **G02** `taught` — “Implement retrieval-augmented generation (RAG) in an application” (SRC-191 L143)
-  - Taught: [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] · [[file-search-tool|File search tool]] · [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] · [[azure-ai-search|Azure AI Search]] · [[optimization-strategies-compared|Optimization strategies compared]] · [[retrieval-options-compared|Retrieval and grounding options compared]] · 32 sources cited across them
+  - Taught: [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] · [[file-search-tool|File search tool]] · [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] · [[azure-ai-search|Azure AI Search]] · [[optimization-strategies-compared|Optimization strategies compared]] · [[retrieval-options-compared|Retrieval and grounding options compared]] · 33 sources cited across them
 - **G03** `taught` — “Design workflows, tool-augmented flows, and multistep reasoning pipelines” (SRC-191 L144)
   - Taught: [[agent-framework-workflows|Agent Framework workflows]] · [[agent-tools|Agent tools]] · [[code-interpreter-tool|Code interpreter tool]] · [[foundry-workflows|Foundry workflows]] · [[function-calling|Function calling]] · [[human-in-the-loop-approval|Human-in-the-loop and approvals]] · [[workflow-patterns|Workflow patterns]] · [[orchestration-patterns-compared|Orchestration patterns compared]] · [[power-fx|Power Fx]] · 34 sources cited across them
 - **G04** `taught` — “Evaluate models and apps, including detecting fabrications, relevance, quality, and safety” (SRC-191 L145)
@@ -184,12 +184,12 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
 ### Build retrieval and grounding pipelines
 
 - **I01** `taught` — “Ingest and index content, such as documents, images, audio, and video” (SRC-191 L193)
-  - Taught: [[ai-enrichment-skillsets|AI enrichment and skillsets]] · [[indexers-and-data-sources|Indexers and data sources]] · [[knowledge-mining|Knowledge mining]] · [[search-indexes|Search indexes]] · [[azure-ai-search|Azure AI Search]] · 13 sources cited across them
+  - Taught: [[ai-enrichment-skillsets|AI enrichment and skillsets]] · [[indexers-and-data-sources|Indexers and data sources]] · [[knowledge-mining|Knowledge mining]] · [[search-indexes|Search indexes]] · [[azure-ai-search|Azure AI Search]] · 14 sources cited across them
 - **I02** `taught in part` — “Configure semantic search, hybrid search, and vector search for grounding” (SRC-191 L194)
-  - Taught: [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] · [[file-search-tool|File search tool]] · [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] · [[semantic-ranking|Semantic ranking]] · [[azure-ai-search|Azure AI Search]] · [[retrieval-options-compared|Retrieval and grounding options compared]] · 26 sources cited across them
+  - Taught: [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] · [[file-search-tool|File search tool]] · [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] · [[semantic-ranking|Semantic ranking]] · [[azure-ai-search|Azure AI Search]] · [[retrieval-options-compared|Retrieval and grounding options compared]] · 27 sources cited across them
   - Named only: [[corpus-gaps|Corpus gaps]]
 - **I03** `taught` — “Implement enrichment by using custom or built-in skills for text, images, and layout” (SRC-191 L195)
-  - Taught: [[ai-enrichment-skillsets|AI enrichment and skillsets]] · [[knowledge-mining|Knowledge mining]] · [[azure-ai-search|Azure AI Search]] · [[azure-functions|Azure Functions]] · [[extraction-options-compared|Information extraction options compared]] · 37 sources cited across them
+  - Taught: [[ai-enrichment-skillsets|AI enrichment and skillsets]] · [[knowledge-mining|Knowledge mining]] · [[azure-ai-search|Azure AI Search]] · [[azure-functions|Azure Functions]] · [[extraction-options-compared|Information extraction options compared]] · 38 sources cited across them
 - **I04** `taught` — “Configure RAG ingestion flow, including documents and using optical character recognition (OCR)” (SRC-191 L196)
   - Taught: [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] · 11 sources cited across them
 - **I05** `taught` — “Connect retrieval pipelines directly to workflows and agent tools” (SRC-191 L197)

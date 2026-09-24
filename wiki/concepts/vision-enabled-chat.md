@@ -26,7 +26,7 @@ Text-only chat cannot answer questions about a photo, diagram, chart, or other v
 
 ## Mental model
 
-A vision-enabled prompt is still a chat prompt, but the user message has more than one part: a text instruction or question plus an image item (SRC-46 L213–216). The model then produces a text response, so the response-reading side resembles ordinary text chat even though the input included visual data (SRC-47 L134–140; SRC-47 L166–169).
+**Synthesis:** A vision-enabled prompt is still a chat prompt, but the user message has more than one part: a text instruction or question plus an image item (SRC-46 L213–216). The model then produces a text response, so the response-reading side resembles ordinary text chat even though the input included visual data (SRC-47 L134–140; SRC-47 L166–169).
 
 ## What the sources say
 

@@ -50,7 +50,7 @@ There are two corpus patterns (SRC-108 L217–233; SRC-240 L217–239).
 
 ## Decision boundaries
 
-- MCP vs function calling: function calling defines tools directly in the application and leaves execution to the application; MCP moves tool definitions to a server that the agent/client can discover dynamically (SRC-108 L217–235; SRC-256 L219–263 on [[function-calling]]).
+- MCP vs function calling: function calling defines tools directly in the application and leaves execution to the application; MCP moves tool definitions to a server that the agent/client can discover dynamically (SRC-108 L217–234; SRC-256 L219–259 on [[function-calling]]).
 - MCP vs A2A: MCP is for agent-to-tool/data/service access; A2A is for agent-to-agent communication and collaboration (SRC-235 L217–222; SRC-37 L217–224).
 - MCP vs a fixed API integration: MCP is strongest when tools change or many teams own tool servers; dynamic discovery allows tools to be added, updated or removed centrally without modifying agent code (SRC-233 L225–239).
 
@@ -61,7 +61,7 @@ The corpus consistently uses Model Context Protocol and MCP. **Stale-risk:** SRC
 ## Appearances in the corpus
 
 - MCP tools module: source units and episode teach server/client discovery, local tools and managed MCP tool approval (SRC-108 L217–233; SRC-109 L80–150).
-- Azure Language MCP server module: MCP exposes text-analysis tools such as language detection and named entity recognition for agent use (SRC-235 L217–250).
+- Azure Language MCP server module: MCP exposes text-analysis tools such as language detection and named entity recognition for agent use (SRC-235 L217–245).
 - Azure Speech MCP server module: MCP exposes speech-to-text and text-to-speech tools, with storage requirements for audio files (SRC-236 L217–253).
 - Work IQ module: Work IQ uses MCP to expose Microsoft 365 workplace data to agents (SRC-2 L217–239).
 

@@ -18,7 +18,7 @@ aliases: ["custom tools", "OpenAPI tools", "Azure Functions tools", "function to
 
 ## Summary
 
-Custom tools turn an agent from a text-only responder into a system that can retrieve live data, call business logic, trigger workflows and interact with external services. The corpus presents five main options: function tools/function calling, Azure Functions, OpenAPI specified tools, Azure Logic Apps and MCP servers (SRC-179 L217–230; SRC-104 L216–250; SRC-91 L274–292).
+Custom tools turn an agent from a text-only responder into a system that can retrieve live data, call business logic, trigger workflows and interact with external services. The corpus presents five main options: function tools/function calling, Azure Functions, OpenAPI specified tools, Azure Logic Apps and MCP servers (SRC-179 L217–230; SRC-104 L216–249; SRC-91 L267–273).
 
 ## The problem it solves
 
@@ -26,7 +26,7 @@ Without tools, an agent can only generate text from its model context; with tool
 
 ## Mental model
 
-A custom tool is a contract between the model and executable capability. The contract describes what the tool does, its parameters and when it should be used; the model decides whether the user's request needs that tool, and the surrounding agent framework or application executes the tool and returns results for the final answer (SRC-104 L248–250; SRC-256 L219–248).
+**Synthesis:** A custom tool is a contract between the model and executable capability. The contract describes what the tool does, its parameters and when it should be used; the model decides whether the user's request needs that tool, and the surrounding agent framework or application executes the tool and returns results for the final answer (SRC-104 L248–249; SRC-256 L219–248).
 
 ## What the sources say
 
@@ -35,11 +35,11 @@ A custom tool is a contract between the model and executable capability. The con
 - SRC-110 adds the presenter decision boundary: custom functions run dispatcher code locally, Azure Functions offload compute, OpenAPI fits REST/Swagger-described APIs, and Logic Apps are a low-code sibling to Azure Functions that can expose HTTP endpoints (SRC-110 L180–290).
 - SRC-256 explains the generic function tool pattern: the model emits a structured function call, application code runs the function, and the application returns a function output so the model can finish the response (SRC-256 L219–248).
 - SRC-233 and SRC-108 introduce MCP as a dynamic-discovery option: tools live on an MCP server, the client discovers them with `session.list_tools()`, wraps them and registers them with the agent (SRC-233 L217–239; SRC-108 L217–233).
-- SRC-91 places MCP servers in the Foundry Toolkit tool catalog and distinguishes remote, local and custom MCP servers (SRC-91 L274–292).
+- SRC-91 places MCP servers in the Foundry tool catalog and distinguishes remote, local and custom MCP servers (SRC-91 L268–273).
 
 ## How it works in Azure
 
-- Function tools / function calling keep execution under the application or framework's control: the model requests a function call, but the application must validate arguments, run the code, handle errors and return the result (SRC-256 L243–263).
+- Function tools / function calling keep execution under the application or framework's control: the model requests a function call, but the application must validate arguments, run the code, handle errors and return the result (SRC-256 L243–259).
 - Azure Functions move the executable logic into Azure serverless compute. In the Foundry Agent Service example, the agent sends requests to an Azure Function through a storage queue and processes the results (SRC-104 L228–234).
 - OpenAPI specified tools let the agent call an external HTTP API described by an OpenAPI 3.0 spec. The corpus says the Foundry Agent Service uses OpenAPI 3.0 specified tools and supports anonymous, API key and managed identity authentication for those tools at capture time (SRC-104 L236–243).
 - Logic Apps provide a low-code/no-code workflow option that connects apps, data and services (SRC-179 L222).
@@ -57,21 +57,21 @@ The corpus captures show several examples as collapsed `Python Copy` blocks, so 
 
 ## Decision boundaries
 
-| If the need is... (SRC-104 L216–250; SRC-179 L217–222) | Prefer... | Why |
+| If the need is... (SRC-104 L216–249; SRC-179 L217–222) | Prefer... | Why |
 |---|---|---|
-| Small custom logic controlled by your app | Function tool | The application remains the executor and validator (SRC-256 L219–263). |
+| Small custom logic controlled by your app | Function tool | The application remains the executor and validator (SRC-256 L219–259). |
 | Event-driven or compute-offloaded custom code | Azure Functions | Functions provide serverless processing and triggers such as HTTP or queues (SRC-104 L228–234). |
 | Existing REST API with a machine-readable contract | OpenAPI specified tool | The agent can use an OpenAPI 3.0 spec rather than hand-written routing code (SRC-104 L236–246). |
 | Low-code workflow across apps/data/services | Logic Apps | The corpus names Logic Apps as low-code/no-code workflow connectivity (SRC-179 L222). |
-| Many evolving tools, reusable across agents | MCP | Tool definitions stay on the server and can change without redeploying the agent (SRC-108 L217–235; SRC-233 L217–239). |
+| Many evolving tools, reusable across agents | MCP | Tool definitions stay on the server and can change without redeploying the agent (SRC-108 L217–234; SRC-233 L217–239). |
 
-**Inference:** The closest exam confusion is function tool vs Azure Function. The deciding detail is where the execution lives: local application/framework code for a function tool, Azure serverless infrastructure for Azure Functions (SRC-110 L180–250; SRC-256 L219–263).
+**Inference:** The closest exam confusion is function tool vs Azure Function. The deciding detail is where the execution lives: local application/framework code for a function tool, Azure serverless infrastructure for Azure Functions (SRC-110 L180–250; SRC-256 L219–259).
 
 ## Failure modes and misconceptions
 
 - Assuming the model executes business logic directly is wrong: in function calling, the model requests a function call and your application executes it (SRC-256 L219–224).
-- Tool descriptions are not cosmetic. The corpus says the agent chooses tools from meaningful names and well-documented parameters (SRC-104 L248–250).
-- Adding unnecessary tools increases latency; the Foundry Toolkit source advises starting with built-in tools and matching tools to clear requirements (SRC-91 L287–292).
+- Tool descriptions are not cosmetic. The corpus says the agent chooses tools from meaningful names and well-documented parameters (SRC-104 L248–249).
+- Adding unnecessary tools increases latency; the tools unit advises starting with built-in tools and matching tools to clear requirements (SRC-91 L287–292).
 - **Stale-risk:** Authentication modes and preview status can change; the corpus specifically marks some hosted tools as preview or experimental, and names OpenAPI auth types at capture time (SRC-91 L224–226; SRC-104 L238–240).
 
 ## Solution Engineering transfer

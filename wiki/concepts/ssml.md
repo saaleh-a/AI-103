@@ -26,7 +26,7 @@ Plain text says what to speak, but not enough about how to speak it. The corpus 
 
 ## Mental model
 
-SSML is a speech-control layer on top of text-to-speech. The text-to-speech system still produces audio, but the input is structured markup that tells the synthesizer how to vocalize words, pauses, emphasis, and other sound characteristics (SRC-246 L218–224).
+**Inference:** SSML is a speech-control layer on top of text-to-speech. The text-to-speech system still produces audio, but the input is structured markup that tells the synthesizer how to vocalize words, pauses, emphasis, and other sound characteristics (SRC-246 L218–224).
 
 ## What the sources say
 

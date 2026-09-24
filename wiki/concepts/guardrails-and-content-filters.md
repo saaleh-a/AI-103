@@ -26,7 +26,7 @@ A generative model can produce or accept harmful content even when the applicati
 
 ## Mental model
 
-A guardrail is a safety checkpoint around the model. It can inspect user input before the model sees it and inspect generated output before it reaches the user. The episode describes intervention points before the model and after model generation (SRC-106 L439–445). **Inference:** Content filters are the category-and-severity part of that checkpoint; guardrails are the broader Foundry configuration that can include content safety, jailbreak controls, and protected-material controls (SRC-106 L419–428; SRC-156 L229–231).
+**Synthesis:** A guardrail is a safety checkpoint around the model. It can inspect user input before the model sees it and inspect generated output before it reaches the user. The episode describes intervention points before the model and after model generation (SRC-106 L439–445). **Inference:** Content filters are the category-and-severity part of that checkpoint; guardrails are the broader Foundry configuration that can include content safety, jailbreak controls, and protected-material controls (SRC-106 L419–428; SRC-156 L229–231).
 
 ## What the sources say
 

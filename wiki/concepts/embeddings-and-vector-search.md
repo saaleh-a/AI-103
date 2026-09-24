@@ -26,7 +26,7 @@ RAG needs to find relevant source material even when the user's words do not exa
 
 ## Mental model
 
-An embedding places a piece of text into a multidimensional meaning space. Texts with similar meaning sit close together, so a question can be embedded and compared with document chunks to find likely relevant content. (SRC-102 L234–245)
+**Inference:** An embedding places a piece of text into a multidimensional meaning space. Texts with similar meaning sit close together, so a question can be embedded and compared with document chunks to find likely relevant content. (SRC-102 L234–245)
 
 ## What the sources say
 

@@ -26,7 +26,7 @@ Model training data is static, but many facts change. The source names pricing, 
 
 ## Mental model
 
-Web Search is a grounding tool for public, time-sensitive information: the model decides whether fresh web data is needed, searches, selects and summarizes relevant pages, then combines findings into the final answer. (SRC-257 L235–241)
+**Inference:** Web Search is a grounding tool for public, time-sensitive information: the model decides whether fresh web data is needed, searches, selects and summarizes relevant pages, then combines findings into the final answer. (SRC-257 L235–241)
 
 ## What the sources say
 

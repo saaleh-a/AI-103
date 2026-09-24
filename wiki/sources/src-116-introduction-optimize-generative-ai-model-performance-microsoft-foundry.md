@@ -79,7 +79,7 @@ Not covered by this source.
 
 ## Tensions, caveats and currency
 
-The source uses the product name Microsoft Foundry, while some related source captures and SDK names still use Azure AI Foundry wording. (SRC-116 L215–218)
+The source uses the product name Microsoft Foundry (SRC-116 L215–218), while two related Learn units still use Azure AI Foundry wording, one of them for an SDK (SRC-102 L251; SRC-234 L230).
 
 ## Relation to other sources
 
