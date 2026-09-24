@@ -18,7 +18,7 @@ aliases: ["code_interpreter", "Python tool", "code execution tool", "Code Interp
 
 ## Summary
 
-`code_interpreter` is the built-in tool that gives a model or agent a Python runtime so it can calculate, analyze data, process files, generate charts, and iterate after execution errors. (SRC-254 L218–224; SRC-91 L233)
+`code_interpreter` is the built-in tool that gives a model or agent a Python runtime so it can calculate, analyze data, process files, generate charts, and iterate after execution errors. (SRC-254 L218–224; SRC-91 L234–235)
 
 ## The problem it solves
 
@@ -33,12 +33,12 @@ The model becomes a supervised analyst with a temporary Python workspace: it dec
 - The Responses API tools module defines `code_interpreter` as a Python environment where the model can generate and run code. (SRC-259 L222–223)
 - The dedicated source says the tool enables generative AI models to write and run Python dynamically during a conversation. (SRC-254 L218–220)
 - It lists dynamic Python execution, file handling, data analysis, real-time feedback, and complex problem solving as key features. (SRC-254 L222–226)
-- The Foundry agent tools source says Code Interpreter enables agents to write and execute Python in a secure sandbox for mathematical calculations, data analysis, chart generation, file processing, and complex problem-solving. (SRC-91 L233)
+- The Foundry agent tools source says Code Interpreter enables agents to write and execute Python in a secure sandbox for mathematical calculations, data analysis, chart generation, file processing, and complex problem-solving. (SRC-91 L234–235)
 - The Agent Framework source groups code execution with service-provided tools when the provider supports them. (SRC-4 L217–220)
 
 ## How it works in Azure
 
-In a Responses API app, the application includes `code_interpreter` in the tools array, and the model determines whether code execution is needed. (SRC-254 L238–240) In Foundry agent scenarios, Code Interpreter is a built-in/service-provided tool enabled in the agent configuration or tool catalog. (SRC-91 L231–233; SRC-4 L217–220)
+In a Responses API app, the application includes `code_interpreter` in the tools array, and the model determines whether code execution is needed. (SRC-254 L238–240) In Foundry agent scenarios, Code Interpreter is a built-in/service-provided tool enabled in the agent configuration or tool catalog. (SRC-91 L232–235; SRC-4 L217–220)
 
 The runtime is sandboxed and has access to common libraries such as pandas, numpy, and math; the model receives execution results and can fix errors automatically. (SRC-254 L242–257)
 
@@ -48,7 +48,7 @@ The corpus's captured code blocks are elided by the Learn capture, but the proce
 
 ## Decision boundaries
 
-- Use [[code-interpreter-tool]] when the answer depends on executable computation, data transformation, charting, or iterative code/debug output. (SRC-254 L222–226; SRC-91 L233)
+- Use [[code-interpreter-tool]] when the answer depends on executable computation, data transformation, charting, or iterative code/debug output. (SRC-254 L222–226; SRC-91 L234–235)
 - Use [[file-search-tool]] instead when the need is to retrieve relevant passages from uploaded documents, not calculate over them. (SRC-255 L218–227)
 - Use [[function-calling]] instead when execution must happen in developer-owned business logic, APIs, databases, or workflows rather than the tool's Python sandbox. (SRC-256 L219–224)
 - Use [[web-search-tool]] instead when the missing input is current public web information. (SRC-257 L218–227)

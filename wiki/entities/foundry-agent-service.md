@@ -10,7 +10,7 @@ area: agents
 source_ids: [SRC-14, SRC-31, SRC-34, SRC-84, SRC-91, SRC-104, SRC-108, SRC-129, SRC-190, SRC-230, SRC-232, SRC-234, SRC-237, SRC-240]
 objectives: [P02, P04, P07, P12, P15, P16, G06, G07, G08, G09, G10, G11, G15]
 tags: ["service"]
-aliases: ["Foundry Agent Service", "Azure AI Agent Service", "Azure AI Foundry Agent Service", "Azure AI agents", "Foundry agents"]
+aliases: ["Foundry Agent Service", "Azure AI Agent Service", "Azure AI agents", "Foundry agents"]
 objective_gaps: []
 ---
 

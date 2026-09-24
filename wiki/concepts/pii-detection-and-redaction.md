@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Find sensitive personal data in text and optionally return masked/redacted text for privacy protection."
 area: language
-source_ids: [SRC-10, SRC-12, SRC-93, SRC-94, SRC-168]
+source_ids: [SRC-10, SRC-12, SRC-93, SRC-94, SRC-156, SRC-168]
 objectives: [T02]
 objective_gaps: []
 tags: []
@@ -49,9 +49,9 @@ The corpus's method cue is `recognize_pii_entities` on the Azure Language client
 
 | **Inference:** Need | PII detection/redaction | Named entity recognition | Content safety / moderation |
 |---|---|---|---|
-| Primary output | Sensitive personal data plus masked text (SRC-94 L217–225) | General entity categories (SRC-93 L217–230) | **Inference:** harm/safety classification rather than identity data |
-| Use when | Privacy protection before sharing or publishing text (SRC-94 L217; SRC-168 L218–220) | Metadata extraction and tagging (SRC-10 L235–241) | unsafe/disallowed content policy is the issue |
-| **Inference:** Exam cue | hide email addresses, phone numbers, credit cards, redact | extract people, organizations, dates, places | hate/sexual/violence/self-harm categories |
+| Primary output | Sensitive personal data plus masked text (SRC-94 L217–225) | General entity categories (SRC-93 L217–230) | Harm classification: guardrail content filters classify content into four severity levels for five categories of potential harm (SRC-156 L230) |
+| Use when | Privacy protection before sharing or publishing text (SRC-94 L217; SRC-168 L218–220) | Metadata extraction and tagging (SRC-10 L235–241) | **Inference:** harmful or disallowed content, not personal data, is the risk (SRC-156 L230) |
+| **Inference:** Exam cue | hide email addresses, phone numbers, credit cards, redact | extract people, organizations, dates, places | hate and fairness, sexual, violence, self-harm and task-adherence categories (SRC-156 L230) |
 
 **Inference:** If the scenario's success condition is privacy protection or redaction, PII detection is the better fit than generic NER, even when both capabilities can find person-like strings (SRC-93 L217–224; SRC-94 L217–225).
 
@@ -80,6 +80,7 @@ The corpus's method cue is `recognize_pii_entities` on the Azure Language client
 - SRC-12 — [[src-12-azure-language-microsoft-foundry-tools]] — capability list and setup.
 - SRC-93 — [[src-93-extract-entities]] — NER contrast.
 - SRC-94 — [[src-94-extract-personally-identifiable-information-pii]] — PII definition, categories, redaction behavior.
+- SRC-156 — [[src-156-mitigate-potential-harms]] — content-filter harm categories and severity levels (the content-safety contrast).
 - SRC-168 — [[src-168-module-assessment-analyze-text-azure-language-foundry-tools]] — assessment scenario.
 
 ## Open questions

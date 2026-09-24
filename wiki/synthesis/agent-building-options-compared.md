@@ -7,7 +7,7 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Comparison of Foundry Agent Service, portal/VS Code, Microsoft Agent Framework, Foundry workflows, and Microsoft 365 Agents Toolkit."
 area: agents
-source_ids: [SRC-5, SRC-14, SRC-18, SRC-20, SRC-34, SRC-36, SRC-48, SRC-51, SRC-84, SRC-124, SRC-129, SRC-149, SRC-190, SRC-195, SRC-209, SRC-230, SRC-232, SRC-234, SRC-237, SRC-247]
+source_ids: [SRC-5, SRC-14, SRC-18, SRC-20, SRC-34, SRC-36, SRC-48, SRC-51, SRC-84, SRC-108, SRC-119, SRC-124, SRC-129, SRC-149, SRC-190, SRC-195, SRC-209, SRC-230, SRC-232, SRC-234, SRC-237, SRC-240, SRC-247]
 objectives: [P02, P04, P07, G05, G06, G07, G08, G09, G10, G11, G16]
 objective_gaps: [P08]
 tags: []
@@ -79,7 +79,7 @@ aliases: []
 
 ## Tensions
 
-- **Stale-risk:** Naming shifts across corpus pages: newer pages say Microsoft Foundry Agent Service, while other pages still say Azure AI Agent Service or Azure AI agents; this page treats them as one service family only where cited pages describe the same managed agent runtime. (SRC-230 L258–276; SRC-34 L216–258)
+- **Stale-risk:** Naming shifts across corpus pages: newer pages say Microsoft Foundry Agent Service, while other pages still say Azure AI Agent Service or Azure AI agents (SRC-240 L216; SRC-108 L220; SRC-119 L217); this page treats them as one service family only where cited pages describe the same managed agent runtime. (SRC-230 L258–276; SRC-34 L216–258)
 - **Stale-risk:** The episode states Microsoft Agent Framework was generally available at recording time, but GA/preview status is time-sensitive and should not be treated as permanent platform fact. (SRC-48 L94–99)
 - **Synthesis:** The corpus names CI/CD and GitHub but does not teach a complete production CI/CD pipeline for agents; Toolkit and VS Code pages give boundaries and capabilities rather than full DevOps implementation. (SRC-5 L224; SRC-51 L230–231)
 
@@ -105,6 +105,8 @@ aliases: []
 - SRC-48 — [[src-48-develop-ai-agent-microsoft-agent-framework-episode-13]] — Agent Framework lineage and rationale.
 - SRC-51 — [[src-51-developer-tools-sdks]] — development tools, GitHub and SDK survey.
 - SRC-84 — [[src-84-explore-development-approaches]] — portal versus VS Code comparison.
+- SRC-108 — [[src-108-integrate-agent-tools-mcp-server-client]] — *Azure AI Agent Service* naming in the MCP client unit.
+- SRC-119 — [[src-119-introduction-integrate-mcp-tools-azure-ai-agents]] — *Azure AI Agent* naming alongside Foundry Agent Service.
 - SRC-124 — [[src-124-introduction-develop-ai-agent-microsoft-agent-framework]] — Semantic Kernel/AutoGen lineage and module scope.
 - SRC-129 — [[src-129-introduction-develop-ai-agents-microsoft-foundry-visual-studio-code]] — service framing for Foundry Agent Service.
 - SRC-149 — [[src-149-knowledge-check-integrate-agent-microsoft-365]] — Toolkit selection cue.
@@ -115,4 +117,5 @@ aliases: []
 - SRC-232 — [[src-232-understand-foundry-agent-publishing-options]] — Agent Application and publishing options.
 - SRC-234 — [[src-234-understand-microsoft-agent-framework-ai-agents]] — Agent Framework capabilities and Foundry provider guidance.
 - SRC-237 — [[src-237-understand-microsoft-agent-framework]] — Agent Framework definition and components.
+- SRC-240 — [[src-240-azure-ai-agents-mcp-servers]] — *Azure AI Agent Service* naming for remote MCP support.
 - SRC-247 — [[src-247-workflows-code]] — Foundry workflow invocation from code.

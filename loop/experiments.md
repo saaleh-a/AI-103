@@ -124,3 +124,33 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   reviewer; fixing exactly those claims (split the SAS/key guidance, label or cite the content-safety
   cells, correct the locator, drop G06 from the toolkit page, and remove or re-cite the unsupported alias
   wherever it recurs) will take the panel from 5/20 to ≤ 2/20 failing without touching other content.
+- Change (orchestrator as generator, each edit checked against the raw lines): src-236 splits the SAS-URL
+  rules (SRC-236 L250) from the key rules (L257–262); pii-detection-and-redaction's content-safety column
+  now cites SRC-156 L230 (four severity levels, five harm categories) and SRC-156 joins `source_ids`;
+  code-interpreter-tool and glossary cite SRC-91 L234–235 (not L233); foundry-toolkit-for-vs-code drops
+  G06; *Azure AI Agent Service* / *Azure AI Agent* re-cited to lines that contain them (SRC-108 L220,
+  SRC-240 L216, SRC-119 L217, SRC-122 L217, SRC-179 L221, SRC-233 L229, SRC-48 L625) on
+  naming-and-currency and agent-building-options-compared; foundry-agent-service drops the alias
+  *Azure AI Foundry Agent Service*, which no raw file contains.
+- Mechanical: `[0, 0, 0, 45, 6]` → `[0, 0, 0, 45, 6]` (SAME).
+- Judgement (panel, incremental): 5 changed pages re-judged — pii, toolkit, naming PASS; src-236 FAIL
+  (the kept phrase "creates a security burden" is an unlabelled characterisation); code-interpreter FAIL
+  (an unlabelled comparative rule, and P02 claimed) → **5/20 → 2/20 failing** (meets the ≤ 2/20 bar).
+- Decision: kept.
+- Side finding: the SRC-91 locator error was not a one-off. The source page's line numbers were shifted
+  by 2–3 and the shift was copied into concept pages (file-search-tool, web-search-tool, glossary).
+  New generator aid `scripts/find_locator_drift.py` (heuristic, not part of the verifier): 347 candidate
+  citations on 104 pages; 126 strong (cited lines share none of the claim's distinctive words, a window
+  within ±8 lines shares ≥ 4). Offsets cluster at +1/+2 (157 candidates).
+- Lesson: the lint's "range exists" check is necessary but weak; drift survives it. A candidate finder
+  plus raw-line confirmation is the scalable repair; the reviewer remains the arbiter.
+
+### Panel ledger after cycle 4 (FAIL rows; all other panel pages PASS)
+| Panel page | Verdict | Criterion | Problem |
+|---|---|---|---|
+| src-236-understand-azure-speech-mcp-server | FAIL | 3 | "creates a security burden" unlabelled |
+| code-interpreter-tool | FAIL | 3, 8 | unlabelled "use file_search instead" rule; P02 claimed |
+
+## Cycle 5 — last two panel failures (2026-09-24)
+- Hypothesis: labelling the two unlabelled judgements (src-236's characterisation, code-interpreter's
+  comparative rule) and dropping P02 from code-interpreter will clear the panel (2/20 → 0/20).
