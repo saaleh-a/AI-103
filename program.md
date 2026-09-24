@@ -26,7 +26,7 @@ claim traceable to a raw SRC-ID and locator, every inference labelled.
 |---|---|---|
 | **Generator** | any agent writing wiki pages (ingest, compile, repair) | `wiki/sources/`, `wiki/concepts/`, `wiki/entities/`, `wiki/synthesis/`; append-only: `wiki/log.md`, `loop/experiments.md` |
 | **Verifier (mechanical)** | `scripts/lint_wiki.py` via `scripts/loop_score.py` | reads everything; writes only `wiki/lint-report.md` and (on `--record`) `loop/scores.jsonl` |
-| **Verifier (judgement)** | a separate read-only reviewer agent that has not written the pages it reviews | reads pages, `loop/rubric.md` and `corpus/`; writes nothing |
+| **Verifier (judgement)** | a separate read-only reviewer agent that has not written the pages it reviews, following `loop/reviewer.md` verbatim | reads pages, `loop/rubric.md`, `loop/reviewer.md` and `corpus/`; writes nothing |
 | **Human** | the repo owner | this file, `schema.md`, the verifier and its lock |
 
 Generated files are rebuilt by their scripts, never hand-edited: `wiki/index.md`,
@@ -36,7 +36,7 @@ Generated files are rebuilt by their scripts, never hand-edited: `wiki/index.md`
 
 - `corpus/**` — raw evidence (the app also syncs it; never write inside it).
 - `scripts/**`, including `scripts/data/**` — the verifier and its registries.
-- `loop/rubric.md`, `loop/panel.txt`, `loop/verifier.lock`, `loop/scores.jsonl` (only `loop_score.py` appends).
+- `loop/rubric.md`, `loop/reviewer.md`, `loop/panel.txt`, `loop/verifier.lock`, `loop/scores.jsonl` (only `loop_score.py` appends).
 - `schema.md`, `program.md`, `CLAUDE.md`, `app/**`, `design/**`.
 
 `scripts/loop_score.py` refuses to score (exit 2) if any locked verifier file changed. A

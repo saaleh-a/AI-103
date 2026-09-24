@@ -60,7 +60,7 @@ For grounded RAG answers, connect an Azure AI Search index through the Foundry p
 
 ### Responses API vs Chat Completions API
 
-| Decision detail | Responses API | Chat Completions API |
+| **Synthesis:** Decision detail | Responses API | Chat Completions API |
 |---|---|---|
 | Default for new Foundry development | Recommended for most new development and for generating AI responses in Microsoft Foundry apps. (SRC-18 L221; SRC-99 L225) | Useful for code maintenance or cross-platform compatibility. (SRC-98 L217) |
 | Conversation state | Provides stateful multi-turn generation and links turns with `previous_response_id`. (SRC-99 L217; SRC-99 L279–280) | Does not provide stateful response tracking; app code must manually track prompts and responses. (SRC-98 L223) |

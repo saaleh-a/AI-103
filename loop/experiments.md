@@ -180,3 +180,41 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   `scripts/find_locator_drift.py` against the raw lines, and correcting only the confirmed ones, repairs
   criterion-2 failures the 20-page panel cannot see — measured by the candidate count and by a rotating
   sample drawn after the fix.
+- Change: six generator agents confirmed 322 of the 347 drift candidates against the raw lines and
+  re-cited them (4 claims narrowed; 21 rejected as false positives); `find_locator_drift.py` then
+  reported 22 candidates, each one an explicitly rejected false positive.
+- Mechanical: `[0, 0, 0, 0, 6]` → `[0, 0, 0, 0, 6]` (SAME — the lint cannot see drift).
+- Judgement (panel, incremental): the 3 changed panel pages were re-judged by a reviewer told to check
+  **every** sampled citation's line range — all 3 FAIL: model-playgrounds (unlabelled "not the production
+  app / not the evaluator" contrast), foundry-toolkit (SRC-84 L233–257 misses L232), microsoft-agent-
+  framework (SRC-237 L230 should be L229) → 0/20 → 3/20; the tool's verdict is REGRESSED. A diff against
+  cc75007 shows none of the three claims was touched by cycle 7: these are pre-existing defects that the
+  stricter protocol found.
+- Rotating diagnostic sample (cycle-7-changed pages first, same stricter protocol): **11/20 fail** —
+  reviewer A 9/10 (off-by-one or off-by-two locators on src-211, src-128, src-262, src-39, src-22,
+  src-258, src-2, concurrent- and group-chat-orchestration; objective over-claims on src-262 I07/I08,
+  src-22 I02, src-2 P12), reviewer B 2/10 (a meta-claim on glossary cited to SRC-191; G11 on
+  agent-building-options-compared).
+- Decision: **kept** — 322 verified re-citations; the new failures predate the cycle.
+- Lessons: (1) residual drift is mostly ±1–3 lines, too small for the word-overlap heuristic's thresholds.
+  (2) Reviewer instructions are part of the measuring instrument; they had lived outside the repo and
+  drifted. → verifier v4: the protocol moves to `loop/reviewer.md`, locked, with the every-citation
+  check as standard.
+
+## Cycle 8 — unlabelled claim lines (2026-09-24)
+- Hypothesis: the six unlabelled claim lines are five decision-table headers and one uncited lead-in;
+  labelling the tables as **Synthesis:** and citing the lead-in clears the last mechanical component.
+- Mechanical: `[0, 0, 0, 0, 6]` → `[0, 0, 0, 0, 0]` (IMPROVED). No panel page changed (3/20 carried).
+- Decision: kept.
+
+## Verifier v4 (2026-09-24)
+- `loop/reviewer.md` holds the reviewer protocol (every citation on each sampled claim is checked
+  against the raw lines); `loop_score.py` hashes rubric + protocol together, so the protocol change starts
+  a new judgement baseline; verifier re-locked. The full fixed panel is re-judged under v4 before cycle 9.
+
+## Cycle 9 — similarity-guided repair of small offsets (2026-09-24)
+- Hypothesis: most residual locator errors are ±1–3-line offsets that a claim-to-line similarity search
+  can place uniquely; re-citing only when the cited window is weak (< 0.35 IDF-weighted word overlap)
+  and one shifted window is clearly and uniquely better (≥ 0.45, +0.20 over cited, +0.10 over the
+  runner-up) will fix them without touching correct citations. Dry run: 105 re-citations on 47 pages;
+  all 4 reviewer-found offsets in the dry run match the reviewers' fixes, and 4 of 4 spot checks are right.

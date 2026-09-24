@@ -81,7 +81,7 @@ SRC-156 places RAG in the system-message-and-grounding mitigation layer for redu
 
 ## Code and configuration
 
-The corpus's captured code blocks are mostly placeholders, but it states these implementation shapes:
+The captures show code only as empty `Python` / `Copy` markers (SRC-102 L253–255), so these implementation shapes come from the units' prose:
 
 - Azure AI Search RAG: create an index with embeddings, query it, then use an authenticated OpenAI client and Responses API for grounded answers. (SRC-102 L241–256)
 - Foundry IQ: configure knowledge bases and data sources once; Foundry IQ handles processing, embeddings, indexing and reindexing. (SRC-85 L232–238; SRC-22 L12–14)
@@ -90,7 +90,7 @@ The corpus's captured code blocks are mostly placeholders, but it states these i
 
 ## Decision boundaries
 
-| Need | Choose | Why |
+| **Synthesis:** Need | Choose | Why |
 |---|---|---|
 | Current, private or domain-specific facts | RAG | RAG retrieves current/private data at query time without retraining. (SRC-102 L258–261) |
 | Output style, tone or format consistency | Fine-tuning or prompt engineering first | Fine-tuning embeds desired behavior; prompt engineering defines behavior; RAG supplies knowledge. (SRC-19 L217–229) |

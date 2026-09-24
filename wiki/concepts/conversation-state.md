@@ -56,7 +56,7 @@ For Microsoft Agent Framework and Foundry Agent Service, the corpus names `Agent
 
 ## Decision boundaries
 
-| State approach | Use when | Closest confusion |
+| **Synthesis:** State approach | Use when | Closest confusion |
 |---|---|---|
 | Manual message history | Existing Chat Completions code or compatibility requires message-list control. (SRC-98 L217; SRC-98 L223–232) | Do not assume Chat Completions tracks response state for you. (SRC-98 L223) |
 | `previous_response_id` | New Foundry Responses API chat needs stateful turn linking. (SRC-99 L217; SRC-99 L279–280) | Do not assume this reduces token cost automatically. (SRC-99 L281–288) |

@@ -1,10 +1,11 @@
 {
   "scripts/lint_wiki.py": "1fc8934f6c01957cb60c8284e17725aad81bd14ccd2f6331db38f563ded0a912",
   "scripts/check_citations.py": "d1a234de082989abc8c89b70283266d8cb3ddd837500a48746b950e0cd36ac1a",
-  "scripts/loop_score.py": "be23483e06efe37312cf7fcca06ce6d3122e4f5d6f2b476a36ed3410a5dca58b",
+  "scripts/loop_score.py": "5e0dab1e1910d380d44c185ae4ec9a767a142fc2f811eeb557c6ff9979f8b51f",
   "scripts/loop_sample.py": "71d55f962055dfa0a3450a2b91b9ae3e60c00fc7a325b034ad352840b62e16b7",
   "scripts/data/corpus-registry.json": "f63895daa281eb5764c6008b5177c21a34630e02eac96dd2bcc10466ccba48f3",
   "scripts/data/exam-objectives.json": "ce2f1917e2595cbea680e3f8a673b84231a200ad4e0c7194c770271a4c8a18f9",
   "loop/rubric.md": "c24d6b61106054220adeb6e0a8a31414442ee384539e5367bd349e7a1b3c432e",
+  "loop/reviewer.md": "7ae7255d869c86298825443dc770d23ec16928296b8d596847e16407a929e67a",
   "loop/panel.txt": "1306a21b8dee3b1ab4170b7da1f6a415e1251f72f9d8e230bd53e7687e91b9bd"
 }

@@ -39,7 +39,7 @@ SCORES = ROOT / "loop" / "scores.jsonl"
 LOCK = ROOT / "loop" / "verifier.lock"
 VERIFIER = ["scripts/lint_wiki.py", "scripts/check_citations.py", "scripts/loop_score.py",
             "scripts/loop_sample.py", "scripts/data/corpus-registry.json",
-            "scripts/data/exam-objectives.json", "loop/rubric.md", "loop/panel.txt"]
+            "scripts/data/exam-objectives.json", "loop/rubric.md", "loop/reviewer.md", "loop/panel.txt"]
 MECHANICAL = ["scripts/lint_wiki.py", "scripts/data/corpus-registry.json", "scripts/data/exam-objectives.json"]
 # Entries recorded before scores carried a mechanical version were all made under lint v1–v2.
 LEGACY_MECH = "legacy"
@@ -87,7 +87,8 @@ def main() -> int:
     best = min((h["score"] for h in comparable), default=None)
     verdict = "BASELINE" if best is None else ("IMPROVED" if score < best else "SAME" if score == best else "REGRESSED")
     judgement = None
-    rubric = digest("loop/rubric.md")
+    rubric = hashlib.sha256((digest("loop/rubric.md") + (digest("loop/reviewer.md")
+                             if (ROOT / "loop" / "reviewer.md").exists() else "")).encode()).hexdigest()
     panel = digest("loop/panel.txt") if (ROOT / "loop" / "panel.txt").exists() else None
     if "--judgement" in args:
         sampled, failing = (int(x) for x in args[args.index("--judgement") + 1].split(":"))

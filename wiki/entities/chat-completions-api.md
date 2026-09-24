@@ -53,7 +53,7 @@ To retain context, maintain a conversation list in the application, append each 
 
 ### Chat Completions API vs Responses API
 
-| Decision detail | Chat Completions API | Responses API |
+| **Synthesis:** Decision detail | Chat Completions API | Responses API |
 |---|---|---|
 | Best fit from the corpus | Maintenance and cross-platform compatibility. (SRC-98 L217) | New Foundry response-generation development. (SRC-18 L221; SRC-99 L225) |
 | Request shape | Collections of JSON message objects. (SRC-98 L219) | `responses.create()` with `input`; response object has `output_text`, `id`, `status`, `usage` and `model`. (SRC-99 L227–237) |

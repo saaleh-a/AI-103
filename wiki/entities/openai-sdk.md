@@ -54,7 +54,7 @@ Use the Foundry SDK when the app needs Foundry-specific capabilities such as age
 
 ## Decision boundaries
 
-| Scenario detail | Prefer OpenAI SDK | Prefer Foundry SDK |
+| **Synthesis:** Scenario detail | Prefer OpenAI SDK | Prefer Foundry SDK |
 |---|---|---|
 | Existing OpenAI code should work with minimal changes | Yes; the source calls it ideal for model inference workloads with existing OpenAI code. (SRC-18 L307) | No; Foundry project abstractions may be unnecessary. **Inference:** (SRC-18 L292–308) |
 | The app needs agents, evaluations, tracing or project connections | No; the source says this approach does not provide Foundry-specific features like agents or evaluations. (SRC-18 L307) | Yes; those are named Foundry SDK capabilities. (SRC-18 L292–300) |
