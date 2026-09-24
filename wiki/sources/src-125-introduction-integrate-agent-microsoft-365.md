@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces publishing Foundry agents into Teams and Microsoft 365 Copilot, plus Work IQ for Microsoft 365 data access."
 area: agents
 source_ids: [SRC-125]
-objectives: [P07, P12, G12]
+objectives: []
 tags: [microsoft-365, teams, copilot, agent-publishing, work-iq]
 aliases: ["SRC-125"]
 source_kind: learn-unit

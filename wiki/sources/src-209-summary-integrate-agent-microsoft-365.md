@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes Teams and Microsoft 365 Copilot publishing, Bot Service and Entra registrations, scopes, agent identity, Work IQ, and next steps."
 area: agents
 source_ids: [SRC-209]
-objectives: [P07, P12, G09, G12]
+objectives: []
 tags: [summary, microsoft-365, agent-publishing, work-iq, teams]
 aliases: ["SRC-209"]
 source_kind: learn-unit

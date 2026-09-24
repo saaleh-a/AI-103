@@ -94,3 +94,33 @@ unlabelled claim lines]), judgement sample (`scripts/loop_sample.py` + a read-on
   clearing objectives from non-teaching units and resolving each unregistered gap (drop it, or record a
   genuine corpus gap in the register with citations) brings errors to 0 and removes the panel's
   criterion-8 failures on those pages.
+- Panel baseline (v3 rubric, measured on a4c2e9e before any cycle-3 edit; reviewers read pages with
+  `git show`): 14/20 pass, 6 fail.
+- Change: orchestrator script cleared `objectives`/`objective_gaps` on the 107 non-teaching source pages
+  (a deterministic rule); generator agent `loop-c3-register` resolved the 6 unregistered gap lists —
+  registered P14 (explanation tooling appears only in SRC-191 L137) and G01 (code models only in
+  SRC-191 L142) in [[corpus-gaps]] with cited body bullets, and dropped 15 misused IDs whose objectives
+  the corpus teaches elsewhere (e.g. P16: human-in-the-loop oversight is taught, SRC-105 L222–225).
+- Mechanical: `[113, 0, 0, 45, 6]` → `[0, 0, 0, 45, 6]` (IMPROVED, same lint rules).
+- Judgement (fixed panel, incremental): 3 changed panel pages re-judged — src-139, src-70, src-202 all
+  PASS (src-70's G08 failure is gone); 17 carried forward → **6/20 → 5/20 failing**.
+- Objective map: 42 taught / 11 in part / 11 named only → 40 / 13 / 11.
+- Decision: kept. Verifier change (human): incremental panel runs (`loop_sample.py --panel
+  --changed-since`), since unchanged pages cannot change verdict; re-locked.
+- Lesson: deterministic rules belong in the lint, not in reviewer judgement — one mechanical rule
+  removed 107 latent criterion-8 violations that sampling would have found one at a time.
+
+### Panel ledger after cycle 3 (FAIL rows; all other panel pages PASS)
+| Panel page | Verdict | Criterion | Problem |
+|---|---|---|---|
+| src-236-understand-azure-speech-mcp-server | FAIL | 1 | merges SAS-URL and key guidance (L250 vs L257–262) |
+| pii-detection-and-redaction | FAIL | 3 | content-safety comparison cells uncited/unlabelled |
+| code-interpreter-tool | FAIL | 2 | SRC-91 L233 cited; claim is at L234–235 |
+| foundry-toolkit-for-vs-code | FAIL | 8 | claims G06 (app connection config) not taught there |
+| naming-and-currency | FAIL | 1, 6 | *Azure AI Agent Service* alias cited to SRC-230 lines lacking it |
+
+## Cycle 4 — repair the panel's open failures (2026-09-24)
+- Hypothesis: each of the five open panel failures has a precise, source-level cause named by the
+  reviewer; fixing exactly those claims (split the SAS/key guidance, label or cite the content-safety
+  cells, correct the locator, drop G06 from the toolkit page, and remove or re-cite the unsupported alias
+  wherever it recurs) will take the panel from 5/20 to ≤ 2/20 failing without touching other content.

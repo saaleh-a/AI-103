@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launcher inviting learners with an Azure subscription to explore Foundry IQ in Microsoft Foundry."
 area: retrieval
 source_ids: [SRC-76]
-objectives: [G08, G09, I05]
+objectives: []
 tags: [exercise, foundry-iq, microsoft-foundry, lab-launcher]
 aliases: ["SRC-76"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module's multi-agent orchestration patterns and unified SDK interface."
 area: orchestration
 source_ids: [SRC-199]
-objectives: [G10, G16]
+objectives: []
 tags: [summary, multi-agent-orchestration, microsoft-agent-framework]
 aliases: ["SRC-199"]
 source_kind: learn-unit

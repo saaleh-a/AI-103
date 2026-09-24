@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the process: identify harms, measure them, mitigate at multiple levels, and operate responsibly."
 area: responsible-ai
 source_ids: [SRC-211]
-objectives: [P13, P14, P15]
+objectives: []
 tags: [responsible-ai, summary, lifecycle]
 aliases: ["SRC-211"]
 source_kind: learn-unit

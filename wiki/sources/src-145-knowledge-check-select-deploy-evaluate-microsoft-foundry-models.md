@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Lists three knowledge-check questions about throughput, Global Standard deployment, and fluency; answers are not shown in this capture."
 area: models
 source_ids: [SRC-145]
-objectives: [P01, P06, G04]
+objectives: []
 tags: [knowledge-check, model-benchmarks, deployment]
 aliases: ["SRC-145"]
 source_kind: learn-unit

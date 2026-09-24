@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Microsoft Agent Framework as the SDK for Foundry-backed agents with tools, state, telemetry, and workflows."
 area: agents
 source_ids: [SRC-124]
-objectives: [G06, G07, G08, G09]
+objectives: []
 tags: [microsoft-agent-framework, foundry-agent-service, tools, agents]
 aliases: ["SRC-124"]
 source_kind: learn-unit

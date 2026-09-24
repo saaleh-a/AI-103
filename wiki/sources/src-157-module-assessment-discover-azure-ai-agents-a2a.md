@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Captures the A2A module assessment questions on server role, Agent Executor role, and Agent Card purpose."
 area: orchestration
 source_ids: [SRC-157]
-objectives: [G10]
+objectives: []
 tags: [a2a, module-assessment, agent-executor, agent-card]
 aliases: ["SRC-157"]
 source_kind: learn-unit

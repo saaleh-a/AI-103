@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module outcomes for using the Azure Language MCP server with agents, Foundry, playground testing, and Python clients."
 area: language
 source_ids: [SRC-200]
-objectives: [G08, G09, T01, T02]
+objectives: []
 tags: [summary, azure-language, mcp, foundry-agent, foundry-sdk]
 aliases: ["SRC-200"]
 source_kind: learn-unit

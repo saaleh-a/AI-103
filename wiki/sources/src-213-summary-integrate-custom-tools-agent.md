@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes custom tools as productivity boosters and names Azure Functions and OpenAPI specifications as integration options."
 area: agents
 source_ids: [SRC-213]
-objectives: [G09]
+objectives: []
 tags: [custom-tools, module-summary, agents, openapi, azure-functions]
 aliases: ["SRC-213"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin lab launcher for deploying a generative model and creating a chat application in Microsoft Foundry."
 area: generative-apps
 source_ids: [SRC-62]
-objectives: [G01, G05, G06]
+objectives: []
 tags: [exercise, chat-app, deployment]
 aliases: ["SRC-62"]
 source_kind: learn-unit

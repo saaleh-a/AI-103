@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launches the Sora 2 video exercise covering deployment, text-prompt video generation, and reference images."
 area: vision
 source_ids: [SRC-75]
-objectives: [V02, G05]
+objectives: []
 tags: [exercise, video-generation, sora-2, reference-image, microsoft-foundry]
 aliases: ["SRC-75"]
 source_kind: learn-unit

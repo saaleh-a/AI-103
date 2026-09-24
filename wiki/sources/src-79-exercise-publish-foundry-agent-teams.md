@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launcher for publishing a Foundry agent to Teams, with an optional Work IQ exercise link."
 area: agents
 source_ids: [SRC-79]
-objectives: [P07, G12]
+objectives: []
 tags: [exercise, agent-publishing, teams, work-iq]
 aliases: ["SRC-79"]
 source_kind: learn-unit

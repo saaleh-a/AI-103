@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Knowledge-check capture with orchestration workflow options and questions on group chat and handoff patterns."
 area: orchestration
 source_ids: [SRC-143]
-objectives: [G10]
+objectives: []
 tags: [knowledge-check, orchestration-patterns, assessment]
 aliases: ["SRC-143"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces using the Azure Language MCP server to expose text analysis capabilities to a Microsoft Foundry agent."
 area: language
 source_ids: [SRC-135]
-objectives: [T01, T02, G09]
+objectives: []
 tags: [azure-language, mcp, agents, text-analysis]
 aliases: ["SRC-135"]
 source_kind: learn-unit

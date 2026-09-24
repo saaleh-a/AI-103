@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module's agent concepts, service features, portal and VS Code workflows, tools, testing, deployment, and integration skills."
 area: agents
 source_ids: [SRC-212]
-objectives: [G07, G08, G09, G12]
+objectives: []
 tags: [summary, ai-agents, foundry-agent-service, visual-studio-code, tools]
 aliases: ["SRC-212"]
 source_kind: learn-unit

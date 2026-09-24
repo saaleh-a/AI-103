@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment questions cover Voice Live authentication, WebRTC avatars, portal voice mode, and interruption event handling."
 area: speech
 source_ids: [SRC-159]
-objectives: [T05, T06]
+objectives: []
 tags: [voice-live, assessment, authentication, webrtc, events]
 aliases: ["SRC-159"]
 source_kind: learn-unit

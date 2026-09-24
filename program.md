@@ -69,7 +69,11 @@ generator that can edit its test will optimise the test instead of the wiki.
    lines, and returns PASS/FAIL per page with the failing claim, its locator and what the raw text
    says. It writes nothing (`git status` must be unchanged after it runs). Record it with
    `--judgement <judged>:<failing> --panel`. Only panel runs under the same rubric move the
-   ratchet: the same pages judged by the same standard, like a fixed validation set. A rotating
+   ratchet: the same pages judged by the same standard, like a fixed validation set. A panel run is
+   incremental: `loop_sample.py --panel --changed-since <last panel revision>` lists the panel pages
+   the cycle changed; the reviewer re-judges those, the other verdicts carry forward from the panel
+   ledger in `loop/experiments.md` (a verdict can only change if its page changes — the corpus and
+   rubric are fixed), and the recorded count covers all 20. A rotating
    sample (`loop_sample.py --cycle N`, changed pages first) may be judged too, to find failure
    classes the panel misses; record it without `--panel` — it is diagnosis, not a ratchet metric.
 

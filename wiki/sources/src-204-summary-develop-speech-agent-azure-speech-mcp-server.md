@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes using the Azure Speech MCP server for agent transcription, speech generation, storage, connection, and SDK invocation."
 area: speech
 source_ids: [SRC-204]
-objectives: [T05, T06, G09]
+objectives: []
 tags: [summary, azure-speech, mcp, blob-storage, foundry-sdk]
 aliases: ["SRC-204"]
 source_kind: learn-unit

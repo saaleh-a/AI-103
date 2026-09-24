@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module outcomes: connect to Azure Speech, implement speech recognition and synthesis, configure voices/formats and use SSML."
 area: speech
 source_ids: [SRC-192]
-objectives: [T05]
+objectives: []
 tags: [summary, azure-speech, speech-to-text, text-to-speech, ssml]
 aliases: ["SRC-192"]
 source_kind: learn-unit

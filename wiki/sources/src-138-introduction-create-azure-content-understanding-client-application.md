@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces using the Python SDK or REST API to send content to Azure Content Understanding analyzers and process results."
 area: extraction
 source_ids: [SRC-138]
-objectives: [I08]
+objectives: []
 tags: [content-understanding, client-application, python-sdk, rest-api]
 aliases: ["SRC-138"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment capture with three unanswered questions about endpoint/key access, AudioConfig input files and changing synthesis voices."
 area: speech
 source_ids: [SRC-174]
-objectives: [T05]
+objectives: []
 tags: [module-assessment, azure-speech, speech-sdk, audioconfig, voices]
 aliases: ["SRC-174"]
 source_kind: learn-unit

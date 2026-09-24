@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Checks RAG advantages, SharePoint Remote, scoring profiles, and why explicit retrieval instructions matter for Foundry IQ agents."
 area: retrieval
 source_ids: [SRC-147]
-objectives: [G02, G08, G09, P03, P04, I05]
+objectives: []
 tags: [knowledge-check, foundry-iq, rag, sharepoint, scoring-profiles, retrieval-instructions]
 aliases: ["SRC-147"]
 source_kind: learn-unit

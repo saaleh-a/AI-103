@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment questions test layout-model choice, REST training artifacts, and routing among extraction models."
 area: extraction
 source_ids: [SRC-165]
-objectives: [I06]
+objectives: []
 tags: [module-assessment, azure-document-intelligence, layout-model, custom-models]
 aliases: ["SRC-165"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes Voice Live features, Python client setup, event handlers, real-time audio, and a Flask web application exercise."
 area: speech
 source_ids: [SRC-208]
-objectives: [T05, T06]
+objectives: []
 tags: [voice-live, summary, python, flask, events]
 aliases: ["SRC-208"]
 source_kind: learn-unit

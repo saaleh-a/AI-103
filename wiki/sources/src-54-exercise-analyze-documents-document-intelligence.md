@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launcher for analyzing documents with both a prebuilt and custom Document Intelligence model."
 area: extraction
 source_ids: [SRC-54]
-objectives: [I06]
+objectives: []
 tags: [exercise, azure-document-intelligence, prebuilt-models, custom-models]
 aliases: ["SRC-54"]
 source_kind: learn-unit

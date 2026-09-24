@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment capture testing translate vs transliterate and SpeechTranslationConfig for speech translation languages."
 area: exam
 source_ids: [SRC-166]
-objectives: [T03, T08]
+objectives: []
 tags: [module-assessment, text-translation, transliteration, speechtranslationconfig]
 aliases: ["SRC-166"]
 source_kind: learn-unit

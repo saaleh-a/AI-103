@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module: Agent Framework components, core concepts, and custom tools for dynamic agent solutions."
 area: agents
 source_ids: [SRC-195]
-objectives: [G06, G07, G08, G09]
+objectives: []
 tags: [summary, microsoft-agent-framework, custom-tools, agents]
 aliases: ["SRC-195"]
 source_kind: learn-unit

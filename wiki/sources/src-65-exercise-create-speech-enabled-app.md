@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Exercise launch page for building a speech-enabled app with recognition and synthesis; lab details are outside the capture."
 area: speech
 source_ids: [SRC-65]
-objectives: [T05]
+objectives: []
 tags: [exercise, azure-speech, speech-recognition, speech-synthesis, foundry-tools]
 aliases: ["SRC-65"]
 source_kind: learn-unit

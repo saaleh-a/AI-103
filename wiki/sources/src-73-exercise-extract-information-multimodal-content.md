@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launches a hands-on lab for extracting information from documents, images, audio files, and videos with Content Understanding."
 area: extraction
 source_ids: [SRC-73]
-objectives: [I06, I08, V10]
+objectives: []
 tags: [content-understanding, exercise, multimodal-analysis]
 aliases: ["SRC-73"]
 source_kind: learn-unit

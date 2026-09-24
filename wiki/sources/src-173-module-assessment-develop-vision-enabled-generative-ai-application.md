@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assesses model choice, multi-part image-analysis prompts, and image message formats for vision-enabled chat."
 area: vision
 source_ids: [SRC-173]
-objectives: [P01, V06, V08]
+objectives: []
 tags: [module-assessment, multimodal-models, vision-enabled-chat]
 aliases: ["SRC-173"]
 source_kind: learn-unit

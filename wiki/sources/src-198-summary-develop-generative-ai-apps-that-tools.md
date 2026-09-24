@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the four tool types and the shared implementation pattern for tool-augmented model responses."
 area: agents
 source_ids: [SRC-198]
-objectives: [G03, G05, G09]
+objectives: []
 tags: [summary, tools, responses-api, agents]
 aliases: ["SRC-198"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces multi-agent solutions through a DevOps collaboration scenario and the module goals."
 area: orchestration
 source_ids: [SRC-133]
-objectives: [G10]
+objectives: []
 tags: [multi-agent-orchestration, microsoft-agent-framework, introduction]
 aliases: ["SRC-133"]
 source_kind: learn-unit

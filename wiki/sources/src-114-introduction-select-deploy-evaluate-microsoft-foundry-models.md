@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces the Foundry model lifecycle: discover, benchmark, deploy, test, and evaluate models for a use case."
 area: models
 source_ids: [SRC-114]
-objectives: [P01, P06, G01, G04]
+objectives: []
 tags: [model-selection, model-catalog, model-evaluation]
 aliases: ["SRC-114"]
 source_kind: learn-unit

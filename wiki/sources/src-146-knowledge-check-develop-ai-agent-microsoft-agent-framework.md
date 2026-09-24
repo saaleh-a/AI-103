@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Knowledge-check capture with options for agent creation, AgentThread state management, and custom-function tools; answer key is not shown."
 area: agents
 source_ids: [SRC-146]
-objectives: [G06, G07, G08, G09]
+objectives: []
 tags: [knowledge-check, agentthread, chatagent, azureaiagentclient, custom-tools]
 aliases: ["SRC-146"]
 source_kind: learn-unit

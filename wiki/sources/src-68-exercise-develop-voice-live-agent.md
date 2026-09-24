@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Exercise launcher for creating a Voice Live agent, testing it in the playground, and connecting a client application."
 area: speech
 source_ids: [SRC-68]
-objectives: [T05, T06]
+objectives: []
 tags: [voice-live, exercise, python, agent-playground]
 aliases: ["SRC-68"]
 source_kind: learn-unit

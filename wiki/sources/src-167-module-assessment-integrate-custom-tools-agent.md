@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment capture with three questions on custom tools, OpenAPI specification tools and function calling."
 area: agents
 source_ids: [SRC-167]
-objectives: [G09]
+objectives: []
 tags: [custom-tools, assessment, openapi, function-calling]
 aliases: ["SRC-167"]
 source_kind: learn-unit

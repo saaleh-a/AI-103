@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment questions covering impact assessment, Foundry guardrails, and phased delivery."
 area: responsible-ai
 source_ids: [SRC-170]
-objectives: [P13, P14, P15]
+objectives: []
 tags: [responsible-ai, assessment, guardrails]
 aliases: ["SRC-170"]
 source_kind: learn-unit

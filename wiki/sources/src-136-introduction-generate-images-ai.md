@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces image generation in Microsoft Foundry and the module goal of building apps that generate original images."
 area: vision
 source_ids: [SRC-136]
-objectives: [V01]
+objectives: []
 tags: [image-generation, microsoft-foundry, gpt-image-1]
 aliases: ["SRC-136"]
 source_kind: learn-unit

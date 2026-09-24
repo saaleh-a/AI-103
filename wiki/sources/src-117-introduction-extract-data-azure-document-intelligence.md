@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Azure Document Intelligence for automating document extraction from forms and documents."
 area: extraction
 source_ids: [SRC-117]
-objectives: [I06]
+objectives: []
 tags: [azure-document-intelligence, document-extraction, module-introduction]
 aliases: ["SRC-117"]
 source_kind: learn-unit

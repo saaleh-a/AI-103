@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Contains three knowledge-check questions on indexers, Foundry Tools built-in skills, and table projections."
 area: retrieval
 source_ids: [SRC-176]
-objectives: [I01, I03, P03]
+objectives: []
 tags: [assessment, knowledge-check, indexer, foundry-tools, projections]
 aliases: ["SRC-176"]
 source_kind: learn-unit

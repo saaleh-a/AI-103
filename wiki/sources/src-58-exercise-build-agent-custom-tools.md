@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "A thin exercise launch page directing learners to build an agent in code and connect a custom tool function."
 area: agents
 source_ids: [SRC-58]
-objectives: [G09]
+objectives: []
 tags: [custom-tools, exercise, agents, lab]
 aliases: ["SRC-58"]
 source_kind: learn-unit

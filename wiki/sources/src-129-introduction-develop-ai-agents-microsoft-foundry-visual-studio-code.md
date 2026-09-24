@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Microsoft Foundry Agent Service and the module's portal, VS Code, tools, testing, deployment, and integration goals."
 area: agents
 source_ids: [SRC-129]
-objectives: [G07, G08, G09]
+objectives: []
 tags: [ai-agents, microsoft-foundry, visual-studio-code, foundry-agent-service]
 aliases: ["SRC-129"]
 source_kind: learn-unit

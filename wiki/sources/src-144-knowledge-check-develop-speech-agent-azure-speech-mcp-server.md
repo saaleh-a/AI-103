@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assesses Speech MCP capabilities, storage requirements, connection credentials, and prompt-level voice selection."
 area: speech
 source_ids: [SRC-144]
-objectives: [T05, T06, G09]
+objectives: []
 tags: [knowledge-check, azure-speech, mcp, sas-url, voice-selection]
 aliases: ["SRC-144"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Knowledge check covering managed-service benefits, Responses API state, agent security practice, and automatic tool invocation."
 area: agents
 source_ids: [SRC-142]
-objectives: [G07, G08, G09, P16]
+objectives: []
 tags: [knowledge-check, foundry-agent-service, responses-api, security, tool-calling]
 aliases: ["SRC-142"]
 source_kind: learn-unit

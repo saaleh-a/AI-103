@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces translation as a global-solution requirement and frames Microsoft Foundry as the module's translation platform."
 area: language
 source_ids: [SRC-139]
-objectives: [T03, T08]
+objectives: []
 tags: [translation, microsoft-foundry, machine-translation, language, speech]
 aliases: ["SRC-139"]
 source_kind: learn-unit

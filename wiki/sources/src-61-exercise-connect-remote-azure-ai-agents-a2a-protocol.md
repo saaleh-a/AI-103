@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launch page for building an A2A client-server application that interacts with remote agents."
 area: orchestration
 source_ids: [SRC-61]
-objectives: [G10]
+objectives: []
 tags: [a2a, exercise, remote-agents, client-server]
 aliases: ["SRC-61"]
 source_kind: learn-unit

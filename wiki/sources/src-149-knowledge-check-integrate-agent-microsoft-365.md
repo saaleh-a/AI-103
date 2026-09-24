@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Five-question knowledge check on Bot Service, publish scope, published identity permissions, Work IQ, and Agents Toolkit selection."
 area: agents
 source_ids: [SRC-149]
-objectives: [P07, P12, G09, G12]
+objectives: []
 tags: [knowledge-check, agent-publishing, teams, work-iq, agents-toolkit]
 aliases: ["SRC-149"]
 source_kind: learn-unit

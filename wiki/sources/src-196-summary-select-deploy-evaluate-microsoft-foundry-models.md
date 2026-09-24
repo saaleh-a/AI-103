@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module's model catalog, benchmark, deployment, playground, evaluation, integration, safety, and monitoring takeaways."
 area: models
 source_ids: [SRC-196]
-objectives: [P01, P06, P09, P10, G01, G04, G06]
+objectives: []
 tags: [summary, model-lifecycle, model-evaluation]
 aliases: ["SRC-196"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces custom tools as agent extensions for executing business-specific actions beyond built-in tools."
 area: agents
 source_ids: [SRC-122]
-objectives: [G09]
+objectives: []
 tags: [custom-tools, agents, foundry-agent-service, module-introduction]
 aliases: ["SRC-122"]
 source_kind: learn-unit

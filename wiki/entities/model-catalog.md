@@ -9,7 +9,7 @@ summary: "Microsoft Foundry's portal catalog for discovering, filtering, compari
 area: models
 source_ids: [SRC-17, SRC-38, SRC-89, SRC-114, SRC-188, SRC-258]
 objectives: [P01]
-objective_gaps: [P06, G01, V01, T05]
+objective_gaps: []
 tags: ["feature"]
 aliases: ["Foundry Models", "Microsoft Foundry Models", "model catalog", "Models catalog", "Foundry Models catalog"]
 ---

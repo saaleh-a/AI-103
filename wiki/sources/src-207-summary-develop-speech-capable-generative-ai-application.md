@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module as learning speech-capable AI models for transcription and synthesis in Microsoft Foundry."
 area: speech
 source_ids: [SRC-207]
-objectives: [T05, T07]
+objectives: []
 tags: [summary, speech, microsoft-foundry, transcription, synthesis]
 aliases: ["SRC-207"]
 source_kind: learn-unit

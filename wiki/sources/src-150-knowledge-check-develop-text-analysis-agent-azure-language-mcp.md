@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Knowledge check covering server role, tool selection, agent reference in Responses API, and key-based authentication."
 area: language
 source_ids: [SRC-150]
-objectives: [G08, G09, T01, T02]
+objectives: []
 tags: [knowledge-check, azure-language, mcp, foundry-agent, responses-api]
 aliases: ["SRC-150"]
 source_kind: learn-unit

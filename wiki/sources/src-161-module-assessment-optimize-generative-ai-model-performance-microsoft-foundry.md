@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment questions covering system messages, RAG, temperature, fine-tuning, and combined strategies."
 area: exam
 source_ids: [SRC-161]
-objectives: [G02, G13, T04]
+objectives: []
 tags: [assessment, prompt-engineering, rag, fine-tuning, temperature]
 aliases: ["SRC-161"]
 source_kind: learn-unit

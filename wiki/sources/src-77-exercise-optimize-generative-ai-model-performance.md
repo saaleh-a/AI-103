@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launch page for exploring fine-tuning in Microsoft Foundry; lab steps are not captured."
 area: models
 source_ids: [SRC-77]
-objectives: [G13, T04]
+objectives: []
 tags: [exercise, fine-tuning, microsoft-foundry]
 aliases: ["SRC-77"]
 source_kind: learn-unit

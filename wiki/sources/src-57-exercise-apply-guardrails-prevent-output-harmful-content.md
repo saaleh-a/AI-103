@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launch page for deploying a model and observing the effect of Foundry guardrails."
 area: responsible-ai
 source_ids: [SRC-57]
-objectives: [P13]
+objectives: []
 tags: [responsible-ai, exercise, guardrails]
 aliases: ["SRC-57"]
 source_kind: learn-unit

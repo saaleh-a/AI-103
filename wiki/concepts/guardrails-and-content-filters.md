@@ -9,7 +9,7 @@ summary: "Foundry guardrails and content filters suppress unsafe prompts and res
 area: responsible-ai
 source_ids: [SRC-53, SRC-57, SRC-100, SRC-101, SRC-106, SRC-152, SRC-156, SRC-170, SRC-182, SRC-191, SRC-196]
 objectives: [P13, T02]
-objective_gaps: [P14, V14]
+objective_gaps: [V14]
 tags: []
 aliases: ["content filters", "guardrails", "harm categories", "severity levels", "content moderation", "safety filters"]
 ---

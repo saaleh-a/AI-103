@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assesses that Content Understanding builds analyzers for documents, images, videos, and audio, using Studio and schemas."
 area: extraction
 source_ids: [SRC-164]
-objectives: [I06, I08, V10]
+objectives: []
 tags: [content-understanding, module-assessment, analyzers, schema]
 aliases: ["SRC-164"]
 source_kind: learn-unit

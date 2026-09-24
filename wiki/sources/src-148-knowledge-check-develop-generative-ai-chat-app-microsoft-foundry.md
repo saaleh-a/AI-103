@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Knowledge-check questions on endpoint choice, the Python Foundry SDK package and the Responses API method."
 area: exam
 source_ids: [SRC-148]
-objectives: [G05, G06]
+objectives: []
 tags: [knowledge-check, endpoints, foundry-sdk, responses-api]
 aliases: ["SRC-148"]
 source_kind: learn-unit

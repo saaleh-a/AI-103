@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment capture with three questions on file_search, function_call handling, and code_interpreter behavior."
 area: agents
 source_ids: [SRC-163]
-objectives: [G03, G05, G09]
+objectives: []
 tags: [assessment, tools, file-search, function-calling, code-interpreter]
 aliases: ["SRC-163"]
 source_kind: learn-unit

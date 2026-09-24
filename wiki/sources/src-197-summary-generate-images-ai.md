@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the image module: prompts to images in Foundry, playground exploration, and REST or SDK app integration."
 area: vision
 source_ids: [SRC-197]
-objectives: [V01, G05]
+objectives: []
 tags: [summary, image-generation, images-playground, rest-api, sdk]
 aliases: ["SRC-197"]
 source_kind: learn-unit

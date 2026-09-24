@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launches an exercise to implement transcription and synthesis with speech-capable generative AI models."
 area: speech
 source_ids: [SRC-83]
-objectives: [T05]
+objectives: []
 tags: [exercise, speech, transcription, synthesis, microsoft-foundry]
 aliases: ["SRC-83"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launch page for a lab that builds a Foundry agent connected to the Azure Language MCP server and a Python client."
 area: language
 source_ids: [SRC-70]
-objectives: [G08, G09, T01, T02]
+objectives: []
 tags: [exercise, azure-language, mcp, foundry-agent, python-client]
 aliases: ["SRC-70"]
 source_kind: learn-unit

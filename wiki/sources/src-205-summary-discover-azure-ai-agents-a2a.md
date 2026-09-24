@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes connecting Python clients to Azure AI Agents with A2A, including Agent Cards, executors, and streaming/non-streaming messages."
 area: orchestration
 source_ids: [SRC-205]
-objectives: [G10]
+objectives: []
 tags: [a2a, summary, python-clients, agent-card, executor]
 aliases: ["SRC-205"]
 source_kind: learn-unit

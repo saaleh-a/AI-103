@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launcher for building a client application that analyzes text with Azure Language in Foundry Tools."
 area: language
 source_ids: [SRC-56]
-objectives: [T01, T02]
+objectives: []
 tags: [azure-language, exercise, text-analysis, foundry-tools]
 aliases: ["SRC-56"]
 source_kind: learn-unit

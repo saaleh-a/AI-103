@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launch page for developing a vision-enabled chat app with an Azure subscription."
 area: vision
 source_ids: [SRC-71]
-objectives: [V06, V08]
+objectives: []
 tags: [exercise, vision-enabled-chat, azure-subscription]
 aliases: ["SRC-71"]
 source_kind: learn-unit

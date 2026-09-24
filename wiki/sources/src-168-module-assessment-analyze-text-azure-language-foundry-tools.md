@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assesses choosing named entity extraction for indexing news entities and PII redaction for publishing customer testimonials."
 area: language
 source_ids: [SRC-168]
-objectives: [T01, T02]
+objectives: []
 tags: [azure-language, module-assessment, named-entity-recognition, pii-redaction]
 aliases: ["SRC-168"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment capture with MCP server role, list_tools discovery, and async wrapper questions; first question stem is missing."
 area: agents
 source_ids: [SRC-158]
-objectives: [G09]
+objectives: []
 tags: [assessment, mcp, list-tools, async-tools]
 aliases: ["SRC-158"]
 source_kind: learn-unit

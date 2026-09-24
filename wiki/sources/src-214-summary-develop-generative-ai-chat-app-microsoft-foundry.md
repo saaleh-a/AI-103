@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module's SDK, endpoint, response-generation and conversation-management takeaways."
 area: generative-apps
 source_ids: [SRC-214]
-objectives: [G05, G06]
+objectives: []
 tags: [summary, foundry-sdk, openai-sdk, responses-api, chat-completions]
 aliases: ["SRC-214"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launch page for building an SDK agent that creates an expense claim email; lab instructions are outside the capture."
 area: agents
 source_ids: [SRC-72]
-objectives: [G06, G07, G08, G09]
+objectives: []
 tags: [exercise, microsoft-agent-framework, expense-claim-agent, azure-subscription]
 aliases: ["SRC-72"]
 source_kind: learn-unit

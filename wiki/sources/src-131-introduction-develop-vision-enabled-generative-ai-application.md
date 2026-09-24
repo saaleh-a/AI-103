@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces vision-enabled generative AI apps that respond to prompts mixing text and image data."
 area: vision
 source_ids: [SRC-131]
-objectives: [V06, V08]
+objectives: []
 tags: [vision-enabled-chat, multimodal-models, microsoft-foundry]
 aliases: ["SRC-131"]
 source_kind: learn-unit

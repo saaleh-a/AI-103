@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launch page for building apps that translate text and speech with Microsoft Foundry tools."
 area: language
 source_ids: [SRC-81]
-objectives: [T03, T08]
+objectives: []
 tags: [exercise, translation, azure-subscription, foundry-tools]
 aliases: ["SRC-81"]
 source_kind: learn-unit

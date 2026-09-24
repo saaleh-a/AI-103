@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes Content Understanding as a multimodal AI service and the Studio analyzer-building outcome of the module."
 area: extraction
 source_ids: [SRC-217]
-objectives: [I06, I08, V10]
+objectives: []
 tags: [content-understanding, summary, analyzers, content-understanding-studio]
 aliases: ["SRC-217"]
 source_kind: learn-unit

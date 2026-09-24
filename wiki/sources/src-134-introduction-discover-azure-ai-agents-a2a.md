@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces A2A as a standard for remote agent discovery, communication, delegation, and coordinated Azure AI Agent workflows."
 area: orchestration
 source_ids: [SRC-134]
-objectives: [G10]
+objectives: []
 tags: [a2a, azure-ai-agents, multi-agent, routing-agent]
 aliases: ["SRC-134"]
 source_kind: learn-unit

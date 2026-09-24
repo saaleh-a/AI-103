@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "A thin exercise-launch page directing learners to practice selecting, deploying, testing, and evaluating language models in Foundry."
 area: models
 source_ids: [SRC-80]
-objectives: [P01, P06, G01, G04]
+objectives: []
 tags: [exercise, model-selection, model-evaluation]
 aliases: ["SRC-80"]
 source_kind: learn-unit

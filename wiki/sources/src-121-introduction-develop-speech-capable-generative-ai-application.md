@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces speech-capable generative AI models for transcription and synthesis in Microsoft Foundry."
 area: speech
 source_ids: [SRC-121]
-objectives: [T05, T07]
+objectives: []
 tags: [speech, generative-ai, microsoft-foundry, transcription, synthesis]
 aliases: ["SRC-121"]
 source_kind: learn-unit

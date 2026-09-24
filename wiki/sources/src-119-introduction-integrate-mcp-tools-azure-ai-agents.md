@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces MCP as a way to give Azure AI Agents dynamically discovered tools through Microsoft Foundry Agent Service."
 area: agents
 source_ids: [SRC-119]
-objectives: [P04, G09]
+objectives: []
 tags: [mcp, azure-ai-agents, foundry-agent-service, tools]
 aliases: ["SRC-119"]
 source_kind: learn-unit

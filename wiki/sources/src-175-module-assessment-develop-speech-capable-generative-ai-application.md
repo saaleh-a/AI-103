@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment asks learners to distinguish transcription and TTS model choices for speech-capable apps."
 area: speech
 source_ids: [SRC-175]
-objectives: [P01, T05]
+objectives: []
 tags: [module-assessment, speech, model-selection, transcription, synthesis]
 aliases: ["SRC-175"]
 source_kind: learn-unit

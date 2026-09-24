@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes prompt engineering, RAG, fine-tuning, and the combined travel-agency optimization pattern."
 area: models
 source_ids: [SRC-202]
-objectives: [G02, G13, T04]
+objectives: []
 tags: [summary, model-optimization, prompt-engineering, rag, fine-tuning]
 aliases: ["SRC-202"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Exercise launch page for deploying a model and grounding a chat app with file_search."
 area: agents
 source_ids: [SRC-63]
-objectives: [G02, G05, G09]
+objectives: []
 tags: [exercise, file-search, microsoft-foundry, tools]
 aliases: ["SRC-63"]
 source_kind: learn-unit

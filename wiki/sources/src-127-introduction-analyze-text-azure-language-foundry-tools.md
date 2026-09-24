@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Azure Language in Foundry Tools as an API for text analysis in apps and agents, with Python and other SDK options."
 area: language
 source_ids: [SRC-127]
-objectives: [T01, T02]
+objectives: []
 tags: [azure-language, foundry-tools, text-analysis, sdk]
 aliases: ["SRC-127"]
 source_kind: learn-unit

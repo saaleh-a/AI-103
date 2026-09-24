@@ -12,6 +12,7 @@ Two modes:
 
 Usage (from the repo root):
     python scripts/loop_sample.py --panel                   # the fixed panel (20 pages)
+    python scripts/loop_sample.py --panel --changed-since a4c2e9e   # panel pages changed since a revision
     python scripts/loop_sample.py --cycle 3                  # rotating: 8 source, 6 concept, 3 entity, 3 synthesis
     python scripts/loop_sample.py --cycle 3 --since HEAD~1   # prefer pages changed since HEAD~1
     python scripts/loop_sample.py --make-panel 7             # orchestrator only: draw a new panel with seed 7
@@ -52,7 +53,14 @@ def draw(seed: int, touched: set[str]) -> list[str]:
 def main() -> int:
     args = sys.argv[1:]
     if "--panel" in args:
-        print(PANEL.read_text(encoding="utf-8").strip())
+        pages = PANEL.read_text(encoding="utf-8").split()
+        if "--changed-since" in args:
+            # A verdict can change only if the page changes (the corpus and rubric are fixed), so a
+            # panel run re-judges the changed pages and carries the other verdicts forward.
+            rev = args[args.index("--changed-since") + 1]
+            touched = changed(rev)
+            pages = [p for p in pages if p in touched]
+        print("\n".join(pages))
         return 0
     if "--make-panel" in args:
         seed = int(args[args.index("--make-panel") + 1])

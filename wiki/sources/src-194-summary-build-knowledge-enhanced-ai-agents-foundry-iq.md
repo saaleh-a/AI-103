@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes RAG, shared Foundry IQ knowledge bases, retrieval-quality tuning, and instruction-driven agent behavior."
 area: retrieval
 source_ids: [SRC-194]
-objectives: [G02, G08, G09, G12, P03, P04, I05]
+objectives: []
 tags: [summary, foundry-iq, rag, retrieval-quality, agent-instructions]
 aliases: ["SRC-194"]
 source_kind: learn-unit

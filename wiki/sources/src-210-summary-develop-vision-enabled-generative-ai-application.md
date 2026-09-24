@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes vision-enabled models as image-understanding chat solutions that can reason over what they see."
 area: vision
 source_ids: [SRC-210]
-objectives: [V06, V08]
+objectives: []
 tags: [summary, vision-enabled-chat, multimodal-models]
 aliases: ["SRC-210"]
 source_kind: learn-unit

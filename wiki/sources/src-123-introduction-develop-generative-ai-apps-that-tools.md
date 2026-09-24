@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces why tools extend generative AI beyond training data, text-only reasoning, and isolated chat."
 area: agents
 source_ids: [SRC-123]
-objectives: [G03, G05, G09]
+objectives: []
 tags: [tools, generative-ai, responses-api, agents]
 aliases: ["SRC-123"]
 source_kind: learn-unit

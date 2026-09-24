@@ -9,7 +9,7 @@ summary: "Azure-billed OpenAI models and the Azure OpenAI endpoint/API surface u
 area: models
 source_ids: [SRC-17, SRC-18, SRC-32, SRC-44, SRC-89, SRC-99, SRC-221, SRC-225, SRC-258]
 objectives: [G01, G06]
-objective_gaps: [G05, T05, V01]
+objective_gaps: []
 tags: ["service"]
 aliases: ["Azure OpenAI in Foundry Models", "Azure OpenAI Service", "Azure OpenAI endpoint", "AzureOpenAI client"]
 ---

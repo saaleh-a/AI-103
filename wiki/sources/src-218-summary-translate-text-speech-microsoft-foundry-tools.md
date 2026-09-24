@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module's two outcomes: text translation with Azure Translator and speech translation with Azure Speech."
 area: language
 source_ids: [SRC-218]
-objectives: [T03, T08]
+objectives: []
 tags: [summary, azure-translator, azure-speech, translation, foundry-tools]
 aliases: ["SRC-218"]
 source_kind: learn-unit

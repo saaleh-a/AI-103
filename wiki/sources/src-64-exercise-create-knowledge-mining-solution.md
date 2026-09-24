@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launcher for using Azure AI Search to extract and enrich documents into a searchable index and knowledge store."
 area: retrieval
 source_ids: [SRC-64]
-objectives: [I01, I03, P03]
+objectives: []
 tags: [exercise, azure-ai-search, knowledge-mining, lab]
 aliases: ["SRC-64"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launch page for a lab that builds a client app using the Azure Content Understanding API to submit files to analyzers."
 area: extraction
 source_ids: [SRC-67]
-objectives: [I08]
+objectives: []
 tags: [content-understanding, exercise, lab, client-application]
 aliases: ["SRC-67"]
 source_kind: learn-unit

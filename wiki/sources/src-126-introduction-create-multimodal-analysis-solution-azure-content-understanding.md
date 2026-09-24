@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Azure Content Understanding as a multimodal service for extracting information from many content formats."
 area: extraction
 source_ids: [SRC-126]
-objectives: [I06, I07, I08]
+objectives: []
 tags: [content-understanding, multimodal-analysis, analyzers]
 aliases: ["SRC-126"]
 source_kind: learn-unit

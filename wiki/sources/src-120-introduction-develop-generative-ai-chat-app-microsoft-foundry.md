@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces endpoint, SDK, authentication and chat API choices for building Microsoft Foundry chat apps."
 area: generative-apps
 source_ids: [SRC-120]
-objectives: [G05, G06]
+objectives: []
 tags: [microsoft-foundry, chat-apps, sdk-choice]
 aliases: ["SRC-120"]
 source_kind: learn-unit

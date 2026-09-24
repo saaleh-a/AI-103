@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launches the hands-on image generation exercise covering project provisioning, model deployment, portal use, and Python consumption."
 area: vision
 source_ids: [SRC-74]
-objectives: [V01, G05]
+objectives: []
 tags: [exercise, image-generation, python, microsoft-foundry]
 aliases: ["SRC-74"]
 source_kind: learn-unit

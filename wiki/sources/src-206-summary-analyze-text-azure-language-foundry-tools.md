@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module outcomes: detecting language, recognizing named entities, and extracting PII from text."
 area: language
 source_ids: [SRC-206]
-objectives: [T01, T02]
+objectives: []
 tags: [azure-language, summary, text-analysis, foundry-tools]
 aliases: ["SRC-206"]
 source_kind: learn-unit

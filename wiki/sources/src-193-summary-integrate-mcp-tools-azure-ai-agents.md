@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes MCP integration with Foundry Agent Service: runtime discovery, wrapper generation, and adaptable toolsets."
 area: agents
 source_ids: [SRC-193]
-objectives: [P04, G09]
+objectives: []
 tags: [summary, mcp, foundry-agent-service, dynamic-tools]
 aliases: ["SRC-193"]
 source_kind: learn-unit

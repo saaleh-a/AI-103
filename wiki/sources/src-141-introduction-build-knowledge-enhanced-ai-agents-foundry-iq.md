@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Foundry IQ as a shared knowledge platform for grounding agents in organizational data instead of custom RAG per project."
 area: retrieval
 source_ids: [SRC-141]
-objectives: [G02, G08, P04]
+objectives: []
 tags: [foundry-iq, rag, ai-agents, knowledge-bases]
 aliases: ["SRC-141"]
 source_kind: learn-unit

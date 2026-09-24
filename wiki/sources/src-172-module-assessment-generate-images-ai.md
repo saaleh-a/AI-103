@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Captures the image module assessment questions about the text-to-image filter and OpenAI Image API."
 area: vision
 source_ids: [SRC-172]
-objectives: [V01, P01]
+objectives: []
 tags: [assessment, image-generation, text-to-image, openai-api]
 aliases: ["SRC-172"]
 source_kind: learn-unit

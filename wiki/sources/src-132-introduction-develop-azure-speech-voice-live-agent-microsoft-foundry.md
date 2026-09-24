@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Voice Live as low-latency speech-to-speech interaction for Foundry voice agents."
 area: speech
 source_ids: [SRC-132]
-objectives: [T05, T06]
+objectives: []
 tags: [voice-live, azure-speech, microsoft-foundry, introduction]
 aliases: ["SRC-132"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces using the Azure Speech MCP server to give agents speech-to-text and text-to-speech capabilities."
 area: speech
 source_ids: [SRC-140]
-objectives: [T05, T06, G09]
+objectives: []
 tags: [azure-speech, mcp, speech-agent, foundry-tools]
 aliases: ["SRC-140"]
 source_kind: learn-unit

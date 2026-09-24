@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces complementary ways to optimize model quality, accuracy, consistency, tone, grounding, and format."
 area: models
 source_ids: [SRC-116]
-objectives: [G13]
+objectives: []
 tags: [model-optimization, prompt-engineering, rag, fine-tuning]
 aliases: ["SRC-116"]
 source_kind: learn-unit

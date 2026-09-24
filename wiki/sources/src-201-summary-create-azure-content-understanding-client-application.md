@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes Content Understanding as multimodal extraction and client apps built with the Python SDK or REST API."
 area: extraction
 source_ids: [SRC-201]
-objectives: [I08]
+objectives: []
 tags: [content-understanding, summary, python-sdk, rest-api, client-application]
 aliases: ["SRC-201"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launcher for a Microsoft Agent Framework incident-triage lab with incident manager and DevOps agents."
 area: orchestration
 source_ids: [SRC-69]
-objectives: [G10]
+objectives: []
 tags: [exercise, multi-agent-orchestration, incident-triage]
 aliases: ["SRC-69"]
 source_kind: learn-unit

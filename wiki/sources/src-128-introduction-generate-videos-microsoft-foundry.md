@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Sora 2 video generation in Foundry from prompts, reference images, remixing, and Python OpenAI SDK apps."
 area: vision
 source_ids: [SRC-128]
-objectives: [V02, G05]
+objectives: []
 tags: [video-generation, sora-2, microsoft-foundry, openai-sdk]
 aliases: ["SRC-128"]
 source_kind: learn-unit

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launches the hands-on lab for building and testing a Speech MCP-connected Foundry agent and Python client."
 area: speech
 source_ids: [SRC-82]
-objectives: [T05, T06, G09]
+objectives: []
 tags: [exercise, azure-speech, mcp, foundry-agent, python-client]
 aliases: ["SRC-82"]
 source_kind: learn-unit

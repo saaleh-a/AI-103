@@ -7,9 +7,9 @@ created: 2026-09-24
 updated: 2026-09-24
 summary: "Official objectives and thin captures the corpus names without fully teaching, with no invented missing content."
 area: exam
-source_ids: [SRC-5, SRC-8, SRC-24, SRC-62, SRC-75, SRC-102, SRC-143, SRC-156, SRC-178, SRC-187, SRC-191, SRC-196, SRC-222, SRC-223, SRC-235, SRC-236]
+source_ids: [SRC-5, SRC-8, SRC-24, SRC-53, SRC-62, SRC-75, SRC-89, SRC-102, SRC-143, SRC-156, SRC-178, SRC-187, SRC-188, SRC-191, SRC-196, SRC-222, SRC-223, SRC-235, SRC-236]
 objectives: []
-objective_gaps: [P05, P08, P09, P10, P11, P12, P15, G12, G14, G15, V03, V07, V09, V12, V13, V14, V15, V16, T02, T06, T07, I02]
+objective_gaps: [P05, P08, P09, P10, P11, P12, P14, P15, G01, G12, G14, G15, V03, V07, V09, V12, V13, V14, V15, V16, T02, T06, T07, I02]
 tags: []
 aliases: ["coverage gaps"]
 ---
@@ -48,7 +48,9 @@ aliases: ["coverage gaps"]
 - **Synthesis:** P09 and G15 are partly covered by token/cost/latency and monitoring summaries, but setup of cost dashboards, rate-limit backoff, token analytics dashboards and latency breakdowns is thin (SRC-191 L131; SRC-191 L158; SRC-196 L8–28; SRC-223 L270–294).
 - **Synthesis:** P10 names drift and grounding quality (SRC-191 L132); evaluation and monitoring are mentioned, but drift-specific monitoring is not taught as a workflow (SRC-196 L8–28; SRC-222 L260–285).
 - **Synthesis:** P12 names private networking (SRC-191 L134); the corpus teaches keyless/identity or key/SAS patterns in several places, but not private networking design (SRC-24 L209–265; SRC-236 L248–262).
+- **Synthesis:** P14 is partly covered by manual and automated evaluation metrics, including safety evaluations, but the corpus does not teach explanation tooling (SRC-53 L230–250; SRC-191 L137).
 - **Synthesis:** P15/G12/G15 trace logging and Application Insights are briefly named for production monitoring, but the corpus does not walk through Application Insights tracing, alerts or dashboards (SRC-191 L138; SRC-191 L154; SRC-191 L158; SRC-222 L260–285; SRC-223 L270–294).
+- **Synthesis:** G01 is partly covered by model families, deployment and code-generation benchmarks, but the corpus does not teach deploying or consuming code models as a model category (SRC-89 L227–248; SRC-188 L222–227; SRC-191 L142).
 - **Synthesis:** T02 sentiment and tone are partially covered: language text analysis and Language MCP material includes sentiment or text-analysis capabilities, while the guide also names tone detection (SRC-191 L183; SRC-24 L209–265; SRC-235 L209–245). The corpus does not teach tone detection setup.
 - **Synthesis:** T06 custom speech models are named by the guide's custom-speech objective, while Speech MCP teaching covers speech recognition/synthesis tools and security requirements, not custom model creation (SRC-191 L188; SRC-236 L225–262).
 - **Synthesis:** I02 names semantic, hybrid and vector search (SRC-191 L194); RAG and search-index units teach vector/semantic-adjacent retrieval and Lucene-style search, but hybrid query configuration is not taught as an end-to-end setup (SRC-102 L234–265; SRC-187 L212–268).
@@ -100,6 +102,5 @@ aliases: ["coverage gaps"]
 - SRC-223 — [[src-223-test-deploy-integrate-agents]] — Application Insights production monitoring mention.
 - SRC-235 — [[src-235-understand-azure-language-mcp-server]] — Language MCP capabilities.
 - SRC-236 — [[src-236-understand-azure-speech-mcp-server]] — Speech MCP capabilities and auth.
-
 
 

@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces the Azure AI Search module: connect data sources, create indexes, enrich with AI skills, query, filter, and persist enriched data."
 area: retrieval
 source_ids: [SRC-130]
-objectives: [I01, I02, I03, P03]
+objectives: []
 tags: [azure-ai-search, knowledge-mining, indexing, ai-enrichment]
 aliases: ["SRC-130"]
 source_kind: learn-unit

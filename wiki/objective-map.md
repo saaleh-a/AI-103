@@ -5,7 +5,7 @@ status: active
 confidence: high
 created: 2026-09-24
 updated: 2026-09-24
-summary: The 64 official AI-103 objectives mapped to wiki pages — 42 taught, 11 taught in part, 11 named only, 0 with no page.
+summary: The 64 official AI-103 objectives mapped to wiki pages — 40 taught, 13 taught in part, 11 named only, 0 with no page.
 area: exam
 source_ids: [SRC-191]
 tags: [navigation, exam, objectives]
@@ -21,7 +21,7 @@ April 16, 2026*) with its line number; IDs follow the app's numbering
 corpus-backed teaching; **Named only** lists pages that record the objective as a corpus gap
 (`objective_gaps`). Gap detail is on [[corpus-gaps]]. Back to [[index]].
 
-**42 of 64 objectives are taught · 11 taught in part (a named part is untaught; see the gap register) · 11 named only · 0 have no page.**
+**40 of 64 objectives are taught · 13 taught in part (a named part is untaught; see the gap register) · 11 named only · 0 have no page.**
 
 ## Plan and manage an Azure AI solution (25–30%)
 
@@ -29,10 +29,8 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
 
 - **P01** `taught` — “Choose an appropriate model for each task, including large language models (LLMs), small language models, multimodal models, and Foundry Tools” (SRC-191 L121)
   - Taught: [[model-benchmarks|Model benchmarks]] · [[model-selection|Model selection]] · [[speech-capable-models|Speech-capable generative models]] · [[text-translation|Text translation]] · [[azure-language|Azure Language]] · [[azure-translator|Azure Translator]] · [[extraction-options-compared|Information extraction options compared]] · [[foundry-tools|Foundry Tools]] · [[model-catalog|Foundry model catalog]] · [[speech-and-language-options-compared|Speech and language options compared]] · 56 sources cited across them
-  - Named only: [[generative-ai-fundamentals|Generative AI fundamentals]]
 - **P02** `taught` — “Choose the appropriate Foundry services for generative tasks, grounding, vector search, agent workflows, or multimodal processing” (SRC-191 L122)
   - Taught: [[agent-tools|Agent tools]] · [[code-interpreter-tool|Code interpreter tool]] · [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] · [[foundry-agent-types|Foundry agent types]] · [[foundry-workflows|Foundry workflows]] · [[speech-translation|Speech translation]] · [[web-search-tool|Web search tool]] · [[agent-building-options-compared|Agent-building options compared]] · [[azure-content-understanding|Azure Content Understanding]] · [[extraction-options-compared|Information extraction options compared]] · [[foundry-agent-service|Microsoft Foundry Agent Service]] · [[foundry-iq|Foundry IQ]] · [[foundry-tools|Foundry Tools]] · [[retrieval-options-compared|Retrieval and grounding options compared]] · [[speech-and-language-options-compared|Speech and language options compared]] · [[voice-live-api|Azure Voice Live API]] · 103 sources cited across them
-  - Named only: [[model-selection|Model selection]]
 - **P03** `taught` — “Choose an appropriate method for retrieval and indexing” (SRC-191 L123)
   - Taught: [[ai-enrichment-skillsets|AI enrichment and skillsets]] · [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] · [[file-search-tool|File search tool]] · [[indexers-and-data-sources|Indexers and data sources]] · [[knowledge-bases-and-sources|Knowledge bases and knowledge sources]] · [[knowledge-mining|Knowledge mining]] · [[search-indexes|Search indexes]] · [[search-queries|Search queries]] · [[semantic-ranking|Semantic ranking]] · [[azure-ai-search|Azure AI Search]] · [[foundry-iq|Foundry IQ]] · [[retrieval-options-compared|Retrieval and grounding options compared]] · 29 sources cited across them
 - **P04** `taught` — “Choose appropriate memory, tool, and knowledge integration services for agent solutions” (SRC-191 L124)
@@ -44,7 +42,6 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
   - Named only: [[corpus-gaps|Corpus gaps]]
 - **P06** `taught` — “Choose appropriate deployment options” (SRC-191 L127)
   - Taught: [[agent-publishing|Agent publishing]] · [[model-deployment-types|Model deployment types]] · [[deployment-options-compared|Deployment and access options compared]] · 22 sources cited across them
-  - Named only: [[model-catalog|Foundry model catalog]]
 - **P07** `taught` — “Configure model and agent deployments” (SRC-191 L128)
   - Taught: [[agent-publishing|Agent publishing]] · [[model-deployment-types|Model deployment types]] · [[agent-building-options-compared|Agent-building options compared]] · [[deployment-options-compared|Deployment and access options compared]] · [[foundry-agent-service|Microsoft Foundry Agent Service]] · [[foundry-toolkit-for-vs-code|Foundry Toolkit for Visual Studio Code]] · 41 sources cited across them
 - **P08** `named only` — “Integrate Foundry projects with continuous integration and continuous deployment (CI/CD) pipelines” (SRC-191 L129)
@@ -66,32 +63,29 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
 
 - **P13** `taught` — “Configure safety filters, guardrails, risk detection, and content moderation” (SRC-191 L136)
   - Taught: [[guardrails-and-content-filters|Guardrails and content filters]] · [[prompt-injection-and-jailbreaks|Prompt injection and jailbreaks]] · [[responsible-ai-lifecycle|Responsible generative AI lifecycle]] · [[azure-ai-content-safety|Azure AI Content Safety]] · 15 sources cited across them
-- **P14** `taught` — “Apply responsible AI instrumentation, including evaluators, safety evaluations, and explanation tooling” (SRC-191 L137)
+- **P14** `taught in part` — “Apply responsible AI instrumentation, including evaluators, safety evaluations, and explanation tooling” (SRC-191 L137)
   - Taught: [[agent-testing-and-evaluation|Agent testing and evaluation]] · [[model-and-app-evaluation|Model and app evaluation]] · 17 sources cited across them
-  - Named only: [[guardrails-and-content-filters|Guardrails and content filters]] · [[responsible-ai-lifecycle|Responsible generative AI lifecycle]]
+  - Named only: [[corpus-gaps|Corpus gaps]]
 - **P15** `taught in part` — “Implement auditing through trace logging, provenance metadata, and approval workflows” (SRC-191 L138)
   - Taught: [[human-in-the-loop-approval|Human-in-the-loop and approvals]] · [[observability-and-tracing|Observability and tracing]] · [[foundry-agent-service|Microsoft Foundry Agent Service]] · 35 sources cited across them
   - Named only: [[responsible-ai-lifecycle|Responsible generative AI lifecycle]] · [[corpus-gaps|Corpus gaps]]
 - **P16** `taught` — “Govern agent behavior with oversight modes, constraints, and tool-access controls” (SRC-191 L139)
   - Taught: [[agent-tools|Agent tools]] · [[function-calling|Function calling]] · [[human-in-the-loop-approval|Human-in-the-loop and approvals]] · [[mcp-tool-integration|MCP tool integration]] · [[foundry-agent-service|Microsoft Foundry Agent Service]] · [[tool-options-compared|Tool integration options compared]] · 46 sources cited across them
-  - Named only: [[responsible-ai-lifecycle|Responsible generative AI lifecycle]]
 ## Implement generative AI and agentic solutions (30–35%)
 
 ### Build generative applications by using Foundry
 
-- **G01** `taught` — “Deploy and consume LLMs, small models, code models, and multimodal models” (SRC-191 L142)
+- **G01** `taught in part` — “Deploy and consume LLMs, small models, code models, and multimodal models” (SRC-191 L142)
   - Taught: [[generative-ai-fundamentals|Generative AI fundamentals]] · [[model-deployment-types|Model deployment types]] · [[speech-capable-models|Speech-capable generative models]] · [[azure-openai|Azure OpenAI]] · [[deployment-options-compared|Deployment and access options compared]] · [[speech-and-language-options-compared|Speech and language options compared]] · 44 sources cited across them
-  - Named only: [[model-selection|Model selection]] · [[model-catalog|Foundry model catalog]]
+  - Named only: [[corpus-gaps|Corpus gaps]]
 - **G02** `taught` — “Implement retrieval-augmented generation (RAG) in an application” (SRC-191 L143)
   - Taught: [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] · [[file-search-tool|File search tool]] · [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] · [[search-indexes|Search indexes]] · [[azure-ai-search|Azure AI Search]] · [[optimization-strategies-compared|Optimization strategies compared]] · [[retrieval-options-compared|Retrieval and grounding options compared]] · 32 sources cited across them
 - **G03** `taught` — “Design workflows, tool-augmented flows, and multistep reasoning pipelines” (SRC-191 L144)
   - Taught: [[agent-framework-workflows|Agent Framework workflows]] · [[agent-tools|Agent tools]] · [[code-interpreter-tool|Code interpreter tool]] · [[foundry-workflows|Foundry workflows]] · [[function-calling|Function calling]] · [[human-in-the-loop-approval|Human-in-the-loop and approvals]] · [[workflow-patterns|Workflow patterns]] · [[orchestration-patterns-compared|Orchestration patterns compared]] · [[power-fx|Power Fx]] · 34 sources cited across them
 - **G04** `taught` — “Evaluate models and apps, including detecting fabrications, relevance, quality, and safety” (SRC-191 L145)
   - Taught: [[agent-testing-and-evaluation|Agent testing and evaluation]] · [[model-and-app-evaluation|Model and app evaluation]] · [[model-benchmarks|Model benchmarks]] · [[model-playgrounds|Playgrounds]] · [[responsible-ai-lifecycle|Responsible generative AI lifecycle]] · [[optimization-strategies-compared|Optimization strategies compared]] · 40 sources cited across them
-  - Named only: [[model-selection|Model selection]]
 - **G05** `taught` — “Integrate generative workflows into applications by using Foundry SDKs and connectors” (SRC-191 L146)
   - Taught: [[development-tools-and-approaches|Development tools and approaches]] · [[endpoints-and-sdk-choice|Endpoints and SDK choice]] · [[foundry-workflows|Foundry workflows]] · [[agent-building-options-compared|Agent-building options compared]] · [[chat-completions-api|Chat Completions API]] · [[deployment-options-compared|Deployment and access options compared]] · [[foundry-sdk|Microsoft Foundry SDK]] · [[microsoft-365-agents-toolkit|Microsoft 365 Agents Toolkit]] · [[openai-sdk|OpenAI SDK]] · [[responses-api|Responses API]] · 49 sources cited across them
-  - Named only: [[azure-openai|Azure OpenAI]]
 - **G06** `taught` — “Configure an application to connect to a Foundry project” (SRC-191 L147)
   - Taught: [[development-tools-and-approaches|Development tools and approaches]] · [[endpoints-and-sdk-choice|Endpoints and SDK choice]] · [[foundry-resources-and-projects|Foundry resources and projects]] · [[keyless-authentication|Keyless authentication and role-based access]] · [[agent-building-options-compared|Agent-building options compared]] · [[azure-openai|Azure OpenAI]] · [[deployment-options-compared|Deployment and access options compared]] · [[foundry-agent-service|Microsoft Foundry Agent Service]] · [[foundry-sdk|Microsoft Foundry SDK]] · [[foundry-toolkit-for-vs-code|Foundry Toolkit for Visual Studio Code]] · [[microsoft-foundry|Microsoft Foundry]] · [[openai-sdk|OpenAI SDK]] · [[responses-api|Responses API]] · 50 sources cited across them
 ### Build agents by using Foundry
@@ -126,7 +120,6 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
 
 - **V01** `taught` — “Implement a solution that generates images from text prompts and reference media” (SRC-191 L162)
   - Taught: [[image-generation|Image generation]] · 10 sources cited across them
-  - Named only: [[model-selection|Model selection]] · [[azure-openai|Azure OpenAI]] · [[model-catalog|Foundry model catalog]]
 - **V02** `taught` — “Implement a solution that generates videos from text prompts and reference media” (SRC-191 L163)
   - Taught: [[video-generation|Video generation]] · [[sora-2|Sora 2]] · 8 sources cited across them
 - **V03** `named only` — “Configure image-editing workflows, including inpainting, mask‑based edits, and prompt‑driven modifications” (SRC-191 L164)
@@ -139,7 +132,6 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
 
 - **V06** `taught` — “Build a solution that analyzes visual context by using multimodal models” (SRC-191 L168)
   - Taught: [[vision-enabled-chat|Vision-enabled chat]] · 9 sources cited across them
-  - Named only: [[model-selection|Model selection]]
 - **V07** `named only` — “Configure apps to produce concise or detailed captions for single or multiple images” (SRC-191 L169)
   - Named only: [[vision-enabled-chat|Vision-enabled chat]] · [[corpus-gaps|Corpus gaps]]
 - **V08** `taught` — “Implement a solution that enables question‑answering grounded in visual evidence” (SRC-191 L170)
@@ -180,7 +172,6 @@ corpus-backed teaching; **Named only** lists pages that record the objective as 
 
 - **T05** `taught` — “Implement workflows to convert speech to text and text to speech for agentic interactions” (SRC-191 L187)
   - Taught: [[mcp-tool-integration|MCP tool integration]] · [[speech-capable-models|Speech-capable generative models]] · [[speech-to-text|Speech to text]] · [[speech-translation|Speech translation]] · [[ssml|Speech Synthesis Markup Language (SSML)]] · [[text-to-speech|Text to speech]] · [[voices-and-audio-formats|Voices and audio formats]] · [[azure-speech|Azure Speech]] · [[azure-speech-mcp-server|Azure Speech MCP server]] · [[speech-and-language-options-compared|Speech and language options compared]] · [[tool-options-compared|Tool integration options compared]] · [[voice-live-api|Azure Voice Live API]] · 66 sources cited across them
-  - Named only: [[model-selection|Model selection]] · [[azure-openai|Azure OpenAI]] · [[model-catalog|Foundry model catalog]]
 - **T06** `taught in part` — “Integrate speech as an agent modality, including custom speech models” (SRC-191 L188)
   - Taught: [[speech-to-text|Speech to text]] · [[text-to-speech|Text to speech]] · [[voices-and-audio-formats|Voices and audio formats]] · [[azure-speech|Azure Speech]] · [[azure-speech-mcp-server|Azure Speech MCP server]] · [[speech-and-language-options-compared|Speech and language options compared]] · [[tool-options-compared|Tool integration options compared]] · [[voice-live-api|Azure Voice Live API]] · 57 sources cited across them
   - Named only: [[corpus-gaps|Corpus gaps]]

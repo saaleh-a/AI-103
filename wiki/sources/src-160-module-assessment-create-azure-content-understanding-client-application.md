@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Assessment questions for Content Understanding client setup, analyzer selection, and typed field results."
 area: extraction
 source_ids: [SRC-160]
-objectives: [I08]
+objectives: []
 tags: [content-understanding, assessment, endpoint, analyzer, extracted-fields]
 aliases: ["SRC-160"]
 source_kind: learn-unit

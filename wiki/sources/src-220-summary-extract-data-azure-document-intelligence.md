@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes Document Intelligence capabilities and links them to Studio, prebuilt models, custom models, and broader Foundry services."
 area: extraction
 source_ids: [SRC-220]
-objectives: [I06]
+objectives: []
 tags: [summary, azure-document-intelligence, document-extraction, microsoft-foundry]
 aliases: ["SRC-220"]
 source_kind: learn-unit

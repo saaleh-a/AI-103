@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Summarizes the module: Azure AI Search indexes and enriches data, uses AI skills, and persists enriched data in a knowledge store."
 area: retrieval
 source_ids: [SRC-215]
-objectives: [I01, I03, P03]
+objectives: []
 tags: [summary, azure-ai-search, knowledge-mining]
 aliases: ["SRC-215"]
 source_kind: learn-unit

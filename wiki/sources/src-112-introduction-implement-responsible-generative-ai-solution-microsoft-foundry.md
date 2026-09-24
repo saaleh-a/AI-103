@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces why generative AI requires risk identification, measurement, and mitigation."
 area: responsible-ai
 source_ids: [SRC-112]
-objectives: [P13, P14]
+objectives: []
 tags: [responsible-ai, generative-ai, microsoft-foundry]
 aliases: ["SRC-112"]
 source_kind: learn-unit

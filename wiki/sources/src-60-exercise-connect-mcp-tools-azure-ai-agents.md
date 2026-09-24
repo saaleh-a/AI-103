@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Thin exercise launch page for developing an MCP client-server app that dynamically registers tools to an Azure AI Agent."
 area: agents
 source_ids: [SRC-60]
-objectives: [G09]
+objectives: []
 tags: [exercise, mcp, azure-ai-agents]
 aliases: ["SRC-60"]
 source_kind: learn-unit

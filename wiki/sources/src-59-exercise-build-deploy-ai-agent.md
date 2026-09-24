@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Launches an external exercise to build, configure, connect, deploy, and use a Foundry Agent Service agent."
 area: agents
 source_ids: [SRC-59]
-objectives: [G07, G08, G09]
+objectives: []
 tags: [exercise, foundry-agent-service, deployment, visual-studio-code]
 aliases: ["SRC-59"]
 source_kind: learn-unit

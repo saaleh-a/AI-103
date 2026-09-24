@@ -9,7 +9,7 @@ summary: "A requirements-first process for choosing LLMs, SLMs, multimodal, spee
 area: models
 source_ids: [SRC-17, SRC-18, SRC-32, SRC-89, SRC-114, SRC-188, SRC-191, SRC-221, SRC-225, SRC-248, SRC-258]
 objectives: [P01]
-objective_gaps: [P02, G01, G04, V01, V06, T05]
+objective_gaps: []
 tags: []
 aliases: ["choose a model", "LLM vs SLM", "small language models", "reasoning models", "multimodal models", "choose Foundry models"]
 ---

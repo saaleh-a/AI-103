@@ -8,7 +8,7 @@ updated: 2026-09-24
 summary: "Introduces Azure Speech APIs for speech-enabled apps and positions speech recognition and synthesis as the module focus."
 area: speech
 source_ids: [SRC-115]
-objectives: [T05]
+objectives: []
 tags: [azure-speech, foundry-tools, speech-to-text, text-to-speech, speech-sdk]
 aliases: ["SRC-115"]
 source_kind: learn-unit

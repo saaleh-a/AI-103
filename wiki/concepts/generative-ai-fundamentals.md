@@ -9,7 +9,7 @@ summary: "AI apps use models to interpret inputs and generate responses; generat
 area: models
 source_ids: [SRC-18, SRC-89, SRC-98, SRC-99, SRC-178, SRC-188, SRC-191, SRC-260]
 objectives: [G01, G13]
-objective_gaps: [P01]
+objective_gaps: []
 tags: []
 aliases: ["What is AI", "generative AI", "LLM fundamentals", "prompts and completions", "tokens"]
 ---
