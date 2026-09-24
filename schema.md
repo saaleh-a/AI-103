@@ -78,7 +78,7 @@ AI-103/
 └── scripts/             corpus_registry.py, exam_objectives.py, lint_wiki.py, build_index.py,
                          build_corpus_map.py, build_objective_map.py, sync_backlinks.py,
                          build_wiki_graph.py, raw_graph_entity_resolution.py,
-                         check_citations.py, loop_score.py · data/ (derived registries)
+                         check_citations.py, loop_score.py, loop_sample.py · data/ (derived registries)
 ```
 
 Add a folder only when the corpus demonstrably needs it.
@@ -150,14 +150,18 @@ updated: YYYY-MM-DD
 summary: One line (≤ 200 chars) — used verbatim in wiki/index.md
 area: platform | models | responsible-ai | generative-apps | agents | orchestration | retrieval | vision | language | speech | extraction | exam | corpus
 source_ids: [SRC-231, SRC-237]
-objectives: [G10, G16]      # official objective IDs this page substantively teaches (optional)
+objectives: [G10, G16]      # official objective IDs this page substantively teaches from corpus evidence
+objective_gaps: [G14]       # objectives the page discusses only to record that the corpus names but does not teach them
 tags: []
 aliases: []
 ---
 ```
 
 `summary` and `area` exist for retrieval (`scripts/build_index.py` builds the catalogue from
-them); `objectives` drives `wiki/objective-map.md`. Entity pages carry one kind tag:
+them); `objectives` and `objective_gaps` drive `wiki/objective-map.md`, which marks each official
+objective **taught**, **named only** or **no page**. Never put an objective in `objectives` because
+the page mentions it — only when the corpus actually teaches it and the page cites that teaching.
+Entity pages carry one kind tag:
 `product`, `service`, `feature`, `sdk`, `api`, `protocol`, `tool`, `model`, `work`, `person` or
 `organisation`.
 
@@ -354,7 +358,8 @@ the **verifier** (`scripts/lint_wiki.py`, `scripts/loop_score.py`, the registrie
 `scripts/data/`, and the judgement rubric `loop/rubric.md`) is hash-locked in
 `loop/verifier.lock` and never edited by the generator; **memory** is `loop/experiments.md` and
 `loop/scores.jsonl`; the **ratchet** keeps a cycle only if the score does not regress. A separate
-read-only reviewer samples pages against the rubric each cycle.
+read-only reviewer checks a seeded, stratified sample (`scripts/loop_sample.py`) against the rubric
+each cycle.
 
 ## 13. Schema change policy
 

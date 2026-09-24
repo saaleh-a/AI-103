@@ -59,3 +59,37 @@ Append-only. Newest entries at the bottom. `grep "^## \[" wiki/log.md` lists the
   SRC-163 and SRC-170 (module assessments) produced no nodes. `graphify benchmark` (16.5x) counted
   79,000 of 368,815 words, so it under-states the reduction. 789 nodes have ≤ 1 connection.
 - Next: ingest every source into the wiki.
+
+## [2026-09-24] ingest | All 265 raw sources (batch ingest)
+- Summary: one source page per raw file, written by 30 parallel writers grouped by Learn module
+  (each with its module's units, its episode transcript and the §8 template), each reading the
+  registry's teaching-content line range and validating its own pages with
+  `lint_wiki.py --pages`. Assessment pages record every captured question, option and shown answer;
+  episodes and SRC-1 carry segment guides (SRC-1 with verbatim anchors only).
+- Created: `wiki/sources/src-1-…` through `src-265-…` (265 pages): 229 at `ingest_depth: full`,
+  30 exercise launch pages as `stub` (lab steps live outside the corpus), 6 collapsed or partly
+  captured pages as `partial`.
+- Result: lint 0 errors; 9,935 line-range and 316 verbatim-anchor citations verified, none pointing
+  at site navigation; 265/265 raw sources covered.
+- Issues flagged by writers (feed [[key-tensions]] and [[naming-and-currency]]): code blocks and
+  tables collapsed in many Learn captures (SRC-8, 20, 24, 25, 91, 187, 221, 223, 225, 227, 235, 250);
+  several assessments capture no answers or lose a question stem (SRC-143, 145, 146, 157, 158, 160,
+  161, 163, 171, 175); naming drift — *Azure AI Foundry* / *Microsoft Foundry*, *Azure AI Agent
+  Service* / *Foundry Agent Service*, *Azure AI Language* / *Azure Language in Foundry Tools*, Semantic
+  Kernel lineage of Agent Framework, *Foundry Toolkit* / *AI Toolkit*; caption errors (*magnetic* for
+  Magentic in SRC-180; *Open API* / *OpenAI* in SRC-42); SRC-43 says managed identity where SRC-236
+  describes key-based auth for the Speech MCP server; SRC-228 language counts (137 vs 90+); Work IQ
+  is preview.
+- Next: compile the 103 concept and entity pages, then synthesis; lint; loop.
+
+## [2026-09-24] schema | Separate taught objectives from named-only objectives
+- Problem → change: the first compiled pages listed in `objectives` every official objective they
+  discussed, including ones they explicitly say the corpus only names in the study guide (e.g. V03
+  inpainting on image-generation, V09 alt text on vision-enabled-chat), so `objective-map` showed
+  64 of 64 objectives as covered. New frontmatter field `objective_gaps` records named-only
+  objectives; `objectives` now means corpus-backed teaching only. `lint_wiki.py` validates both
+  (an ID may not be in both); `build_objective_map.py` marks each objective **taught**, **named
+  only** or **no page**. All compile agents were asked to re-classify their pages.
+- Updated: `schema.md` §6, `scripts/lint_wiki.py`, `scripts/build_objective_map.py`.
+- Also added `scripts/loop_sample.py` (seeded, stratified sample for the judgement verifier) and
+  hash-listed it with the verifier in `scripts/loop_score.py`.

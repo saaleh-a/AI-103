@@ -263,6 +263,16 @@ def main() -> int:
             for o in objs:
                 if o not in objective_ids:
                     errors.append((rel, f"unknown exam objective '{o}' (see scripts/data/exam-objectives.json)"))
+        gaps = fm.get("objective_gaps", []) or []
+        if not isinstance(gaps, list):
+            errors.append((rel, "objective_gaps must be a list of exam objective IDs"))
+        else:
+            for o in gaps:
+                if o not in objective_ids:
+                    errors.append((rel, f"unknown exam objective '{o}' in objective_gaps"))
+            both = sorted(set(gaps) & set(objs if isinstance(objs, list) else []))
+            if both:
+                errors.append((rel, f"objective(s) {', '.join(both)} listed as both taught and gap"))
         if t == "entity":
             tags = set(fm.get("tags") or [])
             if not tags & ENTITY_KINDS:

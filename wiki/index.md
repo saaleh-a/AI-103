@@ -5,7 +5,7 @@ status: active
 confidence: high
 created: 2026-09-24
 updated: 2026-09-24
-summary: Catalogue of all 386 content pages — 265 sources, 70 concepts, 33 entities, 18 synthesis pages.
+summary: Catalogue of all 388 content pages — 265 sources, 70 concepts, 33 entities, 18 synthesis pages.
 area: corpus
 source_ids: []
 tags: [index]
@@ -22,7 +22,7 @@ loop is in `program.md`; history is in [[log]]; health is in [[lint-report]]. Na
 [[corpus-map]] (the course structure, source by source) and [[objective-map]] (the 64 official
 exam objectives → wiki pages → sources).
 
-**386 content pages** · 265 sources · 70 concepts · 33 entities · 18 synthesis · regenerated 2026-09-24 by `scripts/build_index.py`.
+**388 content pages** · 265 sources · 70 concepts · 33 entities · 18 synthesis · regenerated 2026-09-24 by `scripts/build_index.py`.
 
 Status flags: `disputed` holds an unresolved conflict · `stale` time-sensitive · `stub`
 near-empty capture · `seed` thin but correct. Unflagged pages are `active`.
@@ -54,168 +54,168 @@ Graphs: raw sources — `graphify-out/graph.html`; this wiki — `graphify-out-w
 
 ### Microsoft Foundry platform, deployment, security and operations
 
-- [[development-tools-and-approaches|Development tools and approaches]] `stub` — Portal vs VS Code vs SDKs vs REST vs CLI; which surface fits which task.
-- [[endpoints-and-sdk-choice|Endpoints and SDK choice]] `stub` — Foundry project endpoint vs Azure OpenAI endpoint vs Foundry Tools endpoints, and which SDK talks to which.
-- [[foundry-resources-and-projects|Foundry resources and projects]] `stub` — The Azure resource and project hierarchy, what each owns (deployments, connections, agents), and how apps address a project endpoint.
-- [[keyless-authentication|Keyless authentication and role-based access]] `stub` — API keys vs Microsoft Entra ID (DefaultAzureCredential, managed identity) and the roles that grant access.
-- [[model-deployment-types|Model deployment types]] `stub` — Standard / Global Standard / Data Zone / provisioned / batch / serverless / managed compute deployments and when each fits.
-- [[observability-and-tracing|Observability and tracing]] `stub` — Tracing, token and latency analytics, monitoring and error analysis for models and agents.
-- [[quotas-rate-limits-and-cost|Quotas, rate limits and cost]] `stub` — Quota and throughput units, rate limiting and cost trade-offs for model and agent workloads.
+- [[development-tools-and-approaches|Development tools and approaches]] — How to choose between the Foundry portal, playgrounds, VS Code, GitHub, SDKs, REST APIs and tool-specific SDKs.
+- [[endpoints-and-sdk-choice|Endpoints and SDK choice]] — Which endpoint and SDK to use: project endpoint with Foundry SDK, Azure OpenAI endpoint with OpenAI SDK, or tool-specific endpoints.
+- [[foundry-resources-and-projects|Foundry resources and projects]] — The Foundry hierarchy: an Azure resource hosts projects; projects organize models, agents, tools, knowledge, endpoints and app assets.
+- [[keyless-authentication|Keyless authentication and role-based access]] — How the corpus contrasts API keys with Microsoft Entra identity, DefaultAzureCredential, managed identities and RBAC.
+- [[model-deployment-types|Model deployment types]] — Deployment choices in Foundry: global, data-zone, regional, provisioned, batch, serverless API, managed compute and developer deployments.
+- [[observability-and-tracing|Observability and tracing]] `seed` — What the corpus does and does not teach about traces, metrics, telemetry, token analytics, latency and agent error analysis.
+- [[quotas-rate-limits-and-cost|Quotas, rate limits and cost]] `seed` — Thin corpus coverage of quota, throughput, token usage, rate limits and cost for Foundry model and agent workloads.
 
 ### Models: selection, prompting, tuning and evaluation
 
-- [[fine-tuning|Fine-tuning]] `stub` — When and how to fine-tune (supervised, reinforcement, distillation), data format, cost and maintenance.
-- [[generation-parameters|Generation parameters]] `stub` — Temperature, top-p, token limits and related settings, and their effect on output.
-- [[generative-ai-fundamentals|Generative AI fundamentals]] `stub` — Layers of AI, machine learning and generative AI; language models, tokens, prompts and completions.
-- [[model-and-app-evaluation|Model and app evaluation]] `stub` — Manual and automated evaluation, evaluator types and metrics (groundedness, relevance, coherence, fluency, safety).
-- [[model-benchmarks|Model benchmarks]] `stub` — Quality, safety, cost and throughput benchmarks and how to read them when selecting models.
-- [[model-selection|Model selection]] `stub` — Choosing between LLMs, small, reasoning, multimodal and specialised models (and Foundry Tools) for a task.
-- [[model-playgrounds|Playgrounds]] `stub` — The Foundry playgrounds for trying models, agents, images and audio before writing code.
-- [[prompt-engineering|Prompt engineering]] `stub` — Instructions, system messages, examples, output formats and grounding cues that shape model output.
+- [[fine-tuning|Fine-tuning]] — Adapting a pretrained model with task-specific examples for consistent style, format, tool use or distilled behavior.
+- [[generation-parameters|Generation parameters]] — Runtime controls such as temperature, top_p and token limits that shape response variability and length.
+- [[generative-ai-fundamentals|Generative AI fundamentals]] — AI apps use models to interpret inputs and generate responses; generative AI uses LLMs, prompts, context and output tokens.
+- [[model-and-app-evaluation|Model and app evaluation]] — Manual and automated ways to measure model, app and agent quality, safety, groundedness and regression risk.
+- [[model-benchmarks|Model benchmarks]] — Quality, safety, cost and performance metrics used in Foundry leaderboards and model cards to compare model trade-offs before deployment.
+- [[model-selection|Model selection]] — A requirements-first process for choosing LLMs, SLMs, multimodal, speech, image, video, embedding or Foundry Tool options.
+- [[model-playgrounds|Playgrounds]] — No-code Foundry testing surfaces for model, agent, image, video and multimodal behavior before app integration.
+- [[prompt-engineering|Prompt engineering]] — Designing instructions, messages, examples and prompt structure to steer model behavior before heavier optimization.
 
 ### Responsible AI and safety
 
-- [[guardrails-and-content-filters|Guardrails and content filters]] `stub` — Content filtering and guardrails on inputs and outputs: harm categories, severity, custom guardrails.
-- [[prompt-injection-and-jailbreaks|Prompt injection and jailbreaks]] `stub` — Direct (jailbreak) and indirect injection attacks and the prompt-shield defences.
-- [[responsible-ai-principles|Responsible AI principles]] `stub` — Fairness, reliability and safety, privacy and security, inclusiveness, transparency, accountability.
-- [[responsible-ai-lifecycle|Responsible generative AI lifecycle]] `stub` — Plan → map → measure → mitigate → manage/operate for generative AI harms.
+- [[guardrails-and-content-filters|Guardrails and content filters]] — Foundry guardrails and content filters suppress unsafe prompts and responses using harm categories, severity levels, and related controls.
+- [[prompt-injection-and-jailbreaks|Prompt injection and jailbreaks]] — Direct jailbreaks and indirect prompt injection are attempts to subvert AI behaviour; Foundry prompt shields and guardrails detect abuse.
+- [[responsible-ai-principles|Responsible AI principles]] — Microsoft's six responsible AI principles and how they guide design, testing, transparency, governance, and safety work.
+- [[responsible-ai-lifecycle|Responsible generative AI lifecycle]] — The map, measure, mitigate, and manage loop for planning, testing, reducing, releasing, and operating generative AI harms.
 
 ### Generative AI applications
 
-- [[conversation-state|Conversation state]] `stub` — How chat apps and agents keep context: message lists, response chaining, conversation objects, threads.
-- [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] `stub` — Retrieve relevant data, add it to the prompt, generate a grounded answer with citations.
+- [[conversation-state|Conversation state]] — How chat and agent apps preserve context across turns: message lists, response IDs, manual history and agent session abstractions.
+- [[retrieval-augmented-generation|Retrieval-augmented generation (RAG)]] — Grounding pattern that retrieves trusted content, adds it to the prompt, and generates answers with current, domain-specific context.
 
 ### Agents and tools
 
-- [[agent-publishing|Agent publishing]] `stub` — Publishing Foundry agents to channels such as Teams and Microsoft 365 Copilot: scope, identity, admin approval.
-- [[agent-testing-and-evaluation|Agent testing and evaluation]] `stub` — Testing agents across channels, multi-turn tests, evaluating behaviour and diagnosing failures.
-- [[agent-tools|Agent tools]] `stub` — Why agents need tools, built-in vs custom tools, and how the model chooses a tool.
-- [[ai-agents|AI agents]] `stub` — What makes an agent (model + instructions + tools + autonomy) and how it differs from a chat app.
-- [[code-interpreter-tool|Code interpreter tool]] `stub` — The built-in tool that lets an agent write and run Python in a sandbox over files.
-- [[custom-tool-options|Custom tool options]] `stub` — Function tools, Azure Functions, OpenAPI specs, Logic Apps and MCP as ways to give an agent custom actions.
-- [[file-search-tool|File search tool]] `stub` — The built-in tool that grounds an agent in uploaded files through a vector store.
-- [[foundry-agent-types|Foundry agent types]] `stub` — Prompt, workflow and hosted agents in Foundry Agent Service and when each fits.
-- [[function-calling|Function calling]] `stub` — Declaring functions with schemas, the model's tool-call request, executing it and returning results.
-- [[human-in-the-loop-approval|Human-in-the-loop and approvals]] `stub` — Pausing for human approval of tool calls or workflow steps; oversight and safeguards.
-- [[mcp-tool-integration|MCP tool integration]] `stub` — How agents connect to MCP servers, discover tools dynamically and call them (local vs remote, approval).
-- [[microsoft-365-agent-integration|Microsoft 365 agent integration]] `stub` — Bringing agents into Microsoft 365: Work IQ data access, permissions, Teams/Copilot surfaces, Agents Toolkit.
-- [[web-search-tool|Web search tool]] `stub` — The built-in tool that grounds answers in current web results.
+- [[agent-publishing|Agent publishing]] — Moving a Foundry agent into an Agent Application, Teams, Microsoft 365 Copilot, or a stable API endpoint with identity and governance.
+- [[agent-testing-and-evaluation|Agent testing and evaluation]] — Testing agents before and after release, using playgrounds, channel tests, metrics, Application Insights, and evaluation jobs.
+- [[agent-tools|Agent tools]] — How models and agents use built-in or custom tools to retrieve, compute, act, and return grounded results.
+- [[ai-agents|AI agents]] — Agents combine models, instructions, tools, state, and controlled action to perform tasks beyond ordinary chat completion.
+- [[code-interpreter-tool|Code interpreter tool]] — Built-in tool that lets a model or agent generate and run Python in a sandbox for computation and file analysis.
+- [[custom-tool-options|Custom tool options]] — Ways to extend Foundry agents with custom actions: function tools, Azure Functions, OpenAPI, Logic Apps and MCP.
+- [[file-search-tool|File search tool]] — Built-in retrieval tool that grounds a model or agent in uploaded, indexed files through semantic/vector search.
+- [[foundry-agent-types|Foundry agent types]] — Foundry distinguishes declarative prompt agents, declarative workflow agents, and hosted agents by configuration style, orchestration needs, and code ownership.
+- [[function-calling|Function calling]] — Tool pattern where the model requests a named function call, application code runs it, and the result is returned to the model.
+- [[human-in-the-loop-approval|Human-in-the-loop and approvals]] — Patterns for pausing agent or workflow execution for approval, extra context, escalation or admin publishing review.
+- [[mcp-tool-integration|MCP tool integration]] — How agents connect to MCP servers, discover tools dynamically, invoke them, restrict access and handle approval.
+- [[microsoft-365-agent-integration|Microsoft 365 agent integration]] — Bringing Foundry agents into Teams and Microsoft 365 Copilot, with publishing, Work IQ data access, permissions, testing, and Toolkit extensions.
+- [[web-search-tool|Web search tool]] — Built-in grounding tool that lets a model or agent search current public web content during response generation.
 
 ### Workflows, multi-agent orchestration and agent interoperability
 
-- [[agent-framework-workflows|Agent Framework workflows]] `stub` — Workflows in code with Microsoft Agent Framework: executors, edges (direct, conditional, switch-case, fan-out, fan-in), events.
-- [[concurrent-orchestration|Concurrent orchestration]] `stub` — The same task broadcast to several agents in parallel and the results aggregated.
-- [[foundry-workflows|Foundry workflows]] `stub` — Building visual/YAML workflows of agents and logic in Foundry: nodes, variables, conditions, versions.
-- [[group-chat-orchestration|Group chat orchestration]] `stub` — A managed shared conversation among agents (and optionally a human).
-- [[handoff-orchestration|Handoff orchestration]] `stub` — Control transferred dynamically between agents, one at a time.
-- [[a2a-agent-implementation|Implementing A2A agents]] `stub` — Defining an agent card, implementing an agent executor, hosting an A2A server and connecting a client.
-- [[magentic-orchestration|Magentic orchestration]] `stub` — A manager agent that plans, delegates and adapts across specialised agents for open-ended tasks.
-- [[multi-agent-orchestration|Multi-agent orchestration]] `stub` — Why and how multiple specialised agents are coordinated; the shared orchestration interface.
-- [[sequential-orchestration|Sequential orchestration]] `stub` — Agents in a fixed order, each refining the previous output.
-- [[workflow-patterns|Workflow patterns]] `stub` — The workflow templates/patterns Foundry offers and how to pick one.
+- [[agent-framework-workflows|Agent Framework workflows]] — Microsoft Agent Framework workflows are code-defined sequences of executors and edges with events, checkpointing, and orchestration builders.
+- [[concurrent-orchestration|Concurrent orchestration]] — Parallel independent agents receive the same task, then their separate outputs are gathered or combined.
+- [[foundry-workflows|Foundry workflows]] — Visual/YAML Foundry workflows orchestrate agents, nodes, variables, conditions, loops, human input, versions, and code invocation.
+- [[group-chat-orchestration|Group chat orchestration]] — A chat manager coordinates a shared multi-agent conversation and optional human participation.
+- [[handoff-orchestration|Handoff orchestration]] — Dynamic one-agent-at-a-time transfer of control to the specialist best suited to the evolving task.
+- [[a2a-agent-implementation|Implementing A2A agents]] — Implementation path for A2A agents: define skills and card, implement executor logic, host HTTP server, then connect clients.
+- [[magentic-orchestration|Magentic orchestration]] — Manager-led adaptive orchestration for complex open-ended tasks with planning, delegation, and a task ledger.
+- [[multi-agent-orchestration|Multi-agent orchestration]] — Coordinating specialized agents through Agent Framework workflows, shared patterns, runtime execution, and async results.
+- [[sequential-orchestration|Sequential orchestration]] — Fixed-order agent pipeline where each agent's output becomes the next agent's input.
+- [[workflow-patterns|Workflow patterns]] — Foundry workflow patterns are predefined shapes: sequential, human-in-the-loop, and group chat, chosen by data flow and oversight needs.
 
 ### Retrieval, search and knowledge
 
-- [[ai-enrichment-skillsets|AI enrichment and skillsets]] `stub` — Skillsets that enrich content during indexing with built-in or custom (Azure Function) skills.
-- [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] `stub` — Embedding models, vector similarity, and hybrid keyword+vector retrieval for grounding.
-- [[indexers-and-data-sources|Indexers and data sources]] `stub` — How an indexer pulls content from a data source, cracks documents and maps fields into an index.
-- [[knowledge-bases-and-sources|Knowledge bases and knowledge sources]] `stub` — Foundry IQ knowledge bases, their source types and retrieval configuration.
-- [[knowledge-mining|Knowledge mining]] `stub` — The end-to-end pattern: ingest, enrich, index, store and search content for insight.
-- [[knowledge-store|Knowledge store]] `stub` — Persisting enriched data to Azure Storage as table, object and file projections.
-- [[search-indexes|Search indexes]] `stub` — Index definitions, fields and their attributes in Azure AI Search.
-- [[search-queries|Search queries]] `stub` — Querying an index: simple vs full Lucene syntax, filters, facets, ordering.
-- [[semantic-ranking|Semantic ranking]] `stub` — Re-ranking results by meaning for more relevant grounding.
+- [[ai-enrichment-skillsets|AI enrichment and skillsets]] — Skillsets are ordered AI skills run by an indexer to add enriched fields before mapping content into an Azure AI Search index.
+- [[embeddings-and-vector-search|Embeddings, vector and hybrid search]] — Embeddings turn text into vectors for similarity search; the corpus defines vector search and only briefly names hybrid search for grounding.
+- [[indexers-and-data-sources|Indexers and data sources]] — Indexers start from source data, crack documents, run enrichment and map the final structure into an Azure AI Search index.
+- [[knowledge-bases-and-sources|Knowledge bases and knowledge sources]] — Foundry IQ knowledge bases group related business knowledge and connect multiple source types for agent retrieval and citations.
+- [[knowledge-mining|Knowledge mining]] — Knowledge mining uses Azure AI Search to ingest, enrich, index, optionally persist and query data for insight and analytics.
+- [[knowledge-store|Knowledge store]] — A knowledge store persists enriched outputs from an Azure AI Search skillset as JSON object, table or image-file projections.
+- [[search-indexes|Search indexes]] — Search indexes are JSON-document collections with configured fields that apps query, filter, facet and sort in Azure AI Search.
+- [[search-queries|Search queries]] — How Azure AI Search queries use Lucene syntax, searchable/filterable/sortable/facetable fields, facets, filters, select, and scoring.
+- [[semantic-ranking|Semantic ranking]] `seed` — The corpus names semantic ranking as an AI-based retrieval-quality technique beyond keyword matching, but gives limited configuration detail.
 
 ### Computer vision and media generation
 
-- [[image-generation|Image generation]] `stub` — Text-to-image models, prompts, parameters and client apps that handle generated images.
-- [[video-generation|Video generation]] `stub` — Generating and revising video with Sora 2: prompts, inputs, asynchronous jobs.
-- [[vision-enabled-chat|Vision-enabled chat]] `stub` — Sending images with prompts to multimodal models for description and grounded visual Q&A.
+- [[image-generation|Image generation]] — Generating original images from natural-language prompts with Foundry image models, playgrounds, and Images APIs.
+- [[video-generation|Video generation]] — Generating, polling, downloading, remixing, and reference-guiding videos with Sora 2 in Foundry.
+- [[vision-enabled-chat|Vision-enabled chat]] — Chat patterns where a multimodal model receives text plus image input and returns grounded visual answers.
 
 ### Text analysis and translation
 
-- [[language-detection|Language detection]] `stub` — Identifying a text's language with a confidence score.
-- [[named-entity-recognition|Named entity recognition]] `stub` — Extracting and categorising entities from text.
-- [[pii-detection-and-redaction|PII detection and redaction]] `stub` — Finding and redacting personal data in text.
-- [[text-translation|Text translation]] `stub` — Translating and transliterating text with Translator or with language models.
+- [[language-detection|Language detection]] — Identify a document or phrase's language and return a confidence score for the prediction.
+- [[named-entity-recognition|Named entity recognition]] — Extract and categorize entities such as people, organizations, locations, dates, addresses, email, and URLs from text.
+- [[pii-detection-and-redaction|PII detection and redaction]] — Find sensitive personal data in text and optionally return masked/redacted text for privacy protection.
+- [[text-translation|Text translation]] — Convert text meaning between languages with Azure Translator or LLM-powered translation flows, and distinguish translation from transliteration.
 
 ### Speech and voice
 
-- [[ssml|Speech Synthesis Markup Language (SSML)]] `stub` — Markup that controls voice, pauses, pronunciation and style in synthesis.
-- [[speech-to-text|Speech to text]] `stub` — Transcribing audio with the Speech SDK/API or transcription models.
-- [[speech-translation|Speech translation]] `stub` — Translating spoken audio into text and speech in other languages.
-- [[speech-capable-models|Speech-capable generative models]] `stub` — Generative models that transcribe, speak or reason over audio (gpt-4o transcribe/TTS family) vs the Speech service.
-- [[text-to-speech|Text to speech]] `stub` — Synthesising speech from text with neural voices.
-- [[voices-and-audio-formats|Voices and audio formats]] `stub` — Choosing a voice and output audio format for synthesis.
+- [[ssml|Speech Synthesis Markup Language (SSML)]] — XML markup for controlling synthesized speech style, pauses, pronunciation, prosody, say-as rules, and inserted audio.
+- [[speech-to-text|Speech to text]] — Converting spoken audio into text with Azure Speech SDK/API, agent tools, or speech-capable models.
+- [[speech-translation|Speech translation]] — Translating spoken input with Azure Speech: configure source and target languages, recognize translations as text, then optionally synthesize translated speech.
+- [[speech-capable-models|Speech-capable generative models]] — Generative audio models in Foundry for speech-to-text and text-to-speech, including gpt-4o transcribe and TTS families.
+- [[text-to-speech|Text to speech]] — Converting text into spoken audio using Azure Speech synthesis, voices, audio output settings, SSML, agent tools, or TTS models.
+- [[voices-and-audio-formats|Voices and audio formats]] — Choosing neural voices and output/input audio formats for Azure Speech synthesis, MCP tools, and real-time voice scenarios.
 
 ### Information extraction
 
-- [[content-understanding-analyzers|Content Understanding analyzers]] `stub` — Prebuilt and custom analyzers, field schemas and extraction methods across content types.
-- [[content-understanding-client-apps|Content Understanding client applications]] `stub` — Calling analyzers from code: endpoints, authentication, analyze requests, polling and results.
-- [[document-intelligence-custom-models|Document Intelligence custom models]] `stub` — Training custom template/neural models, composing them, and classifying documents.
-- [[document-intelligence-prebuilt-models|Document Intelligence prebuilt models]] `stub` — Read, layout and document-type prebuilt models and what each returns.
+- [[content-understanding-analyzers|Content Understanding analyzers]] — Reusable Content Understanding artifacts that combine a base type, models, field schema, extraction methods, confidence, and grounding.
+- [[content-understanding-client-apps|Content Understanding client applications]] — Client flow for Content Understanding: get endpoint/auth, call an analyzer, poll the async operation, and read fields, markdown, metadata, and JSON.
+- [[document-intelligence-custom-models|Document Intelligence custom models]] — Training labelled template or neural extraction models, using classifiers, and composing models for multiple document types.
+- [[document-intelligence-prebuilt-models|Document Intelligence prebuilt models]] — Read, layout, and document-type models for extracting text, structure, and common business fields without custom training.
 
 ## Entities
 
 ### Products and platforms
 
-- [[foundry-tools|Foundry Tools]] `stub` — The family of prebuilt AI services in Foundry (Language, Speech, Translator, Content Understanding, Document Intelligence, Vision) and their legacy names.
-- [[microsoft-foundry|Microsoft Foundry]] `stub` — The platform and portal: resources, projects, model catalog, playgrounds, agents, workflows, evaluation, guardrails.
+- [[foundry-tools|Foundry Tools]] — Prebuilt AI APIs and models in Microsoft Foundry for language, speech, translation, document extraction and multimodal content understanding.
+- [[microsoft-foundry|Microsoft Foundry]] — Azure AI development platform that organizes projects, models, agents, tools, knowledge, endpoints, evaluation and operations.
 
 ### Services
 
-- [[application-insights|Application Insights]] `stub` — Telemetry and tracing destination for deployed models and agents.
-- [[azure-ai-content-safety|Azure AI Content Safety]] `stub` — The safety service behind content filtering and guardrails (harm categories, severity, prompt shields).
-- [[azure-ai-search|Azure AI Search]] `stub` — The search service: indexes, indexers, skillsets, knowledge store, full-text/vector/hybrid/semantic querying; a grounding source for RAG and agents.
-- [[azure-content-understanding|Azure Content Understanding]] `stub` — The generative-AI extraction service: analyzers turn documents, images, audio and video into structured fields and markdown.
-- [[azure-document-intelligence|Azure Document Intelligence]] `stub` — The document-extraction service: read/layout and prebuilt models, custom template/neural models, composed models and classifiers.
-- [[azure-functions|Azure Functions]] `stub` — Serverless functions used as custom agent tools and as custom skills in AI Search enrichment.
-- [[azure-language|Azure Language]] `stub` — The text-analysis service: language detection, named entity recognition, PII detection and related features.
-- [[azure-openai|Azure OpenAI]] `stub` — OpenAI models sold by Azure, their endpoint and API surface inside Foundry.
-- [[azure-speech|Azure Speech]] `stub` — The speech service and SDK: speech to text, text to speech, SSML, speech translation, voices and audio formats.
-- [[azure-translator|Azure Translator]] `stub` — The translation service: translate, transliterate, detect; contrasted with LLM-powered translation.
-- [[microsoft-entra-id|Microsoft Entra ID]] `stub` — Identity for keyless authentication, managed identities, agent identities and role-based access.
-- [[foundry-agent-service|Microsoft Foundry Agent Service]] `stub` — The managed service that hosts, runs and scales agents (prompt, workflow and hosted agents) with tools, threads/conversations and tracing.
+- [[application-insights|Application Insights]] `seed` — Telemetry destination named for tracing conversations, latency, errors and token consumption in deployed AI apps and agents.
+- [[azure-ai-content-safety|Azure AI Content Safety]] — Azure safety service used for harmful-content detection, content filters, and additional protection in Foundry-related workflows.
+- [[azure-ai-search|Azure AI Search]] — Azure search service for indexing, enriching, querying and grounding data; supports knowledge mining, RAG and agent retrieval.
+- [[azure-content-understanding|Azure Content Understanding]] — Foundry Tool for multimodal extraction: analyzers turn documents, images, audio, and video into fields, JSON, and markdown.
+- [[azure-document-intelligence|Azure Document Intelligence]] — Document-extraction service for OCR, layout, prebuilt document models, custom models, classifiers, and composed models.
+- [[azure-functions|Azure Functions]] — Serverless Azure compute used in the corpus as an agent custom-tool option and an AI Search custom skill host.
+- [[azure-language|Azure Language]] — Foundry Tools text-analysis service for language detection, entity extraction, and PII detection/redaction.
+- [[azure-openai|Azure OpenAI]] — Azure-billed OpenAI models and the Azure OpenAI endpoint/API surface used from Microsoft Foundry projects.
+- [[azure-speech|Azure Speech]] — Foundry Tools speech service and SDK capabilities for speech recognition, synthesis, SSML, translation, and real-time voice.
+- [[azure-translator|Azure Translator]] — Foundry Tools translation service for text, transliteration, documents, supported-language lists, and custom translation models.
+- [[microsoft-entra-id|Microsoft Entra ID]] — Identity provider used for production Foundry access, keyless Voice Live, published agents, app registration and RBAC.
+- [[foundry-agent-service|Microsoft Foundry Agent Service]] — Managed Foundry service for creating, hosting, scaling, securing, tracing, publishing, and integrating AI agents with tools and conversation state.
 
 ### Platform features
 
-- [[foundry-iq|Foundry IQ]] `stub` — Knowledge bases over multiple knowledge sources that agents query for grounded, cited answers (agentic retrieval).
-- [[model-catalog|Foundry model catalog]] `stub` — The catalog of models (sold by Azure, partner and community), filters, model cards, lifecycle and deployment entry points.
+- [[foundry-iq|Foundry IQ]] — Managed knowledge platform for AI agents, built on Azure AI Search, that shares knowledge bases and retrieval across agents.
+- [[model-catalog|Foundry model catalog]] — Microsoft Foundry's portal catalog for discovering, filtering, comparing and starting deployment of models from Azure, partners and community sources.
 
 ### SDKs and frameworks
 
-- [[microsoft-agent-framework|Microsoft Agent Framework]] `stub` — The open-source SDK for building agents (ChatAgent, AgentThread, tools) and multi-agent workflows/orchestrations in code; successor lineage of Semantic Kernel and AutoGen.
-- [[foundry-sdk|Microsoft Foundry SDK]] `stub` — The project-level SDK (AIProjectClient): connect to a project endpoint, get an OpenAI-compatible client, manage agents, connections, deployments, evaluations.
-- [[openai-sdk|OpenAI SDK]] `stub` — The OpenAI client libraries used against Foundry / Azure OpenAI endpoints (Responses and Chat Completions calls).
+- [[microsoft-agent-framework|Microsoft Agent Framework]] — Open-source SDK for single and multi-agent apps: agents, chat clients, sessions, tools, providers, and graph-based workflows.
+- [[foundry-sdk|Microsoft Foundry SDK]] — Project-level SDK around AIProjectClient for Foundry project operations, OpenAI-compatible clients, agents, tracing, connections and evaluations.
+- [[openai-sdk|OpenAI SDK]] — OpenAI-compatible client libraries for model inference against OpenAI, Azure OpenAI deployments and Foundry models.
 
 ### APIs
 
-- [[voice-live-api|Azure Voice Live API]] `stub` — The low-latency speech-to-speech API for interruptible voice agents: sessions, events, turn detection.
-- [[chat-completions-api|Chat Completions API]] `stub` — The stateless message-list API (system/user/assistant roles) — contrast with the Responses API.
-- [[responses-api|Responses API]] `stub` — The stateful response-generation API (previous_response_id, conversations, built-in tools, streaming) used by Foundry chat apps and agents.
+- [[voice-live-api|Azure Voice Live API]] — Low-latency speech-to-speech API for interruptible voice agents using WebSockets, events, session settings, VAD, and optional avatars.
+- [[chat-completions-api|Chat Completions API]] — Established OpenAI-compatible message-list API useful for maintenance and compatibility, with conversation state managed by app code.
+- [[responses-api|Responses API]] — Recommended Foundry response API for stateful, multi-turn generation, response chaining, direct models, streaming and async use.
 
 ### Protocols
 
-- [[agent2agent-protocol|Agent2Agent (A2A) protocol]] `stub` — The protocol for agent-to-agent delegation across boundaries: agent card, agent executor, A2A server and client.
-- [[model-context-protocol|Model Context Protocol (MCP)]] `stub` — The open protocol through which an MCP client (agent) discovers and calls tools exposed by MCP servers.
+- [[agent2agent-protocol|Agent2Agent (A2A) protocol]] — A protocol for discoverable, secure agent-to-agent communication, delegation, routing, and distributed multi-agent workflows.
+- [[model-context-protocol|Model Context Protocol (MCP)]] — Open client-server protocol for agents to discover and call external tools, data sources, resources and prompts.
 
 ### Tools and servers
 
-- [[azure-language-mcp-server|Azure Language MCP server]] `stub` — The MCP server that exposes Azure Language capabilities as tools an agent can call.
-- [[azure-speech-mcp-server|Azure Speech MCP server]] `stub` — The MCP server that exposes Azure Speech capabilities as agent tools.
-- [[foundry-toolkit-for-vs-code|Foundry Toolkit for Visual Studio Code]] `stub` — The VS Code extension for creating, configuring (YAML), testing and deploying Foundry agents from the editor.
-- [[microsoft-365-agents-toolkit|Microsoft 365 Agents Toolkit]] `stub` — Tooling for advanced Microsoft 365 integration: custom SSO, middleware, multi-environment deployment, local testing.
-- [[power-fx|Power Fx]] `stub` — The low-code expression language used in Foundry workflows for variables, conditions and loops.
-- [[work-iq|Work IQ]] `stub` — The CLI and MCP server that gives agents permission-trimmed access to Microsoft 365 data.
+- [[azure-language-mcp-server|Azure Language MCP server]] — MCP server that exposes Azure Language text-analysis capabilities as agent tools in Foundry.
+- [[azure-speech-mcp-server|Azure Speech MCP server]] — MCP server that lets agents discover and call Azure Speech speech-to-text and text-to-speech tools using audio files in Blob Storage.
+- [[foundry-toolkit-for-vs-code|Foundry Toolkit for Visual Studio Code]] — VS Code extension for browsing Foundry projects, configuring agents in Designer/YAML, testing in playgrounds, and deploying hosted agents.
+- [[microsoft-365-agents-toolkit|Microsoft 365 Agents Toolkit]] — Advanced Microsoft 365 tooling for proxy-app integration, custom SSO, middleware, multi-environment deployment, debugging, and CI/CD.
+- [[power-fx|Power Fx]] — Power Fx is the low-code Excel-like formula language used in Foundry workflows for variables, conditions, transformations, and loops.
+- [[work-iq|Work IQ]] — A preview CLI and MCP server that lets AI assistants query Microsoft 365 Copilot data through Microsoft Graph with user permissions.
 
 ### Models
 
-- [[sora-2|Sora 2]] `stub` — The video-generation model deployed in Foundry: text/image/video inputs, asynchronous jobs.
+- [[sora-2|Sora 2]] — OpenAI video-generation model available in Foundry for text, image-reference, and remix workflows.
 
 ### Courses, exams and works
 
-- [[ai-103t00-course|Course AI-103T00-A]] `stub` — The instructor-led course and its learning paths, modules and episodes that make up this corpus.
-- [[ai-103-exam|Exam AI-103: Developing AI Apps and Agents on Azure]] `stub` — The certification exam: audience, five skill domains and weights, skills measured, GA vs preview policy.
+- [[ai-103t00-course|Course AI-103T00-A]] — Four-day intermediate course for developers building Foundry AI apps and agents, organized into four learning paths.
+- [[ai-103-exam|Exam AI-103: Developing AI Apps and Agents on Azure]] — Certification exam for Azure AI engineers building Foundry-based AI apps and agents, with five weighted domains.
 
 ## Sources
 
@@ -658,3 +658,8 @@ numeric prefix (the same numbers the app's lessons use as `sourceIds`).
 **Translate text and speech with Microsoft Foundry Tools**
 
 - [[src-228-translate-text-speech-microsoft-foundry-tools-episode-21|SRC-228 · episode · Translate text and speech with Microsoft Foundry Tools - AI-103 - Episode 21]] — Episode walkthrough of text translation, transliteration, speech translation, and manual versus event-based speech synthesis.
+
+## Other pages
+
+- [[corpus-map|Corpus map]] — The course structure source by source — 265 raw sources in 30 Learn modules plus 26 episodes and 4 exam and course aids.
+- [[objective-map|Exam objective map]] — The 64 official AI-103 objectives mapped to wiki pages — 54 taught by the corpus, 10 named only, 0 with no page.

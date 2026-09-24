@@ -36,7 +36,8 @@ REPORT = ROOT / "wiki" / "lint-report.md"
 SCORES = ROOT / "loop" / "scores.jsonl"
 LOCK = ROOT / "loop" / "verifier.lock"
 VERIFIER = ["scripts/lint_wiki.py", "scripts/check_citations.py", "scripts/loop_score.py",
-            "scripts/data/corpus-registry.json", "scripts/data/exam-objectives.json", "loop/rubric.md"]
+            "scripts/loop_sample.py", "scripts/data/corpus-registry.json",
+            "scripts/data/exam-objectives.json", "loop/rubric.md"]
 
 
 def digest(rel: str) -> str:

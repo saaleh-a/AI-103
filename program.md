@@ -62,11 +62,12 @@ generator that can edit its test will optimise the test instead of the wiki.
 1. **Mechanical:** `python scripts/loop_score.py` — runs the lint and prints
    `score=[errors, locator problems, uncovered sources, warnings, unlabelled claim lines]`
    against the best recorded score, with a verdict: IMPROVED, SAME or REGRESSED.
-2. **Judgement:** a reviewer agent samples 20 pages — stratified across sources, concepts,
-   entities and synthesis, weighted to pages changed this cycle — checks each against
-   `loop/rubric.md` by reading the cited raw lines, and returns PASS/FAIL per page with the
-   failing claim, its locator and what the raw text says. Record it with
-   `--judgement <sampled>:<failing>`.
+2. **Judgement:** a reviewer agent that did not write the pages takes the cycle's sample —
+   `python scripts/loop_sample.py --cycle N` (20 pages, stratified across sources, concepts,
+   entities and synthesis, pages changed this cycle first; seeded, so reproducible) — checks each
+   against `loop/rubric.md` by reading the cited raw lines, and returns PASS/FAIL per page with the
+   failing claim, its locator and what the raw text says. It writes nothing (`git status` must be
+   unchanged after it runs). Record it with `--judgement <sampled>:<failing>`.
 
 ## Done when
 
